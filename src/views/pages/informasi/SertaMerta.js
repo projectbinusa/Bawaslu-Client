@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
 
 function SertaMerta() {
   return (
-    <div>SertaMerta</div>
-  )
+    <div>
+      <Navbar />
+      {/* <!-- banner area start --> */}
+      <Footer />
+    </div>
+  );
 }
 
-export default SertaMerta
+export default SertaMerta;
