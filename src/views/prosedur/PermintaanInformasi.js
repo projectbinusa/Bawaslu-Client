@@ -1,10 +1,12 @@
 import React from "react";
-import Navbar from "../../../component/Navbar";
+import Navbar from "../../component/Navbar";
+import Footer from "../../component/Footer";
 
 function PermintaanInformasi() {
   return (
     <>
-      <Navbar /> {/* <!-- page title start --> */}
+      <Navbar />
+       {/* <!-- page title start --> */}
       <div class="breadcrumb-area bg-black bg-relative">
         <div
           class="banner-bg-img"
@@ -195,6 +197,7 @@ function PermintaanInformasi() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
