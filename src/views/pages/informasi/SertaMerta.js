@@ -1,7 +1,8 @@
 import React from "react";
-import OwlCarousel from "react-owl-carousel";
+// import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+// import ReactOwlCarousel from "react-owl-carousel";
 
 
 function SertaMerta() {
@@ -25,7 +26,7 @@ function SertaMerta() {
             </div>
           </div>
         </div>
-        <OwlCarousel options={options}>
+        {/* <ReactOwlCarousel options={options}> */}
           <div className="item">
             <div className="single-testimonial-inner style-4">
               <img className="shaddow-img" src="" alt="img" />
@@ -74,7 +75,7 @@ function SertaMerta() {
               </div>
             </div>
           </div>
-        </OwlCarousel>
+        {/* </ReactOwlCarousel> */}
       </div>
     </div>
   );
