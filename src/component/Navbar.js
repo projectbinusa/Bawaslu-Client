@@ -94,14 +94,14 @@ function Navbar() {
                         </ul> */}
               </li>
               <li class="">
-                <a href="#">Profile</a>
+                <a href="/profil">Profile</a>
                 {/* <ul class="sub-menu">
                             <li><a href="service.html">Service</a></li>
                             <li><a href="service-details.html">Service Single</a></li>
                         </ul> */}
               </li>
               <li class="">
-                <a href="#">Berita</a>
+                <a href="/berita">Berita</a>
                 {/* <ul class="sub-menu">
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="team.html">Team</a></li>
@@ -114,7 +114,7 @@ function Navbar() {
                 <a href="/library">Library</a>
               </li>
               <li class="">
-                <a href="#">Pengumuman</a>
+                <a href="/pengumuman">Pengumuman</a>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Informasi Publik</a>
@@ -134,7 +134,7 @@ function Navbar() {
                             <li><a href="">Regulasi</a></li>
                             <li><a href="">DIP</a></li>
                             <li><a href="">Standar Operasional Prosedur</a></li>
-                            <li><a href="">Maklumat Pelayanan</a></li>
+                            <li><a href="/maklumat">Maklumat Pelayanan</a></li>
                         </ul>
               </li>
               <li class="menu-item-has-children">

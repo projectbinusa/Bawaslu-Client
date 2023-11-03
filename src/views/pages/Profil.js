@@ -4,11 +4,7 @@ import Footer from "../../component/Footer";
 import hiiring from "../../aset/undraw_hiring_re_yk5n.svg";
 import real from "../../aset/undraw_real_time_analytics_re_yliv.svg";
 import travel from "../../aset/undraw_travel_together_re_kjf2.svg";
-import "../pages/Profil.css";
 import Navbar from "../../component/Navbar";
-import misi from "../../aset/undraw_stepping_up_g6oo.svg";
-import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
-import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
 
 function Profil() {
   return (
@@ -79,18 +75,18 @@ function Profil() {
             textAlign: "center",
           }}
         >
-          <h1>Profil</h1>
+          {/* <h1>Profil</h1> */}
           <div className="head">
-            <h1 style={{ textAlign: "center", padding: "10px" }}>
+            {/* <h1 style={{ textAlign: "center", padding: "10px" }}>
               Our Services
-            </h1>
+            </h1> */}
 
             <div className="icon1">
               <div>
                 {" "}
-                <span>
+                {/* <span>
                   <img src={undraw} alt="undraw" className="undraw" />
-                </span>
+                </span> */}
               </div>
               <div className="profil">
                 <h2>PROFIL</h2>
@@ -106,8 +102,8 @@ function Profil() {
             <div
               style={{
                 display: "flex",
-                padding: "50px",
-                justifyContent: "space-between",
+                marginTop:"20%",
+                marginRight:"30%",
               }}
             >
               <div
@@ -190,6 +186,7 @@ function Profil() {
                 margin: "0",
                 backgroundColor: "lightgray",
                 borderRadius: "100px 100px 0px 0px",
+                marginRight:"30%"
               }}
             >
               <div
@@ -338,23 +335,9 @@ function Profil() {
               </div>
             </div>
           </div>
-          <div className="icon2">
-            <div className="visi">
-              <h2 style={{ textAlign: "center" }}>VISI</h2>
-              <p style={{ width: "600px" }}>
-                Terwujudnya Bawaslu sebagai Lembaga Pengawal Terpercaya dalam
-                Penyelenggaraan Pemilu Demokratis, Bermartabat, dan Berkualitas.
-              </p>
-            </div>
-            <div>
-              <span>
-                <img src={misi} alt="misi" className="img-visi" />
-              </span>
-            </div>
-          </div>
         </div>
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 }
