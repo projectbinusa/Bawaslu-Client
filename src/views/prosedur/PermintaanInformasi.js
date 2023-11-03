@@ -6,7 +6,7 @@ function PermintaanInformasi() {
   return (
     <>
       <Navbar />
-       {/* <!-- page title start --> */}
+      {/* <!-- page title start --> */}
       <div class="breadcrumb-area bg-black bg-relative">
         <div
           class="banner-bg-img"
@@ -21,13 +21,29 @@ function PermintaanInformasi() {
                 <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
                   Tata Cara Permohonan Informasi
                 </h2>
+                <ul class="page-list">
+                  <li>
+                    <a href="/" style={{textDecoration:"none"}}>Home</a>
+                  </li>
+                  <li>Permintaan</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
       {/* <!-- page title end --> */}
-      <div class="blog-area pd-top-115 pd-bottom-60">
+      <div class="blog-area pd-top-115 pd-bottom-60 service-area bg-relative pd-top-60 pd-bottom-90">
+        <img
+          class="shape-left-top top_image_bounce"
+          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
+          alt="img"
+        />
+        <img
+          class="shape-right-top top_image_bounce"
+          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
+          alt="img"
+        />
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-10">
@@ -197,7 +213,7 @@ function PermintaanInformasi() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

@@ -10,6 +10,10 @@ import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
 
 import Profil from "./views/pages/Profil";
+import BiayaLayanan from "./views/prosedur/BiayaLayanan";
+import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
+import Pengumuman from "./views/pages/pengumuman/Pengumuman";
+import eLibrary from "./views/pages/eLibrary";
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
+          <Route path="/biaya" component={BiayaLayanan} exact />
+          <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
+          <Route path="/pengumuman" component={Pengumuman} exact />
+          <Route path="/library" component={eLibrary} exact />
         </Switch>
       </main>
     </BrowserRouter>

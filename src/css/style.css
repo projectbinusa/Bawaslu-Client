@@ -7243,10 +7243,10 @@ ul {
   width: 90%;
 }
 
-.about-mask-bg-wrap-2 .thumb {
+/* .about-mask-bg-wrap-2 .thumb {
   -webkit-mask-image: url("https://solverwp.com/demo/html/itechie/assets/img/about/2m.webp");
   mask-image: url("https://solverwp.com/demo/html/itechie/assets/img/about/2m.webp");
-}
+} */
 
 .about-mask-bg-wrap-2:after {
   content: "";
@@ -8453,7 +8453,7 @@ ul {
   position: absolute;
   left: 50%;
   top: 65px;
-  height: 106px;
+  height: 100px;
   width: 2px;
   border: 2px dashed #1E6AF4;
   -webkit-transform: translate(-50%, 0px);
