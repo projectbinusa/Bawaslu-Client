@@ -20,6 +20,7 @@ import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
 import OwlCarousel from 'react-owl-carousel2';
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import Maklumat from "./views/pages/Maklumat";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             exact
           />
           <Route path="/berita" component={Berita} exact />
+          <Route path="/maklumat" component={Maklumat} exact />
         </Switch>
       </main>
     </BrowserRouter>

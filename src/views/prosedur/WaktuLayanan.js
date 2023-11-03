@@ -23,7 +23,9 @@ function WaktuLayanan() {
                 </h2>
                 <ul class="page-list">
                   <li>
-                    <a href="/" style={{textDecoration:"none"}}>Home</a>
+                    <a href="/" style={{ textDecoration: "none" }}>
+                      Home
+                    </a>
                   </li>
                   <li>Waktu Layanan</li>
                 </ul>
@@ -34,7 +36,14 @@ function WaktuLayanan() {
       </div>
       {/* <!-- page title end --> */}
       {/* <!-- why choose area start --> */}
-      <div class="why-choose pd-top-100 pd-bottom-100 service-area bg-relative pd-top-60 pd-bottom-90">
+      <div
+        class="why-choose pd-top-100 pd-bottom-100 service-area bg-relative pd-top-60 pd-bottom-90"
+        style={{
+          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <img
           class="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
@@ -48,11 +57,11 @@ function WaktuLayanan() {
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-8 order-lg-last">
-                <div class="thumb">
-                  <img
-                    src="https://img.freepik.com/free-vector/consulting-concept-illustration_114360-2579.jpg?w=740&t=st=1698900961~exp=1698901561~hmac=3830815d8f9240e6a511acaa018c6ad33e7f50cf5255fd0c99a45a0813618d1c"
-                    alt="img"
-                  />
+              <div class="thumb">
+                <img
+                  src="https://img.freepik.com/free-vector/consulting-concept-illustration_114360-2579.jpg?w=740&t=st=1698900961~exp=1698901561~hmac=3830815d8f9240e6a511acaa018c6ad33e7f50cf5255fd0c99a45a0813618d1c"
+                  alt="img"
+                />
               </div>
             </div>
             <div class="col-lg-6 order-lg-first align-self-center">

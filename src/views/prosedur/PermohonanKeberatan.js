@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
-import image_kalender from "../../aset/image_kalender.png";
-
+import keberatan from "../../aset/patner.png"
 function PermohonanKeberatan() {
   return (
     //  how it work area start
@@ -25,7 +24,9 @@ function PermohonanKeberatan() {
                 </h2>
                 <ul class="page-list">
                   <li>
-                    <a href="/" style={{textDecoration:"none"}}>Home</a>
+                    <a href="/" style={{ textDecoration: "none" }}>
+                      Home
+                    </a>
                   </li>
                   <li>Permohonan</li>
                 </ul>
@@ -35,7 +36,14 @@ function PermohonanKeberatan() {
         </div>
       </div>
       {/* <!-- page title end --> */}
-      <div class="about-area pd-bottom-120 service-area bg-relative pd-top-60 pd-bottom-90">
+      <div
+        class="about-area pd-bottom-120 service-area bg-relative pd-top-60 pd-bottom-90"
+        style={{
+          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <img
           class="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
@@ -105,7 +113,7 @@ function PermohonanKeberatan() {
           <div class="col-lg-6 col-md-9 px-xl-5 align-self-center">
             <div class="thumb mb-4 mb-lg-0">
               <img
-                src="https://img.freepik.com/free-vector/partnership-concept-illustration_114360-6164.jpg?w=740&t=st=1698896644~exp=1698897244~hmac=4c5f58620f9f8e18799b68255cd7651b51b3f54773167adfcfd1fa0937f339e0"
+                src={keberatan} style={{width:"100%"}}
                 alt="img"
               />
             </div>
