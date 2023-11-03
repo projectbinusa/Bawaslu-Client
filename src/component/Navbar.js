@@ -16,7 +16,7 @@ function Navbar() {
             <div class="col-lg-3 col-md-5 align-self-center">
               <div class="media">
                 <div class="media-left">
-                  <i class="far fa-clock"></i>
+                <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="media-body">
                   <h6>Telephone</h6>
@@ -111,7 +111,7 @@ function Navbar() {
                         </ul> */}
               </li>
               <li class="">
-                <a href="#">Library</a>
+                <a href="/library">Library</a>
               </li>
               <li class="">
                 <a href="#">Pengumuman</a>
@@ -148,11 +148,11 @@ function Navbar() {
               <li class="menu-item-has-children">
                 <a href="#">Prosedur</a>
                 <ul class="sub-menu">
-                            <li><a href="">Prosedur Permintaan Informasi</a></li>
-                            <li><a href="">Prosedur Permohonan Keberatan</a></li>
-                            <li><a href="">Waktu Layanan</a></li>
-                            <li><a href="">Biaya Layanan</a></li>
-                            <li><a href="">Prosedur Permohonan Penyelesaian <br /> Sengketa Informasi</a></li>
+                            <li><a href="/permintaan">Prosedur Permintaan Informasi</a></li>
+                            <li><a href="/permohonan">Prosedur Permohonan Keberatan</a></li>
+                            <li><a href="/waktu">Waktu Layanan</a></li>
+                            <li><a href="/biaya">Biaya Layanan</a></li>
+                            <li><a href="/penyelesaian">Prosedur Permohonan Penyelesaian <br /> Sengketa Informasi</a></li>
                         </ul>
               </li>
               {/* <li><a href="contact.html">Contact Us</a></li> */}
