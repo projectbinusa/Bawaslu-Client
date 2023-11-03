@@ -23,7 +23,9 @@ function PermintaanInformasi() {
                 </h2>
                 <ul class="page-list">
                   <li>
-                    <a href="/" style={{textDecoration:"none"}}>Home</a>
+                    <a href="/" style={{ textDecoration: "none" }}>
+                      Home
+                    </a>
                   </li>
                   <li>Permintaan</li>
                 </ul>
@@ -33,7 +35,14 @@ function PermintaanInformasi() {
         </div>
       </div>
       {/* <!-- page title end --> */}
-      <div class="blog-area pd-top-115 pd-bottom-60 service-area bg-relative pd-top-60 pd-bottom-90">
+      <div
+        class="blog-area pd-top-115 pd-bottom-60 service-area bg-relative pd-top-60 pd-bottom-90"
+        style={{
+          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <img
           class="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
