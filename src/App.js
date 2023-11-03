@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 import Home from "./views/pages/Home";
 import SertaMerta from "./views/pages/informasi/SertaMerta";
-import './css/style.css';
+import "./css/style.css";
 
 import PermintaanInformasi from "./views/prosedur/PermintaanInformasi";
 import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
@@ -14,12 +14,20 @@ import BiayaLayanan from "./views/prosedur/BiayaLayanan";
 import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
 import eLibrary from "./views/pages/eLibrary";
+import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
+import Berita from "./views/pages/Berita";
+import Login from "./views/pages/auth/Login";
+import Register from "./views/pages/auth/Register";
+import OwlCarousel from 'react-owl-carousel2';
+
 
 function App() {
   return (
     <BrowserRouter>
       <main>
         <Switch>
+          <Route path="/login" component={Login} exact />
+          <Route path="/register" component={Register} exact />
           <Route path="/" component={Home} exact />
           <Route path="/profil" component={Profil} exact />
           <Route path="/serta-merta" component={SertaMerta} exact />
@@ -30,6 +38,12 @@ function App() {
           <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route path="/library" component={eLibrary} exact />
+          <Route
+            path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
+            component={CalonAnggotaBawaslu}
+            exact
+          />
+          <Route path="/berita" component={Berita} exact />
         </Switch>
       </main>
     </BrowserRouter>
