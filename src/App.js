@@ -20,6 +20,7 @@ import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
 import OwlCarousel from 'react-owl-carousel2';
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import LayananInformasi from "./views/pages/LayananInformasi";
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/serta-merta" component={SertaMerta} exact />
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonaninformasi" component={PermohonanInformasi} exact />
+          <Route path="/layananinformasi" component={LayananInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
           <Route path="/biaya" component={BiayaLayanan} exact />
