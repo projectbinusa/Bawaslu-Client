@@ -4,14 +4,45 @@ function Footer() {
   return (
     <>
       {/* <!-- footer area start --> */}
-      <footer class="footer-area bg-cover">
+      <footer
+        class="footer-area bg-cover"
+        style={{
+          backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/2.webp')`,
+        }}
+      >
         <div class="container">
           <div class="row">
             <div class="col-lg-3 col-md-6">
               <div class="widget widget_about">
-                <h4 class="widget-title">Bawaslu</h4>
+                <h4 class="widget-title">Bawaslu Boyolali</h4>
                 <div class="details">
-                  <p>Melalui website ini, Bawaslu Kabupaten Boyolali akan selalu memperbaharui informasi terkait pengawasan dan pemantauan pemilu.</p>
+                  <p>
+                    Melalui website ini, Bawaslu Kabupaten Boyolali akan selalu
+                    memperbaharui informasi terkait pengawasan dan pemantauan
+                    pemilu.
+                  </p>
+                  <ul class="social-media">
+                    <li>
+                      <a class="facebook" href="#">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="twitter" href="#">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="instagram" href="#">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="youtube" href="#">
+                        <i class="fab fa-youtube"></i>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -42,8 +73,7 @@ function Footer() {
             </div>
             <div class="col-lg-3 col-md-6">
               <div class="widget widget_nav_menu">
-                <br />
-                <br />
+                {/* <h4 class="widget-title">Useful link</h4> */}
                 <ul>
                   <li>
                     <a href="">Penyelesaian Sengketa</a>
@@ -58,35 +88,19 @@ function Footer() {
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
-              <div class="widget widget_about">
+              <div class="widget widget_subscribe">
                 <h4 class="widget-title">Alamat</h4>
                 <div class="details">
-                  <p>Jl. Garuda No. 01, Banaran, Boyolali, 57313</p>
-                  <p>Telpon (0276) 320420</p>
-                  <p> E-mail set.boyolali@bawaslu.go.id</p>
-                  <ul class="social-media">
-                    <li>
-                      <a class="facebook" href="#">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="#">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="#">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="youtube" href="#">
-                        <i class="fab fa-youtube"></i>
-                      </a>
-                    </li>
-                  </ul>
+                  <p style={{ color: "white" }}>
+                    Jl. Garuda No. 01, Banaran, Boyolali, 57313
+                  </p>
+                  <p style={{ color: "white" }}>Telpon (0276) 320420</p>
+                  <p style={{ color: "white" }}>
+                    {" "}
+                    E-mail set.boyolali@bawaslu.go.id
+                  </p>
                 </div>
+                {/* <label><input type="checkbox">Maecenas tempususcondime honcus sem quam  libero</input></label> */}
               </div>
             </div>
           </div>
@@ -95,7 +109,7 @@ function Footer() {
           <div class="container">
             <div class="row">
               <div class="col-md-12 align-self-center">
-                <p>© 2023 Bawaslu Kabupaten Boyolali.</p>
+                <p>© 2023. Bawaslu Kabupaten Boyolali.</p>
               </div>
             </div>
           </div>
