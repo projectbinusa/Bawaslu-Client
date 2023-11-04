@@ -35,11 +35,7 @@ function App() {
           <Route path="/profil" component={Profil} exact />
           <Route path="/serta-merta" component={SertaMerta} exact />
           <Route path="/permintaan" component={PermintaanInformasi} exact />
-          <Route
-            path="/permohonaninformasi"
-            component={PermohonanInformasi}
-            exact
-          />
+          <Route path="/permohonaninformasi" component={PermohonanInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
           <Route path="/biaya" component={BiayaLayanan} exact />
