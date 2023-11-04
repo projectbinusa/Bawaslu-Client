@@ -120,7 +120,7 @@ function Navbar() {
                 <a href="#">Informasi Publik</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                            <li><a href="">Informasi Serta Merta</a></li>
+                            <li><a href="/serta-merta">Informasi Serta Merta</a></li>
                             <li><a href="">Informasi Setiap Saat</a></li>
                             <li><a href="">Informasi Berkala</a></li>
                             <li><a href="">Informasi DiKecualikan</a></li>
@@ -132,8 +132,8 @@ function Navbar() {
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                             <li><a href="">Regulasi</a></li>
-                            <li><a href="">DIP</a></li>
-                            <li><a href="">Standar Operasional Prosedur</a></li>
+                            <li><a href="/dip">DIP</a></li>
+                            <li><a href="/standarOp">Standar Operasional Prosedur</a></li>
                             <li><a href="/maklumat">Maklumat Pelayanan</a></li>
                         </ul>
               </li>

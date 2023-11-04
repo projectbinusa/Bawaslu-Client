@@ -9,8 +9,6 @@ import "../pages/Profil.css";
 import misi from "../../aset/undraw_stepping_up_g6oo.svg"
 import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
 import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
-import Navbar from "../../component/Navbar";
-
 function Profil() {
   return (
     <div className="body">
@@ -191,9 +189,8 @@ margin:"0",
             <div
               id="collapseOne"
               class="accordion-collapse collapse show"
-              data-bs-parent="#accordionExample"
-          {/* <h1>Profil</h1> */}
-          <div className="head">
+              data-bs-parent="#accordionExample">
+            <div className="head">
             {/* <h1 style={{ textAlign: "center", padding: "10px" }}>
               Our Services
             </h1> */}
@@ -354,12 +351,10 @@ margin:"0",
       </div>
     
     </div>
+            </div>
+            </div>
     <Footer />
-
-        </div>
-      </div>
-        <Footer />
-    </div>
+            </div>
     
   );
 }
