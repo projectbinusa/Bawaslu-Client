@@ -22,6 +22,7 @@ import OwlCarousel from "react-owl-carousel2";
 import Maklumat from "./views/pages/Maklumat";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 import Kanal from "./views/pages/informasi/Kanal";
+import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
           <Route path="/profil" component={Profil} exact />
           <Route path="/serta-merta" component={SertaMerta} exact />
           <Route path="/permintaan" component={PermintaanInformasi} exact />
+          <Route
+            path="/permohonaninformasi"
+            component={PermohonanInformasi}
+            exact
+          />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
           <Route path="/biaya" component={BiayaLayanan} exact />

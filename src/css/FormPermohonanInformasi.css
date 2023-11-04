@@ -1,0 +1,20 @@
+.head{
+    background-image: url(https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp);
+    padding: 10pp;
+
+}
+.h1{
+    width: 200px;
+}
+
+.img{
+    width: 500px;
+}
+.form{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.option{
+    margin:50px;
+}
