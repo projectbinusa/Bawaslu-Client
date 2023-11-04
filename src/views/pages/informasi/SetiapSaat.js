@@ -1,18 +1,8 @@
-import React from "react";
-// import OwlCarousel from "react-owl-carousel2";
-// import "react-owl-carousel2/src/owl.carousel.css";
-// import "react-owl-carousel2/src/owl.theme.default.css";
-import Navbar from "../../../component/Navbar";
-import Footer from "../../../component/Footer";
+import React from 'react'
+import Footer from '../../../component/Footer'
+import Navbar from '../../../component/Navbar'
 
-// import "../../../css/owl.css";
-
-function SertaMerta() {
-  const options = {
-    items: 1, // Jumlah item yang akan ditampilkan dalam satu slide
-    nav: true, // Tombol navigasi
-    dots: true, // Indikator titik
-  };
+function SetiapSaat() {
   return (
     <div>
       <Navbar />
@@ -30,7 +20,7 @@ function SertaMerta() {
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Informasi Serta Merta</h4>
+                <h4 class="page-title">Informasi Setiap Saat</h4>
                 <ul class="page-list">
                   <li>
                     <a href="home">Home</a>
@@ -61,22 +51,22 @@ function SertaMerta() {
               <div class="col-lg-12 ">
                 <div class="isotope-filters project-isotope-btn text-center mb-5">
                   <button class="button active ml-0" data-filter="*">
-                    Putusan Pelanggaran
+                    Organisasi Administrasi
                   </button>
                   <button class="button" data-filter=".cat-1">
-                    Sengketa Proses Pemilu
+                    Peraturan & Kebijakan
                   </button>
                   <button class="button" data-filter=".cat-2">
-                    Pemungutan Suara Ulang
+                    MOU
                   </button>
                   <button class="button" data-filter=".cat-3">
-                    Organisasi Dan Administrasi
+                    Pemantauan Pemilu
                   </button>
                   <button class="button" data-filter=".cat-3">
-                    Perselisihan Hasil Pemilihan Umum
+                    Rencana Strategi
                   </button>
                   <button class="button" data-filter=".cat-3">
-                    Sosialisasi
+                    Materi Rakor
                   </button>
                   <button class="button" data-filter=".cat-3">
                     Piagam Penghargaan
@@ -108,8 +98,7 @@ function SertaMerta() {
                     <tr>
                       <td data-cell="dokumen" scope="row">
                         <p>
-                          PUTUSAN SENGKETA PROSES PEMILU TAHUN 2019 NOMOR :
-                          01/PS/BWSL.BYL.14.11/III/2019
+                        DATA JUMLAH ANGGOTA BAWASLU KAB BOYOLALI PERIODE 2018 - 2023
                         </p>
                       </td>
                       <td>
@@ -145,8 +134,7 @@ function SertaMerta() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
-                          PUTUSAN PELANGGARAN PIDANA POLITIK UANG PEMILU 2019
-                          NOMOR : 10/Pid.Sus/2019/PNByl
+                          DATA JUMLAH PENGAWAS DESA KELURAHAN DI BOYOLALI 2018 dan 2019
                         </p>
                       </td>
                       <td>
@@ -182,8 +170,7 @@ function SertaMerta() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
-                          PUTUSAN ACARA CEPAT PELANGGARAN ADMINISTRATIF PEMILU
-                          2019 PERBEDAAN C1 DAN DAA1
+                          DATA TAHAPAN SELEKSI DAN JUMLAH PENGAWAS TPS PEMILU 2019
                         </p>
                       </td>{" "}
                       <td>
@@ -227,7 +214,7 @@ function SertaMerta() {
 
       <Footer />
     </div>
-  );
+  )
 }
 
-export default SertaMerta;
+export default SetiapSaat
