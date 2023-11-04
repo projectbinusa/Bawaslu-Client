@@ -23,6 +23,7 @@ import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 import LayananInformasi from "./views/pages/LayananInformasi";
 import FormPermohonaKeberatan from "./views/pages/FormPermohonanKeberatan";
 import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur";
+import Maklumat from "./views/pages/Maklumat";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             exact
           />
           <Route path="/berita" component={Berita} exact />
+          <Route path="/maklumat" component={Maklumat} exact />
         </Switch>
       </main>
     </BrowserRouter>

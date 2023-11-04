@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
+import biaya from "../../aset/biaya.png";
 
 function BiayaLayanan() {
   return (
@@ -36,7 +37,14 @@ function BiayaLayanan() {
         </div>
       </div>
       {/* <!-- page title end --> */}
-      <div class="team-details-page pd-top-120 mb-4 service-area bg-relative pd-top-60 pd-bottom-90">
+      <div
+        class="team-details-page pd-top-120 service-area bg-relative pd-top-60 pd-bottom-90 "
+        style={{
+          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <img
           class="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
@@ -51,10 +59,7 @@ function BiayaLayanan() {
           <div class="row">
             <div class="col-lg-6 mb-4 mb-lg-0">
               <div class="thumb image-hover-animate me-lg-5">
-                <img
-                  src="https://img.freepik.com/premium-vector/stop-corruption-concept-illustration_114360-18631.jpg?w=740"
-                  alt="img"
-                />
+                <img src={biaya} alt="img" />
               </div>
             </div>
             <div class="col-lg-6 col-12 align-self-center">
