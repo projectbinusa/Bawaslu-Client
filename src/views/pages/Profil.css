@@ -2,6 +2,9 @@
 background-image: url(https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp);
 
 }
+.div{
+    padding: 0px;
+}
 .alert{
     padding:50px;
     background-image: url("../../aset/bg-img.webp");

@@ -36,9 +36,10 @@ const LayananInformasi = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                borderRadius:"5px"
               }}
             >
-              <img src={Phone} />
+              <img style={{borderRadius:"20px"}} src={Phone} />
             </div>
             <br></br>
             <div
@@ -54,6 +55,8 @@ const LayananInformasi = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   backgroundColor: "yellow",
+                  border:"",
+                  borderRadius:"10px"
                 }}
               >
                 <span>
