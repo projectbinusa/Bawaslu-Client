@@ -9,14 +9,17 @@ function Navbar() {
             <div class="col-lg-3 d-lg-inline-block d-none">
               <div class="logo">
                 <a href="index.html">
-                  <img src="https://boyolali.bawaslu.go.id/cepogo/2023/09/logo.png" alt="img" />
+                  <img
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/logo.png"
+                    alt="img"
+                  />
                 </a>
               </div>
             </div>
             <div class="col-lg-3 col-md-5 align-self-center">
               <div class="media">
                 <div class="media-left">
-                <i class="fa-solid fa-phone"></i>
+                  <i class="fa-solid fa-phone"></i>
                 </div>
                 <div class="media-body">
                   <h6>Telephone</h6>
@@ -42,7 +45,7 @@ function Navbar() {
             <div class="col-lg-3 d-lg-block d-none align-self-center">
               <div class="social-media-light text-md-end text-center">
                 <a href="#">
-                <i class="fab fa-facebook"></i>
+                  <i class="fab fa-facebook"></i>
                 </a>
                 <a href="#">
                   <i class="fab fa-twitter" aria-hidden="true"></i>
@@ -84,7 +87,7 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="Iitechie_main_menu">
             <ul class="navbar-nav menu-open text-lg-start">
               <li class="">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
                 {/* <ul class="sub-menu">
                             <li><a href="index.html">Home 01</a></li>
                             <li><a href="index-2.html">Home 02</a></li>
@@ -120,40 +123,78 @@ function Navbar() {
                 <a href="#">Informasi Publik</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                            <li><a href="">Informasi Serta Merta</a></li>
-                            <li><a href="">Informasi Setiap Saat</a></li>
-                            <li><a href="">Informasi Berkala</a></li>
-                            <li><a href="">Informasi DiKecualikan</a></li>
-                            <li><a href="">Kanal Pengawasan Pemilu</a></li>
-                        </ul>
+                  <li>
+                    <a href="/serta-merta">Informasi Serta Merta</a>
+                  </li>
+                  <li>
+                    <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
+                  </li>
+                  <li>
+                    <a href="/informasi-berkala-kepemiluan">
+                      Informasi Berkala
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">Informasi DiKecualikan</a>
+                  </li>
+                  <li>
+                    <a href="">Kanal Pengawasan Pemilu</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Daftar Regulasi</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                            <li><a href="">Regulasi</a></li>
-                            <li><a href="">DIP</a></li>
-                            <li><a href="">Standar Operasional Prosedur</a></li>
-                            <li><a href="/maklumat">Maklumat Pelayanan</a></li>
-                        </ul>
+                  <li>
+                    <a href="">Regulasi</a>
+                  </li>
+                  <li>
+                    <a href="">DIP</a>
+                  </li>
+                  <li>
+                    <a href="">Standar Operasional Prosedur</a>
+                  </li>
+                  <li>
+                    <a href="/maklumat">Maklumat Pelayanan</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Form Online</a>
                 <ul class="sub-menu">
-                            <li><a href="">Form Permohonan Informasi</a></li>
-                            <li><a href="">Form Permohonan Keberatan</a></li>
-                            <li><a href="">Layanan Informasi Berbasis Adroid</a></li>
-                        </ul>
+                  <li>
+                    <a href="">Form Permohonan Informasi</a>
+                  </li>
+                  <li>
+                    <a href="">Form Permohonan Keberatan</a>
+                  </li>
+                  <li>
+                    <a href="">Layanan Informasi Berbasis Adroid</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Prosedur</a>
                 <ul class="sub-menu">
-                            <li><a href="/permintaan">Prosedur Permintaan Informasi</a></li>
-                            <li><a href="/permohonan">Prosedur Permohonan Keberatan</a></li>
-                            <li><a href="/waktu">Waktu Layanan</a></li>
-                            <li><a href="/biaya">Biaya Layanan</a></li>
-                            <li><a href="/penyelesaian">Prosedur Permohonan Penyelesaian <br /> Sengketa Informasi</a></li>
-                        </ul>
+                  <li>
+                    <a href="/permintaan">Prosedur Permintaan Informasi</a>
+                  </li>
+                  <li>
+                    <a href="/permohonan">Prosedur Permohonan Keberatan</a>
+                  </li>
+                  <li>
+                    <a href="/waktu">Waktu Layanan</a>
+                  </li>
+                  <li>
+                    <a href="/biaya">Biaya Layanan</a>
+                  </li>
+                  <li>
+                    <a href="/penyelesaian">
+                      Prosedur Permohonan Penyelesaian <br /> Sengketa Informasi
+                    </a>
+                  </li>
+                </ul>
               </li>
               {/* <li><a href="contact.html">Contact Us</a></li> */}
             </ul>
