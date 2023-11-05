@@ -10,12 +10,15 @@ import misi from "../../aset/undraw_stepping_up_g6oo.svg"
 import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
 import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
 import Navbar from "../../component/Navbar";
+import "../pages/Profil.css";
+import misi from "../../aset/undraw_stepping_up_g6oo.svg";
+import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
+import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
 
 function Profil() {
   return (
     <div className="body">
       <Navbar />
-      
       <div className="td-search-popup" id="td-search-popup">
         <form action="index.html" className="search-form">
           <div className="form-group">
@@ -194,20 +197,16 @@ margin:"0",
               data-bs-parent="#accordionExample"
           {/* <h1>Profil</h1> */}
           <div className="head">
-            {/* <h1 style={{ textAlign: "center", padding: "10px" }}>
-              Our Services
-            </h1> */}
-
             <div className="icon1">
               <div>
                 {" "}
-                {/* <span>
+                <span>
                   <img src={undraw} alt="undraw" className="undraw" />
-                </span> */}
+                </span>
               </div>
               <div className="profil">
                 <h2>PROFIL</h2>
-                <p style={{ width: "600px", alignItems: "end" }}>
+                <p style={{ width: "600px", alignItems: "center" }}>
                   Badan Pengawas Pemilu adalah lembaga negara yang memiliki
                   tugas pokok dan fungsi melakukan pengawasan terhadap seluruh
                   tahapan pemilihan umum . Melalui website ini, kami akan selalu
@@ -219,8 +218,8 @@ margin:"0",
             <div
               style={{
                 display: "flex",
-                marginTop:"20%",
-                marginRight:"30%",
+                padding: "50px",
+                justifyContent: "space-between",
               }}
             >
               <div class="accordion-body">
@@ -309,7 +308,6 @@ margin:"0",
                 margin: "0",
                 backgroundColor: "lightgray",
                 borderRadius: "100px 100px 0px 0px",
-                marginRight:"30%"
               }}
             >
               <div class="accordion-body">
@@ -358,7 +356,7 @@ margin:"0",
 
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
     
   );
