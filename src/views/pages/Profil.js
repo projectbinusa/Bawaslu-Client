@@ -8,6 +8,10 @@ import misi from "../../aset/undraw_stepping_up_g6oo.svg"
 import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
 import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
 import Navbar from "../../component/Navbar";
+import "../pages/Profil.css";
+import misi from "../../aset/undraw_stepping_up_g6oo.svg";
+import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
+import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
 
 const Profil = () => {
   return (
@@ -19,6 +23,132 @@ const Profil = () => {
             <div>
               <h1 style={{ fontSize: "57px" }}>PROFIL SINGKAT PPID</h1>
               <h1>____________</h1>
+    <div className="body">
+      <Navbar />
+      <div className="td-search-popup" id="td-search-popup">
+        <form action="index.html" className="search-form">
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search....."
+            />
+          </div>
+          <button type="submit" className="submit-btn">
+            <i className="fa fa-search" />
+          </button>
+        </form>
+      </div>
+      <div className="body-overlay" id="body-overlay" />
+
+      <div className="breadcrumb-area bg-black bg-relative">
+        <div
+          className="banner-bg-img"
+          style={{ backgroundImage: 'url("./assets/img/bg/1.webp")' }}
+        />
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h2 className="page-title">About Us</h2>
+                <ul className="page-list">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>About Us</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          padding: "100px",
+          justifyContent: "space-between",
+        }}
+      >
+        <div style={{ width: "500px" }}>
+          <img src={hiiring} alt="profil" style={{ width: "600px" }} />
+        </div>
+        <div
+          style={{
+            width: "500px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+      <div className="head">
+
+      <div className="icon1">
+        <div>
+          {" "}
+          <span>
+            <img src={undraw} alt="undraw" className="undraw" />
+          </span>
+        </div>
+        <div className="profil">
+          <h2>PROFIL</h2>
+          <p style={{ width: "600px", alignItems: "center" }}>
+            Badan Pengawas Pemilu adalah lembaga negara yang memiliki tugas
+            pokok dan fungsi melakukan pengawasan terhadap seluruh tahapan
+            pemilihan umum . Melalui website ini, kami akan selalu memperbaharui
+            informasi terkait pengawasan dan pemantauan pemilu.
+          </p>
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          padding: "50px",
+          justifyContent: "space-between",
+        }}
+      >
+        <div
+          style={{
+            width: "500px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <h1>VISI</h1>
+          <p>
+            Terwujudnya Bawaslu sebagai Lembaga Pengawal Terpercaya dalam
+            Penyelenggaraan Pemilu Demokratis, Bermartabat, dan Berkualitas.
+          </p>
+        </div>
+        <div style={{ width: "400px" }}>
+          <img src={travel} alt="visi" />
+        </div>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          padding: "50px",
+          justifyContent: "space-between",
+        }}
+      >
+        <div style={{ width: "400px" }}>
+          <img src={real} />
+        </div>
+        <div
+          style={{
+            width: "500px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <h1>MISI</h1>
 
               <p>
                 Bawaslu Kabupaten Boyolali menilai bahwa keterbukaan informasi
@@ -94,20 +224,16 @@ margin:"0",
               data-bs-parent="#accordionExample"
           {/* <h1>Profil</h1> */}
           <div className="head">
-            {/* <h1 style={{ textAlign: "center", padding: "10px" }}>
-              Our Services
-            </h1> */}
-
             <div className="icon1">
               <div>
                 {" "}
-                {/* <span>
+                <span>
                   <img src={undraw} alt="undraw" className="undraw" />
-                </span> */}
+                </span>
               </div>
               <div className="profil">
                 <h2>PROFIL</h2>
-                <p style={{ width: "600px", alignItems: "end" }}>
+                <p style={{ width: "600px", alignItems: "center" }}>
                   Badan Pengawas Pemilu adalah lembaga negara yang memiliki
                   tugas pokok dan fungsi melakukan pengawasan terhadap seluruh
                   tahapan pemilihan umum . Melalui website ini, kami akan selalu
@@ -119,8 +245,8 @@ margin:"0",
             <div
               style={{
                 display: "flex",
-                marginTop:"20%",
-                marginRight:"30%",
+                padding: "50px",
+                justifyContent: "space-between",
               }}
             >
               <div class="accordion-body">
@@ -215,7 +341,6 @@ margin:"0",
                 margin: "0",
                 backgroundColor: "lightgray",
                 borderRadius: "100px 100px 0px 0px",
-                marginRight:"30%"
               }}
             >
               <div class="accordion-body">
@@ -287,7 +412,7 @@ margin:"0",
 
         </div>
       </div>
-        <Footer />
+      <Footer />
     </div>
     
   );
