@@ -45,8 +45,8 @@ function App() {
           <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route path="/library" component={eLibrary} exact />
-          <Route path="/dikecualikan" component={Dikecualikan} exact />
-          <Route path="/kanal" component={Kanal} exact />
+          {/* <Route path="/dikecualikan" component={Dikecualikan} exact /> */}
+          {/* <Route path="/kanal" component={Kanal} exact /> */}
           <Route
             path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
             component={CalonAnggotaBawaslu}
