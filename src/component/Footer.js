@@ -72,6 +72,8 @@ function Footer() {
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
+            <br />
+            <br />
               <div class="widget widget_nav_menu">
                 {/* <h4 class="widget-title">Useful link</h4> */}
                 <ul>
