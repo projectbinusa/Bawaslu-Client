@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../../component/Footer";
 import Navbar from "../../component/Navbar";
 // import OwlCarousel from "react-owl-carousel2";
@@ -8,6 +8,23 @@ import ReactOwlCarousel from "react-owl-carousel";
 // import "react-owl-carousel/style.css";
 
 function Berita() {
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const options = {
     items: 1, // Jumlah item yang akan ditampilkan dalam satu slide
     nav: true, // Tombol navigasi
@@ -44,100 +61,6 @@ function Berita() {
         </div>
       </div>
       <br />
-      {/* <!-- project area start --> */}
-      <div class="project-area half-bg-top pd-top-115">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-10">
-              <div class="section-title style-white text-center">
-                <h5 class="sub-title double-border">Work Process</h5>
-                <h2 class="title">How to work it</h2>
-                <p class="content">
-                  Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc
-                  egestas augue atpellentesque laoreet
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="project-slider slider-control-round owl-carousel">
-            <ReactOwlCarousel options={options}>
-              <div class="item">
-                <div class="single-project-inner">
-                  <div class="thumb">
-                    <a
-                      class="icon swp-readmore-arrow swp-image-popup"
-                      href="https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fHww"
-                    >
-                      <i class="fas fa-search-minus"></i>
-                    </a>
-                    <img src="assets/img/project/6.webp" alt="img" />
-                  </div>
-                  <div class="details-wrap">
-                    <div class="details-inner">
-                      <h3>
-                        <a href="project-details.html">Data solution</a>
-                      </h3>
-                      <p>
-                        Maecenas tempus, tellus eget condi honcus sem quam
-                        semper libero.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-project-inner">
-                  <div class="thumb">
-                    <a
-                      class="icon swp-readmore-arrow swp-image-popup"
-                      href="assets/img/project/6.webp"
-                    >
-                      <i class="fas fa-search-minus"></i>
-                    </a>
-                    <img src="assets/img/project/6.webp" alt="img" />
-                  </div>
-                  <div class="details-wrap">
-                    <div class="details-inner">
-                      <h3>
-                        <a href="project-details.html">It management</a>
-                      </h3>
-                      <p>
-                        Maecenas tempus, tellus eget condi honcus sem quam
-                        semper libero.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="single-project-inner">
-                  <div class="thumb">
-                    <img src="assets/img/project/6.webp" alt="img" />
-                    <a
-                      class="icon swp-readmore-arrow swp-image-popup"
-                      href="assets/img/project/6.webp"
-                    >
-                      <i class="fas fa-search-minus"></i>
-                    </a>
-                  </div>
-                  <div class="details-wrap">
-                    <div class="details-inner">
-                      <h3>
-                        <a href="project-details.html">Market research</a>
-                      </h3>
-                      <p>
-                        Maecenas tempus, tellus eget condi honcus sem quam
-                        semper libero.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </ReactOwlCarousel>
-          </div>
-        </div>
-      </div>
-      {/* <!-- project area end --> */}
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">
@@ -568,176 +491,238 @@ function Berita() {
               </div>
             </div>
             <div class="col-lg-4 col-12">
-              <div class="td-sidebar">
-                <div class="widget widget-recent-post">
-                  <h4 class="widget-title">Berita</h4>
-                  <ul>
-                    <li>
-                      <div class="media">
-                        <div class="media-left">
-                          <img
-                            src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                            style={{ width: "60px" }}
-                            alt="blog"
-                          />
-                        </div>
-                        <div class="media-body align-self-center">
-                          <h6 class="title">
-                            <a href="">
-                              {" "}
-                              KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                              Boyolali Turut Hadir dan Mengawasi
-                            </a>
-                          </h6>
-                          <div class="post-info">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>15 October</span>
+              <div className="sidebar-container">
+                <div class="td-sidebar">
+                  <div
+                    class={`widget widget-recent-post`}
+                    style={{ background: "#F1F6F9" }}
+                  >
+                    <h4 class="widget-title">Berita</h4>
+                    <ul>
+                      <li>
+                        <div class="media">
+                          <div class="media-left">
+                            <img
+                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                              style={{ width: "60px" }}
+                              alt="blog"
+                            />
+                          </div>
+                          <div class="media-body align-self-center">
+                            <h6 class="title">
+                              <a href="">
+                                {" "}
+                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
+                                Boyolali Turut Hadir dan Mengawasi
+                              </a>
+                            </h6>
+                            <div class="post-info">
+                              <i class="far fa-calendar-alt"></i>
+                              <span>15 October</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <div class="media-left">
-                          <img
-                            src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                            style={{ width: "60px" }}
-                            alt="blog"
-                          />
-                        </div>
-                        <div class="media-body align-self-center">
-                          <h6 class="title">
-                            <a href="">
-                              Ciptakan Pemilu 2024 Bermartabat, Panwascam
-                              Tamansari Ajak Pemuda/Pemudi untuk Mengawasi
-                            </a>
-                          </h6>
-                          <div class="post-info">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>15 October</span>
+                      </li>
+                      <li>
+                        <div class="media">
+                          <div class="media-left">
+                            <img
+                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                              style={{ width: "60px" }}
+                              alt="blog"
+                            />
+                          </div>
+                          <div class="media-body align-self-center">
+                            <h6 class="title">
+                              <a href="">
+                                Ciptakan Pemilu 2024 Bermartabat, Panwascam
+                                Tamansari Ajak Pemuda/Pemudi untuk Mengawasi
+                              </a>
+                            </h6>
+                            <div class="post-info">
+                              <i class="far fa-calendar-alt"></i>
+                              <span>15 October</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <div class="media-left">
-                          <img
-                            src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                            style={{ width: "60px" }}
-                            alt="blog"
-                          />
-                        </div>
-                        <div class="media-body align-self-center">
-                          <h6 class="title">
-                            <a href="">
-                              Panwaslu Selo Gelar Sosialisasi Pengawasan
-                              Partisipastif Di SMK N 1 Selo
-                            </a>
-                          </h6>
-                          <div class="post-info">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>15 October</span>
+                      </li>
+                      <li>
+                        <div class="media">
+                          <div class="media-left">
+                            <img
+                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                              style={{ width: "60px" }}
+                              alt="blog"
+                            />
+                          </div>
+                          <div class="media-body align-self-center">
+                            <h6 class="title">
+                              <a href="">
+                                Panwaslu Selo Gelar Sosialisasi Pengawasan
+                                Partisipastif Di SMK N 1 Selo
+                              </a>
+                            </h6>
+                            <div class="post-info">
+                              <i class="far fa-calendar-alt"></i>
+                              <span>15 October</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <div class="media-left">
-                          <img
-                            src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                            style={{ width: "60px" }}
-                            alt="blog"
-                          />
-                        </div>
-                        <div class="media-body align-self-center">
-                          <h6 class="title">
-                            <a href="">
-                              Libatkan BPD, Panwascam Gladagsari Gelar Soswatif
-                            </a>
-                          </h6>
-                          <div class="post-info">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>15 October</span>
+                      </li>
+                      <li>
+                        <div class="media">
+                          <div class="media-left">
+                            <img
+                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                              style={{ width: "60px" }}
+                              alt="blog"
+                            />
+                          </div>
+                          <div class="media-body align-self-center">
+                            <h6 class="title">
+                              <a href="">
+                                Libatkan BPD, Panwascam Gladagsari Gelar
+                                Soswatif
+                              </a>
+                            </h6>
+                            <div class="post-info">
+                              <i class="far fa-calendar-alt"></i>
+                              <span>15 October</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="media">
-                        <div class="media-left">
-                          <img
-                            src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                            style={{ width: "60px" }}
-                            alt="blog"
-                          />
-                        </div>
-                        <div class="media-body align-self-center">
-                          <h6 class="title">
-                            <a href="">
-                              Panwaslu Selo Gelar Sosialisasi Pengawasan
-                              Partisipastif Di SMK N 1 Selo
-                            </a>
-                          </h6>
-                          <div class="post-info">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>15 October</span>
+                      </li>
+                      <li>
+                        <div class="media">
+                          <div class="media-left">
+                            <img
+                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                              style={{ width: "60px" }}
+                              alt="blog"
+                            />
+                          </div>
+                          <div class="media-body align-self-center">
+                            <h6 class="title">
+                              <a href="">
+                                Panwaslu Selo Gelar Sosialisasi Pengawasan
+                                Partisipastif Di SMK N 1 Selo
+                              </a>
+                            </h6>
+                            <div class="post-info">
+                              <i class="far fa-calendar-alt"></i>
+                              <span>15 October</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="widget widget_catagory">
-                  <h4 class="widget-title">Arsip</h4>
-                  <ul class="catagory-items">
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Oktober 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Agustus 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Juli 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Juni 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Mei 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> April 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Maret 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Februari 2023 (10)
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa-solid fa-file"></i> Januari 2023 (10)
-                      </a>
-                    </li>
-                  </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="widget widget_catagory"
+                    style={{ background: "#F1F6F9" }}
+                  >
+                    <h4 class="widget-title">Arsip</h4>
+                    <ul class="catagory-items">
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Oktober 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Agustus 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Juli 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Juni 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Mei 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> April 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Maret 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Februari 2023 (10)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Januari 2023 (10)
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="widget widget_catagory"
+                    style={{ background: "#F1F6F9" }}
+                  >
+                    <h4 class="widget-title">
+                      Tuatan{" "}
+                      <span className="text-primary">
+                        <strong>Lembaga</strong>
+                      </span>
+                    </h4>
+                    <ul class="catagory-items">
+                      <li>
+                        <a href="#">
+                          <img
+                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img
+                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
+                            alt=""
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 function Navbar() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     // <!-- navbar start -->
     <>
@@ -61,7 +78,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <nav class="navbar navbar-area navbar-area-2 navbar-expand-lg">
+      <nav className={`navbar-area navbar-area-2 navbar-expand-lg ${isSticky ? 'sticky-active' : ''}`}>
         <div class="container nav-container">
           <div class="responsive-mobile-menu">
             <button

@@ -2510,6 +2510,13 @@ ul {
   background: #fff;
 }
 
+.sidebar-container {
+  position: sticky;
+  top: 20px; 
+}
+
+
+
 .sticky-active.navbar-area-2 {
   background: var(--main-color);
 }
@@ -4150,7 +4157,7 @@ ul {
   transition: 0.4s;
 }
 
-.single-service-inner:hover{
+.single-service-inner:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .single-service-inner .details-hover-wrap h3 {
@@ -6135,10 +6142,15 @@ ul {
 
 .widget-recent-post ul li .media .media-left img {
   border-radius: 4px;
+  width: 100px;
 }
 
 .widget-recent-post ul li .media .media-body .title {
   margin-bottom: 8px;
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
 }
 
 .widget-recent-post ul li .media .media-body .post-info {
@@ -7889,6 +7901,15 @@ ul {
 
 .footer-area-3 {
   padding-top: 200px !important;
+}
+
+.widget_nav_menu  ul li a {
+  text-decoration: none;
+  color: white;
+}
+.widget_nav_menu  ul li {
+  text-decoration: none;
+  color: white;
 }
 
 .footer-area-3 .widget_nav_menu ul li:after {
@@ -9711,4 +9732,9 @@ ul {
   .banner-inner .btn {
     margin-bottom: 10px;
   }
+}
+
+.single-blog-inner .details h2 a {
+  color: black;
+  text-decoration: none;
 }
