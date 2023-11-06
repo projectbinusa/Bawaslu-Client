@@ -18,6 +18,11 @@ import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
 import Berita from "./views/pages/Berita";
 import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
+import OwlCarousel from 'react-owl-carousel2';
+import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import LayananInformasi from "./views/pages/LayananInformasi";
+import FormPermohonaKeberatan from "./views/pages/FormPermohonanKeberatan";
+import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur";
 import OwlCarousel from "react-owl-carousel2";
 import Maklumat from "./views/pages/Maklumat";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
@@ -36,6 +41,9 @@ function App() {
           <Route path="/serta-merta" component={SertaMerta} exact />
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonaninformasi" component={PermohonanInformasi} exact />
+          <Route path="/layananinformasi" component={LayananInformasi} exact />
+          <Route path="/informasistandarprosedur" component={InformasiStandarProsedur} exact />
+          <Route path="/formkeberatan" component={FormPermohonaKeberatan} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
           <Route path="/biaya" component={BiayaLayanan} exact />

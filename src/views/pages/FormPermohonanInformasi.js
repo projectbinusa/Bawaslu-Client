@@ -13,6 +13,7 @@ const PermohonanInformasi = () => {
           <div> 
             {" "} 
             <h1 style={{fontSize:"57px"}} className="h1">FORM PERMOHONAN INFORMASI</h1> 
+            <h1>__________</h1>
           </div> 
           <div className="info"> 
             <img src={info} className="img" /> 
@@ -81,7 +82,7 @@ const PermohonanInformasi = () => {
             </select> 
             <br></br> 
             <p>Upload Photo Identitas (.jpg) size max 1mb:</p> 
-            <button>Pilih File</button> 
+            <button style={{border:"1px solid black"}}>Pilih File</button> 
             <br></br> 
             <p>Jaminan Perlindungan Data Pribadi:</p> 
             <ol> 
@@ -114,7 +115,7 @@ const PermohonanInformasi = () => {
               </li>
             </ol>
             <br></br>
-            <button>Kirim</button>
+            <button style={{border:"1px solid black"}}>Kirim</button>
           </div>
         </div>
 

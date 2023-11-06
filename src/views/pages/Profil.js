@@ -1,11 +1,9 @@
 import React from "react";
-import "../../views/pages/Profil.css";
-import Footer from "../../component/Footer";
 import Navbar from "../../component/Navbar";
-import hiiring from "../../aset/undraw_hiring_re_yk5n.svg";
-import real from "../../aset/undraw_real_time_analytics_re_yliv.svg";
-import travel from "../../aset/undraw_travel_together_re_kjf2.svg";
 import "../pages/Profil.css";
+import Visi from "../../aset/visi.svg";
+import Tugas from "../../aset/tugas.svg"
+import Footer from "../../component/Footer";
 import misi from "../../aset/undraw_stepping_up_g6oo.svg"
 import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
 import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
@@ -15,8 +13,16 @@ import misi from "../../aset/undraw_stepping_up_g6oo.svg";
 import visi from "../../aset/undraw_visual_data_re_mxxo.svg";
 import undraw from "../../aset/undraw_hiring_re_yk5n.svg";
 
-function Profil() {
+const Profil = () => {
   return (
+    <>
+      <div className="div">
+        <Navbar />
+        <div className="div" style={{ padding: "30px" }}>
+          <div>
+            <div>
+              <h1 style={{ fontSize: "57px" }}>PROFIL SINGKAT PPID</h1>
+              <h1>____________</h1>
     <div className="body">
       <Navbar />
       <div className="td-search-popup" id="td-search-popup">
@@ -144,34 +150,55 @@ function Profil() {
         >
           <h1>MISI</h1>
 
-          <p>
-            Membangun aparatur dan kelembagaan pengawas pemilu yang kuat,
-            mandiri dan solid;
-          </p>
-          <p>
-            Mengembangkan pola dan metode pengawasan yang efektif dan efisien;
-          </p>
-          <p>
-            Memperkuat sistem kontrol nasional dalam satu manajemen pengawasan
-            yang terstruktur, sistematis, dan integratif berbasis teknologi;
-          </p>
-          <p>
-            Meningkatkan keterlibatan masyarakat dan peserta pemilu, serta
-            meningkatkan sinergi kelembagaan dalam pengawasan pemilu
-            partisipatif;
-          </p>
-          <p>
-            Meningkatkan kepercayaan publik atas kualitas kinerja pengawasan
-            berupa pencegahan dan penindakan, serta penyelesaian sengketa secara
-            cepat, akurat dan transparan;
-          </p>
-          <p>
-            Membangun Bawaslu sebagai pusat pembelajaran pengawasan pemilu baik
-            bagi pihak dari dalam negeri maupun pihak dari luar negeri.
-          </p>
-        </div>
-      </div>
+              <p>
+                Bawaslu Kabupaten Boyolali menilai bahwa keterbukaan informasi
+                tidak hanya terkait dengan amanat regulasi atau undang-undang.
+                Keterbukaan informasi bagian dari kewajiban yang memang harus
+                dipatuhi. Sebab, publik memiliki hak atas informasi. Untuk
+                itulah Bawaslu Kabupaten Boyolali membentuk Pejabat Pengelola
+                Informasi dan Dokumentasi (PPID). PPID ini dibentuk untuk
+                menjawab kebutuhan atas hak informasi publik.
+              </p>
+              <p>
+                Selaras dengan amanat UU No. 14 Tahun 2008 tentang keterbukaan
+                Informasi yang optimal kepada masyarakat, Kabupaten Boyolali
+                sebagai badan publik berusaha memenuhi kebutuhan masyarakat akan
+                akses informasi Pengawasan Pemilu di Indonesia. Bersama layanan
+                Publik Online ini, kami berusaha dapat memenuhi hak masyarakat
+                atas informasi publik yang cepat, akurat dan efektif.
+              </p>
+              <p>
+                Layanan ini merupakan sarana layanan online bagi pemohon
+                informasi publik sebagai salah satu wujud pelaksanaan
+                keterbukaan informasi publik di Kabupaten Boyolali.
+              </p>
 
+              <div>
+                <button
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    padding: "5px",
+                    width: "170px",
+                    borderRadius: "10px",
+                    border: "1px solid black",
+                  }}
+                >
+                  SELENGKEPANYA{" "}
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-caret-right-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg>
+                  </span>
+                </button>
       <div className="alert" style={{
 margin:"0",
         backgroundColor:"lightgray",
@@ -257,33 +284,39 @@ margin:"0",
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Tugas wewenang dan tanggung jawab{" "}
-              </button>
-            </h2>
-            <div
-              id="collapseTwo"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <strong>Tugas wewenang dan tanggung jawab adalah,</strong>
-                Bawaslu berperan sebagai penjaga independensi dan integritas
-                penyelenggaraan pemilu. Fungsi dan tanggung jawabnya mencakup
-                seluruh tahap pemilihan umum, mulai dari kampanye hingga
-                pemungutan suara, dengan tujuan untuk memastikan transparansi,
-                keadilan, dan keabsahan proses demokratis.
-              </div>
+          <br></br>
+          <br></br>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <div>
+              <img
+                src={Visi}
+                style={{
+                  width: "500px",
+                }}
+              />
             </div>
+            <div style={{ textAlign: "center", width: "600px" }}>
+              <h1>Visi</h1>
+              <p>
+                Terwujudnya Bawaslu sebagai Lembaga Pengawal Terpercaya dalam
+                Penyelenggaraan Pemilu Demokratis, Bermartabat, dan Berkualitas.
+              </p>
+              <br></br>
+              <h1>MISI</h1>
+              <ol>
+                <li>
+                  Memberikan pelayanan informasi yang prima dan memuaskan
+                  pemenuhan hak publik atas informasi
+                </li>
+                <li>
+                  Mendorong keterlibatan publik atas hak informasi guna
+                  terwujudnya pengawasan partisipatif dalam pemilu dan pilkada.
+                </li>
+                <li>
+                  Mempraktikan prinsip transparan dan akuntabal guna keterbukaan
+                  proses pemilu dan pilkada.
+                </li>
+              </ol>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -318,36 +351,59 @@ margin:"0",
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                class="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                Struktur Organisasi{" "}
-              </button>
-            </h2>
-            <div
-              id="collapseFour"
-              class="accordion-collapse collapse"
-              data-bs-parent="#accordionExample"
-            >
-              <div class="accordion-body">
-                <strong>Struktur Organisasi,</strong> sistem yang digunakan
-                untuk mendefinisikan hierarki dalam sebuah organisasi dengan
-                tujuan menetapkan cara sebuah organisasi dapat beroperasi, dan
-                membantu organisasi tersebut dalam mencapai tujuan yang telah
-                ditetapkan di masa depan.
+          <br></br>
+          <br></br>
+          <br></br>
+
+        
+          <div  >
+            <div style={{ display: "flex", justifyContent: "center", alignItems:"center", gap:"15px" }}>
+              
+              <div style={{width:"600px"}}>
+              <div>
+                <h1>Tugas, Fungsi, & Wewenang</h1>
+              </div>
+                <ol>
+                  <li>
+                    Menyediakan, menyimpan, mendokumentasikan dan mengamankan
+                    informasi;
+                  </li>
+                  <li>
+                    Memberikan layanan informasi publik yang cepat, tepat,
+                    efisien dan gratis;
+                  </li>
+                  <li>
+                    Menyusun dan menetapkan standar operasional prosedur (SOP)
+                    informasi publik;
+                  </li>
+                  <li>
+                    Melakukan klasifikasi terhadap informasi dan/atau
+                    pengubahannya
+                  </li>
+                  <li>
+                    Menetapkan informasi yang dikecualikan yang telah habis
+                    jangka waktu pengecualiannya sebagai informasi yang dapat
+                    diakses;
+                  </li>
+                  <li>
+                    Menetapkan pertimbangan tertulis atas setiap kebijakan yang
+                    diambil untuk memenuhi hak setiap orang atas informasi
+                    publik.
+                  </li>
+                </ol>
+              </div>
+              <div>
+                <img src={Tugas}  style={{
+                  width: "500px",
+                }}/>
               </div>
             </div>
           </div>
         </div>
-        </div>
+<Footer/>
       </div>
+    </>
+
     
       </div>
     
@@ -360,6 +416,5 @@ margin:"0",
     </div>
     
   );
-}
-
+};
 export default Profil;
