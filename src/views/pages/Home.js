@@ -125,7 +125,7 @@ function Home() {
             <h2 class="title">Berita Bawaslu</h2>
           </div>
           <div className="row">
-            <div class="col-4 widget widget-recent-post pe-lg-5">
+            <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
                 <li>
                   <div class="media">
@@ -247,7 +247,7 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <div class="col-4 widget widget-recent-post pe-lg-5">
+            <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
                 <li>
                   <div class="media">
@@ -371,7 +371,7 @@ function Home() {
               </ul>
             </div>
             <div
-              class="col-4 widget widget_catagory"
+              class="col-lg-4 col-md-12 widget widget_catagory"
               style={{
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                 padding: "30px",
@@ -437,9 +437,7 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <br />
-            <br />
-            <div class="pagination">
+            <div class="pagination justify-content-center" style={{marginTop:"50px"}}>
               <a class="prev page-numbers" href="http://icare.local/">
                 {" "}
                 <i class="fa fa-angle-left"></i>
