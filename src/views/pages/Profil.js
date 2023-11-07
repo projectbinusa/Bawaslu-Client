@@ -267,7 +267,7 @@ function Profil() {
           </div>
           <div class="single-security-wrap-2">
             <div class="thumb border-bottom">
-              <img src="https://www.its.ac.id/aktuaria/wp-content/uploads/sites/100/2018/03/user.png" alt="img" />
+              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
             <div class="details">
               <h5>Pembina</h5>
@@ -277,7 +277,7 @@ function Profil() {
           </div>
           <div class="single-security-wrap-2">
             <div class="thumb border-bottom">
-              <img src="https://www.its.ac.id/aktuaria/wp-content/uploads/sites/100/2018/03/user.png" alt="img" />
+              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
             <div class="details">
               <h5>Atasn PPID</h5>
@@ -287,7 +287,7 @@ function Profil() {
           </div>
           <div class="single-security-wrap-2">
             <div class="thumb border-bottom">
-              <img src="https://www.its.ac.id/aktuaria/wp-content/uploads/sites/100/2018/03/user.png" alt="img" />
+              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
             <div class="details">
               <h5>Tim Pertimbangan</h5>
@@ -300,7 +300,7 @@ function Profil() {
           </div>
           <div class="single-security-wrap-2">
             <div class="thumb">
-              <img src="https://www.its.ac.id/aktuaria/wp-content/uploads/sites/100/2018/03/user.png" alt="img" />
+              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
             <div class="details">
               <h5>Petugas Layanan Informasi</h5>
