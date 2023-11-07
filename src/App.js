@@ -20,13 +20,13 @@ import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
 import Berita from "./views/pages/Berita";
 import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
-import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+// import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 import Maklumat from "./views/pages/Maklumat";
 import Dip from "./views/pages/informasi/Dip";
 
-import Maklumat from "./views/pages/Maklumat";
-import Dikecualikan from "./views/pages/informasi/Dikecualikan";
-import Kanal from "./views/pages/informasi/Kanal";
+// import Maklumat from "./views/pages/Maklumat";
+// import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+// import Kanal from "./views/pages/informasi/Kanal";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
 import OwlCarousel from "react-owl-carousel2";
