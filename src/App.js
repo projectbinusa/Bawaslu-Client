@@ -12,6 +12,7 @@ import WaktuLayanan from "./views/prosedur/WaktuLayanan";
 
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
+
 import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
 import eLibrary from "./views/pages/eLibrary";
@@ -19,10 +20,13 @@ import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
 import Berita from "./views/pages/Berita";
 import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
-import SetiapSaat from "./views/pages/informasi/SetiapSaat";
-import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-// import OwlCarousel from 'react-owl-carousel2';
 
+import Maklumat from "./views/pages/Maklumat";
+import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+import Kanal from "./views/pages/informasi/Kanal";
+import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+
+import OwlCarousel from "react-owl-carousel2";
 
 function App() {
   return (
@@ -50,7 +54,11 @@ function App() {
           />
           <Route path="/berita" component={Berita} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
-          <Route path="/informasi-berkala-kepemiluan" component={InformasiBerkala} exact />
+          <Route
+            path="/informasi-berkala-kepemiluan"
+            component={InformasiBerkala}
+            exact
+          />
         </Switch>
       </main>
     </BrowserRouter>
