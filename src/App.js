@@ -9,10 +9,11 @@ import "./css/owl.css";
 import PermintaanInformasi from "./views/prosedur/PermintaanInformasi";
 import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
-
+import Kanal from "./views/pages/informasi/Kanal";
+import Regulasi from "./views/pages/informasi/Regulasi";
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
-
+import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
 import eLibrary from "./views/pages/eLibrary";
@@ -48,6 +49,9 @@ function App() {
           <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route path="/library" component={eLibrary} exact />
+          <Route path="/kanal" component={Kanal} exact />
+          <Route path="/regulasi" component={Regulasi} exact />
+          <Route path="/dikecualikan" component={Dikecualikan} exact />
           {/* <Route path="/dikecualikan" component={Dikecualikan} exact /> */}
           {/* <Route path="/kanal" component={Kanal} exact /> */}
           <Route
