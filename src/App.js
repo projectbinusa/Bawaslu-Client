@@ -30,6 +30,7 @@ import Dip from "./views/pages/informasi/Dip";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
 import OwlCarousel from "react-owl-carousel2";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
           <Route path="/berita" component={Berita} exact />
           <Route path="/maklumat" component={Maklumat} exact />
           <Route path="/dip" component={Dip} exact />
+          <Route path="/informasi_berkala" component={InformasiBerkala} exact />
         </Switch>
       </main>
     </BrowserRouter>

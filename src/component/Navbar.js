@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import Swal from "sweetalert2";
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,12 +14,39 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const logout = () => {
+    Swal.fire({
+      title: "Keluar Dari Akun Anda ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: "success",
+          title: "Success Logout",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        //Untuk munuju page selanjutnya
+        history.push("/login");
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+        localStorage.clear();
+      }
+    });
+  };
   return (
     // <!-- navbar start -->
     <>
@@ -59,7 +89,7 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 d-lg-block d-none align-self-center">
+            <div class="col-lg-2 d-lg-block d-none align-self-center">
               <div class="social-media-light text-md-end text-center">
                 <a href="#">
                   <i class="fab fa-facebook"></i>
@@ -75,10 +105,26 @@ function Navbar() {
                 </a>
               </div>
             </div>
+            {localStorage.getItem("role") === "admin" ? (
+              <div class="col-lg-1 col-md-5 align-self-center">
+                <button
+                  className="bg-primary border text-light p-2 rounded"
+                  onClick={logout}
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>
-      <nav className={`navbar-area navbar-area-2 navbar-expand-lg ${isSticky ? 'sticky-active' : ''}`}>
+      <nav
+        className={`navbar-area navbar-area-2 navbar-expand-lg ${
+          isSticky ? "sticky-active" : ""
+        }`}
+      >
         <div class="container nav-container">
           <div class="responsive-mobile-menu">
             <button
@@ -140,22 +186,40 @@ function Navbar() {
                 <a href="#">Informasi Publik</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                            <li><a href="/serta-merta">Informasi Serta Merta</a></li>
-                            <li><a href="">Informasi Setiap Saat</a></li>
-                            <li><a href="">Informasi Berkala</a></li>
-                            <li><a href="">Informasi DiKecualikan</a></li>
-                            <li><a href="">Kanal Pengawasan Pemilu</a></li>
-                        </ul>
+                  <li>
+                    <a href="/serta-merta">Informasi Serta Merta</a>
+                  </li>
+                  <li>
+                    <a href="">Informasi Setiap Saat</a>
+                  </li>
+                  <li>
+                    <a href="">Informasi Berkala</a>
+                  </li>
+                  <li>
+                    <a href="">Informasi DiKecualikan</a>
+                  </li>
+                  <li>
+                    <a href="">Kanal Pengawasan Pemilu</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Daftar Regulasi</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                            <li><a href="">Regulasi</a></li>
-                            <li><a href="/dip">DIP</a></li>
-                            <li><a href="/standarOp">Standar Operasional Prosedur</a></li>
-                            <li><a href="/maklumat">Maklumat Pelayanan</a></li>
-                        </ul>
+                  <li>
+                    <a href="">Regulasi</a>
+                  </li>
+                  <li>
+                    <a href="/dip">DIP</a>
+                  </li>
+                  <li>
+                    <a href="/standarOp">Standar Operasional Prosedur</a>
+                  </li>
+                  <li>
+                    <a href="/maklumat">Maklumat Pelayanan</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Form Online</a>
@@ -196,12 +260,6 @@ function Navbar() {
               {/* <li><a href="contact.html">Contact Us</a></li> */}
             </ul>
           </div>
-          {/* <div class="nav-right-part nav-right-part-desktop align-self-center">
-                <a class="search-bar-btn" href="#">
-                    <i class="fa fa-search"></i>
-                </a>
-                <a class="btn btn-black" href="#">Get Started</a>
-            </div> */}
         </div>
       </nav>
       {/* <!-- navbar end --> */}
