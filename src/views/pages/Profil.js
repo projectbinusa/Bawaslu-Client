@@ -82,6 +82,7 @@ function Profil() {
               <div className="profil">
                 <h2>PROFIL</h2>
                 <p style={{ width: "600px", alignItems: "center" }}>
+                  {/* test */}
                   Badan Pengawas Pemilu adalah lembaga negara yang memiliki
                   tugas pokok dan fungsi melakukan pengawasan terhadap seluruh
                   tahapan pemilihan umum . Melalui website ini, kami akan selalu
