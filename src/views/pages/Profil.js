@@ -1,9 +1,9 @@
 import React from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+// import OwlCarousel from "react-owl-carousel";
+// import "owl.carousel/dist/assets/owl.carousel.css";
+// import "owl.carousel/dist/assets/owl.theme.default.css";
 
 function Profil() {
   const options = {
