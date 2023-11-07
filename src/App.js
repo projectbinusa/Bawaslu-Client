@@ -20,6 +20,9 @@ import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
 import Berita from "./views/pages/Berita";
 import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
+import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import Maklumat from "./views/pages/Maklumat";
+import Dip from "./views/pages/informasi/Dip";
 
 import Maklumat from "./views/pages/Maklumat";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
@@ -53,12 +56,8 @@ function App() {
             exact
           />
           <Route path="/berita" component={Berita} exact />
-          <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
-          <Route
-            path="/informasi-berkala-kepemiluan"
-            component={InformasiBerkala}
-            exact
-          />
+          <Route path="/maklumat" component={Maklumat} exact />
+          <Route path="/dip" component={Dip} exact />
         </Switch>
       </main>
     </BrowserRouter>
