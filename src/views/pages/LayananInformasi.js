@@ -11,35 +11,27 @@ const LayananInformasi = () => {
       <div className="div" >
         <Navbar />
         <div
-        className="div"
+        className="vid"
           style={{
-            display: "flex",
-            padding: "25px",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "50px",
+           
           }}
         >
-          <div style={{}}>
-            <h1 style={{ width: "550px", fontSize: "57px" }}>
+          <div>
+            <h1 id="layanan" className="layanan-informasi">
               LAYANAN INFORMASI BERBASIS ANDROID
             </h1>
             <h1>_____</h1>
             <br></br>
-            <p style={{ width: "550px" }}>
+            <p className="download" >
               DOWNLOAD APLIKASI ANDROID PPID BAWASLU KAB. BOYOLALI Download
             </p>
           </div>
-          <div style={{}}>
+          <div >
             <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius:"5px"
-              }}
+            className="imgly"
+             
             >
-              <img style={{borderRadius:"20px"}} src={Phone} />
+              <img className="img"  src={Phone} />
             </div>
             <br></br>
             <div
