@@ -25,11 +25,15 @@ import Maklumat from "./views/pages/Maklumat";
 import Dip from "./views/pages/informasi/Dip";
 
 // import Maklumat from "./views/pages/Maklumat";
-// import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 // import Kanal from "./views/pages/informasi/Kanal";
-import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
+import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur"; 
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala"; 
 import OwlCarousel from "react-owl-carousel2";
+import FormPermohonaKeberatan from "./views/pages/FormPermohonanKeberatan";
+import SetiapSaat from "./views/pages/informasi/SetiapSaat";
 
 function App() {
   return (
