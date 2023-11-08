@@ -23,8 +23,8 @@ const FormPermohonaKeberatan = () => {
               </h1>
               <h1>__________</h1>
             </div>
-            <div className="info">
-              <img src={info} className="img-info" />
+            <div id="img-info" className="info">
+              <img id="img" src={info} className="img-info" />
             </div>
           </div>
           <div

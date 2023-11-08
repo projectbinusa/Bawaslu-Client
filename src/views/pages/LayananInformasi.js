@@ -29,9 +29,10 @@ const LayananInformasi = () => {
           <div >
             <div
             className="imgly"
+            
              
             >
-              <img className="img"  src={Phone} />
+              <img id="img" className="img"  src={Phone} />
             </div>
             <br></br>
             <div

@@ -88,4 +88,10 @@
     .btn-kirim{
         width: 60px;
     }
+    #img-info{
+        width: 250px;
+    }
+    #img{
+        width: 100px;
+    }
 }

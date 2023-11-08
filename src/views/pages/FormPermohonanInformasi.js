@@ -16,7 +16,7 @@ const PermohonanInformasi = () => {
               <h1>__________</h1>
             </div>
             <div className="info">
-              <img src={info} className="img" />
+              <img id="img" src={info} className="img" />
             </div>
           </div>
           <div className="option" style={{}}>
