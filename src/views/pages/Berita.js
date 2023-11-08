@@ -96,7 +96,8 @@ function Berita() {
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-              {list.map((berita, index) => {
+              {list.length > 0 ? (
+              list.map((berita, index) => {
                 return (
                   <div class="single-blog-inner">
                     <div class="tag-and-share">
@@ -188,7 +189,98 @@ function Berita() {
                     </div>
                   </div>
                 );
-              })}
+              })
+              ):(
+                <div class="single-blog-inner">
+                    <div class="tag-and-share">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="tags d-inline-block">
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-up"></i>
+                            </button>
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-down"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                          <div class="blog-share">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-facebook-f"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Facebook
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-twitter"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Twitter
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i class="fa-brands fa-pinterest"></i> Pin
+                                  </button>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thumb">
+                      <img
+                        style={{ height: "450px" }}
+                        src=""
+                        alt="img"
+                      />
+                    </div>
+                    <div class="details">
+                      <h2>
+                        <a href="">test</a>
+                      </h2>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i>BY admin
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i>{" "}
+                          test
+                        </li>
+                        <li>
+                          <i class="far fa-comment-dots"></i> 22 Comment
+                        </li>
+                      </ul>
+                      {/* <ul class="blog-meta">
+                    <li>
+                    <button className="border p-2"><i class="fa-regular fa-thumbs-up"></i></button>
+                    </li>
+                    <li>
+                    <button className="border p-2"><i class="fa-regular fa-thumbs-down"></i></button>
+                    </li>
+                    <li>
+                      <button className="border">Facebook</button>
+                    </li>
+                    <li>
+                      <button className="border">Twitter</button>
+                    </li>
+                    </ul> */}
+                    </div>
+                  </div>
+              )}
             </div>
             <div class="col-lg-4 col-12">
               <div className="sidebar-container">
