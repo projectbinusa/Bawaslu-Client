@@ -3,6 +3,7 @@ import { Route, Switch, BrowserRouter } from "react-router-dom";
 
 import Home from "./views/pages/Home";
 import SertaMerta from "./views/pages/informasi/SertaMerta";
+import SetiapSaat from "./views/pages/informasi/SetiapSaat";
 import "./css/style.css";
 import "./css/owl.css";
 
@@ -27,9 +28,12 @@ import Dip from "./views/pages/informasi/Dip";
 // import Maklumat from "./views/pages/Maklumat";
 // import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 // import Kanal from "./views/pages/informasi/Kanal";
-import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import FormPermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import FormPermohonanKeberatan from "./views/pages/FormPermohonanKeberatan";
+import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur";
 
 import OwlCarousel from "react-owl-carousel2";
+import LayananInformasi from "./views/pages/LayananInformasi";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
 
@@ -47,7 +51,7 @@ function App() {
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
-          {/* <Route path="/layananinformasi" component={LayananInformasi} exact /> */}
+          <Route path="/layananinformasi" component={LayananInformasi} exact />
           <Route path="/permohonankeberatan" component={FormPermohonanKeberatan} exact />
           <Route path="/permohonaninformasi" component={FormPermohonanInformasi} exact />
           <Route path="/informasistandarprosedur" component={InformasiStandarProsedur} exact />
