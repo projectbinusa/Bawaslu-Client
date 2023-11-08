@@ -27,7 +27,6 @@ import Dip from "./views/pages/informasi/Dip";
 // import Kanal from "./views/pages/informasi/Kanal";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 import OwlCarousel from "react-owl-carousel2";
-import LayananInformasi from "./views/pages/LayananInformasi";
 
 function App() {
   return (
@@ -39,6 +38,7 @@ function App() {
           <Route path="/" component={Home} exact />
           <Route path="/profil" component={Profil} exact />
           <Route path="/serta-merta" component={SertaMerta} exact />
+          <Route path="/setiap-saat" component={SetiapSaat} exact />
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
@@ -60,6 +60,9 @@ function App() {
           <Route path="/berita" component={Berita} exact />
           <Route path="/maklumat" component={Maklumat} exact />
           <Route path="/dip" component={Dip} exact />
+          <Route path="/infstandar" component={InformasiStandarProsedur} exact />
+          <Route path="/infberkala" component={InformasiBerkala} exact />
+          <Route path="/kecuali" component={Dikecualikan} exact />
         </Switch>
       </main>
     </BrowserRouter>

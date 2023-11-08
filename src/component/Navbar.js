@@ -11,10 +11,10 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
@@ -78,7 +78,11 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <nav className={`navbar-area navbar-area-2 navbar-expand-lg ${isSticky ? 'sticky-active' : ''}`}>
+      <nav
+        className={`navbar-area navbar-area-2 navbar-expand-lg ${
+          isSticky ? "sticky-active" : ""
+        }`}
+      >
         <div class="container nav-container">
           <div class="responsive-mobile-menu">
             <button
@@ -140,22 +144,40 @@ function Navbar() {
                 <a href="#">Informasi Publik</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                            <li><a href="/serta-merta">Informasi Serta Merta</a></li>
-                            <li><a href="">Informasi Setiap Saat</a></li>
-                            <li><a href="">Informasi Berkala</a></li>
-                            <li><a href="">Informasi DiKecualikan</a></li>
-                            <li><a href="">Kanal Pengawasan Pemilu</a></li>
-                        </ul>
+                  <li>
+                    <a href="/serta-merta">Informasi Serta Merta</a>
+                  </li>
+                  <li>
+                    <a href="/setiap-saat">Informasi Setiap Saat</a>
+                  </li>
+                  <li>
+                    <a href="/infberkala">Informasi Berkala</a>
+                  </li>
+                  <li>
+                    <a href="/kecuali">Informasi DiKecualikan</a>
+                  </li>
+                  <li>
+                    <a href="">Kanal Pengawasan Pemilu</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Daftar Regulasi</a>
                 <ul class="sub-menu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                            <li><a href="">Regulasi</a></li>
-                            <li><a href="/dip">DIP</a></li>
-                            <li><a href="/standarOp">Standar Operasional Prosedur</a></li>
-                            <li><a href="/maklumat">Maklumat Pelayanan</a></li>
-                        </ul>
+                  <li>
+                    <a href="/regulasi">Regulasi</a>
+                  </li>
+                  <li>
+                    <a href="/dip">DIP</a>
+                  </li>
+                  <li>
+                    <a href="/infstandar">Standar Operasional Prosedur</a>
+                  </li>
+                  <li>
+                    <a href="/maklumat">Maklumat Pelayanan</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">Form Online</a>
