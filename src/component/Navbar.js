@@ -183,10 +183,10 @@ function Navbar() {
                 <a href="#">Form Online</a>
                 <ul class="sub-menu">
                   <li>
-                    <a href="">Form Permohonan Informasi</a>
+                    <a href="/formpermohonan">Form Permohonan Informasi</a>
                   </li>
                   <li>
-                    <a href="">Form Permohonan Keberatan</a>
+                    <a href="/formkeberatan">Form Permohonan Keberatan</a>
                   </li>
                   <li>
                     <a href="">Layanan Informasi Berbasis Adroid</a>
