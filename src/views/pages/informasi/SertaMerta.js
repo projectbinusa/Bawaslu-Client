@@ -1,12 +1,11 @@
+
+import React from "react";
 import React, { useState } from "react";
 // import OwlCarousel from "react-owl-carousel2";
 // import "react-owl-carousel2/src/owl.carousel.css";
 // import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-
-// import "../../../css/owl.css";
-
 function SertaMerta() {
   const options = {
     items: 1, // Jumlah item yang akan ditampilkan dalam satu slide

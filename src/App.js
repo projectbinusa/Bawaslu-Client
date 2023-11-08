@@ -30,6 +30,8 @@ import Dip from "./views/pages/informasi/Dip";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
 import OwlCarousel from "react-owl-carousel2";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
 
 function App() {
   return (
@@ -45,6 +47,10 @@ function App() {
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
+          {/* <Route path="/layananinformasi" component={LayananInformasi} exact /> */}
+          <Route path="/permohonankeberatan" component={FormPermohonanKeberatan} exact />
+          <Route path="/permohonaninformasi" component={FormPermohonanInformasi} exact />
+          <Route path="/informasistandarprosedur" component={InformasiStandarProsedur} exact />
           <Route path="/biaya" component={BiayaLayanan} exact />
           <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
@@ -59,6 +65,8 @@ function App() {
           <Route path="/berita" component={Berita} exact />
           <Route path="/maklumat" component={Maklumat} exact />
           <Route path="/dip" component={Dip} exact />
+          {/* admin */}
+          <Route path="/berita-admin" component={BeritaAdmin} exact />
           <Route path="/infstandar" component={InformasiStandarProsedur} exact />
           <Route path="/infberkala" component={InformasiBerkala} exact />
           <Route path="/kecuali" component={Dikecualikan} exact />

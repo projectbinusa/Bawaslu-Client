@@ -1,6 +1,35 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import Swal from "sweetalert2";
+
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
+  const history = useHistory();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [submenuOpen, setSubmenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const toggleSubmenu = () => {
+    setSubmenuOpen(!submenuOpen);
+  };
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
+  const isMobile = windowWidth < 992;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +46,33 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const logout = () => {
+    Swal.fire({
+      title: "Keluar Dari Akun Anda ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: "success",
+          title: "Success Logout",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        //Untuk munuju page selanjutnya
+        history.push("/login");
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+        localStorage.clear();
+      }
+    });
+  };
   return (
     // <!-- navbar start -->
     <>
@@ -59,7 +115,7 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 d-lg-block d-none align-self-center">
+            <div class="col-lg-2 d-lg-block d-none align-self-center">
               <div class="social-media-light text-md-end text-center">
                 <a href="#">
                   <i class="fab fa-facebook"></i>
@@ -75,6 +131,18 @@ function Navbar() {
                 </a>
               </div>
             </div>
+            {localStorage.getItem("role") === "admin" ? (
+              <div class="col-lg-1 col-md-5 align-self-center">
+                <button
+                  className="bg-primary border text-light p-2 rounded"
+                  onClick={logout}
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       </div>
@@ -86,7 +154,8 @@ function Navbar() {
         <div class="container nav-container">
           <div class="responsive-mobile-menu">
             <button
-              class="menu toggle-btn d-block d-lg-none"
+              class={`d-lg-none menu toggle-btn ${menuOpen ? "is-active" : ""}`}
+              onClick={toggleMenu}
               data-target="#Iitechie_main_menu"
               aria-expanded="false"
               aria-label="Toggle navigation"
@@ -105,35 +174,26 @@ function Navbar() {
               <i class="fa fa-search"></i>
             </a>
           </div>
-          <div class="collapse navbar-collapse" id="Iitechie_main_menu">
+          <div
+            class={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
+            id="Iitechie_main_menu"
+          >
             <ul class="navbar-nav menu-open text-lg-start">
               <li class="">
                 <a href="/">Home</a>
-                {/* <ul class="sub-menu">
-                            <li><a href="index.html">Home 01</a></li>
-                            <li><a href="index-2.html">Home 02</a></li>
-                            <li><a href="index-3.html">Home 03</a></li>
-                            <li><a href="index-4.html">Home 04</a></li>
-                            <li><a href="index-5.html">Home 05</a></li>
-                        </ul> */}
               </li>
               <li class="">
                 <a href="/profil">Profile</a>
-                {/* <ul class="sub-menu">
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="service-details.html">Service Single</a></li>
-                        </ul> */}
               </li>
-              <li class="">
-                <a href="/berita">Berita</a>
-                {/* <ul class="sub-menu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="team.html">Team</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="project.html">Project</a></li>
-                            <li><a href="project-details.html">Project Details</a></li>
-                        </ul> */}
-              </li>
+              {localStorage.getItem("role") === "admin" ? (
+                <li class="">
+                  <a href="/berita-admin">Berita</a>
+                </li>
+              ) : (
+                <li class="">
+                  <a href="/berita">Berita</a>
+                </li>
+              )}
               <li class="">
                 <a href="/library">Library</a>
               </li>
@@ -141,8 +201,20 @@ function Navbar() {
                 <a href="/pengumuman">Pengumuman</a>
               </li>
               <li class="menu-item-has-children">
-                <a href="#">Informasi Publik</a>
-                <ul class="sub-menu">
+                <a
+                  href="#submenu"
+                  data-bs-toggle="collapse"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  onClick={toggleSubmenu}
+                >
+                  Informasi Publik
+                </a>
+                <ul
+                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu"
+                >
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   <li>
                     <a href="/serta-merta">Informasi Serta Merta</a>
@@ -162,8 +234,21 @@ function Navbar() {
                 </ul>
               </li>
               <li class="menu-item-has-children">
-                <a href="#">Daftar Regulasi</a>
-                <ul class="sub-menu">
+                <a
+                  href="#submenu2"
+                  data-bs-toggle="collapse"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  onClick={toggleSubmenu}
+                >
+                  Daftar Regulasi
+                </a>
+                <ul
+                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu2"
+                  data-bs-parent="#menu"
+                >
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   <li>
                     <a href="/regulasi">Regulasi</a>
@@ -180,8 +265,21 @@ function Navbar() {
                 </ul>
               </li>
               <li class="menu-item-has-children">
-                <a href="#">Form Online</a>
-                <ul class="sub-menu">
+                <a
+                  href="#submenu3"
+                  data-bs-toggle="collapse"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  onClick={toggleSubmenu}
+                >
+                  Form Online
+                </a>
+                <ul
+                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu3"
+                  data-bs-parent="#menu"
+                >
                   <li>
                     <a href="/formpermohonan">Form Permohonan Informasi</a>
                   </li>
@@ -194,8 +292,21 @@ function Navbar() {
                 </ul>
               </li>
               <li class="menu-item-has-children">
-                <a href="#">Prosedur</a>
-                <ul class="sub-menu">
+                <a
+                  href="#submenu4"
+                  data-bs-toggle="collapse"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                  onClick={toggleSubmenu}
+                >
+                  Prosedur
+                </a>
+                <ul
+                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu4"
+                  data-bs-parent="#menu"
+                >
                   <li>
                     <a href="/permintaan">Prosedur Permintaan Informasi</a>
                   </li>
@@ -218,12 +329,6 @@ function Navbar() {
               {/* <li><a href="contact.html">Contact Us</a></li> */}
             </ul>
           </div>
-          {/* <div class="nav-right-part nav-right-part-desktop align-self-center">
-                <a class="search-bar-btn" href="#">
-                    <i class="fa fa-search"></i>
-                </a>
-                <a class="btn btn-black" href="#">Get Started</a>
-            </div> */}
         </div>
       </nav>
       {/* <!-- navbar end --> */}
