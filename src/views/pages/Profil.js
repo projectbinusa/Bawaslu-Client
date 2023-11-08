@@ -1,17 +1,8 @@
 import React from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
-// import OwlCarousel from "react-owl-carousel";
-// import "owl.carousel/dist/assets/owl.carousel.css";
-// import "owl.carousel/dist/assets/owl.theme.default.css";
 
 function Profil() {
-  const options = {
-    items: 3, // Jumlah item yang ditampilkan dalam satu waktu
-    loop: true, // Membuat slider berulang
-    margin: 10, // Margin antara setiap item
-  };
-
   return (
     <div>
       <Navbar />
@@ -46,7 +37,6 @@ function Profil() {
           <div class="row">
             <div class="col-lg-6 pe-xl-5 align-self-center">
               <div class="section-title mb-0">
-                {/* <h5 class="sub-title left-border">Profile</h5> */}
                 <h2 class="title">Profile</h2>
                 <p class="content">
                   Badan Pengawas Pemilu adalah lembaga negara yang memiliki
@@ -57,68 +47,6 @@ function Profil() {
                 </p>
               </div>
               <div class="accordion mt-4" id="accordionExample">
-                {/* <h2 class="title">
-                  <strong>Visi</strong>
-                </h2>
-                <p class="content">
-                  Terwujudnya Bawaslu sebagai Lembaga Pengawal Terpercaya dalam
-                  Penyelenggaraan Pemilu Demokratis, Bermartabat, dan
-                  Berkualitas.
-                </p>
-                <h2 class="title">
-                  <strong>Misi</strong>
-                </h2>
-                <p>
-                  <ul>
-                    <li>
-                      Membangun aparatur dan kelembagaan pengawas pemilu yang
-                      kuat, mandiri dan solid;
-                    </li>
-                    <li>
-                      Mengembangkan pola dan metode pengawasan yang efektif dan
-                      efisien;
-                    </li>
-                    <li>
-                      Memperkuat sistem kontrol nasional dalam satu manajemen
-                      pengawasan yang terstruktur, sistematis, dan integratif
-                      berbasis teknologi
-                    </li>
-                    <li>
-                      Meningkatkan keterlibatan masyarakat dan peserta pemilu,
-                      serta meningkatkan sinergi kelembagaan dalam pengawasan
-                      pemilu partisipatif
-                    </li>
-                    <li>
-                      Meningkatkan kepercayaan publik atas kualitas kinerja
-                      pengawasan berupa pencegahan dan penindakan, serta
-                      penyelesaian sengketa secara cepat, akurat dan transparan
-                    </li>
-                    <li>
-                      Membangun Bawaslu sebagai pusat pembelajaran pengawasan
-                      pemilu baik bagi pihak dari dalam negeri maupun pihak dari
-                      luar negeri.
-                    </li>
-                  </ul>
-                </p>
-                <h2 class="title">
-                  <strong>Visi Misi</strong>
-                </h2>
-                <p>
-                    <ul>
-                        <li>
-                            Sejarah Pengawasan Pemilu
-                        </li>
-                        <li>
-                            Tugas, Wewenang dan Tanggung Jawab
-                        </li>
-                        <li>
-                            Profil Pimpinan
-                        </li>
-                        <li>
-                            Struktur Organisasi
-                        </li>
-                    </ul>
-                </p> */}
                 <div class="accordion-item single-accordion-inner style-2">
                   <h2 class="accordion-header" id="headingOne">
                     <button

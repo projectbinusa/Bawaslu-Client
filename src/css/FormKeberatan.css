@@ -1,3 +1,91 @@
-.form{
-    
+.form-txt{
+    width: 100px;
+}
+.head{
+    padding: 50px;
+}
+.h1{
+    font-size: 100px;
+    width: 100px;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.input{
+    width: 500px;
+}
+.pp {
+    font-size: 13px;
+}
+.textarea{
+    width: 500px;
+    height: 80px;
+}
+.select{
+    width: 500px;
+}
+.input-type{
+    display: flex;
+    gap:10px ;
+}
+.btn-kirim{
+    border-radius:15px ;
+    width:80px ;
+    border: 1px solid black;
+}
+.h3{
+    position: sticky;
+    top: 20px;
+}
+.span{
+    color: red;
+}
+.form-txt-img{
+     display: flex;  
+     justify-content: space-between; 
+     padding: 30px;
+}
+.img-info{
+    width: 550px;
+}
+@media screen and (max-width: 1024px) {
+    .form-txt-img{
+    }
+}
+@media screen and (max-width: 768px) {
+    .img-info{
+        width: 400px;
+        padding-top: 10px;
+    }
+    .img-logo{
+        width: 300px;
+        top: 20px;
+    }
+    .img-src{
+        width: 250px;
+        top: 0px;
+    }
+}
+@media screen and (max-width:320px) {
+    .img-info{
+
+    }
+    .form-txt-img{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    .h1{
+        font-size: 200px;
+    }
+    .input-type{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-kirim{
+        width: 60px;
+    }
 }

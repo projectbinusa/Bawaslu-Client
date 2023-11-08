@@ -1,25 +1,153 @@
-.head{
-    background-image: url(https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg);
-    padding: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
+.head {
+  background-image: url(https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg);
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+}
+.h1 {
+  width: 400px;
+  font-size: 57px;
+}
 
+.img {
+  width: 500px;
 }
-.h1{
-    width: 200px;
+.form {
+  padding-top: 100px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.option {
+  margin: 50px;
+  justify-content: center;
+  gap: 50px;
+  display: flex;
+}
+.form-txt {
+  padding-top: 100px;
+}
+.input {
+  width: 500px;
+}
+.pp {
+  font-size: 13px;
+}
+.select {
+  width: 500px;
+}
+.textarea {
+  width: 500px;
+  height: 80px;
+}
+.tujuan {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  border: 1px solid black;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-button {
+  display: flex;
+  align-items: center;
 }
 
-.img{
-    width: 500px;
-}
-.form{
-    padding: 20px;
+@media screen and (max-width: 1024px) {
+  .form {
+    padding-top: 40px;
+    justify-content: center;
+  }
+  .input {
+    width: 400px;
+  }
+  .option {
+    margin: 30px;
+    justify-content: center;
+    gap: 35px;
     display: flex;
-    justify-content: space-between;
+  }
+  .pp {
+    font-size: 12px;
+  }
+  .select {
+    width: 400px;
+  }
+  .textarea {
+    width: 400px;
+  }
+  .button {
+    width: 400px;
+  }
+  #div-button {
+    display: flex;
+    justify-content: center;
+  }
 }
-.option{
-    margin:50px;
+@media screen and (max-width: 768px) {
+  .form {
+    padding-top: 30px;
+    justify-content: center;
+  }
+  .input {
+    width: 300px;
+  }
+  .option {
+    margin: 25px;
+    justify-content: center;
+    gap: 25px;
+    display: flex;
+  }
+  .pp {
+    font-size: 11px;
+  }
+  .select {
+    width: 300px;
+  }
+  .textarea {
+    width: 300px;
+  }
+  .button {
+    width: 300px;
+  }
 }
-.form-img{
-    
+@media screen and (max-width: 320px) {
+    .head{
+        padding-top: 80px;
+    }
+  .h1 {
+    width: 200px;
+    font-size: 37px;
+  }
+  .form{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-txt{
+    padding-top: 20px;
+  }
+  .option{
+    margin: 25px;
+    justify-content: center;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+  .input{
+    width: 250px;
+  }
+  .select{
+    width: 250px;
+  }
+  .textarea{
+    width: 250px;
+  }
+  .button{
+    width: 100px;
+  }
 }

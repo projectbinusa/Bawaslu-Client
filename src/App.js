@@ -34,6 +34,7 @@ import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur";
 import SetiapSaat from "./views/pages/informasi/SetiapSaat";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+import FormPermohonaKeberatan from "./views/pages/FormPermohonanKeberatan";
 
 function App() {
   return (
@@ -66,6 +67,8 @@ function App() {
           <Route path="/infstandar" component={InformasiStandarProsedur} exact />
           <Route path="/infberkala" component={InformasiBerkala} exact />
           <Route path="/kecuali" component={Dikecualikan} exact />
+          <Route path="/formkeberatan" component={FormPermohonaKeberatan} exact />
+          <Route path="/formpermohonan" component={PermohonanInformasi} exact />
         </Switch>
       </main>
     </BrowserRouter>
