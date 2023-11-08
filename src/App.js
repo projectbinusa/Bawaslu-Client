@@ -30,11 +30,6 @@ import Dip from "./views/pages/informasi/Dip";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 
 import OwlCarousel from "react-owl-carousel2";
-import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur";
-import SetiapSaat from "./views/pages/informasi/SetiapSaat";
-import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-import Dikecualikan from "./views/pages/informasi/Dikecualikan";
-import FormPermohonaKeberatan from "./views/pages/FormPermohonanKeberatan";
 
 function App() {
   return (
