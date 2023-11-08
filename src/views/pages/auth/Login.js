@@ -28,6 +28,7 @@ function Login() {
           timer: 1500,
         });
         localStorage.setItem("id", response.data.userData.id);
+        localStorage.setItem("role", response.data.userData.role);
         localStorage.setItem("token", response.data.token);
         setTimeout(() => {
           window.location.reload();

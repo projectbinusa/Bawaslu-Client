@@ -1,18 +1,17 @@
 import React, { useEffect } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-
 import Home from "./views/pages/Home";
 import SertaMerta from "./views/pages/informasi/SertaMerta";
 import "./css/style.css";
 import "./css/owl.css";
-
 import PermintaanInformasi from "./views/prosedur/PermintaanInformasi";
 import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
-
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
-
+import InformasiStandarProsedur from "../src/views/pages/InformasiStandarProsedur";
+import FormPermohonanKeberatan from "../src/views/pages/FormPermohonanKeberatan";
+import FormPermohonanInformasi from "../src/views/pages/FormPermohonanInformasi"
 import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
 import eLibrary from "./views/pages/eLibrary";
@@ -23,14 +22,13 @@ import Register from "./views/pages/auth/Register";
 // import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 import Maklumat from "./views/pages/Maklumat";
 import Dip from "./views/pages/informasi/Dip";
-
 // import Maklumat from "./views/pages/Maklumat";
 // import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 // import Kanal from "./views/pages/informasi/Kanal";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
-
 import OwlCarousel from "react-owl-carousel2";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
 
 function App() {
   return (
@@ -45,6 +43,10 @@ function App() {
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
+          {/* <Route path="/layananinformasi" component={LayananInformasi} exact /> */}
+          <Route path="/permohonankeberatan" component={FormPermohonanKeberatan} exact />
+          <Route path="/permohonaninformasi" component={FormPermohonanInformasi} exact />
+          <Route path="/informasistandarprosedur" component={InformasiStandarProsedur} exact />
           <Route path="/biaya" component={BiayaLayanan} exact />
           <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
@@ -60,6 +62,8 @@ function App() {
           <Route path="/maklumat" component={Maklumat} exact />
           <Route path="/dip" component={Dip} exact />
           <Route path="/informasi_berkala" component={InformasiBerkala} exact />
+          {/* admin */}
+          <Route path="/berita-admin" component={BeritaAdmin} exact />
         </Switch>
       </main>
     </BrowserRouter>

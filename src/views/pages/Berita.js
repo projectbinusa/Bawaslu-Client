@@ -11,7 +11,8 @@ import { API_DUMMY } from "../../utils/base_URL";
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
-  const [list, setList] = useState([])
+  const [list, setList] = useState([]);
+  const [listTerbaru, setListTerbaru] = useState([]);
 
   const getAll = async () => {
     try {
@@ -23,10 +24,22 @@ function Berita() {
     }
   };
 
+  const getAllTerbaru = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita-terbaru`
+      );
+      setListTerbaru(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
   useEffect(() => {
     getAll(0);
+    getAllTerbaru(0);
   }, []);
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,83 +96,82 @@ function Berita() {
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-                {list.map((berita, index) => {
-                  return (
-                     <div class="single-blog-inner">
-                <div class="tag-and-share">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="tags d-inline-block">
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-down"></i>
-                        </button>
+              {list.map((berita, index) => {
+                return (
+                  <div class="single-blog-inner">
+                    <div class="tag-and-share">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="tags d-inline-block">
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-up"></i>
+                            </button>
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-down"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                          <div class="blog-share">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-facebook-f"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Facebook
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-twitter"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Twitter
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i class="fa-brands fa-pinterest"></i> Pin
+                                  </button>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div class="blog-share">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i class="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="thumb">
+                      <img
+                        style={{ height: "450px" }}
+                        src={berita.image}
+                        alt="img"
+                      />
                     </div>
-                  </div>
-                </div>
-                <div class="thumb">
-                  <img
-                    style={{ height: "450px" }}
-                    src={berita.image}
-                    alt="img"
-                  />
-                </div>
-                <div class="details">
-                  <h2>
-                    <a href="">
-                     {berita.isiBerita}
-                    </a>
-                  </h2>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY {berita.author}
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> {berita.createdDate}
-                    </li>
-                    <li>
-                      <i class="far fa-comment-dots"></i> 22 Comment
-                    </li>
-                  </ul>
-                  {/* <ul class="blog-meta">
+                    <div class="details">
+                      <h2>
+                        <a href="">{berita.isiBerita}</a>
+                      </h2>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i>BY {berita.author}
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i>{" "}
+                          {berita.createdDate}
+                        </li>
+                        <li>
+                          <i class="far fa-comment-dots"></i> 22 Comment
+                        </li>
+                      </ul>
+                      {/* <ul class="blog-meta">
                     <li>
                     <button className="border p-2"><i class="fa-regular fa-thumbs-up"></i></button>
                     </li>
@@ -173,136 +185,44 @@ function Berita() {
                       <button className="border">Twitter</button>
                     </li>
                     </ul> */}
-                </div>
-              </div>
-                  )
-                })}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
             <div class="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div class="td-sidebar">
                   <div
                     class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9" }}
+                    style={{ background: "#F1F6F9", overflow: "hidden" }}
                   >
-                    <h4 class="widget-title">Berita</h4>
+                    <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                {" "}
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
+                      {listTerbaru.map((beritaTerbaru) => {
+                        return (
+                          <li>
+                            <div class="media">
+                              <div class="media-left">
+                                <img
+                                  src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                                  style={{ width: "60px" }}
+                                  alt="blog"
+                                />
+                              </div>
+                              <div class="media-body align-self-center">
+                                <h6 class="title">
+                                  <a href="">{beritaTerbaru.judulBerita}</a>
+                                </h6>
+                                <div class="post-info">
+                                  <i class="far fa-calendar-alt"></i>
+                                  <span>{beritaTerbaru.createdDate}</span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Ciptakan Pemilu 2024 Bermartabat, Panwascam
-                                Tamansari Ajak Pemuda/Pemudi untuk Mengawasi
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Panwaslu Selo Gelar Sosialisasi Pengawasan
-                                Partisipastif Di SMK N 1 Selo
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Libatkan BPD, Panwascam Gladagsari Gelar
-                                Soswatif
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Panwaslu Selo Gelar Sosialisasi Pengawasan
-                                Partisipastif Di SMK N 1 Selo
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                   <div
