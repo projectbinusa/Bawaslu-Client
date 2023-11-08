@@ -34,6 +34,8 @@ import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur";
 
 import OwlCarousel from "react-owl-carousel2";
 import LayananInformasi from "./views/pages/LayananInformasi";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
 
 function App() {
   return (
@@ -67,6 +69,13 @@ function App() {
           <Route path="/berita" component={Berita} exact />
           <Route path="/maklumat" component={Maklumat} exact />
           <Route path="/dip" component={Dip} exact />
+          {/* admin */}
+          <Route path="/berita-admin" component={BeritaAdmin} exact />
+          <Route path="/infstandar" component={InformasiStandarProsedur} exact />
+          <Route path="/infberkala" component={InformasiBerkala} exact />
+          <Route path="/kecuali" component={Dikecualikan} exact />
+          <Route path="/formkeberatan" component={FormPermohonaKeberatan} exact />
+          <Route path="/formpermohonan" component={PermohonanInformasi} exact />
         </Switch>
       </main>
     </BrowserRouter>
