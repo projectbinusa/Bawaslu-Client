@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import Swal from "sweetalert2";
 
-function Navbar() {
+function NavbarAdmin() {
   const [isSticky, setIsSticky] = useState(false);
   const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);  
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -22,10 +22,10 @@ function Navbar() {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener('resize', handleWindowResize);
 
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
+      window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
 
@@ -185,15 +185,9 @@ function Navbar() {
               <li class="">
                 <a href="/profil">Profile</a>
               </li>
-              {localStorage.getItem("role") === "admin" ? (
-                <li class="">
-                  <a href="/berita-admin">Berita</a>
-                </li>
-              ) : (
-                <li class="">
-                  <a href="/berita">Berita</a>
-                </li>
-              )}
+              <li class="">
+                <a href="/berita">Berita</a>
+              </li>
               <li class="">
                 <a href="/library">Library</a>
               </li>
@@ -212,7 +206,7 @@ function Navbar() {
                   Informasi Publik
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
                   id="submenu"
                 >
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
@@ -220,13 +214,13 @@ function Navbar() {
                     <a href="/serta-merta">Informasi Serta Merta</a>
                   </li>
                   <li>
-                    <a href="/setiap-saat">Informasi Setiap Saat</a>
+                    <a href="">Informasi Setiap Saat</a>
                   </li>
                   <li>
-                    <a href="/infberkala">Informasi Berkala</a>
+                    <a href="">Informasi Berkala</a>
                   </li>
                   <li>
-                    <a href="/kecuali">Informasi DiKecualikan</a>
+                    <a href="">Informasi DiKecualikan</a>
                   </li>
                   <li>
                     <a href="">Kanal Pengawasan Pemilu</a>
@@ -245,7 +239,7 @@ function Navbar() {
                   Daftar Regulasi
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
                   id="submenu2"
                   data-bs-parent="#menu"
                 >
@@ -276,15 +270,15 @@ function Navbar() {
                   Form Online
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
                   id="submenu3"
                   data-bs-parent="#menu"
                 >
                   <li>
-                    <a href="/formpermohonan">Form Permohonan Informasi</a>
+                    <a href="">Form Permohonan Informasi</a>
                   </li>
                   <li>
-                    <a href="/formkeberatan">Form Permohonan Keberatan</a>
+                    <a href="">Form Permohonan Keberatan</a>
                   </li>
                   <li>
                     <a href="">Layanan Informasi Berbasis Adroid</a>
@@ -303,7 +297,7 @@ function Navbar() {
                   Prosedur
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
                   id="submenu4"
                   data-bs-parent="#menu"
                 >
@@ -336,4 +330,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarAdmin;
