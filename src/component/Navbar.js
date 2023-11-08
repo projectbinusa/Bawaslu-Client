@@ -220,13 +220,13 @@ function Navbar() {
                     <a href="/serta-merta">Informasi Serta Merta</a>
                   </li>
                   <li>
-                    <a href="">Informasi Setiap Saat</a>
+                    <a href="/setiap-saat">Informasi Setiap Saat</a>
                   </li>
                   <li>
-                    <a href="">Informasi Berkala</a>
+                    <a href="/infberkala">Informasi Berkala</a>
                   </li>
                   <li>
-                    <a href="">Informasi DiKecualikan</a>
+                    <a href="/kecuali">Informasi DiKecualikan</a>
                   </li>
                   <li>
                     <a href="">Kanal Pengawasan Pemilu</a>
@@ -251,13 +251,13 @@ function Navbar() {
                 >
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   <li>
-                    <a href="">Regulasi</a>
+                    <a href="/regulasi">Regulasi</a>
                   </li>
                   <li>
                     <a href="/dip">DIP</a>
                   </li>
                   <li>
-                    <a href="/standarOp">Standar Operasional Prosedur</a>
+                    <a href="/infstandar">Standar Operasional Prosedur</a>
                   </li>
                   <li>
                     <a href="/maklumat">Maklumat Pelayanan</a>
@@ -281,10 +281,10 @@ function Navbar() {
                   data-bs-parent="#menu"
                 >
                   <li>
-                    <a href="">Form Permohonan Informasi</a>
+                    <a href="/formpermohonan">Form Permohonan Informasi</a>
                   </li>
                   <li>
-                    <a href="">Form Permohonan Keberatan</a>
+                    <a href="/formkeberatan">Form Permohonan Keberatan</a>
                   </li>
                   <li>
                     <a href="">Layanan Informasi Berbasis Adroid</a>

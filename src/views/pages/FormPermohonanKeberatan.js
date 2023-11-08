@@ -32,7 +32,7 @@ const FormPermohonaKeberatan = () => {
           >
             <div>
               <form>
-                <p style={{}}>Nama Pemohon:</p>
+                <p >Nama Pemohon:</p>
                 <input className="input" />
                 <p className="pp" >0 of 30 max characters</p>
                 <br></br>
