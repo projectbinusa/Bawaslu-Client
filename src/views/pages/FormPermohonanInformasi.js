@@ -9,38 +9,36 @@ const PermohonanInformasi = () => {
       <div>
         <Navbar />
         <div className="head">
-          <div className="form">
-            <div>
+          <div className="form" >
+            <div className="form-txt" >
               {" "}
-              <h1 style={{ fontSize: "57px" }} className="h1">
-                FORM PERMOHONAN INFORMASI
-              </h1>
+              <h1 className="h1">FORM PERMOHONAN INFORMASI</h1>
               <h1>__________</h1>
             </div>
             <div className="info">
               <img src={info} className="img" />
             </div>
           </div>
-          <div
-            className="option"
-            style={{ display: "flex", justifyContent: "center", gap: "50px" }}
-          >
+          <div className="option" style={{}}>
             <div>
               <form>
                 <p style={{}}>Nama Pemohon:</p>
-                <input style={{ width: "500px" }} />
-                <p style={{ fontSize: "13px" }}>0 of 30 max characters</p>
+                <input className="input" />
+                <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <p>Alamat Pemohon:</p>
-                <textarea style={{ width: "500px", height: "80px" }} />
-                <p style={{ fontSize: "13px" }}>0 of 60 max characters</p>
+                <textarea
+                  className="textarea"
+                 
+                />
+                <p className="pp">0 of 60 max characters</p>
                 <br></br>
                 <p>Nomor Identitas Pemohon:</p>
-                <input style={{ width: "500px" }} />
-                <p style={{ fontSize: "13px" }}>0 of 30 max characters</p>
+                <input className="input" />
+                <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <p>Jenis Identitas:</p>
-                <select style={{ width: "500px" }}>
+                <select className="select">
                   <option>KTP (Kartu Tanda Penduduk)</option>
                   <option>SIM (Surat Izin Mengemudi)</option>
                   <option>KTM (Kartu Tanda Mahasiswa)</option>
@@ -48,33 +46,39 @@ const PermohonanInformasi = () => {
                 <br></br>
                 <br></br>
                 <p>Nomor Telp/HP:</p>
-                <input style={{ width: "500px" }} />
-                <p style={{ fontSize: "13px" }}>0 of 30 max characters</p>
+                <input className="input" />
+                <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <p>Email:</p>
-                <textarea style={{ width: "500px" }} />
-                <p style={{ fontSize: "13px" }}>0 of 30 max characters</p>
+                <input className="input" />{" "}
+                <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <p>Rincian Yang Dibutuhkan (Tambah Keterangan Bila Perlu):</p>
-                <textarea style={{ width: "500px", height: "80px" }} />
-                <p style={{ fontSize: "13px" }}>0 of 100 max characters</p>
+                <textarea
+                  className="textarea"
+                 
+                />
+                <p className="pp">0 of 100 max characters</p>
                 <br></br>
               </form>
             </div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div className="tujuan" >
               <p>Tujuan Penggunaan Informasi:</p>
-              <textarea style={{ width: "500px", height: "80px" }} />
-              <p style={{ fontSize: "13px" }}>0 of 100 max characters</p>
+              <textarea
+                className="textarea"
+               
+              />
+              <p className="pp">0 of 100 max characters</p>
 
               <br></br>
               <p>Cara Memproleh Infromasi:</p>
-              <select style={{ width: "500px" }}>
+              <select className="select">
                 <option>Melihat / Mendengar / Membaca / Mencatat</option>
                 <option>Mendapat Salianan Informasi</option>
               </select>
               <br></br>
               <p>Cara Mengambil Salinan Informasi:</p>
-              <select style={{ width: "500px" }}>
+              <select className="select">
                 <option>Mengambil Langsung </option>
                 <option>POS</option>
                 <option>Kurir</option>
@@ -83,7 +87,7 @@ const PermohonanInformasi = () => {
               </select>
               <br></br>
               <p>Upload Photo Identitas (.jpg) size max 1mb:</p>
-              <input style={{ backgroundColor: "" }} type="file" />
+              <input type="file" />
               <br></br>
               <p>Jaminan Perlindungan Data Pribadi:</p>
               <ol>
@@ -115,7 +119,8 @@ const PermohonanInformasi = () => {
                 </li>
               </ol>
               <br></br>
-              <button style={{ border: "1px solid black" }}>Kirim</button>
+              <div id="div-button" className="div-button">              <button className="button" >Kirim</button>
+</div>
             </div>
           </div>
         </div>

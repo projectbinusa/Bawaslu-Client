@@ -1,19 +1,25 @@
 import React, { useEffect } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-
 import Home from "./views/pages/Home";
 import SertaMerta from "./views/pages/informasi/SertaMerta";
 import "./css/style.css";
 import "./css/owl.css";
-
 import PermintaanInformasi from "./views/prosedur/PermintaanInformasi";
 import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
+<<<<<<< HEAD
 import Kanal from "./views/pages/informasi/Kanal";
 import Regulasi from "./views/pages/informasi/Regulasi";
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+=======
+import Profil from "./views/pages/Profil";
+import BiayaLayanan from "./views/prosedur/BiayaLayanan";
+import InformasiStandarProsedur from "../src/views/pages/InformasiStandarProsedur";
+import FormPermohonanKeberatan from "../src/views/pages/FormPermohonanKeberatan";
+import FormPermohonanInformasi from "../src/views/pages/FormPermohonanInformasi"
+>>>>>>> b7a9ad1a30e650bcfd137601d0fe60e7968d4d40
 import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
 import eLibrary from "./views/pages/eLibrary";
@@ -24,13 +30,12 @@ import Register from "./views/pages/auth/Register";
 // import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 import Maklumat from "./views/pages/Maklumat";
 import Dip from "./views/pages/informasi/Dip";
-
 // import Maklumat from "./views/pages/Maklumat";
 // import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 // import Kanal from "./views/pages/informasi/Kanal";
 import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
-
 import OwlCarousel from "react-owl-carousel2";
+import LayananInformasi from "./views/pages/LayananInformasi";
 
 function App() {
   return (
@@ -45,6 +50,10 @@ function App() {
           <Route path="/permintaan" component={PermintaanInformasi} exact />
           <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
+          <Route path="/layananinformasi" component={LayananInformasi} exact />
+          <Route path="/permohonankeberatan" component={FormPermohonanKeberatan} exact />
+          <Route path="/permohonaninformasi" component={FormPermohonanInformasi} exact />
+          <Route path="/informasistandarprosedur" component={InformasiStandarProsedur} exact />
           <Route path="/biaya" component={BiayaLayanan} exact />
           <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
