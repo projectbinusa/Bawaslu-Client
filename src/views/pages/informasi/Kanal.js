@@ -4,6 +4,7 @@ import React from "react";
 // import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import "../../../css/Kanal.css";
 
 // import "../../../css/owl.css";
 
@@ -16,7 +17,7 @@ function Kanal() {
   return (
     <div>
       <Navbar />
-      {/* <div
+      <div
         class="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}
       >
@@ -30,7 +31,9 @@ function Kanal() {
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Informasi Serta Merta</h4>
+                <h4 id="judul" class="page-title">
+                  Kanal pengawasan Pemilu 2024
+                </h4>
                 <ul class="page-list">
                   <li>
                     <a href="home">Home</a>
@@ -41,8 +44,8 @@ function Kanal() {
             </div>
           </div>
         </div>
-      </div> */}
-      {/* <!-- project area start --> */}
+      </div>
+
       <div
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
@@ -57,33 +60,36 @@ function Kanal() {
           }}
         >
           <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 ">
-                <div class="isotope-filters project-isotope-btn text-center mb-5">
-                  <button class="button active ml-0" data-filter="*">
-                    Imbauan
-                  </button>
-                  <button class="button" data-filter=".cat-1">
-                    Anggaran
-                  </button>
-                  <button class="button" data-filter=".cat-2">
-                    Pencegahan & Penanganan
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    SDM pengawasan pemilu
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Hasil Pengawasan
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Siaran Pers
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Putusan
-                  </button>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <div class="isotope-filters project-isotope-btn text-center mb-5">
+                    <button class="btn btn-primary active ml-0" data-filter="*">
+                      Imbauan
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-1">
+                      Anggaran
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-2">
+                      Pencegahan & Penanganan
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      SDM pengawasan pemilu
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Hasil Pengawasan
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Siaran Pers
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Putusan
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+
             <div className="card mb-4 shadow">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>

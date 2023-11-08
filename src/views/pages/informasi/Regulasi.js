@@ -16,7 +16,7 @@ function Regulasi() {
   return (
     <div>
       <Navbar />
-      {/* <div
+      <div
         class="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}
       >
@@ -30,7 +30,7 @@ function Regulasi() {
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Informasi Serta Merta</h4>
+                <h4 class="page-title">Daftar regulasi</h4>
                 <ul class="page-list">
                   <li>
                     <a href="home">Home</a>
@@ -41,7 +41,7 @@ function Regulasi() {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* <!-- project area start --> */}
       <div
         style={{
@@ -57,39 +57,42 @@ function Regulasi() {
           }}
         >
           <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 ">
-                <div class="isotope-filters project-isotope-btn text-center mb-5">
-                  <button class="button active ml-0" data-filter="*">
-                    Undang -Undang
-                  </button>
-                  <button class="button" data-filter=".cat-1">
-                    Peraturan Pemerintah
-                  </button>
-                  <button class="button" data-filter=".cat-2">
-                    Peraturan Mahkamah Agung
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Peraturan Komisi Informasi
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Peraturan Menteri
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Perbawaslu
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Penetapan PPID
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Surat Edaran
-                  </button>
-                  <button class="button" data-filter=".cat-3">
-                    Intruksi Kabupaten
-                  </button>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <div class="isotope-filters project-isotope-btn text-center mb-5">
+                    <button class="btn btn-primary active ml-0" data-filter="*">
+                      Undang-Undang
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-1">
+                      Peraturan Pemerintah
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-2">
+                      Peraturan mahkamah agung
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Peraturan komisi informasi
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Peraturan Menteri
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Perbawaslu
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Penetapan PPID
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Surat edaran
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Intruksi Kabupaten
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+
             <div className="card mb-4 shadow">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
