@@ -8,11 +8,15 @@ import { API_DUMMY } from "../../utils/base_URL";
 // import "react-owl-carousel2/src/owl.carousel.css";
 // import "react-owl-carousel2/src/owl.theme.default.css";
 // import "react-owl-carousel/style.css";
+// import moment from "moment"; // Menggunakan moment.js untuk bekerja dengan tanggal
+
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
+  const [november, setNovember] = useState([]);
+  // const [bulan, setBulan] = useState("");
 
   const getAll = async () => {
     try {
@@ -23,6 +27,20 @@ function Berita() {
       console.error("Terjadi Kesalahan", error);
     }
   };
+
+  const getAllRekapNovember = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita/arsip?bulan=2023-11`);
+      setNovember(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  // useEffect(() => {
+  //   const currentMonth = moment().format("MMMM")
+  // },[])
 
   const getAllTerbaru = async () => {
     try {
@@ -39,6 +57,7 @@ function Berita() {
   useEffect(() => {
     getAll(0);
     getAllTerbaru(0);
+    getAllRekapNovember(0);
   }, []);
 
   useEffect(() => {
@@ -244,7 +263,7 @@ function Berita() {
                     <div class="thumb">
                       <img
                         style={{ height: "450px" }}
-                        src=""
+                        src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
                         alt="img"
                       />
                     </div>
@@ -264,20 +283,6 @@ function Berita() {
                           <i class="far fa-comment-dots"></i> 22 Comment
                         </li>
                       </ul>
-                      {/* <ul class="blog-meta">
-                    <li>
-                    <button className="border p-2"><i class="fa-regular fa-thumbs-up"></i></button>
-                    </li>
-                    <li>
-                    <button className="border p-2"><i class="fa-regular fa-thumbs-down"></i></button>
-                    </li>
-                    <li>
-                      <button className="border">Facebook</button>
-                    </li>
-                    <li>
-                      <button className="border">Twitter</button>
-                    </li>
-                    </ul> */}
                     </div>
                   </div>
               )}
@@ -325,47 +330,62 @@ function Berita() {
                     <ul class="catagory-items">
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Oktober 2023 (10)
+                          <i class="fa-solid fa-file"></i> Desember 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/rekap-berita-november">
+                          <i class="fa-solid fa-file"></i> November 2023 ({november.length})
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Agustus 2023 (10)
+                          <i class="fa-solid fa-file"></i> Oktober 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Juli 2023 (10)
+                          <i class="fa-solid fa-file"></i> Setember 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Juni 2023 (10)
+                          <i class="fa-solid fa-file"></i> Agustus 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Mei 2023 (10)
+                          <i class="fa-solid fa-file"></i> Juli 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> April 2023 (10)
+                          <i class="fa-solid fa-file"></i> Juni 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Maret 2023 (10)
+                          <i class="fa-solid fa-file"></i> Mei 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Februari 2023 (10)
+                          <i class="fa-solid fa-file"></i> April 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Januari 2023 (10)
+                          <i class="fa-solid fa-file"></i> Maret 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Februari 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Januari 2023 ()
                         </a>
                       </li>
                     </ul>

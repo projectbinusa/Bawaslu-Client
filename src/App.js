@@ -27,6 +27,7 @@ import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
 import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
 import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
 import PermohonanInformasi from "./views/prosedur/PermintaanInformasi";
+import November from "./views/pages/rekap_berita/November";
 
 function App() {
   return (
@@ -85,6 +86,8 @@ function App() {
           />
           {/* admin */}
           <Route path="/berita-admin" component={BeritaAdmin} exact />
+          {/* rekap data perbulan */}
+          <Route path="/rekap-berita-november" component={November} exact />
         </Switch>
       </main>
     </BrowserRouter>
