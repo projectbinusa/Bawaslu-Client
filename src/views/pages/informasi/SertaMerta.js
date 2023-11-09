@@ -66,6 +66,42 @@ function SertaMerta() {
           }}
         >
           <div class="container">
+
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12">
+                  <div class="isotope-filters project-isotope-btn text-center mb-5">
+                    <button class="btn btn-primary active ml-0" data-filter="*">
+                      Putusan Pelanggaran
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-1">
+                      Sengketa Proses Pemilu
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-2">
+                      pemungutan Suara ulang
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Organisasi Dan Administrasi
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Perselisihan Hasil Pemilihan Umum
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Sosialisasi
+                    </button>
+                    <button class="btn btn-primary" data-filter=".cat-3">
+                      Piagam Penghargaan
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card mb-4 shadow">
+              <div className="card-header bg-primary text-light">
+                <div style={{ display: "flex" }}>
+                  <div className="col">
+                    <h4>Putusan Pelanggaran</h4>
+
             <div className="d-flex gap-5">
             <div class="row justify-content-center">
               <div class="col-lg-12 ">
@@ -453,12 +489,15 @@ function SertaMerta() {
                 <div style={{ display: "flex" }}>
                   <div className="col">
                     <h4>Pemungutan Suara Ulang</h4>
+
                   </div>
                   <div className="col">
                     {/* <button className="btn btn-primary float-end"> Tambah
                         </button> */}
                   </div>
                 </div>
+
+
               </div>
               <div className="card-body bg-body-tertiary table-container rounded">
                 <table className="table table1 responsive-3 table-striped table-hover border rounded">
@@ -526,6 +565,7 @@ function SertaMerta() {
                         </button> */}
                   </div>
                 </div>
+
               </div>
               <div className="card-body bg-body-tertiary table-container rounded">
                 <table className="table table1 responsive-3 table-striped table-hover border rounded">
@@ -538,6 +578,13 @@ function SertaMerta() {
                   <tbody>
                     <tr>
                       <td data-cell="dokumen" scope="row">
+
+                        <p>
+                          PUTUSAN SENGKETA PROSES PEMILU TAHUN 2019 NOMOR :
+                          01/PS/BWSL.BYL.14.11/III/2019
+                        </p>
+                      </td>
+
                         <p>SK PEMBERHENTIAN SEMENTARA PKD</p>
                       </td>
                       <td>
@@ -1113,6 +1160,7 @@ function SertaMerta() {
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
                         </p>
                       </td>{" "}
+
                       <td>
                         <button
                           className="bg-primary text-light"
@@ -1146,6 +1194,12 @@ function SertaMerta() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
+
+                          PUTUSAN PELANGGARAN PIDANA POLITIK UANG PEMILU 2019
+                          NOMOR : 10/Pid.Sus/2019/PNByl
+                        </p>
+                      </td>
+
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
                         </p>
                       </td>{" "}
@@ -1185,6 +1239,7 @@ function SertaMerta() {
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
                         </p>
                       </td>{" "}
+
                       <td>
                         <button
                           className="bg-primary text-light"
@@ -1218,7 +1273,12 @@ function SertaMerta() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
+
+                          PUTUSAN ACARA CEPAT PELANGGARAN ADMINISTRATIF PEMILU
+                          2019 PERBEDAAN C1 DAN DAA1
+
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
+
                         </p>
                       </td>{" "}
                       <td>
@@ -1255,7 +1315,10 @@ function SertaMerta() {
                 </table>
               </div>
             </div>
+
+
             </div>
+
           </div>
         </div>
       </div>
