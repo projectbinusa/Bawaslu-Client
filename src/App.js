@@ -21,20 +21,15 @@ import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
 import Berita from "./views/pages/Berita";
 import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
-// import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
 import Maklumat from "./views/pages/Maklumat";
 import Dip from "./views/pages/informasi/Dip";
-
-// import Maklumat from "./views/pages/Maklumat";
-// import Dikecualikan from "./views/pages/informasi/Dikecualikan";
-// import Kanal from "./views/pages/informasi/Kanal";
-import FormPermohonanInformasi from "./views/pages/FormPermohonanInformasi";
-import FormPermohonanKeberatan from "./views/pages/FormPermohonanKeberatan";
-import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur";
-
-import OwlCarousel from "react-owl-carousel2";
+import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
+import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur"; 
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala"; 
+import OwlCarousel from "react-owl-carousel2"
+import FormPermohonaKeberatan from "./views/pages/FormPermohonanKeberatan";
 import LayananInformasi from "./views/pages/LayananInformasi";
-import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
 
 function App() {
