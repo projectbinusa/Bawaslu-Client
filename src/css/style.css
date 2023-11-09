@@ -6167,6 +6167,13 @@ ul {
   color: var(--heading-color);
 }
 
+.align-self-center {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+}
+
 .widget-recent-post ul li .media .media-body .post-info span {
   color: #3f517e;
 }
@@ -7072,7 +7079,7 @@ ul {
 
 /*********** tag-and-share ************/
 .tag-and-share {
-  margin-top: 50px;
+  margin-top: 20px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   padding: 15px 0;
@@ -9059,6 +9066,7 @@ ul {
 .media .media-body a {
   text-decoration: none;
   color: black;
+  width: 20px;
 }
 /*--------------------------------------------------
     ##Footer

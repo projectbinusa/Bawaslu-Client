@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 // import OwlCarousel from "react-owl-carousel2";
 // import "react-owl-carousel2/src/owl.carousel.css";
 // import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-
-// import "../../../css/owl.css";
-
 function SertaMerta() {
-  const options = {
-    items: 1, // Jumlah item yang akan ditampilkan dalam satu slide
-    nav: true, // Tombol navigasi
-    dots: true, // Indikator titik
-  };
   const [table1Visible, setTable1Visible] = useState(false);
   const [table2Visible, setTable2Visible] = useState(false);
   const [table3Visible, setTable3Visible] = useState(false);
