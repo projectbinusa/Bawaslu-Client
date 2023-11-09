@@ -55,7 +55,7 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* {/* banner area end */}
+        {/* {/* banner area end test*/}
         {/* intro area start */}
         <div className="intro-area mg-top--100 bg-relative">
           <div className="container">

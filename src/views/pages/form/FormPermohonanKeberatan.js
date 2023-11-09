@@ -1,13 +1,13 @@
 import React from "react";
-import "../../css/FormKeberatan.css";
-import Navbar from "../../component/Navbar";
-import Footer from "../../component/Footer";
-import info from "../../aset/undraw_settings_tab_mgiw.svg";
-import RI from "../../aset/Bawaslu-RI-300x73-1.png";
-import jateng from "../../aset/bawaslu-jateng-300x73-1.png";
-import dkpp from "../../aset/dkpp-300x73-1.png";
-import KPU from "../../aset/KPU-300x73-1.png";
-import MAHKAMAH from "../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
+import "../../../css/FormKeberatan.css";
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
+import info from "../../../aset/undraw_settings_tab_mgiw.svg";
+import RI from "../../../aset/Bawaslu-RI-300x73-1.png";
+import jateng from "../../../aset/bawaslu-jateng-300x73-1.png";
+import dkpp from "../../../aset/dkpp-300x73-1.png";
+import KPU from "../../../aset/KPU-300x73-1.png";
+import MAHKAMAH from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 
 const FormPermohonaKeberatan = () => {
   return (
@@ -32,7 +32,7 @@ const FormPermohonaKeberatan = () => {
           >
             <div>
               <form>
-                <p style={{}}>Nama Pemohon:</p>
+                <p >Nama Pemohon:</p>
                 <input className="input" />
                 <p className="pp" >0 of 30 max characters</p>
                 <br></br>

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import Swal from "sweetalert2";
 
-function Navbar() {
+function NavbarAdmin() {
   const [isSticky, setIsSticky] = useState(false);
   const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);  
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -22,10 +22,10 @@ function Navbar() {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", handleWindowResize);
+    window.addEventListener('resize', handleWindowResize);
 
     return () => {
-      window.removeEventListener("resize", handleWindowResize);
+      window.removeEventListener('resize', handleWindowResize);
     };
   }, []);
 
@@ -135,7 +135,8 @@ function Navbar() {
               <div class="col-lg-1 col-md-5 align-self-center">
                 <button
                   className="bg-primary border text-light p-2 rounded"
-                  onClick={logout}>
+                  onClick={logout}
+                >
                   Logout
                 </button>
               </div>
@@ -148,7 +149,8 @@ function Navbar() {
       <nav
         className={`navbar-area navbar-area-2 navbar-expand-lg ${
           isSticky ? "sticky-active" : ""
-        }`}>
+        }`}
+      >
         <div class="container nav-container">
           <div class="responsive-mobile-menu">
             <button
@@ -156,7 +158,8 @@ function Navbar() {
               onClick={toggleMenu}
               data-target="#Iitechie_main_menu"
               aria-expanded="false"
-              aria-label="Toggle navigation">
+              aria-label="Toggle navigation"
+            >
               <span class="icon-left"></span>
               <span class="icon-right"></span>
             </button>
@@ -173,7 +176,8 @@ function Navbar() {
           </div>
           <div
             class={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
-            id="Iitechie_main_menu">
+            id="Iitechie_main_menu"
+          >
             <ul class="navbar-nav menu-open text-lg-start">
               <li class="">
                 <a href="/">Home</a>
@@ -181,15 +185,9 @@ function Navbar() {
               <li class="">
                 <a href="/profil">Profile</a>
               </li>
-              {localStorage.getItem("role") === "admin" ? (
-                <li class="">
-                  <a href="/berita-admin">Berita</a>
-                </li>
-              ) : (
-                <li class="">
-                  <a href="/berita">Berita</a>
-                </li>
-              )}
+              <li class="">
+                <a href="/berita">Berita</a>
+              </li>
               <li class="">
                 <a href="/library">Library</a>
               </li>
@@ -203,24 +201,26 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
+                  onClick={toggleSubmenu}
+                >
                   Informasi Publik
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
-                  id="submenu">
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
+                  id="submenu"
+                >
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   <li>
-                    <a href="/informasi-serta-merta">Informasi Serta Merta</a>
+                    <a href="/serta-merta">Informasi Serta Merta</a>
                   </li>
                   <li>
-                    <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
+                    <a href="">Informasi Setiap Saat</a>
                   </li>
                   <li>
-                    <a href="/informasi-berkala">Informasi Berkala</a>
+                    <a href="">Informasi Berkala</a>
                   </li>
                   <li>
-                    <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
+                    <a href="">Informasi DiKecualikan</a>
                   </li>
                   <li>
                     <a href="">Kanal Pengawasan Pemilu</a>
@@ -234,27 +234,27 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
+                  onClick={toggleSubmenu}
+                >
                   Daftar Regulasi
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
                   id="submenu2"
-                  data-bs-parent="#menu">
+                  data-bs-parent="#menu"
+                >
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   <li>
-                    <a href="/regulasi">Regulasi</a>
+                    <a href="">Regulasi</a>
                   </li>
                   <li>
                     <a href="/dip">DIP</a>
                   </li>
                   <li>
-                    <a href="/standar-operasional-prosedur">
-                      Standar Operasional Prosedur
-                    </a>
+                    <a href="/standarOp">Standar Operasional Prosedur</a>
                   </li>
                   <li>
-                    <a href="/maklumat-pelayanan">Maklumat Pelayanan</a>
+                    <a href="/maklumat">Maklumat Pelayanan</a>
                   </li>
                 </ul>
               </li>
@@ -265,27 +265,23 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
+                  onClick={toggleSubmenu}
+                >
                   Form Online
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
                   id="submenu3"
-                  data-bs-parent="#menu">
+                  data-bs-parent="#menu"
+                >
                   <li>
-                    <a href="/form-permohonan-informasi">
-                      Form Permohonan Informasi
-                    </a>
+                    <a href="">Form Permohonan Informasi</a>
                   </li>
                   <li>
-                    <a href="/form-permohonan-keberatan">
-                      Form Permohonan Keberatan
-                    </a>
+                    <a href="">Form Permohonan Keberatan</a>
                   </li>
                   <li>
-                    <a href="/layanan-informasi-berbasis-android">
-                      Layanan Informasi Berbasis Adroid
-                    </a>
+                    <a href="">Layanan Informasi Berbasis Adroid</a>
                   </li>
                 </ul>
               </li>
@@ -296,27 +292,29 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
+                  onClick={toggleSubmenu}
+                >
                   Prosedur
                 </a>
                 <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  class={`${isMobile ? 'collapse' : 'sub-menu'}`}
                   id="submenu4"
-                  data-bs-parent="#menu">
+                  data-bs-parent="#menu"
+                >
                   <li>
-                    <a href="/prosedur-permintaan-informasi">Prosedur Permintaan Informasi</a>
+                    <a href="/permintaan">Prosedur Permintaan Informasi</a>
                   </li>
                   <li>
-                    <a href="/prosedur-permohonan-keberatan">Prosedur Permohonan Keberatan</a>
+                    <a href="/permohonan">Prosedur Permohonan Keberatan</a>
                   </li>
                   <li>
-                    <a href="/waktu-layanan">Waktu Layanan</a>
+                    <a href="/waktu">Waktu Layanan</a>
                   </li>
                   <li>
-                    <a href="/biaya-pelayanan">Biaya Layanan</a>
+                    <a href="/biaya">Biaya Layanan</a>
                   </li>
                   <li>
-                    <a href="/prosedur-permohonan-penyelesaian-sengketa-informasi">
+                    <a href="/penyelesaian">
                       Prosedur Permohonan Penyelesaian <br /> Sengketa Informasi
                     </a>
                   </li>
@@ -332,4 +330,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavbarAdmin;

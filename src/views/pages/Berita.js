@@ -1,14 +1,64 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../component/Footer";
 import Navbar from "../../component/Navbar";
+import axios from "axios";
+import { API_DUMMY } from "../../utils/base_URL";
 // import OwlCarousel from "react-owl-carousel2";
 // import ReactOwlCarousel from "react-owl-carousel";
 // import "react-owl-carousel2/src/owl.carousel.css";
 // import "react-owl-carousel2/src/owl.theme.default.css";
 // import "react-owl-carousel/style.css";
+// import moment from "moment"; // Menggunakan moment.js untuk bekerja dengan tanggal
+
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
+  const [list, setList] = useState([]);
+  const [listTerbaru, setListTerbaru] = useState([]);
+  const [november, setNovember] = useState([]);
+  // const [bulan, setBulan] = useState("");
+
+  const getAll = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
+      setList(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  const getAllRekapNovember = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita/arsip?bulan=2023-11`);
+      setNovember(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  // useEffect(() => {
+  //   const currentMonth = moment().format("MMMM")
+  // },[])
+
+  const getAllTerbaru = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita-terbaru`
+      );
+      setListTerbaru(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  useEffect(() => {
+    getAll(0);
+    getAllTerbaru(0);
+    getAllRekapNovember(0);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,82 +115,83 @@ function Berita() {
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
-              <div class="single-blog-inner">
-                <div class="tag-and-share">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="tags d-inline-block">
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-down"></i>
-                        </button>
+              {list.length > 0 ? (
+              list.map((berita, index) => {
+                return (
+                  <div class="single-blog-inner">
+                    <div class="tag-and-share">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="tags d-inline-block">
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-up"></i>
+                            </button>
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-down"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                          <div class="blog-share">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-facebook-f"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Facebook
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-twitter"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Twitter
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i class="fa-brands fa-pinterest"></i> Pin
+                                  </button>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div class="blog-share">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i class="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="thumb">
+                      <img
+                        style={{ height: "450px" }}
+                        src={berita.image}
+                        alt="img"
+                      />
                     </div>
-                  </div>
-                </div>
-                <div class="thumb">
-                  <img
-                    style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/10/WhatsApp-Image-2023-10-21-at-16.09.25.jpeg"
-                    alt="img"
-                  />
-                </div>
-                <div class="details">
-                  <h2>
-                    <a href="">
-                      KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu Boyolali
-                      Turut Hadir dan Mengawasi
-                    </a>
-                  </h2>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY HUMAS BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 23 OKTOBER 2023
-                    </li>
-                    <li>
-                      <i class="far fa-comment-dots"></i> 22 Comment
-                    </li>
-                  </ul>
-                  {/* <ul class="blog-meta">
+                    <div class="details">
+                      <h2>
+                        <a href="">{berita.isiBerita}</a>
+                      </h2>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i>BY {berita.author}
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i>{" "}
+                          {berita.createdDate}
+                        </li>
+                        <li>
+                          <i class="far fa-comment-dots"></i> 22 Comment
+                        </li>
+                      </ul>
+                      {/* <ul class="blog-meta">
                     <li>
                     <button className="border p-2"><i class="fa-regular fa-thumbs-up"></i></button>
                     </li>
@@ -154,467 +205,121 @@ function Berita() {
                       <button className="border">Twitter</button>
                     </li>
                     </ul> */}
-                </div>
-              </div>
-              <div class="single-blog-inner">
-                <div class="tag-and-share">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="tags d-inline-block">
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-down"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div class="blog-share">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i class="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="thumb">
-                  <img
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/10/WhatsApp-Image-2023-10-23-at-09.09.39.jpeg"
-                    alt="img"
-                  />
-                  {/* <a
-                    class="video-play-btn video-play-btn-base"
-                    href="https://www.youtube.com/embed/Wimkqo8gDZ0"
-                    data-effect="mfp-zoom-in"
-                  >
-                    <i class="fa fa-play"></i>
-                  </a> */}
-                </div>
-                <div class="details">
-                  <h2>
-                    <a href="">
-                      Ciptakan Pemilu 2024 Bermartabat, Panwascam Tamansari Ajak
-                      Pemuda/Pemudi untuk Mengawasi
-                    </a>
-                  </h2>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY HUMAS BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 18 OKTOBER 2023
-                    </li>
-                    <li>
-                      <i class="far fa-comment-dots"></i> 22 Comment
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="single-blog-inner">
-                <div class="tag-and-share">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="tags d-inline-block">
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-down"></i>
-                        </button>
+                );
+              })
+              ):(
+                <div class="single-blog-inner">
+                    <div class="tag-and-share">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="tags d-inline-block">
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-up"></i>
+                            </button>
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-down"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                          <div class="blog-share">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-facebook-f"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Facebook
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i
+                                      class="fab fa-twitter"
+                                      aria-hidden="true"
+                                    ></i>{" "}
+                                    Twitter
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button className="border p-2">
+                                    <i class="fa-brands fa-pinterest"></i> Pin
+                                  </button>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div class="blog-share">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i class="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                    <div class="thumb">
+                      <img
+                        style={{ height: "450px" }}
+                        src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="details">
+                      <h2>
+                        <a href="">test</a>
+                      </h2>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i>BY admin
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i>{" "}
+                          test
+                        </li>
+                        <li>
+                          <i class="far fa-comment-dots"></i> 22 Comment
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-                <div class="thumb">
-                  <img
-                    style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/10/WhatsApp-Image-2023-10-17-at-09.47.21.jpeg"
-                    alt="img"
-                  />
-                  {/* <a
-                    class="video-play-btn video-play-btn-base"
-                    href="https://www.youtube.com/embed/Wimkqo8gDZ0"
-                    data-effect="mfp-zoom-in"
-                  >
-                    <i class="fa fa-play"></i>
-                  </a> */}
-                </div>
-                <div class="details">
-                  <h2>
-                    <a href="">
-                      Pengawasan Logistik Pemilu 2024, Bawaslu Boyolali Pastikan
-                      Gedung Telah Memenuhi Syarat
-                    </a>
-                  </h2>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY HUMAS BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 19 OKTOBER 2023
-                    </li>
-                    <li>
-                      <i class="far fa-comment-dots"></i> 22 Comment
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="single-blog-inner">
-                <div class="tag-and-share">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="tags d-inline-block">
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-down"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div class="blog-share">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i class="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="thumb">
-                  <img
-                    style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/10/selo-1-scaled.jpg"
-                    alt="img"
-                  />
-                  {/* <a
-                    class="video-play-btn video-play-btn-base"
-                    href="https://www.youtube.com/embed/Wimkqo8gDZ0"
-                    data-effect="mfp-zoom-in"
-                  >
-                    <i class="fa fa-play"></i>
-                  </a> */}
-                </div>
-                <div class="details">
-                  <h2>
-                    <a href="">
-                      Panwaslu Kecamatan Selo Gelar Deklarasi Pemilu Damai
-                    </a>
-                  </h2>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY HUMAS BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 18 OKTOBER 2023
-                    </li>
-                    <li>
-                      <i class="far fa-comment-dots"></i> 22 Comment
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="single-blog-inner">
-                <div class="tag-and-share">
-                  <div class="row">
-                    <div class="col-sm-7">
-                      <div class="tags d-inline-block">
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button className="border">
-                          <i class="fa-regular fa-thumbs-down"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div class="blog-share">
-                        <ul>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i
-                                  class="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button className="border p-2">
-                                <i class="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="thumb">
-                  <img
-                    style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/10/WhatsApp-Image-2023-10-17-at-13.55.43.jpeg"
-                    alt="img"
-                  />
-                  {/* <a
-                    class="video-play-btn video-play-btn-base"
-                    href="https://www.youtube.com/embed/Wimkqo8gDZ0"
-                    data-effect="mfp-zoom-in"
-                  >
-                    <i class="fa fa-play"></i>
-                  </a> */}
-                </div>
-                <div class="details">
-                  <h2>
-                    <a href="">
-                      Libatkan BPD, Panwascam Gladagsari Gelar Soswatif
-                    </a>
-                  </h2>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY HUMAS BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 18 OKTOBER 2023
-                    </li>
-                    <li>
-                      <i class="far fa-comment-dots"></i> 22 Comment
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              )}
             </div>
             <div class="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div class="td-sidebar">
                   <div
                     class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9" }}
+                    style={{ background: "#F1F6F9", overflow: "hidden" }}
                   >
-                    <h4 class="widget-title">Berita</h4>
+                    <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                {" "}
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
+                      {listTerbaru.map((beritaTerbaru) => {
+                        return (
+                          <li>
+                            <div class="media">
+                              <div class="media-left">
+                                <img
+                                  src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                                  style={{ width: "60px" }}
+                                  alt="blog"
+                                />
+                              </div>
+                              <div class="media-body align-self-center">
+                                <h6 class="title">
+                                  <a href="">{beritaTerbaru.judulBerita}</a>
+                                </h6>
+                                <div class="post-info">
+                                  <i class="far fa-calendar-alt"></i>
+                                  <span>{beritaTerbaru.createdDate}</span>
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Ciptakan Pemilu 2024 Bermartabat, Panwascam
-                                Tamansari Ajak Pemuda/Pemudi untuk Mengawasi
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Panwaslu Selo Gelar Sosialisasi Pengawasan
-                                Partisipastif Di SMK N 1 Selo
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Libatkan BPD, Panwascam Gladagsari Gelar
-                                Soswatif
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="media">
-                          <div class="media-left">
-                            <img
-                              src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                              style={{ width: "60px" }}
-                              alt="blog"
-                            />
-                          </div>
-                          <div class="media-body align-self-center">
-                            <h6 class="title">
-                              <a href="">
-                                Panwaslu Selo Gelar Sosialisasi Pengawasan
-                                Partisipastif Di SMK N 1 Selo
-                              </a>
-                            </h6>
-                            <div class="post-info">
-                              <i class="far fa-calendar-alt"></i>
-                              <span>15 October</span>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                   <div
@@ -625,47 +330,62 @@ function Berita() {
                     <ul class="catagory-items">
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Oktober 2023 (10)
+                          <i class="fa-solid fa-file"></i> Desember 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/rekap-berita-november">
+                          <i class="fa-solid fa-file"></i> November 2023 ({november.length})
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Agustus 2023 (10)
+                          <i class="fa-solid fa-file"></i> Oktober 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Juli 2023 (10)
+                          <i class="fa-solid fa-file"></i> Setember 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Juni 2023 (10)
+                          <i class="fa-solid fa-file"></i> Agustus 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Mei 2023 (10)
+                          <i class="fa-solid fa-file"></i> Juli 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> April 2023 (10)
+                          <i class="fa-solid fa-file"></i> Juni 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Maret 2023 (10)
+                          <i class="fa-solid fa-file"></i> Mei 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Februari 2023 (10)
+                          <i class="fa-solid fa-file"></i> April 2023 ()
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i class="fa-solid fa-file"></i> Januari 2023 (10)
+                          <i class="fa-solid fa-file"></i> Maret 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Februari 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Januari 2023 ()
                         </a>
                       </li>
                     </ul>
