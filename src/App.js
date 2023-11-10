@@ -6,8 +6,14 @@ import SetiapSaat from "./views/pages/informasi/SetiapSaat";
 import "./css/style.css";
 import "./css/owl.css";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
+import Kanal from "./views/pages/informasi/Kanal";
+import Regulasi from "./views/pages/informasi/Regulasi";
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
+
+import Dikecualikan from "./views/pages/informasi/Dikecualikan";
+
+
 import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
 import eLibrary from "./views/pages/eLibrary";
@@ -41,6 +47,37 @@ function App() {
           {/* page */}
           <Route path="/" component={Home} exact />
           <Route path="/profil" component={Profil} exact />
+
+          <Route path="/serta-merta" component={SertaMerta} exact />
+          <Route path="/permintaan" component={PermintaanInformasi} exact />
+          <Route path="/permohonan" component={PermohonanKeberatan} exact />
+          <Route path="/waktu" component={WaktuLayanan} exact />
+          <Route path="/layananinformasi" component={LayananInformasi} exact />
+          <Route
+            path="/permohonankeberatan"
+            component={PermohonanKeberatan}
+            exact
+          />
+          <Route
+            path="/permohonaninformasi"
+            component={PermohonanInformasi}
+            exact
+          />
+          {/* <Route
+            path="/informasistandarprosedur"
+            component={StandarProsedur}
+            exact
+          /> */}
+          <Route path="/biaya" component={BiayaLayanan} exact />
+          <Route path="/penyelesaian" component={PenyelesaianSengketa} exact />
+          <Route path="/pengumuman" component={Pengumuman} exact />
+          <Route path="/library" component={eLibrary} exact />
+          <Route path="/kanal" component={Kanal} exact />
+          <Route path="/regulasi" component={Regulasi} exact />
+          <Route path="/dikecualikan" component={Dikecualikan} exact />
+          {/* <Route path="/dikecualikan" component={Dikecualikan} exact /> */}
+          {/* <Route path="/kanal" component={Kanal} exact /> */}
+
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route path="/library" component={eLibrary} exact />
           <Route path="/berita" component={Berita} exact />
@@ -71,6 +108,7 @@ function App() {
             component={PenyelesaianSengketa}
             exact
           />
+
           <Route
             path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
             component={CalonAnggotaBawaslu}
