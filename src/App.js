@@ -31,6 +31,7 @@ import PermohonanInformasi from "./views/prosedur/PermintaanInformasi";
 import November from "./views/pages/rekap_berita/November";
 import { useState } from "react";
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
@@ -106,6 +107,7 @@ function App() {
           />
           {/* admin */}
           <Route path="/berita-admin" component={BeritaAdmin} exact />
+          <Route path="/admin-permohonan-informsi" component={AdminFormInformasi} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
         </Switch>
