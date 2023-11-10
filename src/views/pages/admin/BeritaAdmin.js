@@ -110,19 +110,23 @@ function BeritaAdmin() {
   const put = async (e) => {
     e.preventDefault();
     e.persist();
-  
+
     const formData = new FormData();
     formData.append("author", author);
     formData.append("isiBerita", isiBerita);
     formData.append("judulBerita", judulBerita);
     formData.append("tags", tags);
     formData.append("file", image);
-  
+
     try {
-      const response = await axios.put(`${API_DUMMY}/bawaslu/api/berita/` + id, formData, {
-        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-      });
-  
+      const response = await axios.put(
+        `${API_DUMMY}/bawaslu/api/berita/` + id,
+        formData,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
+
       if (response.status === 200) {
         setShowEdit(false);
         Swal.fire({
@@ -148,7 +152,6 @@ function BeritaAdmin() {
       }
     }
   };
-  
 
   const getById = async (id) => {
     await axios
@@ -173,12 +176,14 @@ function BeritaAdmin() {
       <Navbar />
       <div
         class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}>
+        style={{ background: "#151423" }}
+      >
         <div
           class="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}></div>
+          }}
+        ></div>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
@@ -209,7 +214,8 @@ function BeritaAdmin() {
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                   data-modal-hide="authentication-modal"
-                  className="bg-success text-light float-end">
+                  className="bg-success text-light float-end"
+                >
                   {" "}
                   Tambah
                 </button>
@@ -278,7 +284,8 @@ function BeritaAdmin() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}>
+                          }}
+                        >
                           <i class="fas fa-edit"></i>
                         </button>
                         <button
@@ -291,7 +298,8 @@ function BeritaAdmin() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}>
+                          }}
+                        >
                           <i class="fas fa-trash-alt"></i>
                         </button>
                       </div>
@@ -311,7 +319,8 @@ function BeritaAdmin() {
         id="exampleModal"
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+        aria-hidden="true"
+      >
         <div className="modal-dialog">
           <form onSubmit={add} className="modal-content">
             <div className="modal-header">
@@ -322,7 +331,8 @@ function BeritaAdmin() {
                 type="button"
                 className="btn-close"
                 data-bs-dismiss="modal"
-                aria-label="Close"></button>
+                aria-label="Close"
+              ></button>
             </div>
             <div className="modal-body">
               <div className="input-group mb-3">
@@ -395,7 +405,8 @@ function BeritaAdmin() {
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
-                onClick={handleCloseAdd}>
+                onClick={handleCloseAdd}
+              >
                 Close
               </button>
               <button type="submit" className="btn btn-primary">
@@ -426,7 +437,8 @@ function BeritaAdmin() {
         data-bs-keyboard="false"
         tabindex="-1"
         aria-labelledby="staticBackdropLabel"
-        aria-hidden="true">
+        aria-hidden="true"
+      >
         <div class="modal-dialog">
           <form onSUbmit={put} class="modal-content">
             <div class="modal-header">
@@ -437,7 +449,8 @@ function BeritaAdmin() {
                 type="button"
                 class="btn-close"
                 data-bs-dismiss="modal"
-                aria-label="Close"></button>
+                aria-label="Close"
+              ></button>
             </div>
             <div className="modal-body">
               <div className="input-group mb-3">
@@ -510,7 +523,8 @@ function BeritaAdmin() {
                 onClick={() => setShowEdit(false)}
                 type="button"
                 class="btn btn-secondary"
-                data-bs-dismiss="modal">
+                data-bs-dismiss="modal"
+              >
                 Close
               </button>
               <button type="submit" class="btn btn-primary">
