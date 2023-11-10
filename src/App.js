@@ -7,13 +7,10 @@ import "./css/style.css";
 import "./css/owl.css";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
 import Kanal from "./views/pages/informasi/Kanal";
-import Regulasi from "./views/pages/informasi/Regulasi";
+import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
-
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
-
-
 import PenyelesaianSengketa from "./views/prosedur/PenyelesaianSengketa";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
 import eLibrary from "./views/pages/eLibrary";
@@ -21,20 +18,19 @@ import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
 import Berita from "./views/pages/Berita";
 import Login from "./views/pages/auth/Login";
 import Register from "./views/pages/auth/Register";
-// import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
-import Maklumat from "./views/pages/Maklumat";
+import Maklumat from "./views/pages/informasi/Maklumat";
 import Dip from "./views/pages/informasi/Dip";
 
-// import Maklumat from "./views/pages/Maklumat";
-import Dikecualikan from "./views/pages/informasi/Dikecualikan";
-// import Kanal from "./views/pages/informasi/Kanal";
-
-import PermohonanInformasi from "./views/pages/FormPermohonanInformasi";
-import InformasiStandarProsedur from "./views/pages/InformasiStandarProsedur"; 
+import InformasiStandarProsedur from "./views/pages/informasi/InformasiStandarProsedur"; 
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala"; 
+import LayananInformasi from "./views/pages/informasi/LayananInformasi"; 
 import OwlCarousel from "react-owl-carousel2";
-import FormPermohonaKeberatan from "./views/pages/FormPermohonanKeberatan";
-import SetiapSaat from "./views/pages/informasi/SetiapSaat";
+import PermintaanInformasi from "./views/prosedur/PermintaanInformasi";
+import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
+import FormPermohonanKeberatan from "./views/pages/form/FormPermohonanKeberatan";
+import FormPermohonanInformasi from "./views/pages/form/FormPermohonanInformasi";
+import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
+import November from "./views/pages/rekap_berita/November";
 
 function App() {
   return (
@@ -49,20 +45,8 @@ function App() {
           <Route path="/profil" component={Profil} exact />
 
           <Route path="/serta-merta" component={SertaMerta} exact />
-          <Route path="/permintaan" component={PermintaanInformasi} exact />
-          <Route path="/permohonan" component={PermohonanKeberatan} exact />
           <Route path="/waktu" component={WaktuLayanan} exact />
           <Route path="/layananinformasi" component={LayananInformasi} exact />
-          <Route
-            path="/permohonankeberatan"
-            component={PermohonanKeberatan}
-            exact
-          />
-          <Route
-            path="/permohonaninformasi"
-            component={PermohonanInformasi}
-            exact
-          />
           {/* <Route
             path="/informasistandarprosedur"
             component={StandarProsedur}
@@ -101,7 +85,7 @@ function App() {
           <Route path="/waktu-layanan" component={WaktuLayanan} exact />
           <Route path="/layanan-informasi-berbasis-android" component={LayananInformasi} exact />
           <Route path="/biaya-pelayanan" component={BiayaLayanan} exact />
-          <Route path="/prosedur-permintaan-informasi" component={PermohonanInformasi} exact />
+          <Route path="/prosedur-permintaan-informasi" component={PermintaanInformasi} exact />
           <Route path="/prosedur-permohonan-keberatan" component={PermohonanKeberatan} exact />
           <Route
             path="/prosedur-permohonan-penyelesaian-sengketa-informasi"
@@ -116,7 +100,6 @@ function App() {
           />
           {/* daftar regulasi */}
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi" component={Regulasi} exact />
           <Route path="/dip" component={Dip} exact />
           <Route
             path="/standar-operasional-prosedur"

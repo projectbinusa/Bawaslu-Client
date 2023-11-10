@@ -64,7 +64,7 @@ function SertaMerta() {
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
-        >
+        ></div>
           <div class="container">
 
             <div class="container">
@@ -584,7 +584,7 @@ function SertaMerta() {
                           01/PS/BWSL.BYL.14.11/III/2019
                         </p>
                       </td>
-
+                      <td>
                         <p>SK PEMBERHENTIAN SEMENTARA PKD</p>
                       </td>
                       <td>
@@ -1199,7 +1199,8 @@ function SertaMerta() {
                           NOMOR : 10/Pid.Sus/2019/PNByl
                         </p>
                       </td>
-
+                      <td>
+                      <p>
                           SK PENGAKTIFAN ANGGOTA PANWASCAM KAB BOYOLALI
                         </p>
                       </td>{" "}
@@ -1311,19 +1312,18 @@ function SertaMerta() {
                       </td>
                     </tr>
                   </tbody>
-                  <div></div>
+                  <div>
+                  </div>
                 </table>
-              </div>
             </div>
-
-
-            </div>
-
           </div>
         </div>
       </div>
-      {/* <!-- project area end --> */}
-
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Footer />
     </div>
   );
