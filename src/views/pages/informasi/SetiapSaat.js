@@ -1,21 +1,43 @@
-import React from 'react'
-import Footer from '../../../component/Footer'
-import Navbar from '../../../component/Navbar'
+import React, { useRef } from "react";
+import Footer from "../../../component/Footer";
+import Navbar from "../../../component/Navbar";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
+import gambar from "../../../asset/img/bawaslu(berita).jpeg"
 
 function SetiapSaat() {
+  const imageRef = useRef(null);
+
+  const downloadPdf = () => {
+    const imageElement = imageRef.current;
+
+    if (imageElement) {
+      html2canvas(imageElement)
+        .then((canvas) => {
+          const imgData = canvas.toDataURL("image/png");
+          const pdf = new jsPDF();
+          const imgWidth = 210;
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+          pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+          pdf.save("download.pdf");
+        })
+        .catch((error) => {
+          console.error("Error converting to canvas:", error);
+        });
+    }
+  };
   return (
     <div>
       <Navbar />
       <div
         class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}
-      >
+        style={{ background: "#151423" }}>
         <div
           class="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}
-        ></div>
+          }}></div>
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
@@ -39,13 +61,11 @@ function SetiapSaat() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
-      >
+        class="project-area pd-top-115 pd-bottom-90">
         <div
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        >
+          }}>
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-12 ">
@@ -74,7 +94,7 @@ function SetiapSaat() {
                 </div>
               </div>
             </div>
-            <div className="card mb-4 shadow">
+            <div className="card mb-4 shadow ">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
                   <div className="col">
@@ -98,7 +118,48 @@ function SetiapSaat() {
                     <tr>
                       <td data-cell="dokumen" scope="row">
                         <p>
-                        DATA JUMLAH ANGGOTA BAWASLU KAB BOYOLALI PERIODE 2018 - 2023
+                          DATA JUMLAH ANGGOTA BAWASLU KAB BOYOLALI PERIODE 2018
+                          - 2023
+                        </p>
+                      </td>
+                      <td>
+                        <div ref={imageRef}>
+                          {/* <img src={gambar}alt="Your Image" /> */}
+                        </div>
+
+                          <button
+                            onClick={downloadPdf}
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}>
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}>
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          DATA JUMLAH PENGAWAS DESA KELURAHAN DI BOYOLALI 2018
+                          dan 2019
                         </p>
                       </td>
                       <td>
@@ -111,8 +172,7 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}
-                        >
+                          }}>
                           <i class="fa-solid fa-download"></i>
                         </button>
                         <button
@@ -124,8 +184,7 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}
-                        >
+                          }}>
                           <i class="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
@@ -134,43 +193,8 @@ function SetiapSaat() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
-                          DATA JUMLAH PENGAWAS DESA KELURAHAN DI BOYOLALI 2018 dan 2019
-                        </p>
-                      </td>
-                      <td>
-                        <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td data-cell="unduh">
-                        <p>
-                          {" "}
-                          DATA TAHAPAN SELEKSI DAN JUMLAH PENGAWAS TPS PEMILU 2019
+                          DATA TAHAPAN SELEKSI DAN JUMLAH PENGAWAS TPS PEMILU
+                          2019
                         </p>
                       </td>{" "}
                       <td>
@@ -183,8 +207,7 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}
-                        >
+                          }}>
                           <i class="fa-solid fa-download"></i>
                         </button>
                         <button
@@ -196,8 +219,7 @@ function SetiapSaat() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
-                          }}
-                        >
+                          }}>
                           <i class="fa-solid fa-circle-info"></i>
                         </button>
                       </td>
@@ -214,7 +236,7 @@ function SetiapSaat() {
 
       <Footer />
     </div>
-  )
+  );
 }
 
-export default SetiapSaat
+export default SetiapSaat;
