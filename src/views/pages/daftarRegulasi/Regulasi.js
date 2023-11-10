@@ -57,7 +57,6 @@ function Regulasi() {
         break;
     }
   };
-  const [regulasi, setRegulasi] = useState([]);
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
   const [isi1, setIsi1] = useState([]);
@@ -238,6 +237,35 @@ function Regulasi() {
   return (
     <div>
       <Navbar />
+        {/* <!-- page title start --> */}
+        <div class="breadcrumb-area bg-black bg-relative">
+        <div
+          class="banner-bg-img"
+          style={{
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
+          }}
+        ></div>
+        <div>
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+              <div class="breadcrumb-inner text-center">
+                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
+                  Regulasi
+                </h2>
+                <ul class="page-list">
+                  <li>
+                    <a href="/" style={{ textDecoration: "none" }}>
+                      Home
+                    </a>
+                  </li>
+                  <li>Regulasi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <!-- page title end --> */}
       <div
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
