@@ -24,10 +24,12 @@ function AdminFormInformasi() {
     const [tujuanInformasi, setTujuanInformasi]= useState("");
     const [rincianInformasi, setRincianInformasi]= useState("");
     const [diTunjukanKepada, setDiTunjukanKepada]= useState("");
-    const [caraMemperolahInformasi, setCaraMemperolahInformasi]= useState("");
-    const [file, setFIile]= useState("");
+    const [caraMemperolahInformasi, setCaraMemperolehInformasi]= useState("");
+    const [caraCaraMendapatkanInformasi, setCaraMendapatkanInformasi]= useState("");
+    const [file, setFile]= useState("");
     const history = useHistory();
-    // const [caraMemperolahInformasi, setCaraMemperolahInformasi]= useState("");
+    const [id, setId] = useState(0);
+    // const [caraMemperolahInformasi, setCaraMemperolehInformasi]= useState("");
 
   const getAll = async () => {
     try {
@@ -120,69 +122,83 @@ function AdminFormInformasi() {
 //     });
 //   };
 
-//   const put = async (e) => {
-//     e.preventDefault();
-//     e.persist();
+  const put = async (e) => {
+    e.preventDefault();
+    e.persist();
 
-//     const formData = new FormData();
-//     formData.append("author", author);
-//     formData.append("isiBerita", isiBerita);
-//     formData.append("judulBerita", judulBerita);
-//     formData.append("tags", tags);
-//     formData.append("file", image);
+    const formData = new FormData();
+    formData.append("nama", nama);
+    formData.append("alamat", alamat);
+    formData.append("pendidikan", pendidikan);
+    formData.append("pekerjaan", pekerjaan);
+    formData.append("email", email);
+    formData.append("noHp", noHp);
+    formData.append("tujuanInformasi", tujuanInformasi);
+    formData.append("pekerjaan", pekerjaan);
+    formData.append("rincianInformasi", rincianInformasi);
+    formData.append("diTunjukanKepada", diTunjukanKepada);
+    formData.append("caraMemperolahInformasi", caraMemperolahInformasi);
+    formData.append("file", file); // Upload gambar jika dipilih
 
-//     try {
-//       const response = await axios.put(
-//         `${API_DUMMY}/bawaslu/api/berita/` + id,
-//         formData,
-//         {
-//           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-//         }
-//       );
+    try {
+      const response = await axios.put(
+        `${API_DUMMY}/bawaslu/api/permohonan-keberatan/` + id,
+        formData,
+        {
+          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+        }
+      );
 
-//       if (response.status === 200) {
-//         setShowEdit(false);
-//         Swal.fire({
-//           icon: "success",
-//           title: "Berhasil Mengedit",
-//           showConfirmButton: false,
-//           timer: 1500,
-//         });
-//         setTimeout(() => {
-//           window.location.reload();
-//         }, 1500);
-//       } else {
-//         // Handle unexpected status code
-//         console.log("Unexpected status code:", response.status);
-//       }
-//     } catch (err) {
-//       if (err.response && err.response.status === 401) {
-//         // Handle Unauthorized error
-//         console.log("Unauthorized. Please log in again.");
-//       } else {
-//         // Handle other errors
-//         console.log("Error:", err.message);
-//       }
-//     }
-//   };
+      if (response.status === 200) {
+        setShowEdit(false);
+        Swal.fire({
+          icon: "success",
+          title: "Berhasil Mengedit",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+      } else {
+        // Handle unexpected status code
+        console.log("Unexpected status code:", response.status);
+      }
+    } catch (err) {
+      if (err.response && err.response.status === 401) {
+        // Handle Unauthorized error
+        console.log("Unauthorized. Please log in again.");
+      } else {
+        // Handle other errors
+        console.log("Error:", err.message);
+      }
+    }
+  };
 
-//   const getById = async (id) => {
-//     await axios
-//       .get(`${API_DUMMY}/bawaslu/api/berita/` + id, {
-//         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-//       })
-//       .then((res) => {
-//         setJudulBerita(res.data.data.judulBerita);
-//         setAuthor(res.data.data.author);
-//         setIsiBerita(res.data.data.isiBerita);
-//         setImage(res.data.data.image);
-//         setId(res.data.data.id);
-//         console.log(res.data.data);
-//       })
-//       .catch((error) => {
-//         alert("Terjadi Keslahan" + error);
-//       });
-//   };
+  const getById = async (id) => {
+    await axios
+      .get(`${API_DUMMY}/bawaslu/api/permohonan-informasi/` + id, {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      })
+      .then((res) => {
+        setNama(res.data.data.nama);
+        setEmail(res.data.data.email);
+        setPendidikan(res.data.data.pendidikan);
+        setPekerjaan(res.data.data.pekerjaan);
+        setNoHp(res.data.data.noHp);
+        setAlamat(res.data.data.alamat);
+        setDiTunjukanKepada(res.data.data.ditujukanKepada);
+        setRincianInformasi(res.data.data.rincianInformasi);
+        setTujuanInformasi(res.data.data.tujuanInformasi);
+        setNoHp(res.data.data.noHp);
+        setFile(res.data.data.tandaPengenal);
+        setId(res.data.data.id);
+        console.log(res.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi Keslahan" + error);
+      });
+  };
 
   return (
     <div>
@@ -218,7 +234,7 @@ function AdminFormInformasi() {
               <div className="col">
                 <h4>Permohonan Informasi</h4>
               </div>
-              <div className="col">
+              {/* <div className="col">
                 <button
                   type="button"
                   onClick={handleShowAdd}
@@ -229,7 +245,7 @@ function AdminFormInformasi() {
                   {" "}
                   Tambah Data
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div style={{overflowX:"scroll"}}>
@@ -289,20 +305,20 @@ function AdminFormInformasi() {
                       <p>{informasi.email}</p>
                     </td>
                     <td data-cell="dokumen">
-                      <p>{informasi.caraMemperolahInformasi}</p>
+                      <p>{informasi.caraMemperolehInformasi}</p>
                     </td>
                     <td data-cell="dokumen">
-                      <p>{informasi.caraMendapatkanInformasi}</p>
+                      <p>{informasi.caraMendapatInformasi}</p>
                     </td>
                     <td data-cell="dokumen">
-                      <p>{informasi.diTunjukanKepada}</p>
+                      <p>{informasi.ditujukanKepada}</p>
                     </td>
                     <td>
                       <div className="d-flex">
                         <button
                           onClick={() => {
                             setShowEdit(true);
-                            // getById(berita.id);
+                            getById(informasi.id);
                           }}
                           className="bg-primary text-light"
                           data-bs-toggle="modal"
@@ -455,7 +471,7 @@ function AdminFormInformasi() {
           </button> */}
 
       {/* <!-- Modal --> */}
-      {/* <div
+      <div
             show={showEdit}
             onHide={!showEdit}
             class="modal fade"
@@ -485,11 +501,25 @@ function AdminFormInformasi() {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Author"
+                      placeholder="Nama"
                       aria-label="Author"
                       aria-describedby="basic-addon1"
-                      value={author}
-                      onChange={(e) => setAuthor(e.target.value)}
+                      value={nama}
+                      onChange={(e) => setNama(e.target.value)}
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-user"></i>
+                    </span>
+                    <input
+                      type="email"
+                      className="form-control"
+                      placeholder="Email"
+                      aria-label="Email"
+                      aria-describedby="basic-addon1"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                   <div className="input-group mb-3">
@@ -499,19 +529,19 @@ function AdminFormInformasi() {
                       placeholder="Image"
                       aria-label="Author"
                       aria-describedby="basic-addon1"
-                      fileName={image}
-                      onChange={(e) => setImage(e.target.files[0])}
+                      fileName={file}
+                      onChange={(e) => setFile(e.target.files[0])}
                     />
                   </div>
                   <div className="input-group mb-3">
                     <textarea
                       type="text"
                       className="form-control"
-                      placeholder="Isi Berita"
-                      aria-label="Isi Berita"
+                      placeholder="Cara Memperolah Informasi"
+                      aria-label="Cara Memperolah Informasi"
                       aria-describedby="basic-addon1"
-                      value={isiBerita}
-                      onChange={(e) => setIsiBerita(e.target.value)}
+                      value={caraMemperolahInformasi}
+                      onChange={(e) => setCaraMemperolehInformasi(e.target.value)}
                     />
                   </div>
                   <div className="input-group mb-3">
@@ -521,11 +551,11 @@ function AdminFormInformasi() {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Judul Berita"
-                      aria-label="Judul Berita"
+                      placeholder="Cara Mendapatkan Informasi"
+                      aria-label="Cara Mendapatkan Informasi"
                       aria-describedby="basic-addon1"
-                      value={judulBerita}
-                      onChange={(e) => setJudulBerita(e.target.value)}
+                      value={caraCaraMendapatkanInformasi}
+                      onChange={(e) => setCaraMendapatkanInformasi(e.target.value)}
                     />
                   </div>
                   <div className="input-group mb-3">
@@ -535,11 +565,81 @@ function AdminFormInformasi() {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Tags"
-                      aria-label="Tags"
+                      placeholder="DiTunjukan Kepada"
+                      aria-label="DiTunjukan Kepada"
                       aria-describedby="basic-addon1"
-                      value={tags}
-                      onChange={(e) => setTags(e.target.value)}
+                      value={diTunjukanKepada}
+                      onChange={(e) => setDiTunjukanKepada(e.target.value)}
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="No Hp"
+                      aria-label="No Hp"
+                      aria-describedby="basic-addon1"
+                      value={noHp}
+                      onChange={(e) => setNoHp(e.target.value)}
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Pekerjaan"
+                      aria-label="Pekerjaan"
+                      aria-describedby="basic-addon1"
+                      value={pekerjaan}
+                      onChange={(e) => setPekerjaan(e.target.value)}
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Pendidikan"
+                      aria-label="Pendidikan"
+                      aria-describedby="basic-addon1"
+                      value={pendidikan}
+                      onChange={(e) => setPendidikan(e.target.value)}
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Rincian Informasi"
+                      aria-label="Rincian Informasi"
+                      aria-describedby="basic-addon1"
+                      value={rincianInformasi}
+                      onChange={(e) => setRincianInformasi(e.target.value)}
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-user"></i>
+                    </span>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Tujuan Informasi"
+                      aria-label="Tujuan Informasi"
+                      aria-describedby="basic-addon1"
+                      value={tujuanInformasi}
+                      onChange={(e) => setTujuanInformasi(e.target.value)}
                     />
                   </div>
                 </div>
@@ -557,7 +657,7 @@ function AdminFormInformasi() {
                 </div>
               </form>
             </div>
-          </div> */}
+          </div>
       <Footer />
     </div>
   );

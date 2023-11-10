@@ -25,7 +25,6 @@ function Berita() {
     { month: 11, year: currentYear, label: "November" },
     { month: 12, year: currentYear, label: "Desember" },
   ];
-  
 
   const getAll = async () => {
     try {
@@ -82,7 +81,7 @@ function Berita() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  
+
   return (
     <>
       <Navbar />
@@ -190,20 +189,6 @@ function Berita() {
                             <i class="far fa-comment-dots"></i> 22 Comment
                           </li>
                         </ul>
-                        {/* <ul class="blog-meta">
-                    <li>
-                    <button className="border p-2"><i class="fa-regular fa-thumbs-up"></i></button>
-                    </li>
-                    <li>
-                    <button className="border p-2"><i class="fa-regular fa-thumbs-down"></i></button>
-                    </li>
-                    <li>
-                      <button className="border">Facebook</button>
-                    </li>
-                    <li>
-                      <button className="border">Twitter</button>
-                    </li>
-                    </ul> */}
                       </div>
                     </div>
                   );
@@ -323,18 +308,15 @@ function Berita() {
                     <h4 class="widget-title">Arsip</h4>
                     <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {
-                        const data = getAllRekap(
-                          monthData.month,
-                          monthData.year
-                        );
+                        const tahun_bulan = `${monthData.year}${monthData.month}`;
+
+                        const data = getAllRekap(tahun_bulan);
                         const totalData = data.length;
 
                         return (
-                          <li key={`${monthData.month}-${monthData.year}`}>
+                          <li key={`${tahun_bulan}`}>
                             <a
-                              href={`/rekap-berita-${monthData.label.toLowerCase()}-${
-                                monthData.year
-                              }`}>
+                              href={`/rekap-berita/${tahun_bulan}`}>
                               <i class="fa-solid fa-file"></i> {monthData.label}{" "}
                               {monthData.year} ({totalData})
                             </a>

@@ -152,7 +152,7 @@ function BeritaAdmin() {
 
   const getById = async (id) => {
     await axios
-      .get(`${API_DUMMY}/bawaslu/api/berita/` + id, {
+      .get(`${API_DUMMY}/bawaslu/api/berita/get/` + id, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       })
       .then((res) => {

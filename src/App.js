@@ -71,6 +71,10 @@ function App() {
           {/* prosedur */}
           <Route path="/waktu-layanan" component={WaktuLayanan} exact />
           <Route
+           
+           
+           
+         
             path="/layanan-informasi-berbasis-android"
             component={LayananInformasi}
             exact
