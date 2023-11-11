@@ -12,6 +12,7 @@ function AddBeritaAdmin() {
       </div>
       <Footer />
     </div>
+    // test
   );
 }
 
