@@ -13,6 +13,7 @@ function AddBeritaAdmin() {
       <Footer />
     </div>
   );
+  // test
 }
 
 export default AddBeritaAdmin;
