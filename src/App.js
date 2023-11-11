@@ -32,6 +32,9 @@ import November from "./views/pages/rekap_berita/November";
 import { useState } from "react";
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
 import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
+import AddBeritaAdmin from "./views/pages/admin/berita/AddBeritaAdmin";
+import NavbarAdmin from "./component/NavbarAdmin";
+import AdminBerita from "./views/pages/admin/berita/AdminBerita";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
@@ -71,10 +74,6 @@ function App() {
           {/* prosedur */}
           <Route path="/waktu-layanan" component={WaktuLayanan} exact />
           <Route
-           
-           
-           
-         
             path="/layanan-informasi-berbasis-android"
             component={LayananInformasi}
             exact
@@ -112,6 +111,9 @@ function App() {
           {/* admin */}
           <Route path="/berita-admin" component={BeritaAdmin} exact />
           <Route path="/admin-permohonan-informsi" component={AdminFormInformasi} exact />
+          <Route path="/add-berita-admin" component={AddBeritaAdmin} exact />
+          <Route path="/admin" component={NavbarAdmin} exact />
+          <Route path="/admin-berita" component={AdminBerita} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
         </Switch>
