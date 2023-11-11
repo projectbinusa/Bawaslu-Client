@@ -35,6 +35,7 @@ import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi
 import AddBeritaAdmin from "./views/pages/admin/berita/AddBeritaAdmin";
 import NavbarAdmin from "./component/NavbarAdmin";
 import AdminBerita from "./views/pages/admin/berita/AdminBerita";
+import EditBeritaAdmin from "./views/pages/admin/berita/EditBeritaAdmin";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
@@ -112,6 +113,7 @@ function App() {
           <Route path="/berita-admin" component={BeritaAdmin} exact />
           <Route path="/admin-permohonan-informsi" component={AdminFormInformasi} exact />
           <Route path="/add-berita-admin" component={AddBeritaAdmin} exact />
+          <Route path="/edit-berita-admin" component={EditBeritaAdmin} exact />
           <Route path="/admin" component={NavbarAdmin} exact />
           <Route path="/admin-berita" component={AdminBerita} exact />
           {/* rekap data perbulan */}

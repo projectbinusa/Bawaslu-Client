@@ -3,7 +3,7 @@ import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
 import Footer from "../../../../component/Footer";
 
-function AddBeritaAdmin() {
+function EditBeritaAdmin() {
   return (
     <div>
       <Header />
@@ -12,7 +12,7 @@ function AddBeritaAdmin() {
         <div className="container mt-3">
           <div className="card shadow">
             <div className="card-body">
-              <h1 className="fs-4">Form Tambah Data</h1>
+              <h1 className="fs-4">Form Edit Data</h1>
               <hr />
               <form>
                 <div className="row">
@@ -64,8 +64,11 @@ function AddBeritaAdmin() {
                   </div>
                 </div>
                 </div>
+                <button type="submit" class="btn-danger mt-3 mr-3">
+                  Batal
+                </button>
                 <button type="submit" class="btn-primary mt-3">
-                  Submit
+                  Simpan
                 </button>
               </form>
             </div>
@@ -78,4 +81,4 @@ function AddBeritaAdmin() {
   );
 }
 
-export default AddBeritaAdmin;
+export default EditBeritaAdmin;
