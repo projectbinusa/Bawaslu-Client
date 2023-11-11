@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import banner from "../../aset/banner.jpeg";
@@ -10,8 +10,36 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import axios from "axios";
+import { API_DUMMY } from "../../utils/base_URL";
 
 function Home() {
+  const [list, setList] = useState([]);
+  const [listTerbaru, setListTerbaru] = useState([]);
+
+  const getAll = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
+      setList(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+  const getAllTerbaru = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita-terbaru`);
+      setListTerbaru(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  useEffect(() => {
+    getAll();
+    getAllTerbaru();
+  }, [])
   return (
     <div>
       <Navbar />
@@ -140,125 +168,34 @@ function Home() {
           <div className="row">
             <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Libatkan BPD, Panwascam Gladagsari Gelar Soswatif
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>18 Oktober 2023</span>
+                {list.map((berita) => {
+                  return (
+                    <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <img
+                          src={berita.image}
+                          alt="blog"
+                        />
+                      </div>
+                      <div class="media-body align-self-center">
+                        BY {berita.author}
+                        <h6 class="fs-6 title">
+                          <a href="blog-details.html">
+                            {berita.judulBerita}
+                          </a>
+                        </h6>
+                        <div class="post-info">
+                          <i class="far fa-calendar-alt"></i>
+                          <span>{berita.createdDate}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Kecamatan Nogosari Gelar Sosialisasi
-                          Pengawasan Partisipatif Pada Pemilih Pemula
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Selo Gelar Sosialisasi Pengawasan
-                          Partisipastif Di SMK N 1 Selo.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwascam Juwangi Adakan Rapat Koordinasi Pengawasan
-                          Tahapan Bersama Kapolsek, Danramil Serta PKD.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>18 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Kecamatan Ampel Ajak Pelajar SMP Untuk
-                          Belajar Demokrasi Dan Pemilu.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
+                    <hr />
+                  </li>
+                  )
+                })}
+               
               </ul>
             </div>
             <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
@@ -489,11 +426,13 @@ function Home() {
             slideShadows: false,
           }}
           pagination={true}
-          loop={true}
+          // loop={true}
           modules={[EffectCoverflow, Pagination]}
           className="mySwiper container"
         >
-          <SwiperSlide>
+          {listTerbaru.map((beritaTerbaru) => {
+            return(
+               <SwiperSlide>
             <div class="">
               <div class="single-blog-inner style-3">
                 <div class="thumb">
@@ -503,22 +442,21 @@ function Home() {
                   />
                   <ul class="blog-meta">
                     <li>
-                      <i class="far fa-user"></i> By Admin
+                      <i class="far fa-user"></i> By {beritaTerbaru.author}
                     </li>
                     <li>
-                      <i class="far fa-calendar-alt"></i> 25 May 2021
+                      <i class="far fa-calendar-alt"></i> {beritaTerbaru.createdDate}
                     </li>
                   </ul>
                 </div>
                 <div class="details">
                   <h4>
                     <a href="blog-details.html">
-                      Foreca Exchange Stock Market 2010-2023
+                      {beritaTerbaru.judulBerita}
                     </a>
                   </h4>
                   <p>
-                    Duis leo. Sed fringilla mauris iamet nibh. odales sagittis
-                    magonsequat letendum sodales augue velit
+                    {beritaTerbaru.isiBerita}
                   </p>
                   <a class="read-more-btn" href="blog-details.html">
                     <i class="fa fa-arrow-right"></i>
@@ -527,176 +465,9 @@ function Home() {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div class="">
-              <div class="single-blog-inner style-3">
-                <div class="thumb">
-                  <img
-                    src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp"
-                    alt="img"
-                  />
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i> By Admin
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 25 May 2021
-                    </li>
-                  </ul>
-                </div>
-                <div class="details">
-                  <h4>
-                    <a href="blog-details.html">
-                      Foreca Exchange Stock Market 2010-2023
-                    </a>
-                  </h4>
-                  <p>
-                    Duis leo. Sed fringilla mauris iamet nibh. odales sagittis
-                    magonsequat letendum sodales augue velit
-                  </p>
-                  <a class="read-more-btn" href="blog-details.html">
-                    <i class="fa fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="">
-              <div class="single-blog-inner style-3">
-                <div class="thumb">
-                  <img
-                    src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp"
-                    alt="img"
-                  />
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i> By Admin
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 25 May 2021
-                    </li>
-                  </ul>
-                </div>
-                <div class="details">
-                  <h4>
-                    <a href="blog-details.html">
-                      Foreca Exchange Stock Market 2010-2023
-                    </a>
-                  </h4>
-                  <p>
-                    Duis leo. Sed fringilla mauris iamet nibh. odales sagittis
-                    magonsequat letendum sodales augue velit
-                  </p>
-                  <a class="read-more-btn" href="blog-details.html">
-                    <i class="fa fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="">
-              <div class="single-blog-inner style-3">
-                <div class="thumb">
-                  <img
-                    src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp"
-                    alt="img"
-                  />
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i> By Admin
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 25 May 2021
-                    </li>
-                  </ul>
-                </div>
-                <div class="details">
-                  <h4>
-                    <a href="blog-details.html">
-                      Foreca Exchange Stock Market 2010-2023
-                    </a>
-                  </h4>
-                  <p>
-                    Duis leo. Sed fringilla mauris iamet nibh. odales sagittis
-                    magonsequat letendum sodales augue velit
-                  </p>
-                  <a class="read-more-btn" href="blog-details.html">
-                    <i class="fa fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="">
-              <div class="single-blog-inner style-3">
-                <div class="thumb">
-                  <img
-                    src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp"
-                    alt="img"
-                  />
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i> By Admin
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 25 May 2021
-                    </li>
-                  </ul>
-                </div>
-                <div class="details">
-                  <h4>
-                    <a href="blog-details.html">
-                      Foreca Exchange Stock Market 2010-2023
-                    </a>
-                  </h4>
-                  <p>
-                    Duis leo. Sed fringilla mauris iamet nibh. odales sagittis
-                    magonsequat letendum sodales augue velit
-                  </p>
-                  <a class="read-more-btn" href="blog-details.html">
-                    <i class="fa fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div class="">
-              <div class="single-blog-inner style-3">
-                <div class="thumb">
-                  <img
-                    src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp"
-                    alt="img"
-                  />
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i> By Admin
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 25 May 2021
-                    </li>
-                  </ul>
-                </div>
-                <div class="details">
-                  <h4>
-                    <a href="blog-details.html">
-                      Foreca Exchange Stock Market 2010-2023
-                    </a>
-                  </h4>
-                  <p>
-                    Duis leo. Sed fringilla mauris iamet nibh. odales sagittis
-                    magonsequat letendum sodales augue velit
-                  </p>
-                  <a class="read-more-btn" href="blog-details.html">
-                    <i class="fa fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+            )
+          })}
+         
         </Swiper>
         <div class="blog-area pd-top-115 pd-bottom-60">
           <div class="container">

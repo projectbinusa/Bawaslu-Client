@@ -82,12 +82,8 @@ function InformasiBerkala() {
             <div className="card mb-4 shadow border-dark-subtle border">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Putusan Pelanggaran</h4>
-                  </div>
-                  <div className="col">
-                    {/* <button className="btn btn-primary float-end"> Tambah
-                        </button> */}
                   </div>
                 </div>
               </div>
