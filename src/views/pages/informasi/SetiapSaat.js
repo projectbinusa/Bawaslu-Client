@@ -97,7 +97,7 @@ function SetiapSaat() {
             <div className="card mb-4 shadow ">
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Putusan Pelanggaran</h4>
                   </div>
                   <div className="col">

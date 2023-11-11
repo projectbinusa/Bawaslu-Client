@@ -237,8 +237,8 @@ function Regulasi() {
   return (
     <div>
       <Navbar />
-        {/* <!-- page title start --> */}
-        <div class="breadcrumb-area bg-black bg-relative">
+      {/* <!-- page title start --> */}
+      <div class="breadcrumb-area bg-black bg-relative">
         <div
           class="banner-bg-img"
           style={{
@@ -310,10 +310,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Undang Undang</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button>*/}
                     </div>
@@ -323,8 +323,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi.map((isi) => {
@@ -381,10 +381,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Peratuan Pemerintah</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button> */}
                     </div>
@@ -394,8 +394,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi1.map((isi1) => {
@@ -452,10 +452,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Peraturan Mahkamah Agung</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button> */}
                     </div>
@@ -465,8 +465,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi2.map((isi2) => {
@@ -523,10 +523,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Peraturan Komisi Informasi</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button> */}
                     </div>
@@ -536,8 +536,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi3.map((isi3) => {
@@ -594,10 +594,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Peraturan Menteri</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button> */}
                     </div>
@@ -607,8 +607,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi4.map((isi4) => {
@@ -665,10 +665,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Perbawaslu</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button> */}
                     </div>
@@ -678,8 +678,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi5.map((isi5) => {
@@ -736,10 +736,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Penetapan PPID</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button> */}
                     </div>
@@ -749,8 +749,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi6.map((isi6) => {
@@ -807,10 +807,10 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Surat Edaran</h4>
                     </div>
-                    <div className="col">
+                    <div className="">
                       {/* <button className="btn btn-primary float-end"> Tambah
                       </button> */}
                     </div>
@@ -820,8 +820,8 @@ function Regulasi() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi7.map((isi7) => {
