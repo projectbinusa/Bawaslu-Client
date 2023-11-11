@@ -70,6 +70,7 @@ function AddBeritaAdmin() {
           </div>
         </div>
       </div>
+      {/* sss */}
       <Footer />
     </div>
   );
