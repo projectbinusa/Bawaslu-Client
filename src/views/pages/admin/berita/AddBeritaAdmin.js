@@ -41,20 +41,21 @@ function AddBeritaAdmin() {
                     id="exampleInputPassword1"
                   />
                 </div>
-                <div></div>
+                {/* <div className="col-6">
                   <label for="exampleInputPassword1" class="form-label">
                     Isi Berita
                   </label>
-                <div class="form-floating col-6">
-                  <textarea
-                    class="form-control"
-                    placeholder="Leave a comment here"
-                    id="floatingTextarea2"
-                    style={{height: "100px"}}></textarea>
-                </div>
+                  <div class="form-floating col-6">
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a comment here"
+                      id="floatingTextarea2"
+                      style={{ height: "100px" }}></textarea>
+                  </div>
+                </div> */}
                 <div class="mb-3 col-6">
                   <label for="exampleInputPassword1" class="form-label">
-                    Image
+                    Judul Berita
                   </label>
                   <input
                     type="file"
