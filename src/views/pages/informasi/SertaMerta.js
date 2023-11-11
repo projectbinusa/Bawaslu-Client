@@ -60,7 +60,6 @@ function SertaMerta() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90"
       >
         <div
         class="breadcrumb-area bg-relative"
@@ -150,7 +149,7 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Putusan Pelanggaran</h4>
                   </div>
                   <div className="col">
@@ -294,7 +293,7 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Sengketa Proses Pemilu</h4>
                   </div>
                   <div className="col">
@@ -468,7 +467,7 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Pemungutan Suara Ulang</h4>
 
                   </div>
@@ -538,7 +537,7 @@ function SertaMerta() {
             >
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
-                  <div className="col">
+                  <div className="">
                     <h4>Organisasi dan Administrasi</h4>
                   </div>
                   <div className="col">
