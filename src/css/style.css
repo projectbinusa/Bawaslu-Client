@@ -6167,6 +6167,13 @@ ul {
   color: var(--heading-color);
 }
 
+.align-self-center {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical;
+}
+
 .widget-recent-post ul li .media .media-body .post-info span {
   color: #3f517e;
 }
@@ -7016,6 +7023,24 @@ ul {
   border: 1px solid var(--main-color);
 }
 
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 450px;
+  height: 600px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
 /******** blog-details-page-content ***********/
 .blog-details-page-content .single-blog-inner {
   -webkit-box-shadow: none !important;
@@ -7054,7 +7079,7 @@ ul {
 
 /*********** tag-and-share ************/
 .tag-and-share {
-  margin-top: 50px;
+  margin-top: 20px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   padding: 15px 0;
@@ -9041,6 +9066,7 @@ ul {
 .media .media-body a {
   text-decoration: none;
   color: black;
+  width: 20px;
 }
 /*--------------------------------------------------
     ##Footer
@@ -9746,4 +9772,15 @@ ul {
 .single-blog-inner .details h2 a {
   color: black;
   text-decoration: none;
+}
+
+.single-testimonial-inner img {
+  width: 100%; /* Gambar akan memiliki lebar 100% dari lebar parent (konten testimonial) */
+  height: auto; /* Mempertahankan rasio aspek gambar */
+}
+
+/* CSS tambahan untuk mengatur lebar konten testimoni */
+.single-testimonial-inner {
+  max-width: 900px; /* Atur lebar maksimum konten testimoni */
+  margin: 0 auto; /* Pusatkan konten testimoni */
 }

@@ -1,45 +1,19 @@
-import React, { useEffect, useState } from "react";
-import Footer from "../../component/Footer";
-import Navbar from "../../component/Navbar";
 import axios from "axios";
-import { API_DUMMY } from "../../utils/base_URL";
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { useDebugValue } from "react";
+import { API_DUMMY } from "../../../utils/base_URL";
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
 
-function Berita() {
-  const [scroll, setScroll] = useState(false);
-  const [list, setList] = useState([]);
-  const [listTerbaru, setListTerbaru] = useState([]);
+function November() {
   const [november, setNovember] = useState([]);
-  const currentYear = new Date().getFullYear();
 
-  const archivingMonths = [
-    { month: 1, year: currentYear, label: "Januari" },
-    { month: 2, year: currentYear, label: "Februari" },
-    { month: 3, year: currentYear, label: "Maret" },
-    { month: 4, year: currentYear, label: "April" },
-    { month: 5, year: currentYear, label: "Mei" },
-    { month: 6, year: currentYear, label: "Juni" },
-    { month: 7, year: currentYear, label: "Juli" },
-    { month: 8, year: currentYear, label: "Agustus" },
-    { month: 9, year: currentYear, label: "September" },
-    { month: 10, year: currentYear, label: "Oktober" },
-    { month: 11, year: currentYear, label: "November" },
-    { month: 12, year: currentYear, label: "Desember" },
-  ];
-
-  const getAll = async () => {
-    try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
-      setList(response.data.data);
-      console.log(response.data.data);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-  };
-
-  const getAllRekap = async (tahun_bulan) => {
+  const getAllRekapNovember = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
+        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=2023-11`
       );
       setNovember(response.data.data);
       console.log(response.data.data);
@@ -48,38 +22,8 @@ function Berita() {
     }
   };
 
-  const getAllTerbaru = async () => {
-    try {
-      const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita-terbaru`
-      );
-      setListTerbaru(response.data.data);
-      console.log(response.data.data);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-  };
-
   useEffect(() => {
-    getAll(0);
-    getAllTerbaru(0);
-    getAllRekap(0);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScroll(true);
-      } else {
-        setScroll(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    getAllRekapNovember();
   }, []);
 
   return (
@@ -113,10 +57,11 @@ function Berita() {
       <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
+            <strong className="fs-4">Bulan November 2023</strong>
           <div class="row">
             <div class="col-lg-8">
-              {list.length > 0 ? (
-                list.map((berita) => {
+              {november.length > 0 ? (
+                november.map((berita, index) => {
                   return (
                     <div class="single-blog-inner">
                       <div class="tag-and-share">
@@ -189,6 +134,20 @@ function Berita() {
                             <i class="far fa-comment-dots"></i> 22 Comment
                           </li>
                         </ul>
+                        {/* <ul class="blog-meta">
+                  <li>
+                  <button className="border p-2"><i class="fa-regular fa-thumbs-up"></i></button>
+                  </li>
+                  <li>
+                  <button className="border p-2"><i class="fa-regular fa-thumbs-down"></i></button>
+                  </li>
+                  <li>
+                    <button className="border">Facebook</button>
+                  </li>
+                  <li>
+                    <button className="border">Twitter</button>
+                  </li>
+                  </ul> */}
                       </div>
                     </div>
                   );
@@ -271,7 +230,7 @@ function Berita() {
             <div class="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div class="td-sidebar">
-                  <div
+                  {/* <div
                     class={`widget widget-recent-post`}
                     style={{ background: "#F1F6F9", overflow: "hidden" }}>
                     <h4 class="widget-title">Berita Terbaru</h4>
@@ -307,24 +266,69 @@ function Berita() {
                     style={{ background: "#F1F6F9" }}>
                     <h4 class="widget-title">Arsip</h4>
                     <ul class="catagory-items">
-                      {archivingMonths.map((monthData) => {
-                        const tahun_bulan = `${monthData.year}${monthData.month}`;
-
-                        const data = getAllRekap(tahun_bulan);
-                        const totalData = data.length;
-
-                        return (
-                          <li key={`${tahun_bulan}`}>
-                            <a
-                              href={`/rekap-berita/${tahun_bulan}`}>
-                              <i class="fa-solid fa-file"></i> {monthData.label}{" "}
-                              {monthData.year} ({totalData})
-                            </a>
-                          </li>
-                        );
-                      })}
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Desember 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/rekap-berita-november">
+                          <i class="fa-solid fa-file"></i> November 2023 (
+                          {november.length})
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Oktober 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Setember 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Agustus 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Juli 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Juni 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Mei 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> April 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Maret 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Februari 2023 ()
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="fa-solid fa-file"></i> Januari 2023 ()
+                        </a>
+                      </li>
                     </ul>
-                  </div>
+                  </div> */}
                   <div
                     class="widget widget_catagory"
                     style={{ background: "#F1F6F9" }}>
@@ -389,4 +393,4 @@ function Berita() {
   );
 }
 
-export default Berita;
+export default November;

@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
+import "../../../css/LayananInformasi.css";
 import OwlCarousel from "react-owl-carousel2";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
-import Navbar from "../../../component/Navbar";
-import Footer from "../../../component/Footer";
 import axios from "axios";
-function Dip() {
+
+function InformasiStandarProsedur() {
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
 
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=2`
+        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=3`
       )
       .then((response) => {
         setList(response.data.data);
@@ -24,7 +26,7 @@ function Dip() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=10`
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=11`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -40,39 +42,40 @@ function Dip() {
     getByIsi();
   }, []);
   return (
-    <div>
-      <Navbar />
-      {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-black bg-relative">
-        <div
-          class="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div>
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Daftar Informasi Publik
-                </h2>
-                <ul class="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>Daftar Informasi Publik</li>
-                </ul>
+    <>
+      <div>
+        <Navbar />
+        {/* <!-- page title start --> */}
+        <div class="breadcrumb-area bg-black bg-relative">
+          <div
+            class="banner-bg-img"
+            style={{
+              backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
+            }}
+          ></div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-7 col-lg-8">
+                <div class="breadcrumb-inner text-center">
+                  <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
+                    SOP
+                  </h2>
+                  <ul class="page-list">
+                    <li>
+                      <a href="/" style={{ textDecoration: "none" }}>
+                        Home
+                      </a>
+                    </li>
+                    <li>SOP</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      {/* <!-- page title end --> */}
+        {/* <!-- page title end --> */}
 
-      <div
+        <div
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
@@ -104,7 +107,7 @@ function Dip() {
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
                   <div className="col">
-                    <h4>Daftar Informasi Publik</h4>
+                    <h4>Standar Operasional Prosedur</h4>
                   </div>
                 </div>
               </div>
@@ -164,7 +167,7 @@ function Dip() {
         <Footer />
       </div>
     </div>
+    </>
   );
 }
-
-export default Dip;
+export default InformasiStandarProsedur;

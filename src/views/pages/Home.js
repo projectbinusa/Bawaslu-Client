@@ -1,11 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import banner from "../../aset/banner.jpeg";
 import gudang from "../../aset/gudang.png";
 import formulir from "../../aset/formulir.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import axios from "axios";
+import { API_DUMMY } from "../../utils/base_URL";
 
 function Home() {
+  const [list, setList] = useState([]);
+  const [listTerbaru, setListTerbaru] = useState([]);
+
+  const getAll = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
+      setList(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+  const getAllTerbaru = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita-terbaru`);
+      setListTerbaru(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  useEffect(() => {
+    getAll();
+    getAllTerbaru();
+  }, [])
   return (
     <div>
       <Navbar />
@@ -19,7 +53,7 @@ function Home() {
             className="banner-bg-img"
             style={{
               backgroundImage:
-                'url("https://solverwp.com/demo/html/itechie/assets/img/banner/4.webp")',
+                'url(https://solverwp.com/demo/html/itechie/assets/img/banner/4.webp")',
               left: "-1.80651%",
               top: "-0.884758%",
             }}
@@ -28,11 +62,17 @@ function Home() {
           <div className="container">
             <div className="row">
               <div className="col-lg-6 col-md-9">
-                <div className="banner-inner">
-                  <h5 className="sub-title left-border">Berita</h5>
-
+                <div className="banner-inner ">
+                  <div className="banner-inner bg-primary w-25">
+                    <h1
+                      className="sub-title left-border text-white"
+                      style={{ fontSize: "50px" }}
+                    >
+                      Berita
+                    </h1>
+                  </div>
                   <h2 className="title">
-                    KPU boyolali gelar
+                    KPU boyolali gelar &nbsp;
                     <span>kirab pemilu 2024</span>
                   </h2>
                   <h2 className="fs-1">
@@ -43,7 +83,7 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* {/* banner area end */}
+        {/* {/* banner area end test*/}
         {/* intro area start */}
         <div className="intro-area mg-top--100 bg-relative">
           <div className="container">
@@ -116,6 +156,7 @@ function Home() {
           </div>
         </div>
         {/* intro area end */}
+
         <div
           className="container"
           style={{ marginTop: "30px", marginBottom: "70px" }}
@@ -127,125 +168,34 @@ function Home() {
           <div className="row">
             <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Libatkan BPD, Panwascam Gladagsari Gelar Soswatif
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>18 Oktober 2023</span>
+                {list.map((berita) => {
+                  return (
+                    <li>
+                    <div class="media">
+                      <div class="media-left">
+                        <img
+                          src={berita.image}
+                          alt="blog"
+                        />
+                      </div>
+                      <div class="media-body align-self-center">
+                        BY {berita.author}
+                        <h6 class="fs-6 title">
+                          <a href="blog-details.html">
+                            {berita.judulBerita}
+                          </a>
+                        </h6>
+                        <div class="post-info">
+                          <i class="far fa-calendar-alt"></i>
+                          <span>{berita.createdDate}</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Kecamatan Nogosari Gelar Sosialisasi
-                          Pengawasan Partisipatif Pada Pemilih Pemula
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Selo Gelar Sosialisasi Pengawasan
-                          Partisipastif Di SMK N 1 Selo.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwascam Juwangi Adakan Rapat Koordinasi Pengawasan
-                          Tahapan Bersama Kapolsek, Danramil Serta PKD.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>18 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
-                <li>
-                  <div class="media">
-                    <div class="media-left">
-                      <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
-                        alt="blog"
-                      />
-                    </div>
-                    <div class="media-body align-self-center">
-                      BY HUMAS BAWASLU BOYOLALI
-                      <h6 class="fs-6 title">
-                        <a href="blog-details.html">
-                          Panwaslu Kecamatan Ampel Ajak Pelajar SMP Untuk
-                          Belajar Demokrasi Dan Pemilu.
-                        </a>
-                      </h6>
-                      <div class="post-info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>13 Oktober 2023</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                </li>
+                    <hr />
+                  </li>
+                  )
+                })}
+               
               </ul>
             </div>
             <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
@@ -462,6 +412,179 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          pagination={true}
+          // loop={true}
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper container"
+        >
+          {listTerbaru.map((beritaTerbaru) => {
+            return(
+               <SwiperSlide>
+            <div class="">
+              <div class="single-blog-inner style-3">
+                <div class="thumb">
+                  <img
+                    src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp"
+                    alt="img"
+                  />
+                  <ul class="blog-meta">
+                    <li>
+                      <i class="far fa-user"></i> By {beritaTerbaru.author}
+                    </li>
+                    <li>
+                      <i class="far fa-calendar-alt"></i> {beritaTerbaru.createdDate}
+                    </li>
+                  </ul>
+                </div>
+                <div class="details">
+                  <h4>
+                    <a href="blog-details.html">
+                      {beritaTerbaru.judulBerita}
+                    </a>
+                  </h4>
+                  <p>
+                    {beritaTerbaru.isiBerita}
+                  </p>
+                  <a class="read-more-btn" href="blog-details.html">
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+            )
+          })}
+         
+        </Swiper>
+        <div class="blog-area pd-top-115 pd-bottom-60">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-6 col-lg-7 col-md-9">
+                <div class="section-title text-center">
+                  <h5 class="sub-title double-line">blog Post</h5>
+                  <h2 class="title">Read Our Latest Tips &amp;Tricks</h2>
+                  <p class="content">
+                    Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc
+                    egestas augue atpellentesque laoreet
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* <div class="row justify-content-center">
+              <Swiper>
+                <SwiperSlide>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-inner style-3">
+                      <div class="thumb">
+                        <img src="assets/img/blog/5.webp" alt="img"/ />
+                        <ul class="blog-meta">
+                          <li>
+                            <i class="far fa-user"></i> By Admin
+                          </li>
+                          <li>
+                            {" "}
+                            <i class="far fa-calendar-alt"></i> 25 May 2021
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="details">
+                        <h4>
+                          <a href="blog-details.html">
+                            Stock Exchange Market Foreca 2021-2023
+                          </a>
+                        </h4>
+                        <p>
+                          Duis leo. Sed fringilla mauris iamet nibh. odales
+                          sagittis magonsequat letendum sodales augue velit
+                        </p>
+                        <a class="read-more-btn" href="blog-details.html">
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-inner style-3">
+                      <div class="thumb">
+                        <img src="assets/img/blog/6.webp" alt="img" />
+                        <ul class="blog-meta">
+                          <li>
+                            <i class="far fa-user"></i> By Admin
+                          </li>
+                          <li>
+                            {" "}
+                            <i class="far fa-calendar-alt"></i> 25 May 2021
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="details">
+                        <h4>
+                          <a href="blog-details.html">
+                            Market Stock Exchange Foreca 2023-2023
+                          </a>
+                        </h4>
+                        <p>
+                          Duis leo. Sed fringilla mauris iamet nibh. odales
+                          sagittis magonsequat letendum sodales augue velit
+                        </p>
+                        <a class="read-more-btn" href="blog-details.html">
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-inner style-3">
+                      <div class="thumb">
+                        <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img" />
+                        <ul class="blog-meta">
+                          <li>
+                            <i class="far fa-user"></i> By Admin
+                          </li>
+                          <li>
+                            {" "}
+                            <i class="far fa-calendar-alt"></i> 25 May 2021
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="details">
+                        <h4>
+                          <a href="blog-details.html">
+                            Foreca Exchange Stock Market 2010-2023
+                          </a>
+                        </h4>
+                        <p>
+                          Duis leo. Sed fringilla mauris iamet nibh. odales
+                          sagittis magonsequat letendum sodales augue velit
+                        </p>
+                        <a class="read-more-btn" href="blog-details.html">
+                          <i class="fa fa-arrow-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
+            </div> */}
+          </div>
+        </div>
         <div className="service-area " style={{ background: "#F1F6F9" }}>
           <div className="container">
             <div className="section-title">
@@ -471,49 +594,49 @@ function Home() {
             </div>
 
             <div class="how-it-work-area pd-top-115 pd-bottom-90">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-6">
                     <div class="section-title text-center">
-                        <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-                        <h2 class="title">Informasi</h2>
+                      <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
+                      <h2 class="title">Informasi</h2>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div class="how-it-work-inner arrow-line">
-                <div class="row justify-content-center gap-3">
+                <div class="how-it-work-inner arrow-line">
+                  <div class="row justify-content-center gap-3">
                     <div class="card col-lg-3 col-md-6 border">
-                        <div class="single-work-inner style-four text-center">
-                            <div class="count-wrap pb-2">
-                                <div class="count-inner">
-                                    <h2>01</h2>
-                                </div>
-                            </div>
-                            <div class="details-wrap">
-                                <div class="details-inner">
-                                    <h4>Formulir Permohonan Informasi</h4>
-                                </div>
-                            </div>
+                      <div class="single-work-inner style-four text-center">
+                        <div class="count-wrap pb-2">
+                          <div class="count-inner">
+                            <h2>01</h2>
+                          </div>
                         </div>
+                        <div class="details-wrap">
+                          <div class="details-inner">
+                            <h4>Formulir Permohonan Informasi</h4>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="card col-lg-3 col-md-6 border">
-                        <div class="single-work-inner style-four text-center">
-                            <div class="count-wrap pb-2">
-                                <div class="count-inner">
-                                    <h2>02</h2>
-                                </div>
-                            </div>
-                            <div class="details-wrap">
-                                <div class="details-inner">
-                                    <h4>Formulir Kebebasan Komunikasi</h4>
-                                </div>
-                            </div>
+                      <div class="single-work-inner style-four text-center">
+                        <div class="count-wrap pb-2">
+                          <div class="count-inner">
+                            <h2>02</h2>
+                          </div>
                         </div>
+                        <div class="details-wrap">
+                          <div class="details-inner">
+                            <h4>Formulir Kebebasan Komunikasi</h4>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
 
             <div className="row justify-content-center">
               <div className="col-lg-3 col-md-6">
@@ -536,10 +659,10 @@ function Home() {
                       <h3>Informasi Berkala</h3>
 
                       <a
-                        className="btn btn-base btn-small"
+                        className="btn btn-base btn-small text-white bg-primary"
                         href="service-details.html"
                       >
-                        View Details
+                        Informasi Berkala
                       </a>
                     </div>
                   </div>
@@ -566,10 +689,10 @@ function Home() {
                       <h3>Informasi Setiap Saat</h3>
 
                       <a
-                        className="btn btn-base btn-small"
+                        className="btn btn-base btn-small text-white bg-primary"
                         href="service-details.html"
                       >
-                        View Details
+                        Informasi Setiap Saat
                       </a>
                     </div>
                   </div>
@@ -596,10 +719,10 @@ function Home() {
                       <h3>Informasi Serta Merta</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html"
+                        className="btn btn-base btn-small text-white bg-primary"
+                        href="/serta-merta"
                       >
-                        View Details
+                        Informasi Serta Merta
                       </a>
                     </div>
                   </div>
@@ -626,10 +749,10 @@ function Home() {
                       <h3>Informasi Dikecualikan</h3>
 
                       <a
-                        className="btn btn-base btn-small"
-                        href="service-details.html"
+                        className="btn btn-base btn-small text-white bg-primary"
+                        href="/dikecualikan"
                       >
-                        View Details
+                        Informasi Dikecualikan
                       </a>
                     </div>
                   </div>

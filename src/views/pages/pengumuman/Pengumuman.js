@@ -1,16 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import axios from "axios";
 
 function Pengumuman() {
+  const [pengumuman, setPengumuman] = useState([]);
+  const getAll = async () => {
+    await axios
+      .get("http://localhost:3030/bawaslu/api/pengumuman")
+      .then((res) => {
+        setPengumuman(res.data.data);
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan" + error);
+      });
+  };
+  useEffect(() => {
+    //mengambil data, memperbarui DOM secara langsung,
+    getAll(0);
+  }, []);
   return (
     <div>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-relative" style={{background:"#151423"}}>
+      <div
+        class="breadcrumb-area bg-relative"
+        style={{ background: "#151423" }}
+      >
         <div
           class="banner-bg-img"
-          style={{ backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')` }}
+          style={{
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
+          }}
         ></div>
         <div class="container">
           <div class="row justify-content-center">
@@ -30,11 +51,14 @@ function Pengumuman() {
       </div>
       {/* <!-- page title end --> */}
       {/* <!-- blog area start --> */}
-      <div class="blog-area pd-top-115 pd-bottom-60" style={{
+      <div
+        class="blog-area pd-top-115 pd-bottom-60"
+        style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-        }}>
+        }}
+      >
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-10">
@@ -45,193 +69,37 @@ function Pengumuman() {
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-inner style-2">
-                <div class="thumb">
-                  <img src="" alt="img" />
+            {pengumuman.map((isi) => {
+              return (
+                <div class="col-lg-4 col-md-6">
+                  <div class="single-blog-inner style-2">
+                    <div class="thumb">
+                      <img src={isi.image} alt="img" />
+                    </div>
+                    <div class="details">
+                      <h4>
+                        <a>{isi.judulPengumuman}</a>
+                      </h4>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i> {isi.author}
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i> {isi.createdDate}
+                        </li>
+                      </ul>
+                      <p>{isi.isiPengumuman}</p>
+                      <a
+                        class="read-more-text"
+                        href="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
+                      >
+                        Detail<i class="fa fa-caret-right"></i>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div class="details">
-                  <h4>
-                    <a>
-                      Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih
-                      Provinsi Jawa Tengah
-                    </a>
-                  </h4>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 19 AGUSTUS 2023
-                    </li>
-                  </ul>
-                  <p>
-                    Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih
-                    Masa Jabatan 2023-2028 Provinsi Jawa Tengah. Selengkapnya,
-                    silahkan download pada link dibawah ini.
-                  </p>
-                  <a class="read-more-text" href="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah">
-                    Detail<i class="fa fa-caret-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-inner style-2">
-                <div class="thumb">
-                  <img src="" alt="img" />
-                </div>
-                <div class="details">
-                  <h4>
-                    <a>
-                      Pengumuman Hasil Tes Kesehatan dan Tes Wawancara Serta
-                      Jadwal Uji Kelayakan...
-                    </a>
-                  </h4>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 18 AGUSTUS 2023
-                    </li>
-                  </ul>
-                  <p>
-                    Pengumuman Hasil Tes Kesehatan dan Tes Wawancara Serta
-                    Jadwal Uji Kelayakan dan Kepatutan Calon Anggota Bawaslu
-                    Kab/Kota Provinsi Jawa Tengah...
-                  </p>
-                  <a class="read-more-text" href="">
-                    Detail<i class="fa fa-caret-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-inner style-2">
-                <div class="thumb">
-                  <img src="" alt="img" />
-                </div>
-                <div class="details">
-                  <h4>
-                    <a>
-                      Pengumuman Hasil Tes Tertulis dan Tes Psikologi Calon
-                      Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona III
-                    </a>
-                  </h4>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY BAWASLU BOYOLALI
-                    </li>
-                    <br />
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 14 JULI 2023
-                    </li>
-                  </ul>
-                  <p>
-                    Pengumuman Hasil Tes Tertulis dan Tes Psikologi Calon
-                    Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona III.
-                    Selengkapnya, silahkan download pada...
-                  </p>
-                  <a class="read-more-text" href="">
-                    Detail<i class="fa fa-caret-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-inner style-2">
-                <div class="thumb">
-                  <img src="" alt="img" />
-                </div>
-                <div class="details">
-                  <h4>
-                    <a>
-                      Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih
-                      Provinsi Jawa Tengah
-                    </a>
-                  </h4>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 19 AGUSTUS 2023
-                    </li>
-                  </ul>
-                  <p>
-                    Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih
-                    Masa Jabatan 2023-2028 Provinsi Jawa Tengah. Selengkapnya,
-                    silahkan download pada link dibawah ini.
-                  </p>
-                  <a class="read-more-text" href="">
-                    Detail<i class="fa fa-caret-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-inner style-2">
-                <div class="thumb">
-                  <img src="" alt="img" />
-                </div>
-                <div class="details">
-                  <h4>
-                    <a>
-                      Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes
-                      Psikologi dan Perubahan Waktu Pelaksanaan...
-                    </a>
-                  </h4>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 12 JULI 2023
-                    </li>
-                  </ul>
-                  <p>
-                    Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes Psikologi
-                    dan Perubahan Waktu Pelaksanaan Tes Kesehatan Calon Anggota
-                    Bawaslu Kab/Kota Provinsi Jawa...
-                  </p>
-                  <a class="read-more-text" href="">
-                    Detail<i class="fa fa-caret-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog-inner style-2">
-                <div class="thumb">
-                  <img src="" alt="img" />
-                </div>
-                <div class="details">
-                  <h4>
-                    <a>
-                      Pengumuman Pelaksanaan Test Psikologi Calon Anggota
-                      Bawaslu Kabupaten/Kota Provinsi Jawa Tengah Zona III
-                    </a>
-                  </h4>
-                  <ul class="blog-meta">
-                    <li>
-                      <i class="far fa-user"></i>BY BAWASLU BOYOLALI
-                    </li>
-                    <li>
-                      <i class="far fa-calendar-alt"></i> 29 JUNI 2023
-                    </li>
-                  </ul>
-                  <p>
-                    Pengumuman Pelaksanaan Test Psikologi Calon Anggota Bawaslu
-                    Kabupaten/Kota Provinsi Jawa Tengah Zona III Selengkapnya,
-                    silahkan download pengumuman pada link di...
-                  </p>
-                  <a class="read-more-text" href="">
-                    Detail<i class="fa fa-caret-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
           <div class="pagination justify-content-center">
             <a class="prev page-numbers" href="http://icare.local/">
