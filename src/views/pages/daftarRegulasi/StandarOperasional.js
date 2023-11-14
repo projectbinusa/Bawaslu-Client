@@ -5,7 +5,7 @@ import axios from "axios";
 
 function StandarOperasional() {
     const [table1Visible, setTable1Visible] = useState(false);
-
+// test
     const showTable = (tableNumber) => {
         setTable1Visible(false);
 
