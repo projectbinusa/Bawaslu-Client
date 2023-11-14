@@ -39,9 +39,7 @@ import EditBeritaAdmin from "./views/pages/admin/berita/EditBeritaAdmin";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
-  // const [tahun_bulan] = useParams();
-
-  // useEffect(() => {}, [tahun_bulan]);
+ 
 
   return (
     <BrowserRouter>

@@ -152,7 +152,7 @@ const FormPermohonaKeberatan = () => {
                  
                 >
                   {" "}
-                  <div>
+                  <div className="input-type">
                     <input type="file" onChange={(e) => setFile(e.target.files[0])}  />
                   </div>
                   <div>
