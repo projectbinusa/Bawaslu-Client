@@ -5,30 +5,21 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 
-function AdminBerita() {
+function AdminPengumuman() {
   const [list, setList] = useState([]);
-  const [author, setAuthor] = useState("");
-  const [isiBerita, setIsiBerita] = useState("");
-  const [judulBerita, setJudulBerita] = useState("");
-  const [tags, setTags] = useState("");
-  const [image, setImage] = useState("");
-  const [show, setShow] = useState(false);
-  const [showAdd, setShowAdd] = useState(false);
-  const [showEdit, setShowEdit] = useState(false);
-  const handleCloseAdd = () => setModalAdd(false);
-  const handleClosEdit = () => setModalEdit(false);
-  const handleShowAdd = () => setModalAdd(true);
-  const handleShowEdit = () => setModalEdit(true);
-  const [modalAdd, setModalAdd] = useState(false);
-  const [modalEdit, setModalEdit] = useState(false);
   const [id, setId] = useState(0);
-
-  const handleClose = () => setShow(false);
-  const history = useHistory();
+  const [author, setAuthor] = useState("");
+  const [isiPengumuman, setIsiPengumuman] = useState("");
+  const [file, setFile] = useState("");
+  const [judulPengumuman, setJudulPengumuman] = useState("");
+  const [tags, setTags] = useState("");
+  const [] = useState("");
 
   const getAll = async () => {
     try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/pengumuman`
+      );
       setList(response.data.data);
       console.log(response.data.data);
     } catch (error) {
@@ -39,6 +30,7 @@ function AdminBerita() {
   useEffect(() => {
     getAll();
   }, []);
+
   return (
     <div>
       <Header />
@@ -47,11 +39,11 @@ function AdminBerita() {
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
             <div class="card-header">
-              Berita
+              Pengumuman
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
-                    Tambah Berita
+                    Tambah Pengumuman
                   </button>
                 </div>
               </div>
@@ -62,39 +54,30 @@ function AdminBerita() {
                   <tr>
                     <th className="text-center">No</th>
                     <th className="text-center">Author</th>
-                    <th className="text-center">Tanggal Dibuat</th>
+                    <th className="text-center">Isi pengumuman</th>
                     <th className="text-center">Image</th>
-                    <th className="text-center">Isi Berita</th>
-                    <th className="text-center">Judul Berita</th>
+
+                    <th className="text-center">Judul Pengumuan</th>
                     <th className="text-center">Tags</th>
-                    <th className="text-center">Upate</th>
+
                     <th className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {list.map((berita, index) => {
+                  {list.map((pengumuman, index) => {
                     return (
                       <tr key={index}>
-                        <td class="text-center text-muted">{index + 1}</td>
-                        <td className="text-center">{berita.author}</td>
-                        <td class="text-center">{berita.createdDate}</td>
+                        <td class="text-center text-muted">{pengumuman.id}</td>
+                        <td className="text-center">{pengumuman.author}</td>
+                        <td class="text-center">{pengumuman.isiPengumuman}</td>
                         <td class="text-center">
-                          {berita.image ? (
-                            <img
-                              src={berita.image}
-                              alt={`Image ${index + 1}`}
-                              onError={(e) =>
-                                console.error("Error loading image:", e)
-                              }
-                            />
-                          ) : (
-                            "No Image"
-                          )}
+                          <img src={pengumuman.image} />
                         </td>
-                        <td class="text-center">{berita.isiBerita}</td>
-                        <td class="text-center">{berita.judulBerita}</td>
-                        <td class="text-center">{berita.tags}</td>
-                        <td class="text-center">{berita.updateDate}</td>
+                        <td class="text-center">
+                          {pengumuman.judulPengumuman}
+                        </td>
+                        <td class="text-center">{pengumuman.tags}</td>
+
                         <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <i class="fa-solid fa-pen-to-square"></i>
@@ -111,10 +94,10 @@ function AdminBerita() {
               </table>
             </div>
             <div class="d-block text-center card-footer">
-              {/* <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
+              <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
                 <i class="pe-7s-trash btn-icon-wrapper"> </i>
               </button>
-              <button class="btn-wide btn btn-success">Save</button> */}
+              <button class="btn-wide btn btn-success">Save</button>
             </div>
           </div>
         </div>
@@ -123,4 +106,4 @@ function AdminBerita() {
   );
 }
 
-export default AdminBerita;
+export default AdminPengumuman;

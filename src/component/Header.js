@@ -1,10 +1,39 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import Swal from 'sweetalert2';
 
 function Header() {
+  const history = useHistory();
+  const logout = () => {
+    Swal.fire({
+      title: "Keluar Dari Akun Anda ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: "success",
+          title: "Success Logout",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        //Untuk munuju page selanjutnya
+        history.push("/login");
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+        localStorage.clear();
+      }
+    });
+  };
   return (
     <div class="app-header header-shadow">
     <div class="app-header__logo">
-      <div class="logo-src"></div>
+      <img style={{width:"60%"}} src='https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Bawaslu.png'/>
       <div class="header__pane ml-auto">
         <div>
           <button
@@ -55,7 +84,7 @@ function Header() {
           </div>
           <button class="close"></button>
         </div>
-        <ul class="header-menu nav">
+        {/* <ul class="header-menu nav">
           <li class="nav-item">
             <a href="javascript:void(0);" class="nav-link">
               <i class="nav-link-icon fa fa-database"> </i>
@@ -74,74 +103,19 @@ function Header() {
               Settings
             </a>
           </li>
-        </ul>{" "}
+        </ul>{" "} */}
       </div>
       <div class="app-header-right">
         <div class="header-btn-lg pr-0">
           <div class="widget-content p-0">
             <div class="widget-content-wrapper">
-              <div class="widget-content-left">
-                <div class="btn-group">
-                  <a
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    class="p-0 btn">
-                    <img
-                      width="42"
-                      class="rounded-circle"
-                      src="assets/images/avatars/1.jpg"
-                      alt=""
-                    />
-                    <i class="fa fa-angle-down ml-2 opacity-8"></i>
-                  </a>
-                  <div
-                    tabindex="-1"
-                    role="menu"
-                    aria-hidden="true"
-                    class="dropdown-menu dropdown-menu-right">
-                    <button
-                      type="button"
-                      tabindex="0"
-                      class="dropdown-item">
-                      User Account
-                    </button>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      class="dropdown-item">
-                      Settings
-                    </button>
-                    <h6 tabindex="-1" class="dropdown-header">
-                      Header
-                    </h6>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      class="dropdown-item">
-                      Actions
-                    </button>
-                    <div tabindex="-1" class="dropdown-divider"></div>
-                    <button
-                      type="button"
-                      tabindex="0"
-                      class="dropdown-item">
-                      Dividers
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="widget-content-left  ml-3 header-user-info">
-                <div class="widget-heading">Alina Mclourd</div>
-                <div class="widget-subheading">VP People Manager</div>
-              </div>
-              <div class="widget-content-right header-user-info ml-3">
-                <button
+              {/* <div class="widget-content-right header-user-info ml-3"> */}
+                <button onClick={logout}
                   type="button"
-                  class="btn-shadow p-1 btn btn-primary btn-sm show-toastr-example">
-                  <i class="fa text-white fa-calendar pr-1 pl-1"></i>
+                  class="btn-shadow p-1 btn-danger btn-sm">
+                  <i class="fas fa-sign-out-alt"></i> Logout
                 </button>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>{" "}
