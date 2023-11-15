@@ -27,13 +27,13 @@ function Login() {
           showConfirmButton: false,
           timer: 1500,
         });
+        history.push("/admin-berita");
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
         localStorage.setItem("id", response.data.userData.id);
         localStorage.setItem("role", response.data.userData.role);
         localStorage.setItem("token", response.data.token);
-        setTimeout(() => {
-          window.location.reload();
-          history.push("/");
-        }, 1500);
       }
     } catch (error) {
       Swal.fire({
@@ -49,8 +49,7 @@ function Login() {
       <div className="row border rounded-5 p-3 bg-white shadow box-area">
         <div
           className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
-          style={{ background: "#103cbe" }}
-        >
+          style={{ background: "#103cbe" }}>
           <div className="featured-image mb-3">
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/998/284/non_2x/3d-password-input-illustration-design-free-png.png"
@@ -111,8 +110,7 @@ function Login() {
                 />
                 <label
                   htmlFor="showPassword"
-                  className="form-check-label text-secondary"
-                >
+                  className="form-check-label text-secondary">
                   <small>Tampilkan Password</small>
                 </label>
               </div>
@@ -120,8 +118,7 @@ function Login() {
             <div className="input-group mb-3">
               <button
                 type="submit"
-                className="btn btn-lg btn-primary w-100 fs-6"
-              >
+                className="btn btn-lg btn-primary w-100 fs-6">
                 Login
               </button>
             </div>

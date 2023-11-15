@@ -6,14 +6,15 @@ import { useDebugValue } from "react";
 import { API_DUMMY } from "../../../utils/base_URL";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import { useParams } from "react-router-dom/cjs/react-router-dom";
 
 function November() {
   const [november, setNovember] = useState([]);
-
-  const getAllRekapNovember = async () => {
+  const {tahun_bulan} = useParams()
+  const getAllRekapNovember = async (tahun_bulan) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=2023-11`
+        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
       );
       setNovember(response.data.data);
       console.log(response.data.data);
@@ -22,9 +23,15 @@ function November() {
     }
   };
 
+
+
   useEffect(() => {
     getAllRekapNovember();
   }, []);
+
+  useEffect(() => {
+
+  }, [tahun_bulan])
 
   return (
     <>
@@ -57,7 +64,9 @@ function November() {
       <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
-            <strong className="fs-4">Bulan November 2023</strong>
+          {/* {archivingMonths.map((monthData) => { */}
+            {/* <strong className="fs-4">Bulan {archivingMonths.month} {archivingMonths.year}</strong> */}
+          {/* // })} */}
           <div class="row">
             <div class="col-lg-8">
               {november.length > 0 ? (

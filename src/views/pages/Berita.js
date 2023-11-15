@@ -10,38 +10,12 @@ function Berita() {
   const [listTerbaru, setListTerbaru] = useState([]);
   const [november, setNovember] = useState([]);
   const currentYear = new Date().getFullYear();
-
-  const archivingMonths = [
-    { month: 1, year: currentYear, label: "Januari" },
-    { month: 2, year: currentYear, label: "Februari" },
-    { month: 3, year: currentYear, label: "Maret" },
-    { month: 4, year: currentYear, label: "April" },
-    { month: 5, year: currentYear, label: "Mei" },
-    { month: 6, year: currentYear, label: "Juni" },
-    { month: 7, year: currentYear, label: "Juli" },
-    { month: 8, year: currentYear, label: "Agustus" },
-    { month: 9, year: currentYear, label: "September" },
-    { month: 10, year: currentYear, label: "Oktober" },
-    { month: 11, year: currentYear, label: "November" },
-    { month: 12, year: currentYear, label: "Desember" },
-  ];
+  const [monthlyData, setMonthlyData] = useState({});
 
   const getAll = async () => {
     try {
       const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
       setList(response.data.data);
-      console.log(response.data.data);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-  };
-
-  const getAllRekap = async (tahun_bulan) => {
-    try {
-      const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
-      );
-      setNovember(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -60,10 +34,47 @@ function Berita() {
     }
   };
 
+  const archivingMonths = Array.from({ length: 12 }, (_, index) => {
+    const month = index + 1;
+    return {
+      month,
+      year: currentYear,
+      label: new Date(currentYear, month - 1, 1).toLocaleString('id-ID', { month: 'long' }),
+    };
+  });
+
+  const getAllRekap = async (tahun_bulan) => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
+      );
+      return response.data.data;
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const newData = {};
+
+      for (const monthData of archivingMonths) {
+        const tahun_bulan = `${monthData.year}${monthData.month}`;
+        const data = await getAllRekap(tahun_bulan);
+        newData[tahun_bulan] = data;
+      }
+
+      setMonthlyData(newData);
+    };
+
+    fetchData();
+  }, []);
+
   useEffect(() => {
     getAll(0);
     getAllTerbaru(0);
-    getAllRekap(0);
+    // getAllRekap();
   }, []);
 
   useEffect(() => {
@@ -110,11 +121,27 @@ function Berita() {
           </div>
         </div>
       </div>
+
       <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">
             <div class="col-lg-8">
+              <div className="row">
+                <div className="col-3">
+                  <p>All</p>
+                </div>
+                <div className="col-3">
+                  <p>All</p>
+                </div>
+                <div className="col-3">
+                  <p>All</p>
+                </div>
+                <div className="col-3">
+                  <p>All</p>
+                </div>
+              </div>
+              <hr className="mt-0" />
               {list.length > 0 ? (
                 list.map((berita) => {
                   return (
@@ -309,14 +336,13 @@ function Berita() {
                     <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {
                         const tahun_bulan = `${monthData.year}${monthData.month}`;
-
-                        const data = getAllRekap(tahun_bulan);
-                        const totalData = data.length;
+                        const totalData = monthlyData[tahun_bulan]
+                          ? monthlyData[tahun_bulan].length
+                          : 0;
 
                         return (
                           <li key={`${tahun_bulan}`}>
-                            <a
-                              href={`/rekap-berita/${tahun_bulan}`}>
+                            <a href={`/rekap-berita/${tahun_bulan}`}>
                               <i class="fa-solid fa-file"></i> {monthData.label}{" "}
                               {monthData.year} ({totalData})
                             </a>

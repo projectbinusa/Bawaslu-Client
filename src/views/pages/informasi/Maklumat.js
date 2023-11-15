@@ -102,7 +102,6 @@ function Maklumat() {
                   </li>
                 </ul>
               </p>
-              {/* <p class="mb-0 bottom-line-url">Want to learn more about us? <a href="contact.html">Click here</a></p> */}
             </div>
           </div>
         </div>

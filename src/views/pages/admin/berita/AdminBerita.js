@@ -29,8 +29,6 @@ function AdminBerita() {
   const [modalEdit, setModalEdit] = useState(false);
   const [id, setId] = useState(0);
 
-  const handleClose = () => setShow(false);
-  const history = useHistory();
 
   const getAll = async () => {
     try {
@@ -95,7 +93,17 @@ function AdminBerita() {
                         <td className="text-center">{berita.author}</td>
                         <td class="text-center">{berita.createdDate}</td>
                         <td class="text-center">
-                          <img src={berita.image} />
+                          {berita.image ? (
+                            <img
+                              src={berita.image}
+                              alt={`Image ${index + 1}`}
+                              onError={(e) =>
+                                console.error("Error loading image:", e)
+                              }
+                            />
+                          ) : (
+                            "No Image"
+                          )}
                         </td>
                         <td class="text-center">{berita.isiBerita}</td>
                         <td class="text-center">{berita.judulBerita}</td>
@@ -105,7 +113,7 @@ function AdminBerita() {
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <i class="fa-solid fa-pen-to-square"></i>
                           </button>
-                          
+
                           <button type="button" class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                           </button>
@@ -117,10 +125,10 @@ function AdminBerita() {
               </table>
             </div>
             <div class="d-block text-center card-footer">
-              <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
+              {/* <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
                 <i class="pe-7s-trash btn-icon-wrapper"> </i>
               </button>
-              <button class="btn-wide btn btn-success">Save</button>
+              <button class="btn-wide btn btn-success">Save</button> */}
             </div>
             
           </div>
