@@ -40,6 +40,8 @@ import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
 // test
 function App() {
+  const [rekapData, setRekapData] = useState([]);
+ 
 
   return (
     <BrowserRouter>

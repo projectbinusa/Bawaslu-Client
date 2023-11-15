@@ -13,10 +13,11 @@ function InformasiStandarProsedur() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=3`
+        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
       )
       .then((response) => {
         setList(response.data.data);
+        console.log(response.data.data);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -25,10 +26,10 @@ function InformasiStandarProsedur() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=11`
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
       )
       .then((response) => {
-        // console.log(response.data.data);
+        console.log(response.data.data);
         setIsi(response.data.data);
       })
       .catch((error) => {
@@ -75,6 +76,23 @@ function InformasiStandarProsedur() {
         {/* <!-- page title end --> */}
 
         <div
+        style={{
+          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        class="project-area pd-top-110 pd-bottom-90"
+      >
+        <div className="container">
+          <div className="d-flex gap-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-12 ">
+                <div class="isotope-filters project-isotope-btn text-left mb-5">
+                    {/* {list.map((menu) => {
+                      return (
+                        <button
+                          style={{ width: "150px", textAlign: "left" }}
+                          class="button ml-0 active"
           style={{
             backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
             backgroundRepeat: "no-repeat",
@@ -98,6 +116,8 @@ function InformasiStandarProsedur() {
                           {menu.menuRegulasi}
                         </button>
                       );
+                    })} */}
+
                     })}
                   </div>
                 </div>
