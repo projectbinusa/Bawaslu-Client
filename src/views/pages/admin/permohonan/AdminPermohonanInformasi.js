@@ -8,20 +8,6 @@ import Swal from "sweetalert2";
 
 function AdminPermohonanInformasi() {
   const [list, setList] = useState([]);
-  const [nama, setNama] = useState("");
-  const [pekerjaan, setPekerjaan] = useState("");
-  const [pendidikan, setPendidikan] = useState("");
-  const [alamat, setAlamat] = useState("");
-  const [email, setEmail] = useState("");
-  const [noHp, setNoHp] = useState("");
-  const [tujuanInformasi, setTujuanInformasi] = useState("");
-  const [rincianInformasi, setRincianInformasi] = useState("");
-  const [diTunjukanKepada, setDiTunjukanKepada] = useState("");
-  const [caraMemperolahInformasi, setCaraMemperolehInformasi] = useState("");
-  const [caraCaraMendapatkanInformasi, setCaraMendapatkanInformasi] =
-    useState("");
-  const [file, setFile] = useState("");
-  const [id, setId] = useState(0);
 
   const getAll = async () => {
     try {
@@ -43,41 +29,6 @@ function AdminPermohonanInformasi() {
   useEffect(() => {
     getAll();
   }, []);
-
-  
-  const deleteData = async (id) => {
-    Swal.fire({
-      title: "Apakah Anda Ingin Menghapus Data Ini?",
-      text: "Perubahan data tidak bisa dikembalikan!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Hapus",
-      cancelButtonText: "Batal",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        axios
-          .delete(`${API_DUMMY}/bawaslu/api/permohonan-informasi/` + id, {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          })
-          .then((res) => {
-            Swal.fire({
-              icon: "success",
-              title: "Dihapus!",
-              showConfirmButton: false,
-              timer: 1500,
-            });
-
-            setTimeout(() => {
-              window.location.reload();
-            }, 1500);
-          });
-      }
-    });
-  };
 
   return (
     <div>

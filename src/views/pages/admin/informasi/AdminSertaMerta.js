@@ -48,19 +48,7 @@ function AdminSertaMerta() {
                 </tr>
               </thead>
               <tbody>
-                {/* {list.map((sertMerta, index) => {
-                  return ( */}
                     <tr>
-                      {/* <td class="text-center text-muted">{index + 1}</td>
-                      <td className="text-center">{berita.author}</td>
-                      <td class="text-center">{berita.createdDate}</td>
-                      <td class="text-center">
-                        <img src={berita.image} />
-                      </td>
-                      <td class="text-center">{berita.isiBerita}</td>
-                      <td class="text-center">{berita.judulBerita}</td>
-                      <td class="text-center">{berita.tags}</td>
-                      <td class="text-center">{berita.updateDate}</td> */}
                       <td class="text-center">
                         <button type="button" class="btn-primary btn-sm mr-2">
                           <i class="fa-solid fa-pen-to-square"></i>
@@ -71,8 +59,6 @@ function AdminSertaMerta() {
                         </button>
                       </td>
                     </tr>
-                  {/* );
-                })} */}
                 <tr>
                   <td></td>
                 </tr>

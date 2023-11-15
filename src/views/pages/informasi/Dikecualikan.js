@@ -50,10 +50,6 @@ function Dikecualikan() {
         <div class="kolom-image mx-4 my-4 d-flex  ">
           <div class="d-flex flex-column">
             <div class="section-title">
-              {/* <div class="section-title text-center">
-                <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-                <h2 class="title">Informasi Dikecualikan</h2>
-              </div> */}
             </div>
             <div class=" text d-flex flex-column gap-3   bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4">
               <h2 class="title">Informasi Dikecualikan</h2>
