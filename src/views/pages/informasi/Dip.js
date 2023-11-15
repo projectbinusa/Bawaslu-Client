@@ -4,6 +4,7 @@ import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import "../../../css/dip.css"
 import axios from "axios";
 function Dip() {
   const [list, setList] = useState([]);
@@ -40,11 +41,12 @@ function Dip() {
     getByIsi();
   }, []);
   return (
-    <div>
+    <div id="awal">
       <Navbar />
       {/* <!-- page title start --> */}
       <div class="breadcrumb-area bg-black bg-relative">
         <div
+        id="banner"
           class="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
@@ -54,7 +56,7 @@ function Dip() {
           <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-8">
               <div class="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
+                <h2 id="h2" style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
                   Daftar Informasi Publik
                 </h2>
                 <ul class="page-list">
@@ -73,6 +75,7 @@ function Dip() {
       {/* <!-- page title end --> */}
 
       <div
+      id="container"
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
@@ -80,15 +83,16 @@ function Dip() {
         }}
         class="project-area pd-top-110 pd-bottom-90"
       >
-        <div className="container">
-          <div className="d-flex gap-3">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 ">
-                <div class="isotope-filters project-isotope-btn text-left mb-5">
+        <div id="container"  className="container">
+          <div id="display" className="d-flex gap-3">
+            <div id="display" class="row justify-content-center">
+              <div id="display" class="col-lg-12 ">
+                <div id="widht" class="isotope-filters project-isotope-btn text-left mb-5">
                   {list.map((menu) => {
                     return (
                       <button
-                        style={{ width: "150px", textAlign: "left" }}
+                      id="button-dik"
+                        // style={{ width: "150px", textAlign: "left" }}
                         class="button ml-0 active"
                         data-filter="*"
                         onClick={() => `${menu.menuRegulasi}`}
@@ -100,7 +104,7 @@ function Dip() {
                 </div>
               </div>
             </div>
-            <div className="card mb-4 shadow" style={{width:"100%"}}>
+            <div id="ukuran" className="card mb-4 shadow" style={{width:"100%"}}>
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
                   <div className="col">
@@ -161,8 +165,9 @@ function Dip() {
             </div>
           </div>
         </div>
-        <Footer />
+      
       </div>
+      <Footer />
     </div>
   );
 }
