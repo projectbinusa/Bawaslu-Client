@@ -2,8 +2,15 @@ import React from "react";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
 import Footer from "../../../../component/Footer";
+import { useState } from "react";
 
 function AddBeritaAdmin() {
+  const [author, setAuthor] = useState("");
+  const [image, setImage] = useState("");
+  const [judulBerita, setJudulBerita] = useState("");
+  const [isiBerita, setIsiBerita] = useState("");
+  const [categoryId, setCategoryId] = useState();
+  const [tags, setTags] = useState("");
   return (
     <div>
       <Header />

@@ -6,14 +6,32 @@ import { useDebugValue } from "react";
 import { API_DUMMY } from "../../../utils/base_URL";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import { useParams } from "react-router-dom/cjs/react-router-dom";
 
 function November() {
   const [november, setNovember] = useState([]);
+  const {tahun_bulan} = useParams()
+  // const currentYear = new Date().getFullYear();
+  // const currentMount = new Date().getFullMount();
+  // const archivingMonths = [
+  //   { month: 1, year: currentYear, label: "Januari" },
+  //   { month: 2, year: currentYear, label: "Februari" },
+  //   { month: 3, year: currentYear, label: "Maret" },
+  //   { month: 4, year: currentYear, label: "April" },
+  //   { month: 5, year: currentYear, label: "Mei" },
+  //   { month: 6, year: currentYear, label: "Juni" },
+  //   { month: 7, year: currentYear, label: "Juli" },
+  //   { month: 8, year: currentYear, label: "Agustus" },
+  //   { month: 9, year: currentYear, label: "September" },
+  //   { month: 10, year: currentYear, label: "Oktober" },
+  //   { month: 11, year: currentYear, label: "November" },
+  //   { month: 12, year: currentYear, label: "Desember" },
+  // ];
 
-  const getAllRekapNovember = async () => {
+  const getAllRekapNovember = async (tahun_bulan) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=2023-11`
+        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
       );
       setNovember(response.data.data);
       console.log(response.data.data);
@@ -22,9 +40,15 @@ function November() {
     }
   };
 
+  
+
   useEffect(() => {
     getAllRekapNovember();
   }, []);
+
+  useEffect(() => {
+
+  }, [tahun_bulan])
 
   return (
     <>
@@ -57,7 +81,9 @@ function November() {
       <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
-            <strong className="fs-4">Bulan November 2023</strong>
+          {/* {archivingMonths.map((monthData) => { */}
+            {/* <strong className="fs-4">Bulan {archivingMonths.month} {archivingMonths.year}</strong> */}
+          {/* // })} */}
           <div class="row">
             <div class="col-lg-8">
               {november.length > 0 ? (
