@@ -8,28 +8,6 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 function AdminBerita() {
   const [list, setList] = useState([]);
   const [list1, setList1] = useState([]);
-
-
-  const [category, setCategory] = useState([""]);
-  const [createDate, setCreateDate] = useState([""]);
-  const [updateDate, setUpdateDate] = useState([""]);
-  const [author, setAuthor] = useState("");
-  const [isiBerita, setIsiBerita] = useState("");
-  const [judulBerita, setJudulBerita] = useState(""); n 
-  const [tags, setTags] = useState("");
-  const [image, setImage] = useState("");
-  const [show, setShow] = useState(false);
-  const [showAdd, setShowAdd] = useState(false);
-  const [showEdit, setShowEdit] = useState(false);
-  const handleCloseAdd = () => setModalAdd(false);
-  const handleClosEdit = () => setModalEdit(false);
-  const handleShowAdd = () => setModalAdd(true);
-  const handleShowEdit = () => setModalEdit(true);
-  const [modalAdd, setModalAdd] = useState(false);
-  const [modalEdit, setModalEdit] = useState(false);
-  const [id, setId] = useState(0);
-
-
   const getAll = async () => {
     try {
       const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
@@ -130,7 +108,7 @@ function AdminBerita() {
               </button>
               <button class="btn-wide btn btn-success">Save</button> */}
             </div>
-            
+
           </div>
 
 
@@ -154,7 +132,7 @@ function AdminBerita() {
                     <th className="text-center">Create Date</th>
                     <th className="text-center">Update Date</th>
                     <th className="text-center">Aksi</th>
-                   
+
                   </tr>
                 </thead>
                 <tbody>
@@ -164,15 +142,15 @@ function AdminBerita() {
                         <td class="text-center text-muted">{index + 1}</td>
                         <td className="text-center">{Category.category}</td>
                         <td class="text-center">{Category.createdDate}</td>
-                       
-                       
+
+
                         <td class="text-center">{Category.updateDate}</td>
-                      
+
                         <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <i class="fa-solid fa-pen-to-square"></i>
                           </button>
-                          
+
                           <button type="button" class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                           </button>
@@ -189,7 +167,7 @@ function AdminBerita() {
               </button>
               <button class="btn-wide btn btn-success">Save</button>
             </div>
-            
+
           </div>
 
         </div>
