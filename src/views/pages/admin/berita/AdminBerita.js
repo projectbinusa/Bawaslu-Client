@@ -15,7 +15,7 @@ function AdminBerita() {
   const [updateDate, setUpdateDate] = useState([""]);
   const [author, setAuthor] = useState("");
   const [isiBerita, setIsiBerita] = useState("");
-  const [judulBerita, setJudulBerita] = useState(""); n 
+  const [judulBerita, setJudulBerita] = useState(""); 
   const [tags, setTags] = useState("");
   const [image, setImage] = useState("");
   const [show, setShow] = useState(false);

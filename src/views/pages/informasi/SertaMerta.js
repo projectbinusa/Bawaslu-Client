@@ -83,58 +83,46 @@ function SertaMerta() {
         </div>
       </div>
       <div className="container" style={{marginTop:"10%"}}>
-            <div className="d-flex gap-4">
-                <div class="isotope-filters project-isotope-btn text-left mb-5">
-                  <button style={{width:"250px", textAlign:"left"}}
-                    class="button ml-0"
-                    data-filter="*"
-                    onClick={() => showTable(1)}
-                  >
-                    Putusan Pelanggaran
-                  </button>
-                  <button style={{width:"250px", textAlign:"left"}}
-                    class="button"
-                    data-filter=".cat-1"
-                    onClick={() => showTable(2)}
-                  >
-                    Sengketa Proses Pemilu
-                  </button>
-                  <button style={{width:"250px", textAlign:"left"}}
-                    class="button"
-                    data-filter=".cat-2"
-                    onClick={() => showTable(3)}
-                  >
-                    Pemungutan Suara Ulang
-                  </button>
-                  <button style={{width:"250px", textAlign:"left"}}
-                    class="button"
-                    data-filter=".cat-3"
-                    onClick={() => showTable(4)}
-                  >
-                    Organisasi Dan Administrasi
-                  </button>
-                  <button style={{width:"250px", textAlign:"left"}}
-                    class="button"
-                    data-filter=".cat-3"
-                    onClick={() => showTable(5)}
-                  >
-                    Perselisihan Hasil Pemilihan Umum
-                  </button>
-                  <button style={{width:"250px", textAlign:"left"}}
-                    class="button"
-                    data-filter=".cat-3"
-                    onClick={() => showTable(6)}
-                  >
-                    Sosialisasi
-                  </button>
-                  <button style={{width:"250px", textAlign:"left"}}
-                    class="button"
-                    data-filter=".cat-3"
-                    onClick={() => showTable(7)}
-                  >
-                    Piagam Penghargaan
-                  </button>
-                </div>
+            <div className="flex wrap gap-4">
+            <div class="row isotope-filters project-isotope-btn text-left mb-5">
+    <div class="col-md-3 col-sm-6 mb-2">
+        <button class="btn btn-primary w-100" data-filter="*" onClick={() => showTable(1)}>
+            Putusan Pelanggaran
+        </button>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-2">
+        <button class="btn btn-primary w-100" data-filter=".cat-1" onClick={() => showTable(2)}>
+            Sengketa Proses Pemilu
+        </button>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-2">
+        <button class="btn btn-primary w-100" data-filter=".cat-2" onClick={() => showTable(3)}>
+            Pemungutan Suara Ulang
+        </button>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-2">
+        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(4)}>
+            Organisasi Dan Administrasi
+        </button>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-2">
+        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(5)}>
+            Perselisihan Hasil Pemilihan Umum
+        </button>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-2">
+        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(6)}>
+            Sosialisasi
+        </button>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-2">
+        <button class="btn btn-primary w-100" data-filter=".cat-3" onClick={() => showTable(7)}>
+            Piagam Penghargaan
+        </button>
+    </div>
+</div>
+
+
             {/* Putusan Pelanggaran */}
             <div
               className="card mb-4 shadow"
