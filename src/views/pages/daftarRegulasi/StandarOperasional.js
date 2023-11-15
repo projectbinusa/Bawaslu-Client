@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-import "../../../css/LayananInformasi.css";
-import "react-owl-carousel2/src/owl.carousel.css";
-import "react-owl-carousel2/src/owl.theme.default.css";
+import Navbar from "../../../component/Navbar";
 import axios from "axios";
 
-function InformasiStandarProsedur() {
+function StandarOperasional() {
+  const [table1Visible, setTable1Visible] = useState(false);
+
+  const showTable = (tableNumber) => {
+    setTable1Visible(false);
+
+    switch (tableNumber) {
+      case "SOP":
+        setTable1Visible(true);
+        break;
+      default:
+        break;
+    }
+  };
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
 
@@ -25,75 +35,77 @@ function InformasiStandarProsedur() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=11`
+        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=3`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi(response.data.data);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
       });
   };
+
   useEffect(() => {
-    //mengambil data, memperbarui DOM secara langsung,
     getByMenu();
     getByIsi();
   }, []);
   return (
-    <>
-      <div>
-        <Navbar />
-        {/* <!-- page title start --> */}
-        <div className="breadcrumb-area bg-black bg-relative">
-          <div
-            className="banner-bg-img"
-            style={{
-              backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-            }}
-          ></div>
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-7 col-lg-8">
-                <div className="breadcrumb-inner text-center">
-                  <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                    SOP
-                  </h2>
-                  <ul className="page-list">
-                    <li>
-                      <a href="/" style={{ textDecoration: "none" }}>
-                        Home
-                      </a>
-                    </li>
-                    <li>SOP</li>
-                  </ul>
-                </div>
+    <div>
+      <Navbar />
+      {/* <!-- page title start --> */}
+      <div class="breadcrumb-area bg-black bg-relative">
+        <div
+          class="banner-bg-img"
+          style={{
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
+          }}
+        ></div>
+        <div>
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+              <div class="breadcrumb-inner text-center">
+                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
+                  Standar Operasional
+                </h2>
+                <ul class="page-list">
+                  <li>
+                    <a href="/" style={{ textDecoration: "none" }}>
+                      Home
+                    </a>
+                  </li>
+                  <li>Regulasi</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        {/* <!-- page title end --> */}
-
+      </div>
+      {/* <!-- page title end --> */}
+      <div
+        style={{
+          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        class="project-area pd-top-115 pd-bottom-90"
+      >
         <div
           style={{
-            backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
-          className="project-area pd-top-110 pd-bottom-90"
         >
-          <div className="container">
-            <div className="d-flex gap-3">
-              <div className="row justify-content-center">
-                <div className="col-lg-12 ">
-                  <div className="isotope-filters project-isotope-btn text-left mb-5">
+          <div class="container">
+            <div className="d-flex gap-5">
+              <div class="row justify-content-center">
+                <div class="col-lg-12 ">
+                  <div class="isotope-filters project-isotope-btn text-left mb-5">
                     {list.map((menu) => {
                       return (
                         <button
-                          style={{ width: "150px", textAlign: "left" }}
-                          className="button ml-0 active"
+                          style={{ width: "250px", textAlign: "left" }}
+                          class="button ml-0"
                           data-filter="*"
-                          onClick={() => `${menu.menuRegulasi}`}
+                          onClick={() => showTable(`${menu.menuRegulasi}`)}
                         >
                           {menu.menuRegulasi}
                         </button>
@@ -102,11 +114,23 @@ function InformasiStandarProsedur() {
                   </div>
                 </div>
               </div>
-              <div className="card mb-4 shadow" style={{ width: "100%" }}>
+              {/* Undang undang */}
+              <div
+                className="card mb-4 shadow"
+                id="table1"
+                style={{
+                  display: table1Visible ? "table" : "none",
+                  width: "100%",
+                }}
+              >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
-                      <h4>Standar Operasional Prosedur</h4>
+                    <div className="">
+                      <h4>Undang Undang</h4>
+                    </div>
+                    <div className="">
+                      {/* <button className="btn btn-primary float-end"> Tambah
+                      </button>*/}
                     </div>
                   </div>
                 </div>
@@ -114,8 +138,8 @@ function InformasiStandarProsedur() {
                   <table className="table table1 responsive-3 table-striped table-hover border rounded">
                     <thead>
                       <tr>
-                        <th scope="col"> Dokumen</th>
-                        <th scope="col"> Unduh / Lihat</th>
+                        <th scope=""> Dokumen</th>
+                        <th scope=""> Unduh / Lihat</th>
                       </tr>
                     </thead>
                     {isi.map((isi) => {
@@ -137,7 +161,7 @@ function InformasiStandarProsedur() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i className="fa-solid fa-download"></i>
+                                <i class="fa-solid fa-download"></i>
                               </button>
                               <button
                                 className="bg-warning text-light"
@@ -150,7 +174,7 @@ function InformasiStandarProsedur() {
                                   marginRight: "10px",
                                 }}
                               >
-                                <i className="fa-solid fa-circle-info"></i>
+                                <i class="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>
@@ -163,10 +187,13 @@ function InformasiStandarProsedur() {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       </div>
-    </>
+      {/* <!-- project area end --> */}
+
+      <Footer />
+    </div>
   );
 }
-export default InformasiStandarProsedur;
+
+export default StandarOperasional;
