@@ -29,8 +29,8 @@ function DetailPermohonanInformasi() {
     axios
       .get(`${API_DUMMY}/bawaslu/api/permohonan-informasi/get/` + param.id, {
         headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
       })
       .then((res) => {
         const list_data = res.data.data;
@@ -52,7 +52,6 @@ function DetailPermohonanInformasi() {
       });
   }, [param.id]);
 
-
   return (
     <div>
       <Header />
@@ -68,12 +67,12 @@ function DetailPermohonanInformasi() {
                     <img
                     className="rounded-circle"
                     src={file}
-                  />  
+                  />
                 ):( */}
-                  <img
+                <img
                   className="rounded-circle w-75 mr-auto ml-auto"
                   src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-                />   
+                />
                 {/* )} */}
                 <p className="text-center">Fatiya salsabila</p>
               </form>

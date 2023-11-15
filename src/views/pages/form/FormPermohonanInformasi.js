@@ -99,16 +99,6 @@ const FormPermohonanInformasi = () => {
                                   />
                 <p className="pp">0 of 60 max characters</p>
                 <br></br>
-                {/* <p>Nomor Identitas Pemohon:</p>
-                <input className="input" type="text" value={nama} onChange={(e) => setNama(e.target.value)}/>
-                <p className="pp">0 of 30 max characters</p> */}
-                <br></br>
-                {/* <p>Jenis Identitas:</p>
-                <select className="select">
-                  <option>KTP (Kartu Tanda Penduduk)</option>
-                  <option>SIM (Surat Izin Mengemudi)</option>
-                  <option>KTM (Kartu Tanda Mahasiswa)</option>
-                </select> */}
                 <br></br>
                 <br></br>
                 <p>Nomor Telp/HP:</p>
@@ -156,10 +146,6 @@ const FormPermohonanInformasi = () => {
 
               <br></br>
               <p>Cara Memproleh Infromasi:</p>
-              {/* <select className="select">
-                <option>Melihat / Mendengar / Membaca / Mencatat</option>
-                <option>Mendapat Salianan Informasi</option>
-              </select> */}
               <input
                 className="input"
                 id="input"
@@ -169,14 +155,6 @@ const FormPermohonanInformasi = () => {
                 onChange={(e) => setCaraMemperolehInformasi(e.target.value)}
               />
               <br></br>
-              {/* <p>Cara Mengambil Salinan Informasi:</p>
-              <select className="select">
-                <option>Mengambil Langsung </option>
-                <option>POS</option>
-                <option>Kurir</option>
-                <option>Fax</option>
-                <option>Email</option>
-              </select> */}
               <br></br>
               <p>Upload Photo Identitas (.jpg) size max 1mb:</p>
               <input

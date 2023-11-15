@@ -42,13 +42,13 @@ function DetailPermohonanKeberatan() {
             setTujuanPenggunaanInformasi(res.data.data.tujuanPenggunaanInformasi);
             setAlasan(res.data.data.alasan);
             setTandaPengenal(res.data.data.tandaPengenal);
-    
+
             console.log(res.data.data);
           })
           .catch((error) => {
             alert("Terjadi Keslahan" + error);
           });
-        }, param.id) 
+        }, param.id)
   return (
     <div>
       <Header />
@@ -60,17 +60,10 @@ function DetailPermohonanKeberatan() {
           <div className="d-lg-flex gap-5">
             <div className="d-block">
               <form className="card card-body shadow p-2 w-100">
-                {/* {file != null ? (
-                    <img
-                    className="rounded-circle"
-                    src={file}
-                  />  
-                ):( */}
                   <img
                   className="rounded-circle w-75 mr-auto ml-auto"
                   src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-                />   
-                {/* )} */}
+                />
                 <p className="text-center">{nama}</p>
               </form>
               <form className="card card-body shadow p-2 mt-3">

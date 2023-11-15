@@ -29,7 +29,6 @@ function AdminFormInformasi() {
     const [file, setFile]= useState("");
     const history = useHistory();
     const [id, setId] = useState(0);
-    // const [caraMemperolahInformasi, setCaraMemperolehInformasi]= useState("");
 
   const getAll = async () => {
     try {
@@ -87,40 +86,6 @@ function AdminFormInformasi() {
   useEffect(() => {
     getAll();
   }, []);
-
-//   const deleteData = async (id) => {
-//     Swal.fire({
-//       title: "Apakah Anda Ingin Menghapus?",
-//       text: "Perubahan data tidak bisa dikembalikan!",
-//       icon: "warning",
-//       showCancelButton: true,
-//       confirmButtonColor: "#3085d6",
-//       cancelButtonColor: "#d33",
-//       confirmButtonText: "Hapus",
-//       cancelButtonText: "Batal",
-//     }).then((result) => {
-//       if (result.isConfirmed) {
-//         axios
-//           .delete(`${API_DUMMY}/bawaslu/api/berita/` + id, {
-//             headers: {
-//               Authorization: `Bearer ${localStorage.getItem("token")}`,
-//             },
-//           })
-//           .then((res) => {
-//             Swal.fire({
-//               icon: "success",
-//               title: "Dihapus!",
-//               showConfirmButton: false,
-//               timer: 1500,
-//             });
-
-//             setTimeout(() => {
-//               window.location.reload();
-//             }, 1500);
-//           });
-//       }
-//     });
-//   };
 
   const put = async (e) => {
     e.preventDefault();
@@ -234,18 +199,6 @@ function AdminFormInformasi() {
               <div className="col">
                 <h4>Permohonan Informasi</h4>
               </div>
-              {/* <div className="col">
-                <button
-                  type="button"
-                  onClick={handleShowAdd}
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                  data-modal-hide="authentication-modal"
-                  className="bg-success text-light float-end">
-                  {" "}
-                  Tambah Data
-                </button>
-              </div> */}
             </div>
           </div>
           <div style={{overflowX:"scroll"}}>
@@ -335,7 +288,6 @@ function AdminFormInformasi() {
                           <i class="fas fa-edit"></i>
                         </button>
                         <button
-                        //   onClick={() => deleteData(berita.id)}
                           className="bg-danger text-light"
                           style={{
                             border: "none",
@@ -357,118 +309,7 @@ function AdminFormInformasi() {
           </div>
         </div>
       </div>
-      {/* modal tambah data */}
-      {/* <div
-        show={showAdd}
-        onHide={handleCloseAdd}
-        className="modal fade"
-        id="exampleModal"
-        tabIndex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div className="modal-dialog">
-          <form onSubmit={add} className="modal-content">
-            <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">
-                Tambah Berita
-              </h1>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"></button>
-            </div>
-            <div className="modal-body">
-              <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1">
-                  <i className="fa-solid fa-user"></i>
-                </span>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Author"
-                  aria-label="Author"
-                  aria-describedby="basic-addon1"
-                  value={author}
-                  onChange={(e) => setAuthor(e.target.value)}
-                />
-              </div>
-              <div className="input-group mb-3">
-                <input
-                  type="file"
-                  className="form-control"
-                  placeholder="Image"
-                  aria-label="Author"
-                  aria-describedby="basic-addon1"
-                  fileName={image}
-                  onChange={(e) => setImage(e.target.files[0])}
-                />
-              </div>
-              <div className="input-group mb-3">
-                <textarea
-                  type="text"
-                  className="form-control"
-                  placeholder="Isi Berita"
-                  aria-label="Isi Berita"
-                  aria-describedby="basic-addon1"
-                  value={isiBerita}
-                  onChange={(e) => setIsiBerita(e.target.value)}
-                />
-              </div>
-              <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1">
-                  <i className="fa-solid fa-user"></i>
-                </span>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Judul Berita"
-                  aria-label="Judul Berita"
-                  aria-describedby="basic-addon1"
-                  value={judulBerita}
-                  onChange={(e) => setJudulBerita(e.target.value)}
-                />
-              </div>
-              <div className="input-group mb-3">
-                <span className="input-group-text" id="basic-addon1">
-                  <i className="fa-solid fa-user"></i>
-                </span>
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Tags"
-                  aria-label="Tags"
-                  aria-describedby="basic-addon1"
-                  value={tags}
-                  onChange={(e) => setTags(e.target.value)}
-                />
-              </div>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-                onClick={handleCloseAdd}>
-                Close
-              </button>
-              <button type="submit" className="btn btn-primary">
-                Save changes
-              </button>
-            </div>
-          </form>
-        </div>
-      </div> */}
-      {/* modal edit data */}
-      {/* <!-- Button trigger modal --> */}
-      {/* <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
-          >
-            Launch static backdrop modal
-          </button> */}
+    
 
       {/* <!-- Modal --> */}
       <div

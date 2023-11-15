@@ -1,22 +1,13 @@
 import React from "react";
-// import OwlCarousel from "react-owl-carousel2";
-// import "react-owl-carousel2/src/owl.carousel.css";
-// import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
 
 import Footer from "../../../component/Footer";
 import "../../../css/Kanal.css";
 
-// import "../../../css/owl.css";
 
 
 
 function Kanal() {
-  const options = {
-    items: 1, // Jumlah item yang akan ditampilkan dalam satu slide
-    nav: true, // Tombol navigasi
-    dots: true, // Indikator titik
-  };
   return (
     <div>
       <Navbar />
@@ -98,10 +89,6 @@ function Kanal() {
                 <div style={{ display: "flex" }}>
                   <div className="col">
                     <h4>Imbauan</h4>
-                  </div>
-                  <div className="col">
-                    {/* <button className="btn btn-primary float-end"> Tambah
-                        </button> */}
                   </div>
                 </div>
               </div>

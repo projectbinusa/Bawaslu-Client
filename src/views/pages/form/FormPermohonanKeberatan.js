@@ -130,26 +130,12 @@ const FormPermohonaKeberatan = () => {
                 <p>Alasan</p>
                 <textarea className="textarea" value={alasan} onChange={(e) => setAlasan(e.target.value)}   />
                 <p className="pp" >0 of 100 max characters</p>
-                {/* <select className="select"  >
-                  <option>Permohonan Informasi Ditolak</option>
-                  <option>Informasi Berkala Tidak Disediakan</option>
-                  <option>Permintaan Informasi Tidak Ditanggapi</option>
-                  <option>
-                    Permintaan Informasi Ditanggapi Tidak Seperti Yang Diminta{" "}
-                  </option>
-                  <option>Permintaan Informasi Tidak Dipenuhi</option>
-                  <option>Biaya yang Dikenakan Tidak Wajar</option>
-                  <option>
-                    Informasi Disampaikan Pada Jangka Waktu Yang Sudah
-                    Ditentukan
-                  </option>
-                </select> */}
                 <br></br>
                 <br></br>
                 <p>Upload Photo Identitas (.jpg) size max 1mb </p>
                 <div
                 className="input-type"
-                 
+
                 >
                   {" "}
                   <div className="input-type">
@@ -159,7 +145,7 @@ const FormPermohonaKeberatan = () => {
                     {" "}
                     <button type="submit"
                     className="btn-kirim"
-                     
+
                     >
                       Kirim
                     </button>

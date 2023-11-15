@@ -75,7 +75,6 @@ function EditBeritaAdmin() {
           </div>
         </div>
       </div>
-      {/* sss */}
       <Footer />
     </div>
   );

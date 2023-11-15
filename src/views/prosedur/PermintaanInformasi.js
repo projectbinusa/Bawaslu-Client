@@ -82,17 +82,11 @@ function PermintaanInformasi() {
                       1) Penyampaian Permohonan
                     </a>
                   </h4>
-                  {/* <ul class="blog-meta">
-                            <li><i class="far fa-user"></i>By Admin</li>
-                            <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                        </ul> */}
                   <p>
                     Pemohon menyampaikan permohonan kepada PPID melalui Aplikasi
                     PPID,surat,fax,email,telepon atau datang langsung ke tempat
                     layanan PPID
                   </p>
-                  {/* <a class="read-more-text" href="blog-details.html">Read More <i
-                                class="fa fa-caret-right"></i></a> */}
                 </div>
               </div>
             </div>
@@ -143,17 +137,11 @@ function PermintaanInformasi() {
                       3) Menerima Bukti
                     </a>
                   </h4>
-                  {/* <ul class="blog-meta">
-                            <li><i class="far fa-user"></i> By Admin</li>
-                            <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                        </ul> */}
                   <p>
                     Pemohon menerima bukti permohonan informasi dari
                     petugas.Informasi apabila syarat permohonan telah di
                     lengkapi{" "}
                   </p>
-                  {/* <a class="read-more-text" href="blog-details.html">Read More <i
-                                class="fa fa-caret-right"></i></a> */}
                 </div>
               </div>
             </div>
@@ -176,16 +164,10 @@ function PermintaanInformasi() {
                       4) Jangka Waktu
                     </a>
                   </h4>
-                  {/* <ul class="blog-meta">
-                            <li><i class="far fa-user"></i>By Admin</li>
-                            <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                        </ul> */}
                   <p>
                     Dalam jangka waktu 10 hari kerja, pemohon menerima
                     pemberitahuan tertulis dari PPID
                   </p>
-                  {/* <a class="read-more-text" href="blog-details.html">Read More <i
-                                class="fa fa-caret-right"></i></a> */}
                 </div>
               </div>
             </div>
@@ -206,16 +188,10 @@ function PermintaanInformasi() {
                       5) Menerima Informasi
                     </a>
                   </h4>
-                  {/* <ul class="blog-meta">
-                            <li><i class="far fa-user"></i> By Admin</li>
-                            <li><i class="far fa-calendar-alt"></i> 25 May 2021</li>
-                        </ul> */}
                   <p>
                     Pemohon menerima informasi Surat Keputusan PPID tentang
                     penolakan permohonan informasi dari petugas.
                   </p>
-                  {/* <a class="read-more-text" href="blog-details.html">Read More <i
-                                class="fa fa-caret-right"></i></a> */}
                 </div>
               </div>
             </div>
