@@ -36,6 +36,7 @@ import AddBeritaAdmin from "./views/pages/admin/berita/AddBeritaAdmin";
 import NavbarAdmin from "./component/NavbarAdmin";
 import AdminBerita from "./views/pages/admin/berita/AdminBerita";
 import EditBeritaAdmin from "./views/pages/admin/berita/EditBeritaAdmin";
+import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
@@ -116,6 +117,7 @@ function App() {
           <Route path="/edit-berita-admin" component={EditBeritaAdmin} exact />
           <Route path="/admin" component={NavbarAdmin} exact />
           <Route path="/admin-berita" component={AdminBerita} exact />
+          <Route path="/admin-pengumuman" component={AdminPengumuman} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
         </Switch>
