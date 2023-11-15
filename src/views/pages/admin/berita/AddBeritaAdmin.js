@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
 import Footer from "../../../../component/Footer";
+import { useState } from "react";
 
 function AddBeritaAdmin() {
   return (

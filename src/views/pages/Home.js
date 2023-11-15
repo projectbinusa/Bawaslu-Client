@@ -40,6 +40,21 @@ function Home() {
     getAll();
     getAllTerbaru();
   }, [])
+
+  const beritaPerKolom = 5;
+
+  // Membuat array dari array berita untuk dibagi menjadi kelompok
+  const groupedBerita = list.reduce((resultArray, item, index) => {
+    const chunkIndex = Math.floor(index / beritaPerKolom);
+
+    if (!resultArray[chunkIndex]) {
+      resultArray[chunkIndex] = []; // Mulai kelompok baru
+    }
+
+    resultArray[chunkIndex].push(item);
+    return resultArray;
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -63,9 +78,9 @@ function Home() {
             <div className="row">
               <div className="col-lg-6 col-md-9">
                 <div className="banner-inner ">
-                  <div className="banner-inner bg-primary w-25">
+                  <div className="banner-inner">
                     <h1
-                      className="sub-title left-border text-white"
+                      className="sub-title left-border text-primary"
                       style={{ fontSize: "50px" }}
                     >
                       Berita
@@ -156,7 +171,6 @@ function Home() {
           </div>
         </div>
         {/* intro area end */}
-
         <div
           className="container"
           style={{ marginTop: "30px", marginBottom: "70px" }}
@@ -166,38 +180,37 @@ function Home() {
             <h2 class="title">Berita Bawaslu</h2>
           </div>
           <div className="row">
-            <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
-              <ul>
-                {list.map((berita) => {
-                  return (
-                    <li>
-                    <div class="media">
-                      <div class="media-left">
-                        <img
-                          src={berita.image}
-                          alt="blog"
-                        />
-                      </div>
-                      <div class="media-body align-self-center">
-                        BY {berita.author}
-                        <h6 class="fs-6 title">
-                          <a href="blog-details.html">
-                            {berita.judulBerita}
-                          </a>
-                        </h6>
-                        <div class="post-info">
-                          <i class="far fa-calendar-alt"></i>
-                          <span>{berita.createdDate}</span>
-                        </div>
-                      </div>
+{list.length > 0 ? (
+     groupedBerita.map((beritaGroup, groupIndex) => (
+        <div
+          key={groupIndex}
+          className="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5"
+        >
+          <ul>
+            {beritaGroup.map((berita) => (
+              <li key={berita.id}>
+                <div className="media">
+                  <div className="media-left">
+                    <img src={berita.image} alt="blog" />
+                  </div>
+                  <div className="media-body align-self-center">
+                    BY {berita.author}
+                    <h6 className="fs-6 title">
+                      <a href="blog-details.html">{berita.judulBerita}</a>
+                    </h6>
+                    <div className="post-info">
+                      <i className="far fa-calendar-alt"></i>
+                      <span>{berita.createdDate}</span>
                     </div>
-                    <hr />
-                  </li>
-                  )
-                })}
-               
-              </ul>
-            </div>
+                  </div>
+                </div>
+                <hr />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+):(
             <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
                 <li>
@@ -321,6 +334,131 @@ function Home() {
                 </li>
               </ul>
             </div>
+)}
+ <div class="col-lg-4 col-md-12 widget widget-recent-post pe-lg-5">
+              <ul>
+                <li>
+                  <div class="media">
+                    <div class="media-left">
+                      <img
+                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                        alt="blog"
+                      />
+                    </div>
+                    <div class="media-body align-self-center">
+                      BY HUMAS BAWASLU BOYOLALI
+                      <h6 class="fs-6 title">
+                        <a href="blog-details.html">
+                          Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
+                          Pengawasan Pemilu Partisipatif.
+                        </a>
+                      </h6>
+                      <div class="post-info">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>15 October</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </li>
+                <li>
+                  <div class="media">
+                    <div class="media-left">
+                      <img
+                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                        alt="blog"
+                      />
+                    </div>
+                    <div class="media-body align-self-center">
+                      BY HUMAS BAWASLU BOYOLALI
+                      <h6 class="fs-6 title">
+                        <a href="blog-details.html">
+                          KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu Boyolali
+                          Turut Hadir dan Mengawasi.
+                        </a>
+                      </h6>
+                      <div class="post-info">
+                        <i class="far fa-calendar-alt"></i>
+                        <span> 23 OKTOBER 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </li>
+                <li>
+                  <div class="media">
+                    <div class="media-left">
+                      <img
+                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                        alt="blog"
+                      />
+                    </div>
+                    <div class="media-body align-self-center">
+                      BY HUMAS BAWASLU BOYOLALI
+                      <h6 class="fs-6 title">
+                        <a href="blog-details.html">
+                          Ciptakan Pemilu 2024 Bermartabat, Panwascam Tamansari
+                          Ajak Pemuda/Pemudi untuk Mengawasi.
+                        </a>
+                      </h6>
+                      <div class="post-info">
+                        <i class="far fa-calendar-alt"></i>
+                        <span> 23 OKTOBER 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </li>
+                <li>
+                  <div class="media">
+                    <div class="media-left">
+                      <img
+                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                        alt="blog"
+                      />
+                    </div>
+                    <div class="media-body align-self-center">
+                      BY HUMAS BAWASLU BOYOLALI
+                      <h6 class="fs-6 title">
+                        <a href="blog-details.html">
+                          Pengawasan Logistik Pemilu 2024, Bawaslu Boyolali
+                          Pastikan Gedung Telah Memenuhi Syarat.
+                        </a>
+                      </h6>
+                      <div class="post-info">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>19 Oktober 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </li>
+                <li>
+                  <div class="media">
+                    <div class="media-left">
+                      <img
+                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                        alt="blog"
+                      />
+                    </div>
+                    <div class="media-body align-self-center">
+                      BY HUMAS BAWASLU BOYOLALI
+                      <h6 class="fs-6 title">
+                        <a href="blog-details.html">
+                          Panwaslu Kecamatan Selo Gelar Deklarasi Pemilu Damai.
+                        </a>
+                      </h6>
+                      <div class="post-info">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>18 Oktober 2023</span>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </li>
+              </ul>
+            </div>
+
             <div
               class="col-lg-4 col-md-12 widget widget_catagory"
               style={{
@@ -328,6 +466,7 @@ function Home() {
                 padding: "30px",
                 borderRadius: "10px",
                 background: "#F1F6F9",
+                float:"inline-end"
               }}
             >
               <h4 class="widget-title">
@@ -339,7 +478,7 @@ function Home() {
               <br />
               <ul class="catagory-items">
                 <li>
-                  <a href="">
+                  <a href="https://bawaslu.go.id/" target="_blank" rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
                       alt=""
@@ -347,7 +486,7 @@ function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="https://dkpp.go.id/" target="_blank" rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
                       alt=""
@@ -355,7 +494,7 @@ function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="https://www.mkri.id/" target="_blank" rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
                       alt=""
@@ -363,15 +502,7 @@ function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="">
-                    <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
-                      alt=""
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="">
+                  <a href="https://jateng.bawaslu.go.id/" target="_blank" rel="noopener noreferrer">
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
                       alt=""
@@ -467,7 +598,7 @@ function Home() {
           </SwiperSlide>
             )
           })}
-         
+
         </Swiper>
         <div class="blog-area pd-top-115 pd-bottom-60">
           <div class="container">
@@ -483,106 +614,6 @@ function Home() {
                 </div>
               </div>
             </div>
-            {/* <div class="row justify-content-center">
-              <Swiper>
-                <SwiperSlide>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner style-3">
-                      <div class="thumb">
-                        <img src="assets/img/blog/5.webp" alt="img"/ />
-                        <ul class="blog-meta">
-                          <li>
-                            <i class="far fa-user"></i> By Admin
-                          </li>
-                          <li>
-                            {" "}
-                            <i class="far fa-calendar-alt"></i> 25 May 2021
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="details">
-                        <h4>
-                          <a href="blog-details.html">
-                            Stock Exchange Market Foreca 2021-2023
-                          </a>
-                        </h4>
-                        <p>
-                          Duis leo. Sed fringilla mauris iamet nibh. odales
-                          sagittis magonsequat letendum sodales augue velit
-                        </p>
-                        <a class="read-more-btn" href="blog-details.html">
-                          <i class="fa fa-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner style-3">
-                      <div class="thumb">
-                        <img src="assets/img/blog/6.webp" alt="img" />
-                        <ul class="blog-meta">
-                          <li>
-                            <i class="far fa-user"></i> By Admin
-                          </li>
-                          <li>
-                            {" "}
-                            <i class="far fa-calendar-alt"></i> 25 May 2021
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="details">
-                        <h4>
-                          <a href="blog-details.html">
-                            Market Stock Exchange Foreca 2023-2023
-                          </a>
-                        </h4>
-                        <p>
-                          Duis leo. Sed fringilla mauris iamet nibh. odales
-                          sagittis magonsequat letendum sodales augue velit
-                        </p>
-                        <a class="read-more-btn" href="blog-details.html">
-                          <i class="fa fa-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner style-3">
-                      <div class="thumb">
-                        <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img" />
-                        <ul class="blog-meta">
-                          <li>
-                            <i class="far fa-user"></i> By Admin
-                          </li>
-                          <li>
-                            {" "}
-                            <i class="far fa-calendar-alt"></i> 25 May 2021
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="details">
-                        <h4>
-                          <a href="blog-details.html">
-                            Foreca Exchange Stock Market 2010-2023
-                          </a>
-                        </h4>
-                        <p>
-                          Duis leo. Sed fringilla mauris iamet nibh. odales
-                          sagittis magonsequat letendum sodales augue velit
-                        </p>
-                        <a class="read-more-btn" href="blog-details.html">
-                          <i class="fa fa-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div> */}
           </div>
         </div>
         <div className="service-area " style={{ background: "#F1F6F9" }}>
@@ -762,10 +793,6 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* <!-- service area end --> */}
-      {/* intro area end */}
-      {/* <!-- service area start --> */}
-      {/* <!-- service area end --> */}
       <Footer />
     </div>
   );

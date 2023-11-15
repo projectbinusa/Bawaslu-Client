@@ -19,7 +19,6 @@ function eLibrary() {
         }}
       >
         <div class="bg-overlay-gradient"></div>
-        {/* <div class="banner-bg-img" style={{ backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/banner/4.webp')` }}></div> */}
         <div class="container service-area bg-relative pd-top-60 pd-bottom-90 ">
           <div class="row">
             <div class="col-lg-6 col-md-9">
@@ -37,7 +36,6 @@ function eLibrary() {
                   <a href="#buku" style={{ textDecoration: "none" }}>
                     LIHAT KOLEKSI
                   </a>
-                  {/* <a class="btn btn-black" href="contact.html">Contact Us</a> */}
                 </div>
               </div>
             </div>

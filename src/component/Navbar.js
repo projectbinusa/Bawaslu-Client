@@ -47,32 +47,7 @@ function Navbar() {
     };
   }, []);
 
-  const logout = () => {
-    Swal.fire({
-      title: "Keluar Dari Akun Anda ?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes",
-      cancelButtonText: "Cancel",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          icon: "success",
-          title: "Success Logout",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        //Untuk munuju page selanjutnya
-        history.push("/login");
-        setTimeout(() => {
-          window.location.reload();
-        }, 1500);
-        localStorage.clear();
-      }
-    });
-  };
+
   return (
     // <!-- navbar start -->
     <>
@@ -131,17 +106,6 @@ function Navbar() {
                 </a>
               </div>
             </div>
-            {localStorage.getItem("role") === "admin" ? (
-              <div class="col-lg-1 col-md-5 align-self-center">
-                <button
-                  className="bg-primary border text-light p-2 rounded"
-                  onClick={logout}>
-                  Logout
-                </button>
-              </div>
-            ) : (
-              <></>
-            )}
           </div>
         </div>
       </div>
@@ -181,15 +145,9 @@ function Navbar() {
               <li class="">
                 <a href="/profil">Profile</a>
               </li>
-              {localStorage.getItem("role") === "admin" ? (
-                <li class="">
-                  <a href="/berita-admin">Berita</a>
-                </li>
-              ) : (
                 <li class="">
                   <a href="/berita">Berita</a>
                 </li>
-              )}
               <li class="">
                 <a href="/library">Library</a>
               </li>

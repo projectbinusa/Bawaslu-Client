@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-// import { useParams } from "react-router-dom";
 import Home from "./views/pages/Home";
 import SertaMerta from "./views/pages/informasi/SertaMerta";
 import SetiapSaat from "./views/pages/informasi/SetiapSaat";
 import "./css/style.css";
-import "./css/owl.css";
 import WaktuLayanan from "./views/prosedur/WaktuLayanan";
 import Profil from "./views/pages/Profil";
 import BiayaLayanan from "./views/prosedur/BiayaLayanan";
@@ -24,25 +22,21 @@ import FormPermohonanKeberatan from "./views/pages/form/FormPermohonanKeberatan"
 import InformasiStandarProsedur from "./views/pages/informasi/InformasiStandarProsedur";
 import LayananInformasi from "./views/pages/informasi/LayananInformasi";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-import BeritaAdmin from "./views/pages/admin/BeritaAdmin";
 import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
 import PermohonanKeberatan from "./views/prosedur/PermohonanKeberatan";
 import PermohonanInformasi from "./views/prosedur/PermintaanInformasi";
 import November from "./views/pages/rekap_berita/November";
-import { useState } from "react";
-import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
 import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
 import AddBeritaAdmin from "./views/pages/admin/berita/AddBeritaAdmin";
-import NavbarAdmin from "./component/NavbarAdmin";
 import AdminBerita from "./views/pages/admin/berita/AdminBerita";
 import EditBeritaAdmin from "./views/pages/admin/berita/EditBeritaAdmin";
-import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
+import AdminPermohonanInformasi from "./views/pages/admin/permohonan/AdminPermohonanInformasi";
+import AdminPermohonanKeberatan from "./views/pages/admin/permohonan/AdminPermohonanKeberatan";
+import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/DetailPermohonanInformasi";
+import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
+import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 
 function App() {
-  const [rekapData, setRekapData] = useState([]);
-  // const [tahun_bulan] = useParams();
-
-  // useEffect(() => {}, [tahun_bulan]);
 
   return (
     <BrowserRouter>
@@ -111,13 +105,15 @@ function App() {
             exact
           />
           {/* admin */}
-          <Route path="/berita-admin" component={BeritaAdmin} exact />
           <Route path="/admin-permohonan-informsi" component={AdminFormInformasi} exact />
           <Route path="/add-berita-admin" component={AddBeritaAdmin} exact />
           <Route path="/edit-berita-admin" component={EditBeritaAdmin} exact />
-          <Route path="/admin" component={NavbarAdmin} exact />
           <Route path="/admin-berita" component={AdminBerita} exact />
-          <Route path="/admin-pengumuman" component={AdminPengumuman} exact />
+          <Route path="/admin-permohonan-informasi" component={AdminPermohonanInformasi} exact />
+          <Route path="/admin-permohonan-keberatan" component={AdminPermohonanKeberatan} exact />
+          <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact />
+          <Route path="/detail-permohonan-informasi/:id" component={DetailPermohonanInformasi} exact />
+          <Route path="/detail-permohonan-keberatan/:id" component={DetailPermohonanKeberatan} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
         </Switch>

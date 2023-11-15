@@ -61,7 +61,6 @@ function BiayaLayanan() {
             <div class="row">
               <div class="col-lg-6 col-md-9 mb-5 mb-lg-0">
                 <div class="about-mask-bg-wrap about-mask-bg-wrap-4">
-                  {/* <img class="shape-image" src="https://solverwp.com/demo/html/itechie/assets/img/about/4s.webp" alt="img"/> */}
                   <div class="thumb">
                     <img src={biaya} alt="img" />
                   </div>
@@ -94,11 +93,6 @@ function BiayaLayanan() {
                       <i class="fa fa-check"></i>Kebahagiaan klien
                     </li>
                   </ul>
-                  {/* <div class="btn-wrap mt-4">
-                    <a class="btn btn-base" href="contact.html">
-                      Get Started
-                    </a>
-                  </div> */}
                 </div>
                 <img
                     class="shape-image-sm top_image_bounce"

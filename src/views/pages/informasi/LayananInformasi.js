@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import Phone from "../../../aset/mobile-151x300.jpg";
-import Undraw from "../../../aset/undraw_select_re_3kbd.svg";
 import "../../../css/LayananInformasi.css"
 
 const LayananInformasi = () => {
@@ -13,7 +12,7 @@ const LayananInformasi = () => {
         <div
         className="vid"
           style={{
-           
+
           }}
         >
           <div>
@@ -29,7 +28,7 @@ const LayananInformasi = () => {
           <div >
             <div
             className="imgly"
-             
+
             >
               <img className="img"  src={Phone} />
             </div>
