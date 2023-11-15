@@ -69,8 +69,6 @@ function WaktuLayanan() {
               <div class="section-title px-lg-5 mb-0">
                 <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 class="title">Waktu Pelayanan Informasi</h2>
-                {/* <p class="content">Maecenas tempus, tellus eget condime honcus semgs semper libero sit amet
-                            adipiscingem neque.</p> */}
                 <div class="choose-wrap mt-4">
                   <div class="media single-choose-inner">
                     <div class="media-left">

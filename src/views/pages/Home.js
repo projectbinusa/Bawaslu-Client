@@ -614,106 +614,6 @@ function Home() {
                 </div>
               </div>
             </div>
-            {/* <div class="row justify-content-center">
-              <Swiper>
-                <SwiperSlide>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner style-3">
-                      <div class="thumb">
-                        <img src="assets/img/blog/5.webp" alt="img"/ />
-                        <ul class="blog-meta">
-                          <li>
-                            <i class="far fa-user"></i> By Admin
-                          </li>
-                          <li>
-                            {" "}
-                            <i class="far fa-calendar-alt"></i> 25 May 2021
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="details">
-                        <h4>
-                          <a href="blog-details.html">
-                            Stock Exchange Market Foreca 2021-2023
-                          </a>
-                        </h4>
-                        <p>
-                          Duis leo. Sed fringilla mauris iamet nibh. odales
-                          sagittis magonsequat letendum sodales augue velit
-                        </p>
-                        <a class="read-more-btn" href="blog-details.html">
-                          <i class="fa fa-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner style-3">
-                      <div class="thumb">
-                        <img src="assets/img/blog/6.webp" alt="img" />
-                        <ul class="blog-meta">
-                          <li>
-                            <i class="far fa-user"></i> By Admin
-                          </li>
-                          <li>
-                            {" "}
-                            <i class="far fa-calendar-alt"></i> 25 May 2021
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="details">
-                        <h4>
-                          <a href="blog-details.html">
-                            Market Stock Exchange Foreca 2023-2023
-                          </a>
-                        </h4>
-                        <p>
-                          Duis leo. Sed fringilla mauris iamet nibh. odales
-                          sagittis magonsequat letendum sodales augue velit
-                        </p>
-                        <a class="read-more-btn" href="blog-details.html">
-                          <i class="fa fa-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-inner style-3">
-                      <div class="thumb">
-                        <img src="https://solverwp.com/demo/html/itechie/assets/img/blog/7.webp" alt="img" />
-                        <ul class="blog-meta">
-                          <li>
-                            <i class="far fa-user"></i> By Admin
-                          </li>
-                          <li>
-                            {" "}
-                            <i class="far fa-calendar-alt"></i> 25 May 2021
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="details">
-                        <h4>
-                          <a href="blog-details.html">
-                            Foreca Exchange Stock Market 2010-2023
-                          </a>
-                        </h4>
-                        <p>
-                          Duis leo. Sed fringilla mauris iamet nibh. odales
-                          sagittis magonsequat letendum sodales augue velit
-                        </p>
-                        <a class="read-more-btn" href="blog-details.html">
-                          <i class="fa fa-arrow-right"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div> */}
           </div>
         </div>
         <div className="service-area " style={{ background: "#F1F6F9" }}>
@@ -893,10 +793,6 @@ function Home() {
           </div>
         </div>
       </div>
-      {/* <!-- service area end --> */}
-      {/* intro area end */}
-      {/* <!-- service area start --> */}
-      {/* <!-- service area end --> */}
       <Footer />
     </div>
   );

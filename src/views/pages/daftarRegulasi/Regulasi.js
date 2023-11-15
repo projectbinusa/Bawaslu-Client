@@ -68,16 +68,6 @@ function Regulasi() {
   const [isi7, setIsi7] = useState([]);
   const [isi8, setIsi8] = useState([]);
 
-  // const getAll = async () => {
-  //   await axios
-  //     .get("http://localhost:3030/bawaslu/api/regulasi/all")
-  //     .then((res) => {
-  //       setRegulasi(res.data.data.data);
-  //     })
-  //     .catch((error) => {
-  //       alert("Terjadi kesalahan" + error);
-  //     });
-  // };
   const getByMenu = async () => {
     await axios
       .get(
@@ -96,7 +86,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi(response.data.data);
       })
       .catch((error) => {
@@ -109,7 +98,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=2`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi1(response.data.data);
       })
       .catch((error) => {
@@ -122,7 +110,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=3`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi2(response.data.data);
       })
       .catch((error) => {
@@ -135,7 +122,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=4`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi3(response.data.data);
       })
       .catch((error) => {
@@ -148,7 +134,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=5`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi4(response.data.data);
       })
       .catch((error) => {
@@ -161,7 +146,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=6`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi5(response.data.data);
       })
       .catch((error) => {
@@ -174,7 +158,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=7`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi6(response.data.data);
       })
       .catch((error) => {
@@ -187,7 +170,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=8`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi7(response.data.data);
       })
       .catch((error) => {
@@ -200,7 +182,6 @@ function Regulasi() {
         `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=9`
       )
       .then((response) => {
-        // console.log(response.data.data);
         setIsi8(response.data.data);
       })
       .catch((error) => {
@@ -208,21 +189,7 @@ function Regulasi() {
       });
   };
 
-  // const getByMenu2 = async () => {
-  //   await axios
-  //     .get(
-  //       `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
-  //     )
-  //     .then((response) => {
-  //       console.log(response.data.data);
-  //     })
-  //     .catch((error) => {
-  //       alert("Terjadi kesalahan" + error);
-  //     });
-  // };
-
   useEffect(() => {
-    //mengambil data, memperbarui DOM secara langsung,
     getByMenu();
     getByIsi();
     getByIsi1();
@@ -313,10 +280,6 @@ function Regulasi() {
                     <div className="">
                       <h4>Undang Undang</h4>
                     </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button>*/}
-                    </div>
                   </div>
                 </div>
                 <div className="card-body bg-body-tertiary table-container rounded">
@@ -383,10 +346,6 @@ function Regulasi() {
                   <div style={{ display: "flex" }}>
                     <div className="">
                       <h4>Peratuan Pemerintah</h4>
-                    </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -455,10 +414,6 @@ function Regulasi() {
                     <div className="">
                       <h4>Peraturan Mahkamah Agung</h4>
                     </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button> */}
-                    </div>
                   </div>
                 </div>
                 <div className="card-body bg-body-tertiary table-container rounded">
@@ -525,10 +480,6 @@ function Regulasi() {
                   <div style={{ display: "flex" }}>
                     <div className="">
                       <h4>Peraturan Komisi Informasi</h4>
-                    </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -597,10 +548,6 @@ function Regulasi() {
                     <div className="">
                       <h4>Peraturan Menteri</h4>
                     </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button> */}
-                    </div>
                   </div>
                 </div>
                 <div className="card-body bg-body-tertiary table-container rounded">
@@ -667,10 +614,6 @@ function Regulasi() {
                   <div style={{ display: "flex" }}>
                     <div className="">
                       <h4>Perbawaslu</h4>
-                    </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -739,10 +682,6 @@ function Regulasi() {
                     <div className="">
                       <h4>Penetapan PPID</h4>
                     </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button> */}
-                    </div>
                   </div>
                 </div>
                 <div className="card-body bg-body-tertiary table-container rounded">
@@ -809,10 +748,6 @@ function Regulasi() {
                   <div style={{ display: "flex" }}>
                     <div className="">
                       <h4>Surat Edaran</h4>
-                    </div>
-                    <div className="">
-                      {/* <button className="btn btn-primary float-end"> Tambah
-                      </button> */}
                     </div>
                   </div>
                 </div>

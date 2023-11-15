@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import { API_DUMMY } from "../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-// import Swal from 'sweetalert2/dist/sweetalert2.js'
-// import 'sweetalert2/src/sweetalert2.scss'
-
 function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -26,9 +23,6 @@ function Register() {
       !/[A-Z]/.test(password) ||
       !/[a-z]/.test(password)
     ) {
-      // setErrorMessage(
-      //   "Password harus memiliki minimal 8 karakter, satu huruf besar, dan satu huruf kecil."
-      // );
       Swal.fire({
         icon: "error",
         title: "Password harus memiliki minimal 8 karakter, satu huruf besar, dan satu huruf kecil.",

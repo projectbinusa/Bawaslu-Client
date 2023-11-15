@@ -69,14 +69,9 @@ function PermohonanKeberatan() {
               <h2 class="title mb-4">
                 Tata Cara Pengajuan <br /> Keberatan
               </h2>
-              {/* <p>
-                AI technology is perfect for best business solutions & we <br />{" "}
-                offer help to achieve your goals.
-              </p> */}
             </div>
             <div class="single-security-wrap">
               <div class="thumb">
-                {/* <i class="fa-solid fa-calendar-days" style={{color:"white",width:"100%"}}></i> */}
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-2.webp"
                   alt="img"
@@ -120,11 +115,6 @@ function PermohonanKeberatan() {
           </div>
           <div class="col-lg-5 align-self-center">
             <div class="section-title">
-              {/* <h2 class="title mb-4">Our Approach To Security</h2> */}
-              {/* <p>
-                AI technology is perfect for best business solutions & we offer
-                help to achieve your goals.
-              </p> */}
             </div>
             <div class="single-security-wrap-2">
               <div class="thumb border-bottom">

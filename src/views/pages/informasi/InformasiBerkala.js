@@ -13,23 +13,6 @@ function InformasiBerkala() {
   const [table5Visible, setTable5Visible] = useState(false);
   const [table6Visible, setTable6Visible] = useState(false);
   const [table7Visible, setTable7Visible] = useState(false);
-  const [table8Visible, setTable8Visible] = useState(false);
-  const [table9Visible, setTable9Visible] = useState(false);
-  const [table10Visible, setTable10Visible] = useState(false);
-  const [table11Visible, setTable11Visible] = useState(false);
-  const [table12Visible, setTable12Visible] = useState(false);
-  const [table13Visible, setTable13Visible] = useState(false);
-  const [table14Visible, setTable14Visible] = useState(false);
-  const [table15Visible, setTable15Visible] = useState(false);
-  const [table16Visible, setTable16Visible] = useState(false);
-  const [table17Visible, setTable17Visible] = useState(false);
-  const [table18Visible, setTable18Visible] = useState(false);
-  const [table19Visible, setTable19Visible] = useState(false);
-  const [table20Visible, setTable20Visible] = useState(false);
-  const [table21Visible, setTable21Visible] = useState(false);
-  const [table22Visible, setTable22Visible] = useState(false);
-  const [table23Visible, setTable23Visible] = useState(false);
-  const [table24Visible, setTable24Visible] = useState(false);
 
   const showTable = (tableNumber) => {
     setTable1Visible(false);
@@ -39,23 +22,6 @@ function InformasiBerkala() {
     setTable5Visible(false);
     setTable6Visible(false);
     setTable7Visible(false);
-    setTable8Visible(false);
-    setTable9Visible(false);
-    setTable10Visible(false);
-    setTable11Visible(false);
-    setTable12Visible(false);
-    setTable13Visible(false);
-    setTable14Visible(false);
-    setTable15Visible(false);
-    setTable16Visible(false);
-    setTable17Visible(false);
-    setTable18Visible(false);
-    setTable19Visible(false);
-    setTable20Visible(false);
-    setTable21Visible(false);
-    setTable22Visible(false);
-    setTable23Visible(false);
-    setTable24Visible(false);
 
     switch (tableNumber) {
       case "Hasil Pengawasan":
@@ -79,56 +45,6 @@ function InformasiBerkala() {
       case "Sarana Partisipasi Publik":
         setTable7Visible(true);
         break;
-      case "Sarana Partisipasi Publik":
-        setTable8Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable9Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable10Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable11Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable12Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable13Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable14Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable15Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable16Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable17Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable18Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable19Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable20Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable21Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable22Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable23Visible(true);
-        break;
-      case "Sarana Partisipasi Publik":
-        setTable24Visible(true);
         break;
       default:
         break;
@@ -143,16 +59,6 @@ function InformasiBerkala() {
   const [isi5, setIsi5] = useState([]);
   const [isi6, setIsi6] = useState([]);
 
-  // const getAll = async () => {
-  //   await axios
-  //     .get("http://localhost:3030/bawaslu/api/regulasi/all")
-  //     .then((res) => {
-  //       setRegulasi(res.data.data.data);
-  //     })
-  //     .catch((error) => {
-  //       alert("Terjadi kesalahan" + error);
-  //     });
-  // };
   const getByMenu = async () => {
     await axios
       .get(
@@ -257,19 +163,6 @@ function InformasiBerkala() {
         alert("Terjadi kesalahan" + error);
       });
   };
-
-  // const getByMenu2 = async () => {
-  //   await axios
-  //     .get(
-  //       `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
-  //     )
-  //     .then((response) => {
-  //       console.log(response.data.data);
-  //     })
-  //     .catch((error) => {
-  //       alert("Terjadi kesalahan" + error);
-  //     });
-  // };
 
   useEffect(() => {
     //mengambil data, memperbarui DOM secara langsung,
