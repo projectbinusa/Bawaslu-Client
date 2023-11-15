@@ -3,7 +3,7 @@ import React from 'react'
 function Sidebar() {
   return (
     // test
-    <div><div class="app-sidebar sidebar-shadow">
+      <div class="app-sidebar sidebar-shadow" style={{height:"120vh", overflowY:"scroll"}}>
     <div class="app-header__logo">
       <div class="logo-src"></div>
       <div class="header__pane ml-auto">
@@ -46,176 +46,108 @@ function Sidebar() {
         <ul class="vertical-nav-menu">
           <li class="app-sidebar__heading">Menu</li>
           <li>
-            <a href="index.html" class="mm-active">
+            <a style={{textDecoration:"none"}} href="/admin-berita" class="mm-active">
+              {/* <i cl ass="metismenu-icon pe-7s-rocket"></i> */}
+              <i class="fa-solid fa-newspaper"></i>Berita
+            </a>
+          </li>
+          <li>
+            <a style={{textDecoration:"none"}} href="/admin-pengumuman" class="">
               <i class="metismenu-icon pe-7s-rocket"></i>
-              Berita
+              Pengumuman
             </a>
           </li>
-          <li class="app-sidebar__heading">UI Components</li>
-          <li>
-            <a href="#">
+          <li class="app-sidebar__heading">Informasi Publik</li>
+           <li>
+            <a>
               <i class="metismenu-icon pe-7s-diamond"></i>
-              Elements
+              Daftar Informasi Publik
               <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
             </a>
             <ul>
               <li>
-                <a href="elements-buttons-standard.html">
+                <a style={{textDecoration:"none"}} href="/admin-informasi-serta-merta">
                   <i class="metismenu-icon"></i>
-                  Buttons
+                  Informasi Serta Merta
                 </a>
               </li>
               <li>
-                <a href="elements-dropdowns.html">
-                  <i class="metismenu-icon"></i>Dropdowns
+                <a style={{textDecoration:"none"}} href="/admin-informasi-setiap-saat">
+                  <i class="metismenu-icon"></i>Informasi Setiap Saat
                 </a>
               </li>
               <li>
-                <a href="elements-icons.html">
-                  <i class="metismenu-icon"></i>Icons
+                <a style={{textDecoration:"none"}} href="/admin-informasi-berkala">
+                  <i class="metismenu-icon"></i>Informasi Berkala
                 </a>
               </li>
               <li>
-                <a href="elements-badges-labels.html">
-                  <i class="metismenu-icon"></i>Badges
+                <a style={{textDecoration:"none"}} href="/admin-informasi-dikecualikan">
+                  <i class="metismenu-icon"></i>Informasi Di Kecualikan
                 </a>
               </li>
               <li>
-                <a href="elements-cards.html">
-                  <i class="metismenu-icon"></i>Cards
-                </a>
-              </li>
-              <li>
-                <a href="elements-list-group.html">
-                  <i class="metismenu-icon"></i>List Groups
-                </a>
-              </li>
-              <li>
-                <a href="elements-navigation.html">
-                  <i class="metismenu-icon"></i>Navigation Menus
-                </a>
-              </li>
-              <li>
-                <a href="elements-utilities.html">
-                  <i class="metismenu-icon"></i>Utilities
+                <a style={{textDecoration:"none"}} href="/admin-kanal-pengawasan-pemilu">
+                  <i class="metismenu-icon"></i>Kanal Pengawasan Pemilu
                 </a>
               </li>
             </ul>
           </li>
-          <li>
-            <a href="#">
-              <i class="metismenu-icon pe-7s-car"></i>
-              Components
+           <li>
+            <a>
+              <i class="metismenu-icon pe-7s-diamond"></i>
+              Daftar Regulasi
               <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
             </a>
             <ul>
               <li>
-                <a href="components-tabs.html">
-                  <i class="metismenu-icon"></i>Tabs
+                <a style={{textDecoration:"none"}} href="/admin-regulasi">
+                  <i class="metismenu-icon"></i>
+                  Regulasi
                 </a>
               </li>
               <li>
-                <a href="components-accordions.html">
-                  <i class="metismenu-icon"></i>Accordions
+                <a style={{textDecoration:"none"}} href="/admin-dip">
+                  <i class="metismenu-icon"></i>DIP
                 </a>
               </li>
               <li>
-                <a href="components-notifications.html">
-                  <i class="metismenu-icon"></i>Notifications
+                <a style={{textDecoration:"none"}} href="/admin-standar-operasional-prosedur">
+                  <i class="metismenu-icon"></i>Standar Operasional Prosedur
                 </a>
               </li>
               <li>
-                <a href="components-modals.html">
-                  <i class="metismenu-icon"></i>Modals
-                </a>
-              </li>
-              <li>
-                <a href="components-progress-bar.html">
-                  <i class="metismenu-icon"></i>Progress Bar
-                </a>
-              </li>
-              <li>
-                <a href="components-tooltips-popovers.html">
-                  <i class="metismenu-icon"></i>Tooltips &amp; Popovers
-                </a>
-              </li>
-              <li>
-                <a href="components-carousel.html">
-                  <i class="metismenu-icon"></i>Carousel
-                </a>
-              </li>
-              <li>
-                <a href="components-calendar.html">
-                  <i class="metismenu-icon"></i>Calendar
-                </a>
-              </li>
-              <li>
-                <a href="components-pagination.html">
-                  <i class="metismenu-icon"></i>Pagination
-                </a>
-              </li>
-              <li>
-                <a href="components-scrollable-elements.html">
-                  <i class="metismenu-icon"></i>Scrollable
-                </a>
-              </li>
-              <li>
-                <a href="components-maps.html">
-                  <i class="metismenu-icon"></i>Maps
+                <a style={{textDecoration:"none"}} href="/admin-maklumat-pelayanan">
+                  <i class="metismenu-icon"></i>Maklumat Pelayanan
                 </a>
               </li>
             </ul>
           </li>
+          <li class="app-sidebar__heading">Layanan Informasi</li>
           <li>
-            <a href="tables-regular.html">
-              <i class="metismenu-icon pe-7s-display2"></i>
-              Tables
+            <a>
+              <i class="metismenu-icon pe-7s-diamond"></i>
+              Form Online
+              <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
             </a>
-          </li>
-          <li class="app-sidebar__heading">Widgets</li>
-          <li>
-            <a href="dashboard-boxes.html">
-              <i class="metismenu-icon pe-7s-display2"></i>
-              Dashboard Boxes
-            </a>
-          </li>
-          <li class="app-sidebar__heading">Forms</li>
-          <li>
-            <a href="forms-controls.html">
-              <i class="metismenu-icon pe-7s-mouse"></i>Forms Controls
-            </a>
-          </li>
-          <li>
-            <a href="forms-layouts.html">
-              <i class="metismenu-icon pe-7s-eyedropper"></i>Forms
-              Layouts
-            </a>
-          </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="metismenu-icon pe-7s-pendrive"></i>Forms
-              Validation
-            </a>
-          </li>
-          <li class="app-sidebar__heading">Charts</li>
-          <li>
-            <a href="charts-chartjs.html">
-              <i class="metismenu-icon pe-7s-graph2"></i>ChartJS
-            </a>
-          </li>
-          <li class="app-sidebar__heading">PRO Version</li>
-          <li>
-            <a
-              href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/"
-              target="_blank">
-              <i class="metismenu-icon pe-7s-graph2"></i>
-              Upgrade to PRO
-            </a>
+            <ul>
+              <li>
+                <a style={{textDecoration:"none"}} href="/admin-permohonan-informasi">
+                  <i class="metismenu-icon"></i>
+                  Permohonan Informasi
+                </a>
+              </li>
+              <li>
+                <a style={{textDecoration:"none"}} href="/admin-permohonan-keberatan">
+                  <i class="metismenu-icon"></i>Permohonan Keberatan
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
-  </div></div>
+  </div>
   )
 }
 
