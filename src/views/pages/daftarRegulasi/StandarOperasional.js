@@ -23,7 +23,7 @@ function StandarOperasional() {
     const getByMenu = async () => {
         await axios
             .get(
-                `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
+                `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
       )
             .then((response) => {
                 setList(response.data.data);
@@ -35,7 +35,7 @@ function StandarOperasional() {
     const getByIsi = async () => {
         await axios
             .get(
-                `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+                `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
       )
             .then((response) => {
                 setIsi(response.data.data);
@@ -208,7 +208,7 @@ function StandarOperasional() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=3`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=3`
       )
       .then((response) => {
         setList(response.data.data);
@@ -220,7 +220,7 @@ function StandarOperasional() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=3`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=3`
       )
       .then((response) => {
         setIsi(response.data.data);

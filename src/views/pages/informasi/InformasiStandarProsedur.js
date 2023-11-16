@@ -5,6 +5,7 @@ import "../../../css/LayananInformasi.css";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
 import axios from "axios";
+import { API_DUMMY } from "../../../utils/base_URL";
 
 function InformasiStandarProsedur() {
   const [list, setList] = useState([]);
@@ -13,7 +14,7 @@ function InformasiStandarProsedur() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
       )
       .then((response) => {
         setList(response.data.data);
@@ -26,7 +27,7 @@ function InformasiStandarProsedur() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
       )
       .then((response) => {
         console.log(response.data.data);
