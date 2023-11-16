@@ -191,3 +191,4 @@ function InformasiStandarProsedur() {
   );
 }
 export default InformasiStandarProsedur;
+// test
