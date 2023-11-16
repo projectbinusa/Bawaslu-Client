@@ -4,6 +4,7 @@ import Footer from "../../../component/Footer";
 import "../../../css/LayananInformasi.css";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
+import "../../../css/InformasiStandarProsedur.css"
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 
@@ -77,6 +78,7 @@ function InformasiStandarProsedur() {
         {/* <!-- page title end --> */}
 
         <div
+        id="tabel"
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
@@ -123,6 +125,12 @@ function InformasiStandarProsedur() {
                   </div>
                 </div>
               </div>
+            </div>
+            <div  className="card mb-4 shadow" style={{width:"100%"}}>
+              <div className="card-header bg-primary text-light">
+                <div style={{ display: "flex" }}>
+                  <div className="col">
+                    <h4>Standar Operasional Prosedur</h4>
               <div className="card mb-4 shadow" style={{ width: "100%" }}>
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
@@ -186,6 +194,10 @@ function InformasiStandarProsedur() {
           </div>
           <Footer />
         </div>
+       
+      </div>
+      <Footer />
+    </div>
       </div>
     </>
   );
