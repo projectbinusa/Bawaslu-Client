@@ -4,6 +4,7 @@ import Footer from "../../../component/Footer";
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import { API_DUMMY } from "../../../utils/base_URL";
 
 function InformasiBerkala() {
   const [table1Visible, setTable1Visible] = useState(false);
@@ -62,7 +63,7 @@ function InformasiBerkala() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=4`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=4`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -75,7 +76,7 @@ function InformasiBerkala() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=12`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=12`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -88,7 +89,7 @@ function InformasiBerkala() {
   const getByIsi1 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=13`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=13`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -101,7 +102,7 @@ function InformasiBerkala() {
   const getByIsi2 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=14`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=14`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -114,7 +115,7 @@ function InformasiBerkala() {
   const getByIsi3 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=15`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=15`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -127,7 +128,7 @@ function InformasiBerkala() {
   const getByIsi4 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=16`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=16`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -140,7 +141,7 @@ function InformasiBerkala() {
   const getByIsi5 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=17`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=17`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -153,7 +154,7 @@ function InformasiBerkala() {
   const getByIsi6 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=18`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=18`
       )
       .then((response) => {
         // console.log(response.data.data);

@@ -4,6 +4,7 @@ import Sidebar from "../../../../component/Sidebar";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
+import Swal from "sweetalert2";
 
 function AdminBerita() {
   const [list, setList] = useState([]);
@@ -41,12 +42,80 @@ function AdminBerita() {
   };
   const getAll1 = async () => {
     try {
-      const response = await axios.get(`${API_DUMMY}/bawaslu/api/category-berita`);
-      setList(response.data.data);
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/category-berita/all/`);
+      setList1(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
+  };
+
+  const deleteData = async (id) => {
+    Swal.fire({
+      title: "Apakah Anda Ingin Menghapus?",
+      text: "Perubahan data tidak bisa dikembalikan!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Hapus",
+      cancelButtonText: "Batal",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`${API_DUMMY}/bawaslu/api/berita/delete/` + id, {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Dihapus!",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+
+            setTimeout(() => {
+              window.location.reload();
+            }, 1500);
+          });
+      }
+    });
+  };
+
+  const deleteData1 = async (id) => {
+    Swal.fire({
+      title: "Apakah Anda Ingin Menghapus?",
+      text: "Perubahan data tidak bisa dikembalikan!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Hapus",
+      cancelButtonText: "Batal",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios
+          .delete(`${API_DUMMY}/bawaslu/api/category-berita/delete/` + id, {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          })
+          .then((res) => {
+            Swal.fire({
+              icon: "success",
+              title: "Dihapus!",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+
+            setTimeout(() => {
+              window.location.reload();
+            }, 1500);
+          });
+      }
+    });
   };
 
   useEffect(() => {
@@ -64,8 +133,9 @@ function AdminBerita() {
               Berita
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
-                  <button class="active btn-focus p-2 rounded">
-                    Tambah Berita
+                  <button  class="active btn-focus p-2 rounded">
+                    
+                  <a href="/add-berita-admin">  Tambah Berita</a>
                   </button>
                 </div>
               </div>
@@ -111,10 +181,10 @@ function AdminBerita() {
                         <td class="text-center">{berita.updateDate}</td>
                         <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
-                            <i class="fa-solid fa-pen-to-square"></i>
+                          <a href="/edit-berita-admin"> <i class="fa-solid fa-pen-to-square"></i></a> 
                           </button>
 
-                          <button type="button" class="btn-danger btn-sm">
+                          <button    onClick={() => deleteData(berita.id)} type="button" class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
@@ -130,7 +200,7 @@ function AdminBerita() {
               </button>
               <button class="btn-wide btn btn-success">Save</button> */}
             </div>
-            
+
           </div>
 
 
@@ -154,7 +224,7 @@ function AdminBerita() {
                     <th className="text-center">Create Date</th>
                     <th className="text-center">Update Date</th>
                     <th className="text-center">Aksi</th>
-                   
+
                   </tr>
                 </thead>
                 <tbody>
@@ -164,16 +234,17 @@ function AdminBerita() {
                         <td class="text-center text-muted">{index + 1}</td>
                         <td className="text-center">{Category.category}</td>
                         <td class="text-center">{Category.createdDate}</td>
-                       
-                       
+
+
                         <td class="text-center">{Category.updateDate}</td>
-                      
+
                         <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <i class="fa-solid fa-pen-to-square"></i>
                           </button>
-                          
-                          <button type="button" class="btn-danger btn-sm">
+
+                          <button 
+                           onClick={() => deleteData1(category.id)} type="button" class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
@@ -183,19 +254,14 @@ function AdminBerita() {
                 </tbody>
               </table>
             </div>
-            <div class="d-block text-center card-footer">
-              <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
-                <i class="pe-7s-trash btn-icon-wrapper"> </i>
-              </button>
-              <button class="btn-wide btn btn-success">Save</button>
-            </div>
             
+
           </div>
 
         </div>
       </div>
     </div>
   );
-}
+  }
 
-export default AdminBerita;
+export default AdminBerita;    

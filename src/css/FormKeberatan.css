@@ -50,13 +50,16 @@
 .img-info{
     width: 550px;
 }
+.info{
+    /* border: 2px solid red; */
+}
 @media screen and (max-width: 1024px) {
     .form-txt-img{
     }
 }
 @media screen and (max-width: 768px) {
-    .img-info{
-        width: 400px;
+    #img-info{
+        width: 300px;
         padding-top: 10px;
     }
     .img-logo{
@@ -66,6 +69,12 @@
     .img-src{
         width: 250px;
         top: 0px;
+    }
+    .input{
+        width: 400px;
+    }
+    .textarea{
+        width: 400px;
     }
 }
 @media screen and (max-width:320px) {
@@ -87,5 +96,28 @@
     }
     .btn-kirim{
         width: 60px;
+    }
+    #img-info{
+        width: 250px;
+    }
+    #img{
+        width: 100px;
+    }
+    .input{
+        width: 170px;
+    }
+    .textarea{
+        width: 170px;
+    }
+    .img-src{
+        width: 170px;
+    }
+    #img-info{
+        width: 220px;
+        padding-top: 10px;
+    }
+    .input-type{
+        width: 10%px;
+        height: 20%px;
     }
 }

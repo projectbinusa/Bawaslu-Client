@@ -5,6 +5,7 @@ import "react-owl-carousel2/src/owl.theme.default.css";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import axios from "axios";
+import { API_DUMMY } from "../../../utils/base_URL";
 function Dip() {
   const [list, setList] = useState([]);
   const [isi, setIsi] = useState([]);
@@ -12,7 +13,7 @@ function Dip() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=2`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=2`
       )
       .then((response) => {
         setList(response.data.data);
@@ -24,7 +25,7 @@ function Dip() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=10`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=10`
       )
       .then((response) => {
         // console.log(response.data.data);

@@ -76,7 +76,7 @@ const FormPermohonanInformasi = () => {
               <h1>__________</h1>
             </div>
             <div className="info">
-              <img src={info} className="img" />
+              <img src={info} className="img" id="img"/>
             </div>
           </div>
           <form onSubmit={add} className="option" style={{}}>
@@ -85,6 +85,8 @@ const FormPermohonanInformasi = () => {
                 <p style={{}}>Nama Pemohon:</p>
                 <input
                   className="input"
+                  id="input"
+
                   type="text"
                   value={nama}
                   onChange={(e) => setNama(e.target.value)}
@@ -92,7 +94,9 @@ const FormPermohonanInformasi = () => {
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <p>Alamat Pemohon:</p>
-                <textarea className="textarea" />
+                <textarea className="textarea"
+                                  id="textarea"
+                                  />
                 <p className="pp">0 of 60 max characters</p>
                 <br></br>
                 <br></br>
@@ -100,6 +104,7 @@ const FormPermohonanInformasi = () => {
                 <p>Nomor Telp/HP:</p>
                 <input
                   className="input"
+                  id="input"
                   type="number"
                   value={noHp}
                   onChange={(e) => setNoHp(e.target.value)}
@@ -109,6 +114,8 @@ const FormPermohonanInformasi = () => {
                 <p>Email:</p>
                 <input
                   className="input"
+                  id="input"
+
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -120,6 +127,7 @@ const FormPermohonanInformasi = () => {
                   value={rincianInformasi}
                   onChange={(e) => setRincianInformasi(e.target.value)}
                   className="textarea"
+                  id="textarea"
                 />
                 <p className="pp">0 of 100 max characters</p>
                 <br></br>
@@ -131,6 +139,8 @@ const FormPermohonanInformasi = () => {
                 value={ditunjukanKepada}
                 onChange={(e) => setdiTunjukanKepada(e.target.value)}
                 className="textarea"
+                id="textarea"
+
               />
               <p className="pp">0 of 100 max characters</p>
 
@@ -138,6 +148,8 @@ const FormPermohonanInformasi = () => {
               <p>Cara Memproleh Infromasi:</p>
               <input
                 className="input"
+                id="input"
+
                 type="text"
                 value={caraMemperolehInformasi}
                 onChange={(e) => setCaraMemperolehInformasi(e.target.value)}

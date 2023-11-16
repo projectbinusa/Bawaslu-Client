@@ -9,9 +9,14 @@
   width: 400px;
   font-size: 57px;
 }
+.info{
+width: 450px;
+/* border: 2px solid red; */
+padding: 0;
+}
 
 .img {
-  width: 500px;
+  width: 700px;
 }
 .form {
   padding-top: 100px;
@@ -59,7 +64,9 @@
 
 @media screen and (max-width: 1024px) {
   .form {
-    padding-top: 40px;
+    padding-top: 100px;
+    display: flex;
+    gap: 400px;
     justify-content: center;
   }
   .input {
@@ -87,13 +94,25 @@
     display: flex;
     justify-content: center;
   }
+  .info{
+    width: 500px;
+  }
+  #img{
+    width: 500px;
+  }
+  
 }
 @media screen and (max-width: 768px) {
   .form {
-    padding-top: 30px;
+    padding-top: 50px;
     justify-content: center;
+    display: flex;
+    gap: 200px;
   }
   .input {
+    width: 300px;
+  }
+  #input{
     width: 300px;
   }
   .option {
@@ -110,10 +129,21 @@
   }
   .textarea {
     width: 300px;
+    
+  }
+  #textarea{
+    width: 300px;
   }
   .button {
     width: 300px;
   }
+}
+.info{
+  width: 400px;
+}
+#img{
+  width: 400px;
+
 }
 @media screen and (max-width: 320px) {
     .head{
@@ -126,6 +156,7 @@
   .form{
     padding: 10px;
     display: flex;
+    gap: 10px;
     flex-direction: column;
   }
   .form-txt{
@@ -141,13 +172,30 @@
   .input{
     width: 250px;
   }
+  #input{
+    width: 170px;
+  }
   .select{
     width: 250px;
   }
   .textarea{
-    width: 250px;
+    width:50px;
+  }
+  #textarea{
+    width: 170px;
   }
   .button{
     width: 100px;
   }
+  
+
+.info{
+  width: 250px;
+  padding-right: 15px;
+}
+
+#img{
+  width: 2500px;
+
+}
 }
