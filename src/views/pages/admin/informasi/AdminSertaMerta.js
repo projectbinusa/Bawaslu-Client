@@ -43,7 +43,7 @@ function AdminSertaMerta() {
               <thead>
                 <tr>
                   <th className="text-center">No</th>
-                  <th className="text-center">DOkumen</th>
+                  <th className="text-center">Dokumen</th>
                   <th className="text-center">Lihat / Download</th>
                 </tr>
               </thead>
