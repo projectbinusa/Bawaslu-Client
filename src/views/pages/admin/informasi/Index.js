@@ -81,7 +81,7 @@ function Index() {
                       className="text-light"
                       style={{ textDecoration: "none" }}>
                       {" "}
-                      Tambah Data
+                      Tambah Dataaa
                     </a>
                   </button>
                 </div>
