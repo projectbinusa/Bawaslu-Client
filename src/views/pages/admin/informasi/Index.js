@@ -11,22 +11,22 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 
 function Index() {
-  const [jenisKeterangan, setJenisKeterangan] = useState([]);
+  const [menuRegulasi, setMenuRegulasi] = useState([]);
 
   const param = useParams();
   const history = useHistory();
 
-  const getJenisKeterangan = async () => {
+  const getMenuRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` + param.id,
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=` + param.id,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
-      setJenisKeterangan(response.data.data.jenisKeteranganInformasiDTOList);
+     setMenuRegulasi(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -34,7 +34,7 @@ function Index() {
   };
 
   useEffect(() => {
-    getJenisKeterangan();
+    getMenuRegulasi();
   }, []);
 
   const deleteData = async (id) => {
@@ -72,7 +72,7 @@ function Index() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">Informasi {}
+            <div class="card-header">Regulasi {}
             <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
@@ -92,17 +92,17 @@ function Index() {
                 <thead>
                   <tr>
                     <th className="text-left">No</th>
-                    <th className="text-left">Menu Informasi</th>
+                    <th className="text-left">Menu Regulasi  </th>
                     <th className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                    {jenisKeterangan.map((jenis, index) => {
+                    {menuRegulasi.map((jenis, index) => { 
                       return (
                     <tr key={index}>
                       <td className="text-left">{index + 1}
                       </td>
-                      <td className="text-left">{jenis.keterangan}
+                      <td className="text-left">{jenis.menuRegulasi}
                       </td>
                       <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">

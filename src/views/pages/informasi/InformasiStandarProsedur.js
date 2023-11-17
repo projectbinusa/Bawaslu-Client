@@ -42,9 +42,8 @@ function InformasiStandarProsedur() {
     //mengambil data, memperbarui DOM secara langsung,
     getByMenu();
     getByIsi();
-  }, []);
+  }, [])
   return (
-    <>
       <div>
         <Navbar />
         {/* <!-- page title start --> */}
@@ -121,7 +120,6 @@ function InformasiStandarProsedur() {
                       );
                     })} */}
 
-                    })}
                   </div>
                 </div>
               </div>
@@ -199,8 +197,7 @@ function InformasiStandarProsedur() {
       <Footer />
     </div>
       </div>
-    </>
+      </div>
   );
 }
 export default InformasiStandarProsedur;
-// test

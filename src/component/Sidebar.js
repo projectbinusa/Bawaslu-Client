@@ -23,8 +23,27 @@ function Sidebar() {
     }
   };
 
+  const [regulasi, setRegulasi] = useState([]);
+  const getRegulasi = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/jenis-regulasi/all`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      setRegulasi(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
   useEffect(() => {
     getInformasi();
+    getRegulasi();
   }, []);
 
   return (
@@ -111,38 +130,27 @@ function Sidebar() {
                 })}
               </ul>
             </li>
+            <ul>
+              </ul>
             <li>
               <a>
                 <i class="metismenu-icon pe-7s-diamond"></i>
+                
                 Daftar Regulasi
                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
               </a>
               <ul>
-                <li>
-                  <a style={{ textDecoration: "none" }} href="/admin-regulasi">
-                    <i class="metismenu-icon"></i>
-                    Regulasi
-                  </a>
-                </li>
-                <li>
-                  <a style={{ textDecoration: "none" }} href="/admin-dip">
-                    <i class="metismenu-icon"></i>DIP
-                  </a>
-                </li>
-                <li>
-                  <a
-                    style={{ textDecoration: "none" }}
-                    href="/admin-standar-operasional-prosedur">
-                    <i class="metismenu-icon"></i>Standar Operasional Prosedur
-                  </a>
-                </li>
-                <li>
-                  <a
-                    style={{ textDecoration: "none" }}
-                    href="/admin-maklumat-pelayanan">
-                    <i class="metismenu-icon"></i>Maklumat Pelayanan
-                  </a>
-                </li>
+                {regulasi.map((regulasi) => {
+                  return (
+                    <li>
+                      <a href={"/admin/" + regulasi.jenisRegulasi+ "/" + regulasi.id}
+                        style={{ textDecoration: "none" }}>
+                        <i class="metismenu-icon"></i>
+                        {regulasi.jenisRegulasi}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </li>
             <li class="app-sidebar__heading">Layanan Informasi</li>
