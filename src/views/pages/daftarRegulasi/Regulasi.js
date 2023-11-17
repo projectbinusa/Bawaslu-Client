@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
+import "../../../css/regulasi.css"
 import axios from "axios";
 
 function Regulasi() {
@@ -247,7 +248,7 @@ function Regulasi() {
           }}
         >
           <div class="container">
-            <div className="d-flex gap-5">
+            <div id="display" className="d-flex gap-5">
               <div class="row justify-content-center">
                 <div class="col-lg-12 ">
                   <div class="isotope-filters project-isotope-btn text-left mb-5">
@@ -275,8 +276,8 @@ function Regulasi() {
                   width: "100%",
                 }}
               >
-                <div className="card-header bg-primary text-light">
-                  <div style={{ display: "flex" }}>
+                <div  className="card-header bg-primary text-light">
+                  <div id="display" >
                     <div className="">
                       <h4>Undang Undang</h4>
                     </div>

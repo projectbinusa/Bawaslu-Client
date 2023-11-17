@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "../../../css/sertamerta.css"
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 function SertaMerta() {
@@ -83,7 +84,7 @@ function SertaMerta() {
         </div>
       </div>
       <div className="container" style={{marginTop:"10%"}}>
-            <div className="d-flex gap-4">
+            <div id="display" className="d-flex gap-4">
                 <div class="isotope-filters project-isotope-btn text-left mb-5">
                   <button style={{width:"250px", textAlign:"left"}}
                     class="button ml-0"
