@@ -1,1 +1,1 @@
-export const API_DUMMY = "${API_DUMMY}";
+export const API_DUMMY = "http://localhost:3030";

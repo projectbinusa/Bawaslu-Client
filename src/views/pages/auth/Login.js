@@ -106,8 +106,8 @@ function Login() {
                 <input
                   type="checkbox"
                   className="form-check-input"
-                   // Mengubah nilai showPassword saatid="showPassword"
-                  onChange={() => setShowPassword(!showPassword)} checkbox diubah
+                  id="showPassword"
+                  onChange={() => setShowPassword(!showPassword)} // Mengubah nilai showPassword saat checkbox diubah
                 />
                 <label
                   htmlFor="showPassword"
