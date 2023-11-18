@@ -77,11 +77,11 @@ function Index() {
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
                     <a
-                      href="/tambah-jenis-keterangan"
+                      href="/add-menu-regulasi"
                       className="text-light"
                       style={{ textDecoration: "none" }}>
                       {" "}
-                      Tambah Dataaa
+                      Tambah Dataaa         
                     </a>
                   </button>
                 </div>

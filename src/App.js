@@ -38,12 +38,12 @@ import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/Det
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
-import index from "./views/pages/admin/informasi/Index";
+
 import Index from "./views/pages/admin/informasi/Index";
+import AddMenuRegulasi from "./views/pages/admin/informasi/AddMenuRegulasi";
+// import AddMenuRegulasi "./"
 // test
 function App() {
-
-
   return (
     <BrowserRouter>
       <main>
@@ -111,19 +111,40 @@ function App() {
             exact
           />
           {/* admin */}
-          <Route path="/admin-permohonan-informsi" component={AdminFormInformasi} exact />
+          <Route
+            path="/admin-permohonan-informsi"
+            component={AdminFormInformasi}
+            exact
+          />
           <Route path="/add-berita-admin" component={AddBeritaAdmin} exact />
           <Route path="/edit-berita-admin" component={EditBeritaAdmin} exact />
           <Route path="/admin-berita" component={AdminBerita} exact />
           <Route path="/admin-pengumuman" component={AdminPengumuman} exact />
           <Route path="/add-pengumuman" component={AddPengumuman} exact />
           <Route path="/edit-pengumuman/:id" component={EditPengumuman} exact />
-          <Route path="/admin-permohonan-informasi" component={AdminPermohonanInformasi} exact />
-          <Route path="/admin-permohonan-keberatan" component={AdminPermohonanKeberatan} exact />
+          <Route
+            path="/admin-permohonan-informasi"
+            component={AdminPermohonanInformasi}
+            exact
+          />
+          <Route
+            path="/admin-permohonan-keberatan"
+            component={AdminPermohonanKeberatan}
+            exact
+          />
           <Route path="/admin/:jenisRegulasi/:id" component={Index} exact />
+          <Route path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
-          <Route path="/detail-permohonan-informasi/:id" component={DetailPermohonanInformasi} exact />
-          <Route path="/detail-permohonan-keberatan/:id" component={DetailPermohonanKeberatan} exact />
+          <Route
+            path="/detail-permohonan-informasi/:id"
+            component={DetailPermohonanInformasi}
+            exact
+          />
+          <Route
+            path="/detail-permohonan-keberatan/:id"
+            component={DetailPermohonanKeberatan}
+            exact
+          />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
         </Switch>
