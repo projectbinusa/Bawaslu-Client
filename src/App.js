@@ -36,6 +36,8 @@ import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/Det
 import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
 import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import Kehumasan from "./views/pages/informasi/Kehumasan";
+import Pencegahan from "./views/pages/informasi/Pencegahan";
+import Sosialisasi from "./views/pages/informasi/Sosialisasi";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
@@ -121,6 +123,9 @@ function App() {
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
           <Route path="/kehumasan" component={Kehumasan} exact />
+          <Route path="/pencegahan" component={Pencegahan} exact />
+          <Route path="/sosialisasi" component={Sosialisasi} exact />
+          <Route path="/penyelesaian-sengketa" component={PenyelesaianSengketa} exact />
         </Switch>
       </main>
     </BrowserRouter>

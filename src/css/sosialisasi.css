@@ -71,7 +71,7 @@
 }
 
 .wrap-img3 {
-    background-image: url("https://www.denpasarkota.go.id/public/uploads/berita/Berita_230608050837_walikota-jaya-negara-hadiri-serah-terima-kirab-bendera-parpol-pemilu-2024.jpg");
+    background-image: url("https://jateng.bawaslu.go.id/wp-content/uploads/2023/04/BENTUK-DARI-SARANA-MARKETING-BAWASLU-BOYOLALI-ADAKAN-PELATIHAN-PEMBUATAN-VIDEO-PELIPUTAN.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
@@ -110,8 +110,8 @@
 .wrap-text3 {
     color: white;
     font-size: 20px;
-    padding: 50px;
-    padding-left: 140px;
+    padding: 10px;
+    padding-left: 10px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -143,7 +143,4 @@
 }
 .logo{
     padding: 50px;
-}
-.span-txt{
-    font-size: 10px;
 }

@@ -15,15 +15,17 @@
 }
 
 .wrap-img1 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg");
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
 }
 
 .wrap-opacity1 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg");
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg");
     display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: end;
     height: inherit;
 }
@@ -38,7 +40,7 @@
 }
 
 .wrap-img2 {
-    background-image: url("https://cdn-assetd.kompas.id/_RPDi5VwPIefC-qflRmJrWMJyiw=/1024x683/https%3A%2F%2Fasset.kgnewsroom.com%2Fphoto%2Fpre%2F2022%2F03%2F22%2F00c1978a-1f12-4201-b172-56b343607484_jpg.jpg");
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718120146.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
@@ -71,7 +73,7 @@
 }
 
 .wrap-img3 {
-    background-image: url("https://www.denpasarkota.go.id/public/uploads/berita/Berita_230608050837_walikota-jaya-negara-hadiri-serah-terima-kirab-bendera-parpol-pemilu-2024.jpg");
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531-350x250.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
@@ -94,7 +96,7 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .wrap-img4 {
-    background-image: url("https://jatengprov.go.id/wp-content/uploads/2023/02/IMG-20230210-WA0066.jpg");
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230713014836-350x250.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
@@ -109,9 +111,9 @@
 
 .wrap-text3 {
     color: white;
-    font-size: 20px;
-    padding: 50px;
-    padding-left: 140px;
+    font-size: 15px;
+    padding: 10px;
+    padding-left: 10px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -126,7 +128,6 @@
     padding: 50px;
 }
 .bg-gray{
-    background-color: lightgray;
     width: 700px;
     height: 70px;
     display: flex;
@@ -146,4 +147,31 @@
 }
 .span-txt{
     font-size: 10px;
+}
+.txt-bold{
+    font-family: 'Prompt', sans-serif;
+    color: gray;
+}
+.a-bold{
+    font-size: 20px;
+}
+.bg-img{
+    display: flex;
+    gap: 20px;
+    width: 700px;
+}
+.p-info{
+    font-size: 12px;
+}
+.nol{
+    font-family: 'Prompt', sans-serif;
+ 
+}
+.txt-p{
+    padding-top: 15px;
+    font-size: 15px;
+}
+.button{
+    width: 100px;
+    height: 30px;
 }
