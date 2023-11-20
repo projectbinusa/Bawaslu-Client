@@ -22,7 +22,7 @@
 }
 
 .wrap-opacity1 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,4 +174,4 @@
 .button{
     width: 100px;
     height: 30px;
-}
+border: 2px solid lightgray;}

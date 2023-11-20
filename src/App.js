@@ -38,6 +38,9 @@ import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import Kehumasan from "./views/pages/informasi/Kehumasan";
 import Pencegahan from "./views/pages/informasi/Pencegahan";
 import Sosialisasi from "./views/pages/informasi/Sosialisasi";
+import PenangananPelanggaran from "./views/pages/informasi/PenangananPelanggaran";
+import TakBerkategori from "./views/pages/informasi/TakBerkategori,";
+import OSDMdanDiklat from "./views/pages/informasi/OSDMdanDiklat";
 
 function App() {
   const [rekapData, setRekapData] = useState([]);
@@ -126,6 +129,9 @@ function App() {
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
           <Route path="/penyelesaian-sengketa" component={PenyelesaianSengketa} exact />
+          <Route path="/penanganan-pelanggaran" component={PenangananPelanggaran} exact />
+          <Route path="/tak-berkategori" component={TakBerkategori} exact />
+          <Route path="/OSDM-dan-Diklat" component={OSDMdanDiklat} exact />
         </Switch>
       </main>
     </BrowserRouter>

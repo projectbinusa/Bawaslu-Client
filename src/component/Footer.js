@@ -57,10 +57,10 @@ function Footer() {
                     <a href="/kehumasan">Kehumasan</a>
                   </li>
                   <li>
-                    <a href="">OSDM & Diklat</a>
+                    <a href="/OSDM-dan-Diklat">OSDM & Diklat</a>
                   </li>
                   <li>
-                    <a href="">Penanganan Pelanggaran</a>
+                    <a href="/penanganan-pelanggaran">Penanganan Pelanggaran</a>
                   </li>
                   <li>
                     <a href="/pencegahan">Pencegahan</a>
@@ -84,7 +84,7 @@ function Footer() {
                     <a href="/sosialisasi">Sosialisasi</a>
                   </li>
                   <li>
-                    <a href="">Tak BerKatagori</a>
+                    <a href="/tak-berkategori">Tak BerKatagori</a>
                   </li>
                 </ul>
               </div>
