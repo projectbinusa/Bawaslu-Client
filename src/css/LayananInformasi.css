@@ -1,94 +1,101 @@
-.div{
-      
-        background-image: url(https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db);
-        background-repeat: no-repeat;
-        background-size: cover;
-       
-}.vid{
-        display: flex;
-        padding: 25px;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-        padding:100px;
-
+.div {
+  background-image: url(https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.table{
+.vid {
+  display: flex;
+  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 100px;
+}
+/* .table{
         background-image: url(https://img.freepik.com/premium-vector/white-elegant-texture-background_23-2148445781.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+} */
+.layanan-informasi {
+  width: 550px;
+  font-size: 57px;
 }
-.layanan-informasi{
-       width: 550px; 
-       font-size: 57px;
+.download {
+  width: 550px;
 }
-.download{
-        width:550px ;
+.imgly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 200px;
 }
-.imgly{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        width: 200px;
-                  
+.img {
+  border-radius: 35px;
+  width: 200px;
 }
-.img{
-       border-radius: 35px;
-       width: 200px;
+.button{
+  width: 200px;
+  height: 35px;
 }
-@media screen  and (max-width: 320px){
-        #layanan{
-                font-size: 30px;
-                width: 300px;
-        }
-        .vid{
-                display: flex;
-                flex-direction: column;
-                padding: 20px;
-                padding-top: 100px;
-                margin: 5px;
-        }
-        .download{
-       width: 200px;
-        }
-        .imgly{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100px;
-        }
-        .img{
-                width: 0px;
-                border-radius: 5px;
-        }
+@media screen and (max-width: 320px) {
+  #layanan {
+    font-size: 30px;
+    width: 300px;
+  }
+  .vid {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 100px;
+    margin: 5px;
+  }
+  .download {
+    width: 200px;
+  }
+  .imgly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+  .img {
+    width: 0px;
+    border-radius: 5px;
+  }
+  .button{
+    width: 100px;
+    height: 30px;
+  }
 }
 @media screen and (max-width: 768px) {
-        .layanan-informasi{
-                font-size: 50px;
-                width: 400px;
-        }
-        .vid{
-        display: flex;
-        padding: 30px;
-        padding-top: 110px;
-        }
-        .download{
-                width: 250px;
-        }
-        .imgly{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        }
-        .img{
-                border-radius: 20px;
-        }
+  .layanan-informasi {
+    font-size: 50px;
+    width: 400px;
+  }
+  .button{
+    width: 140px;
+  }
+  .vid {
+    display: flex;
+    padding: 30px;
+    padding-top: 110px;
+  }
+  .download {
+    width: 250px;
+  }
+  .imgly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+  }
+  .img {
+    border-radius: 20px;
+  }
 }
 @media screen and (max-width: 1024px) {
-        .vid{
-                padding-top: 200px;
-        }
-        
+  .vid {
+    padding-top: 200px;
+  }
 }

@@ -5,6 +5,7 @@ import "../../../css/LayananInformasi.css";
 import "react-owl-carousel2/src/owl.carousel.css";
 import "react-owl-carousel2/src/owl.theme.default.css";
 import axios from "axios";
+import { API_DUMMY } from "../../../utils/base_URL";
 
 function InformasiStandarProsedur() {
   const [list, setList] = useState([]);
@@ -13,10 +14,11 @@ function InformasiStandarProsedur() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=3`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=1`
       )
       .then((response) => {
         setList(response.data.data);
+        console.log(response.data.data);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -25,10 +27,10 @@ function InformasiStandarProsedur() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=11`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
       )
       .then((response) => {
-        // console.log(response.data.data);
+        console.log(response.data.data);
         setIsi(response.data.data);
       })
       .catch((error) => {
@@ -41,53 +43,42 @@ function InformasiStandarProsedur() {
     getByIsi();
   }, []);
   return (
-    <>
-      <div>
-        <Navbar />
-        {/* <!-- page title start --> */}
-        <div class="breadcrumb-area bg-black bg-relative">
-          <div
-            class="banner-bg-img"
-            style={{
-              backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-            }}
-          ></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-xl-7 col-lg-8">
-                <div class="breadcrumb-inner text-center">
-                  <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                    SOP
-                  </h2>
-                  <ul class="page-list">
-                    <li>
-                      <a href="/" style={{ textDecoration: "none" }}>
-                        Home
-                      </a>
-                    </li>
-                    <li>SOP</li>
-                  </ul>
-                </div>
+    <div>
+      <Navbar />
+      {/* <!-- page title start --> */}
+      <div
+        class="breadcrumb-area bg-relative"
+        style={{ background: "#151423" }}
+      >
+        <div
+          class="banner-bg-img"
+          style={{
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
+          }}
+        ></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-8">
+              <div class="breadcrumb-inner text-center">
+                <h4 class="page-title">Informasi Berkala</h4>
+                <ul class="page-list">
+                  <li>
+                    <a href="home">Home</a>
+                  </li>
+                  <li>Informasi</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        {/* <!-- page title end --> */}
-
-        <div
-        style={{
-          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        class="project-area pd-top-110 pd-bottom-90"
-      >
-        <div className="container">
-          <div className="d-flex gap-3">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 ">
-                <div class="isotope-filters project-isotope-btn text-left mb-5">
-                  {list.map((menu) => {
+      </div>
+      {/* <!-- project area start --> */}
+      <div class="container">
+        <div className="d-flex gap-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 ">
+              <div class="isotope-filters project-isotope-btn text-left mb-5">
+              {list.map((menu) => {
                     return (
                       <button
                         style={{ width: "150px", textAlign: "left" }}
@@ -99,14 +90,17 @@ function InformasiStandarProsedur() {
                       </button>
                     );
                   })}
-                </div>
               </div>
             </div>
-            <div className="card mb-4 shadow" style={{width:"100%"}}>
+          </div>
+        </div>
+      </div>
+      {/* sop */}
+      <div className="card mb-4 shadow" style={{width:"100%"}}>
               <div className="card-header bg-primary text-light">
                 <div style={{ display: "flex" }}>
                   <div className="col">
-                    <h4>Standar Operasional Prosedur</h4>
+                    <h4>SOP</h4>
                   </div>
                 </div>
               </div>
@@ -161,12 +155,8 @@ function InformasiStandarProsedur() {
                 </table>
               </div>
             </div>
-          </div>
-        </div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
-    </>
   );
 }
 export default InformasiStandarProsedur;

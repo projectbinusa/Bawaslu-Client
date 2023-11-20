@@ -7,8 +7,7 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 
 function AdminBerita() {
   const [list, setList] = useState([]);
-
-
+  const [list1, setList1] = useState([]);
   const getAll = async () => {
     try {
       const response = await axios.get(`${API_DUMMY}/bawaslu/api/berita`);
@@ -18,9 +17,19 @@ function AdminBerita() {
       console.error("Terjadi Kesalahan", error);
     }
   };
+  const getAll1 = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/category-berita`);
+      setList(response.data.data);
+      console.log(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
 
   useEffect(() => {
     getAll();
+    getAll1();
   }, []);
   return (
     <div>
@@ -99,7 +108,68 @@ function AdminBerita() {
               </button>
               <button class="btn-wide btn btn-success">Save</button> */}
             </div>
+
           </div>
+
+
+          <div class="main-card mb-3 card">
+            <div class="card-header">
+              Category
+              <div class="btn-actions-pane-right">
+                <div role="group" class="btn-group-sm btn-group">
+                  <button class="active btn-focus p-2 rounded">
+                    Tambah Category
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th className="text-center">No</th>
+                    <th className="text-center">Category</th>
+                    <th className="text-center">Create Date</th>
+                    <th className="text-center">Update Date</th>
+                    <th className="text-center">Aksi</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  {list1.map((Category, index) => {
+                    return (
+                      <tr key={index}>
+                        <td class="text-center text-muted">{index + 1}</td>
+                        <td className="text-center">{Category.category}</td>
+                        <td class="text-center">{Category.createdDate}</td>
+
+
+                        <td class="text-center">{Category.updateDate}</td>
+
+                        <td class="text-center">
+                          <button type="button" class="btn-primary btn-sm mr-2">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                          </button>
+
+                          <button type="button" class="btn-danger btn-sm">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <div class="d-block text-center card-footer">
+              <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
+                <i class="pe-7s-trash btn-icon-wrapper"> </i>
+              </button>
+              <button class="btn-wide btn btn-success">Save</button>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>

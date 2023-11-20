@@ -4,22 +4,15 @@ import Sidebar from "../../../../component/Sidebar";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
+import Swal from "sweetalert2";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 function AdminPengumuman() {
   const [list, setList] = useState([]);
-  const [id, setId] = useState(0);
-  const [author, setAuthor] = useState("");
-  const [isiPengumuman, setIsiPengumuman] = useState("");
-  const [file, setFile] = useState("");
-  const [judulPengumuman, setJudulPengumuman] = useState("");
-  const [tags, setTags] = useState("");
-  const [] = useState("");
 
   const getAll = async () => {
     try {
-      const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/pengumuman`
-      );
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/pengumuman`);
       setList(response.data.data);
       console.log(response.data.data);
     } catch (error) {
@@ -30,6 +23,34 @@ function AdminPengumuman() {
   useEffect(() => {
     getAll();
   }, []);
+
+  const deleteData = async (id) => {
+    Swal.fire({
+      title: "Anda Ingin Menghapus Data ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Delete",
+      cancelButtonText: "Cencel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`${API_DUMMY}/bawaslu/api/pengumuman/` + id, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        Swal.fire({
+          icon: "success",
+          title: "Dihapus!",
+          showConfirmButton: false,
+        });
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
+  };
 
   return (
     <div>
@@ -43,7 +64,13 @@ function AdminPengumuman() {
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
-                    Tambah Pengumuman
+                    <a
+                      href="/add-pengumuman"
+                      className="text-light"
+                      style={{ textDecoration: "none" }}>
+                      {" "}
+                      Tambah Pengumuman
+                    </a>
                   </button>
                 </div>
               </div>
@@ -80,10 +107,10 @@ function AdminPengumuman() {
 
                         <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
-                            <i class="fa-solid fa-pen-to-square"></i>
+                           <a style={{color:"white", textDecoration:"none"}} href={"/edit-pengumuman/" + pengumuman.id}> <i class="fa-solid fa-pen-to-square"></i></a>
                           </button>
 
-                          <button type="button" class="btn-danger btn-sm">
+                          <button type="button" onClick={() => deleteData(pengumuman.id)} class="btn-danger btn-sm">
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
@@ -92,12 +119,6 @@ function AdminPengumuman() {
                   })}
                 </tbody>
               </table>
-            </div>
-            <div class="d-block text-center card-footer">
-              <button class="mr-2 btn-icon btn-icon-only btn btn-outline-danger">
-                <i class="pe-7s-trash btn-icon-wrapper"> </i>
-              </button>
-              <button class="btn-wide btn btn-success">Save</button>
             </div>
           </div>
         </div>
