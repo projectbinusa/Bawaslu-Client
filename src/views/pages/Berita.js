@@ -112,7 +112,7 @@ function Berita() {
                 <h2 class="page-title">Berita</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Berita</li>
                 </ul>
@@ -162,7 +162,7 @@ function Berita() {
                             <div class="blog-share">
                               <ul>
                                 <li>
-                                  <a href="#">
+                                  <a href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali" target="_blank">
                                     <button className="border p-2">
                                       <i
                                         class="fab fa-facebook-f"
@@ -172,7 +172,7 @@ function Berita() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a href="#">
+                                  <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali" target="_blank">
                                     <button className="border p-2">
                                       <i
                                         class="fab fa-twitter"
