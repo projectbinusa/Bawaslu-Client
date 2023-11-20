@@ -5,6 +5,7 @@ import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import gambar from "../../../asset/img/bawaslu(berita).jpeg";
 import axios from "axios";
+import { API_DUMMY } from "../../../utils/base_URL";
 
 function SetiapSaat() {
   const imageRef = useRef(null);
@@ -82,7 +83,7 @@ function SetiapSaat() {
 
   // const getAll = async () => {
   //   await axios
-  //     .get("http://localhost:3030/bawaslu/api/regulasi/all")
+  //     .get("${API_DUMMY}/bawaslu/api/regulasi/all")
   //     .then((res) => {
   //       setRegulasi(res.data.data.data);
   //     })
@@ -93,7 +94,7 @@ function SetiapSaat() {
   const getByMenu = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=6`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=6`
       )
       .then((response) => {
         setList(response.data.data);
@@ -105,7 +106,7 @@ function SetiapSaat() {
   const getByIsi = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=41`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=41`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -118,7 +119,7 @@ function SetiapSaat() {
   const getByIsi1 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=42`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=42`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -131,7 +132,7 @@ function SetiapSaat() {
   const getByIsi2 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=43`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=43`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -144,7 +145,7 @@ function SetiapSaat() {
   const getByIsi3 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=44`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=44`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -157,7 +158,7 @@ function SetiapSaat() {
   const getByIsi4 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=45`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=45`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -170,7 +171,7 @@ function SetiapSaat() {
   const getByIsi5 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=46`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=46`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -183,7 +184,7 @@ function SetiapSaat() {
   const getByIsi6 = async () => {
     await axios
       .get(
-        `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=47`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=47`
       )
       .then((response) => {
         // console.log(response.data.data);
@@ -197,7 +198,7 @@ function SetiapSaat() {
   // const getByMenu2 = async () => {
   //   await axios
   //     .get(
-  //       `http://localhost:3030/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+  //       `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
   //     )
   //     .then((response) => {
   //       console.log(response.data.data);

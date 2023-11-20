@@ -54,7 +54,7 @@ function Footer() {
                     <a href="/berita" >Berita</a>
                   </li>
                   <li>
-                    <a href="">Kehumasan</a>
+                    <a href="/kehumasan">Kehumasan</a>
                   </li>
                   <li>
                     <a href="">OSDM & Diklat</a>
@@ -63,10 +63,10 @@ function Footer() {
                     <a href="">Penanganan Pelanggaran</a>
                   </li>
                   <li>
-                    <a href="">Pencegahan</a>
+                    <a href="/pencegahan">Pencegahan</a>
                   </li>
                   <li>
-                    <a href="">Pengumuman</a>
+                    <a href="/pengumuman">Pengumuman</a>
                   </li>
                 </ul>
               </div>
@@ -78,10 +78,10 @@ function Footer() {
                 {/* <h4 class="widget-title">Useful link</h4> */}
                 <ul>
                   <li>
-                    <a href="">Penyelesaian Sengketa</a>
+                    <a href="/prosedur-permohonan-penyelesaian-sengketa-informasi">Penyelesaian Sengketa</a>
                   </li>
                   <li>
-                    <a href="">Sosialisasi</a>
+                    <a href="/sosialisasi">Sosialisasi</a>
                   </li>
                   <li>
                     <a href="">Tak BerKatagori</a>
