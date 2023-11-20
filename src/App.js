@@ -34,6 +34,11 @@ import AdminPermohonanInformasi from "./views/pages/admin/permohonan/AdminPermoh
 import AdminPermohonanKeberatan from "./views/pages/admin/permohonan/AdminPermohonanKeberatan";
 import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/DetailPermohonanInformasi";
 import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
+import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
+import Kehumasan from "./views/pages/informasi/Kehumasan";
+import Pencegahan from "./views/pages/informasi/Pencegahan";
+import Sosialisasi from "./views/pages/informasi/Sosialisasi";
+
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
@@ -126,6 +131,11 @@ function App() {
           <Route path="/detail-permohonan-keberatan/:id" component={DetailPermohonanKeberatan} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
+          <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
+          <Route path="/kehumasan" component={Kehumasan} exact />
+          <Route path="/pencegahan" component={Pencegahan} exact />
+          <Route path="/sosialisasi" component={Sosialisasi} exact />
+          <Route path="/penyelesaian-sengketa" component={PenyelesaianSengketa} exact />
         </Switch>
       </main>
     </BrowserRouter>
