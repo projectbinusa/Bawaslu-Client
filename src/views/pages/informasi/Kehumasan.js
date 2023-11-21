@@ -21,7 +21,7 @@ const Kehumasan = () => {
         }}
       >
         <div className="pmbngks-img">
-          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+          <a href="/dialog-interaktif-isu-pemilu-di-sosial-media">
             <div className="wrapper1">
               <div className="wrap-img1">
                 <div className="wrap-opacity1">
@@ -49,7 +49,7 @@ const Kehumasan = () => {
               </div>
             </div>
           </a>
-          <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/">
+          <a href="/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024">
             {" "}
             <div className="wrapper2">
               <div className="wrap-img2">

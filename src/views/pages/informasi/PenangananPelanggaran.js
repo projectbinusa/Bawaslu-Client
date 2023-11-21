@@ -21,7 +21,7 @@ const PenangananPelanggaran = () => {
         }}
       >
         <div className="pmbngks-img">
-          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+          <a href="/bawaslu-boyolali-adakan-rakor-penanganan-pelanggaran-bersama-panwaslu-kecamatan">
             <div className="wrapper1">
               <div className="wrap-img-penangan-1">
                 <div className="wrap-opacity1">
