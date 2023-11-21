@@ -10,7 +10,6 @@ import MAHKAMAH from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 import "../../../css/pencegahan.css"
 
 
-
 const Pencegahan = () => {
 
 

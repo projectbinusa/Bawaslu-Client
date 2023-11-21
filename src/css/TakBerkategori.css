@@ -15,14 +15,15 @@
 }
 
 .wrap-img1 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg");
+    background-image: url("https://mediacenter.slemankab.go.id/wp-content/uploads/2023/09/sosialisasi-pemilu-di-SMK.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
+    /* border: 1px solid red; */
 }
 
 .wrap-opacity1 {
-    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     align-items: end;
     height: inherit;
@@ -38,7 +39,7 @@
 }
 
 .wrap-img2 {
-    background-image: url("https://cdn-assetd.kompas.id/_RPDi5VwPIefC-qflRmJrWMJyiw=/1024x683/https%3A%2F%2Fasset.kgnewsroom.com%2Fphoto%2Fpre%2F2022%2F03%2F22%2F00c1978a-1f12-4201-b172-56b343607484_jpg.jpg");
+    background-image: url("https://koran-jakarta.com/images/article/sosialisasi-pemilu-2024-230921020434-0.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 500px;
@@ -71,7 +72,7 @@
 }
 
 .wrap-img3 {
-    background-image: url("https://www.denpasarkota.go.id/public/uploads/berita/Berita_230608050837_walikota-jaya-negara-hadiri-serah-terima-kirab-bendera-parpol-pemilu-2024.jpg");
+    background-image: url("https://bangunharjo.bantulkab.go.id/assets/files/artikel/sedang_1695396441IMG20230922WA0023.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
@@ -94,7 +95,7 @@
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .wrap-img4 {
-    background-image: url("https://jatengprov.go.id/wp-content/uploads/2023/02/IMG-20230210-WA0066.jpg");
+    background-image: url("https://cdn.medcom.id/dynamic/content/2022/07/19/1452766/EPxb7AgR0p.jpg?w=480");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
