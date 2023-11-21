@@ -263,27 +263,27 @@ function SetiapSaat() {
           }}
         >
           <div class="container">
-          <div className="d-flex gap-5">
-            <div class="row justify-content-center">
-              <div class="col-lg-12 ">
-                <div class="isotope-filters project-isotope-btn text-center mb-5">
-                  {list.map((menu) => {
-                    return (
-                      <button
-                        style={{ width: "250px", textAlign: "left" }}
-                        class="button ml-0"
-                        data-filter="*"
-                        onClick={() => showTable(`${menu.menuRegulasi}`)}
-                      >
-                        {menu.menuRegulasi}
-                      </button>
-                    );
-                  })}
+            <div className="d-flex gap-5">
+              <div class="row justify-content-center">
+                <div class="col-lg-12 ">
+                  <div class="isotope-filters project-isotope-btn text-center mb-5">
+                    {list.map((menu) => {
+                      return (
+                        <button
+                          style={{ width: "250px", textAlign: "left" }}
+                          class="button ml-0"
+                          data-filter="*"
+                          onClick={() => showTable(`${menu.menuRegulasi}`)}
+                        >
+                          {menu.menuRegulasi}
+                        </button>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-             {/* Organisasi & Administrasi */}
-             <div
+              {/* Organisasi & Administrasi */}
+              <div
                 className="card mb-4 shadow"
                 id="table1"
                 style={{

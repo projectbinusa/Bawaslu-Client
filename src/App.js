@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Home from "./views/pages/Home";
 import SertaMerta from "./views/pages/informasi/SertaMerta";
@@ -43,9 +43,11 @@ import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
 import index from "./views/pages/admin/informasi/Index";
 import Index from "./views/pages/admin/informasi/Index";
+import TakBerkategori from "./views/pages/informasi/TakBerkategori,";
+import OSDMdanDiklat from "./views/pages/informasi/OSDMdanDiklat";
+import PenangananPelanggaran from "./views/pages/informasi/PenangananPelanggaran";
 // test
 function App() {
-
 
   return (
     <BrowserRouter>
@@ -134,6 +136,9 @@ function App() {
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
           <Route path="/penyelesaian-sengketa" component={PenyelesaianSengketa} exact />
+          <Route path="/penanganan-pelanggaran" component={PenangananPelanggaran} exact />
+          <Route path="/tak-berkategori" component={TakBerkategori} exact />
+          <Route path="/OSDM-dan-Diklat" component={OSDMdanDiklat} exact />
         </Switch>
       </main>
     </BrowserRouter>
