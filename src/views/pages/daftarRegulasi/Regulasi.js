@@ -815,7 +815,7 @@ function Regulasi() {
               >
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
-                    <div className="col">
+                    <div className="">
                       <h4>Intruksi Kabupaten</h4>
                     </div>
                     <div className="col">

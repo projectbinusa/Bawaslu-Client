@@ -33,7 +33,7 @@ function SertaMerta() {
       case "Pemungutan Suara Ulang & Susulan":
         setTable3Visible(true);
         break;
-      case "Organisasi dan Administrasi":
+      case "Organisasi Dan Administrasi":
         setTable4Visible(true);
         break;
       case "Perselisihan Hasil Pemilihan Umum":
@@ -70,11 +70,9 @@ function SertaMerta() {
   // };
   const getByMenu = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=7`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/1`)
       .then((response) => {
-        setList(response.data.data);
+        setList(response.data.data.jenisKeteranganInformasiDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -82,12 +80,10 @@ function SertaMerta() {
   };
   const getByIsi = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=48`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/25/isi-informasi`)
       .then((response) => {
         // console.log(response.data.data);
-        setIsi(response.data.data);
+        setIsi(response.data.data.isiInformasiKeteranganDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -95,12 +91,10 @@ function SertaMerta() {
   };
   const getByIsi1 = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=49`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/26/isi-informasi`)
       .then((response) => {
         // console.log(response.data.data);
-        setIsi1(response.data.data);
+        setIsi1(response.data.data.isiInformasiKeteranganDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -108,12 +102,10 @@ function SertaMerta() {
   };
   const getByIsi2 = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=50`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/27/isi-informasi`)
       .then((response) => {
         // console.log(response.data.data);
-        setIsi2(response.data.data);
+        setIsi2(response.data.data.isiInformasiKeteranganDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -121,12 +113,10 @@ function SertaMerta() {
   };
   const getByIsi3 = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=51`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/28/isi-informasi`)
       .then((response) => {
         // console.log(response.data.data);
-        setIsi3(response.data.data);
+        setIsi3(response.data.data.isiInformasiKeteranganDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -134,12 +124,10 @@ function SertaMerta() {
   };
   const getByIsi4 = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=52`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/29/isi-informasi`)
       .then((response) => {
         // console.log(response.data.data);
-        setIsi4(response.data.data);
+        setIsi4(response.data.data.isiInformasiKeteranganDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -147,12 +135,10 @@ function SertaMerta() {
   };
   const getByIsi5 = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=53`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/30/isi-informasi`)
       .then((response) => {
         // console.log(response.data.data);
-        setIsi5(response.data.data);
+        setIsi5(response.data.data.isiInformasiKeteranganDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -160,12 +146,10 @@ function SertaMerta() {
   };
   const getByIsi6 = async () => {
     await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=54`
-      )
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/31/isi-informasi`)
       .then((response) => {
         // console.log(response.data.data);
-        setIsi6(response.data.data);
+        setIsi6(response.data.data.isiInformasiKeteranganDTOList);
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -175,7 +159,7 @@ function SertaMerta() {
   // const getByMenu2 = async () => {
   //   await axios
   //     .get(
-  //       `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
+  //       `${API_DUMMY}/bawaslu/api/jenis-keterangan/24/isi-informasi1`
   //     )
   //     .then((response) => {
   //       console.log(response.data.data);
@@ -243,9 +227,9 @@ function SertaMerta() {
                     style={{ width: "250px", textAlign: "left" }}
                     class="button ml-0"
                     data-filter="*"
-                    onClick={() => showTable(`${menu.menuRegulasi}`)}
+                    onClick={() => showTable(`${menu.keterangan}`)}
                   >
-                    {menu.menuRegulasi}
+                    {menu.keterangan}
                   </button>
                 );
               })}
