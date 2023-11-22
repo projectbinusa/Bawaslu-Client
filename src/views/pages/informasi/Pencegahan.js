@@ -21,7 +21,7 @@ const Pencegahan = () => {
         }}
       >
         <div className="pmbngks-img">
-          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+          <a href="/dialog-interaktif-isu-pemilu-di-sosial-media">
             <div className="wrapper1">
               <div className="wrap-img1">
                 <div className="wrap-opacity1">
@@ -50,14 +50,14 @@ const Pencegahan = () => {
               </div>
             </div>
           </a>
-          <a href="https://boyolali.bawaslu.go.id/bawaslu-mengawasi-verifikasi-administrasi-perbaikan-dokumen-persyaratan-bakal-calon-dprd-kab-kota/">
+          <a href="/bawaslu-mengawasi-verifikasi-administrasi-perbaikan-dokumen-persyaratan-bakal-calon-dprd-kab-kota">
             {" "}
             <div className="wrapper2">
               <div className="wrap-img2">
                 <div className="wrap-opacity2">
                   <div className="wrap-text2">
-                    Pesta Demokrasi Semakin Dekat, Bawaslu Diminta Menjadi
-                    Narasumber Sosialisasi Pemilu 2024
+                    Bawaslu Mengawasi Verifikasi Administrasi Perbaikan Dokumen
+                    Persyaratan Bakal Calon DPRD Kab/Kota
                     <br />
                     <p className="span-txt" style={{ color: "white" }}>
                       <span>

@@ -21,7 +21,7 @@ const OSDMdanDiklat = () => {
         }}
       >
         <div className="pmbngks-img">
-          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+          <a href="/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou">
             <div className="wrapper1">
               <div className="wrap-img1">
                 <div className="wrap-opacity1">
@@ -50,7 +50,7 @@ const OSDMdanDiklat = () => {
               </div>
             </div>
           </a>
-          <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/">
+          <a href="/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou">
             {" "}
             <div className="wrapper2">
               <div className="wrap-img2">
