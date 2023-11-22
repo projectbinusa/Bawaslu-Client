@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
+import Footer from "../../../component/Footer";
 
-function PaswasluKecamatan() {
+function DialogKehumasan() {
   return (
     <>
       <Navbar />
@@ -11,8 +11,7 @@ function PaswasluKecamatan() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                Bawaslu Boyolali Adakan Rakor Penanganan Pelanggaran Bersama
-                Panwaslu Kecamatan
+                Dialog Interaktif Isu Pemilu di Sosial Media
               </h1>
               <div className="row">
                 <div className="">
@@ -25,14 +24,14 @@ function PaswasluKecamatan() {
                   <p>in Berita, Kehumasan, Pencegahan, Sosialisasi</p>
                 </div>
                 {/* <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div> */}
+                  <p>All</p>
+                </div>
+                <div className="col-3">
+                  <p>All</p>
+                </div>
+                <div className="col-3">
+                  <p>All</p>
+                </div> */}
               </div>
               <hr className="mt-0" />
               <div class="single-blog-inner">
@@ -94,7 +93,7 @@ function PaswasluKecamatan() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg"
                     alt="img"
                   />
                 </div>
@@ -115,88 +114,94 @@ function PaswasluKecamatan() {
                   </ul>
                 </div>
                 <p>
-                  Tahapan Pemilu Serentak Tahun 2024 sudah dimulai, Bawaslu
-                  sebagai lembaga Pengawas Pemilu telah melakukan berbagai
-                  persiapan dalam rangka melaksanakan tugas dan fungsinya. Salah
-                  satunya adalah dengan memberikan pembekalan dan pemahaman
-                  terkait hal-hal yang berhubungan dengan teknis penanganan
-                  pelanggaran dan peraturan serta perundang-undangan Pemilu.
+                  Di era digital yang semakin berkembang, media sosial telah
+                  menjadi wadah yang yang luas dalam memengaruhi publik. Saat
+                  ini para politikus dan partai politik telah beramai-ramai
+                  memanfaatkan kekuatan media sosial untuk melancarkan kampanye
+                  politiknya.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+                <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
+                            Bawaslu Boyolali Tandatangani NPHD Pendanaan
+                            Pemilukada 2024
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
+                          GP Ansor dan Panwaslu Musuk Jalin Kerjasama
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
-                                Bawaslu Boyolali Tandatangani NPHD Pendanaan
-                                Pemilukada 2024
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                          Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
+                          Pengawasan Pemilu Partisipatif
+                        </a>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi">
+                          KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu Boyolali
+                          Turut Hadir dan Mengawasi
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Rabu (29/3) Bawaslu Kabupaten Boyolali menyelenggarakan Rapat
-                  Koordinasi Penanganan Pelanggaran Bersama Panwaslu Se
-                  Kecamatan Boyolali, kegiatan dilaksanakan di Aula Kantor
-                  Bawaslu Kabupaten Boyolali dengan 44 peserta undangan.
+                  Meskipun media sosial berperan efektif dalam menyampaikan
+                  informasi politik, sayangnya media ini kerap disalahgunakan
+                  sebagai alat penyebaran berita hoaks.
                 </p>
                 <p>
-                  Pada pembukaan acara, Taryono selaku Ketua Bawaslu Kabupaten
-                  Boyolali, menyampaikan ucapan Bulan Suci Ramadhan kepada
-                  peserta undangan dan juga memberikan gambaran-gambaran terkait
-                  beberapa Pelanggaran Pemilu yang sudah pernah terjadi pada
-                  Pemilu tahun sebelumnya.
+                  Kamis (3/8) Taryono selaku ketua Bawaslu Kabupaten Boyolali di
+                  undang oleh RRI Surakarta untuk menjadi narasumber kegiatan
+                  ldquo;Dialog Interaktif yang diselenggarakan melalui Zoom,
+                  dalam kegiatan tersebut RRI Surakarta membawakan topik
+                  ldquo;Terpaan Isu Pemilu di Media Sosial.
                 </p>
                 <p>
-                  Selanjutnya, pada kegiatan tersebut pemaparan materi
-                  disampaikan oleh Widodo selaku Kordiv Hukum dan Penanangan
-                  Pelanggaran, pada pertemuan ini ia menyampaikan materi terkait
-                  Alur Penanganan Pelanggaran Pemilu Berdasarkan Perbawaslu 7
-                  Tahun 2022 dan juga memaparkan materi yang berjudul Tindak
-                  Pidana Pemilu Berdasarkan UU No. 7 Tahun 2017
+                  Menjelang Pemilu 2024, dampak buruk berita hoaks atau
+                  disinformasi politik merupakan tantangan berat yang harus
+                  diatasi, mengingat pada Pemilu 2024 nanti akan banyak calon
+                  pemilih muda, maka sebagai pengawas pemilu dalam melaksanakan
+                  tugasnya memang harus tepat sasaran dan menghindari
+                  keblunderan dalam menyampaikan informasi.
                 </p>
               </div>
             </div>
@@ -268,4 +273,4 @@ function PaswasluKecamatan() {
   );
 }
 
-export default PaswasluKecamatan;
+export default DialogKehumasan;

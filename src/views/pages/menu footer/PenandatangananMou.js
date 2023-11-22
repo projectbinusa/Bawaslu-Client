@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import Navbar from "../../../component/Navbar";
 
-function DialogKehumasan() {
+function PenandatangananMou() {
   return (
     <>
       <Navbar />
@@ -11,7 +11,7 @@ function DialogKehumasan() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                Dialog Interaktif Isu Pemilu di Sosial Media
+                Bawaslu Boyolali Bersama UNS lakukan Penandatanganan MoU{" "}
               </h1>
               <div className="row">
                 <div className="">
@@ -24,14 +24,14 @@ function DialogKehumasan() {
                   <p>in Berita, Kehumasan, Pencegahan, Sosialisasi</p>
                 </div>
                 {/* <div className="col-3">
-                  <p>All</p>
-                </div>
-                <div className="col-3">
-                  <p>All</p>
-                </div>
-                <div className="col-3">
-                  <p>All</p>
-                </div> */}
+              <p>All</p>
+            </div>
+            <div className="col-3">
+              <p>All</p>
+            </div>
+            <div className="col-3">
+              <p>All</p>
+            </div> */}
               </div>
               <hr className="mt-0" />
               <div class="single-blog-inner">
@@ -93,7 +93,7 @@ function DialogKehumasan() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531.jpeg"
                     alt="img"
                   />
                 </div>
@@ -114,86 +114,90 @@ function DialogKehumasan() {
                   </ul>
                 </div>
                 <p>
-                  Di era digital yang semakin berkembang, media sosial telah
-                  menjadi wadah yang yang luas dalam memengaruhi publik. Saat
-                  ini para politikus dan partai politik telah beramai-ramai
-                  memanfaatkan kekuatan media sosial untuk melancarkan kampanye
-                  politiknya.
+                  Boyolali – Dalam rangka Pelaksanaan Tri Dharma Perguruan
+                  Tinggi PUSDEMTANAS LPPM UNS, Jum#39;at (14/7) Bawaslu Boyolali
+                  menghadiri Undangan dari Dr. Sunny Ummul Firdaus, S.H.,M.H
+                  selaku Kepala Pusdemtanas LPPM untuk melakukan penandatangan
+                  MoU tentang Pelaksanaan Tri Dharma Perguruan Tinggi Yang
+                  Meliputi Pendidikan, Penelitian, dan Pengabdian Kepada
+                  Masyarakat, Serta Pengembangan Kelembagaan.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+                <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
+                            Bawaslu Boyolali Tandatangani NPHD Pendanaan
+                            Pemilukada 2024
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
+                          GP Ansor dan Panwaslu Musuk Jalin Kerjasama
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
-                                Bawaslu Boyolali Tandatangani NPHD Pendanaan
-                                Pemilukada 2024
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama/">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                          Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
+                          Pengawasan Pemilu Partisipatif
+                        </a>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi">
+                          KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu Boyolali
+                          Turut Hadir dan Mengawasi
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Meskipun media sosial berperan efektif dalam menyampaikan
-                  informasi politik, sayangnya media ini kerap disalahgunakan
-                  sebagai alat penyebaran berita hoaks.
+                  Melihat Pemilu Serentak 2024 nanti akan banyak pemilih di usia
+                  muda akan lebih baik dilakukan kesepakatan bersama. Karena
+                  pada setiap proses tahapan pemilu, Bawaslu selalu melibatkan
+                  masyarakat untuk turut berpartisipasi dalam pengawasan.
                 </p>
                 <p>
-                  Kamis (3/8) Taryono selaku ketua Bawaslu Kabupaten Boyolali di
-                  undang oleh RRI Surakarta untuk menjadi narasumber kegiatan
-                  ldquo;Dialog Interaktif yang diselenggarakan melalui Zoom,
-                  dalam kegiatan tersebut RRI Surakarta membawakan topik
-                  ldquo;Terpaan Isu Pemilu di Media Sosial.
-                </p>
-                <p>
-                  Menjelang Pemilu 2024, dampak buruk berita hoaks atau
-                  disinformasi politik merupakan tantangan berat yang harus
-                  diatasi, mengingat pada Pemilu 2024 nanti akan banyak calon
-                  pemilih muda, maka sebagai pengawas pemilu dalam melaksanakan
-                  tugasnya memang harus tepat sasaran dan menghindari
-                  keblunderan dalam menyampaikan informasi.
+                  Kesepakatan sama ini dimaksudkan untuk membina hubungan baik
+                  antar lembaga dalam rangka meningkatkan kapasitas dan
+                  kemampuan kedua lembaga juga bertujuan untuk menerapkan dan
+                  mengembangkan pendidikan, penelitian, dan pengabdian kepada
+                  masyarakat, serta potensi sumber daya untuk optimalisasi
+                  pengembangan kelembagaan di lingkungan masing-masing.
                 </p>
               </div>
             </div>
@@ -265,4 +269,4 @@ function DialogKehumasan() {
   );
 }
 
-export default DialogKehumasan;
+export default PenandatangananMou;

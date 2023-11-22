@@ -84,7 +84,7 @@ const Pencegahan = () => {
 
           <div className="wrapper3">
             <div className="pmbngks-img2">
-              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou/">
+              <a href="/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou">
                 {" "}
                 <div className="wrap-img3">
                   <div className="wrap-opacity3">
@@ -113,7 +113,7 @@ const Pencegahan = () => {
               </a>
 
               <div>
-                <a href="https://boyolali.bawaslu.go.id/bawaslu-provinsi-jawa-tengah-lakukan-supervisi-pemetaan-potensi-pelanggaran-tahapan-kampanye-pemilu-2024/">
+                <a href="/bawaslu-provinsi-jawa-tengah-lakukan-supervisi-pemetaan-potensi-pelanggaran-tahapan-kampanye-pemilu-2024">
                   <div className="wrap-img4">
                     <div className="wrap-opacity3">
                       <div className="wrap-text3">
@@ -172,7 +172,11 @@ const Pencegahan = () => {
                   />
                 </div>
                 <div>
-                  <a href="" className="a-bold" style={{ color: "gray" }}>
+                  <a
+                    href="/bawaslu-boyolali-lakukan-supervisi-pemutakhiran-data-pemilih-ke-kecamatan-selo"
+                    className="a-bold"
+                    style={{ color: "gray" }}
+                  >
                     Bawaslu Boyolali Lakukan Supervisi Pemutakhiran Data Pemilih
                     ke Kecamatan Selo
                   </a>
@@ -244,7 +248,11 @@ const Pencegahan = () => {
                   />
                 </div>
                 <div>
-                  <a href="" className="a-bold" style={{ color: "gray" }}>
+                  <a
+                    href="/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024"
+                    className="a-bold"
+                    style={{ color: "gray" }}
+                  >
                     Pesta Demokrasi Semakin Dekat, Bawaslu Diminta Menjadi
                     Narasumber Sosialisasi Pemilu 2024
                   </a>

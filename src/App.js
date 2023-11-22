@@ -25,9 +25,9 @@ import AdminPermohonanInformasi from "./views/pages/admin/permohonan/AdminPermoh
 import AdminPermohonanKeberatan from "./views/pages/admin/permohonan/AdminPermohonanKeberatan";
 import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/DetailPermohonanInformasi";
 import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
-import Kehumasan from "./views/pages/informasi/Kehumasan";
-import Pencegahan from "./views/pages/informasi/Pencegahan";
-import Sosialisasi from "./views/pages/informasi/Sosialisasi";
+import Kehumasan from "./views/pages/menu footer/Kehumasan";
+import Pencegahan from "./views/pages/menu footer/Pencegahan";
+import Sosialisasi from "./views/pages/menu footer/Sosialisasi";
 import WaktuLayanan from "./views/pages/prosedur/WaktuLayanan";
 import BiayaLayanan from "./views/pages/prosedur/BiayaLayanan";
 import PermohonanKeberatan from "./views/pages/prosedur/PermohonanKeberatan";
@@ -43,17 +43,31 @@ import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
 import index from "./views/pages/admin/informasi/Index";
 import Index from "./views/pages/admin/informasi/Index";
-import TakBerkategori from "./views/pages/informasi/TakBerkategori,";
-import OSDMdanDiklat from "./views/pages/informasi/OSDMdanDiklat";
-import PenangananPelanggaran from "./views/pages/informasi/PenangananPelanggaran";
-import DialogKehumasan from "./views/pages/informasi/DialogKehumasan";
-import PestaDemokrasi from "./views/pages/informasi/PestaDemokrasi";
-import PenandatangananMou from "./views/pages/informasi/PenandatangananMou";
-import PaswasluKecamatan from "./views/pages/informasi/PaswasluKecamatan";
-import VerifikasiAdministrasi from "./views/pages/informasi/VerifikasiAdministrasi";
-import PemilihSosialisasi from "./views/pages/informasi/PemilihSosialisasi";
-import TandatgnNPHD from "./views/pages/informasi/TandatgnNPHD";
-import GpAnsor from "./views/pages/informasi/GpAnsor";
+import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
+import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
+import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
+import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
+import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
+import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
+import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
+import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
+import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
+import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
+import GpAnsor from "./views/pages/menu footer/GpAnsor";
+import PemiluPartisipatif from "./views/pages/menu footer/PemiluPartisipatif";
+import Kpu from "./views/pages/menu footer/Kpu";
+import PemiluBermartabat from "./views/pages/menu footer/PemiluBermartabat";
+import KecamatanSelo from "./views/pages/menu footer/KecamatanSelo";
+import KampanyePemilu from "./views/pages/menu footer/KampanyePemilu";
+import PerkuatPemahaman from "./views/pages/menu footer/PerkuatPemahaman";
+import PengumumanCalonAnggota from "./views/pages/menu footer/PengumumanCalonAnggota";
+import PengumumanHasiltesKesehatan from "./views/pages/menu footer/PengumumanHasiltesKesehatan";
+import PengumumanHasiltesWawancara from "./views/pages/menu footer/PengumumanHasiltesWawancara";
+import PengumumanPerpanjangantesTertulis from "./views/pages/menu footer/PengumumanPerpanjangantesTertulis";
+import PengumumanPelaksanaan from "./views/pages/menu footer/PengumumanPelaksanaan";
+import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSeleksi";
+import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
+import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
 // test
 function App() {
   return (
@@ -109,7 +123,7 @@ function App() {
             exact
           />
           <Route
-            path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
+            path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengahhh"
             component={CalonAnggotaBawaslu}
             exact
           />
@@ -212,6 +226,76 @@ function App() {
           <Route
             path="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama"
             component={GpAnsor}
+            exact
+          />
+          <Route
+            path="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif"
+            component={PemiluPartisipatif}
+            exact
+          />
+          <Route
+            path="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi"
+            component={Kpu}
+            exact
+          />
+          <Route
+            path="/ciptakan-pemilu-2024-bermartabat-panwascam-tamansari-ajak-pemuda-pemudi-untuk-mengawasi"
+            component={PemiluBermartabat}
+            exact
+          />
+          <Route
+            path="/bawaslu-boyolali-lakukan-supervisi-pemutakhiran-data-pemilih-ke-kecamatan-selo"
+            component={KecamatanSelo}
+            exact
+          />
+          <Route
+            path="/bawaslu-provinsi-jawa-tengah-lakukan-supervisi-pemetaan-potensi-pelanggaran-tahapan-kampanye-pemilu-2024"
+            component={KampanyePemilu}
+            exact
+          />
+          <Route
+            path="/perkuat-pemahaman-penyelesaian-sengketa-bawaslu-adakan-rapat-fasilitasi-dengan-panwascam"
+            component={PerkuatPemahaman}
+            exact
+          />
+          <Route
+            path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
+            component={PengumumanCalonAnggota}
+            exact
+          />
+          <Route
+            path="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii"
+            component={PengumumanHasiltesKesehatan}
+            exact
+          />
+          <Route
+            path="/pengumuman-tes-wawancara-seleksi-calon-anggota-bawaslu-kab-kota-2023-provinsi-jawa-tengah-zona-iii"
+            component={PengumumanHasiltesWawancara}
+            exact
+          />
+          <Route
+            path="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota"
+            component={PengumumanPerpanjangantesTertulis}
+            exact
+          />
+          <Route
+            path="/pengumuman-pelaksanaan-test-psikologi-calon-anggota-bawaslu-kabupaten-kota-provinsi-jawa-tengah-zona-iii"
+            component={PengumumanPelaksanaan}
+            exact
+          />
+          <Route
+            path="/pengumuman-hasil-seleksi-administrasi-bakal-calon-anggota-bawaslu-kabupaten-kota-2023-2028-zona-iii"
+            component={PengumumanHasilSeleksi}
+            exact
+          />
+          <Route
+            path="/pengumuman-lowongan-pekerjaan-satpam"
+            component={PengumumanLowonganSatpam}
+            exact
+          />
+          <Route
+            path="/category/penyelesaian-sengketa"
+            component={PenyelesaianSengketaFooter}
             exact
           />
         </Switch>
