@@ -8,6 +8,7 @@ import {
   useHistory,
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
+import Swal from "sweetalert2";
 
 function IsiKeterangan() {
   const [jenisKeteranganIsiInformasi, setJenisKeteranganIsiInformasi] =
@@ -32,7 +33,35 @@ function IsiKeterangan() {
   useEffect(() => {
     getJenisKeteranganIsiInformasi();
   }, []);
-  
+
+  const deleteData = async (id) => {
+    Swal.fire({
+      title: "Anda Ingin Menghapus Data ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Delete",
+      cancelButtonText: "Cencel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(`${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + id, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        Swal.fire({
+          icon: "success",
+          title: "Dihapus!",
+          showConfirmButton: false,
+        });
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
+  };
+
   return (
     <div>
       <Header />
@@ -60,7 +89,7 @@ function IsiKeterangan() {
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <i class="fa-solid fa-pen-to-square"></i>
                           </button>
-                          <button type="button" class="btn-danger btn-sm">
+                          <button type="button" class="btn-danger btn-sm" onClick={() =>deleteData(isiInformasi.id)}>
                             <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
