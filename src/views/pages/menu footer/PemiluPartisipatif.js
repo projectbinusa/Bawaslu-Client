@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 
-function PemilihSosialisasi() {
+function PemiluPartisipatif() {
   return (
     <>
       <Navbar />
@@ -11,28 +11,28 @@ function PemilihSosialisasi() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                Panwaslu Kecamatan Karanggede Lakukan Kegiatan Sosialisasi
-                Dengan Pemilih Pemula
+                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam Pengawasan
+                Pemilu Partisipatif{" "}
               </h1>
               <div className="row">
                 <div className="">
                   <p>
-                    <i class="fa-regular fa-user"></i> by Bawaslu Boyolali - 3
-                    Agustus 2023
+                    <i class="fa-regular fa-user"></i> by Humas Bawaslu Boyolali
+                    - 3 November 2023
                   </p>
                 </div>
                 <div className="">
-                  <p>in Berita, Kehumasan, Pencegahan, Sosialisasi</p>
+                  <p>in Berita</p>
                 </div>
                 {/* <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div> */}
+                <p>All</p>
+              </div>
+              <div className="col-3">
+                <p>All</p>
+              </div>
+              <div className="col-3">
+                <p>All</p>
+              </div> */}
               </div>
               <hr className="mt-0" />
               <div class="single-blog-inner">
@@ -94,7 +94,7 @@ function PemilihSosialisasi() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/10/Picture1-1.jpg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
                     alt="img"
                   />
                 </div>
@@ -115,104 +115,109 @@ function PemilihSosialisasi() {
                   </ul>
                 </div>
                 <p>
-                  Boyolali – Tahapan Pemilihan Umum tahun 2024 sudah memasuki
-                  separuh jalan dimana saat ini adalah tahapan penyusunan Daftar
-                  Calon tetap (DCT) Calon Legislatif. Dalam upaya melaksanakan
-                  Perbawaslu Nomor 2 Tahun 2023 tentang Pengawasan Partisipatif,
-                  Panwaslu Kecamatan (Pnawaslucam) Karanggede melaksanakan
-                  kegiatan sosialisasi kepada pemilih pemula. Kegiatan tersebut
-                  dilaksanakan di MAN 04 Boyolali pada hari Senin (2/10/2023)
-                  sebagai wujud dari upaya peningkatan pengawasan partisipatif
-                  dengan sasaran siswa-siswi disana. Kegiatan Apel pagi ini
-                  dimulai pukul 07.00 WIB dan dihadiri oleh Ervan Luri selaku
-                  Anggota Panwaslucam Karanggede yang bertindak sebagai Pembina
-                  Apel. Ervan menyampaikan bahwa sebagai warga negara harus ikut
-                  dalam kegiatan Pemilu baik sebagai pemilih, Penyelenggara
-                  Pemilu atau Pemantau Pemilu. Dalam kesempatan tersebut Ervan
-                  juga mengajak para siswa-siswa yang lahir sebelum 14 februari
-                  2007 untuk membuka data pemilih melalui website
-                  cekdptonline.kpu.go.id guna memastikan sudah terdaftar sebagai
-                  pemilih.
+                  Boyolali – Pemilu bukan hanya momentum pesta demokrasi, pemilu
+                  yang sesungguhnya ialah wujud dari kehendak rakyat demi
+                  memperjuangkan kesejahteraannya. Salah satu indikator negara
+                  demokratis ialah adanya Pemilu yang bebas dan dilandasi dengan
+                  hati nurani, tanpa adanya paksaan dan tekanan dari pihak
+                  manapun.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+                <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
+                            Bawaslu Boyolali Tandatangani NPHD Pendanaan
+                            Pemilukada 2024
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
+                          GP Ansor dan Panwaslu Musuk Jalin Kerjasama
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
-                                Bawaslu Boyolali Tandatangani NPHD Pendanaan
-                                Pemilukada 2024
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                      <a href="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi">
                                 KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
                                 Boyolali Turut Hadir dan Mengawasi
                               </a>
-                            </h5>
-                          </div>
-                        </article>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                      <a href="/ciptakan-pemilu-2024-bermartabat-panwascam-tamansari-ajak-pemuda-pemudi-untuk-mengawasi">
+                                Ciptakan Pemilu 2024 Bermartabat, Panwascam
+                                Tamansari Ajak Pemuda/Pemudi untuk Mengawasi
+                              </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Di akhir Apel, Ervan mengajak kepada seluruh Civitas Akademika
-                  MAN 04 Boyolali untuk menolak segala bentuk Money Politic dan
-                  pintar dalam menyaring berita tentang Pemilu karena maraknya
-                  media sosial yang dapat menjadi sumber berita Hoax.
+                  Salah satu langkah konkrit yang dilakukan oleh Bawaslu
+                  Kabupaten Boyolali ialah memberikan ruang dan kesempatan serta
+                  partisipasi dari masyarakat luas untuk mewujudkan Pemilu yang
+                  damai, jujur, adil, bermartabat serta berintegritas.
                 </p>
                 <p>
-                  Di hari yang sama Panwaslucam Karanggede juga mengisi kegiatan
-                  Projek Penguatan Profil Pelajar Pancasila (P5) di SMA N 1
-                  Karanggede. Kegiatan yang dilaksanakan pukul 12.30 WIB
-                  bertempat di masjid sekolah dan diikuti oleh siswa-siswi kelas
-                  XI-XII dengan tema “Suara Demokrasi” adalah bentuk kerjasama
-                  dengan pihak sekolah. Ketua Panwaslucam Karanggede Restu
-                  Setyawan yang hadir sebagai pemateri menyampaikan pentingnya
-                  pemahaman siswa-siswi terhadap seluruh instrumen bernegara,
-                  seperti 4 Pilar Kebangsaan yang akan berdampak pada Demokasi
-                  yang sehat. Selain itu juga disampaikan kepada seluruh
-                  siswa-siswi yang berumur 17 tahun keatas untuk menggunakan hak
-                  pilihnya dalam Pemilu nanti dan ikut mengawasi jalannya Pemilu
-                  2024. Apabila ditemukan pelanggaran pemilu dapat melaporkan
-                  kepada Pengawas Pemilu. Dalam kegiatan tersebut hadir juga
-                  sebagai pemateri adalah PPK Kecamatan Karanggede yang
-                  menyampaikan tahapan-tahapan Pemilu 2024 yang sudah terlaksana
-                  sampai saat ini.
+                  Rabu 1 November 2023, Bawaslu Kabupaten Boyolali telah
+                  menggelar Sosialisasi Pengawasan Pemilu Partisipatif dengan
+                  mengundang Organiasi Kemahasiswaan, Ormas, dan Organisasi
+                  Keagamaan. Kegiatan ini dilaksanakan di Hotel Front One Budget
+                  Boyolali dengan mengundang narasumber Puspaningrum selaku
+                  dosen Fakultas Hukum Universitas Slamet Riyadi. Dalam
+                  menyampaikan materi, Puspaningrum ingin mengajak para peserta
+                  tamu undangan untuk mewujudkan Pemilu Berintegritas. Tentunya
+                  pada kegiatan ini ia memberikan pemahaman yang mendetail
+                  terkait langkah-langkah nyata bagaimana masyarkat itu sendiri
+                  aware dengan proses tahapan Pemilu yang saat ini sudah
+                  berjalan.
+                </p>
+                <img
+                  src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-13.59.21-1024x683.jpeg"
+                  alt=""
+                />
+                <p>
+                  Giat ini digelar oleh Bawaslu Boyolali sebagai Langkah
+                  sosialisasi kepada Masyarakat agar memahami dan mengetahui
+                  bentuk pencegahan serta pelanggaran yang biasanya terjadi di
+                  lingkup publik pada tahapan pemilu serta mengajak masyarakat
+                  untuk ikut serta dan aktif terlibat sebagai pengawasan
+                  jalannya tahapan pemilu. Tentu Bawaslu membutuhkan partisipasi
+                  dari masyarakat agar pengawasan dalam tahapan pemilu ini
+                  menjadi maksimal.
                 </p>
               </div>
             </div>
@@ -284,4 +289,4 @@ function PemilihSosialisasi() {
   );
 }
 
-export default PemilihSosialisasi;
+export default PemiluPartisipatif;

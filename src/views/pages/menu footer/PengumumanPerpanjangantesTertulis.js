@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 
-function VerifikasiAdministrasi() {
+function PengumumanPerpanjangantesTertulis() {
   return (
     <>
       <Navbar />
@@ -11,28 +11,29 @@ function VerifikasiAdministrasi() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                Bawaslu Mengawasi Verifikasi Administrasi Perbaikan Dokumen
-                Persyaratan Bakal Calon DPRD Kab/Kota
+                Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes Psikologi dan
+                Perubahan Waktu Pelaksanaan Tes Kesehatan Calon Anggota Bawaslu
+                Kab/Kota
               </h1>
               <div className="row">
                 <div className="">
                   <p>
-                    <i class="fa-regular fa-user"></i> by Bawaslu Boyolali - 3
-                    Agustus 2023
+                    <i class="fa-regular fa-user"></i> by Bawaslu Boyolali - 12
+                    Juli 2023
                   </p>
                 </div>
                 <div className="">
-                  <p>in Berita, Kehumasan, Pencegahan, Sosialisasi</p>
+                  <p>in Berita, , Pengumuman</p>
                 </div>
                 {/* <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div> */}
+                <p>All</p>
+              </div>
+              <div className="col-3">
+                <p>All</p>
+              </div>
+              <div className="col-3">
+                <p>All</p>
+              </div> */}
               </div>
               <hr className="mt-0" />
               <div class="single-blog-inner">
@@ -94,7 +95,7 @@ function VerifikasiAdministrasi() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718120146.jpeg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230712084633.jpg"
                     alt="img"
                   />
                 </div>
@@ -115,82 +116,77 @@ function VerifikasiAdministrasi() {
                   </ul>
                 </div>
                 <p>
-                  Boyolali Verifikasi administrasi perbaikan dokumen persyaratan
-                  bakal calon anggota DPR, DPRD Provinsi dan DPRD Kabupaten/Kota
-                  telah dilaksanakan sejak tanggal 10 Juli 2023 sampai dengan 6
-                  Agustus 2023 mendatang.
+                  Pengumuman Hasil Tes Kesehatan dan Tes Wawancara Serta Jadwal
+                  Uji Kelayakan dan Kepatutan Calon Anggota Bawaslu Kab/Kota
+                  Provinsi Jawa Tengah Zona III.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+                <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah">
+                            Pengumuman Calon Anggota Bawaslu Kabupaten/Kota
+                            Terpilih Provinsi Jawa Tengah.
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii">
+                          Pengumuman Hasil Tes Kesehatan dan Tes Wawancara Serta
+                          Jadwal Uji Kelayakan dan Kepatutan Calon Anggota
+                          Bawaslu Kab/Kota Provinsi Jawa Tengah Zona III.
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
-                                Bawaslu Boyolali Tandatangani NPHD Pendanaan
-                                Pemilukada 2024
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                          Pengumuman Tes Wawancara Seleksi Calon Anggota Bawaslu
+                          Kab/Kota 2023 Provinsi Jawa Tengah Zona III
+                        </a>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi">
+                          Pengumuman Hasil Tes Tertulis dan Tes Psikologi Calon
+                          Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona III
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Selasa (18/7) Bawaslu Boyolali mengawasi proses verifikasi
-                  administrasi perbaikan dokumen persyaratan bakal calon anggota
-                  DPRD Kabupaten/Kota, juga Bawaslu memastikan KPU Boyolali
-                  melaksanakan verifikasi administrasi perbaikan dokumen
-                  persyaratan bakal calon sesuai dengan peraturan yang berlaku.
-                </p>
-                <p>
-                  Pada pengawasan proses tahapan tersebut, sebelumnya juga telah
-                  terbit Surat Edaran Bawaslu RI Nomor 38 Tahun 2023 tentang
-                  Petunjuk Pelaksanaan Pengawasan Verifikasi Administrasi
-                  Perbaikan Dokumen Persyaratan Bakal Calon Anggota Dewan
-                  Perwakilan Rakyat, Bakal Calon Dewan Perwakilan Rakyat Daerah
-                  Provinsi dan Dewan Perwakilan Rakyat Daerah Kabupaten/Kota.
-                  Surat Edaran diterbitkan dengan maksud untuk menjadi petunjuk
-                  teknis dalam pelaksanaan pengawasan pada proses tahapan.
+                  Untuk selengkapanya, silahkan Download pada Link di bawah ini.
                 </p>
               </div>
             </div>
@@ -262,4 +258,4 @@ function VerifikasiAdministrasi() {
   );
 }
 
-export default VerifikasiAdministrasi;
+export default PengumumanPerpanjangantesTertulis;
