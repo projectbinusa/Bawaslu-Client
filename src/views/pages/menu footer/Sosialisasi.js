@@ -20,12 +20,12 @@ const Sosialisasi = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="pmbngks-img">
-          <a href="/dialog-interaktif-isu-pemilu-di-sosial-media">
-            <div className="wrapper1">
-              <div className="wrap-img1">
-                <div className="wrap-opacity1">
-                  <div className="wrap-text1">
+        <div id="pmbngks-img-sosialisasi" className="pmbngks-img">
+          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+            <div id="wrapper1-sosialisasi" className="wrapper1">
+              <div id="wrap-img1-sosialisasi" className="wrap-img1">
+                <div id="wrap-opacity1-sosialisasi" className="wrap-opacity1">
+                  <div id="wrap-text1-sosialisasi" className="wrap-text1">
                     Dialog Interaktif Isu Pemilu di Sosial Media
                     <br /> <span>by </span> <span>BAWASLU BOYOLALI</span>
                     <p className="span-txt" style={{ color: "white" }}>
@@ -49,12 +49,12 @@ const Sosialisasi = () => {
               </div>
             </div>
           </a>
-          <a href="/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024">
+          <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/">
             {" "}
-            <div className="wrapper2">
-              <div className="wrap-img2">
-                <div className="wrap-opacity2">
-                  <div className="wrap-text2">
+            <div id="wrapper2-sosialisasi" className="wrapper2">
+              <div id="wrap-img2-sosialisasi" className="wrap-img2">
+                <div id="wrap-opacity1-sosialisasi" className="wrap-opacity2">
+                  <div id="wrap-text2-sosialisasi" className="wrap-text2">
                     Pesta Demokrasi Semakin Dekat, Bawaslu Diminta Menjadi
                     Narasumber Sosialisasi Pemilu 2024
                     <br /> <span>by </span> <span>BAWASLU BOYOLALI</span>
@@ -81,12 +81,13 @@ const Sosialisasi = () => {
             </div>
           </a>
 
-          <div className="wrapper3">
-            <div className="pmbngks-img2">
-              <a href="/bawaslu-boyolali-adakan-rakor-penanganan-pelanggaran-bersama-panwaslu-kecamatan">
-                <div className="wrap-img3">
-                  <div className="wrap-opacity3">
-                    <div className="wrap-text3">
+          <div id="wrapper3-sosialisasi" className="wrapper3">
+            <div id="pmbngks-img2-sosialisasi" className="pmbngks-img2">
+              <a href="">
+                {" "}
+                <div id="wrap-img3-sosialisasi" className="wrap-img3">
+                  <div id="wrap-opacity3-sosialisasi" className="wrap-opacity3">
+                    <div id="wrap-text3-sosialisasi" className="wrap-text3">
                       Bawaslu Boyolali Adakan Rakor Penanganan Pelanggaran
                       Bersama Panwaslu Kecamatan
                       <br /> <span>by </span> <span>BAWASLU BOYOLALI</span>
@@ -114,9 +115,9 @@ const Sosialisasi = () => {
 
               <div>
                 <a href="">
-                  <div className="wrap-img4">
-                    <div className="wrap-opacity3">
-                      <div className="wrap-text3"></div>
+                  <div id="wrap-img4-sosialisasi" className="wrap-img4">
+                    <div id="wrap-opacity4-sosialisasi" className="wrap-opacity4">
+                      <div id="wrap-text3-sosialisasi" className="wrap-text3"></div>
                     </div>
                   </div>
                 </a>
@@ -124,7 +125,7 @@ const Sosialisasi = () => {
             </div>
           </div>
         </div>
-        <div className="a-href">
+        <div id="a-href-sosialisasi" className="a-href">
           <div>
             <a href="/">Home </a>
           </div>
@@ -135,47 +136,47 @@ const Sosialisasi = () => {
             <a href="/kehumasan">Sosialisasi </a>
           </div>
         </div>
-        <div className="pmbngks-txt-logo">
-          <div className="txt-kehumasan">
+        <div id="text-logo-sosialisasi" className="pmbngks-txt-logo">
+          <div id="txt-sosialisasi" className="txt-kehumasan">
             <div>
               <h1>Sosialisasi</h1>
               <p>Kegitan Sosialisasi Bawaslu Kabupaten Boyolali</p>
-              <div className="bg-gray">
-                <div className="txt-gray">No Content Available</div>
+              <div id="bg-gray-sosialisasi" className="bg-gray">
+                <div id="txt-gray-sosialisasi" className="txt-gray">No Content Available</div>
               </div>
             </div>
           </div>
-          <div className="logo">
-            <div className="h3">
+          <div id="logo-sosialisasi" className="logo">
+            <div id="h3-sosialisasi" className="h3">
               <h3>
                 TAUTAN <span className="span">LEMBAGA</span>
               </h3>
-              <hr />
-              <div className="img-logo">
+              <hr id="hr-sosialisasi" />
+              <div id="img-logo-sosialisasi" className="img-logo-sosialisasi">
                 <div>
                   <a href="">
-                    <img className="img-src" src={RI} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={RI} />
                   </a>
                 </div>
                 <div>
                   {" "}
                   <a href="">
-                    <img className="img-src" src={dkpp} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={dkpp} />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img className="img-src" src={MAHKAMAH} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={MAHKAMAH} />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img className="img-src" src={KPU} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={KPU} />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img className="img-src" src={jateng} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={jateng} />
                   </a>
                 </div>
               </div>
