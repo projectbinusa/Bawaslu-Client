@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import "../../../css/TakBerkategori.css";
 import info from "../../../aset/undraw_settings_tab_mgiw.svg";
 import RI from "../../../aset/Bawaslu-RI-300x73-1.png";
 import jateng from "../../../aset/bawaslu-jateng-300x73-1.png";
 import dkpp from "../../../aset/dkpp-300x73-1.png";
 import KPU from "../../../aset/KPU-300x73-1.png";
 import MAHKAMAH from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
-import "../../../css/TakBerkategori.css";
 
 const TakBerkategori = () => {
   return (
@@ -20,15 +20,14 @@ const TakBerkategori = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="pmbngks-img">
-          <a href="/panwaslu-kecamatan-karanggede-lakukan-kegiatan-sosialisasi-denga-pemilih-pemula">
-            <div className="wrapper1">
-              <div className="wrap-img1">
-                <div className="wrap-opacity1">
-                  <div className="wrap-text1">
-                    Panwaslu Kecamatan Karanggede Lakukan Kegiatan Sosialisasi
-                    Dengan Pemilih Pemula <br /> <span>by </span>{" "}
-                    <span>BAWASLU BOYOLALI</span>
+        <div id="pmbngks-img-berkategori" className="pmbngks-img">
+          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+            <div id="wrapper1-berkategori" className="wrapper1">
+              <div id="wrap-img-berkategori" className="wrap-img1">
+                <div id="wrap-opacity1-berkategori" className="wrap-opacity1">
+                  <div id="wrap-text1-berkategori" className="wrap-text1">
+                   Panwaslu Kecamatan Karanggede Lakukan Kegiatan Sosialisasi Dengan Pemilih Pemula
+                    <br /> <span>by </span> <span>BAWASLU BOYOLALI</span>
                     <p className="span-txt" style={{ color: "white" }}>
                       <span>
                         <svg
@@ -50,33 +49,37 @@ const TakBerkategori = () => {
               </div>
             </div>
           </a>
-          <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/">
+          <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-berkategori-pemilu-2024/">
             {" "}
-            <div className="wrapper2">
-              <div className="wrap-img2">
-                <div className="wrap-opacity2">
-                  <div className="wrap-text2"></div>
+            <div id="wrapper2-berkategori" className="wrapper2">
+              <div id="wrap-img-berkategori" className="wrap-img2">
+                <div id="wrap-opacity1-berkategori" className="wrap-opacity2">
+                  <div id="wrap-text2-berkategori" className="wrap-text2">
+                   
+                  </div>
                 </div>
               </div>
             </div>
           </a>
 
-          <div className="wrapper3">
-            <div className="pmbngks-img2">
+          <div id="wrapper3-berkategori" className="wrapper3">
+            <div id="pmbngks-img2-berkategori" className="pmbngks-img2">
               <a href="">
                 {" "}
-                <div className="wrap-img3">
-                  <div className="wrap-opacity3">
-                    <div className="wrap-text3"></div>
+                <div id="wrap-img3-berkategori" className="wrap-img3">
+                  <div id="wrap-opacity3-berkategori" className="wrap-opacity3">
+                    <div id="wrap-text3-berkategori" className="wrap-text3">
+                    
+                    </div>
                   </div>
                 </div>
               </a>
 
               <div>
                 <a href="">
-                  <div className="wrap-img4">
-                    <div className="wrap-opacity3">
-                      <div className="wrap-text3"></div>
+                  <div id="wrap-img4-berkategori" className="wrap-img4">
+                    <div id="wrap-opacity4-berkategori" className="wrap-opacity4">
+                      <div id="wrap-text3-berkategori" className="wrap-text3"></div>
                     </div>
                   </div>
                 </a>
@@ -84,7 +87,7 @@ const TakBerkategori = () => {
             </div>
           </div>
         </div>
-        <div className="a-href">
+        <div id="a-href-berkategori" className="a-href">
           <div>
             <a href="/">Home </a>
           </div>
@@ -92,49 +95,49 @@ const TakBerkategori = () => {
             <a href="">Category </a>
           </div>
           <div>
-            <a href="/tak-berkategori">Tak Berkategori </a>
+            <a href="/kehumasan">Berkategori </a>
           </div>
         </div>
-        <div className="pmbngks-txt-logo">
-          <div className="txt-kehumasan">
+        <div id="text-logo-berkategori" className="pmbngks-txt-logo">
+          <div id="txt-berkategori" className="txt-kehumasan">
             <div>
-              <h1>Tak Berkategori</h1>
-              <div className="bg-gray">
-                <div className="txt-gray">No Content Available</div>
+              <h1>TAK BERKATEGORI</h1>
+              <div id="bg-gray-berkategori" className="bg-gray">
+                <div id="txt-gray-berkategori" className="txt-gray">No Content Available</div>
               </div>
             </div>
           </div>
-          <div className="logo">
-            <div className="h3">
+          <div id="logo-berkategori" className="logo">
+            <div id="h3-berkategori" className="h3">
               <h3>
                 TAUTAN <span className="span">LEMBAGA</span>
               </h3>
-              <hr />
-              <div className="img-logo">
+              <hr id="hr-berkategori" />
+              <div id="img-logo-berkategori" className="img-logo-berkategori">
                 <div>
                   <a href="">
-                    <img className="img-src" src={RI} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={RI} />
                   </a>
                 </div>
                 <div>
                   {" "}
                   <a href="">
-                    <img className="img-src" src={dkpp} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={dkpp} />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img className="img-src" src={MAHKAMAH} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={MAHKAMAH} />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img className="img-src" src={KPU} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={KPU} />
                   </a>
                 </div>
                 <div>
                   <a href="">
-                    <img className="img-src" src={jateng} />
+                    <img id="img-src-sosisalisasi" className="img-src" src={jateng} />
                   </a>
                 </div>
               </div>
