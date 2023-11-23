@@ -41,8 +41,11 @@ import InformasiStandarProsedur from "./views/pages/daftarRegulasi/InformasiStan
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
-import index from "./views/pages/admin/informasi/Index";
+
 import Index from "./views/pages/admin/informasi/Index";
+
+import AddMenuRegulasi from "./views/pages/admin/informasi/AddMenuRegulasi";
+// import AddMenuRegulasi "./"
 import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
 import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
 import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
@@ -124,7 +127,7 @@ function App() {
             exact
           />
           <Route
-            path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengahhh"
+            path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
             component={CalonAnggotaBawaslu}
             exact
           />
@@ -160,6 +163,7 @@ function App() {
             exact
           />
           <Route path="/admin/:jenisRegulasi/:id" component={Index} exact />
+          <Route path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
             path="/detail-permohonan-informasi/:id"
@@ -228,76 +232,6 @@ function App() {
           <Route
             path="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama"
             component={GpAnsor}
-            exact
-          />
-          <Route
-            path="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif"
-            component={PemiluPartisipatif}
-            exact
-          />
-          <Route
-            path="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi"
-            component={Kpu}
-            exact
-          />
-          <Route
-            path="/ciptakan-pemilu-2024-bermartabat-panwascam-tamansari-ajak-pemuda-pemudi-untuk-mengawasi"
-            component={PemiluBermartabat}
-            exact
-          />
-          <Route
-            path="/bawaslu-boyolali-lakukan-supervisi-pemutakhiran-data-pemilih-ke-kecamatan-selo"
-            component={KecamatanSelo}
-            exact
-          />
-          <Route
-            path="/bawaslu-provinsi-jawa-tengah-lakukan-supervisi-pemetaan-potensi-pelanggaran-tahapan-kampanye-pemilu-2024"
-            component={KampanyePemilu}
-            exact
-          />
-          <Route
-            path="/perkuat-pemahaman-penyelesaian-sengketa-bawaslu-adakan-rapat-fasilitasi-dengan-panwascam"
-            component={PerkuatPemahaman}
-            exact
-          />
-          <Route
-            path="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah"
-            component={PengumumanCalonAnggota}
-            exact
-          />
-          <Route
-            path="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii"
-            component={PengumumanHasiltesKesehatan}
-            exact
-          />
-          <Route
-            path="/pengumuman-tes-wawancara-seleksi-calon-anggota-bawaslu-kab-kota-2023-provinsi-jawa-tengah-zona-iii"
-            component={PengumumanHasiltesWawancara}
-            exact
-          />
-          <Route
-            path="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota"
-            component={PengumumanPerpanjangantesTertulis}
-            exact
-          />
-          <Route
-            path="/pengumuman-pelaksanaan-test-psikologi-calon-anggota-bawaslu-kabupaten-kota-provinsi-jawa-tengah-zona-iii"
-            component={PengumumanPelaksanaan}
-            exact
-          />
-          <Route
-            path="/pengumuman-hasil-seleksi-administrasi-bakal-calon-anggota-bawaslu-kabupaten-kota-2023-2028-zona-iii"
-            component={PengumumanHasilSeleksi}
-            exact
-          />
-          <Route
-            path="/pengumuman-lowongan-pekerjaan-satpam"
-            component={PengumumanLowonganSatpam}
-            exact
-          />
-          <Route
-            path="/category/penyelesaian-sengketa"
-            component={PenyelesaianSengketaFooter}
             exact
           />
         </Switch>
