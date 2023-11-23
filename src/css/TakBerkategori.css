@@ -1,0 +1,156 @@
+.pmbngks-img {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+}
+.pmbngks-img2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.wrapper1 {
+    width: 600px;
+    padding-top: 100px;
+}
+
+.wrap-img1 {
+    background-image: url("https://mediacenter.slemankab.go.id/wp-content/uploads/2023/09/sosialisasi-pemilu-di-SMK.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    /* border: 1px solid red; */
+}
+
+.wrap-opacity1 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
+.wrap-text1 {
+    color: white;
+    font-size: 20px;
+    padding: 50px;
+    padding-left: 100px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.wrap-img2 {
+    background-image: url("https://koran-jakarta.com/images/article/sosialisasi-pemilu-2024-230921020434-0.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.wrap-opacity2 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
+.wrap-text2 {
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.wrapper2 {
+    width: 350px;
+    padding-top: 100px;
+}
+
+.wrapper3 {
+    width: 300px;
+    padding-top: 100px;
+   
+}
+
+.wrap-img3 {
+    background-image: url("https://bangunharjo.bantulkab.go.id/assets/files/artikel/sedang_1695396441IMG20230922WA0023.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+   
+}
+
+.wrap-opacity3 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
+.wrap-text3 {
+    color: white;
+    font-size: 20px;
+    padding: 50px;
+    padding-left: 140px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.wrap-img4 {
+    background-image: url("https://cdn.medcom.id/dynamic/content/2022/07/19/1452766/EPxb7AgR0p.jpg?w=480");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+}
+
+.wrap-opacity3 {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
+    display: flex;
+    align-items: end;
+    height: inherit;
+}
+
+.wrap-text3 {
+    color: white;
+    font-size: 20px;
+    padding: 50px;
+    padding-left: 140px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.a-href{
+    display: flex;
+    gap: 100px; 
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+}
+.txt-kehumasan{
+    padding: 50px;
+}
+.bg-gray{
+    background-color: lightgray;
+    width: 700px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+.txt-gray{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.pmbngks-txt-logo{
+    display: flex;
+}
+.logo{
+    padding: 50px;
+}
+.span-txt{
+    font-size: 10px;
+}
+.wrap-img-penangan-1{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-image: url("https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg");
+}

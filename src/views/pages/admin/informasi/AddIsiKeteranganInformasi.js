@@ -3,51 +3,53 @@ import Footer from "../../../../component/Footer";
 import Sidebar from "../../../../component/Sidebar";
 import Header from "../../../../component/Header";
 import { useState } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom";
 import axios from "axios";
-import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import { useEffect } from "react";
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import Swal from "sweetalert2";
 
-function AddJenisKeterangan() {
-  const [keterangan, setKeterangan] = useState("");
-  const [jenisInformasi, setJenisInformasi] = useState();
+function AddIsiKeteranganInformasi() {
+  const [dokumen, setDokumen] = useState("");
+  const [jenisKeterangan, setJenisKeterangan] = useState();
+  const [keterangan, setKeterangan] = useState([]);
+  const [upload, setUpload] = useState("");
   const [show, setShow] = useState(false);
-  const [informasi, setInformasi] = useState([]);
-  const param = useParams();
 
-  const getInformasi = async () => {
+  const getKeterangan = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/all`,
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/all`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
-      setInformasi(response.data.data);
+      setKeterangan(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
   };
 
-
   useEffect(() => {
-    getInformasi();
+    getKeterangan();
   }, []);
 
   const add = async (e) => {
     e.preventDefault();
     e.persist();
+
+    const formData = new FormData();
+    formData.append("dokumen", dokumen);
+    formData.append("jenisKeterangan", jenisKeterangan);
+    formData.append("file", upload);
+
     try {
       await axios.post(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/add`,
-        {
-          keterangan: keterangan,
-          jenisInformasi: jenisInformasi,
-        },
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/add`,
+        formData,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -85,15 +87,16 @@ function AddJenisKeterangan() {
               <form onSubmit={add}>
                 <div className="row">
                   <div className="col-6">
-                    <label className="form-label">Jenis Informasi</label>
+                    <label className="form-label">Jenis Keterangan</label>
                     <select
                       class="form-select form-select-sm"
-                      aria-label="Small select example" onChange={(e) => setJenisInformasi(e.target.value)}>
-                      <option selected>PIlih Jenis Informasi</option>
-                      {informasi.map((down) => {
-                        return(
-                            <option value={down.id}>{down.namaInformasi}</option>
-                        )
+                      aria-label="Small select example"
+                      onChange={(e) => setJenisKeterangan(e.target.value)}>
+                      <option selected>PIlih Jenis Keterangan</option>
+                      {keterangan.map((down) => {
+                        return (
+                          <option value={down.id}>{down.keterangan}</option>
+                        );
                       })}
                     </select>
                   </div>
@@ -104,8 +107,18 @@ function AddJenisKeterangan() {
                     <input
                       type="text"
                       class="form-control"
-                      value={keterangan}
-                      onChange={(e) => setKeterangan(e.target.value)}
+                      value={dokumen}
+                      onChange={(e) => setDokumen(e.target.value)}
+                    />
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label for="exampleInputEmail1" class="form-label">
+                      File
+                    </label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      onChange={(e) => setUpload(e.target.files[0])}
                     />
                   </div>
                 </div>
@@ -129,4 +142,4 @@ function AddJenisKeterangan() {
   );
 }
 
-export default AddJenisKeterangan;
+export default AddIsiKeteranganInformasi;
