@@ -25,9 +25,9 @@ import AdminPermohonanInformasi from "./views/pages/admin/permohonan/AdminPermoh
 import AdminPermohonanKeberatan from "./views/pages/admin/permohonan/AdminPermohonanKeberatan";
 import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/DetailPermohonanInformasi";
 import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
-import Kehumasan from "./views/pages/informasi/Kehumasan";
-import Pencegahan from "./views/pages/informasi/Pencegahan";
-import Sosialisasi from "./views/pages/informasi/Sosialisasi";
+import Kehumasan from "./views/pages/menu footer/Kehumasan";
+import Pencegahan from "./views/pages/menu footer/Pencegahan";
+import Sosialisasi from "./views/pages/menu footer/Sosialisasi";
 import WaktuLayanan from "./views/pages/prosedur/WaktuLayanan";
 import BiayaLayanan from "./views/pages/prosedur/BiayaLayanan";
 import PermohonanKeberatan from "./views/pages/prosedur/PermohonanKeberatan";

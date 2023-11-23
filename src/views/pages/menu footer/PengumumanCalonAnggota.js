@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 
-function PestaDemokrasi() {
+function PengumumanCalonAnggota() {
   return (
     <>
       <Navbar />
@@ -11,28 +11,28 @@ function PestaDemokrasi() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                Pesta Demokrasi Semakin Dekat, Bawaslu Diminta Menjadi
-                Narasumber Sosialisasi Pemilu 2024{" "}
+                Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih
+                Provinsi Jawa Tengah
               </h1>
               <div className="row">
                 <div className="">
                   <p>
-                    <i class="fa-regular fa-user"></i> by Bawaslu Boyolali - 3
+                    <i class="fa-regular fa-user"></i> by Bawaslu Boyolali - 19
                     Agustus 2023
                   </p>
                 </div>
                 <div className="">
-                  <p>in Berita, Kehumasan, Pencegahan, Sosialisasi</p>
+                  <p>in Berita, , Pengumuman</p>
                 </div>
                 {/* <div className="col-3">
-                <p>All</p>
-              </div>
-              <div className="col-3">
-                <p>All</p>
-              </div>
-              <div className="col-3">
-                <p>All</p>
-              </div> */}
+                  <p>All</p>
+                </div>
+                <div className="col-3">
+                  <p>All</p>
+                </div>
+                <div className="col-3">
+                  <p>All</p>
+                </div> */}
               </div>
               <hr className="mt-0" />
               <div class="single-blog-inner">
@@ -94,7 +94,7 @@ function PestaDemokrasi() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230711105903.jpeg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230819093248.jpg"
                     alt="img"
                   />
                 </div>
@@ -115,87 +115,77 @@ function PestaDemokrasi() {
                   </ul>
                 </div>
                 <p>
-                  Boyolali – Pemilu 2024 yang kian hari semakin mendekat, kini
-                  Badan Kesbangpol Kabupaten Boyolali menggelar Sosialisasi
-                  Pemilu Tahun 2024 di Kecamatan Klego Kabupaten Boyolali.
-                  Sosialisasi pemilu yang digelar oleh Badan Kesbangpol
-                  Kabupaten Boyolali turut mengundang Tokoh Agama, Tokoh
-                  Masyarakat, Tokoh Pemuda dan Akademisi.
+                  Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih Masa
+                  Jabatan 2023-2028 Provinsi Jawa Tengah.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+                <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii">
+                            Pengumuman Hasil Tes Kesehatan dan Tes Wawancara
+                            Serta Jadwal Uji Kelayakan dan Kepatutan Calon
+                            Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona
+                            III.
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
+                          Pengumuman Tes Wawancara Seleksi Calon Anggota Bawaslu
+                          Kab/Kota 2023 Provinsi Jawa Tengah Zona III
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
-                                Bawaslu Boyolali Tandatangani NPHD Pendanaan
-                                Pemilukada 2024
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                          Pengumuman Hasil Tes Tertulis dan Tes Psikologi Calon
+                          Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona III
+                        </a>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota">
+                          Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes
+                          Psikologi dan Perubahan Waktu Pelaksanaan Tes
+                          Kesehatan Calon Anggota Bawaslu Kab/Kota
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
-                <p>
-                  Meskipun media sosial berperan efektif dalam menyampaikan
-                  informasi politik, sayangnya media ini kerap disalahgunakan
-                  sebagai alat penyebaran berita hoaks.Badan Kesbangpol
-                  Kabupaten Boyolali meminta Bawaslu Boyolali untuk menjadi
-                  narasumber pada kegiatan tersebut, pada kegiatan ini Taryono
-                  selaku Ketua Bawaslu kabupaten Boyolali menyampaikan materi
-                  yang berjudul Pemilu Damai, Pemilu Milik Rakyat, yang mana isi
-                  pada materi tersebut meliputi Demokrasi Pemilu, Tugas dan
-                  Wewenang Bawaslu, Pengawasan Pemilu Partisipatif dan Index
-                  Kerawanan Pemilu.
-                </p>
-                <p>
-                  Kegiatan ini bertujuan untuk memberikan gambaran-gambaran
-                  kepada masyarkat terkait kepemiluan serta beberapa contoh
-                  kasus pelanggaran pemilu, hal ini bertujuan untuk mewujudkan
-                  situasi politik yang kondusif dan demokrasi yang sehat dan
-                  damai.
-                </p>
+                <p>Selengkapnya, silahkan download pada link dibawah ini.</p>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -266,4 +256,4 @@ function PestaDemokrasi() {
   );
 }
 
-export default PestaDemokrasi;
+export default PengumumanCalonAnggota;

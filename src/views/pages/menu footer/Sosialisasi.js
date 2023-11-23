@@ -21,7 +21,7 @@ const Sosialisasi = () => {
         }}
       >
         <div className="pmbngks-img">
-          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+          <a href="/dialog-interaktif-isu-pemilu-di-sosial-media">
             <div className="wrapper1">
               <div className="wrap-img1">
                 <div className="wrap-opacity1">
@@ -49,7 +49,7 @@ const Sosialisasi = () => {
               </div>
             </div>
           </a>
-          <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/">
+          <a href="/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024">
             {" "}
             <div className="wrapper2">
               <div className="wrap-img2">
@@ -83,8 +83,7 @@ const Sosialisasi = () => {
 
           <div className="wrapper3">
             <div className="pmbngks-img2">
-              <a href="">
-                {" "}
+              <a href="/bawaslu-boyolali-adakan-rakor-penanganan-pelanggaran-bersama-panwaslu-kecamatan">
                 <div className="wrap-img3">
                   <div className="wrap-opacity3">
                     <div className="wrap-text3">

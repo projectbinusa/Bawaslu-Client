@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 
-function GpAnsor() {
+function PaswasluKecamatan() {
   return (
     <>
       <Navbar />
@@ -11,7 +11,8 @@ function GpAnsor() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
+                Bawaslu Boyolali Adakan Rakor Penanganan Pelanggaran Bersama
+                Panwaslu Kecamatan
               </h1>
               <div className="row">
                 <div className="">
@@ -93,7 +94,7 @@ function GpAnsor() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-06-at-11.03.37.jpeg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230330094921.jpeg"
                     alt="img"
                   />
                 </div>
@@ -114,111 +115,97 @@ function GpAnsor() {
                   </ul>
                 </div>
                 <p>
-                  Boyolali-Pimpinan Anak Cabang Gerakan Pemuda Ansor (PAC GP
-                  Ansor) Kecamatan Musuk berkomitmen untuk turut ambil bagian
-                  dalam menghadirkan Pemilu Serentak Tahun 2024 yang demokratis
-                  dan bermartabat. Komitmen tersebut menjadi bagian yang
-                  tertuang dalam naskah kerja sama antara PAC GP Ansor dan
-                  Panitia Pengawas Pemilu Kecamatan ( Panwaslu ) dalam acara
-                  Rapat Koordinasi Bersama Forum Masyarakat Se-Kecamatan Musuk
-                  pada Sabtu (4/10/2023) di komplek Masjid Baiturohman Desa
-                  Kembangsari.
+                  Tahapan Pemilu Serentak Tahun 2024 sudah dimulai, Bawaslu
+                  sebagai lembaga Pengawas Pemilu telah melakukan berbagai
+                  persiapan dalam rangka melaksanakan tugas dan fungsinya. Salah
+                  satunya adalah dengan memberikan pembekalan dan pemahaman
+                  terkait hal-hal yang berhubungan dengan teknis penanganan
+                  pelanggaran dan peraturan serta perundang-undangan Pemilu.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+              <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
+                            Bawaslu Boyolali Tandatangani NPHD Pendanaan
+                            Pemilukada 2024
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
+                          GP Ansor dan Panwaslu Musuk Jalin Kerjasama
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
-                                Bawaslu Boyolali Tandatangani NPHD Pendanaan
-                                Pemilukada 2024
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama/">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                          Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
+                          Pengawasan Pemilu Partisipatif
+                        </a>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi">
+                          KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu Boyolali
+                          Turut Hadir dan Mengawasi
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Sebelum dilakukan penandatanganan kerja sama antara PAC GP
-                  Ansor dan Panwaslu Musuk, di tempat yang sama juga digelar
-                  diskusi serta sosialisasi pengawasan partisipatif yang diikuti
-                  oleh anggota Banser dan Ansor Kecamatan Musuk. Anggota
-                  Panwaslu Kecamatan Musuk hadir sebagai narasumber diantaranya
-                  S Murdaka Ketua Panwaslu Kecamatan Musuk Kordiv SDM Data dan
-                  Informasi, Sayuk Susilo Kordiv Pencegahan Hukum Parmas dan
-                  Hubal serta Fidha Maryati Kordiv Penanganan Pelanggaran.
-                </p>
-                <img
-                  src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-07-at-09.57.48-1024x768.jpeg"
-                  alt=""
-                />
-                <p>
-                  Ketua Panwaslu Musuk S Murdaka mengapresiasai PAC GP Ansor
-                  Musuk yang telah berkomitmen turut serta mensukseskan pemilu
-                  maupun pemilihan dengan menghadirkan suasana pemilu yang
-                  demokratis dan bermartabat. Kerja sama ini merupakan bukti
-                  partisipasi masyarakat yang tinggi dalam mensukseskan pemilu
-                  khususnya Pemilu 2024 yang saat ini akan memasuki tahapan masa
-                  kampanye.{" "}
+                  Rabu (29/3) Bawaslu Kabupaten Boyolali menyelenggarakan Rapat
+                  Koordinasi Penanganan Pelanggaran Bersama Panwaslu Se
+                  Kecamatan Boyolali, kegiatan dilaksanakan di Aula Kantor
+                  Bawaslu Kabupaten Boyolali dengan 44 peserta undangan.
                 </p>
                 <p>
-                  “Kami sangat mengapresiasi peran teman-teman GP Ansor untuk
-                  turut serta mengawal tegaknya demokrasi khususnya dalam even
-                  pemilu dan pemilihan. Keterlibatan GP Ansor yang tersebar di
-                  semua desa ini tentu akan mampu membawa pemilu lebih baik,”
-                  kata Murdaka.
+                  Pada pembukaan acara, Taryono selaku Ketua Bawaslu Kabupaten
+                  Boyolali, menyampaikan ucapan Bulan Suci Ramadhan kepada
+                  peserta undangan dan juga memberikan gambaran-gambaran terkait
+                  beberapa Pelanggaran Pemilu yang sudah pernah terjadi pada
+                  Pemilu tahun sebelumnya.
                 </p>
                 <p>
-                  Sementara itu perwakilan PAC GP Ansor Musuk Sarwoto Khoirudin
-                  mengaku pihaknya akan turut serta mengambil peran dalam setiap
-                  kegiatan pemilu dan pemilihan. Ansor dengan kadernya siap
-                  berperan di berbagai wilayah, siap menjadi bagian dalam
-                  penyelenggaraan pemilu, kegiatan pemantauan pemilu, pendidikan
-                  pemilih dan demokrasi, maupun juga menyiapkan kader-kader yang
-                  berminat menjadi peserta pemilu.
+                  Selanjutnya, pada kegiatan tersebut pemaparan materi
+                  disampaikan oleh Widodo selaku Kordiv Hukum dan Penanangan
+                  Pelanggaran, pada pertemuan ini ia menyampaikan materi terkait
+                  Alur Penanganan Pelanggaran Pemilu Berdasarkan Perbawaslu 7
+                  Tahun 2022 dan juga memaparkan materi yang berjudul Tindak
+                  Pidana Pemilu Berdasarkan UU No. 7 Tahun 2017
                 </p>
-                <p>Adapun tujuan dibangunya kerja sama ini adalah guna meningkatkan pemahaman masyarakat Musuk tentang perlunya tahapan pemilu diawasi secara seksama agar apabila ada tindakan yang bisa menimbulkan adanya potensi pelanggaran maka akan dapat dicegah, dengan demikian pemilu akan berjalan secara demokratis dan bermartabat.</p>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -289,4 +276,4 @@ function GpAnsor() {
   );
 }
 
-export default GpAnsor;
+export default PaswasluKecamatan;

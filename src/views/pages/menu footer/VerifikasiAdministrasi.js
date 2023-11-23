@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 
-function TandatgnNPHD() {
+function VerifikasiAdministrasi() {
   return (
     <>
       <Navbar />
@@ -11,7 +11,8 @@ function TandatgnNPHD() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                Bawaslu Boyolali Tandatangani NPHD Pendanaan Pemilukada 2024
+                Bawaslu Mengawasi Verifikasi Administrasi Perbaikan Dokumen
+                Persyaratan Bakal Calon DPRD Kab/Kota
               </h1>
               <div className="row">
                 <div className="">
@@ -93,7 +94,7 @@ function TandatgnNPHD() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-10-at-11.37.08.jpeg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718120146.jpeg"
                     alt="img"
                   />
                 </div>
@@ -114,95 +115,90 @@ function TandatgnNPHD() {
                   </ul>
                 </div>
                 <p>
-                  Boyolali – Pemerintah Daerah Kabupaten Boyolali bersama dengan
-                  Komisi Pemilhan Umum dan Badan Pengawas Pemilu (Bawaslu)
-                  Kabupaten Boyolali melakukan Penandatanganan Naskah Perjanjian
-                  Hibah Daerah Pendanaan Pemilihan Bupati dan Wakil Bupati
-                  Boyolali Tahun 2024, di Ruang Nakula Kantor Bupati Boyolali,
-                  Jum’at (10/11/2023).
+                  Boyolali Verifikasi administrasi perbaikan dokumen persyaratan
+                  bakal calon anggota DPR, DPRD Provinsi dan DPRD Kabupaten/Kota
+                  telah dilaksanakan sejak tanggal 10 Juli 2023 sampai dengan 6
+                  Agustus 2023 mendatang.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+                <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
+                            Bawaslu Boyolali Tandatangani NPHD Pendanaan
+                            Pemilukada 2024
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
+                          GP Ansor dan Panwaslu Musuk Jalin Kerjasama
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Ciptakan Pemilu 2024 Bermartabat, Panwascam
-                                Tamansari Ajak Pemuda/Pemudi untuk Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                          Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
+                          Pengawasan Pemilu Partisipatif
+                        </a>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi">
+                          KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu Boyolali
+                          Turut Hadir dan Mengawasi
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
                 <p>
-                  Penandatanganan dilakukan oleh Pejabat Bupati Boyolali M Said
-                  Hidayat dengan Ketua KPU Kabupaten Boyolali serta Ketua
-                  Bawaslu Kabupaten Boyolali.
-                </p>
-                <img
-                  src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-10-at-11.37.14-1024x768.jpeg"
-                  alt=""
-                />
-                <p>
-                  Dijelaskan oleh Kepala Badan Kesatuan Bangsa dan Politik Hibah
-                  Penyelenggaraan Pemilihan Bupati dan Wakil Bupati Boyolali
-                  Tahun 2024 akan dicairkan melalui dua tahap, yakni Tahun
-                  Anggaran 2023 dan Tahun Anggaran 2024.
+                  Selasa (18/7) Bawaslu Boyolali mengawasi proses verifikasi
+                  administrasi perbaikan dokumen persyaratan bakal calon anggota
+                  DPRD Kabupaten/Kota, juga Bawaslu memastikan KPU Boyolali
+                  melaksanakan verifikasi administrasi perbaikan dokumen
+                  persyaratan bakal calon sesuai dengan peraturan yang berlaku.
                 </p>
                 <p>
-                  Bupati Boyolali M Said Hidayat juga menyampaikan bahwa
-                  Penandatanganan NPHD ini merupakan komitmen serius Pemerintah
-                  Daerah Kabupaten Boyolali dalam mendukung dan mensukseskan
-                  pelaksanaan Pemilukada 2024 agar berjalan dengan naman,
-                  lancar, damai dan kondusif sesuai tahapan yang telah
-                  direncanakan.
-                </p>
-                <p>
-                  Keberhasilan pelaksanaan Pemilukada bukan hanya menjadi
-                  tanggung jawab dan kewajiban KPU dan Bawaslu saja, namun juga
-                  merupakan tugas bersama.
+                  Pada pengawasan proses tahapan tersebut, sebelumnya juga telah
+                  terbit Surat Edaran Bawaslu RI Nomor 38 Tahun 2023 tentang
+                  Petunjuk Pelaksanaan Pengawasan Verifikasi Administrasi
+                  Perbaikan Dokumen Persyaratan Bakal Calon Anggota Dewan
+                  Perwakilan Rakyat, Bakal Calon Dewan Perwakilan Rakyat Daerah
+                  Provinsi dan Dewan Perwakilan Rakyat Daerah Kabupaten/Kota.
+                  Surat Edaran diterbitkan dengan maksud untuk menjadi petunjuk
+                  teknis dalam pelaksanaan pengawasan pada proses tahapan.
                 </p>
               </div>
             </div>
@@ -274,4 +270,4 @@ function TandatgnNPHD() {
   );
 }
 
-export default TandatgnNPHD;
+export default VerifikasiAdministrasi;

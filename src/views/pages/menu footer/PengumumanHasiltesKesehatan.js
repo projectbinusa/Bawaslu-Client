@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
 
-function PenandatangananMou() {
+function PengumumanHasiltesKesehatan() {
   return (
     <>
       <Navbar />
@@ -11,27 +11,29 @@ function PenandatangananMou() {
           <div class="row">
             <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
-                Bawaslu Boyolali Bersama UNS lakukan Penandatanganan MoU{" "}
+                Pengumuman Hasil Tes Kesehatan dan Tes Wawancara Serta Jadwal
+                Uji Kelayakan dan Kepatutan Calon Anggota Bawaslu Kab/Kota
+                Provinsi Jawa Tengah Zona III.
               </h1>
               <div className="row">
                 <div className="">
                   <p>
-                    <i class="fa-regular fa-user"></i> by Bawaslu Boyolali - 3
+                    <i class="fa-regular fa-user"></i> by Bawaslu Boyolali - 18
                     Agustus 2023
                   </p>
                 </div>
                 <div className="">
-                  <p>in Berita, Kehumasan, Pencegahan, Sosialisasi</p>
+                  <p>in Berita, , Pengumuman</p>
                 </div>
                 {/* <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div>
-            <div className="col-3">
-              <p>All</p>
-            </div> */}
+                <p>All</p>
+              </div>
+              <div className="col-3">
+                <p>All</p>
+              </div>
+              <div className="col-3">
+                <p>All</p>
+              </div> */}
               </div>
               <hr className="mt-0" />
               <div class="single-blog-inner">
@@ -93,7 +95,7 @@ function PenandatangananMou() {
                 <div class="thumb">
                   <img
                     style={{ height: "450px" }}
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531.jpeg"
+                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230801113457.jpg"
                     alt="img"
                   />
                 </div>
@@ -114,74 +116,77 @@ function PenandatangananMou() {
                   </ul>
                 </div>
                 <p>
-                  Boyolali – Dalam rangka Pelaksanaan Tri Dharma Perguruan
-                  Tinggi PUSDEMTANAS LPPM UNS, Jum#39;at (14/7) Bawaslu Boyolali
-                  menghadiri Undangan dari Dr. Sunny Ummul Firdaus, S.H.,M.H
-                  selaku Kepala Pusdemtanas LPPM untuk melakukan penandatangan
-                  MoU tentang Pelaksanaan Tri Dharma Perguruan Tinggi Yang
-                  Meliputi Pendidikan, Penelitian, dan Pengabdian Kepada
-                  Masyarakat, Serta Pengembangan Kelembagaan.
+                  Pengumuman Hasil Tes Kesehatan dan Tes Wawancara Serta Jadwal
+                  Uji Kelayakan dan Kepatutan Calon Anggota Bawaslu Kab/Kota
+                  Provinsi Jawa Tengah Zona III.
                 </p>
               </div>
               <div class="jnews_inline_related_post">
-                <div>
-                  <div class="">
-                    <h3 class="">
-                      <span>Related Posts</span>
-                    </h3>
+                <h4 className="pt-4 mb-4">Related Posts</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>
+                          <a href="/pengumuman-calon-anggota-bawaslu-kabupaten-kota-terpilih-provinsi-jawa-tengah">
+                            Pengumuman Calon Anggota Bawaslu Kabupaten/Kota
+                            Terpilih Provinsi Jawa Tengah.
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/pengumuman-tes-wawancara-seleksi-calon-anggota-bawaslu-kab-kota-2023-provinsi-jawa-tengah-zona-iii">
+                          Pengumuman Tes Wawancara Seleksi Calon Anggota Bawaslu
+                          Kab/Kota 2023 Provinsi Jawa Tengah Zona III
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="jeg_block_container">
-                    <div class="jeg_posts ">
-                      <div class="jeg_postsmall jeg_load_more_flag">
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024">
-                                Bawaslu Boyolali Tandatangani NPHD Pendanaan
-                                Pemilukada 2024
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama">
-                                GP Ansor dan Panwaslu Musuk Jalin Kerjasama
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif/">
-                                Bawaslu Boyolali Ajak Masyarakat Terlibat Dalam
-                                Pengawasan Pemilu Partisipatif
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
-                        <article class="jeg_post jeg_pl_xs format-standard">
-                          <div class="jeg_postblock_content">
-                            <h5 class="jeg_post_title">
-                              <a href="https://boyolali.bawaslu.go.id/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi/">
-                                KPU Boyolali Gelar Kirab Pemilu 2024, Bawaslu
-                                Boyolali Turut Hadir dan Mengawasi
-                              </a>
-                            </h5>
-                          </div>
-                        </article>
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                          Pengumuman Hasil Tes Tertulis dan Tes Psikologi Calon
+                          Anggota Bawaslu Kab/Kota Provinsi Jawa Tengah Zona III
+                        </a>
+                      </div>
+                    </div>
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <a href="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota">
+                          Pengumuman Perpanjangan Hasil Tes Tertulis dan Tes
+                          Psikologi dan Perubahan Waktu Pelaksanaan Tes
+                          Kesehatan Calon Anggota Bawaslu Kab/Kota
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <hr />
                 <p>
-                Melihat Pemilu Serentak 2024 nanti akan banyak pemilih di usia muda akan lebih baik dilakukan kesepakatan bersama. Karena pada setiap proses tahapan pemilu, Bawaslu selalu melibatkan masyarakat untuk turut berpartisipasi dalam pengawasan.
-                </p>
-                <p>
-                Kesepakatan sama ini dimaksudkan untuk membina hubungan baik antar lembaga dalam rangka meningkatkan kapasitas dan kemampuan kedua lembaga juga bertujuan untuk menerapkan dan mengembangkan pendidikan, penelitian, dan pengabdian kepada masyarakat, serta potensi sumber daya untuk optimalisasi pengembangan kelembagaan di lingkungan masing-masing.
+                  Untuk selengkapanya, silahkan Download pada Link di bawah ini.
                 </p>
               </div>
             </div>
@@ -253,4 +258,4 @@ function PenandatangananMou() {
   );
 }
 
-export default PenandatangananMou;
+export default PengumumanHasiltesKesehatan;
