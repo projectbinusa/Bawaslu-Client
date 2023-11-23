@@ -68,6 +68,7 @@ import PengumumanPelaksanaan from "./views/pages/menu footer/PengumumanPelaksana
 import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSeleksi";
 import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
 import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
+import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
 // test
 function App() {
   return (
@@ -188,6 +189,7 @@ function App() {
           />
           <Route path="/tak-berkategori" component={TakBerkategori} exact />
           <Route path="/OSDM-dan-Diklat" component={OSDMdanDiklat} exact />
+          <Route path="/pengumuman-footer" component={PengumumanFooter} exact />
           <Route
             path="/dialog-interaktif-isu-pemilu-di-sosial-media"
             component={DialogKehumasan}
