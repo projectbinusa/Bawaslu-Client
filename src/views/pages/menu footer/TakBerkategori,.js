@@ -21,7 +21,7 @@ const TakBerkategori = () => {
         }}
       >
         <div id="pmbngks-img-berkategori" className="pmbngks-img">
-          <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
+          <a href="/panwaslu-kecamatan-karanggede-lakukan-kegiatan-sosialisasi-denga-pemilih-pemula">
             <div id="wrapper1-berkategori" className="wrapper1">
               <div id="wrap-img-berkategori" className="wrap-img1">
                 <div id="wrap-opacity1-berkategori" className="wrap-opacity1">
