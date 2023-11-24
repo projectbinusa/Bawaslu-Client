@@ -47,7 +47,7 @@ import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdminist
 import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
 import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
 import GpAnsor from "./views/pages/menu footer/GpAnsor"
-import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
+
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
@@ -57,17 +57,7 @@ import Index from "./views/pages/admin/informasi/Index";
 
 import AddMenuRegulasi from "./views/pages/admin/informasi/AddMenuRegulasi";
 // import AddMenuRegulasi "./"
-import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
-import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
-import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
-import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
-import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
-import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
-import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
-import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
-import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
-import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
-import GpAnsor from "./views/pages/menu footer/GpAnsor";
+
 import PemiluPartisipatif from "./views/pages/menu footer/PemiluPartisipatif";
 import Kpu from "./views/pages/menu footer/Kpu";
 import PemiluBermartabat from "./views/pages/menu footer/PemiluBermartabat";
@@ -192,11 +182,7 @@ function App() {
           <Route path="/kehumasan" component={Kehumasan} exact />
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
-          <Route
-            path="/penyelesaian-sengketa-footer"
-            component={PenyelesaianSengketaFooter}
-            exact
-          />
+          
           <Route
             path="/penanganan-pelanggaran"
             component={PenangananPelanggaran}
@@ -243,6 +229,76 @@ function App() {
           <Route
             path="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama"
             component={GpAnsor}
+            exact
+          />
+          <Route
+            path="/pemilu-partisipatif"
+            component={PemiluPartisipatif}
+            exact
+          />
+          <Route
+            path="/kpu"
+            component={Kpu}
+            exact
+          />
+          <Route
+            path="/pemilu-bermartabat"
+            component={PemiluBermartabat}
+            exact
+          />
+          <Route
+            path="/kecamatan-selo"
+            component={KecamatanSelo}
+            exact
+          />
+          <Route
+            path="/kampanye-pemilu"
+            component={KampanyePemilu}
+            exact
+          />
+          <Route
+            path="/perkuat-pemahaman"
+            component={PerkuatPemahaman}
+            exact
+          />
+          <Route
+            path="/pengumuman-calon-anggota-bawaslu"
+            component={PengumumanCalonAnggota}
+            exact
+          />
+          <Route
+            path="/pengumumn-hasil-kesehatan"
+            component={PengumumanHasiltesKesehatan}
+            exact
+          />
+          <Route
+            path="/pengumuman-hasil-tes-wawancara"
+            component={PengumumanHasiltesWawancara}
+            exact
+          />
+          <Route
+            path="/pengumuman-perpanjangan-tes-tertulis"
+            component={PengumumanPerpanjangantesTertulis}
+            exact
+          />
+          <Route
+            path="/pengumuman-pelaksanaan-tes-psikologi"
+            component={PengumumanPelaksanaan}
+            exact
+          />
+          <Route
+            path="/pengumuman-hasil-seleksi"
+            component={PengumumanHasilSeleksi}
+            exact
+          />
+          <Route
+            path="/pengumuman-lowongan-pekerjaan"
+            component={PengumumanLowonganSatpam}
+            exact
+          />
+          <Route
+            path="/penyelesaian-sengketa-footer"
+            component={PenyelesaianSengketaFooter}
             exact
           />
         </Switch>
