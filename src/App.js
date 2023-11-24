@@ -72,6 +72,7 @@ import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSel
 import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
 import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
 import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
+import Kanal from "./views/pages/informasi/Kanal";
 // test
 function App() {
   return (
@@ -152,6 +153,7 @@ function App() {
           <Route path="/admin-pengumuman" component={AdminPengumuman} exact />
           <Route path="/add-pengumuman" component={AddPengumuman} exact />
           <Route path="/edit-pengumuman/:id" component={EditPengumuman} exact />
+          <Route path="/kanal" component={Kanal} exact />
           <Route
             path="/admin-permohonan-informasi"
             component={AdminPermohonanInformasi}

@@ -108,7 +108,7 @@ const OSDMdanDiklat = () => {
                     </div>
                     <div id="logo" className="logo">
                         <div id="h3" className="h3">
-                            <h3>
+                            <h3 className="h3-tautan" id="tautan">
                                 TAUTAN <span className="span" >LEMBAGA</span>
                             </h3>
                             <hr id="hhr" className="hrr" />

@@ -181,7 +181,7 @@ function Navbar() {
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
                   </li>
                   <li>
-                    <a href="">Kanal Pengawasan Pemilu</a>
+                    <a href="/kanal">Kanal Pengawasan Pemilu</a>
                   </li>
                 </ul>
               </li>
