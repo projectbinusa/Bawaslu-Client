@@ -44,7 +44,7 @@ import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
 
 import Index from "./views/pages/admin/informasi/Index";
 
-import AddMenuRegulasi from "./views/pages/admin/informasi/AddMenuRegulasi";
+import AddMenuRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/AddMenuRegulasi";
 // import AddMenuRegulasi "./"
 import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
 import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
@@ -72,6 +72,14 @@ import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSel
 import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
 import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
 import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
+import AddJenisKeterangan from "./views/pages/admin/informasi/AddJenisKeterangan";
+import EditJenisKeterangan from "./views/pages/admin/informasi/EditJenisKeterangan";
+import IsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/IsiKeterangan";
+import AddIsiKeteranganInformasi from "./views/pages/admin/informasi/isiKeterangan/AddIsiKeteranganInformasi";
+import EditIsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/EditIsiKeterangan";
+import RegulasiAdmin from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuRegulasi";
+import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
+import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 // test
 function App() {
   return (
@@ -162,8 +170,12 @@ function App() {
             component={AdminPermohonanKeberatan}
             exact
           />
-          <Route path="/admin/:jenisRegulasi/:id" component={Index} exact />
+          {/* daftar regulasi */}
+          <Route path="/admin/:jenisRegulasi/:id" component={MenuRegulasi} exact />
           <Route path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
+          <Route path="/edit/:menuRegulasi/:id" component={EditRegulasi} exact />
+          <Route path="/add/:menuRegulasi/:id" component={RegulasiAdmin} exact />
+          <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact />
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
             path="/detail-permohonan-informasi/:id"
@@ -175,6 +187,17 @@ function App() {
             component={DetailPermohonanKeberatan}
             exact
           />
+             {/* admin informasi */}
+          <Route path="/admin/:namaInformasi/:id" component={Index} exact />
+          <Route
+            path="/tambah-jenis-keterangan"
+            component={AddJenisKeterangan}
+            exact
+          />
+          <Route path="/edit-jenis-keterangan/:keterangan/:id" component={EditJenisKeterangan} exact />
+          <Route path="/isi-keterangan/:keterangan/:id" component={IsiKeterangan} exact />
+          <Route path="/tambah-isi-keterangan/:id" component={AddIsiKeteranganInformasi} exact />
+          <Route path="/edit-isi-keterangan/:id" component={EditIsiKeterangan} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />

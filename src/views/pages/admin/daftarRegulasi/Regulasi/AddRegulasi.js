@@ -1,55 +1,54 @@
-import React from "react";
-import Footer from "../../../../component/Footer";
-import Sidebar from "../../../../component/Sidebar";
-import Header from "../../../../component/Header";
-import { useState } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom";
-import axios from "axios";
-import { API_DUMMY } from "../../../../utils/base_URL";
-import { useEffect } from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import Footer from "../../../../../component/Footer";
+import Header from "../../../../../component/Header";
+import Sidebar from "../../../../../component/Sidebar";
 import Swal from "sweetalert2";
+import { API_DUMMY } from "../../../../../utils/base_URL";
+import axios from "axios";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-function AddIsiKeteranganInformasi() {
+function AddRegulasi() {
+  const [idMenuRegulasi, setIdMenuRegulasi] = useState(0);
   const [dokumen, setDokumen] = useState("");
-  const [jenisKeterangan, setJenisKeterangan] = useState();
-  const [keterangan, setKeterangan] = useState([]);
-  const [upload, setUpload] = useState("");
+  const [pdfDokumen, setPdfDokumen] = useState("");
+  const history = useHistory();
   const [show, setShow] = useState(false);
+  const [regulasi, setRegulasi] = useState([]);
+  const param = useParams();
 
-  const getKeterangan = async () => {
+
+  const getByMenuRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/all`,
+        `${API_DUMMY}/bawaslu/api/get-by-menu-regulasi?id-menu-regulasi=` + param.id,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
-      setKeterangan(response.data.data);
-      console.log(response.data.data);
+      setRegulasi(response.data.data);
+    //   console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
-  };
+  }
 
-  useEffect(() => {
-    getKeterangan();
-  }, []);
 
-  const add = async (e) => {
+  const addData = async (e) => {
     e.preventDefault();
     e.persist();
 
     const formData = new FormData();
+    formData.append("idMenuRegulasi", idMenuRegulasi);
     formData.append("dokumen", dokumen);
-    formData.append("jenisKeterangan", jenisKeterangan);
-    formData.append("file", upload);
+    formData.append("upload", pdfDokumen);
 
     try {
       await axios.post(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/add`,
-        formData,
+        `${API_DUMMY}/bawaslu/api/regulasi/add`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -65,7 +64,7 @@ function AddIsiKeteranganInformasi() {
         timer: 1500,
       });
       // //console.log(data);
-      //   history.push("/admin-pengumuman");
+      history.push("/admin/ ");
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -74,6 +73,9 @@ function AddIsiKeteranganInformasi() {
     }
   };
 
+  useEffect(() => {
+    getByMenuRegulasi();
+  }, []);
   return (
     <div>
       <Header />
@@ -84,48 +86,52 @@ function AddIsiKeteranganInformasi() {
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>
               <hr />
-              <form onSubmit={add}>
+              <form onSubmit={addData}>
                 <div className="row">
-                  <div className="col-6">
-                    <label className="form-label">Jenis Keterangan</label>
+                  <div class="mb-3 col-6">
+                    <label for="exampleInputPassword1" class="form-label">
+                      Jenis Regulas
+                    </label>
                     <select
                       class="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setJenisKeterangan(e.target.value)}>
-                      <option selected>PIlih Jenis Keterangan</option>
-                      {keterangan.map((down) => {
+                      onChange={(e) => setIdMenuRegulasi(e.target.value)}>
+                      <option selected>PIlih Jenis Regulasi</option>
+                      {regulasi.map((down) => {
                         return (
-                          <option value={down.id}>{down.keterangan}</option>
+                          <option value={down.id}>{down.MenuRegulasi}</option>
                         );
                       })}
                     </select>
                   </div>
+
                   <div class="mb-3 col-6">
-                    <label for="exampleInputEmail1" class="form-label">
-                      Keterangan
+                    <label for="exampleInputPassword1" class="form-label">
+                      Dokumen
                     </label>
                     <input
-                      type="text"
-                      class="form-control"
                       value={dokumen}
                       onChange={(e) => setDokumen(e.target.value)}
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
                     />
                   </div>
                   <div class="mb-3 col-6">
-                    <label for="exampleInputEmail1" class="form-label">
-                      File
+                    <label for="exampleInputPassword1" class="form-label">
+                      Gambar Dokumen
                     </label>
                     <input
+                      onChange={(e) => setPdfDokumen(e.target.files[0])}
                       type="file"
                       class="form-control"
-                      onChange={(e) => setUpload(e.target.files[0])}
+                      id="exampleInputPassword1"
                     />
                   </div>
                 </div>
-                <button type="button" class="btn-danger mt-3 mr-3">
-                  <a
-                    href="/admin-pengumuman"
-                    style={{ color: "white", textDecoration: "none" }}>
+                <button type="submit" class="btn-danger mt-3 mr-3">
+                  <a href="" style={{ color: "white", textDecoration: "none" }}>
+                    {" "}
                     Batal
                   </a>
                 </button>
@@ -142,4 +148,4 @@ function AddIsiKeteranganInformasi() {
   );
 }
 
-export default AddIsiKeteranganInformasi;
+export default AddRegulasi;
