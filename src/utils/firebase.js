@@ -15,4 +15,4 @@ import { getStorage } from 'firebase/storage'
 
  const storage = getStorage(firebaseConfig);
 
- export default storage;
+ export default storage;   

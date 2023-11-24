@@ -303,8 +303,8 @@ function Berita() {
                     style={{ background: "#F1F6F9", overflow: "hidden" }}>
                     <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
-                      {listTerbaru.map((beritaTerbaru) => {
-                        return (
+                      {/* {listTerbaru.map((beritaTerbaru) => {
+                        return ( */}
                           <li>
                             <div class="media">
                               <div class="media-left">
@@ -316,17 +316,18 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href="">{beritaTerbaru.judulBerita}</a>
+                                  {/* <a href="">{beritaTerbaru.judulBerita}</a> */}
+                                  <a href="">tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</a>
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>
-                                  <span>{beritaTerbaru.createdDate}</span>
+                                  {/* <span>{beritaTerbaru.createdDate}</span> */}
                                 </div>
                               </div>
                             </div>
                           </li>
-                        );
-                      })}
+                        {/* );
+                      })} */}
                     </ul>
                   </div>
                   <div

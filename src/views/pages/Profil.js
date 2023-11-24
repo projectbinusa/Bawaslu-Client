@@ -37,16 +37,17 @@ function Profil() {
         <div class="container">
           <div class="row">
             <div class="col-lg-6 pe-xl-5 align-self-center">
-              <div class="section-title mb-0">
+              {/* <div class="section-title mb-0"> */}
                 <h2 class="title">Profile</h2>
-                <p id="content" class="content">
+                <p id="content" class="content"></p>
+                <p class="overflow-ellipsis">
                   Badan Pengawas Pemilu adalah lembaga negara yang memiliki
                   tugas pokok dan fungsi melakukan pengawasan terhadap seluruh
                   tahapan pemilihan umum . Melalui website ini, kami akan selalu
                   memperbaharui informasi terkait pengawasan dan pemantauan
                   pemilu.
                 </p>
-              </div>
+              {/* </div> */}
               <div class="accordion mt-4" id="accordionExample">
                 <div class="accordion-item single-accordion-inner style-2">
                   <h2 class="accordion-header" id="headingOne">

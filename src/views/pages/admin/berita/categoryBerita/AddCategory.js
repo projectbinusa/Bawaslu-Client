@@ -1,23 +1,23 @@
 import React from "react";
-import Header from "../../../../component/Header";
-import Sidebar from "../../../../component/Sidebar";
-import Footer from "../../../../component/Footer";
-import { API_DUMMY } from "../../../../utils/base_URL";
+import Header from "../../../../../component/Header";
+import Sidebar from "../../../../../component/Sidebar";
+import Footer from "../../../../../component/Footer";
+import { API_DUMMY } from "../../../../../utils/base_URL";
 import axios from "axios";
 import Swal from "sweetalert2";
 import { History } from "swiper/modules";
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { List } from "@mui/material";
 import { useEffect } from "react";
 
-function AddBeritaAdmin() {
+function AddCategory() {
   const [author, setAuthor] = useState("");
   const [judulBerita, setJudulBerita] = useState("");
+  const [tags, setTags] = useState("");
   const [image, setImage] = useState("");
-  const [categoryId, setCategoryId] = useState(0);
-  const [category, setCategory] = useState([]);
   const [isiBerita, setIsiBerita] = useState("");
+  const [category, setCategory] = useState([]);
+  const [idCategory, setidCategory] = useState([]);
   const [show, setShow] = useState(false);
   const history = useHistory();
 
@@ -26,12 +26,11 @@ function AddBeritaAdmin() {
     e.persist();
 
     const formData = new FormData();
-formData.append("author", author);
-formData.append("judulBerita", judulBerita);
-formData.append("isiBerita", isiBerita);
-formData.append("categoryIdBerita", categoryId);
-formData.append("file", image, image.name); // Menambahkan nama file ke FormData
-
+    formData.append("author", author);
+    formData.append("judulBerita", judulBerita);
+    formData.append("isiBerita", isiBerita);
+    formData.append("file", image);
+    formData.append("tags", tags);
     try {
       await axios.post(`${API_DUMMY}/bawaslu/api/berita/add`, formData, {
         headers: {
@@ -56,21 +55,7 @@ formData.append("file", image, image.name); // Menambahkan nama file ke FormData
     }
   };
 
-  const getAllCategoryId = async () => {
-    try {
-      const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all`
-      );
-      setCategory(response.data.data);
-      console.log(response.data.data);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-  };
-
-  useEffect(() => {
-    getAllCategoryId();
-  }, []);
+ 
 
   return (
     <div>
@@ -82,25 +67,8 @@ formData.append("file", image, image.name); // Menambahkan nama file ke FormData
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>
               <hr />
-              <form onSubmit={add}>
+              <form>
                 <div className="row">
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
-                      Category
-                    </label>
-                    <select
-                      class="form-select form-select-sm"
-                      aria-label="Small select example"
-                      onChange={(e) => setCategoryId(e.target.value)}
-                    >
-                      <option selected>PIlih Category</option>
-                      {category.map((down) => {
-                        return (
-                          <option value={down.id}>{down.category}</option>
-                        );
-                      })}
-                    </select>
-                  </div>
                   <div class="mb-3 col-6">
                     <label for="exampleInputEmail1" class="form-label">
                       Author
@@ -117,7 +85,8 @@ formData.append("file", image, image.name); // Menambahkan nama file ke FormData
                       Image
                     </label>
                     <input
-                      onChange={(e) => setImage(e.target.files[0])}
+                      value={image}
+                      onChange={(e) => setImage(e.target.value)}
                       type="file"
                       class="form-control"
                       id="exampleInputPassword1"
@@ -135,6 +104,30 @@ formData.append("file", image, image.name); // Menambahkan nama file ke FormData
                       id="exampleInputPassword1"
                     />
                   </div>
+                  <div class="mb-3 col-6">
+                    <label for="exampleInputPassword1" class="form-label">
+                      Tags
+                    </label>
+                    <input
+                      value={tags}
+                      onChange={(e) => setTags(e.target.value)}
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label for="exampleInputPassword1" class="form-label">
+                      Category
+                    </label>
+                    <input
+                      value={tags}
+                      onChange={(e) => setTags(e.target.value)}
+                      type="text"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
+                  </div>
                   <div className="col-6">
                     <label for="exampleInputPassword1" class="form-label">
                       Isi Berita
@@ -145,8 +138,7 @@ formData.append("file", image, image.name); // Menambahkan nama file ke FormData
                         onChange={(e) => setIsiBerita(e.target.value)}
                         class="form-control"
                         placeholder="Leave a comment here"
-                        id="floatingTextarea2"
-                      ></textarea>
+                        id="floatingTextarea2"></textarea>
                     </div>
                   </div>
                 </div>
@@ -164,4 +156,4 @@ formData.append("file", image, image.name); // Menambahkan nama file ke FormData
   );
 }
 
-export default AddBeritaAdmin;
+export default AddCategory;

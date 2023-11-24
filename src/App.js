@@ -37,6 +37,17 @@ import LayananInformasi from "./views/pages/form/LayananInformasi";
 import PermintaanInformasi from "./views/pages/prosedur/PermintaanInformasi";
 import Dip from "./views/pages/daftarRegulasi/Dip";
 import InformasiStandarProsedur from "./views/pages/daftarRegulasi/InformasiStandarProsedur";
+import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
+import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
+import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
+import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
+import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
+import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
+import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
+import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
+import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
+import GpAnsor from "./views/pages/menu footer/GpAnsor"
+
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
@@ -44,19 +55,9 @@ import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
 
 import Index from "./views/pages/admin/informasi/Index";
 
-import AddMenuRegulasi from "./views/pages/admin/informasi/AddMenuRegulasi";
+import AddMenuRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/AddMenuRegulasi";
 // import AddMenuRegulasi "./"
-import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
-import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
-import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
-import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
-import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
-import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
-import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
-import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
-import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
-import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
-import GpAnsor from "./views/pages/menu footer/GpAnsor";
+
 import PemiluPartisipatif from "./views/pages/menu footer/PemiluPartisipatif";
 import Kpu from "./views/pages/menu footer/Kpu";
 import PemiluBermartabat from "./views/pages/menu footer/PemiluBermartabat";
@@ -73,6 +74,14 @@ import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowong
 import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
 import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
 import Kanal from "./views/pages/informasi/Kanal";
+import AddJenisKeterangan from "./views/pages/admin/informasi/AddJenisKeterangan";
+import EditJenisKeterangan from "./views/pages/admin/informasi/EditJenisKeterangan";
+import IsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/IsiKeterangan";
+import AddIsiKeteranganInformasi from "./views/pages/admin/informasi/isiKeterangan/AddIsiKeteranganInformasi";
+import EditIsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/EditIsiKeterangan";
+import RegulasiAdmin from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuRegulasi";
+import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
+import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 // test
 function App() {
   return (
@@ -164,8 +173,12 @@ function App() {
             component={AdminPermohonanKeberatan}
             exact
           />
-          <Route path="/admin/:jenisRegulasi/:id" component={Index} exact />
+          {/* daftar regulasi */}
+          <Route path="/admin/:jenisRegulasi/:id" component={MenuRegulasi} exact />
           <Route path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
+          <Route path="/edit/:menuRegulasi/:id" component={EditRegulasi} exact />
+          <Route path="/add/:menuRegulasi/:id" component={RegulasiAdmin} exact />
+          <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact />
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
             path="/detail-permohonan-informasi/:id"
@@ -177,17 +190,24 @@ function App() {
             component={DetailPermohonanKeberatan}
             exact
           />
+             {/* admin informasi */}
+          <Route path="/admin/:namaInformasi/:id" component={Index} exact />
+          <Route
+            path="/tambah-jenis-keterangan"
+            component={AddJenisKeterangan}
+            exact
+          />
+          <Route path="/edit-jenis-keterangan/:keterangan/:id" component={EditJenisKeterangan} exact />
+          <Route path="/isi-keterangan/:keterangan/:id" component={IsiKeterangan} exact />
+          <Route path="/tambah-isi-keterangan/:id" component={AddIsiKeteranganInformasi} exact />
+          <Route path="/edit-isi-keterangan/:id" component={EditIsiKeterangan} exact />
           {/* rekap data perbulan */}
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
           <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
           <Route path="/kehumasan" component={Kehumasan} exact />
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
-          <Route
-            path="/penyelesaian-sengketa"
-            component={PenyelesaianSengketa}
-            exact
-          />
+          
           <Route
             path="/penanganan-pelanggaran"
             component={PenangananPelanggaran}
@@ -213,7 +233,7 @@ function App() {
           />
           <Route
             path="/bawaslu-boyolali-adakan-rakor-penanganan-pelanggaran-bersama-panwaslu-kecamatan"
-            component={PaswasluKecamatan}
+            component={PenangananPelanggaran}
             exact
           />
           <Route
@@ -234,6 +254,76 @@ function App() {
           <Route
             path="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama"
             component={GpAnsor}
+            exact
+          />
+          <Route
+            path="/pemilu-partisipatif"
+            component={PemiluPartisipatif}
+            exact
+          />
+          <Route
+            path="/kpu"
+            component={Kpu}
+            exact
+          />
+          <Route
+            path="/pemilu-bermartabat"
+            component={PemiluBermartabat}
+            exact
+          />
+          <Route
+            path="/kecamatan-selo"
+            component={KecamatanSelo}
+            exact
+          />
+          <Route
+            path="/kampanye-pemilu"
+            component={KampanyePemilu}
+            exact
+          />
+          <Route
+            path="/perkuat-pemahaman"
+            component={PerkuatPemahaman}
+            exact
+          />
+          <Route
+            path="/pengumuman-calon-anggota-bawaslu"
+            component={PengumumanCalonAnggota}
+            exact
+          />
+          <Route
+            path="/pengumumn-hasil-kesehatan"
+            component={PengumumanHasiltesKesehatan}
+            exact
+          />
+          <Route
+            path="/pengumuman-hasil-tes-wawancara"
+            component={PengumumanHasiltesWawancara}
+            exact
+          />
+          <Route
+            path="/pengumuman-perpanjangan-tes-tertulis"
+            component={PengumumanPerpanjangantesTertulis}
+            exact
+          />
+          <Route
+            path="/pengumuman-pelaksanaan-tes-psikologi"
+            component={PengumumanPelaksanaan}
+            exact
+          />
+          <Route
+            path="/pengumuman-hasil-seleksi"
+            component={PengumumanHasilSeleksi}
+            exact
+          />
+          <Route
+            path="/pengumuman-lowongan-pekerjaan"
+            component={PengumumanLowonganSatpam}
+            exact
+          />
+          <Route
+            path="/penyelesaian-sengketa-footer"
+            component={PenyelesaianSengketaFooter}
             exact
           />
         </Switch>

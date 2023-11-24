@@ -600,23 +600,7 @@ function Home() {
           })}
 
         </Swiper>
-        <div class="blog-area pd-top-115 pd-bottom-60">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-xl-6 col-lg-7 col-md-9">
-                <div class="section-title text-center">
-                  <h5 class="sub-title double-line">blog Post</h5>
-                  <h2 class="title">Read Our Latest Tips &amp;Tricks</h2>
-                  <p class="content">
-                    Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc
-                    egestas augue atpellentesque laoreet
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="service-area " style={{ background: "#F1F6F9" }}>
+        <div className="service-area pb-5" style={{ background: "#F1F6F9" }}>
           <div className="container">
             <div className="section-title">
               <div className="row">
@@ -624,7 +608,7 @@ function Home() {
               </div>
             </div>
 
-            <div class="how-it-work-area pd-top-115 pd-bottom-90">
+            <div class="how-it-work-area pd-bottom-115">
               <div class="container">
                 <div class="row justify-content-center">
                   <div class="col-lg-6">
@@ -690,7 +674,7 @@ function Home() {
                       <h3>Informasi Berkala</h3>
 
                       <a
-                        className="btn btn-base btn-small text-white bg-primary"
+                        className="btn mb-0 btn-base btn-small text-white bg-primary"
                         href="service-details.html"
                       >
                         Informasi Berkala

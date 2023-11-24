@@ -55,7 +55,7 @@ function Navbar() {
         <div class="container">
           <div class="row">
             <div class="col-lg-3 d-lg-inline-block d-none">
-              <div class="logo">
+              <div class="logo1">
                 <a href="/">
                   <img
                     src="https://boyolali.bawaslu.go.id/cepogo/2023/09/logo.png"
