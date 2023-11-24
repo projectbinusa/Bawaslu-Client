@@ -54,8 +54,35 @@ import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
 
 import Index from "./views/pages/admin/informasi/Index";
+
 import AddMenuRegulasi from "./views/pages/admin/informasi/AddMenuRegulasi";
 // import AddMenuRegulasi "./"
+import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
+import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
+import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
+import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
+import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
+import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
+import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
+import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
+import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
+import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
+import GpAnsor from "./views/pages/menu footer/GpAnsor";
+import PemiluPartisipatif from "./views/pages/menu footer/PemiluPartisipatif";
+import Kpu from "./views/pages/menu footer/Kpu";
+import PemiluBermartabat from "./views/pages/menu footer/PemiluBermartabat";
+import KecamatanSelo from "./views/pages/menu footer/KecamatanSelo";
+import KampanyePemilu from "./views/pages/menu footer/KampanyePemilu";
+import PerkuatPemahaman from "./views/pages/menu footer/PerkuatPemahaman";
+import PengumumanCalonAnggota from "./views/pages/menu footer/PengumumanCalonAnggota";
+import PengumumanHasiltesKesehatan from "./views/pages/menu footer/PengumumanHasiltesKesehatan";
+import PengumumanHasiltesWawancara from "./views/pages/menu footer/PengumumanHasiltesWawancara";
+import PengumumanPerpanjangantesTertulis from "./views/pages/menu footer/PengumumanPerpanjangantesTertulis";
+import PengumumanPelaksanaan from "./views/pages/menu footer/PengumumanPelaksanaan";
+import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSeleksi";
+import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
+import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
+import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
 // test
 function App() {
   return (
@@ -177,6 +204,7 @@ function App() {
           />
           <Route path="/tak-berkategori" component={TakBerkategori} exact />
           <Route path="/OSDM-dan-Diklat" component={OSDMdanDiklat} exact />
+          <Route path="/pengumuman-footer" component={PengumumanFooter} exact />
           <Route
             path="/dialog-interaktif-isu-pemilu-di-sosial-media"
             component={DialogKehumasan}

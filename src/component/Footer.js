@@ -66,7 +66,7 @@ function Footer() {
                     <a href="/pencegahan">Pencegahan</a>
                   </li>
                   <li>
-                    <a href="/pengumuman">Pengumuman</a>
+                    <a href="/pengumuman-footer">Pengumuman</a>
                   </li>
                 </ul>
               </div>
