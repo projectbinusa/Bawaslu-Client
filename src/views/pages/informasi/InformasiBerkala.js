@@ -1920,7 +1920,7 @@ function InformasiBerkala() {
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
                     <div className="">
-                      <h4>Laporan Barang milik Negara</h4>
+                      <h4>Laporan Barang Milik Negara</h4>
                     </div>
                     <div className="col">
                       {/* <button className="btn btn-primary float-end"> Tambah

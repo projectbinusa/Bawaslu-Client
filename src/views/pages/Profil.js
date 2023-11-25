@@ -146,7 +146,7 @@ function Profil() {
                       aria-controls="collapseThree"
                       fdprocessedid="44ky5w"
                     >
-                      Lainya
+                      Lainnya
                     </button>
                   </h2>
                   <div
@@ -210,7 +210,7 @@ function Profil() {
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
             <div class="details">
-              <h5>Atasn PPID</h5>
+              <h5>Atasan PPID</h5>
               <p className="fs-4">Wiyanto, S.Sos., MM.</p>
               <p>Koordinator Seketariat Bawaslu Kabupaten Boyolali. </p>
             </div>
@@ -268,7 +268,7 @@ function Profil() {
                   </div>
                   <div class="details-wrap">
                     <div class="details-inner">
-                      <h4>Imformasi Serta Merta</h4>
+                      <h4>Informasi Serta Merta</h4>
                     </div>
                   </div>
                 </div>
@@ -280,7 +280,7 @@ function Profil() {
                   </div>
                   <div class="details-wrap">
                     <div class="details-inner">
-                      <h4>Infromasi Berkala</h4>
+                      <h4>Informasi Berkala</h4>
                     </div>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ function Profil() {
                   </div>
                   <div class="details-wrap">
                     <div class="details-inner">
-                      <h4>Infromasi Setiap Saat</h4>
+                      <h4>Informasi Setiap Saat</h4>
                     </div>
                   </div>
                 </div>

@@ -103,7 +103,7 @@ const PenangananPelanggaran = () => {
                     <div id="txt-kehumasan" className="txt-kehumasan">
                         <div>
                             <h1>Penanganan Pelanggaran</h1>
-                            <p>Artikel Mengenai Penanganan Pealnggaran di Bawaslu Bpyolali Kabupaten Boyolali</p>
+                            <p>Artikel Mengenai Penanganan Pelanggaran di Bawaslu Boyolali Kabupaten Boyolali</p>
                             <div id="bg-gray" className="bg-gray">
                                 <div id="txt-gray" className="txt-gray">
                                     No Content Available

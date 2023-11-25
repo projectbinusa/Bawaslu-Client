@@ -342,7 +342,7 @@ function November() {
                     class="widget widget_catagory"
                     style={{ background: "#F1F6F9" }}>
                     <h4 class="widget-title">
-                      Tuatan{" "}
+                      Tautan{" "}
                       <span className="text-primary">
                         <strong>Lembaga</strong>
                       </span>
