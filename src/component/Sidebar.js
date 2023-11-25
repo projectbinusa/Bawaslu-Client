@@ -113,7 +113,7 @@ function Sidebar() {
             <li>
               <a>
                 <i class="metismenu-icon pe-7s-diamond"></i>
-                Daftar Informasi Publik
+                Daftar Informasi
                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
               </a>
               <ul>
@@ -135,7 +135,7 @@ function Sidebar() {
             <li>
               <a>
                 <i class="metismenu-icon pe-7s-diamond"></i>
-                
+
                 Daftar Regulasi
                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
               </a>
