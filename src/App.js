@@ -71,7 +71,7 @@ import PengumumanPerpanjangantesTertulis from "./views/pages/menu footer/Pengumu
 import PengumumanPelaksanaan from "./views/pages/menu footer/PengumumanPelaksanaan";
 import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSeleksi";
 import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
-import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
+// import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
 import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
 import Kanal from "./views/pages/informasi/Kanal";
 import AddJenisKeterangan from "./views/pages/admin/informasi/AddJenisKeterangan";
