@@ -73,6 +73,7 @@ import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSel
 import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
 import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
 import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
+import Kanal from "./views/pages/informasi/Kanal";
 import AddJenisKeterangan from "./views/pages/admin/informasi/AddJenisKeterangan";
 import EditJenisKeterangan from "./views/pages/admin/informasi/EditJenisKeterangan";
 import IsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/IsiKeterangan";
@@ -161,6 +162,7 @@ function App() {
           <Route path="/admin-pengumuman" component={AdminPengumuman} exact />
           <Route path="/add-pengumuman" component={AddPengumuman} exact />
           <Route path="/edit-pengumuman/:id" component={EditPengumuman} exact />
+          <Route path="/kanal" component={Kanal} exact />
           <Route
             path="/admin-permohonan-informasi"
             component={AdminPermohonanInformasi}

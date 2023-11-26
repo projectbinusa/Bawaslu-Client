@@ -41,7 +41,7 @@ function Pengumuman() {
                 <h2 class="page-title">Pengumuman</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Pengumuman</li>
                 </ul>
