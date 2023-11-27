@@ -57,8 +57,8 @@ const PenangananPelanggaran = () => {
                         <div id="pembungkusimg2" className="pmbngks-img2">
                             <a href="">
                                 <div>
-                                    <div id="wraper-img3" className="wrap-img3">
-                                        <div id="wrap-opacitry3" className="wrap-opacity3">
+                                    <div id="wraper-img3-penanganan" className="wrap-img3">
+                                        <div id="wrap-opacity3-penanganan" className="wrap-opacity3">
                                             <div id="wrap-text3" className="wrap-text3">
 
                                             </div>
@@ -70,8 +70,8 @@ const PenangananPelanggaran = () => {
 
                             <div>
                                 <a href="">
-                                    <div id="wraper-img4" className="wrap-img4">
-                                        <div id="wrap-opacity3" className="wrap-opacity3">
+                                    <div id="wraper-img4-penanganan" className="wrap-img4">
+                                        <div id="wrap-opacity3-penanganan" className="wrap-opacity3">
                                             <div id="wrap-text3" className="wrap-text3">
 
                                             </div>

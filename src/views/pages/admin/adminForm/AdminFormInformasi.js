@@ -183,7 +183,7 @@ function AdminFormInformasi() {
                 <h2 class="page-title">Form Permohonan Inforamasi</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>form</li>
                 </ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../src/css/Profil.css";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 
@@ -23,7 +24,7 @@ function Profil() {
                 <h2 class="page-title">Profile</h2>
                 <ul class="page-list">
                   <li>
-                    <a href="home">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>Profile</li>
                 </ul>
@@ -38,6 +39,7 @@ function Profil() {
             <div class="col-lg-6 pe-xl-5 align-self-center">
               {/* <div class="section-title mb-0"> */}
                 <h2 class="title">Profile</h2>
+                <p id="content" class="content"></p>
                 <p class="overflow-ellipsis">
                   Badan Pengawas Pemilu adalah lembaga negara yang memiliki
                   tugas pokok dan fungsi melakukan pengawasan terhadap seluruh
@@ -241,6 +243,7 @@ function Profil() {
           </div>
         </div>
       </div>
+      
       <div class="how-it-work-area pd-top-100 pd-bottom-90">
         <div class="container">
           <div class="row justify-content-center">

@@ -23,9 +23,9 @@ const Kehumasan = () => {
                 <div className="pmbngks-img" id="pmbngks-img">
                     <a href="https://boyolali.bawaslu.go.id/dialog-interaktif-isu-pemilu-di-sosial-media/#">
                         <div id="wrapper1" className="wrapper1">
-                            <div id="wrap-img1" className="wrap-img1">
+                            <div id="wrap-img1" className="wrap-img1" style={{backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg')`}}>
                                 <div className="warper-opacity1" id="warper-opacity1">
-                                    <div className="wrap-text1" id="wrapp-text1">
+                                    <div className="wrap-txt1" id="wrapp-text1">
                                         Dialog Interaktif Isu Pemilu di Sosial Media <br /> {" "}
                                         <span>by </span> <span>BAWASLU BOYOLALI</span>
                                         <p className="span-txt" id="span-txt" style={{ color: "white" }}>
@@ -43,7 +43,7 @@ const Kehumasan = () => {
                         </div>
                     </a>
                     <a href="https://boyolali.bawaslu.go.id/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024/"> <div className="wrapper2" id="wrapper2">
-                        <div className="wrap-img2" id="wrap-img2">
+                        <div className="wrap-img2" id="wrap-img2" style={{backgroundImage: `url('https://cdn-assetd.kompas.id/_RPDi5VwPIefC-qflRmJrWMJyiw=/1024x683/https%3A%2F%2Fasset.kgnewsroom.com%2Fphoto%2Fpre%2F2022%2F03%2F22%2F00c1978a-1f12-4201-b172-56b343607484_jpg.jpg')`}}>
                             <div id="wrap-opacity2" className="wrap-opacity2">
                                 <div className="wrap-text2" id="wrap-text2">
                                     Pesta Demokrasi Semakin Dekat, Bawaslu Diminta
@@ -65,8 +65,8 @@ const Kehumasan = () => {
 
                     <div id="warapper3" className="wrapper3">
                         <div className="pmbngks-img2" id="pmbngks-img2">
-                            <a href=""> <div id="wrap-img3" className="wrap-img3">
-                                <div className="wrap-opacity3">
+                            <a href=""> <div id="wrap-img3" className="wrap-img3" style={{ backgroundImage: `url('https://www.denpasarkota.go.id/public/uploads/berita/Berita_230608050837_walikota-jaya-negara-hadiri-serah-terima-kirab-bendera-parpol-pemilu-2024.jpg')`}}>
+                                <div id="wrap-opacity3" className="wrap-opacity3">
                                     <div className="wrap-text3">
 
                                     </div>
@@ -75,7 +75,7 @@ const Kehumasan = () => {
 
                             <div>
                                 <a href="">
-                                    <div className="wrap-img4" id="wrap-img4">
+                                    <div className="wrap-img4" id="wrap-immg4" style={{backgroundImage:`url('https://jatengprov.go.id/wp-content/uploads/2023/02/IMG-20230210-WA0066.jpg')`}}>
                                         <div className="wrap-opacity3">
                                             <div className="wrap-text3">
 
@@ -108,7 +108,7 @@ const Kehumasan = () => {
                     <div className="txt-kehumasan">
                         <div>
                             <h1 id="h1-khmsn">KEHUMASAN</h1>
-                            <p id="p-khmsn">Artikel Mengenai Kehumasan BAwaslu Kabupaten Boyolali</p>
+                            <p id="p-khmsn">Artikel Mengenai Kehumasan Bawaslu Kabupaten Boyolali</p>
                             <div className="bg-gray" id="bg-gray">
                                 <div className="txt-gray">
                                     No Content Available

@@ -78,7 +78,7 @@ function Footer() {
                 {/* <h4 class="widget-title">Useful link</h4> */}
                 <ul>
                   <li>
-                    <a href="/penyelesaian-sengketa-footer">Penyelesaian Sengketa</a>
+                    <a href="/penyelesaian-sengketa">Penyelesaian Sengketa</a>
                   </li>
                   <li>
                     <a href="/sosialisasi">Sosialisasi</a>

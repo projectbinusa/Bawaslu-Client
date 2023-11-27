@@ -73,6 +73,7 @@ import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSel
 import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
 import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
 import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
+import Kanal from "./views/pages/informasi/Kanal";
 import AddJenisKeterangan from "./views/pages/admin/informasi/AddJenisKeterangan";
 import EditJenisKeterangan from "./views/pages/admin/informasi/EditJenisKeterangan";
 import IsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/IsiKeterangan";
@@ -81,6 +82,8 @@ import EditIsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/EditI
 import RegulasiAdmin from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuRegulasi";
 import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
+import CategoryBerita from "./views/pages/CategoryBerita";
+import Informasii from "./views/pages/informasi/Informasii";
 // test
 function App() {
   return (
@@ -96,11 +99,13 @@ function App() {
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route path="/library" component={eLibrary} exact />
           <Route path="/berita" component={Berita} exact />
+          <Route path="/category-berita/:category/:id" component={CategoryBerita} exact />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
+          <Route path="/informasi/:namaInformasi/:id" component={Informasii} exact />
           {/* form online */}
           <Route
             path="/form-permohonan-keberatan"
@@ -161,6 +166,7 @@ function App() {
           <Route path="/admin-pengumuman" component={AdminPengumuman} exact />
           <Route path="/add-pengumuman" component={AddPengumuman} exact />
           <Route path="/edit-pengumuman/:id" component={EditPengumuman} exact />
+          <Route path="/kanal" component={Kanal} exact />
           <Route
             path="/admin-permohonan-informasi"
             component={AdminPermohonanInformasi}
@@ -205,7 +211,7 @@ function App() {
           <Route path="/kehumasan" component={Kehumasan} exact />
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
-          
+
           <Route
             path="/penanganan-pelanggaran"
             component={PenangananPelanggaran}
@@ -319,11 +325,11 @@ function App() {
             component={PengumumanLowonganSatpam}
             exact
           />
-          <Route
+          {/* <Route
             path="/penyelesaian-sengketa-footer"
             component={PenyelesaianSengketaFooter}
             exact
-          />
+          /> */}
         </Switch>
       </main>
     </BrowserRouter>
