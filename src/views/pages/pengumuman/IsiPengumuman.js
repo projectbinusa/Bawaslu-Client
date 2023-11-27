@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import Bawaslu from "../../../component/Bawaslu";
+import { API_DUMMY } from "../../../utils/base_URL";
+import axios from "axios";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom";
 
 function IsiPengumuman() {
+  const [createdDate, setCreatedDate] = useState([]);
+  const [judulPengumuman, setJudulPengumuman] = useState([]);
+  const [author, setAuthor] = useState([]);
+  const [tags, setTags] = useState([]);
+  const [isiPengumuman, setIsiPengumuman] = useState([]);
+  const [image, setImage] = useState([]);
+  const params = useParams();
+  const [id, setId] = useState();
+  const [pengumuman, setPengumuman] = useState({
+    tags: "",
+    image: "",
+    isiPengumuman: "",
+    createdDate: "",
+    author: "",
+    judulPengumuman: "",
+  });
+  useEffect(() => {
+    axios
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + params.id, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((ress) => {
+        const response = ress.data.data;
+        setCreatedDate(response.createdDate);
+        setId(response.id);
+        setIsiPengumuman(response.isiPengumuman);
+        setJudulPengumuman(response.judulPengumuman);
+        setTags(response.tags);
+        setImage(response.image);
+        setAuthor(response.author);
+        console.log(ress.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -53,7 +96,7 @@ function IsiPengumuman() {
                   <div class="details">
                     <ul class="blog-meta">
                       <li>
-                        <i class="far fa-user"></i>By Bawaslu Boyolali
+                        <i class="far fa-user"></i>By {author}
                       </li>
                       <li>
                         <i class="far fa-calendar-alt"></i>19 Agustus 2023
@@ -135,7 +178,7 @@ function IsiPengumuman() {
             </div>
             <div class="col-lg-4 col-12">
               <div class="td-sidebar">
-               <Bawaslu/>
+                <Bawaslu />
                 <div
                   class="widget widget_tag_cloud mb-0"
                   style={{ background: "#F1F6F9" }}
