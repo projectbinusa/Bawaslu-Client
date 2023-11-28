@@ -413,7 +413,7 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href="">{beritaTerbaru.judulBerita}</a>
+                                  <a href={`/page-berita/${beritaTerbaru.judulBerita}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
                                   {/* <a href="">
                                 tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
                               </a> */}
