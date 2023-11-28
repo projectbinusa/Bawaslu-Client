@@ -71,7 +71,7 @@ const Pencegahan = () => {
                             <div id="awrap-img3" className="wrap-img3" style={{backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531-350x250.jpeg')`}}>
                                 <div id="awrap-opacity3" className="wrap-opacity3">
                                     <div id="awrap-text3" className="wrap-text3">
-                                        Bawaslu Boyolali UNS Lakukan Penandatnganan MoU
+                                        Bawaslu Boyolali UNS Lakukan Penandatanganan MoU
                                         <br />
 
                                         <span>by </span> <span>BAWASLU BOYOLALI</span>
