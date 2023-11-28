@@ -84,6 +84,7 @@ import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEd
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 import CategoryBerita from "./views/pages/CategoryBerita";
 import Informasii from "./views/pages/informasi/Informasii";
+import PageBerita from "./views/PageBerita";
 // test
 function App() {
   return (
@@ -323,6 +324,11 @@ function App() {
           <Route
             path="/pengumuman-lowongan-pekerjaan"
             component={PengumumanLowonganSatpam}
+            exact
+          />
+          <Route
+            path="/page-berita/:judulBerita/:id"
+            component={PageBerita}
             exact
           />
           {/* <Route
