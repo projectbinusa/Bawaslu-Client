@@ -97,7 +97,7 @@ const OSDMdanDiklat = () => {
                     <div id="txt-kehumasan" className="txt-kehumasan">
                         <div>
                             <h1>OSDM & Diklat</h1>
-                            <p>Artikel mengenai kegiatan divi Organisasi, Sumberdaya Manusia, & Diklat</p>
+                            <p>Artikel mengenai kegiatan divi Organisasi, Sumber Daya Manusia, & Diklat</p>
 
                             <div id="bg-gray" className="bg-gray">
                                 <div id="txt-gray" className="txt-gray">
