@@ -199,6 +199,7 @@ function Berita() {
                     <div class="details detailss">
                       <h3>
                         <a >{berita.judulBerita}</a>
+                        <a>{berita.judulBerita}</a>
                       </h3>
                     </div>
                   </div>
@@ -297,6 +298,8 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a href={`/page-berita/${berita.judulBerita}/${berita.id}`}>{berita.judulBerita}</a>
+
+                          <a href="">{berita.judulBerita}</a>
                         </h2>
                         <ul class="blog-meta">
                           <li>
