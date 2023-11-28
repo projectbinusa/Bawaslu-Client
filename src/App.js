@@ -84,6 +84,7 @@ import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEd
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 import CategoryBerita from "./views/pages/CategoryBerita";
 import Informasii from "./views/pages/informasi/Informasii";
+import IsiPengumuman from "./views/pages/pengumuman/IsiPengumuman";
 import PageBerita from "./views/PageBerita";
 // test
 function App() {
@@ -327,6 +328,8 @@ function App() {
             exact
           />
           <Route
+            path="/isi-pengumuman/:judulPengumuman/:id"
+            component={IsiPengumuman}
             path="/page-berita/:judulBerita/:id"
             component={PageBerita}
             exact
