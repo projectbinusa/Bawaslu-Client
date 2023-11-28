@@ -42,6 +42,7 @@ function PageBerita() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` +
           param.id
+        `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` + param.id
       );
       setList(response.data.data);
       console.log(response.data.data);
@@ -202,6 +203,21 @@ function PageBerita() {
                   {list.map((category) => {
                     return (
                       <div class="col-md-6">
+                  <div class="col-md-6">
+                    <div class="media single-choose-inner">
+                      <div class="media-left">
+                        <div class="icon">
+                          <i class="fas fa-bullhorn"></i>
+                        </div>
+                      </div>
+                      <div class="media-body">
+                        <p>{isiBerita} </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    {list.map((category) => {
+                      return (
                         <div class="media single-choose-inner">
                           <div class="media-left">
                             <div class="icon">
@@ -215,6 +231,14 @@ function PageBerita() {
                       </div>
                     );
                   })}
+                            <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                              {category.judulPengumuman}
+                            </a>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
                 <hr />
               </div>
