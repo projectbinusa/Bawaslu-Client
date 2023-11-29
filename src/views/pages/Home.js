@@ -35,12 +35,10 @@ function Home() {
     }
   };
 
-  const getAll = async (page) => {
+  const getAll = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita?page=${
-          page - 1
-        }&size=5&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/berita?page=0&size=100&sortBy=id&sortOrder=asc`
       );
 
       setList(response.data.data.content);
@@ -161,7 +159,10 @@ function Home() {
                       <div className="media-body align-self-center">
                         BY {berita.author}
                         <h6 className="fs-6 title">
-                          <a href="blog-details.html">{berita.judulBerita}</a>
+                          <a
+                            href={`/page-berita/${berita.judulBerita}/${berita.id}`}>
+                            {berita.judulBerita}
+                          </a>
                         </h6>
                         <div className="post-info">
                           <i className="far fa-calendar-alt"></i>

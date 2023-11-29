@@ -5,8 +5,17 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
+
 import { IconButton, InputAdornment, Pagination, TextField } from "@mui/material";
 import "../../../../../src/css/adminBerita.css";
+
+import {
+  IconButton,
+  InputAdornment,
+  Pagination,
+  TextField,
+} from "@mui/material";
+
 
 function AdminBerita() {
   const [list, setList] = useState([]);
@@ -66,7 +75,6 @@ function AdminBerita() {
       console.error("Terjadi Kesalahan", error);
     }
   };
-
 
   const getAll1 = async () => {
     try {
@@ -161,21 +169,6 @@ function AdminBerita() {
           <div class="main-card mb-3 card">
             <div class="card-header">
               Berita
-                  <TextField
-                    variant="outlined"
-                    placeholder="Search..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <IconButton onClick={handleSearch}>
-                            {/* <SearchIcon /> */}
-                          </IconButton>
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
@@ -271,7 +264,9 @@ function AdminBerita() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div
+              class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>

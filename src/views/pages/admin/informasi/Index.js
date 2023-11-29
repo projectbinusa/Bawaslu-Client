@@ -129,7 +129,8 @@ function Index() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>

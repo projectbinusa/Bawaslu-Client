@@ -73,7 +73,7 @@ function Regulasi() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">Menu Regulasi {}
+            <div class="card-header">Menu kjbdjewvjwvjb {}
             <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button class="active btn-focus p-2 rounded">
@@ -88,7 +88,8 @@ function Regulasi() {
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
