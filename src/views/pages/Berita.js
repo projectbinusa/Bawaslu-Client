@@ -31,7 +31,6 @@ function Berita() {
           page - 1
         }&size=10&sortBy=id&sortOrder=asc`
       );
-
       setList(response.data.data.content);
       setPaginationInfo({
         totalPages: response.data.data.totalPages,
@@ -403,7 +402,7 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href={`/page-berita/${beritaTerbaru.judulBerita}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
+                                  <a href="">{beritaTerbaru.judulBerita}</a>
                                   {/* <a href="">
                                 tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
                               </a> */}
