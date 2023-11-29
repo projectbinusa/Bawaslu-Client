@@ -117,7 +117,7 @@ function EditIsiKeterangan() {
                   <div className="col-6">
                     <label className="form-label">Jenis Keterangan</label>
                     <select
-                      class="form-select form-select-sm"
+                      className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setJenisKeterangan(e.target.value)}
                     >
@@ -129,34 +129,34 @@ function EditIsiKeterangan() {
                       })}
                     </select>
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputEmail1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       Dokumen
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       value={dokumen}
                       onChange={(e) => setDokumen(e.target.value)}
                     />
                   </div>
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputEmail1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       File
                     </label>
                     <input
                       onChange={(e) => setUpload(e.target.files[0])}
                       type="file"
-                      class="form-control"
+                      className="form-control"
                     />
                   </div>
                 </div>
-                <button type="button" class="btn-danger mt-3 mr-3">
+                <button type="button" className="btn-danger mt-3 mr-3">
                   <a href="" style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
                 </button>
-                <button type="submit" class="btn-primary mt-3">
+                <button type="submit" className="btn-primary mt-3">
                   Simpan
                 </button>
               </form>

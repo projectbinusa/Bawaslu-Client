@@ -101,7 +101,7 @@ function EditJenisKeterangan() {
                       Jenis Informasi
                     </label>
                     <select
-                      class="form-select form-select-sm"
+                      className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setJenisInformasi(e.target.value)}>
                       <option selected>PIlih Jenis Informasi</option>

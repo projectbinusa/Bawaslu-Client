@@ -63,7 +63,7 @@ function Informasii() {
     setCurrentPage(1);
 
     try {
-      await getIsiKeterangan(tableId, 1); 
+      await getIsiKeterangan(tableId, 1);
     } catch (error) {
       alert("Terjadi kesalahan" + error);
     }
@@ -131,19 +131,19 @@ function Informasii() {
     <div>
       <Navbar />
       <div
-        class="breadcrumb-area bg-relative"
+        className="breadcrumb-area bg-relative"
         style={{ background: "#151423" }}>
         <div
-          class="banner-bg-img"
+          className="banner-bg-img"
           style={{
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/. + param.idwebp')`,
           }}></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h4 class="page-title">Informasi</h4>
-                <ul class="page-list">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h4 className="page-title">Informasi</h4>
+                <ul className="page-list">
                   <li>
                     <a href="home">Home</a>
                   </li>
@@ -160,10 +160,10 @@ function Informasii() {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        class="project-area pd-top-115 pd-bottom-90">
+        className="project-area pd-top-115 pd-bottom-90">
         <div className="container">
           <div className="d-flex gap-5">
-            <div class="isotope-filters project-isotope-btn text-left mb-5">
+            <div className="isotope-filters project-isotope-btn text-left mb-5">
               {list.map((menu) => (
                 <button
                   key={menu.id}
@@ -191,7 +191,7 @@ function Informasii() {
                       {" "}
                       <h4>{menu.keterangan}</h4>
                     </div>
-                    <div class="col-auto">
+                    <div className="col-auto">
                       <select
                         className="form-select form-select-sm"
                         onChange={handleRowsPerPageChange}
@@ -238,7 +238,7 @@ function Informasii() {
                                   borderRadius: "5px",
                                   marginRight: "10px",
                                 }}>
-                                <i class="fa-solid fa-download"></i> Download
+                                <i className="fa-solid fa-download"></i> Download
                                 Sebagai Pdf
                               </button>
                               <button
@@ -251,7 +251,7 @@ function Informasii() {
                                   borderRadius: "5px",
                                   marginRight: "10px",
                                 }}>
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i className="fa-solid fa-circle-info"></i>
                               </button>
                             </td>
                           </tr>

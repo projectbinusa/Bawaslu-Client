@@ -86,12 +86,12 @@ function AddMenuRegulasi() {
               <hr />
               <form onSubmit={addData}>
                 <div className="row">
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Jenis Regulas
                     </label>
                     <select
-                      class="form-select form-select-sm"
+                      className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}>
                       <option selected>PIlih Jenis Regulasi</option>
@@ -103,26 +103,26 @@ function AddMenuRegulasi() {
                     </select>
                   </div>
 
-                  <div class="mb-3 col-6">
-                    <label for="exampleInputPassword1" class="form-label">
+                  <div className="mb-3 col-6">
+                    <label for="exampleInputPassword1" className="form-label">
                       Menu Regulasi
                     </label>
                     <input
                       value={menuRegulasi}
                       onChange={(e) => setMenuRegulasi(e.target.value)}
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="exampleInputPassword1"
                     />
                   </div>
                 </div>
-                <button type="submit" class="btn-danger mt-3 mr-3">
+                <button type="submit" className="btn-danger mt-3 mr-3">
                   <a href="" style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>
                 </button>
-                <button type="submit" class="btn-primary mt-3">
+                <button type="submit" className="btn-primary mt-3">
                   Simpan
                 </button>
               </form>

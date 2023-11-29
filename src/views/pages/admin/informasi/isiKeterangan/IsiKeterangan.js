@@ -63,7 +63,7 @@ function IsiKeterangan() {
   const deleteData = async (id) => {
     // ... (sama seperti sebelumnya)
   };
-  
+
   const handleRowsPerPageChange = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
@@ -138,10 +138,6 @@ function IsiKeterangan() {
 
                         <td  data-label="No : " className="text-left">{index + 1}</td>
                         <td  data-label="dokumen : " className="text-left">{isiInformasi.dokumen}</td>
-                        <td data-label="Aksi : " class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2"><a style={{color:"white", textDecoration:"none"}} href={`/edit-isi-keterangan/${isiInformasi.id}`}>
-                            <i class="fa-solid fa-pen-to-square"></i></a>
-
                         <td className="text-left">{index + 1}</td>
                         <td className="text-left">{isiInformasi.dokumen}</td>
                         <td className="text-center">
