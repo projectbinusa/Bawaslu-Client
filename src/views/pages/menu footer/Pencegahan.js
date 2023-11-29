@@ -24,7 +24,7 @@ const Pencegahan = () => {
                         <div id="awrapper1" className="wrapper1">
                             <div id="awrap-img1"  className="wrap-img1" style={{backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg')`}}>
                                 <div id="awrap-opacity" className="wrap-opacity1">
-                                    <div id="wrap-text1" className="wrap-text1">
+                                    <div id="wirap-text1" className="wrap-text1">
                                         Dialog Interaktif Isu Pemilu di Sosial Media
                                         <br />
                                         <span>by </span> <span>BAWASLU BOYOLALI</span>

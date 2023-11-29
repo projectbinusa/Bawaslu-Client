@@ -330,6 +330,9 @@ function App() {
           <Route
             path="/isi-pengumuman/:judulPengumuman/:id"
             component={IsiPengumuman}
+            exact
+          />
+          <Route
             path="/page-berita/:judulBerita/:id"
             component={PageBerita}
             exact

@@ -113,7 +113,7 @@ const PenangananPelanggaran = () => {
                     </div>
                     <div id="logo" className="logo">
                         <div id="h3" className="h3">
-                            <h3>
+                            <h3 id="tautan">
                                 TAUTAN <span className="span" >LEMBAGA</span>
                             </h3>
                             <hr id="hr" />

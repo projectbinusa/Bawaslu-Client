@@ -25,7 +25,7 @@ const Kehumasan = () => {
                         <div id="wrapper1" className="wrapper1">
                             <div id="wrap-img1" className="wrap-img1" style={{backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/09/20230803014724.jpeg')`}}>
                                 <div className="warper-opacity1" id="warper-opacity1">
-                                    <div className="wrap-txt1" id="wrapp-text1">
+                                    <div className="wrap-txt1" id="worapp-text1">
                                         Dialog Interaktif Isu Pemilu di Sosial Media <br /> {" "}
                                         <span>by </span> <span>BAWASLU BOYOLALI</span>
                                         <p className="span-txt" id="span-txt" style={{ color: "white" }}>
@@ -118,7 +118,7 @@ const Kehumasan = () => {
                     </div>
                     <div id="logo" className="logo">
                         <div className="h3" id="h3">
-                            <h3>
+                            <h3 id="txt-h3-kehumasan" style={{textAlign:"center"}}>
                                 TAUTAN <span className="span" >LEMBAGA</span>
                             </h3>
                             <hr id="hr"/>
