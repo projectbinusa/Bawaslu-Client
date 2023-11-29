@@ -83,6 +83,7 @@ import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEd
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 import CategoryBerita from "./views/pages/CategoryBerita";
 import Informasii from "./views/pages/informasi/Informasii";
+import IsiPengumuman from "./views/pages/pengumuman/IsiPengumuman";
 import PageBerita from "./views/PageBerita";
 import IsiRekap from "./views/pages/rekap_berita/IsiRekap";
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
@@ -328,6 +329,8 @@ function App() {
             exact
           />
           <Route
+            path="/isi-pengumuman/:judulPengumuman/:id"
+            component={IsiPengumuman}
             path="/page-berita/:judulBerita/:id"
             component={PageBerita}
             exact
