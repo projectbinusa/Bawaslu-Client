@@ -19,12 +19,7 @@ function EditIsiKeterangan() {
   useEffect(() => {
     axios
       .get(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/getBy/` + param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/getBy/` + param.id
       )
       .then((ress) => {
         const response = ress.data.data;

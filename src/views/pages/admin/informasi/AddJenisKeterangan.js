@@ -24,12 +24,7 @@ function AddJenisKeterangan() {
   const getInformasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/all`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/all`
       );
       setInformasi(response.data.data);
       console.log(response.data.data);

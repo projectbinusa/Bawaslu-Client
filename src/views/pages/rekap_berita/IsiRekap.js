@@ -21,12 +21,7 @@ function IsiRekap() {
     try {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` +
-          param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+          param.id
       );
       setRelatedPost(response.data.data);
       console.log("related post : ", response.data.data);
@@ -37,11 +32,7 @@ function IsiRekap() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/berita/get/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+      .get(`${API_DUMMY}/bawaslu/api/berita/get/` + param.id)
       .then((res) => {
         const list_data = res.data.data;
         setJudulBerita(list_data.judulBerita);

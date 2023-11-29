@@ -18,12 +18,7 @@ function AddMenuRegulasi() {
   const getJenisRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-regulasi/all`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/jenis-regulasi/all`
       );
       setJenisRegulasi(response.data.data);
       console.log(response.data.data);

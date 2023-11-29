@@ -160,9 +160,9 @@ function AdminPengumuman() {
                       <th scope="col" className="text-left">
                         Author
                       </th>
-                      <th scope="col" className="text-left">
+                      {/* <th scope="col" className="text-left">
                         Isi Pengumuman
-                      </th>
+                      </th> */}
                       <th scope="col" className="text-left">
                         Image
                       </th>
@@ -175,13 +175,6 @@ function AdminPengumuman() {
                       <th scope="col" className="text-center">
                         Aksi
                       </th>
-
-                      <th className="text-left">No</th>
-                      <th className="text-left">Author</th>
-                      <th className="text-left">Image</th>
-                      <th className="text-left">Judul Pengumuman</th>
-                      <th className="text-center">Tags</th>
-                      <th className="text-center">Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -195,15 +188,6 @@ function AdminPengumuman() {
                           <td data-label="author : " className="text-left">
                             {pengumuman.author}
                           </td>
-                          <td
-                            data-label="isiPengumuman : "
-                            className="text-left">
-                            {pengumuman.isiPengumuman}
-                          </td>
-                          <td data-label="image : " className="text-left"></td>
-
-                          <td className="text-left">{index + 1}</td>
-                          <td className="text-left">{pengumuman.author}</td>
                           <td className="text-left">
                             <img src={pengumuman.image} alt="pengumuman" />
                           </td>
@@ -216,8 +200,6 @@ function AdminPengumuman() {
                           <td data-label="tags : " className="text-left">
                             {pengumuman.tags}
                           </td>
-                          <td data-label="aksi : " className="text-left"></td>
-                          <td className="text-left">{pengumuman.tags}</td>
                           <td className="text-center pt-3 pb-3 d-flex">
                             <button
                               type="button"

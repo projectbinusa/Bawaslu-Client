@@ -120,7 +120,7 @@ function Sidebar() {
                 {informasi.map((inf) => {
                   return (
                     <li>
-                      <a href={"/admin/" + inf.namaInformasi+ "/" + inf.id}
+                      <a href={"/admin-informasi/" + inf.namaInformasi+ "/" + inf.id}
                         style={{ textDecoration: "none" }}>
                         <i className="metismenu-icon"></i>
                         {inf.namaInformasi}
