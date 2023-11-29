@@ -16,7 +16,6 @@ import FormPermohonanInformasi from "./views/pages/form/FormPermohonanInformasi"
 import FormPermohonanKeberatan from "./views/pages/form/FormPermohonanKeberatan";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
-import November from "./views/pages/rekap_berita/November";
 import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
 import AddBeritaAdmin from "./views/pages/admin/berita/AddBeritaAdmin";
 import AdminBerita from "./views/pages/admin/berita/AdminBerita";
@@ -86,6 +85,8 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import Informasii from "./views/pages/informasi/Informasii";
 import IsiPengumuman from "./views/pages/pengumuman/IsiPengumuman";
 import PageBerita from "./views/PageBerita";
+import IsiRekap from "./views/pages/rekap_berita/IsiRekap";
+import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
 // test
 function App() {
   return (
@@ -101,6 +102,8 @@ function App() {
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route path="/library" component={eLibrary} exact />
           <Route path="/berita" component={Berita} exact />
+          <Route path="/rekap-berita/:tahun_bulan" component={RekapBerita} exact />
+          <Route path="/isi-rekap/:judulBerita/:id" component={IsiRekap} exact />
           <Route path="/category-berita/:category/:id" component={CategoryBerita} exact />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
@@ -180,7 +183,7 @@ function App() {
             exact
           />
           {/* daftar regulasi */}
-          <Route path="/admin/:jenisRegulasi/:id" component={MenuRegulasi} exact />
+          <Route path="/admin-regulasi/:jenisRegulasi/:id" component={MenuRegulasi} exact />
           <Route path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
           <Route path="/edit/:menuRegulasi/:id" component={EditRegulasi} exact />
           <Route path="/add/:menuRegulasi/:id" component={RegulasiAdmin} exact />
@@ -208,8 +211,6 @@ function App() {
           <Route path="/tambah-isi-keterangan/:id" component={AddIsiKeteranganInformasi} exact />
           <Route path="/edit-isi-keterangan/:id" component={EditIsiKeterangan} exact />
           {/* rekap data perbulan */}
-          <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
-          <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
           <Route path="/kehumasan" component={Kehumasan} exact />
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
@@ -332,6 +333,11 @@ function App() {
             component={IsiPengumuman}
             path="/page-berita/:judulBerita/:id"
             component={PageBerita}
+            exact
+          />
+          <Route
+            path="/penyelesaian-sengketa-footer"
+            component={PenyelesaianSengketaFooter}
             exact
           />
           {/* <Route
