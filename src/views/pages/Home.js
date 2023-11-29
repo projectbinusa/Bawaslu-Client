@@ -121,7 +121,7 @@ function Home() {
                     style={{ background: "#F1F6F9" }}>
                     <div className="thumb media">
                       <div className="media-left">
-                        <i class="fa-solid fa-newspaper"></i>
+                        <i className="fa-solid fa-newspaper"></i>
                       </div>
                       <div className="media-body align-self-center">
                         <h4>Berita</h4>
@@ -141,9 +141,9 @@ function Home() {
         <div
           className="container"
           style={{ marginTop: "30px", marginBottom: "70px" }}>
-          <div class="section-title text-center">
-            <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-            <h2 class="title">Berita Bawaslu</h2>
+          <div className="section-title text-center">
+            <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+            <h2 className="title">Berita Bawaslu</h2>
           </div>
           <div className="row">
             <div className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
@@ -175,7 +175,7 @@ function Home() {
               </ul>
             </div>
             <div
-              class="col-lg-4 col-md-12 widget widget_catagory"
+              className="col-lg-4 col-md-12 widget widget_catagory"
               style={{
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                 padding: "30px",
@@ -183,14 +183,14 @@ function Home() {
                 background: "#F1F6F9",
                 float: "inline-end",
               }}>
-              <h4 class="widget-title">
+              <h4 className="widget-title">
                 Tautan{" "}
                 <span className="text-primary">
                   <strong>Lembaga</strong>
                 </span>
               </h4>
               <br />
-              <ul class="catagory-items">
+              <ul className="catagory-items">
                 <li>
                   <a
                     href="https://bawaslu.go.id/"
@@ -261,41 +261,41 @@ function Home() {
               </div>
             </div>
 
-            <div class="how-it-work-area pd-bottom-115">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div class="col-lg-6">
-                    <div class="section-title text-center">
-                      <h5 class="sub-title double-line">Bawaslu Boyolali</h5>
-                      <h2 class="title">Informasi</h2>
+            <div className="how-it-work-area pd-bottom-115">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-6">
+                    <div className="section-title text-center">
+                      <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+                      <h2 className="title">Informasi</h2>
                     </div>
                   </div>
                 </div>
-                <div class="how-it-work-inner arrow-line">
-                  <div class="row justify-content-center gap-3">
-                    <div class="card col-lg-3 col-md-6 border">
-                      <div class="single-work-inner style-four text-center">
-                        <div class="count-wrap pb-2">
-                          <div class="count-inner">
+                <div className="how-it-work-inner arrow-line">
+                  <div className="row justify-content-center gap-3">
+                    <div className="card col-lg-3 col-md-6 border">
+                      <div className="single-work-inner style-four text-center">
+                        <div className="count-wrap pb-2">
+                          <div className="count-inner">
                             <h2>01</h2>
                           </div>
                         </div>
-                        <div class="details-wrap">
-                          <div class="details-inner">
+                        <div className="details-wrap">
+                          <div className="details-inner">
                             <h4>Formulir Permohonan Informasi</h4>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="card col-lg-3 col-md-6 border">
-                      <div class="single-work-inner style-four text-center">
-                        <div class="count-wrap pb-2">
-                          <div class="count-inner">
+                    <div className="card col-lg-3 col-md-6 border">
+                      <div className="single-work-inner style-four text-center">
+                        <div className="count-wrap pb-2">
+                          <div className="count-inner">
                             <h2>02</h2>
                           </div>
                         </div>
-                        <div class="details-wrap">
-                          <div class="details-inner">
+                        <div className="details-wrap">
+                          <div className="details-inner">
                             <h4>Formulir Kebebasan Komunikasi</h4>
                           </div>
                         </div>

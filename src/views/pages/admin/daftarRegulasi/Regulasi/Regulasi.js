@@ -9,6 +9,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import "../../../../../css/adminBerita.css";
 
 function Regulasi() {
   const [regulasi, setRegulasi] = useState([]);
@@ -91,23 +92,23 @@ function Regulasi() {
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-left">No</th>
-                    <th className="text-left">Dokumen</th>
-                    <th className="text-left">Gambar</th>
-                    <th className="text-center">Aksi</th>
+                    <th scope="" className="text-left">No</th>
+                    <th scope="" className="text-left">Dokumen</th>
+                    <th scope="" className="text-left">Gambar</th>
+                    <th scope="" className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                     {regulasi.map((jenis, index) => {
                       return (
                     <tr key={index}>
-                      <td className="text-left">{index + 1}
+                      <td  data-label="No : " className="text-left">{index + 1}
                       </td>
-                      <td className="text-left">{jenis.dokumen}
+                      <td  data-label="dokumen : " className="text-left">{jenis.dokumen}
                       </td>
-                      <td className="text-left"><img src={jenis.pdfDokumen} alt="" />
+                      <td  data-label="gambar : " className="text-left"><img src={jenis.pdfDokumen} alt="" />
                       </td>
-                      <td class="text-center">
+                      <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <a style={{color:"white", textDecoration:"none"}} href={"/edit/" + jenis.regulasi + "/" + jenis.id}><i class="fa-solid fa-pen-to-square"></i></a>
                           </button>

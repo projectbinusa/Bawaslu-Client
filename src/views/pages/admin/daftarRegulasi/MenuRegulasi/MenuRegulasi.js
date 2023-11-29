@@ -106,7 +106,7 @@ function MenuRegulasi() {
                       </td>
                       <td data-label="jenis : " className="text-left">{jenis.menuRegulasi}
                       </td>
-                      <td class="text-center">
+                      <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                             <a style={{color:"white", textDecoration:"none"}} href={"/edit/" + jenis.menuRegulasi + "/" + jenis.id}><i class="fa-solid fa-pen-to-square"></i></a>
                           </button>

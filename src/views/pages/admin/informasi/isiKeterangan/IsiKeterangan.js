@@ -9,6 +9,7 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
+import "../../../../../../src/css/adminBerita.css";
 
 function IsiKeterangan() {
   const [jenisKeteranganIsiInformasi, setJenisKeteranganIsiInformasi] =
@@ -89,18 +90,18 @@ function IsiKeterangan() {
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-left">No</th>
-                    <th className="text-left">Dokumen</th>
-                    <th className="text-center">Aksi</th>
+                    <th scope="col" className="text-left">No</th>
+                    <th scope="col" className="text-left">Dokumen</th>
+                    <th scope="col" className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   {Array.isArray(jenisKeteranganIsiInformasi) &&
                     jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
                       <tr key={index}>
-                        <td className="text-left">{index + 1}</td>
-                        <td className="text-left">{isiInformasi.dokumen}</td>
-                        <td class="text-center">
+                        <td  data-label="No : " className="text-left">{index + 1}</td>
+                        <td  data-label="dokumen : " className="text-left">{isiInformasi.dokumen}</td>
+                        <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2"><a style={{color:"white", textDecoration:"none"}} href={`/edit-isi-keterangan/${isiInformasi.id}`}>
                             <i class="fa-solid fa-pen-to-square"></i></a>
                           </button>

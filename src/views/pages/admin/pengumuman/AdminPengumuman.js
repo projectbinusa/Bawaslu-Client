@@ -6,6 +6,7 @@ import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import "../../../../../src/css/adminBerita.css";
 import {
   TableContainer,
   TablePagination,
@@ -134,31 +135,31 @@ function AdminPengumuman() {
                 <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
-                      <th className="text-left">No</th>
-                      <th className="text-left">Author</th>
-                      <th className="text-left">Isi Pengumuman</th>
-                      <th className="text-left">Image</th>
-                      <th className="text-left">Judul Pengumuman</th>
-                      <th className="text-center">Tags</th>
-                      <th className="text-center">Aksi</th>
+                      <th scope="col" className="text-left">No</th>
+                      <th scope="col" className="text-left">Author</th>
+                      <th scope="col" className="text-left">Isi Pengumuman</th>
+                      <th scope="col" className="text-left">Image</th>
+                      <th scope="col" className="text-left">Judul Pengumuman</th>
+                      <th scope="col" className="text-center">Tags</th>
+                      <th scope="col" className="text-center">Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
                     {filteredList.map((pengumuman, index) => (
                       <tr key={index}>
-                        <td className="text-left">{pengumuman.id}</td>
-                        <td className="text-left">{pengumuman.author}</td>
-                        <td className="text-left">
+                        <td  data-label="No : " className="text-left">{pengumuman.id}</td>
+                        <td  data-label="author : " className="text-left">{pengumuman.author}</td>
+                        <td  data-label="isiPengumuman : " className="text-left">
                           {pengumuman.isiPengumuman}
                         </td>
-                        <td className="text-left">
+                        <td  data-label="image : " className="text-left">
                           <img src={pengumuman.image} alt="pengumuman" />
                         </td>
-                        <td className="text-left">
+                        <td  data-label="judulPengumuman : " className="text-left">
                           {pengumuman.judulPengumuman}
                         </td>
-                        <td className="text-left">{pengumuman.tags}</td>
-                        <td className="text-left">
+                        <td  data-label="tags : " className="text-left">{pengumuman.tags}</td>
+                        <td  data-label="aksi : " className="text-left">
                           <button
                             type="button"
                             class="btn-primary btn-sm mr-2"
