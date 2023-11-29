@@ -10,6 +10,7 @@ import {
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { Pagination, TablePagination } from "@mui/material";
+import "../../../../../src/css/adminBerita.css";
 
 function Index() {
   const [jenisInformasi, setJenisInformasi] = useState([]);
