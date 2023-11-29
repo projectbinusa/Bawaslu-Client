@@ -11,10 +11,10 @@ function AdminBerita() {
   const [list1, setList1] = useState([]);
 
 
-  
+
   const [author, setAuthor] = useState("");
   const [isiBerita, setIsiBerita] = useState("");
-  const [judulBerita, setJudulBerita] = useState(""); 
+  const [judulBerita, setJudulBerita] = useState("");
   const [tags, setTags] = useState("");
   const [image, setImage] = useState("");
   const [show, setShow] = useState(false);
@@ -76,11 +76,11 @@ function AdminBerita() {
     });
   };
 
-  
+
 
   useEffect(() => {
     getAll();
-   
+
   }, []);
   return (
     <div>
@@ -94,13 +94,14 @@ function AdminBerita() {
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
                   <button  class="active btn-focus p-2 rounded">
-                    
+
                   <a href="/add-berita-admin">  Tambah Berita</a>
                   </button>
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
@@ -141,7 +142,7 @@ function AdminBerita() {
                         <td class="text-center">{berita.updateDate}</td>
                         <td class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
-                          <a href="/edit-berita-admin"> <i class="fa-solid fa-pen-to-square"></i></a> 
+                          <a href="/edit-berita-admin"> <i class="fa-solid fa-pen-to-square"></i></a>
                           </button>
 
                           <button    onClick={() => deleteData(berita.id)} type="button" class="btn-danger btn-sm">
@@ -164,7 +165,7 @@ function AdminBerita() {
           </div>
 
 
-        
+
 
         </div>
       </div>
@@ -172,4 +173,4 @@ function AdminBerita() {
   );
   }
 
-export default AdminBerita;    
+export default AdminBerita;

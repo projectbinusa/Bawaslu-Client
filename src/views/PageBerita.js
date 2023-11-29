@@ -221,7 +221,7 @@ function PageBerita() {
                           </div>
                           <div class="media-body">
                             <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
-                              {category.judulPengumuman}
+                              {category.judulBerita}
                             </a>
                           </div>
                         </div>
