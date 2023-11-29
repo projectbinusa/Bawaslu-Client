@@ -15,8 +15,8 @@ import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 import FormPermohonanInformasi from "./views/pages/form/FormPermohonanInformasi";
 import FormPermohonanKeberatan from "./views/pages/form/FormPermohonanKeberatan";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
-import November from "./views/pages/rekap_berita/November";
+// import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
+// import November from "./views/pages/rekap_berita/November";
 import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
 import AddBeritaAdmin from "./views/pages/admin/berita/AddBeritaAdmin";
 import AdminBerita from "./views/pages/admin/berita/AdminBerita";
@@ -145,7 +145,7 @@ function App() {
           />
           {/* daftar regulasi */}
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
+          {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact /> */}
           {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact />
           <Route
             path="/standar-operasional-prosedur"
@@ -203,12 +203,10 @@ function App() {
           <Route path="/tambah-isi-keterangan/:id" component={AddIsiKeteranganInformasi} exact />
           <Route path="/edit-isi-keterangan/:id" component={EditIsiKeterangan} exact />
           {/* rekap data perbulan */}
-          <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
-          <Route path="/rekap-berita/:tahun_bulan" component={November} exact />
           <Route path="/kehumasan" component={Kehumasan} exact />
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
-          
+
           <Route
             path="/penanganan-pelanggaran"
             component={PenangananPelanggaran}
