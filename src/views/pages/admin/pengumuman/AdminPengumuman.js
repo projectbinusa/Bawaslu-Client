@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "../../../../../src/css/adminBerita.css";
 import { Pagination, TableContainer, TablePagination } from "@mui/material";
 
-
 function AdminPengumuman() {
   const [list, setList] = useState([]);
   const [page, setPage] = useState(0);
@@ -116,7 +115,8 @@ function AdminPengumuman() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -137,7 +137,8 @@ function AdminPengumuman() {
                       <a
                         href="/add-pengumuman"
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Pengumuman
                       </a>
@@ -150,75 +151,115 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
+                style={{ overflowY: "auto", maxHeight: "60vh" }}
+              >
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
-
-                      <th scope="col" className="text-left">No</th>
-                      <th scope="col" className="text-left">Author</th>
-                      <th scope="col" className="text-left">Isi Pengumuman</th>
-                      <th scope="col" className="text-left">Image</th>
-                      <th scope="col" className="text-left">Judul Pengumuman</th>
-                      <th scope="col" className="text-center">Tags</th>
-                      <th scope="col" className="text-center">Aksi</th>
-
-                      <th className="text-left">No</th>
-                      <th className="text-left">Author</th>
-                      <th className="text-left">Image</th>
-                      <th className="text-left">Judul Pengumuman</th>
-                      <th className="text-center">Tags</th>
-                      <th className="text-center">Aksi</th>
-
+                      <th scope="col" className="text-left">
+                        No
+                      </th>
+                      <th scope="col" className="text-left">
+                        Author
+                      </th>
+                      {/* <th scope="col" className="text-left">
+                        Isi Pengumuman
+                      </th> */}
+                      <th scope="col" className="text-left">
+                        Image
+                      </th>
+                      <th scope="col" className="text-left">
+                        Judul Pengumuman
+                      </th>
+                      <th scope="col" className="text-center">
+                        Tags
+                      </th>
+                      <th scope="col" className="text-center">
+                        Aksi
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {filteredList.map((pengumuman, index) => (
-                      <tr key={index}>
+                    {/* {filteredList.map((pengumuman, index) => ( */}
+                    {filteredList.map((pengumuman, index) => {
+                      return (
+                        <tr key={index}>
+                          <td data-label="No : " className="text-left">
+                            {pengumuman.id}
+                          </td>
+                          <td data-label="author : " className="text-left">
+                            {pengumuman.author}
+                          </td>
+                          <td className="text-left">
+                            <img src={pengumuman.image} alt="pengumuman" />
+                          </td>
+                          <td
+                            data-label="judulPengumuman : "
+                            className="text-left"
+                          >
+                            {pengumuman.judulPengumuman}
+                          </td>
 
-                        <td  data-label="No : " className="text-left">{pengumuman.id}</td>
-                        <td  data-label="author : " className="text-left">{pengumuman.author}</td>
-                        <td  data-label="isiPengumuman : " className="text-left">
-                          {pengumuman.isiPengumuman}
-                        </td>
-                        <td  data-label="image : " className="text-left"></td>
+                          <td data-label="No : " className="text-left">
+                            {pengumuman.id}
+                          </td>
+                          <td data-label="author : " className="text-left">
+                            {pengumuman.author}
+                          </td>
+                          <td
+                            data-label="isiPengumuman : "
+                            className="text-left"
+                          >
+                            {pengumuman.isiPengumuman}
+                          </td>
+                          <td data-label="image : " className="text-left"></td>
 
-                        <td className="text-left">{index + 1}</td>
-                        <td className="text-left">{pengumuman.author}</td>
-                        <td className="text-left">
+                          <td className="text-left">{index + 1}</td>
+                          <td className="text-left">{pengumuman.author}</td>
+                          <td className="text-left">
+                            <img src={pengumuman.image} alt="pengumuman" />
+                          </td>
+                          <td
+                            data-label="judulPengumuman : "
+                            className="text-left"
+                          >
+                            {pengumuman.judulPengumuman}
+                          </td>
 
-                          <img src={pengumuman.image} alt="pengumuman" />
-                        </td>
-                        <td  data-label="judulPengumuman : " className="text-left">
-                          {pengumuman.judulPengumuman}
-                        </td>
-
-                        <td  data-label="tags : " className="text-left">{pengumuman.tags}</td>
-                        <td  data-label="aksi : " className="text-left"></td>
-                        <td className="text-left">{pengumuman.tags}</td>
-                        <td className="text-center pt-3 pb-3 d-flex">
-
-                          <button
-                            type="button"
-                            className=" btn-primary btn-sm mr-2">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={`/edit-pengumuman/${pengumuman.id}`}>
-                              <i className="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
-                            type="button"
-                            className=" btn-danger btn-sm"
-                            onClick={() => deleteData(pengumuman.id)}>
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
+                          <td data-label="tags : " className="text-left">
+                            {pengumuman.tags}
+                          </td>
+                          <td data-label="aksi : " className="text-left"></td>
+                          <td className="text-left">{pengumuman.tags}</td>
+                          <td className="text-center pt-3 pb-3 d-flex">
+                            <button
+                              type="button"
+                              className=" btn-primary btn-sm mr-2"
+                            >
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-pengumuman/${pengumuman.id}`}
+                              >
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              className=" btn-danger btn-sm"
+                              onClick={() => deleteData(pengumuman.id)}
+                            >
+                              <i className="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
-                </div>
+              </div>
             </TableContainer>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
@@ -233,8 +274,7 @@ function AdminPengumuman() {
           </div>
         </div>
       </div>
-      </div>
-   
+    </div>
   );
 }
 

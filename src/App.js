@@ -52,7 +52,7 @@ import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";
 
-import Index from "./views/pages/admin/informasi/Index";
+import Indexx from "./views/pages/admin/informasi/Index";
 
 import AddMenuRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/AddMenuRegulasi";
 // import AddMenuRegulasi "./"
@@ -83,6 +83,7 @@ import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
 import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
 import Kanal from "./views/pages/informasi/Kanal";
 import PageBerita from "./views/PageBerita";
+import Informasii from "./views/pages/informasi/Informasii";
 // test
 function App() {
   return (
@@ -99,7 +100,7 @@ function App() {
           <Route path="/library" component={eLibrary} exact />
           <Route path="/berita" component={Berita} exact />
           {/* daftar informasi */}
-          <Route path="/informasi/:namaInformasi/:id" component={SertaMerta} exact />
+          <Route path="/informasi/:namaInformasi/:id" component={Informasii} exact />
           {/* <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
@@ -146,8 +147,8 @@ function App() {
           {/* daftar regulasi */}
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
           <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
-          {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact />
-          <Route
+          {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact /> */}
+          {/* <Route
             path="/standar-operasional-prosedur"
             component={InformasiStandarProsedur}
             exact
@@ -192,7 +193,7 @@ function App() {
             exact
           />
              {/* admin informasi */}
-          <Route path="/admin/:namaInformasi/:id" component={Index} exact />
+          <Route path="/admin-informasi/:namaInformasi/:id" component={Indexx} exact />
           <Route
             path="/tambah-jenis-keterangan"
             component={AddJenisKeterangan}
@@ -206,7 +207,7 @@ function App() {
           <Route path="/kehumasan" component={Kehumasan} exact />
           <Route path="/pencegahan" component={Pencegahan} exact />
           <Route path="/sosialisasi" component={Sosialisasi} exact />
-          
+
           <Route
             path="/penanganan-pelanggaran"
             component={PenangananPelanggaran}
