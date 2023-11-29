@@ -30,7 +30,12 @@ function Informasii() {
     await axios
       .get(
         `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
-          param.id
+          param.id,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
       )
       .then((response) => {
         setList(response.data.data.jenisKeteranganInformasiDTOList);
@@ -43,7 +48,12 @@ function Informasii() {
   const getIsiKeterangan = async (tableId, page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${tableId}/isi-informasi?page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${tableId}/isi-informasi?page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=asc`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
 
       setIsi(response.data.data.content);
