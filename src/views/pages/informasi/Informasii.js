@@ -43,20 +43,19 @@ function Informasii() {
   const getIsiKeterangan = async (tableId, page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${tableId}/isi-informasi?page=${
-          page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${tableId}/isi-informasi?page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
       );
+
       setIsi(response.data.data.content);
       setPaginationInfo({
         totalPages: response.data.data.totalPages,
         totalElements: response.data.data.totalElements,
       });
-      console.log(response.data.content);
     } catch (error) {
       alert("Terjadi kesalahan" + error);
     }
   };
+
 
   const showTable = async (tableId) => {
     setSelectedTableId(tableId);
@@ -218,17 +217,16 @@ function Informasii() {
                         <th scope="col"> Unduh / Lihat</th>
                       </tr>
                     </thead>
-                    {isi &&
-                      isi.map((isi) => (
+                    {isi.map((item) => (
                         // return (
                         <tbody>
                           <tr>
                             <td data-cell="dokumen" scope="row">
-                              <p>{isi.dokumen}</p>
+                              <p>{item.dokumen}</p>
                             </td>
                             <td>
                               <button
-                                onClick={() => downloadPdf(isi.id)}
+                                onClick={() => downloadPdf(item.id)}
                                 className="bg-primary text-light"
                                 style={{
                                   border: "none",

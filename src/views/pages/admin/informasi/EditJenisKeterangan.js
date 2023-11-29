@@ -19,11 +19,7 @@ function EditJenisKeterangan() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/getBy/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+      .get(`${API_DUMMY}/bawaslu/api/jenis-keterangan/getBy/` + param.id)
       .then((ress) => {
         const response = ress.data.data;
         setKeterangan(response.keterangan);

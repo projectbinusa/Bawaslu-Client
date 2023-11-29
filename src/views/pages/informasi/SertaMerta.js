@@ -168,7 +168,8 @@ function SertaMerta() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  {isi.map((isi) => {
+                  {isi &&
+                  isi.map((isi) => {
                     return (
                       <tbody>
                         <tr>

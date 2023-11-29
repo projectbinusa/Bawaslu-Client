@@ -22,12 +22,7 @@ function EditRegulasi() {
     try {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/get-by-menu-regulasi?id-menu-regulasi=` +
-          param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+          param.id
       );
       setRegulasi(response.data.data);
       //   console.log(response.data.data);

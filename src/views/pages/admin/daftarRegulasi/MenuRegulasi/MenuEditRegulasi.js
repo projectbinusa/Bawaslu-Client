@@ -20,12 +20,7 @@ function MenuEditRegulasi() {
   const getJenisRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-regulasi/all`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/jenis-regulasi/all`
       );
       setJenisRegulasi(response.data.data);
       console.log(response.data.data);
@@ -36,11 +31,7 @@ function MenuEditRegulasi() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/menu-regulasi/get/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+      .get(`${API_DUMMY}/bawaslu/api/menu-regulasi/get/` + param.id)
       .then((ress) => {
         const response = ress.data.data;
         setMenuRegulasi(response.menuRegulasi);
