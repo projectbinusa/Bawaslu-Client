@@ -63,7 +63,7 @@ function Informasii() {
     setCurrentPage(1);
 
     try {
-      await getIsiKeterangan(tableId, 1); // Set page to 1 when showing a new table
+      await getIsiKeterangan(tableId, 1); 
     } catch (error) {
       alert("Terjadi kesalahan" + error);
     }
