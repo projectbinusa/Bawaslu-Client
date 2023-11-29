@@ -1,6 +1,8 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import Swal from "sweetalert2";
+import { API_DUMMY } from "../utils/base_URL";
 
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -8,6 +10,23 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [list, setList] = useState([]);
+
+  const getAll = async () => {
+    try {
+      const response = await axios.get(
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=10&sortBy=id&sortOrder=asc`
+      );
+
+      setList(response.data.data);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  useEffect(() => {
+    getAll();
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -46,7 +65,6 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
 
   return (
     // <!-- navbar start -->
@@ -92,18 +110,27 @@ function Navbar() {
             </div>
             <div class="col-lg-2 d-lg-block d-none align-self-center">
               <div class="social-media-light text-md-end text-center">
-                <a href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali" target="_blank">
+                <a
+                  href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
+                  target="_blank">
                   <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali" target="_blank">
+                <a
+                  href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
+                  target="_blank">
                   <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.instagram.com/bawaslu_boyolali/" target="_blank">
+                <a
+                  href="https://www.instagram.com/bawaslu_boyolali/"
+                  target="_blank">
                   <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a class="youtube" href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                      </a>
+                <a
+                  class="youtube"
+                  href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
+                  target="_blank">
+                  <i class="fab fa-youtube"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -145,9 +172,9 @@ function Navbar() {
               <li class="">
                 <a href="/profil">Profile</a>
               </li>
-                <li class="">
-                  <a href="/berita">Berita</a>
-                </li>
+              <li class="">
+                <a href="/berita">Berita</a>
+              </li>
               <li class="">
                 <a href="/library">Library</a>
               </li>
@@ -168,21 +195,13 @@ function Navbar() {
                   class={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu">
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                  <li>
-                    <a href="/informasi-serta-merta">Informasi Serta Merta</a>
-                  </li>
-                  <li>
-                    <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
-                  </li>
-                  <li>
-                    <a href="/informasi-berkala">Informasi Berkala</a>
-                  </li>
-                  <li>
-                    <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
-                  </li>
-                  <li>
-                    <a href="">Kanal Pengawasan Pemilu</a>
-                  </li>
+                  {list.map((inf) => {
+                    return (
+                      <li>
+                        <a href={`/informasi/${inf.namaInformasi}/${inf.id}`}>{inf.namaInformasi}</a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </li>
               <li class="menu-item-has-children">
@@ -262,10 +281,14 @@ function Navbar() {
                   id="submenu4"
                   data-bs-parent="#menu">
                   <li>
-                    <a href="/prosedur-permintaan-informasi">Prosedur Permintaan Informasi</a>
+                    <a href="/prosedur-permintaan-informasi">
+                      Prosedur Permintaan Informasi
+                    </a>
                   </li>
                   <li>
-                    <a href="/prosedur-permohonan-keberatan">Prosedur Permohonan Keberatan</a>
+                    <a href="/prosedur-permohonan-keberatan">
+                      Prosedur Permohonan Keberatan
+                    </a>
                   </li>
                   <li>
                     <a href="/waktu-layanan">Waktu Layanan</a>
