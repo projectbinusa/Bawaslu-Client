@@ -199,6 +199,7 @@ function Berita() {
                     <div class="details detailss">
                       <h3>
                         <a >{berita.judulBerita}</a>
+
                         <a>{berita.judulBerita}</a>
                       </h3>
                     </div>
