@@ -153,14 +153,7 @@ function Navbar() {
             </button>
           </div>
           <div class="logo d-inline-block d-lg-none">
-            <a href="index.html">
-              <img src="assets/img/logo.webp" alt="img" />
-            </a>
-          </div>
-          <div class="nav-right-part nav-right-part-mobile">
-            <a class="search-bar-btn" href="#">
-              <i class="fa fa-search"></i>
-            </a>
+           
           </div>
           <div
             class={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
