@@ -198,6 +198,8 @@ function Berita() {
                     </div>
                     <div class="details detailss">
                       <h3>
+                        <a >{berita.judulBerita}</a>
+
                         <a>{berita.judulBerita}</a>
                       </h3>
                     </div>
@@ -296,6 +298,8 @@ function Berita() {
                       </div>
                       <div class="details">
                         <h2>
+                          <a href={`/page-berita/${berita.judulBerita}/${berita.id}`}>{berita.judulBerita}</a>
+
                           <a href="">{berita.judulBerita}</a>
                         </h2>
                         <ul class="blog-meta">
@@ -413,7 +417,7 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href="">{beritaTerbaru.judulBerita}</a>
+                                  <a href={`/page-berita/${beritaTerbaru.judulBerita}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
                                   {/* <a href="">
                                 tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
                               </a> */}
