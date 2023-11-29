@@ -335,6 +335,11 @@ function App() {
             component={PageBerita}
             exact
           />
+          <Route
+            path="/penyelesaian-sengketa-footer"
+            component={PenyelesaianSengketaFooter}
+            exact
+          />
           {/* <Route
             path="/penyelesaian-sengketa-footer"
             component={PenyelesaianSengketaFooter}

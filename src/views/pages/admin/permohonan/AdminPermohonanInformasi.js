@@ -37,11 +37,11 @@ function AdminPermohonanInformasi() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">Permohonan Informasi</div>
-            <div class="table-responsive overflow-x-scroll">
+            <div style={{overflowX:"auto"}} class="card-header">Permohonan Informasi</div>
+            <div class="table-responsive overflow-x-scroll" style={{overflowX: "auto"}}>
               <table
-                class="align-middle mb-0 table table-borderless table-striped table-hover"
-                style={{ width: "100%" }}>
+                class="align-middle table mb-0 table table-borderless table-striped table-hover"
+                style={{minWidth: "100%" }}>
                 <thead>
                   <tr>
                     <th className="text-center">
