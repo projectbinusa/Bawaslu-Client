@@ -11,7 +11,7 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { Pagination, TablePagination } from "@mui/material";
 import "../../../../../src/css/adminBerita.css";
-
+import "../../../../css/indexadmin.css"
 function Index() {
   const [jenisInformasi, setJenisInformasi] = useState([]);
   const [page, setPage] = useState(0);
@@ -98,8 +98,12 @@ function Index() {
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
-      <div className="app-main">
+      <div id="app-main" className="app-main">
         <Sidebar />
+        <div id="container" className="container mt-3 app-main__outer">
+          <div id="main-card" class="main-card mb-3 card">
+            <div id="card-header" class="card-header">
+
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
             <div class="card-header" style={{display:"flex"}}>
@@ -113,8 +117,8 @@ function Index() {
                   onChange={handleSearchChange}
                 />
                 <div class="btn-actions-pane-right">
-                  <div role="group" class="btn-group-sm btn-group">
-                    <button class="active btn-focus p-2 rounded">
+                  <div id="butoon" role="group" class="btn-group-sm btn-group">
+                    <button id="button" class="active btn-focus p-2 rounded">
                       <a
                         href="/add-pengumuman"
                         className="text-light"

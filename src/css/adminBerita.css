@@ -69,3 +69,15 @@ body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.25;
 }
+@media screen and(max-width: 320px) {
+  #app-main{
+    padding-top: 50px;
+  }
+  #card-header{
+    padding-top: 50px;
+    margin-top: 100px;
+  }
+  #butoon{
+    width: 5px;
+  }
+}

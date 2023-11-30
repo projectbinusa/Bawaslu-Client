@@ -60,7 +60,11 @@ function AddBeritaAdmin() {
   const getAllCategoryId = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all`
+        `${API_DUMMY}/bawaslu/api/category-berita/all`,{
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       setCategory(response.data.data);
       console.log(response.data.data);
