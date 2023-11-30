@@ -85,6 +85,7 @@ import Kanal from "./views/pages/informasi/Kanal";
 import PageBerita from "./views/PageBerita";
 import Informasii from "./views/pages/informasi/Informasii";
 import PrivateRoute from "./utils/PrivateRoute";
+import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 // test
 function App() {
   return (
@@ -182,6 +183,7 @@ function App() {
           <Route path="/edit/:menuRegulasi/:id" component={EditRegulasi} exact />
           <Route path="/add/:menuRegulasi/:id" component={RegulasiAdmin} exact />
           <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact />
+          <Route path="/add-regulasi-admin" component={AddRegulasi} exact />
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
             path="/detail-permohonan-informasi/:id"

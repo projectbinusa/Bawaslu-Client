@@ -55,7 +55,7 @@ function DetailPermohonanKeberatan() {
       <div className="app-main">
         <Sidebar />
         <div
-          className="container mt-3 mb-3 overflow-y-scroll"
+          className="container mt-3 mb-3 overflow-y-scroll app-main__outer"
           style={{ height: "100vh" }}>
           <div className="d-lg-flex gap-5">
             <div className="d-block">
@@ -146,7 +146,6 @@ function DetailPermohonanKeberatan() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

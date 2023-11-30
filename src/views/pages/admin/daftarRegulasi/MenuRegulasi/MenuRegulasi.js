@@ -122,7 +122,6 @@ function MenuRegulasi() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
