@@ -76,7 +76,7 @@ function IsiKeterangan() {
   };
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
@@ -87,6 +87,22 @@ function IsiKeterangan() {
               <div class="ml-2 row g-3 align-items-center">
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
+            <div className="card-header" style={{display:"flex"}}>
+             <p className="mt-3">Isi Keterangan</p>
+                <div class="ml-2 row g-3 align-items-center">
+                  <div class="col-auto">
+                    <label className="form-label mt-2">Rows per page:</label>
+                  </div>
+                  <div class="col-auto">
+                    <select
+                      className="form-select form-select-sm"
+                      onChange={handleRowsPerPageChange}
+                      value={rowsPerPage}>
+                      <option value={5}>5</option>
+                      <option value={10}>10</option>
+                      <option value={20}>20</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="col-auto">
                   <select

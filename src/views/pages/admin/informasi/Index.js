@@ -27,11 +27,14 @@ function Index() {
     try {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
-          param.id,
+          param.id, {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        }
       );
-
       // Pastikan bahwa response.data.data adalah array sebelum menggunakan map
-      if (Array.isArray(response.data.data.jenisKeteranganInformasiDTOList)) {
+      if (Array.isArray(response.data.data.jenisKeteram5ganInformasiDTOList)) {
         setJenisInformasi(response.data.data.jenisKeteranganInformasiDTOList);
         console.log(response.data.data.jenisKeteranganInformasiDTOList);
       } else {
@@ -93,13 +96,17 @@ function Index() {
   );
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div id="app-main" className="app-main">
         <Sidebar />
         <div id="container" className="container mt-3 app-main__outer">
           <div id="main-card" class="main-card mb-3 card">
             <div id="card-header" class="card-header">
+
+        <div className="container mt-3 app-main__outer">
+          <div class="main-card mb-3 card">
+            <div class="card-header" style={{display:"flex"}}>
               Jenis Informasi
               <div className="d-flex ml-auto gap-3">
                 <input
@@ -191,7 +198,6 @@ function Index() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

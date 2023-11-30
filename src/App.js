@@ -79,11 +79,12 @@ import AddIsiKeteranganInformasi from "./views/pages/admin/informasi/isiKeterang
 import EditIsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/EditIsiKeterangan";
 import RegulasiAdmin from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuRegulasi";
 import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
-import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/Regulasi";
+import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/RegulasiAdmin";
 import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
 import Kanal from "./views/pages/informasi/Kanal";
 import PageBerita from "./views/PageBerita";
 import Informasii from "./views/pages/informasi/Informasii";
+import PrivateRoute from "./utils/PrivateRoute";
 // test
 function App() {
   return (
@@ -146,7 +147,7 @@ function App() {
           />
           {/* daftar regulasi */}
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
+          <Route path="/admin-regulasi/:jenisRegulasi/:id" component={RegulasiAdmin} exact />
           {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact /> */}
           {/* <Route
             path="/standar-operasional-prosedur"
@@ -154,29 +155,29 @@ function App() {
             exact
           /> */}
           {/* admin */}
-          <Route
+          <PrivateRoute
             path="/admin-permohonan-informsi"
             component={AdminFormInformasi}
             exact
           />
-          <Route path="/add-berita-admin" component={AddBeritaAdmin} exact />
-          <Route path="/edit-berita-admin" component={EditBeritaAdmin} exact />
-          <Route path="/admin-berita" component={AdminBerita} exact />
-          <Route path="/admin-pengumuman" component={AdminPengumuman} exact />
-          <Route path="/add-pengumuman" component={AddPengumuman} exact />
-          <Route path="/edit-pengumuman/:id" component={EditPengumuman} exact />
-          <Route
-            path="/admin-permohonan-informasi"
+          <PrivateRoute path="/add-berita-admin" component={AddBeritaAdmin} exact />
+          <PrivateRoute path="/edit-berita-admin" component={EditBeritaAdmin} exact />
+          <PrivateRoute path="/admin-berita" component={AdminBerita} exact />
+          <PrivateRoute path="/admin-pengumuman" component={AdminPengumuman} exact />
+          <PrivateRoute path="/add-pengumuman" component={AddPengumuman} exact />
+          <PrivateRoute path="/edit-pengumuman/:id" component={EditPengumuman} exact />
+          <PrivateRoute
+            path="/adminn-permohonan-informasi"
             component={AdminPermohonanInformasi}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/admin-permohonan-keberatan"
             component={AdminPermohonanKeberatan}
             exact
           />
           {/* daftar regulasi */}
-          <Route path="/admin/:jenisRegulasi/:id" component={MenuRegulasi} exact />
+          <Route path="/adminn/:menuRegulasi/:id" component={MenuRegulasi} exact />
           <Route path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
           <Route path="/edit/:menuRegulasi/:id" component={EditRegulasi} exact />
           <Route path="/add/:menuRegulasi/:id" component={RegulasiAdmin} exact />

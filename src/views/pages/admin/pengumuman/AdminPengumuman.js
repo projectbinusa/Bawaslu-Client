@@ -99,15 +99,37 @@ function AdminPengumuman() {
   );
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
+        <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+                <div class="col-auto">
+                  <label className="form-label mt-2">Rows per page:</label>
+                </div>
+                <div class="col-auto">
+                  <select
+                    className="form-select form-select-xl w-auto"
+                    onChange={handleRowsPerPageChange}
+                    value={rowsPerPage}>
+                    <option value={5}>5</option>
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                  </select>
+                </div>
+              </div>
+              <input
+                  type="search"
+                  className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
           <div className="main-card mb-3 card">
-            <div className="card-header">
+            <div className="card-header" style={{display:"flex"}}>
               <p className="mt-3">Pengumuman Keterangan</p>
-              <div class="ml-2 row g-3 align-items-center">
+              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
@@ -126,7 +148,7 @@ function AdminPengumuman() {
               <div className="d-flex ml-auto gap-3">
                 <input
                   type="search"
-                  className="form-control widget-content-right w-75"
+                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={handleSearchChange}
@@ -156,22 +178,22 @@ function AdminPengumuman() {
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
-                      <th scope="col" className="text-left">
+                      <th scope="col">
                         No
                       </th>
-                      <th scope="col" className="text-left">
+                      <th scope="col">
                         Author
                       </th>
-                      {/* <th scope="col" className="text-left">
+                      {/* <th scope="col">
                         Isi Pengumuman
                       </th> */}
-                      <th scope="col" className="text-left">
+                      <th scope="col">
                         Image
                       </th>
-                      <th scope="col" className="text-left">
+                      <th scope="col">
                         Judul Pengumuman
                       </th>
-                      <th scope="col" className="text-center">
+                      <th scope="col">
                         Tags
                       </th>
                       <th scope="col" className="text-center">
@@ -184,13 +206,13 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No : " className="text-left">
+                          <td data-label="No : ">
                             {pengumuman.id}
                           </td>
-                          <td data-label="author : " className="text-left">
+                          <td data-label="author : ">
                             {pengumuman.author}
                           </td>
-                          <td className="text-left">
+                          <td>
                             <img src={pengumuman.image} alt="pengumuman" />
                           </td>
                           <td
@@ -226,7 +248,7 @@ function AdminPengumuman() {
                             {pengumuman.judulPengumuman}
                           </td>
 
-                          <td data-label="tags : " className="text-left">
+                          <td data-label="tags : ">
                             {pengumuman.tags}
                           </td>
                           <td data-label="aksi : " className="text-left"></td>
@@ -236,6 +258,10 @@ function AdminPengumuman() {
                               type="button"
                               className=" btn-primary btn-sm mr-2"
                             >
+                          <td data-label="Aksi : " className="pt-3 pb-3 d-flex aksi">
+                            <button
+                              type="button"
+                              className=".responsive-buttons btn-primary btn-sm mr-2">
                               <a
                                 style={{
                                   color: "white",
@@ -251,6 +277,9 @@ function AdminPengumuman() {
                               className=" btn-danger btn-sm"
                               onClick={() => deleteData(pengumuman.id)}
                             >
+
+                              className=".responsive-buttons btn-danger btn-sm"
+                              onClick={() => deleteData(pengumuman.id)}>
                               <i className="fa-solid fa-trash"></i>
                             </button>
                           </td>
