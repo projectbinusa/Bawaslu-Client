@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
-import Footer from "../../../../../component/Footer";
-import { API_DUMMY } from "../../../../../utils/base_URL";
-import axios from "axios";
-import Swal from "sweetalert2";
-import { History } from "swiper/modules";
-import { useState } from "react";
+import JenisInformasi from "./JenisInformasi";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useEffect } from "react";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { API_DUMMY } from "../../../../../utils/base_URL";
 
-function AddCategory() {
-  const [category, setCategory] = useState("");
-  const [idCategory, setidCategory] = useState([]);
+function AddJenisInfo() {
+  const [jenisInformasi, setJenisInformasi] = useState("");
   const [show, setShow] = useState(false);
   const history = useHistory();
 
@@ -21,8 +17,8 @@ function AddCategory() {
     e.persist();
 
     try {
-      await axios.post(`${API_DUMMY}/bawaslu/api/category-beriat/add`, {
-        category: category
+      await axios.post(`${API_DUMMY}/bawaslu/api/jenis-informasi/add`, {
+        jenisInformasi: jenisInformasi
       }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -60,11 +56,11 @@ function AddCategory() {
                 <div className="row">
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
-                      Category
+                      Jenis Informasi
                     </label>
                     <input
-                      value={category}
-                      onChange={(e) => setCategory(e.target.value)}
+                      value={JenisInformasi}
+                      onChange={(e) => setJenisInformasi(e.target.value)}
                       type="text"
                       className="form-control"
                     />
@@ -82,4 +78,4 @@ function AddCategory() {
   );
 }
 
-export default AddCategory;
+export default AddJenisInfo;

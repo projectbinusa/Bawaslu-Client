@@ -196,7 +196,10 @@ function Header() {
       </div> */}
       <div class="app-header header-shadow">
         <div class="app-header__logo">
-          <div class="logo-src"></div>
+        <img
+            style={{ width: "60%" }}
+            src="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Bawaslu.png"
+          />
           <div class="header__pane ml-auto">
             <div>
               <button

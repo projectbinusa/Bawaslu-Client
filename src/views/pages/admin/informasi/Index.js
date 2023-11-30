@@ -14,23 +14,28 @@ import "../../../../../src/css/adminBerita.css";
 
 function Index() {
   const [jenisInformasi, setJenisInformasi] = useState([]);
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [searchTerm, setSearchTerm] = useState("");
   const [sortColumn, setSortColumn] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
 
   const param = useParams();
   const history = useHistory();
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginationInfo, setPaginationInfo] = useState({
+    totalPages: 1,
+    totalElements: 0,
+  });
+  const [searchTerm, setSearchTerm] = useState("");
 
   const getJenisInformasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
-          param.id, {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan?id=${param.id}&page=0&size=10&sortBy=id&sortOrder=asc`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
         }
       );
       // Pastikan bahwa response.data.data adalah array sebelum menggunakan map
@@ -41,14 +46,18 @@ function Index() {
         // Jika bukan array, mungkin perlu penanganan khusus atau perubahan pada backend
         console.error("Data yang diterima bukan array:", response.data.data);
       }
+      setPaginationInfo({
+        totalPages: response.data.data.totalPages,
+        totalElements: response.data.data.totalElements,
+      });
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
   };
 
   useEffect(() => {
-    getJenisInformasi();
-  }, [page, rowsPerPage]);
+    getJenisInformasi(currentPage);
+  }, [currentPage, rowsPerPage]);
 
   const deleteData = async (id) => {
     Swal.fire({
@@ -78,13 +87,15 @@ function Index() {
     });
   };
 
-  const handlePageChange = (event, newPage) => {
-    setPage(newPage);
+  const handleRowsPerPageChange = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
   };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    setPage(0); // Reset halaman ke 0 ketika melakukan pencarian
+    setPage(0);
+    setCurrentPage(1);
   };
 
   const filteredList = jenisInformasi.filter((item) =>
@@ -95,19 +106,52 @@ function Index() {
     )
   );
 
+  const totalPages = Math.ceil(filteredList.length / rowsPerPage);
+
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
+        <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+                <div class="col-auto">
+                  <label className="form-label mt-2">Rows per page:</label>
+                </div>
+                <div class="col-auto">
+                  <select
+                    className="form-select form-select-xl w-auto"
+                    onChange={handleRowsPerPageChange}
+                    value={rowsPerPage}>
+                    <option value={5}>5</option>
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                  </select>
+                </div>
+              </div>
           <div class="main-card mb-3 card">
-            <div class="card-header" style={{display:"flex"}}>
-              Jenis Informasi
+            <div class="card-header" style={{ display: "flex" }}>
+            <p className="mt-3">Jenis Informasi</p>
+              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div class="col-auto">
+                  <label className="form-label mt-2">Rows per page:</label>
+                </div>
+                <div class="col-auto">
+                  <select
+                    className="form-select form-select-sm"
+                    onChange={handleRowsPerPageChange}
+                    value={rowsPerPage}>
+                    <option value={5}>5</option>
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                  </select>
+                </div>
+              </div>
               <div className="d-flex ml-auto gap-3">
                 <input
                   type="search"
-                  className="form-control widget-content-right w-75"
+                  className="form-control widget-content-right w-75 d-lg-block d-none"
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={handleSearchChange}
@@ -116,18 +160,19 @@ function Index() {
                   <div role="group" class="btn-group-sm btn-group">
                     <button class="active btn-focus p-2 rounded">
                       <a
-                        href="/add-pengumuman"
+                        href="/tambah-jenis-keterangan"
                         className="text-light"
                         style={{ textDecoration: "none" }}>
                         {" "}
-                        Tambah Pengumuman
+                        Tambah Data
                       </a>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="table-responsive"
+            <div
+              class="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
@@ -181,11 +226,11 @@ function Index() {
                 </tbody>
               </table>
             </div>
-            <div className="card-header d-flex justify-content-center">
-            <Pagination
-                count={Math.ceil(filteredList.length / rowsPerPage)}
-                page={page + 1}
-                onChange={(event, value) => handlePageChange(event, value - 1)}
+            <div className="card-header mt-3 d-flex justify-content-center">
+              <Pagination
+                count={totalPages}
+                page={currentPage}
+                onChange={(event, value) => setCurrentPage(value)}
                 showFirstButton
                 showLastButton
                 color="primary"

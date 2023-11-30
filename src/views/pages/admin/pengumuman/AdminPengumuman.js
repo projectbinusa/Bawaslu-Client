@@ -19,7 +19,6 @@ function AdminPengumuman() {
     totalPages: 1,
     totalElements: 0,
   });
-  const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const getAll = async (page) => {
@@ -92,13 +91,6 @@ function AdminPengumuman() {
 
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
-  const shouldShowPagination = totalPages > 0;
-
-  const slicedData = filteredList.slice(
-    page * rowsPerPage,
-    page * rowsPerPage + rowsPerPage
-  );
-
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
@@ -122,7 +114,7 @@ function AdminPengumuman() {
               </div>
               <input
                   type="search"
-                  className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+                  className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={handleSearchChange}
@@ -211,9 +203,9 @@ function AdminPengumuman() {
                             {pengumuman.author}
                           </td>
                           <td>
-                            <img src={pengumuman.image} alt="pengumuman" />
+                            <img style={{width:"100px"}} src={pengumuman.image} alt="pengumuman" />
                           </td>
-                          <td
+                          <td className="judulPengumuman"
                             data-label="judulPengumuman : "
                           >
                             {pengumuman.judulPengumuman}
@@ -222,7 +214,7 @@ function AdminPengumuman() {
                           <td data-label="tags : ">
                             {pengumuman.tags}
                           </td>
-                          <td data-label="Aksi : " className="pt-3 pb-3 d-flex aksi">
+                          <td data-label="Aksi : " className="aksi">
                             <button
                               type="button"
                               className=".responsive-buttons btn-primary btn-sm mr-2">

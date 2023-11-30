@@ -81,7 +81,7 @@ function AddRegulasi() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>
