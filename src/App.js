@@ -16,7 +16,6 @@ import FormPermohonanInformasi from "./views/pages/form/FormPermohonanInformasi"
 import FormPermohonanKeberatan from "./views/pages/form/FormPermohonanKeberatan";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
-// import November from "./views/pages/rekap_berita/November";
 import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
 import AddBeritaAdmin from "./views/pages/admin/berita/AddBeritaAdmin";
 import AdminBerita from "./views/pages/admin/berita/AdminBerita";
@@ -83,6 +82,7 @@ import EditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEd
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/RegulasiAdmin";
 import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
 import Kanal from "./views/pages/informasi/Kanal";
+import PageBerita from "./views/PageBerita";
 import Informasii from "./views/pages/informasi/Informasii";
 import PrivateRoute from "./utils/PrivateRoute";
 // test
@@ -105,7 +105,7 @@ function App() {
           {/* <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
-          <Route path="/informasi-kanal" component={Kanal} exact />
+          {/* <Route path="/informasi-kanal" component={Kanal} exact /> */}
           {/* form online */}
           <Route
             path="/form-permohonan-keberatan"
@@ -147,7 +147,7 @@ function App() {
           />
           {/* daftar regulasi */}
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/admin-regulasi/:jenisRegulasi/:id" component={RegulasiAdmin} exact />
+          <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
           {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact /> */}
           {/* <Route
             path="/standar-operasional-prosedur"
@@ -315,6 +315,17 @@ function App() {
           <Route
             path="/pengumuman-lowongan-pekerjaan-satpam"
             component={PengumumanLowonganSatpam}
+            exact
+          />
+          {/* <Route
+
+            path="/isi-pengumuman/:judulPengumuman/:id"
+            component={IsiPengumuman}
+            exact
+          /> */}
+          <Route
+            path="/page-berita/:judulBerita/:id"
+            component={PageBerita}
             exact
           />
           <Route

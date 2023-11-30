@@ -78,6 +78,11 @@ function IsiKeterangan() {
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div className="main-card mb-3 card">
+            <div className="card-header">
+              <p className="mt-3">Isi Keterangan</p>
+              <div class="ml-2 row g-3 align-items-center">
+                <div class="col-auto">
+                  <label className="form-label mt-2">Rows per page:</label>
             <div className="card-header" style={{display:"flex"}}>
              <p className="mt-3">Isi Keterangan</p>
                 <div class="ml-2 row g-3 align-items-center">
@@ -95,6 +100,18 @@ function IsiKeterangan() {
                     </select>
                   </div>
                 </div>
+                <div class="col-auto">
+                  <select
+                    className="form-select form-select-sm"
+                    onChange={handleRowsPerPageChange}
+                    value={rowsPerPage}
+                  >
+                    <option value={5}>5</option>
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                  </select>
+                </div>
+              </div>
               <div className="d-flex ml-auto gap-3">
                 <input
                   type="search"
@@ -109,7 +126,8 @@ function IsiKeterangan() {
                       <a
                         href={`/tambah-isi-keterangan/${param.id}`}
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         Tambah Data
                       </a>
                     </button>
@@ -117,14 +135,22 @@ function IsiKeterangan() {
                 </div>
               </div>
             </div>
-            <div className="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+            <div
+              className="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th scope="col" className="text-left">No</th>
-                    <th scope="col" className="text-left">Dokumen</th>
-                    <th scope="col" className="text-center">Aksi</th>
+                    <th scope="col" className="text-left">
+                      No
+                    </th>
+                    <th scope="col" className="text-left">
+                      Dokumen
+                    </th>
+                    <th scope="col" className="text-center">
+                      Aksi
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -140,7 +166,8 @@ function IsiKeterangan() {
                           <button
                             type="button"
                             className="btn-danger btn-sm"
-                            onClick={() => deleteData(isiInformasi.id)}>
+                            onClick={() => deleteData(isiInformasi.id)}
+                          >
                             <i className="fa-solid fa-trash"></i>
                           </button>
                         </td>
@@ -148,20 +175,20 @@ function IsiKeterangan() {
                     ))}
                 </tbody>
               </table>
-            </div>
-            <div className="card-header mt-3 d-flex justify-content-center">
-              <Pagination
-                count={paginationInfo.totalPages}
-                page={currentPage}
-                onChange={(event, value) => setCurrentPage(value)}
-                showFirstButton
-                showLastButton
-                color="primary"
-              />
-              <div>
+              <div className="card-header mt-3 d-flex justify-content-center">
+                <Pagination
+                  count={paginationInfo.totalPages}
+                  page={currentPage}
+                  onChange={(event, value) => setCurrentPage(value)}
+                  showFirstButton
+                  showLastButton
+                  color="primary"
+                />
+                <div></div>
               </div>
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     </div>
