@@ -157,7 +157,6 @@ function EditPengumuman() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

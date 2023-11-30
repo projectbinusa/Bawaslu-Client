@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
-import JenisInformasi from "./JenisInformasi";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 
-function AddJenisInfo() {
-  const [jenisInformasi, setJenisInformasi] = useState("");
+function AddJenisRegulasi() {
+  const [jenisRegulasi, setJenisRegulasi] = useState("");
   const [show, setShow] = useState(false);
   const history = useHistory();
 
@@ -17,8 +16,8 @@ function AddJenisInfo() {
     e.persist();
 
     try {
-      await axios.post(`${API_DUMMY}/bawaslu/api/jenis-informasi/add`, {
-        jenisInformasi: jenisInformasi
+      await axios.post(`${API_DUMMY}/bawaslu/api/jenis-regulasi/add`, {
+        jenisRegulasi: jenisRegulasi
       }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -33,7 +32,7 @@ function AddJenisInfo() {
         timer: 1500,
       });
       // //console.log(data);
-      history.push("/jenis-informasi");
+      history.push("/jenis-regulasi");
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -56,11 +55,11 @@ function AddJenisInfo() {
                 <div className="row">
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
-                      Jenis Informasi
+                      Jenis Regulasi
                     </label>
                     <input
-                      value={JenisInformasi}
-                      onChange={(e) => setJenisInformasi(e.target.value)}
+                      value={jenisRegulasi}
+                      onChange={(e) => setJenisRegulasi(e.target.value)}
                       type="text"
                       className="form-control"
                     />
@@ -68,7 +67,7 @@ function AddJenisInfo() {
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
-                    href="/jenis-informasi"
+                    href="/jenis-regulasi"
                     style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
@@ -86,4 +85,4 @@ function AddJenisInfo() {
   );
 }
 
-export default AddJenisInfo;
+export default AddJenisRegulasi;

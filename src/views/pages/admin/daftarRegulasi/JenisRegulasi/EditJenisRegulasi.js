@@ -6,21 +6,21 @@ import Swal from 'sweetalert2';
 import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
-function EditJenisInf() {
-    const[jenisInformasi, setJenisInformasi] = useState("");
+function EditJenisRegulasi() {
+    const[jenisRegulasi, setJenisRegulasi] = useState("");
     const param = useParams();
     const history = useHistory();
 
     useEffect(() => {
         axios
-          .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getby/` + param.id, {
+          .get(`${API_DUMMY}/bawaslu/api/jenis-regulasi/getby/` + param.id, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           })
           .then((ress) => {
             const response = ress.data.data;
-            setJenisInformasi(response.namaInformasi);
+            setJenisRegulasi(response.jenisRegulasi);
             console.log(response.namaInformasi);
           })
           .catch((error) => {
@@ -32,7 +32,7 @@ function EditJenisInf() {
         e.preventDefault();
         await axios
           .put(`${API_DUMMY}/bawaslu/api/jenis-informasi/` + param.id, {
-            jenisInformasi, jenisInformasi
+            jenisRegulasi, jenisRegulasi
           }, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -45,7 +45,7 @@ function EditJenisInf() {
               showConfirmButton: false,
               timer: 1500,
             });
-            history.push("/jenis-informasi");
+            history.push("/jenis-regulasi");
             setTimeout(() => {
               window.location.reload();
             }, 1500);
@@ -71,8 +71,8 @@ function EditJenisInf() {
                     Jenis Informasi
                   </label>
                   <input
-                    value={jenisInformasi}
-                    onChange={(e) => setJenisInformasi(e.target.value)}
+                    value={jenisRegulasi}
+                    onChange={(e) => setJenisRegulasi(e.target.value)}
                     type="text"
                     className="form-control"
                   />
@@ -80,7 +80,7 @@ function EditJenisInf() {
               </div>
               <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
-                    href="/jenis-informasi"
+                    href="/admin-regulasi"
                     style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
@@ -98,4 +98,4 @@ function EditJenisInf() {
   )
 }
 
-export default EditJenisInf
+export default EditJenisRegulasi

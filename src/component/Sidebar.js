@@ -111,7 +111,7 @@ function Sidebar() {
                   <i class="metismenu-icon pe-7s-diamond"></i>
                   Jenis Informasi
                 </a>
-                </li>
+              </li>
               <li>
                 <a style={{ textDecoration: "none" }} href="#">
                   <i class="metismenu-icon pe-7s-diamond"></i>
@@ -121,10 +121,10 @@ function Sidebar() {
                 <ul>
                   {informasi.map((inf) => {
                     return (
-                      <li>
+                      <li key={inf.id}>
                         <a
                           style={{ textDecoration: "none" }}
-                          href={`admin-informasi/${inf.namaInformasi}/${inf.id}`}>
+                          href={`./admin-informasi/${inf.namaInformasi}/${inf.id}`}>
                           <i class="metismenu-icon"></i>
                           {inf.namaInformasi}
                         </a>
@@ -132,6 +132,12 @@ function Sidebar() {
                     );
                   })}
                 </ul>
+              </li>
+              <li>
+                <a style={{textDecoration:"none"}} href="/jenis-regulasi">
+                  <i class="metismenu-icon pe-7s-car"></i>
+                  Jenis Regulasi
+                </a>
               </li>
               <li>
                 <a style={{ textDecoration: "none" }} href="#">
@@ -145,7 +151,7 @@ function Sidebar() {
                       <li>
                         <a
                           style={{ textDecoration: "none" }}
-                          href={`regulasi/${reg.jenisRegulasi}/${reg.id}`}>
+                          href={`./adminn/${reg.jenisRegulasi}/${reg.id}`}>
                           <i class="metismenu-icon"></i>
                           {reg.jenisRegulasi}
                         </a>

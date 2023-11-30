@@ -215,7 +215,7 @@ function AdminPermohonanKeberatan() {
                           {informasi.jenisIdentitas}
                         </td>
                         <td data-label="Aksi : " class="text-center">
-                          <button type="button" class="btn-primary mr-2 btn-sm">
+                          <button type="button" class="btn-warning mr-2 btn-sm">
                             <a
                               className="text-light"
                               href={
