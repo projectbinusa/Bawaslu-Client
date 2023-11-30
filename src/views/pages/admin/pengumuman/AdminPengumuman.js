@@ -7,7 +7,6 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "../../../../../src/css/adminBerita.css";
-
 import { Pagination, TableContainer, TablePagination } from "@mui/material";
 
 function AdminPengumuman() {
@@ -138,7 +137,8 @@ function AdminPengumuman() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -159,7 +159,8 @@ function AdminPengumuman() {
                       <a
                         href="/add-pengumuman"
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Pengumuman
                       </a>
@@ -172,7 +173,8 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
+                style={{ overflowY: "auto", maxHeight: "60vh" }}
+              >
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
@@ -215,6 +217,33 @@ function AdminPengumuman() {
                           </td>
                           <td
                             data-label="judulPengumuman : "
+                            className="text-left"
+                          >
+                            {pengumuman.judulPengumuman}
+                          </td>
+
+                          <td data-label="No : " className="text-left">
+                            {pengumuman.id}
+                          </td>
+                          <td data-label="author : " className="text-left">
+                            {pengumuman.author}
+                          </td>
+                          <td
+                            data-label="isiPengumuman : "
+                            className="text-left"
+                          >
+                            {pengumuman.isiPengumuman}
+                          </td>
+                          <td data-label="image : " className="text-left"></td>
+
+                          <td className="text-left">{index + 1}</td>
+                          <td className="text-left">{pengumuman.author}</td>
+                          <td className="text-left">
+                            <img src={pengumuman.image} alt="pengumuman" />
+                          </td>
+                          <td
+                            data-label="judulPengumuman : "
+                            className="text-left"
                           >
                             {pengumuman.judulPengumuman}
                           </td>
@@ -222,6 +251,13 @@ function AdminPengumuman() {
                           <td data-label="tags : ">
                             {pengumuman.tags}
                           </td>
+                          <td data-label="aksi : " className="text-left"></td>
+                          <td className="text-left">{pengumuman.tags}</td>
+                          <td className="text-center pt-3 pb-3 d-flex">
+                            <button
+                              type="button"
+                              className=" btn-primary btn-sm mr-2"
+                            >
                           <td data-label="Aksi : " className="pt-3 pb-3 d-flex aksi">
                             <button
                               type="button"
@@ -231,12 +267,17 @@ function AdminPengumuman() {
                                   color: "white",
                                   textDecoration: "none",
                                 }}
-                                href={`/edit-pengumuman/${pengumuman.id}`}>
+                                href={`/edit-pengumuman/${pengumuman.id}`}
+                              >
                                 <i className="fa-solid fa-pen-to-square"></i>
                               </a>
                             </button>
                             <button
                               type="button"
+                              className=" btn-danger btn-sm"
+                              onClick={() => deleteData(pengumuman.id)}
+                            >
+
                               className=".responsive-buttons btn-danger btn-sm"
                               onClick={() => deleteData(pengumuman.id)}>
                               <i className="fa-solid fa-trash"></i>
