@@ -72,13 +72,13 @@ function IsiKeterangan() {
   };
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div className="main-card mb-3 card">
-            <div className="card-header">
+            <div className="card-header" style={{display:"flex"}}>
              <p className="mt-3">Isi Keterangan</p>
                 <div class="ml-2 row g-3 align-items-center">
                   <div class="col-auto">
@@ -164,7 +164,6 @@ function IsiKeterangan() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

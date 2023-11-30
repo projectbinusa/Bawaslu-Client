@@ -11,7 +11,7 @@ import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import "../../../../../css/adminBerita.css";
 
-function Regulasi() {
+function RegulasiAdmin() {
   const [regulasi, setRegulasi] = useState([]);
   const param = useParams();
   const history = useHistory();
@@ -62,7 +62,7 @@ function Regulasi() {
   };
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
@@ -126,4 +126,4 @@ function Regulasi() {
   );
 }
 
-export default Regulasi;
+export default RegulasiAdmin;
