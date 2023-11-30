@@ -118,7 +118,7 @@ function Header() {
   };
   return (
     <>
-      <div class="app-header header-shadow d-lg-flex d-none">
+      {/* <div class="app-header header-shadow d-lg-flex d-none">
         <div class="app-header__logo">
           <img
             style={{ width: "60%" }}
@@ -193,129 +193,57 @@ function Header() {
             </li>
           </ul>{" "}
         </div>
-      </div>
-      <nav
-        className={`header-shadow navbar-area  ${
-          isSticky ? "sticky-active" : ""
-        }`}>
-        <div className="container nav-container">
-          <div className="responsive-mobile-menu">
-            <button
-              class={`d-lg-none menu toggle-btn ${menuOpen ? "is-active" : ""}`}
-              onClick={toggleMenu}
-              data-target="#Iitechie_main_menu"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span className="icon-left"></span>
-              <span className="icon-right"></span>
-            </button>
-          </div>
-          <div className="logo d-inline-block d-lg-none"></div>
-          <div
-            class={`collapse p-3 navbar-collapse ${menuOpen ? "sopen" : ""}`}
-            id="Iitechie_main_menu">
-            <ul className="navbar-nav menu-open text-lg-start">
-              <li className="">
-                <a href="/berita">Berita</a>
-              </li>
-              <li className="">
-                <a href="/pengumuman">Pengumuman</a>
-              </li>
-              <li className="menu-item-has-children">
-                <a
-                  href="#submenu"
-                  data-bs-toggle="collapse"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
-                  Informasi Publik
-                </a>
-                <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
-                  id="submenu">
-                  <li className="text-black">
-                    <a>Daftar Informasi Publik</a>
-                    <ul>
-                      {informasi.map((inf) => {
-                        return (
-                          <li>
-                            <a
-                              href={
-                                "/admin/" + inf.namaInformasi + "/" + inf.id
-                              }
-                              style={{ textDecoration: "none" }}>
-                              {inf.namaInformasi}
-                            </a>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li className="menu-item-has-children">
-                <a
-                  href="#submenu2"
-                  data-bs-toggle="collapse"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
-                  Daftar Regulasi
-                </a>
-                <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
-                  id="submenu2"
-                  data-bs-parent="#menu">
-                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                  {regulasi.map((regulasi) => {
-                  return (
-                    <li>
-                      <a href={"/admin/" + regulasi.jenisRegulasi+ "/" + regulasi.id}
-                        style={{ textDecoration: "none" }}>
-                        {regulasi.jenisRegulasi}
-                      </a>
-                    </li>
-                  );
-                })}
-                </ul>
-              </li>
-              <li className="menu-item-has-children">
-                <a
-                  href="#submenu3"
-                  data-bs-toggle="collapse"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
-                  Layanan Informasi
-                </a>
-                <ul
-                  class={`${isMobile ? "collapse" : "sub-menu"}`}
-                  id="submenu3"
-                  data-bs-parent="#menu">
-                   <li>
-                  <a
-                    style={{ textDecoration: "none" }}
-                    href="/admin-permohonan-informasi">
-                    <i className="metismenu-icon"></i>
-                    Permohonan Informasi
-                  </a>
-                </li>
-                <li>
-                  <a
-                    style={{ textDecoration: "none" }}
-                    href="/admin-permohonan-keberatan">
-                    <i className="metismenu-icon"></i>Permohonan Keberatan
-                  </a>
-                </li>
-                </ul>
-              </li>
-            </ul>
+      </div> */}
+      <div class="app-header header-shadow">
+        <div class="app-header__logo">
+          <div class="logo-src"></div>
+          <div class="header__pane ml-auto">
+            <div>
+              <button
+                type="button"
+                class="hamburger close-sidebar-btn hamburger--elastic"
+                data-class="closed-sidebar">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
-      </nav>
+        <div class="app-header__mobile-menu">
+          <div>
+            <button
+              type="button"
+              class="hamburger hamburger--elastic mobile-toggle-nav">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="app-header__menu">
+          <span>
+            <button
+              onClick={logout}
+              type="button"
+              className="btn-shadow p-1 btn-danger btn-sm">
+              <i className="fas fa-sign-out-alt"></i> Logout
+            </button>
+          </span>
+        </div>{" "}
+        <div class="app-header__content">
+          <div class="app-header-left"></div>
+          <div class="app-header-right">
+            <div class="header-btn-lg pr-0">
+              <div class="widget-content p-0">
+                <div class="widget-content-wrapper">
+                  <div class="widget-content-left"></div>
+                </div>
+              </div>
+            </div>{" "}
+          </div>
+        </div>
+      </div>{" "}
     </>
   );
 }

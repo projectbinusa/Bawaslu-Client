@@ -44,7 +44,7 @@ function Berita() {
   const getCategoryBerita = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all`
+        `${API_DUMMY}/bawaslu/api/category-berita/all`,
       );
       setCategory(response.data.data);
       console.log(response.data.data);
@@ -59,7 +59,7 @@ function Berita() {
   const getAllTerbaru = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita-terbaru`
+        `${API_DUMMY}/bawaslu/api/berita-terbaru`,
       );
       setListTerbaru(response.data.data);
       console.log(response.data.data);

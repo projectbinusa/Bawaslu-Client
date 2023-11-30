@@ -36,7 +36,11 @@ function AdminBerita() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita?page=${
           page - 1
-        }&size=10&sortBy=id&sortOrder=asc`
+        }&size=10&sortBy=id&sortOrder=asc`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
 
       setList(response.data.data.content);
@@ -63,7 +67,11 @@ function AdminBerita() {
   const getAll1 = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita`
+        `${API_DUMMY}/bawaslu/api/category-berita`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       setList1(response.data.data);
       console.log(response.data.data);
@@ -145,13 +153,13 @@ function AdminBerita() {
     getAll1();
   }, [currentPage]);
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
           <div class="main-card mb-3 card">
-            <div class="card-header">
+            <div class="card-header" style={{display:"flex"}}>
               Berita
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
@@ -238,7 +246,7 @@ function AdminBerita() {
             </div>
           </div>
           <div class="main-card mb-3 card">
-            <div class="card-header">
+            <div class="card-header" style={{display:"flex"}}>
               Category
               <div class="btn-actions-pane-right">
                 <div role="group" class="btn-group-sm btn-group">
