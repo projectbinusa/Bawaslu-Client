@@ -105,7 +105,7 @@ function App() {
           {/* <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
-          <Route path="/informasi-kanal" component={Kanal} exact />
+          {/* <Route path="/informasi-kanal" component={Kanal} exact /> */}
           {/* form online */}
           <Route
             path="/form-permohonan-keberatan"
@@ -147,7 +147,7 @@ function App() {
           />
           {/* daftar regulasi */}
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/admin-regulasi/:jenisRegulasi/:id" component={RegulasiAdmin} exact />
+          <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
           {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact /> */}
           {/* <Route
             path="/standar-operasional-prosedur"
