@@ -46,7 +46,7 @@ function Berita() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
       );
-      setCategory(response.data.data);
+      setCategory(response.data.data.content);
       console.log(response.data.data);
       if (response.data.data.length > 0) {
         setGambarTerbaru(response.data.data[0].image);

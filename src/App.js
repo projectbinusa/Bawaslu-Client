@@ -121,7 +121,7 @@ function App() {
           {/* <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
-          <Route path="/informasi-kanal" component={Kanal} exact />
+          {/* <Route path="/informasi-kanal" component={Kanal} exact /> */}
           {/* form online */}
           <Route
             path="/form-permohonan-keberatan"
