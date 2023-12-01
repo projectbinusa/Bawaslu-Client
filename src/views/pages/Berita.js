@@ -333,7 +333,11 @@ function Berita() {
                           <ul>
                             <li>
                               <a href="#">
-                                <button className="border p-2">
+                                <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}className="border p-2">
                                   <i
                                     class="fab fa-facebook-f"
                                     aria-hidden="true"></i>{" "}
@@ -343,7 +347,11 @@ function Berita() {
                             </li>
                             <li>
                               <a href="#">
-                                <button className="border p-2">
+                                <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}className="border p-2">
                                   <i
                                     class="fab fa-twitter"
                                     aria-hidden="true"></i>{" "}
@@ -353,7 +361,11 @@ function Berita() {
                             </li>
                             <li>
                               <a href="#">
-                                <button className="border p-2">
+                                <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}className="border p-2">
                                   <i class="fa-brands fa-pinterest"></i> Pin
                                 </button>
                               </a>
