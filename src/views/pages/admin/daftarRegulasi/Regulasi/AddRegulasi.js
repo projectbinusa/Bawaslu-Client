@@ -43,7 +43,6 @@ function AddRegulasi() {
         `${API_DUMMY}/bawaslu/api/regulasi/add`,
         {
           headers: {
-            'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }

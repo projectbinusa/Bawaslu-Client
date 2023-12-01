@@ -123,8 +123,7 @@ function IsiRekap() {
                                 style={{
                                   color: "white",
                                   backgroundColor: "#cf2830",
-                                }}
-                                className="border p-2">
+                                }} className="border p-2">
                                 <i className="fa-brands fa-pinterest"></i> Pin
                               </button>
                             </a>

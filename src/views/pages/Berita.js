@@ -46,7 +46,7 @@ function Berita() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
       );
-      setCategory(response.data.data.content);
+      setCategory(response.data.data);
       console.log(response.data.data);
       if (response.data.data.length > 0) {
         setGambarTerbaru(response.data.data[0].image);
@@ -239,9 +239,7 @@ function Berita() {
                             <div class="blog-share">
                               <ul>
                                 <li>
-                                  <a
-                                    href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
-                                    target="_blank">
+                                  <a>
                                     <button
                                       style={{
                                         color: "white",
@@ -256,9 +254,7 @@ function Berita() {
                                   </a>
                                 </li>
                                 <li>
-                                  <a
-                                    href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
-                                    target="_blank">
+                                  <a>
                                     <button
                                       style={{
                                         color: "white",
