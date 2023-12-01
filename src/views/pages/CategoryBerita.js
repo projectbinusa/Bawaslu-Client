@@ -181,12 +181,12 @@ function CategoryBerita() {
                     <div className="thumb">
                       <img
                         style={{ height: "450px" }}
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531.jpeg"
+                        src={category.berita}
                         alt="img"
                       />
                     </div>
                     <div className="details">
-                      <h2>{category.judulBerita}</h2>
+                      <h2><a style={{color:"black", textDecoration:"none"}} href={`/page-berita/${category.judulBerita}/${category.id}`}>{category.judulBerita}</a></h2>
                       <ul className="blog-meta">
                         <li>
                           <i className="far fa-user"></i>
