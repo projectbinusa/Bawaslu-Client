@@ -237,6 +237,8 @@ function AdminPengumuman() {
                               type="button"
                               className=" btn-primary btn-sm mr-2"
                             >
+                              </button>
+                              </td>
                           <td data-label="Aksi : " className="pt-3 pb-3 d-flex aksi">
                             <button
                               type="button"
@@ -264,9 +266,6 @@ function AdminPengumuman() {
                               className=" btn-danger btn-sm"
                               onClick={() => deleteData(pengumuman.id)}
                             >
-
-                              className=".responsive-buttons btn-danger btn-sm"
-                              onClick={() => deleteData(pengumuman.id)}>
                               <i className="fa-solid fa-trash"></i>
                             </button>
                           </td>
