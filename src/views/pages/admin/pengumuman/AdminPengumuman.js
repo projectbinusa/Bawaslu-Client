@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "../../../../../src/css/adminBerita.css";
 import { Pagination, TableContainer, TablePagination } from "@mui/material";
+import AddPengumuman from "./AddPengumuman";
 
 function AdminPengumuman() {
   const [list, setList] = useState([]);
@@ -18,7 +19,6 @@ function AdminPengumuman() {
     totalPages: 1,
     totalElements: 0,
   });
-  const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const getAll = async (page) => {
@@ -91,13 +91,6 @@ function AdminPengumuman() {
 
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
-  const shouldShowPagination = totalPages > 0;
-
-  const slicedData = filteredList.slice(
-    page * rowsPerPage,
-    page * rowsPerPage + rowsPerPage
-  );
-
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
@@ -138,8 +131,7 @@ function AdminPengumuman() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}
-                  >
+                    value={rowsPerPage}>
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -174,8 +166,7 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}
-              >
+                style={{ overflowY: "auto", maxHeight: "60vh" }}>
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>

@@ -11,26 +11,31 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { Pagination, TablePagination } from "@mui/material";
 import "../../../../../src/css/adminBerita.css";
-import "../../../../css/indexadmin.css"
+import "../../../../css/indexadmin.css";
 function Index() {
   const [jenisInformasi, setJenisInformasi] = useState([]);
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [searchTerm, setSearchTerm] = useState("");
   const [sortColumn, setSortColumn] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
 
   const param = useParams();
   const history = useHistory();
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginationInfo, setPaginationInfo] = useState({
+    totalPages: 1,
+    totalElements: 0,
+  });
+  const [searchTerm, setSearchTerm] = useState("");
 
   const getJenisInformasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
-          param.id, {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan?id=${param.id}&page=0&size=10&sortBy=id&sortOrder=asc`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
         }
       );
       // Pastikan bahwa response.data.data adalah array sebelum menggunakan map
@@ -41,14 +46,18 @@ function Index() {
         // Jika bukan array, mungkin perlu penanganan khusus atau perubahan pada backend
         console.error("Data yang diterima bukan array:", response.data.data);
       }
+      setPaginationInfo({
+        totalPages: response.data.data.totalPages,
+        totalElements: response.data.data.totalElements,
+      });
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
   };
 
   useEffect(() => {
-    getJenisInformasi();
-  }, [page, rowsPerPage]);
+    getJenisInformasi(currentPage);
+  }, [currentPage, rowsPerPage]);
 
   const deleteData = async (id) => {
     Swal.fire({
@@ -78,13 +87,15 @@ function Index() {
     });
   };
 
-  const handlePageChange = (event, newPage) => {
-    setPage(newPage);
+  const handleRowsPerPageChange = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
   };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    setPage(0); // Reset halaman ke 0 ketika melakukan pencarian
+    setPage(0);
+    setCurrentPage(1);
   };
 
   const filteredList = jenisInformasi.filter((item) =>
@@ -94,6 +105,8 @@ function Index() {
         value.toLowerCase().includes(searchTerm.toLowerCase())
     )
   );
+
+  const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -118,7 +131,8 @@ function Index() {
                       <a
                         href="/add-pengumuman"
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Pengumuman
                       </a>
@@ -126,70 +140,6 @@ function Index() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th className="text-left">No</th>
-                    <th className="text-left">Jenis Informasi</th>
-                    <th className="text-center">Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredList.map((jenis, index) => {
-                    return (
-                      <tr key={index}>
-                        <td className="text-left">{index + 1}</td>
-                        <td className="text-left">{jenis.keterangan}</td>
-                        <td class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={
-                                "/edit-jenis-keterangan/" +
-                                jenis.keterangan +
-                                "/" +
-                                jenis.id
-                              }>
-                              <i class="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
-                            onClick={() => deleteData(jenis.id)}
-                            type="button"
-                            class="btn-danger btn-sm mr-2">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                          <button type="button" class="btn-info btn-sm">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={
-                                "/isi-keterangan/" +
-                                jenis.keterangan +
-                                "/" +
-                                jenis.id
-                              }>
-                              <i class="fas fa-plus"></i>
-                            </a>
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-            <div className="card-header d-flex justify-content-center">
-            <Pagination
-                count={Math.ceil(filteredList.length / rowsPerPage)}
-                page={page + 1}
-                onChange={(event, value) => handlePageChange(event, value - 1)}
-                showFirstButton
-                showLastButton
-                color="primary"
-              />
             </div>
           </div>
         </div>

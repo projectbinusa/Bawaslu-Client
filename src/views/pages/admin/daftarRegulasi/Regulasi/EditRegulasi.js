@@ -33,11 +33,7 @@ function EditRegulasi() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/menu-regulasi/get/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
+      .get(`${API_DUMMY}/bawaslu/api/menu-regulasi/get/` + param.id)
       .then((ress) => {
         const response = ress.data.data;
         setDokumen(response.dokumen);
@@ -134,7 +130,7 @@ function EditRegulasi() {
                   </div>
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
-                  <a href="" style={{ color: "white", textDecoration: "none" }}>
+                  <a href={"/regulasi/"} style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>
@@ -147,7 +143,6 @@ function EditRegulasi() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
