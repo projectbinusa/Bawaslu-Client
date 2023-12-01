@@ -57,8 +57,8 @@ function PermintaanInformasi() {
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7 col-md-10">
               <div className="section-title text-center">
-                <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
-                <h2 className="title">Tata Cara Permohonan Informasi</h2>
+                <h5 id="text1-gabung" className="sub-title double-line">Bawaslu Boyolali</h5>
+                <h2 id="text2-gabung" className="title">Tata Cara Permohonan Informasi</h2>
                 {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
                         atpellentesque laoreet</p> */}
               </div>

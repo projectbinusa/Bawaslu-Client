@@ -59,10 +59,10 @@ function PenyelesaianSengketa() {
           <div className="section-title">
             <div className="row justify-content-center">
               <div className="col-lg-6 col-md-8">
-                <h5 className="sub-title double-line" style={{ marginLeft: "35%" }}>
+                <h5 id="text1-gabung" className="sub-title double-line" style={{ marginLeft: "35%" }}>
                   Bawaslu Boyolali
                 </h5>
-                <h2 className="title text-center">Tata Cara Pengajuan Keberatan</h2>
+                <h2 id="text2-gabung" className="title text-center">Tata Cara Pengajuan Keberatan</h2>
                 <p className="content text-center">
                   dan Permohonan Penyelesaian Sengketa Informasi
                 </p>
