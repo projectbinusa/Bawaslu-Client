@@ -5,6 +5,7 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import Bawaslu from "../../component/Bawaslu";
+import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
 
 function CategoryBerita() {
   const [list, setList] = useState([]);
@@ -26,7 +27,8 @@ function CategoryBerita() {
   const getRelated = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` + param.id
+        `${API_DUMMY}/bawaslu/api/berita/related-berita/by-id-berita?id=` +
+          param.id
       );
       setRelated(response.data.data);
     } catch (error) {
@@ -37,7 +39,7 @@ function CategoryBerita() {
   useEffect(() => {
     getAll();
     getAllTerbaru();
-    getRelated()
+    getRelated();
   }, []);
 
   const getAllTerbaru = async () => {
@@ -60,7 +62,7 @@ function CategoryBerita() {
         style={{
           backgroundImage: `url(${gambarTerbaru})`,
         }}>
-         <div class="container">
+        <div class="container">
           <div class="row">
             <div class="col-lg-4">
               <div
@@ -111,43 +113,65 @@ function CategoryBerita() {
                     <div className="tag-and-share">
                       <div className="row">
                         <div className="col-sm-7">
-                          <div className="tags d-inline-block">
-
-                          </div>
+                          <div className="tags d-inline-block"></div>
                         </div>
                         <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                           <div className="blog-share">
                             <ul>
                               <li>
-                                <a
-                                  href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
-                                  target="_blank">
-                                  <button className="border p-2">
+                                <FacebookShareButton
+                                  url={`https://bawaslu.excellentsistem.com/category-berita/${category.judulBerita}/${category.id}`}
+                                  media={category.image}
+                                  description={category.judulBerita}
+                                  quote={category.judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}
+                                    className="border p-2">
                                     <i
                                       className="fab fa-facebook-f"
                                       aria-hidden="true"></i>{" "}
                                     Facebook
                                   </button>
-                                </a>
+                                </FacebookShareButton>
                               </li>
                               <li>
-                                <a
-                                  href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
-                                  target="_blank">
-                                  <button className="border p-2">
+                                <TwitterShareButton
+                                  url={`https://bawaslu.excellentsistem.com/category-berita/${category.judulBerita}/${category.id}`}
+                                  media={category.image}
+                                  description={category.judulBerita}
+                                  quote={category.judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#5eb2ef",
+                                    }}
+                                    className="border p-2">
                                     <i
                                       className="fab fa-twitter"
                                       aria-hidden="true"></i>{" "}
                                     Twitter
                                   </button>
-                                </a>
+                                </TwitterShareButton>
                               </li>
                               <li>
-                                <a href="#">
-                                  <button className="border p-2">
-                                    <i className="fa-brands fa-pinterest"></i> Pin
+                                <PinterestShareButton
+                                  url={`https://bawaslu.excellentsistem.com/category-berita/${category.judulBerita}/${category.id}`}
+                                  quote={category.judulBerita}
+                                  media={category.image}
+                                  description={category.judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#cf2830",
+                                    }}
+                                    className="border p-2">
+                                    <i className="fa-brands fa-pinterest"></i>{" "}
+                                    Pin
                                   </button>
-                                </a>
+                                </PinterestShareButton>
                               </li>
                             </ul>
                           </div>
@@ -157,12 +181,12 @@ function CategoryBerita() {
                     <div className="thumb">
                       <img
                         style={{ height: "450px" }}
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531.jpeg"
+                        src={category.berita}
                         alt="img"
                       />
                     </div>
                     <div className="details">
-                      <h2>{category.judulBerita}</h2>
+                      <h2><a style={{color:"black", textDecoration:"none"}} href={`/page-berita/${category.judulBerita}/${category.id}`}>{category.judulBerita}</a></h2>
                       <ul className="blog-meta">
                         <li>
                           <i className="far fa-user"></i>
@@ -175,27 +199,29 @@ function CategoryBerita() {
                       </ul>
                     </div>
                     <p>{category.isiBerita}</p>
-                    {related.map((post) => {
-                      return (
-                        <div class="col-md-6">
-                          <div class="media single-choose-inner">
-                            <div class="media-left">
-                              <div class="icon">
-                                <i class="fas fa-bullhorn"></i>
+                    <div className="row">
+                      {related.map((post) => {
+                        return (
+                          <div class="col-md-6">
+                            <div class="media single-choose-inner">
+                              <div class="media-left">
+                                <div class="icon">
+                                  <i class="fas fa-bullhorn"></i>
+                                </div>
+                              </div>
+                              <div class="media-body">
+                                <p>
+                                  <a
+                                    href={`/page-berita/${post.judulBerita}/${post.id}`}>
+                                    {post.judulBerita}
+                                  </a>
+                                </p>
                               </div>
                             </div>
-                            <div class="media-body">
-                              <p>
-                                <a
-                                  href={`/page-berita/${post.judulBerita}/${post.id}`}>
-                                  {post.judulPengumuman}
-                                </a>
-                              </p>
-                            </div>
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
                 );
               })}
@@ -203,7 +229,7 @@ function CategoryBerita() {
             <div className="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div className="td-sidebar">
-                    <Bawaslu/>
+                  <Bawaslu />
                 </div>
               </div>
             </div>
