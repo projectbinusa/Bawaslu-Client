@@ -9,6 +9,7 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
+import { Pagination } from "@mui/material";
 
 function IsiKeterangan() {
   const [jenisKeteranganIsiInformasi, setJenisKeteranganIsiInformasi] =
@@ -191,6 +192,8 @@ function IsiKeterangan() {
           <Footer />
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

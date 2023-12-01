@@ -7,6 +7,7 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import {
+  Pagination,
   TableContainer,
   TablePagination,
 } from "@mui/material";
