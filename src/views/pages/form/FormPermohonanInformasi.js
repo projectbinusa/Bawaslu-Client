@@ -127,15 +127,16 @@ const FormPermohonanInformasi = () => {
       <div>
         <Navbar />
         <div className="head">
-          <div className="form">
-            <div className="form-txt">
-              {" "}
-              <h1 className="h1">FORM PERMOHONAN INFORMASI</h1>
-              <h1>__________</h1>
-            </div>
-            <div className="info">
+          <div className="form text-center">
+          <div className="form-permohonan section-title text-center">
+                <h5 id="text1-gabung" className="sub-title double-line text-center">Bawaslu Boyolali</h5>
+                <h2 id="text2-gabung" className="title text-center">Form Permohonan Informasi</h2>
+                {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
+                        atpellentesque laoreet</p> */}
+              </div>
+            {/* <div className="info">
               <img src={info} className="img" id="img" />
-            </div>
+            </div> */}
           </div>
           <form onSubmit={Add} className="option" style={{}}>
             <div>
