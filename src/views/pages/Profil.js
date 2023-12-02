@@ -162,15 +162,15 @@ function Profil() {
             />
           </div>
         </div>
-        <div className="col-lg-5 align-self-center">
-          <div className="container section-title">
+        <div className="p-3 col-lg-5 align-self-center">
+          <div className="section-title">
             <h2 className="title mb-4">Struktur Organisasi</h2>
             <p>
               Tim Pelaksana Pejabat Pengelola Informasi Dan Dokumentasi Bawaslu
               Kabupaten Boyolali.
             </p>
           </div>
-          <div className="container single-security-wrap-2">
+          <div className="single-security-wrap-2">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -180,7 +180,7 @@ function Profil() {
               <p>Ketua Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="container single-security-wrap-2">
+          <div className="single-security-wrap-2">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -190,7 +190,7 @@ function Profil() {
               <p>Koordinator Seketariat Bawaslu Kabupaten Boyolali. </p>
             </div>
           </div>
-          <div className="container single-security-wrap-2">
+          <div className="single-security-wrap-2">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -203,7 +203,7 @@ function Profil() {
               <p>Anggota Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="container single-security-wrap-2">
+          <div className="single-security-wrap-2">
             <div className="thumb">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>

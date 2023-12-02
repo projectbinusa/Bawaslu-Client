@@ -152,11 +152,10 @@ function App() {
             exact
           />
           {/* daftar regulasi */}
-          <Route path="/maklumat-pelayanan" component={Maklumat} exact />
+
           <PrivateRoute path="/regulasi/:menuRegulasi/:id" component={RegulasiAdmin} exact />
-          <Route path="/regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
-          {/* <Route path="/regulasi/:jenisRegulasi/:id" component={Dip} exact /> */}
-          {/* <Route
+          <Route path="/menu-regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
+        
             path="/standar-operasional-prosedur"
             component={InformasiStandarProsedur}
             exact

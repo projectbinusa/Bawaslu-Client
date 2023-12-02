@@ -39,7 +39,7 @@ function AdminBerita() {
           page - 1
         }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`, {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            Authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzQWRtaW4iOnRydWUsImV4cCI6MTcwMTM4NDI1NCwiaWF0IjoxNzAxMzY2MjU0fQ.iqIEJEcUfT9sSNkWCf1R1V3nO_MHr91699Vg49NNYp-70Xi7pV9xrSnYTfHInJNx2VDcj_gnGhwd-8oJwcK_Pg`,
           },
         }
       );
@@ -330,16 +330,31 @@ function AdminBerita() {
                   </tr>
                 </thead>
                 <tbody>
-                  {list1.map((kategory, index) => {
+                  <td data-label="No" className="">1</td>
+                  <td data-label="Category" className="">tydfwefd</td>
+                  <td data-label="Created Date" className="">8763343r438r</td>
+                  <td data-label="Updated Date" className="">193uy32gdeydy</td>
+                  <td data-label="Aksi" className="aksi">
+                  <button type="button" class="btn-primary btn-sm mr-2">
+                           <a style={{color:"white", textDecoration:"none"}} > <i class="fa-solid fa-pen-to-square"></i></a>
+                          </button>
+
+                          <button
+                            type="button"
+                            class="btn-danger btn-sm">
+                            <i class="fa-solid fa-trash"></i>
+                          </button>
+                  </td>
+                  {/* {list1.map((kategory, index) => {
                     return (
                       <tr key={index}>
-                        <td class="text-center text-muted">{index + 1}</td>
-                        <td className="text-center">{kategory.category}</td>
-                        <td class="text-center">{kategory.createDate}</td>
+                        <td data-label="No" class="text-center text-muted">{index + 1}</td>
+                        <td data-label="Category" className="text-center">{kategory.category}</td>
+                        <td data-label="Created Date" class="text-center">{kategory.createDate}</td>
 
-                        <td class="text-center">{kategory.updateDate}</td>
+                        <td data-label="Update Date" class="text-center">{kategory.updateDate}</td>
 
-                        <td class="text-center">
+                        <td data-label="Aksi" class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
                            <a style={{color:"white", textDecoration:"none"}} href={`/edit-category-berita/${kategory.id}`}> <i class="fa-solid fa-pen-to-square"></i></a>
                           </button>
@@ -353,7 +368,7 @@ function AdminBerita() {
                         </td>
                       </tr>
                     );
-                  })}
+                  })} */}
                 </tbody>
               </table>
             </div>

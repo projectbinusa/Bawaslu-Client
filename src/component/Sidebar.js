@@ -151,7 +151,7 @@ function Sidebar() {
                       <li>
                         <a
                           style={{ textDecoration: "none" }}
-                          href={`./adminn/${reg.jenisRegulasi}/${reg.id}`}>
+                          href={`./regulasi-admin/${reg.jenisRegulasi}/${reg.id}`}>
                           <i class="metismenu-icon"></i>
                           {reg.jenisRegulasi}
                         </a>
