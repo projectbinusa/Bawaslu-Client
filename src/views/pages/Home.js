@@ -38,7 +38,7 @@ function Home() {
   const getAll = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita?page=0&size=100&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/berita/all?page=0&size=100&sortBy=id&sortOrder=asc`
       );
 
       setList(response.data.data.content);
@@ -54,7 +54,7 @@ function Home() {
   const getAllTerbaru = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita-terbaru`
+        `${API_DUMMY}/bawaslu/api/berita/terbaru`
       );
       setListTerbaru(response.data.data);
       console.log(response.data.data);
@@ -77,7 +77,7 @@ function Home() {
       <div>
         <div
           className="banner-area banner-area-2 bg-relative "
-          style={{ backgroundImage: `url(${banner})` }}>
+          style={{ backgroundImage: `url(${listTerbaru.length > 0 && listTerbaru[0].image})` }}>
           <div className="bg-overlay-gradient" />
           <div
             className="banner-bg-img"
@@ -109,7 +109,7 @@ function Home() {
         </div>
         {/* {/* banner area end test*/}
         {/* intro area start */}
-        <div className="intro-area mg-top--100 bg-relative">
+        <div className="intro-area mg-top--100 bg-relative" style={{minHeight:"100ppx"}}>
           <div className="container">
             <div className="row justify-content-center">
               {listTerbaru.slice(1, 4).map((berita, index) => (
@@ -125,7 +125,7 @@ function Home() {
                         <h4>Berita</h4>
                       </div>
                     </div>
-                    <div className="details">
+                    <div className="details isiBerita">
                       <p>{berita.judulBerita}</p>
                     </div>
                     <br />
@@ -308,8 +308,6 @@ function Home() {
             </div>
 
             <div className="row justify-content-center">
-              {informasi.slice(1, 5).map((inf) => {
-                return (
                   <div className="col-lg-3 col-md-6">
                     <div className="single-service-inner text-center">
                       <div className="details">
@@ -318,7 +316,7 @@ function Home() {
                           src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
                           alt="Second slide"
                         />
-                        <h3>{inf.namaInformasi}</h3>
+                        <h3>Informasi Berkala</h3>
                       </div>
                       <div className="details-hover-wrap">
                         <div className="details-hover">
@@ -327,13 +325,77 @@ function Home() {
                             src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
                             alt="Second slide"
                           />
-                          <h3>{inf.namaInformasi}</h3>
+                          <h3>Informasi Berkala</h3>
                         </div>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                  <div className="col-lg-3 col-md-6">
+                    <div className="single-service-inner text-center">
+                      <div className="details">
+                        <img
+                          className="d-block w-100"
+                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                          alt="Second slide"
+                        />
+                        <h3>Informasi Setiap Saat</h3>
+                      </div>
+                      <div className="details-hover-wrap">
+                        <div className="details-hover">
+                          <img
+                            className="d-block w-100"
+                            src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                            alt="Second slide"
+                          />
+                          <h3>Informasi Setiap Saat</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="single-service-inner text-center">
+                      <div className="details">
+                        <img
+                          className="d-block w-100"
+                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                          alt="Second slide"
+                        />
+                        <h3>Informasi Serta Merta</h3>
+                      </div>
+                      <div className="details-hover-wrap">
+                        <div className="details-hover">
+                          <img
+                            className="d-block w-100"
+                            src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                            alt="Second slide"
+                          />
+                          <h3>Informasi Serta Merta</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-3 col-md-6">
+                    <div className="single-service-inner text-center">
+                      <div className="details">
+                        <img
+                          className="d-block w-100"
+                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                          alt="Second slide"
+                        />
+                        <h3>Infromasi Di Kecualikan</h3>
+                      </div>
+                      <div className="details-hover-wrap">
+                        <div className="details-hover">
+                          <img
+                            className="d-block w-100"
+                            src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                            alt="Second slide"
+                          />
+                          <h3>Infromasi Di Kecualikan</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
           </div>
         </div>

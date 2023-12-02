@@ -182,7 +182,7 @@ function Berita() {
                 {listTerbaru.slice(1, 5).map((berita, index) => (
                   <div class="col-md-6" key={index}>
                     <div class="single-service-inner style-black text-left"  style={{
-                  backgroundImage: `url(${gambarTerbaru})`,
+                  backgroundImage: `url(${berita.image})`,
                   minHeight: "93%",
                 }}>
                       <div class="icon-box">

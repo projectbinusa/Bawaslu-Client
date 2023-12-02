@@ -34,17 +34,6 @@ function Pengumuman() {
     getAll(currentPage);
   }, [currentPage, rowsPerPage]);
 
-  const handleRowsPerPageChange = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-    setPage(0);
-    setCurrentPage(1);
-  };
-
   const filteredList = pengumuman.filter((item) =>
     Object.values(item).some(
       (value) =>
