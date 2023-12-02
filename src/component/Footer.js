@@ -83,7 +83,7 @@ function Footer() {
 
               )
             })} */}
-            <div className="col-lg-3 col-md-6">
+            {/* <div className="col-lg-3 col-md-6">
               <div className="widget widget_nav_menu row">
                 <h4 className="widget-title">Kategori</h4>
                 {category.map((cate) => {
@@ -102,6 +102,31 @@ function Footer() {
                     </div>
                   );
                 })}
+              </div>
+            </div> */}
+            <div className="col-lg-3 col-md-6">
+              <div className="widget widget_nav_menu">
+                <h4 className="widget-title">Kategori</h4>
+                <ul>
+                  <li>
+                    <a href="/berita">Berita</a>
+                  </li>
+                  <li>
+                    <a href="/kehumasan">Kehumasan</a>
+                  </li>
+                  <li>
+                    <a href="/OSDM-dan-Diklat">OSDM & Diklat</a>
+                  </li>
+                  <li>
+                    <a href="/penanganan-pelanggaran">Penanganan Pelanggaran</a>
+                  </li>
+                  <li>
+                    <a href="/pencegahan">Pencegahan</a>
+                  </li>
+                  <li>
+                    <a href="/pengumuman-footer">Pengumuman</a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
