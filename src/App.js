@@ -186,7 +186,7 @@ function App() {
           <PrivateRoute path="/jenis-regulasi" component={JenisRegulasi} exact />
           <PrivateRoute path="/edit-jenis-regulasi/:id" component={EditJenisRegulasi} exact />
           <PrivateRoute path="/add-berita-admin" component={AddBeritaAdmin} exact />
-          <PrivateRoute path="/edit-berita-admin" component={EditBeritaAdmin} exact />
+          <PrivateRoute path="/edit-berita-admin/:id" component={EditBeritaAdmin} exact />
           <PrivateRoute path="/admin-berita" component={AdminBerita} exact />
           <PrivateRoute path="/admin-pengumuman" component={AdminPengumuman} exact />
           <PrivateRoute path="/add-pengumuman" component={AddPengumuman} exact />

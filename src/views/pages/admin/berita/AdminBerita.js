@@ -34,16 +34,12 @@ function AdminBerita() {
   const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita?page=${
+        `${API_DUMMY}/bawaslu/api/berita/all?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`,
-        {
-          headers: {
-            Authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzQWRtaW4iOnRydWUsImV4cCI6MTcwMTM4NDI1NCwiaWF0IjoxNzAxMzY2MjU0fQ.iqIEJEcUfT9sSNkWCf1R1V3nO_MHr91699Vg49NNYp-70Xi7pV9xrSnYTfHInJNx2VDcj_gnGhwd-8oJwcK_Pg`,
-          },
-        }
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
       );
       setList(response.data.data.content);
+      console.log(response.data.data.content);
       setPaginationInfo({
         totalPages: response.data.data.totalPages,
         totalElements: response.data.data.totalElements,
@@ -53,12 +49,10 @@ function AdminBerita() {
     }
   };
 
-  const getAll1 = async (page) => {
+  const getAll1 = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=asc&page=${
-          page - 1
-        }&size=${rowsPerPage}&sort=id`,
+        `${API_DUMMY}/bawaslu/api/category-berita/all`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -66,7 +60,6 @@ function AdminBerita() {
         }
       );
       setList1(response.data.data.content);
-      console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -90,7 +83,7 @@ function AdminBerita() {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           })
-          .then((res) => {
+          .then(() => {
             Swal.fire({
               icon: "success",
               title: "Dihapus!",
@@ -108,8 +101,8 @@ function AdminBerita() {
 
   const deleteData1 = async (id) => {
     Swal.fire({
-      title: "Apakah Anda Ingin Menghapus?",
-      text: "Perubahan data tidak bisa dikembalikan!",
+      title: "Apakah Anda Ingin Menghapus Kategori Berita?",
+      text: "Seluruh berita dalam kategori ini akan ikut terhapus dan data tidak bisa dikembalikan!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
@@ -124,7 +117,7 @@ function AdminBerita() {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           })
-          .then((res) => {
+          .then(() => {
             Swal.fire({
               icon: "success",
               title: "Dihapus!",
@@ -164,6 +157,8 @@ function AdminBerita() {
     )
   );
 
+  console.log(filteredList);
+
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
   return (
@@ -172,11 +167,11 @@ function AdminBerita() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div class="col-auto">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div class="col-auto">
+            <div className="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
@@ -195,14 +190,14 @@ function AdminBerita() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div class="main-card mb-3 card">
-            <div class="card-header" style={{ display: "flex" }}>
+          <div className="main-card mb-3 card">
+            <div className="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Berita</p>
-              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div class="col-auto">
+              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
@@ -222,9 +217,9 @@ function AdminBerita() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div class="btn-actions-pane-right">
-                  <div role="group" class="btn-group-sm btn-group">
-                    <button class="active btn-focus p-2 rounded">
+                <div className="btn-actions-pane-right">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
                       <a
                         style={{ color: "white", textDecoration: "none" }}
                         href="/add-berita-admin"
@@ -237,39 +232,78 @@ function AdminBerita() {
               </div>
             </div>
             <div
-              class="table-responsive"
+              className="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th scope="col" className="text-left">
+                    <th scope="col" className="text-center">
                       No
                     </th>
-                    <th scope="col" className="text-left">
-                      Author
-                    </th>
-                    <th scope="col" className="text-left">
-                      Tanggal Dibuat
-                    </th>
-                    <th scope="col" className="text-left">
-                      Image
-                    </th>
-                    {/* <th scope="col" className="text-left">Isi Berita</th> */}
-                    <th scope="col" className="text-left">
+                    <th scope="col" className="text-center">
                       Judul Berita
                     </th>
-                    {/* <th scope="col" className="text-left">Tags</th> */}
-                    <th scope="col" className="text-left">
+                    <th scope="col" className="text-center">
+                      Penulis Berita
+                    </th>
+                    <th scope="col" className="text-center">
+                      Tanggal Dibuat
+                    </th>
+                    <th scope="col" className="text-center">
+                      Image
+                    </th>
+                    <th scope="col" className="text-center">
                       Aksi
                     </th>
                   </tr>
                 </thead>
+
                 <tbody>
-                  {filteredList.map((berita, index) => {
+                  {list.map((berita, no) => {
+                    return (
+                      <tr key={no}>
+                        <td className="text-center">{no + 1}</td>
+                        <td className="text-center">{berita.judulBerita}</td>
+                        <td className="text-center">{berita.author}</td>
+                        <td className="text-center">{berita.createdDate}</td>
+                        <td className="text-center">
+                          <img
+                            src={berita.image}
+                            alt="berita-image"
+                            style={{ height: "4.5rem", width: "4.5rem" }}
+                          />
+                        </td>
+                        <td data-label="Aksi" className="text-center">
+                          <button type="button" className="btn-primary btn-sm mr-2">
+                            <a
+                              style={{ color: "white", textDecoration: "none" }}
+                              href={`/edit-berita-admin/${berita.id}`}
+                            >
+                              {" "}
+                              <i className="fa-solid fa-pen-to-square"></i>
+                            </a>
+                          </button>
+
+                          <button
+                            onClick={() => deleteData(berita.id)}
+                            type="button"
+                            className="btn-danger btn-sm"
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+
+                {/* with pagination */}
+                {/* <tbody>
+                  {list.map((berita, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No : " class=" text-muted">
+                        <td data-label="No : " className=" text-muted">
                           {index + 1}
                         </td>
                         <td data-label="Author : ">{berita.author}</td>
@@ -289,34 +323,33 @@ function AdminBerita() {
                             "No Image"
                           )}
                         </td>
-                        {/* <td data-label="Account" class=" isiBerita">{berita.isiBerita}</td> */}
-                        <td data-label="Judul Berita : " class="">
+                        <td data-label="Judul Berita : " className="">
                           {berita.judulBerita}
                         </td>
-                        {/* <td data-label="Account" class="">{berita.tags}</td> */}
-                        <td data-label="Aksi : " class="text-center d-flex">
-                          <button type="button" class="btn-primary btn-sm mr-2">
+                        <td data-label="Aksi : " className="text-center d-flex">
+                          <button type="button" className="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
                               href="/edit-berita-admin"
                             >
                               {" "}
-                              <i class="fa-solid fa-pen-to-square"></i>
+                              <i className="fa-solid fa-pen-to-square"></i>
                             </a>
                           </button>
 
                           <button
                             onClick={() => deleteData(berita.id)}
                             type="button"
-                            class="btn-danger btn-sm"
+                            className="btn-danger btn-sm"
                           >
-                            <i class="fa-solid fa-trash"></i>
+                            <i className="fa-solid fa-trash"></i>
                           </button>
                         </td>
                       </tr>
                     );
                   })}
-                </tbody>
+                </tbody> */}
+                {/* end */}
               </table>
             </div>
             <div className="card-header mt-3 d-flex justify-content-center">
@@ -330,89 +363,76 @@ function AdminBerita() {
               />
             </div>
           </div>
-          <div class="main-card mb-3 card">
-            <div class="card-header" style={{ display: "flex" }}>
-              Category
-              <div class="btn-actions-pane-right">
-                <div role="group" class="btn-group-sm btn-group">
-                  <button class="active btn-focus p-2 rounded">
+
+          {/* Category */}
+          <div className="main-card mb-3 card">
+            <div className="card-header" style={{ display: "flex" }}>
+              Kategori Berita
+              <div className="btn-actions-pane-right">
+                <div role="group" className="btn-group-sm btn-group">
+                  <button className="active btn-focus p-2 rounded">
                     <a
                       style={{ color: "white", textDecoration: "none" }}
                       href="/tambah-category-berita"
                     >
-                      Tambah Category
+                      Tambah Kategori Berita
                     </a>
                   </button>
                 </div>
               </div>
             </div>
             <div
-              class="table-responsive"
+              className="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th className="text-center">No</th>
-                    <th className="text-center">Category</th>
-                    <th className="text-center">Create Date</th>
-                    <th className="text-center">Update Date</th>
+                    <th className="text-center">Kategory Berita</th>
+                    <th className="text-center">Tanggal Dibuat</th>
                     <th className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <td data-label="No" className="">
-                    1
-                  </td>
-                  <td data-label="Category" className="">
-                    tydfwefd
-                  </td>
-                  <td data-label="Created Date" className="">
-                    8763343r438r
-                  </td>
-                  <td data-label="Updated Date" className="">
-                    193uy32gdeydy
-                  </td>
-                  <td data-label="Aksi" className="aksi">
-                    <button type="button" class="btn-primary btn-sm mr-2">
-                      <a style={{ color: "white", textDecoration: "none" }}>
-                        {" "}
-                        <i class="fa-solid fa-pen-to-square"></i>
-                      </a>
-                    </button>
-
-                    <button type="button" class="btn-danger btn-sm">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                  {/* {list1.map((kategory, index) => {
+                  {list1.map((kategory, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No" class="text-center text-muted">{index + 1}</td>
-                        <td data-label="Category" className="text-center">{kategory.category}</td>
-                        <td data-label="Created Date" class="text-center">{kategory.createDate}</td>
-
-                        <td data-label="Update Date" class="text-center">{kategory.updateDate}</td>
-
-                        <td data-label="Aksi" class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
-                           <a style={{color:"white", textDecoration:"none"}} href={`/edit-category-berita/${kategory.id}`}> <i class="fa-solid fa-pen-to-square"></i></a>
+                        <td data-label="No" className="text-center text-muted">
+                          {index + 1}
+                        </td>
+                        <td data-label="Category" className="text-center">
+                          {kategory.category}
+                        </td>
+                        <td data-label="Created Date" className="text-center">
+                          {kategory.createdDate}
+                        </td>
+                        <td data-label="Aksi" className="text-center">
+                          <button type="button" className="btn-primary btn-sm mr-2">
+                            <a
+                              style={{ color: "white", textDecoration: "none" }}
+                              href={`/edit-category-berita/${kategory.id}`}
+                            >
+                              {" "}
+                              <i className="fa-solid fa-pen-to-square"></i>
+                            </a>
                           </button>
 
                           <button
-                            onClick={() => deleteData1(category.id)}
+                            onClick={() => deleteData1(kategory.id)}
                             type="button"
-                            class="btn-danger btn-sm">
-                            <i class="fa-solid fa-trash"></i>
+                            className="btn-danger btn-sm"
+                          >
+                            <i className="fa-solid fa-trash"></i>
                           </button>
                         </td>
                       </tr>
                     );
-                  })} */}
+                  })}
                 </tbody>
               </table>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
