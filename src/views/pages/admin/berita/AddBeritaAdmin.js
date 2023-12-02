@@ -66,7 +66,7 @@ function AddBeritaAdmin() {
           },
         }
       );
-      setCategory(response.data.data);
+      setCategory(response.data.data.content);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
