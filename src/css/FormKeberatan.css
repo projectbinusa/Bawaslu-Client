@@ -42,11 +42,15 @@
 .span{
     color: red;
 }
-.form-txt-img{
-     display: flex;  
-     justify-content: space-between; 
-     padding: 30px;
-}
+.form {
+    padding-top: 100px;
+    /* padding: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  
+  }
 .img-info{
     width: 550px;
 }
