@@ -297,29 +297,21 @@ function Navbar() {
                 </a>
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   <ul
-                    class={`${isMobile ? "collapse" : "sub-menu"}`}
-                    id="submenu2"
-                    data-bs-parent="#menu"
-                  >
-                  {regulasi.map((regulasi) => {
-                    return (
-                      <li>
-                        <a
-                          href={
-                            "/regulasi/" +
-                            regulasi.jenisRegulasi +
-                            "/" +
-                            regulasi.id
-                          }
-                          style={{ textDecoration: "none" }}
-                        >
-                          <i class="metismenu-icon"></i>
-                          {regulasi.jenisRegulasi}
-                        </a>
-                        {/* <a href="/regulasi">Regulasi</a> */}
-                      </li>
-                    );
-                  })}
+                  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu2"
+                  data-bs-parent="#menu">
+                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                  <li>
+                    <a href="/regulasi">Regulasi</a>
+                  </li>
+                  <li>
+                    <a href="/dip">DIP</a>
+                  </li>
+                  <li>
+                    <a href="/standar-operasional-prosedur">
+                      Standar Operasional Prosedur
+                    </a>
+                  </li>
                   <li>
                     <a href="/maklumat-pelayanan">Maklumat Pelayanan</a>
                   </li>
