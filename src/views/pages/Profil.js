@@ -170,7 +170,7 @@ function Profil() {
               Kabupaten Boyolali.
             </p>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="single-security-wrap-2 keterangan">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -180,7 +180,7 @@ function Profil() {
               <p>Ketua Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="single-security-wrap-2 keterangan">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -190,7 +190,7 @@ function Profil() {
               <p>Koordinator Seketariat Bawaslu Kabupaten Boyolali. </p>
             </div>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="single-security-wrap-2 keterangan">
             <div className="thumb border-bottom">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
@@ -203,7 +203,7 @@ function Profil() {
               <p>Anggota Bawaslu Kabupaten Boyolali</p>
             </div>
           </div>
-          <div className="single-security-wrap-2">
+          <div className="single-security-wrap-2 keterangan">
             <div className="thumb">
               <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
             </div>
