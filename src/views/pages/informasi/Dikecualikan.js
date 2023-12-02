@@ -8,7 +8,6 @@ function Dikecualikan() {
   return (
     <div>
       <Navbar />
-     
 
       <div
         className=" d-flex about-area pd-bottom-10 service-area bg-relative pd-top-10 "
@@ -19,10 +18,8 @@ function Dikecualikan() {
         }}
       >
         <div className="kolom-image mx-4 my-4 d-flex  ">
-          <div className="d-flex flex-column">
-            <div className="section-title">
-            </div>
-            <div className=" text d-flex flex-column gap-3   bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4">
+          <div className="d-lg-flex pt-lg-15 ">
+            <div className=" text d-flex flex-column gap-3 bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4">
               <h2 className="title">Informasi Dikecualikan</h2>
               <li>
                 <a clas="text-decoration-none text-light " href="#">
@@ -84,11 +81,12 @@ function Dikecualikan() {
                 </a>
               </li>
             </div>
-          </div>
-
-          <div id="div-img" className=" w-50 d-flex align-item-center ">
+            <div id="div-img" className=" w-50 d-flex align-item-center ">
             <img id="img" className="w-100" src={informasi} alt="img" />
           </div>
+          </div>
+
+        
         </div>
       </div>
 
