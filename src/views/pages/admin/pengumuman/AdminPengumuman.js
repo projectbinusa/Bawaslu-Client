@@ -121,8 +121,11 @@ function AdminPengumuman() {
             onChange={handleSearchChange}
           />
           <div className="main-card mb-3 card">
-            <div className="card-header pembungkus-text-button" style={{ display: "flex" }}>
-              <p className="mt-3">Pengumuman Keterangan</p>
+            <div
+              className="card-header pembungkus-text-button"
+              style={{ display: "flex" }}
+            >
+              <p className="mt-3">Pengumuman</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
@@ -131,7 +134,8 @@ function AdminPengumuman() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -147,8 +151,14 @@ function AdminPengumuman() {
                   onChange={handleSearchChange}
                 />
                 <div className="btn-actions-pane-right">
-                  <div role="group" className="btn-group-sm btn-group button-pembungkus">
-                    <button id="button-tambah" className="active btn-focus p-2 rounded button-tambah">
+                  <div
+                    role="group"
+                    className="btn-group-sm btn-group button-pembungkus"
+                  >
+                    <button
+                      id="button-tambah"
+                      className="active btn-focus p-2 rounded button-tambah"
+                    >
                       <a
                         href="/add-pengumuman"
                         className="text-light txt-tambah"
@@ -166,73 +176,65 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
+                style={{ overflowY: "auto", maxHeight: "60vh" }}
+              >
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
                       <th scope="col">No</th>
-                      <th scope="col">Author</th>
-                      {/* <th scope="col">
-                        Isi Pengumuman
-                      </th> */}
-                      <th scope="col">Image</th>
                       <th scope="col">Judul Pengumuman</th>
-                      <th scope="col">Tags</th>
+                      <th scope="col">Penulis</th>
+                      <th scope="col">Tanggal Dibuat</th>
+                      <th scope="col">Image</th>
                       <th scope="col" className="text-center">
                         Aksi
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                   
-                     {filteredList.map((pengumuman, index) => {
-                      return ( 
-                    <tr key={index}>
-                      <td className="text-left" data-label="No : ">{pengumuman.id}</td>
-                      <td className="text-left" data-label="author : ">{pengumuman.author}</td>
-                      <td className="td-pmbngks">
-                        <img className="img-td" src={pengumuman.image} alt="pengumuman" />
-                      </td>
-                      <td data-label="judulPengumuman : " className="text-left">
-                        {pengumuman.judulPengumuman}
-                      </td>
-
-                      
-                      <td data-label="isiPengumuman : " className="text-left">
-                        {pengumuman.isiPengumuman}
-                      </td>
-                      <td data-label="image : " className="text-left"></td>
-                      <td className="text-left">{index + 1}</td>
-                      <td className="text-left">{pengumuman.author}</td>
-                      <td
-                        data-label="Aksi : "
-                        className="pt-3 pb-3 d-flex aksi"
-                      >
-                        <button
-                          type="button"
-                          className=".responsive-buttons btn-primary btn-sm mr-2"
-                        >
-                          <a
-                            style={{
-                              color: "white",
-                              textDecoration: "none",
-                            }}
-                            href={`/edit-pengumuman/${pengumuman.id}`}
+                    {filteredList.map((pengumuman, index) => {
+                      return (
+                        <tr key={index}>
+                          <td>{index + 1}</td>
+                          <td>{pengumuman.judulPengumuman}</td>
+                          <td>{pengumuman.author}</td>
+                          <td>{pengumuman.createdDate}</td>
+                          <td>
+                            <img
+                              src={pengumuman.image}
+                              alt=""
+                              style={{ width: "4.5rem", height: "4.5rem" }}
+                            />
+                          </td>
+                          <td
+                            data-label="Aksi : "
+                            className="pt-3 pb-3 d-flex aksi"
                           >
-                            <i className="fa-solid fa-pen-to-square"></i>
-                          </a>
-                        </button>
-                        <button
-                          type="button"
-                          className=" btn-danger btn-sm"
-                          onClick={() => deleteData(pengumuman.id)}
-                        >
-                          <i className="fa-solid fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    );
-                    })} 
+                            <button
+                              type="button"
+                              className=".responsive-buttons btn-primary btn-sm mr-2"
+                            >
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-pengumuman/${pengumuman.id}`}
+                              >
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              className=" btn-danger btn-sm"
+                              onClick={() => deleteData(pengumuman.id)}
+                            >
+                              <i className="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
