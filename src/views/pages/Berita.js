@@ -5,6 +5,7 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
+import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
@@ -27,13 +28,7 @@ function Berita() {
   const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita?page=${
-          page - 1
-        }&size=10&sortBy=id&sortOrder=asc`, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/berita/all?page=${page-1}&size=10&sortBy=id&sortOrder=asc`
       );
       setList(response.data.data.content);
       setPaginationInfo({
@@ -48,17 +43,11 @@ function Berita() {
   const getCategoryBerita = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
       );
       setCategory(response.data.data);
       console.log(response.data.data);
-      if (response.data.data.length > 0) {
-        setGambarTerbaru(response.data.data[0].image);
-      }
+
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -67,14 +56,14 @@ function Berita() {
   const getAllTerbaru = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita-terbaru`, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/berita/terbaru`
       );
       setListTerbaru(response.data.data);
       console.log(response.data.data);
+      if (response.data.data.length > 0) {
+        setGambarTerbaru(response.data.data[0].image);
+        console.log(response.data.data[0].image);
+      }
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -94,11 +83,7 @@ function Berita() {
   const getAllRekap = async (tahun_bulan) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/berita/arsip?bulan=${tahun_bulan}`
       );
       return response.data.data;
     } catch (error) {
@@ -124,10 +109,11 @@ function Berita() {
   }, []);
 
   useEffect(() => {
-    // getAll(0);
-    getAllTerbaru(0);
-    getCategoryBerita(0);
-    // getAllRekap();
+    getCategoryBerita();
+  }, []);
+
+  useEffect(() => {
+    getAllTerbaru();
   }, []);
 
   useEffect(() => {
@@ -175,7 +161,7 @@ function Berita() {
       <div
         class="service-area bg-overlay pd-top-120 pd-bottom-90"
         style={{
-          backgroundImage: `url('https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg')`,
+          backgroundImage: `url(${gambarTerbaru})`,
         }}>
         <div class="container">
           <div class="row">
@@ -195,7 +181,10 @@ function Berita() {
               <div class="row">
                 {listTerbaru.slice(1, 5).map((berita, index) => (
                   <div class="col-md-6" key={index}>
-                    <div class="single-service-inner style-white text-left">
+                    <div class="single-service-inner style-black text-left"  style={{
+                  backgroundImage: `url(${gambarTerbaru})`,
+                  minHeight: "93%",
+                }}>
                       <div class="icon-box">
                         <i class="icomoon-layer"></i>
                       </div>
@@ -253,50 +242,63 @@ function Berita() {
                           <div class="col-sm-7"></div>
                           <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                             <div class="blog-share">
-                              <ul>
-                                <li>
-                                  <a>
-                                    <button
-                                      style={{
-                                        color: "white",
-                                        backgroundColor: "#45629f",
-                                      }}
-                                      className="border p-2">
-                                      <i
-                                        class="fab fa-facebook-f"
-                                        aria-hidden="true"></i>{" "}
-                                      Facebook
-                                    </button>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a>
-                                    <button
-                                      style={{
-                                        color: "white",
-                                        backgroundColor: "#5eb2ef",
-                                      }}
-                                      className="border p-2">
-                                      <i
-                                        class="fab fa-twitter"
-                                        aria-hidden="true"></i>{" "}
-                                      Twitter
-                                    </button>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <button
-                                      style={{
-                                        color: "white",
-                                        backgroundColor: "#cf2830",
-                                      }}
-                                      className="border p-2">
-                                      <i class="fa-brands fa-pinterest"></i> Pin
-                                    </button>
-                                  </a>
-                                </li>
-                              </ul>
+                             <ul>
+                              <li>
+                                <FacebookShareButton
+                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                  media={berita.image}
+                                  description={berita.judulBerita}
+                                  quote={berita.judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      className="fab fa-facebook-f"
+                                      aria-hidden="true"></i>{" "}
+                                    Facebook
+                                  </button>
+                                </FacebookShareButton>
+                              </li>
+                              <li>
+                                <TwitterShareButton
+                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                  media={berita.image}
+                                  description={berita.judulBerita}
+                                  quote={berita.judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#5eb2ef",
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      className="fab fa-twitter"
+                                      aria-hidden="true"></i>{" "}
+                                    Twitter
+                                  </button>
+                                </TwitterShareButton>
+                              </li>
+                              <li>
+                                <PinterestShareButton
+                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                  quote={berita.judulBerita}
+                                  media={berita.image}
+                                  description={berita.judulBerita}>
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#cf2830",
+                                    }}
+                                    className="border p-2">
+                                    <i className="fa-brands fa-pinterest"></i>{" "}
+                                    Pin
+                                  </button>
+                                </PinterestShareButton>
+                              </li>
+                            </ul>
                             </div>
                           </div>
                         </div>

@@ -6,7 +6,7 @@ import SetiapSaat from "./views/pages/informasi/SetiapSaat";
 import "./css/style.css";
 import Profil from "./views/pages/Profil";
 import Pengumuman from "./views/pages/pengumuman/Pengumuman";
-import eLibrary from "./views/pages/eLibrary";
+import ELibrary from "./views/pages/Library";
 import CalonAnggotaBawaslu from "./views/pages/pengumuman/CalonAnggotaBawaslu";
 import Berita from "./views/pages/Berita";
 import Login from "./views/pages/auth/Login";
@@ -103,7 +103,7 @@ function App() {
           <Route path="/profil" component={Profil} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
           {/* <Route path="/isi-pengumuman/:namaPengumuman/:id" component={IsiPe} exact /> */}
-          <Route path="/library" component={eLibrary} exact />
+          <Route path="/library" component={ELibrary} exact />
           <Route path="/berita" component={Berita} exact />
           <Route path="/edit-category-berita/:id" component={EditCategory} exact />
           {/* daftar informasi */}

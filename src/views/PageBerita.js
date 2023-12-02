@@ -10,6 +10,7 @@ import {
 import { useEffect } from "react";
 import axios from "axios";
 import Bawaslu from "../component/Bawaslu";
+import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
 
 function PageBerita() {
   const [judulBerita, setJudulBerita] = useState("");
@@ -94,85 +95,92 @@ function PageBerita() {
                 <div class="tag-and-share">
                   <div class="row">
                     <div class="col-sm-7">
-                      <div class="tags d-inline-block">
-                      </div>
+                      <div class="tags d-inline-block"></div>
                     </div>
                     <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                       <div class="blog-share">
-                        <ul>
-                          <li>
-                            <a
-                              href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
-                              target="_blank">
-                              <button
+                      <ul>
+                              <li>
+                                <FacebookShareButton
+                                  url={`https://bawaslu.excellentsistem.com/page-berita/${judulBerita}/${id}`}
+                                  media={image}
+                                  description={judulBerita}
+                                  quote={judulBerita}>
+                                  <button
                                     style={{
                                       color: "white",
                                       backgroundColor: "#45629f",
-                                    }}className="border p-2">
-                                <i
-                                  class="fab fa-facebook-f"
-                                  aria-hidden="true"></i>{" "}
-                                Facebook
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
-                              target="_blank">
-                              <button
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      className="fab fa-facebook-f"
+                                      aria-hidden="true"></i>{" "}
+                                    Facebook
+                                  </button>
+                                </FacebookShareButton>
+                              </li>
+                              <li>
+                                <TwitterShareButton
+                                  url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
+                                  media={image}
+                                  description={judulBerita}
+                                  quote={judulBerita}>
+                                  <button
                                     style={{
                                       color: "white",
                                       backgroundColor: "#5eb2ef",
-                                    }}className="border p-2">
-                                <i
-                                  class="fab fa-twitter"
-                                  aria-hidden="true"></i>{" "}
-                                Twitter
-                              </button>
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <button
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      className="fab fa-twitter"
+                                      aria-hidden="true"></i>{" "}
+                                    Twitter
+                                  </button>
+                                </TwitterShareButton>
+                              </li>
+                              <li>
+                                <PinterestShareButton
+                                  url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
+                                  quote={judulBerita}
+                                  media={image}
+                                  description={judulBerita}>
+                                  <button
                                     style={{
                                       color: "white",
                                       backgroundColor: "#cf2830",
-                                    }}className="border p-2">
-                                <i class="fa-brands fa-pinterest"></i> Pin
-                              </button>
-                            </a>
-                          </li>
-                        </ul>
+                                    }}
+                                    className="border p-2">
+                                    <i className="fa-brands fa-pinterest"></i>{" "}
+                                    Pin
+                                  </button>
+                                </PinterestShareButton>
+                              </li>
+                            </ul>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="thumb">
                   {image && image.length < 0 ? (
-                     <img
-                     style={{ height: "450px" }}
-                     src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
-                     alt="img"
-                   />
-                  ):(
-                  <img
-                    style={{ height: "450px" }}
-                    src={image}
-                    alt="img"
-                  />
+                    <img
+                      style={{ height: "450px" }}
+                      src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
+                      alt="img"
+                    />
+                  ) : (
+                    <img style={{ height: "450px" }} src={image} alt="img" />
                   )}
                 </div>
                 <div class="details">
                   <h2>
-                    <a href=""></a>
                   </h2>
                   <ul class="blog-meta">
                     <li>
                       <i class="far fa-user"></i>By {author}
                     </li>
                     <li>
-                      <i class="far fa-calendar-alt"></i>{createDate}
+                      <i class="far fa-calendar-alt"></i>
+                      {createDate}
                     </li>
                   </ul>
                 </div>
@@ -181,34 +189,36 @@ function PageBerita() {
               <div class="jnews_inline_related_post">
                 <h4 className="pt-4 mb-4">Related Posts</h4>
                 <div class="row">
-                          {list.map((category) => {
-                            return (
-                              <div class="col-md-6">
-                                <div class="media single-choose-inner">
-                                  <div class="media-left">
-                                    <div class="icon">
-                                      <i class="fas fa-bullhorn"></i>
-                                    </div>
-                                  </div>
-                                  <div class="media-body">
-                                    <p>{category.judulBerita} </p>
-                                  </div>
-                                </div>
-                                {/* <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
+                  {list.map((category) => {
+                    return (
+                      <div class="col-md-6">
+                        <div class="media single-choose-inner">
+                          <div class="media-left">
+                            <div class="icon">
+                              <i class="fas fa-bullhorn"></i>
+                            </div>
+                          </div>
+                          <div class="media-body">
+                            <p>
+                              <a href={`/page-berita/${category.judulBerita}/${category.id}`}>{category.judulBerita} </a>
+                            </p>
+                          </div>
+                        </div>
+                        {/* <a href="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif">
                             {category.judulPengumuman}
                           </a> */}
-                              </div>
-                            );
-                          })}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               <hr />
             </div>
-          </div>
-          <div class="col-lg-4 col-12">
-            <div className="sidebar-container">
-              <div class="td-sidebar">
-              <Bawaslu/>
+            <div class="col-lg-4 col-12">
+              <div className="sidebar-container">
+                <div class="td-sidebar">
+                  <Bawaslu />
+                </div>
               </div>
             </div>
           </div>

@@ -9,14 +9,7 @@ function Profil() {
       <Navbar />
       <div
         className="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}
-      >
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}
-        ></div>
+        style={{ background: "#151423" }}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-xl-7 col-lg-8">
@@ -38,15 +31,15 @@ function Profil() {
           <div className="row">
             <div className="col-lg-6 pe-xl-5 align-self-center">
               {/* <div className="section-title mb-0"> */}
-                <h2 className="title">Profile</h2>
-                <p id="content" className="content"></p>
-                <p className="overflow-ellipsis">
-                  Badan Pengawas Pemilu adalah lembaga negara yang memiliki
-                  tugas pokok dan fungsi melakukan pengawasan terhadap seluruh
-                  tahapan pemilihan umum . Melalui website ini, kami akan selalu
-                  memperbaharui informasi terkait pengawasan dan pemantauan
-                  pemilu.
-                </p>
+              <h2 className="title">Profile</h2>
+              <p id="content" className="content"></p>
+              <p className="overflow-ellipsis">
+                Badan Pengawas Pemilu adalah lembaga negara yang memiliki tugas
+                pokok dan fungsi melakukan pengawasan terhadap seluruh tahapan
+                pemilihan umum . Melalui website ini, kami akan selalu
+                memperbaharui informasi terkait pengawasan dan pemantauan
+                pemilu.
+              </p>
               {/* </div> */}
               <div className="accordion mt-4" id="accordionExample">
                 <div className="accordion-item single-accordion-inner style-2">
@@ -58,8 +51,7 @@ function Profil() {
                       data-bs-target="#collapseOne"
                       aria-expanded="true"
                       aria-controls="collapseOne"
-                      fdprocessedid="ikbz6"
-                    >
+                      fdprocessedid="ikbz6">
                       Visi
                     </button>
                   </h2>
@@ -68,8 +60,7 @@ function Profil() {
                     className="accordion-collapse collapse show"
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
-                    style={{}}
-                  >
+                    style={{}}>
                     <div className="accordion-body">
                       Terwujudnya Bawaslu sebagai Lembaga Pengawal Terpercaya
                       dalam Penyelenggaraan Pemilu Demokratis, Bermartabat, dan
@@ -86,8 +77,7 @@ function Profil() {
                       data-bs-target="#collapseTwo"
                       aria-expanded="false"
                       aria-controls="collapseTwo"
-                      fdprocessedid="2yh8m"
-                    >
+                      fdprocessedid="2yh8m">
                       Misi
                     </button>
                   </h2>
@@ -96,8 +86,7 @@ function Profil() {
                     className="accordion-collapse collapse"
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample"
-                    style={{}}
-                  >
+                    style={{}}>
                     <div className="accordion-body">
                       <p style={{ color: "white" }}>
                         <ul>
@@ -144,24 +133,24 @@ function Profil() {
                       data-bs-target="#collapseThree"
                       aria-expanded="false"
                       aria-controls="collapseThree"
-                      fdprocessedid="44ky5w"
-                    >
-                      Lainnya
+                      fdprocessedid="44ky5w">
+                      Tugas, Fungsi dan Wewenang
                     </button>
                   </h2>
                   <div
                     id="collapseThree"
                     className="accordion-collapse collapse"
                     aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample"
-                  >
+                    data-bs-parent="#accordionExample">
                     <div className="accordion-body">
                       <p style={{ color: "white" }}>
                         <ul>
-                          <li>Sejarah Pengawasan Pemilu</li>
-                          <li>Tugas, Wewenang dan Tanggung Jawab</li>
-                          <li>Profil Pimpinan</li>
-                          <li>Struktur Organisasi</li>
+                          <li>Menyediakan, menyimpan, mendokumentasikan dan mengamankan informasi</li>
+                          <li>Memberikan layanan informasi publik yang cepat, tepat, efisien dan gratis</li>
+                          <li>Menyusun dan menetapkan standar operasional prosedur (SOP) informasi publik</li>
+                          <li>Melakukan klasifikasi terhadap informasi dan/atau pengubahannya</li>
+                          <li>Menetapkan informasi yang dikecualikan yang telah habis jangka waktu pengecualiannya sebagai informasi yang dapat diakses dan</li>
+                          <li>Menetapkan pertimbangan tertulis atas setiap kebijakan yang diambil untuk memenuhi hak setiap orang atas informasi publik</li>
                         </ul>
                       </p>
                     </div>
@@ -178,10 +167,11 @@ function Profil() {
           </div>
         </div>
       </div>
-      <div className="row pd-top-110"style={{ background: "#F1F6F9" }}>
+      <div className="row pd-top-110" style={{ background: "#F1F6F9" }}>
         <div className="col-lg-6 col-md-9 px-xl-5 align-self-center">
           <div className="container thumb mb-4 mb-lg-0">
-            <img style={{borderRadius:"10px"}}
+            <img
+              style={{ borderRadius: "10px" }}
               src="https://lp2m.uma.ac.id/wp-content/uploads/2022/02/OrganisasiUMA.jpg"
               alt="img"
             />
@@ -197,7 +187,10 @@ function Profil() {
           </div>
           <div className="single-security-wrap-2">
             <div className="thumb border-bottom">
-              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
+                alt="img"
+              />
             </div>
             <div className="details">
               <h5>Pembina</h5>
@@ -207,7 +200,10 @@ function Profil() {
           </div>
           <div className="single-security-wrap-2">
             <div className="thumb border-bottom">
-              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
+                alt="img"
+              />
             </div>
             <div className="details">
               <h5>Atasan PPID</h5>
@@ -217,7 +213,10 @@ function Profil() {
           </div>
           <div className="single-security-wrap-2">
             <div className="thumb border-bottom">
-              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
+                alt="img"
+              />
             </div>
             <div className="details">
               <h5>Tim Pertimbangan</h5>
@@ -230,7 +229,10 @@ function Profil() {
           </div>
           <div className="single-security-wrap-2">
             <div className="thumb">
-              <img src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png" alt="img" />
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
+                alt="img"
+              />
             </div>
             <div className="details">
               <h5>Petugas Layanan Informasi</h5>

@@ -184,9 +184,8 @@ function AdminPengumuman() {
                     </tr>
                   </thead>
                   <tbody>
-                   
                      {filteredList.map((pengumuman, index) => {
-                      return ( 
+                      return (
                     <tr key={index}>
                       <td className="text-left" data-label="No : ">{pengumuman.id}</td>
                       <td className="text-left" data-label="author : ">{pengumuman.author}</td>
@@ -197,7 +196,7 @@ function AdminPengumuman() {
                         {pengumuman.judulPengumuman}
                       </td>
 
-                      
+
                       <td data-label="isiPengumuman : " className="text-left">
                         {pengumuman.isiPengumuman}
                       </td>
@@ -232,7 +231,7 @@ function AdminPengumuman() {
                       </td>
                     </tr>
                     );
-                    })} 
+                    })}
                   </tbody>
                 </table>
               </div>
