@@ -142,7 +142,7 @@ const Kehumasan = () => {
             <div>
               <h1 id="h1-khmsn">KEHUMASAN</h1>
               <p id="p-khmsn">
-                Artikel Mengenai Kehumasan BAwaslu Kabupaten Boyolali
+                Artikel Mengenai Kehumasan Bawaslu Kabupaten Boyolali
               </p>
               <div className="bg-gray" id="bg-gray">
                 <div className="txt-gray">No Content Available</div>
