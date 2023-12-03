@@ -23,6 +23,7 @@ function EditJenisKeterangan() {
       .then((ress) => {
         const response = ress.data.data;
         setKeterangan(response.keterangan);
+        setJenisInformasi(response.id);
       })
       .catch((error) => {
         console.log(error);
@@ -81,11 +82,11 @@ function EditJenisKeterangan() {
   }, []);
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Edit Data</h1>
@@ -96,10 +97,10 @@ function EditJenisKeterangan() {
                      <label htmlFor="exampleInputEmail1" className="form-label">
                       Jenis Informasi
                     </label>
-                    <select
+                    <select disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setJenisInformasi(e.target.value)}>
+                      onChange={(e) => setJenisInformasi(e.target.value)} value={jenisInformasi}>
                       <option selected>PIlih Jenis Informasi</option>
                       {jenisInformasii.map((down) => {
                         return (
@@ -132,7 +133,6 @@ function EditJenisKeterangan() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -30,12 +30,7 @@ function Informasii() {
     await axios
       .get(
         `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan/` +
-          param.id,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+          param.id
       )
       .then((response) => {
         setList(response.data.data.jenisKeteranganInformasiDTOList);
@@ -50,12 +45,7 @@ function Informasii() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-keterangan/${tableId}/isi-informasi?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
       );
 
       setIsi(response.data.data.content);
@@ -141,15 +131,37 @@ function Informasii() {
   return (
     <div>
       <Navbar />
-      
+      <div
+        className="breadcrumb-area bg-relative"
+        style={{ background: "#151423" }}>
+        <div
+          className="banner-bg-img"
+          style={{
+            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/. + param.idwebp')`,
+          }}></div>
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-7 col-lg-8">
+              <div className="breadcrumb-inner text-center">
+                <h4 className="page-title">Informasi</h4>
+                <ul className="page-list">
+                  <li>
+                    <a href="home">Home</a>
+                  </li>
+                  <li>Informasi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="project-area pd-top-115 pd-bottom-90"
-      >
+        className="project-area pd-top-115 pd-bottom-90">
         <div className="container">
           <div className="d-flex gap-5">
             <div className="isotope-filters project-isotope-btn text-left mb-5">
@@ -161,8 +173,7 @@ function Informasii() {
                     selectedTableId === menu.id ? "active" : ""
                   }`}
                   data-filter="*"
-                  onClick={() => showTable(menu.id)}
-                >
+                  onClick={() => showTable(menu.id)}>
                   {menu.keterangan}
                 </button>
               ))}
@@ -174,8 +185,7 @@ function Informasii() {
                 style={{
                   display: selectedTableId === menu.id ? "table" : "none",
                   width: "100%",
-                }}
-              >
+                }}>
                 <div className="card-header bg-primary text-light">
                   <div style={{ display: "flex" }}>
                     <div className="">
@@ -186,8 +196,7 @@ function Informasii() {
                       <select
                         className="form-select form-select-sm"
                         onChange={handleRowsPerPageChange}
-                        value={rowsPerPage}
-                      >
+                        value={rowsPerPage}>
                         <option value={5}>5</option>
                         <option value={10}>10</option>
                         <option value={20}>20</option>
@@ -228,8 +237,7 @@ function Informasii() {
                                 paddingRight: "13px",
                                 borderRadius: "5px",
                                 marginRight: "10px",
-                              }}
-                            >
+                              }}>
                               <i className="fa-solid fa-download"></i> Download
                               Sebagai Pdf
                             </button>
@@ -242,8 +250,7 @@ function Informasii() {
                                 paddingRight: "13px",
                                 borderRadius: "5px",
                                 marginRight: "10px",
-                              }}
-                            >
+                              }}>
                               <i className="fa-solid fa-circle-info"></i>
                             </button>
                           </td>

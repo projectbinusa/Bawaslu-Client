@@ -105,8 +105,7 @@ function AdminPengumuman() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}
-              >
+                value={rowsPerPage}>
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -123,8 +122,7 @@ function AdminPengumuman() {
           <div className="main-card mb-3 card">
             <div
               className="card-header pembungkus-text-button"
-              style={{ display: "flex" }}
-            >
+              style={{ display: "flex" }}>
               <p className="mt-3">Pengumuman</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
@@ -134,8 +132,7 @@ function AdminPengumuman() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}
-                  >
+                    value={rowsPerPage}>
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -153,17 +150,14 @@ function AdminPengumuman() {
                 <div className="btn-actions-pane-right">
                   <div
                     role="group"
-                    className="btn-group-sm btn-group button-pembungkus"
-                  >
+                    className="btn-group-sm btn-group button-pembungkus">
                     <button
                       id="button-tambah"
-                      className="active btn-focus p-2 rounded button-tambah"
-                    >
+                      className="active btn-focus p-2 rounded button-tambah">
                       <a
                         href="/add-pengumuman"
                         className="text-light txt-tambah"
-                        style={{ textDecoration: "none" }}
-                      >
+                        style={{ textDecoration: "none" }}>
                         {" "}
                         Tambah Pengumuman
                       </a>
@@ -176,8 +170,7 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}
-              >
+                style={{ overflowY: "auto", maxHeight: "60vh" }}>
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
@@ -195,42 +188,57 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td>{index + 1}</td>
-                          <td>{pengumuman.judulPengumuman}</td>
-                          <td>{pengumuman.author}</td>
-                          <td>{pengumuman.createdDate}</td>
-                          <td>
+                          <td className="text-left">{index + 1}</td>
+                          <td
+                            style={{ maxWidth: "120px" }}
+                            data-label="judulPengumuman : "
+                            className="text-left">
+                            {pengumuman.judulPengumuman}
+                          </td>
+                          <td className="text-left" data-label="author : ">
+                            {pengumuman.author}
+                          </td>
+                          <td className="text-left">
+                            {pengumuman.createdDate}
+                          </td>
+                          <td className="td-pmbngks">
                             <img
+                              style={{ width: "80px" }}
+                              className="img-td"
                               src={pengumuman.image}
-                              alt=""
-                              style={{ width: "4.5rem", height: "4.5rem" }}
+                              alt="pengumuman"
                             />
                           </td>
-                          <td
-                            data-label="Aksi : "
-                            className="pt-3 pb-3 d-flex aksi"
-                          >
-                            <button
-                              type="button"
-                              className=".responsive-buttons btn-primary btn-sm mr-2"
-                            >
-                              <a
-                                style={{
-                                  color: "white",
-                                  textDecoration: "none",
-                                }}
-                                href={`/edit-pengumuman/${pengumuman.id}`}
-                              >
-                                <i className="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </button>
-                            <button
-                              type="button"
-                              className=" btn-danger btn-sm"
-                              onClick={() => deleteData(pengumuman.id)}
-                            >
-                              <i className="fa-solid fa-trash"></i>
-                            </button>
+                          <td data-label="Aksi : " className="pt-3 pb-3 aksi">
+                            <div className="d-flex justify-content-center">
+                              <button
+                                type="button"
+                                className=".responsive-buttons btn-primary btn-sm mr-2">
+                                <a
+                                  style={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                  }}
+                                  href={`/edit-pengumuman/${pengumuman.id}`}>
+                                  <i className="fa-solid fa-pen-to-square"></i>
+                                </a>
+                              </button>
+                              <button type="button" class="btn-warning mr-2 btn-sm">
+                            <a
+                              className="text-light"
+                              href={
+                                "/detail-pengumuman/" + pengumuman.id
+                              }>
+                              <i class="fas fa-info-circle"></i>
+                            </a>
+                          </button>
+                              <button
+                                type="button"
+                                className=" btn-danger btn-sm"
+                                onClick={() => deleteData(pengumuman.id)}>
+                                <i className="fa-solid fa-trash"></i>
+                              </button>
+                            </div>
                           </td>
                         </tr>
                       );
@@ -241,7 +249,7 @@ function AdminPengumuman() {
             </TableContainer>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
-                count={totalPages}
+                count={paginationInfo.totalPages}
                 page={currentPage}
                 onChange={(event, value) => setCurrentPage(value)}
                 showFirstButton

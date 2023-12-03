@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { API_DUMMY } from "../../../utils/base_URL";
 
 function Regulasi() {
-  const [table1Visible, setTable1Visible] = useState(false);
+  const [table1Visible, setTable1Visible] = useState(true);
   const [table2Visible, setTable2Visible] = useState(false);
   const [table3Visible, setTable3Visible] = useState(false);
   const [table4Visible, setTable4Visible] = useState(false);
@@ -64,34 +64,6 @@ function Regulasi() {
   return (
     <div>
       <Navbar />
-      {/* <!-- page title start --> */}
-      <div class="breadcrumb-area bg-black bg-relative">
-        <div
-          class="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div>
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Regulasi
-                </h2>
-                <ul class="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>Regulasi</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* <!-- page title end --> */}
       <div
         style={{

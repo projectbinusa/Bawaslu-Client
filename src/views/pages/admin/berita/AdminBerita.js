@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
-import "../../../../../src/css/adminBerita.css";
 
 import {
   IconButton,
@@ -18,6 +17,7 @@ function AdminBerita() {
   const [list, setList] = useState([]);
   const [list1, setList1] = useState([]);
   const [page, setPage] = useState(0);
+  const [page1, setPage1] = useState(0);
   const [category, setCategory] = useState([""]);
   const [modalAdd, setModalAdd] = useState(false);
   const [modalEdit, setModalEdit] = useState(false);
@@ -30,6 +30,14 @@ function AdminBerita() {
   });
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage1, setCurrentPage1] = useState(1);
+  const [rowsPerPage1, setRowsPerPage1] = useState(5);
+  const [paginationInfo1, setPaginationInfo1] = useState({
+    totalPages1: 1,
+    totalElements1: 0,
+  });
+  const [searchResults1, setSearchResults1] = useState([]);
+  const [searchTerm1, setSearchTerm1] = useState("");
 
   const getAll = async (page) => {
     try {
@@ -49,10 +57,10 @@ function AdminBerita() {
     }
   };
 
-  const getAll1 = async () => {
+  const getAll1 = async (page1) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all`,
+        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=asc&page=${page1 - 1}&size=${rowsPerPage1}&sort=id`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -60,6 +68,11 @@ function AdminBerita() {
         }
       );
       setList1(response.data.data.content);
+      console.log(response.data.data.content);
+      setPaginationInfo1({
+        totalPages1: response.data.data.totalPages,
+        totalElements1: response.data.data.totalElements,
+      });
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -135,8 +148,11 @@ function AdminBerita() {
 
   useEffect(() => {
     getAll(currentPage);
-    getAll1();
   }, [currentPage, rowsPerPage]);
+
+  useEffect(() => {
+    getAll1(currentPage1);
+  }, [currentPage1, rowsPerPage1]);
 
   const handleRowsPerPageChange = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
@@ -154,6 +170,24 @@ function AdminBerita() {
       (value) =>
         typeof value === "string" &&
         value.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+  const handleRowsPerPageChange1 = (event) => {
+    setRowsPerPage1(parseInt(event.target.value, 10));
+    setPage1(0);
+  };
+
+  const handleSearchChange1 = (event) => {
+    setSearchTerm1(event.target.value);
+    setPage1(0);
+    setCurrentPage1(1);
+  };
+
+  const filteredList1 = list1.filter((item) =>
+    Object.values(item).some(
+      (value) =>
+        typeof value === "string" &&
+        value.toLowerCase().includes(searchTerm1.toLowerCase())
     )
   );
 
@@ -233,7 +267,7 @@ function AdminBerita() {
             </div>
             <div
               className="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}
+              style={{ overflowX: "auto", maxWidth: "100%" }}
             >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
@@ -244,6 +278,9 @@ function AdminBerita() {
                     <th scope="col" className="text-center">
                       Judul Berita
                     </th>
+                    {/* <th scope="col" className="text-center">
+                      Isi Berita
+                    </th> */}
                     <th scope="col" className="text-center">
                       Penulis Berita
                     </th>
@@ -263,10 +300,11 @@ function AdminBerita() {
                   {list.map((berita, no) => {
                     return (
                       <tr key={no}>
-                        <td className="text-center">{no + 1}</td>
-                        <td className="text-center">{berita.judulBerita}</td>
-                        <td className="text-center">{berita.author}</td>
-                        <td className="text-center">{berita.createdDate}</td>
+                        <td className="text-left">{no + 1}</td>
+                        <td style={{maxWidth:"150px"}} className="text-left">{berita.judulBerita}</td>
+                        {/* <td className="text-left">{berita.isiBerita}</td> */}
+                        <td className="text-left">{berita.author}</td>
+                        <td className="text-left">{berita.createdDate}</td>
                         <td className="text-center">
                           <img
                             src={berita.image}
@@ -275,6 +313,7 @@ function AdminBerita() {
                           />
                         </td>
                         <td data-label="Aksi" className="text-center">
+                          <div className="d-flex">
                           <button type="button" className="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
@@ -292,69 +331,17 @@ function AdminBerita() {
                           >
                             <i className="fa-solid fa-trash"></i>
                           </button>
+                          </div>
                         </td>
                       </tr>
                     );
                   })}
                 </tbody>
-
-                {/* with pagination */}
-                {/* <tbody>
-                  {list.map((berita, index) => {
-                    return (
-                      <tr key={index}>
-                        <td data-label="No : " className=" text-muted">
-                          {index + 1}
-                        </td>
-                        <td data-label="Author : ">{berita.author}</td>
-                        <td data-label="Created Date : ">
-                          {berita.createdDate}
-                        </td>
-                        <td data-label="Gambar : ">
-                          {berita.image ? (
-                            <img
-                              src={berita.image}
-                              alt={`Image ${index + 1}`}
-                              onError={(e) =>
-                                console.error("Error loading image:", e)
-                              }
-                            />
-                          ) : (
-                            "No Image"
-                          )}
-                        </td>
-                        <td data-label="Judul Berita : " className="">
-                          {berita.judulBerita}
-                        </td>
-                        <td data-label="Aksi : " className="text-center d-flex">
-                          <button type="button" className="btn-primary btn-sm mr-2">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href="/edit-berita-admin"
-                            >
-                              {" "}
-                              <i className="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-
-                          <button
-                            onClick={() => deleteData(berita.id)}
-                            type="button"
-                            className="btn-danger btn-sm"
-                          >
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody> */}
-                {/* end */}
               </table>
             </div>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
-                count={totalPages}
+                count={paginationInfo.totalPages}
                 page={currentPage}
                 onChange={(event, value) => setCurrentPage(value)}
                 showFirstButton
@@ -365,9 +352,56 @@ function AdminBerita() {
           </div>
 
           {/* Category */}
-          <div className="main-card mb-3 card">
-            <div className="card-header" style={{ display: "flex" }}>
-              Kategori Berita
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div class="col-auto">
+              <label className="form-label mt-2">Rows per page:</label>
+            </div>
+            <div class="col-auto">
+              <select
+                className="form-select form-select-xl w-auto"
+                onChange={handleRowsPerPageChange1}
+                value={rowsPerPage1}>
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+              </select>
+            </div>
+          </div>
+          <input
+            type="search"
+            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+            placeholder="Search..."
+            value={searchTerm1}
+            onChange={handleSearchChange1}
+          />
+           <div className="main-card mb-3 card">
+            <div
+              className="card-header pembungkus-text-button"
+              style={{ display: "flex" }}>
+              <p className="mt-3">Kategori Berita</p>
+              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div class="col-auto">
+                  <label className="form-label mt-2">Rows per page:</label>
+                </div>
+                <div class="col-auto">
+                  <select
+                    className="form-select form-select-sm"
+                    onChange={handleRowsPerPageChange1}
+                    value={rowsPerPage1}>
+                    <option value={5}>5</option>
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                  </select>
+                </div>
+              </div>
+              <div className="d-flex ml-auto gap-3">
+                <input
+                  type="search"
+                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
+                  placeholder="Search..."
+                  value={searchTerm1}
+                  onChange={handleSearchChange1}
+                />
               <div className="btn-actions-pane-right">
                 <div role="group" className="btn-group-sm btn-group">
                   <button className="active btn-focus p-2 rounded">
@@ -379,6 +413,7 @@ function AdminBerita() {
                     </a>
                   </button>
                 </div>
+              </div>
               </div>
             </div>
             <div
@@ -395,7 +430,7 @@ function AdminBerita() {
                   </tr>
                 </thead>
                 <tbody>
-                  {list1.map((kategory, index) => {
+                  {filteredList1.map((kategory, index) => {
                     return (
                       <tr key={index}>
                         <td data-label="No" className="text-center text-muted">
@@ -431,6 +466,16 @@ function AdminBerita() {
                   })}
                 </tbody>
               </table>
+              <div className="card-header mt-3 d-flex justify-content-center">
+              <Pagination
+                count={paginationInfo1.totalPages1}
+                page={currentPage1}
+                onChange={(event, value) => setCurrentPage1(value)}
+                showFirstButton
+                showLastButton
+                color="primary"
+              />
+            </div>
             </div>
           </div>
         </div>

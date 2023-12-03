@@ -7,10 +7,6 @@ function WaktuLayanan() {
   return (
     <div>
       <Navbar />
-      {/* <!-- page title start --> */}
-     
-      {/* <!-- page title end --> */}
-      {/* <!-- why choose area start --> */}
       <div
         className="why-choose pd-top-100 pd-bottom-100 service-area bg-relative pd-top-60 pd-bottom-90"
         style={{
@@ -50,7 +46,7 @@ function WaktuLayanan() {
                         <i className="fa-solid fa-phone"></i>
                       </div>
                     </div>
-                    <div className="media-body">
+                    <div className="media-body" style={{textAlign:"justify"}}>
                       <h4>Nomer Hp</h4>
                       <p>(0276)320420</p>
                     </div>
@@ -61,7 +57,7 @@ function WaktuLayanan() {
                         <i className="fa-solid fa-clock"></i>
                       </div>
                     </div>
-                    <div className="media-body">
+                    <div className="media-body" style={{textAlign:"justify"}}>
                       <h4>Jam Kerja</h4>
                       <p>Dari jam 08.00 - 15.00</p>
                     </div>
@@ -72,7 +68,7 @@ function WaktuLayanan() {
                         <i className="fa-solid fa-calendar-days"></i>
                       </div>
                     </div>
-                    <div className="media-body">
+                    <div className="media-body" style={{textAlign:"justify"}}>
                       <h4>Hari Kerja</h4>
                       <p>Senin s.d Jum'at</p>
                     </div>
@@ -83,7 +79,7 @@ function WaktuLayanan() {
                         <i className="fa-solid fa-envelope"></i>
                       </div>
                     </div>
-                    <div className="media-body">
+                    <div className="media-body" style={{textAlign:"justify"}}>
                       <h4>Email</h4>
                       <p>panwaskabboyolali05@gmail.com</p>
                     </div>

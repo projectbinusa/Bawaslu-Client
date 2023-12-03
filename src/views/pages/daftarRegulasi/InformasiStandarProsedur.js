@@ -13,33 +13,6 @@ function InformasiStandarProsedur() {
     <div>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative">
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  SOP
-                </h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>SOP</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* <!-- project area start --> */}
       <div
       id="container"
@@ -418,7 +391,7 @@ function InformasiStandarProsedur() {
                       <td data-cell="unduh">
                         <p>
                           {" "}
-                          SOP UJI KONSEKUENSI	
+                          SOP UJI KONSEKUENSI
                         </p>
                       </td>{" "}
                       <td>

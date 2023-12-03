@@ -33,14 +33,15 @@ const FormPermohonaKeberatan = () => {
 
     const formData = new FormData();
     formData.append("nama", nama);
-    formData.append("kasusPolisi", kasusPosisi);
+    formData.append("kasusPosisi", kasusPosisi);
     formData.append("email", email);
-    formData.append("noHp", noHp);
+    formData.append("noTelp", noHp);
     formData.append("jenisIdentitas", jenisIdentitas);
     formData.append("namaPenggunaInformasi", namaPenggunaInformasi);
     formData.append("alamat", alamat);
     formData.append("alasan", alasan);
-    formData.append("nomorIdentitas", nomorIdentitas);
+    formData.append("tujuanPenggunaanInformasi", tujuanPenggunaanInformasi);
+    formData.append("nomorIndentitas", nomorIdentitas);
     formData.append("file", tandaPengenal); // Upload gambar jika dipilih
 
     try {
@@ -57,7 +58,7 @@ const FormPermohonaKeberatan = () => {
         icon: "success",
         title: "Berhasil Ditambahkan",
         showConfirmButton: false,
-        timer: 1500,
+        // timer: 1500,
       });
       console.log(formData);
       setTimeout(() => {
@@ -72,13 +73,19 @@ const FormPermohonaKeberatan = () => {
       <div>
         <Navbar />
         <div className="head">
-        <div className="form text-center">
-          <div className="form-permohonan section-title text-center">
-                <h5 id="text1-gabung" className="sub-title double-line text-center">Bawaslu Boyolali</h5>
-                <h2 id="text2-gabung" className="title text-center">Form Permohonan Keberatan</h2>
-                {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
+          <div className="form text-center">
+            <div className="form-permohonan section-title text-center">
+              <h5
+                id="text1-gabung"
+                className="sub-title double-line text-center">
+                Bawaslu Boyolali
+              </h5>
+              <h2 id="text2-gabung" className="title text-center">
+                Form Permohonan Keberatan
+              </h2>
+              {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
                         atpellentesque laoreet</p> */}
-              </div>
+            </div>
             {/* <div className="info">
               <img src={info} className="img" id="img" />
             </div> */}
@@ -91,7 +98,7 @@ const FormPermohonaKeberatan = () => {
                     {" "}
                     <p>Nama Pemohon:</p>
                     <input
-                      className="input"
+                      className="input form-control"
                       type="text"
                       value={nama}
                       onChange={(e) => setNamaPermohonan(e.target.value)}
@@ -107,27 +114,23 @@ const FormPermohonaKeberatan = () => {
                     <p className="pp">0 of 60 max characters</p>
                     <br></br>
                     <p>Jenis Identitas Pemohon:</p>
-                    <input
-                      className="input"
-                      type="text"
-                      value={jenisIdentitas}
+                    <select
                       onChange={(e) => setJenisIdentitas(e.target.value)}
-                    />
+                      value={jenisIdentitas}
+                      class="form-select"
+                      aria-label="Default select example">
+                      <option selected>Pilih Jenis Identitas</option>
+                      <option value="KTP">KTP (Kartu Tanda Penduduk)</option>
+                      <option value="SIM">SIM (Surat Izin Mengemudi)</option>
+                      <option value="KTM">KTM (Surat Tanda Mahasiswa)</option>
+                    </select>
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
-                    {/* <p>Nomor Identitas Pemohon:</p>
-                    <input
-                      className="input"
-                      type="number"
-                      value={nomorIdentitas}
-                      onChange={(e) => setNomorIdentitas(e.target.value)}
-                    /> */}
-                    <p className="pp">0 of 30 max characters</p>
                     <br></br>
                     <br></br>
                     <p>Nomor Telp/HP:</p>
                     <input
-                      className="input"
+                      className="input form-control"
                       type="number"
                       value={noHp}
                       onChange={(e) => setNoHp(e.target.value)}
@@ -144,9 +147,9 @@ const FormPermohonaKeberatan = () => {
                     <p className="pp">0 of 100 max characters</p>
                   </div>
                   <div className="div-email">
-                  <p>Nomor Identitas Pemohon:</p>
+                    <p>Nomor Identitas Pemohon:</p>
                     <input
-                      className="input"
+                      className="input form-control"
                       type="number"
                       value={nomorIdentitas}
                       onChange={(e) => setNomorIdentitas(e.target.value)}
@@ -154,15 +157,15 @@ const FormPermohonaKeberatan = () => {
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
                     <p>Email:</p>
-                    <textarea
-                      className="textarea"
+                    <input
+                      className="form-control"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
-                   
+
                     <br></br>
                     <p>Tujuan Penggunaan Informasi:</p>
                     <textarea
@@ -174,12 +177,37 @@ const FormPermohonaKeberatan = () => {
                     />
                     <p className="pp">0 of 100 max characters</p>
                     <br></br>
-                    <p>Alasan</p>
-                    <textarea
-                      className="textarea"
+                    <p>Alasan Pengajuan Keberatan</p>
+                    <select
                       value={alasan}
                       onChange={(e) => setAlasan(e.target.value)}
-                    />
+                      class="form-select"
+                      aria-label="Default select example">
+                      <option selected>Pilih Pengajuan Keberatan</option>
+                      <option value="Permohonan Informasi Ditolak">
+                        Permohonan Informasi Ditolak
+                      </option>
+                      <option value="Informasi Berkala Tidak Disediakan">
+                        Informasi Berkala Tidak Disediakan
+                      </option>
+                      <option value="Permintaan Informasi Tidak Ditanggapi">
+                        Permintaan Informasi Tidak Ditanggapi
+                      </option>
+                      <option value="Permintaan Informasi Ditanggapi Tidak Sebagaimana Diminta">
+                        Permintaan Informasi Ditanggapi Tidak Sebagaimana
+                        Diminta
+                      </option>
+                      <option value="Permintaan Yang Tidak Dipenuhi">
+                        Permintaan Yang Tidak Dipenuhi
+                      </option>
+                      <option value="Biaya Yang Dikenakan Tidak Wajar">
+                        Biaya Yang Dikenakan Tidak Wajar
+                      </option>
+                      <option value="Informasi Yang Disampaikan Melebihi Jangka Waktu Yang Tertentu">
+                        Informasi Yang Disampaikan Melebihi Jangka Waktu Yang
+                        Tertentu
+                      </option>
+                    </select>
                     <p className="pp">0 of 100 max characters</p>
                     <br></br>
                     <br></br>
