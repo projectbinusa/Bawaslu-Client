@@ -5,14 +5,18 @@ import Footer from "../../../../../component/Footer";
 import { useState } from "react";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import axios from "axios";
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
 
 function EditIsiKeterangan() {
   const [jenisKeterangan, setJenisKeterangan] = useState("");
+  const [jenisKeteranganId, setJenisKeteranganId] = useState();
   const [dokumen, setDokumen] = useState("");
   const [keterangan, setKeterangan] = useState([]);
-  const [upload, setUpload] = useState("");
+  const [pdfDokumen, setPdfDokumen] = useState("");
   const param = useParams();
   const history = useHistory();
 
@@ -23,9 +27,9 @@ function EditIsiKeterangan() {
       )
       .then((ress) => {
         const response = ress.data.data;
-        setUpload(response.pdfDokumen);
+        setPdfDokumen(response.pdfDokumen);
         setDokumen(response.dokumen);
-        setJenisKeterangan(response.jenisKeterangan); // Fix: Corrected the function call here
+        setJenisKeteranganId(response.jenisKeterangan); // Fix: Corrected the function call here
         console.log(ress.data.data);
       })
       .catch((error) => {
@@ -37,17 +41,16 @@ function EditIsiKeterangan() {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("dokumen", dokumen);
-    formData.append("upload", upload);
-    formData.append("jenisKeterangan", jenisKeterangan);
+    formData.append("upload", pdfDokumen);
 
     await axios
       .put(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + param.id,
-        formData,
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/${param.id}?dokumen=${dokumen}&jenisKeteranganId=${jenisKeteranganId}`,
+        formData ,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "multipart/form-data",
           },
         }
       )
@@ -58,7 +61,7 @@ function EditIsiKeterangan() {
           showConfirmButton: false,
           timer: 1500,
         });
-        history.push("");
+        // history.push("");
         setTimeout(() => {
           window.location.reload();
         }, 1500);
@@ -71,22 +74,9 @@ function EditIsiKeterangan() {
   const getKeterangan = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/all`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/all`
       );
-
-      // Check if the data is an array
-      if (Array.isArray(response.data.data)) {
-        setKeterangan(response.data.data);
-      } else {
-        // If it's an object, access the array within the object
-        setKeterangan(response.data.data);
-      }
-
+      setKeterangan(response.data.data);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -98,11 +88,11 @@ function EditIsiKeterangan() {
   }, []);
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 mb-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Edit Data</h1>
@@ -111,18 +101,24 @@ function EditIsiKeterangan() {
                 <div className="row">
                   <div className="col-6">
                     <label className="form-label">Jenis Keterangan</label>
-                    <select
+                    <input
+                      className="form-control"
+                      type="text"
+                      value={jenisKeteranganId}
+                      onChange={(e) => setJenisKeteranganId(e.target.value)}
+                    />
+                    {/* <select
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setJenisKeterangan(e.target.value)}
-                    >
+                      onChange={(e) => setJenisKeteranganId(e.target.value)}
+                      value={jenisKeteranganId}>
                       <option selected>PIlih Jenis Informasi</option>
                       {keterangan.map((down) => {
                         return (
                           <option value={down.id}>{down.keterangan}</option>
                         );
                       })}
-                    </select>
+                    </select> */}
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
@@ -140,7 +136,7 @@ function EditIsiKeterangan() {
                       File
                     </label>
                     <input
-                      onChange={(e) => setUpload(e.target.files[0])}
+                      onChange={(e) => setPdfDokumen(e.target.files[0])}
                       type="file"
                       className="form-control"
                     />
@@ -159,7 +155,6 @@ function EditIsiKeterangan() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

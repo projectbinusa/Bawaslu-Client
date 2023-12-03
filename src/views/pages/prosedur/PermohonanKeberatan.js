@@ -39,7 +39,7 @@ function PermohonanKeberatan() {
             </div>
           </div>
           <div className="col-lg-5 align-self-center order-lg-first">
-            <div className="section-title div-gabung">
+            <div className="section-title div-gabung pembungkus-gabung">
               <h5 id="text1-gabung" className="sub-title double-line text1-gabung">Bawaslu Boyolali</h5>
               <h2 id="text2-gabung" className="title mb-4 text2-gabung">
                 Tata Cara Pengajuan <br /> Keberatan
@@ -88,10 +88,10 @@ function PermohonanKeberatan() {
               />
             </div>
           </div>
-          <div className="col-lg-5 align-self-center">
+          <div className="col-lg-5 align-self-center keterangan">
             <div className="section-title">
             </div>
-            <div className="single-security-wrap-2">
+            <div className="single-security-wrap-2 keterangan">
               <div className="thumb border-bottom">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-3.webp"
@@ -118,7 +118,7 @@ function PermohonanKeberatan() {
                 </p>
               </div>
             </div> */}
-            <div className="single-security-wrap-2">
+            <div className="single-security-wrap-2 keterangan">
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-5.webp"

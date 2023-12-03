@@ -21,8 +21,7 @@ function EditRegulasi() {
   const getByMenuRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/get-by-menu-regulasi?id-menu-regulasi=` +
-          param.id
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/all?page=0&size=50`
       );
       setRegulasi(response.data.data);
       //   console.log(response.data.data);
@@ -33,12 +32,13 @@ function EditRegulasi() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/menu-regulasi/get/` + param.id)
+      .get(`${API_DUMMY}/bawaslu/api/regulasi/get/` + param.id)
       .then((ress) => {
         const response = ress.data.data;
+        console.log(ress.data.data);
         setDokumen(response.dokumen);
         setIdMenuRegulasi(response.menuRegulasi.id);
-        pdfDokumen(response.pdfDokumen);
+        setPdfDokumen(response.pdfDokumen);
       })
       .catch((error) => {
         console.log(error);
@@ -50,7 +50,7 @@ function EditRegulasi() {
 
     try {
       await axios.put(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/put/${param.id}?idJenisRegulasi=${dokumen}&menuRegulasi=${idMenuRegulasi}`,
+        `${API_DUMMY}/bawaslu/api/regulasi/put/${param.id}?dokumen=${dokumen}&menuRegulasi=${idMenuRegulasi}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -84,22 +84,24 @@ function EditRegulasi() {
         <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
-              <h1 className="fs-4">Form Tambah Data</h1>
+              <h1 className="fs-4">Form Edit Data</h1>
               <hr />
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
-                      Jenis Regulas
+                      Menu Regulasi
                     </label>
                     <select
+                      disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setIdMenuRegulasi(e.target.value)}>
+                      onChange={(e) => setIdMenuRegulasi(e.target.value)}
+                      value={idMenuRegulasi}>
                       <option selected>PIlih Jenis Regulasi</option>
                       {regulasi.map((down) => {
                         return (
-                          <option value={down.id}>{down.MenuRegulasi}</option>
+                          <option value={down.id}>{down.menuRegulasi}</option>
                         );
                       })}
                     </select>
@@ -130,7 +132,9 @@ function EditRegulasi() {
                   </div>
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
-                  <a href={"/regulasi/"} style={{ color: "white", textDecoration: "none" }}>
+                  <a
+                    href={"/regulasi/"}
+                    style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>

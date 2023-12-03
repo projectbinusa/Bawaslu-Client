@@ -368,7 +368,7 @@ function Berita() {
                                 <button
                                     style={{
                                       color: "white",
-                                      backgroundColor: "#45629f",
+                                      backgroundColor: "#5eb2ef",
                                     }}className="border p-2">
                                   <i
                                     class="fab fa-twitter"
@@ -382,7 +382,7 @@ function Berita() {
                                 <button
                                     style={{
                                       color: "white",
-                                      backgroundColor: "#45629f",
+                                      backgroundColor: "#cf2830",
                                     }}className="border p-2">
                                   <i class="fa-brands fa-pinterest"></i> Pin
                                 </button>
@@ -402,17 +402,14 @@ function Berita() {
                   </div>
                   <div class="details">
                     <h2>
-                      <a href="">test</a>
+                      <a href="">COntoh Berita</a>
                     </h2>
                     <ul class="blog-meta">
                       <li>
                         <i class="far fa-user"></i>BY admin
                       </li>
                       <li>
-                        <i class="far fa-calendar-alt"></i> test
-                      </li>
-                      <li>
-                        <i class="far fa-comment-dots"></i> 22 Comment
+                        <i class="far fa-calendar-alt"></i> 2023-05-12
                       </li>
                     </ul>
                   </div>
@@ -446,10 +443,7 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href="">{beritaTerbaru.judulBerita}</a>
-                                  {/* <a href="">
-                                tesssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                              </a> */}
+                                  <a href={`/page-berita/${beritaTerbaru.judulBerita}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>

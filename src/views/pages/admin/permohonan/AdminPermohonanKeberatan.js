@@ -170,7 +170,7 @@ function AdminPermohonanKeberatan() {
                       No Telp
                     </th>
                     <th scope="col" className="text-left">
-                      Tags
+                      Kasus Posisi
                     </th>
                     <th scope="col" className="text-left">
                       Nomor identitas
@@ -198,7 +198,7 @@ function AdminPermohonanKeberatan() {
                         </td>
 
                         <td data-label="alamat : " className="text-llef">
-                          {informasi.alamat}
+                          {informasi.kasusPosisi}
                         </td>
                         <td data-label="no telp : " className="text-llef">
                           {informasi.noTelp}

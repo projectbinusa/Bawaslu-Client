@@ -47,7 +47,7 @@ function Pengumuman() {
     <div>
       <Navbar />
       {/* <!-- page title start --> */}
-    
+
       {/* <!-- page title end --> */}
       {/* <!-- blog area start --> */}
       <div
@@ -77,7 +77,7 @@ function Pengumuman() {
                     </div>
                     <div className="details">
                         <h4 className="titleee" style={{cursor:"pointer"}}>
-                        <a style={{color:"black", textDecoration:"none"}} href={`/isi-pengumuman/${isi.judulPengumuman}/${isi.id}`}>{isi.judulPengumuman}</a>
+                        <a style={{color:"black", textDecoration:"none"}} href={`/pengumuman/${isi.judulPengumuman}/${isi.id}`}>{isi.judulPengumuman}</a>
                       </h4>
                       <ul className="blog-meta">
                         <li>

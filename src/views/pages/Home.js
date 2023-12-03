@@ -35,10 +35,10 @@ function Home() {
     }
   };
 
-  const getAll = async () => {
+  const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/all?page=0&size=100&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/berita/all?page=${page -1}&size=5&sortBy=id&sortOrder=asc`
       );
 
       setList(response.data.data.content);
@@ -116,7 +116,7 @@ function Home() {
                 <div className="col-lg-4 col-md-6">
                   <div
                     className="single-intro-inner shadow p-3 mb-5 rounded"
-                    style={{ background: "#F1F6F9" }}>
+                    style={{ background: "#F1F6F9", maxHeight:"200px", minHeight:"200px" }}>
                     <div className="thumb media">
                       <div className="media-left">
                         <i className="fa-solid fa-newspaper"></i>
@@ -246,12 +246,16 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <Pagination
-              count={paginationInfo.totalPages}
-              color="primary"
-              page={currentPage}
-              onChange={(event, value) => setCurrentPage(value)}
-            />
+            <div className="card-header mt-3 d-flex justify-content-center">
+              <Pagination
+                count={paginationInfo.totalPages}
+                page={currentPage}
+                onChange={(event, value) => setCurrentPage(value)}
+                showFirstButton
+                showLastButton
+                color="primary"
+              />
+            </div>
           </div>
         </div>
         <div className="service-area pb-5" style={{ background: "#F1F6F9" }}>

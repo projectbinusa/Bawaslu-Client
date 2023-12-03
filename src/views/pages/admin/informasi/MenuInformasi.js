@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Header from "../../../../../component/Header";
-import Sidebar from "../../../../../component/Sidebar";
-import Footer from "../../../../../component/Footer";
-import axios from "axios";
-import {
-  useHistory,
-  useParams,
-} from "react-router-dom/cjs/react-router-dom.min";
-import { API_DUMMY } from "../../../../../utils/base_URL";
-import Swal from "sweetalert2";
-import "../../../../../css/adminBerita.css";
-import { Pagination } from "@mui/material";
+import React, { useEffect, useState } from 'react'
+import Header from '../../../../component/Header'
+import Sidebar from '../../../../component/Sidebar'
+import Footer from '../../../../component/Footer'
+import "../../../../../src/css/adminBerita.css";
+import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import Swal from 'sweetalert2';
+import { Pagination } from '@mui/material';
+import { API_DUMMY } from '../../../../utils/base_URL';
+import axios from 'axios';
+import Index from './Index';
 
-function RegulasiAdmin() {
-  const [regulasi, setRegulasi] = useState([]);
+function MenuInformasi() {
+  const [list, setList] = useState([]);
   const param = useParams();
   const history = useHistory();
   const [page, setPage] = useState(0);
@@ -25,14 +23,12 @@ function RegulasiAdmin() {
   });
   const [searchTerm, setSearchTerm] = useState("");
 
-  const getRegulasi = async (page) => {
+  const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${
-          param.id
-        }&page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=ASC`
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${param.id}/isi-informasi?page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
       );
-      setRegulasi(response.data.data.content);
+      setList(response.data.data.content);
       setPaginationInfo({
         totalPages: response.data.data.totalPages,
         totalElements: response.data.data.totalElements,
@@ -44,7 +40,7 @@ function RegulasiAdmin() {
   };
 
   useEffect(() => {
-    getRegulasi(currentPage);
+    getAll(currentPage);
   }, [currentPage, rowsPerPage]);
 
   const deleteData = async (id) => {
@@ -58,7 +54,7 @@ function RegulasiAdmin() {
       cancelButtonText: "Cencel",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`${API_DUMMY}/bawaslu/api/menu-regulasi/delete/` + id, {
+        axios.delete(`${API_DUMMY}/bawaslu/api/jenis-keterangan/` + id, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -86,7 +82,7 @@ function RegulasiAdmin() {
     setCurrentPage(1);
   };
 
-  const filteredList = regulasi.filter((item) =>
+  const filteredList = list.filter((item) =>
     Object.values(item).some(
       (value) =>
         typeof value === "string" &&
@@ -95,14 +91,13 @@ function RegulasiAdmin() {
   );
 
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
-
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-      <Header />
-      <div className="app-main">
-        <Sidebar />
-        <div className="container mt-3 app-main__outer">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+    <Header />
+    <div className="app-main">
+      <Sidebar />
+      <div className="container mt-3 app-main__outer">
+            <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
@@ -125,10 +120,8 @@ function RegulasiAdmin() {
             onChange={handleSearchChange}
           />
           <div class="main-card mb-3 card">
-            <div className="card-header" style={{ display: "flex" }}>
-            {regulasi.length > 0 && regulasi[0].menuRegulasi.menuRegulasi}
-              <p className="mt-3"></p>
-              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+            <div class="card-header" style={{display:"flex"}}>Test
+            <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
@@ -155,7 +148,7 @@ function RegulasiAdmin() {
                   <div role="group" class="btn-group-sm btn-group">
                     <button class="active btn-focus p-2 rounded">
                       <a
-                        href="/add-regulasi"
+                        href="/"
                         className="text-light"
                         style={{ textDecoration: "none" }}>
                         {" "}
@@ -164,58 +157,39 @@ function RegulasiAdmin() {
                     </button>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              </div></div>
+            <div class="table-responsive overflow-x-scroll">
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th scope="" className="text-left">
+                    <th scope="col" className="text-center">
                       No
                     </th>
-                    <th scope="" className="text-left">
+                    <th scope="col" className="text-center">
                       Dokumen
                     </th>
-                    <th scope="" className="text-left">
-                      Gambar
+                    <th scope="col" className="text-center">
+                     PDF Dokumen
                     </th>
-                    <th scope="" className="text-center">
+                    <th scope="col" className="text-center">
                       Aksi
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  {filteredList.map((jenis, index) => {
+                  {filteredList.map((inf, index) => {
                     return (
-                      <tr key={index}>
-                        <td data-label="No : " className="text-left">
-                          {index + 1}
-                        </td>
-                        <td data-label="dokumen : " className="text-left">
-                          {jenis.dokumen}
-                        </td>
-                        <td data-label="gambar : " className="text-left">
-                          <img style={{width:"150px"}} src={jenis.pdfDokumen} alt="" />
-                        </td>
-                        <td data-label="Aksi : " class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={"/edit/" + jenis.dokumen + "/" + jenis.id}>
-                              <i class="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
-                            onClick={() => deleteData(jenis.id)}
-                            type="button"
-                            class="btn-danger btn-sm mr-2">
-                            <i class="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    );
+                        <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{inf.dokumen}</td>
+                    <td> <img style={{width:"150px"}} src={inf.pdfDokumen} alt="" /></td>
+                    <td class="text-center">
+                      <button type="button" onClick={() => deleteData(inf.id)} class="btn-danger btn-sm">
+                        <i class="fa-solid fa-trash"></i>
+                      </button>
+                    </td>
+                  </tr>
+                    )
                   })}
                 </tbody>
               </table>
@@ -232,9 +206,9 @@ function RegulasiAdmin() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
     </div>
-  );
+  )
 }
 
-export default RegulasiAdmin;
+export default MenuInformasi

@@ -35,7 +35,7 @@ function AddRegulasi() {
     e.persist();
 
     const formData = new FormData();
-    formData.append("idMenuRegulasi", idMenuRegulasi);
+    formData.append("menuRegulasi", idMenuRegulasi);
     formData.append("dokumen", dokumen);
     formData.append("upload", pdfDokumen);
     try {

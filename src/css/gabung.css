@@ -1,7 +1,33 @@
+.pembungkus-gabung{
+    padding-top: 100px;
+}
+.media-social{
+    display: flex;
+    gap: 100px;
+}
+@media screen and (max-width:768px) {
+    .pembungkus-gabung{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .text1-gabung{
+        text-align: center;
+    }
+    .text2-gabung{
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 320px) {
     #text1-gabung{
         font-size: 15px;
         text-align: center;
+        /* display: flex;
+        align-items:center ;
+        justify-content: center; */
+
     }
     #text2-gabung{
         font-size:20px;
@@ -14,8 +40,15 @@
         text-align: center;
 
     }
-    #div-gabung-akhir{
+    /* #div-gabung-akhir{
         padding: 20px;
+    } */
+    .pembungkus-gabung{
+        padding-right:50px ;
+    }
+    .keterangan{
+        padding: 10px;
+        text-align: justify;
     }
     
 }

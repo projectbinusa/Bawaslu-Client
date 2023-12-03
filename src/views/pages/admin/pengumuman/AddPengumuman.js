@@ -31,7 +31,6 @@ function AddPengumuman() {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      // //console.log(unique_id);
       setShow(false);
       Swal.fire({
         icon: "success",
@@ -39,7 +38,6 @@ function AddPengumuman() {
         showConfirmButton: false,
         timer: 1500,
       });
-      // //console.log(data);
       history.push("/admin-pengumuman");
       setTimeout(() => {
         window.location.reload();
@@ -61,14 +59,29 @@ function AddPengumuman() {
               <form onSubmit={add}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
+                    <label for="exampleInputPassword1" className="form-label">
+                      Judul Pengumuman
+                    </label>
+                    <input
+                      value={judulPengumuman}
+                      onChange={(e) => setJudulPengumuman(e.target.value)}
+                      type="text"
+                      className="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Masukkan judul pengumuman"
+                    />
+                  </div>
+
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputEmail1" className="form-label">
-                      Author
+                      Penulis Pengumuman
                     </label>
                     <input
                       type="text"
                       className="form-control "
                       value={author}
                       onChange={(e) => setAuthor(e.target.value)}
+                      placeholder="Masukkan penulis pengumuman"
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
@@ -84,30 +97,6 @@ function AddPengumuman() {
                   </div>
                   <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
-                      Isi Pengumuman
-                    </label>
-                    <input
-                      value={isiPengumuman}
-                      onChange={(e) => setIsiPengumuman(e.target.value)}
-                      type="text"
-                      className="form-control"
-                      id="exampleInputPassword1"
-                    />
-                  </div>
-                  <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
-                      Judul Pengumuman
-                    </label>
-                    <input
-                      value={judulPengumuman}
-                      onChange={(e) => setJudulPengumuman(e.target.value)}
-                      type="text"
-                      className="form-control"
-                      id="exampleInputPassword1"
-                    />
-                  </div>
-                  <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
                       Tags
                     </label>
                     <input
@@ -116,13 +105,28 @@ function AddPengumuman() {
                       type="text"
                       className="form-control"
                       id="exampleInputPassword1"
+                      placeholder="Masukkan tags pengumuman"
                     />
+                  </div>
+                  <div className="mb-3 col-lg-12">
+                    <label for="exampleInputPassword1" className="form-label">
+                      Isi Pengumuman
+                    </label>
+                    <textarea
+                      value={isiPengumuman}
+                      onChange={(e) => setIsiPengumuman(e.target.value)}
+                      className="form-control"
+                      placeholder="Masukkan isi pengumuman"
+                      id="floatingTextarea2"
+                      rows="5"
+                    ></textarea>
                   </div>
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
                     href="/admin-pengumuman"
-                    style={{ color: "white", textDecoration: "none" }}>
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
                     {" "}
                     Batal
                   </a>

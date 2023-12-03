@@ -55,7 +55,7 @@ function DetailPengumuman() {
                   />
                 ) : (
                   <img
-                    style={{ maxWidth: "400px", maxHeight: "400px" }}
+                    style={{ maxWidth: "400px", maxHeight: "400px", minWidth:"350px" }}
                     className="w-75 mr-auto ml-auto"
                     src={file}
                   />

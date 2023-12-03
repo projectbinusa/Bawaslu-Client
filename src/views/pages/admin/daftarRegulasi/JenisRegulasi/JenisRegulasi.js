@@ -192,14 +192,15 @@ const totalPages = Math.ceil(filteredList.length / rowsPerPage);
             </table>
           </div>
           <div className="card-header mt-3 d-flex justify-content-center">
-            <Pagination
-              count={totalPages}
-              page={currentPage}
-              onChange={(event, value) => setCurrentPage(value)}
-              showFirstButton
-              showLastButton
-              color="primary"
-            />
+          <Pagination
+  count={paginationInfo.totalPages}
+  page={currentPage}
+  onChange={(event, value) => setCurrentPage(value)}
+  showFirstButton
+  showLastButton
+  color="primary"
+/>
+
           </div>
         </div>
       </div>

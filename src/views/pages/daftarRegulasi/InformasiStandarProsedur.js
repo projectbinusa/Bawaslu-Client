@@ -9,71 +9,10 @@ import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 
 function InformasiStandarProsedur() {
-  const [list, setList] = useState([]);
-  const [isi, setIsi] = useState([]);
-
-  const getByMenu = async () => {
-    await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=3`
-      )
-      .then((response) => {
-        setList(response.data.data);
-        console.log(response.data.data);
-      })
-      .catch((error) => {
-        alert("Terjadi kesalahan" + error);
-      });
-  };
-  const getByIsi = async () => {
-    await axios
-      .get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=1`
-      )
-      .then((response) => {
-        console.log(response.data.data);
-        setIsi(response.data.data);
-      })
-      .catch((error) => {
-        alert("Terjadi kesalahan" + error);
-      });
-  };
-  useEffect(() => {
-    //mengambil data, memperbarui DOM secara langsung,
-    getByMenu();
-    getByIsi();
-  }, []);
   return (
     <div>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative">
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  SOP
-                </h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>SOP</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* <!-- project area start --> */}
       <div
       id="container"
@@ -89,7 +28,7 @@ function InformasiStandarProsedur() {
             <div id="display" className="row justify-content-center">
               <div id="display" className="col-lg-12 ">
                 <div id="widht" className="isotope-filters project-isotope-btn text-left mb-5">
-                  {list.map((menu) => {
+                  {/* {list.map((menu) => {
                     return (
                       <button
                       id="button-dik"
@@ -101,7 +40,12 @@ function InformasiStandarProsedur() {
                         {menu.menuRegulasi}
                       </button>
                     );
-                  })}
+                  })} */}
+                  <button
+                  style={{ width: "150px", textAlign: "left" }}
+                  className="button ml-0 active" data-filter="*">
+                    SOP
+                  </button>
                 </div>
               </div>
             </div>
@@ -121,45 +65,375 @@ function InformasiStandarProsedur() {
                       <th scope="col"> Unduh / Lihat</th>
                     </tr>
                   </thead>
-                  {isi.map((isi) => {
-                    return (
-                      <tbody>
-                        <tr>
-                          <td data-cell="dokumen" scope="row">
-                            <p>{isi.dokumen}</p>
-                          </td>
-                          <td>
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i className="fa-solid fa-download"></i>
-                            </button>
-                            <button
-                              className="bg-warning text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i className="fa-solid fa-circle-info"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    );
-                  })}
+                  <tbody>
+                    <tr>
+                      <td data-cell="dokumen" scope="row">
+                        <p>
+                        SOP PELAYANAN INFORMASI
+                        </p>
+                      </td>
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/1N9ISO_fbxRySiuu6TjKRA_qwVS-mu8Nt/view"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          SOP PENANGANAN KEBERATAN INFORMASI
+                        </p>
+                      </td>
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/12yMeuaAhu0j_VkQILAY-GZb7CPTFSlMZ/view"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          SOP PENANGANAN SENGKETA INFORMASI
+                        </p>
+                      </td>{" "}
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/1Hoqm6DTQUsttRHHVdBoi_b82y1XDl0kV/view"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          SOP PENGELOLAAN INFORMASI DIKECUALIKAN
+                        </p>
+                      </td>{" "}
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/10qmgGvGlcaSlLIAfgZn_LR4MTqkxUTZW/view"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          SOP PENGELOLAAN INFORMASI PUBLIK
+                        </p>
+                      </td>{" "}
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/1MQBJbuDdCR-zuEHBI4B-v41xSszkYhdv/view"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          SOP PENYAMPAIAN LAYANAN INFORMASI
+                        </p>
+                      </td>{" "}
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/1PRHtEzCttArf_l5oDBo9z9YzWkN9Sf57/view"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          SOP PENYUSUNAN DAFTAR INFORMASI PUBLIK
+                        </p>
+                      </td>{" "}
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/1HpjCPHOVGa3Ik9x8iK64ETZL_D-C5xhD/view"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-cell="unduh">
+                        <p>
+                          {" "}
+                          SOP UJI KONSEKUENSI
+                        </p>
+                      </td>{" "}
+                      <td>
+                      <a className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                            marginLeft:"30px"
+                          }} href="https://drive.google.com/file/d/1N9ISO_fbxRySiuu6TjKRA_qwVS-mu8Nt/view?usp=sharing"><i class="fa-solid fa-download"></i></a>
+                        {/* <button
+                          className="bg-primary text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-download"></i>
+                        </button>
+                        <button
+                          className="bg-warning text-light"
+                          style={{
+                            border: "none",
+                            padding: "7px",
+                            paddingLeft: "13px",
+                            paddingRight: "13px",
+                            borderRadius: "5px",
+                            marginRight: "10px",
+                          }}
+                        >
+                          <i class="fa-solid fa-circle-info"></i>
+                        </button> */}
+                      </td>
+                    </tr>
+                  </tbody>
                   <div></div>
                 </table>
               </div>
