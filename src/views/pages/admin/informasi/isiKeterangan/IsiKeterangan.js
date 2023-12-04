@@ -108,6 +108,13 @@ function IsiKeterangan() {
                 <option value={20}>20</option>
               </select>
             </div>
+            <input
+                  type="search"
+                  className="form-control widget-content-right w-100"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleSearchChange}
+                />
           </div>
           <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
@@ -275,9 +282,9 @@ function IsiKeterangan() {
                 <tbody>
                   {filteredList.map((jenis, index) => (
                     <tr key={index}>
-                      <td className="text-left">{index + 1}</td>
-                      <td className="text-left">{jenis.dokumen}</td>
-                      <td className="text-center">
+                      <td data-label="No">{index + 1}</td>
+                      <td data-label="Dokumen">{jenis.dokumen}</td>
+                      <td data-label="Aksi">
                         <button
                           type="button"
                           className="btn-primary btn-sm mr-2">

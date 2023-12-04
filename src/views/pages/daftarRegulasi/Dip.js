@@ -16,9 +16,9 @@ function Dip() {
         className="project-area pd-top-110 pd-bottom-90"
       >
         <div id="container" className="container">
-          <div id="display" className="d-flex gap-3">
+          <div id="display" className="d-flex-lg gap-3">
             <div id="display" className="row justify-content-center">
-              <div id="display" className="col-lg-12 ">
+              <div id="display" className="col-lg-12">
                 <div
                   id="widht"
                   className="isotope-filters project-isotope-btn text-left mb-5"
@@ -48,11 +48,11 @@ function Dip() {
             </div>
             <div
               id="ukuran"
-              className="card mb-4 shadow"
+              className="card mb-4 shadow table-responsive"
               style={{ width: "100%" }}
             >
               <div className="card-header bg-primary text-light">
-                <div style={{ display: "flex" }}>
+                <div>
                   <div className="col">
                     <h4>Daftar Informasi Publik</h4>
                   </div>
@@ -90,32 +90,6 @@ function Dip() {
                         >
                           <i class="fa-solid fa-download"></i>
                         </a>
-                        {/* <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
-                          className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button> */}
                       </td>
                     </tr>
                     <tr>
@@ -127,30 +101,7 @@ function Dip() {
                         </p>
                       </td>
                       <td>
-                      <a className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                            marginLeft:"30px"
-                          }} href="https://drive.google.com/file/d/1-5_o8W3UTPODVzee4Z_E_bTioxXgFXs8/view"><i class="fa-solid fa-download"></i></a>
-                        {/* <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
+                        <a
                           className="bg-warning text-light"
                           style={{
                             border: "none",
@@ -159,10 +110,12 @@ function Dip() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
+                            marginLeft: "30px",
                           }}
+                          href="https://drive.google.com/file/d/1-5_o8W3UTPODVzee4Z_E_bTioxXgFXs8/view"
                         >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button> */}
+                          <i class="fa-solid fa-download"></i>
+                        </a>
                       </td>
                     </tr>
                     <tr>
@@ -174,30 +127,7 @@ function Dip() {
                         </p>
                       </td>{" "}
                       <td>
-                      <a className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                            marginLeft:"30px"
-                          }} href="https://drive.google.com/file/d/1fcYV1tFzHZZwg9g5tununbDqB4qOQvhr/view"><i class="fa-solid fa-download"></i></a>
-                        {/* <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
+                        <a
                           className="bg-warning text-light"
                           style={{
                             border: "none",
@@ -206,10 +136,12 @@ function Dip() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
+                            marginLeft: "30px",
                           }}
+                          href="https://drive.google.com/file/d/1fcYV1tFzHZZwg9g5tununbDqB4qOQvhr/view"
                         >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button> */}
+                          <i class="fa-solid fa-download"></i>
+                        </a>
                       </td>
                     </tr>
                     <tr>
@@ -221,30 +153,7 @@ function Dip() {
                         </p>
                       </td>{" "}
                       <td>
-                      <a className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                            marginLeft:"30px"
-                          }} href="https://drive.google.com/file/d/1YpeyQu3I7t9fmm1YOUKqIuSkBKAR08nd/view"><i class="fa-solid fa-download"></i></a>
-                        {/* <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
+                        <a
                           className="bg-warning text-light"
                           style={{
                             border: "none",
@@ -253,10 +162,12 @@ function Dip() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
+                            marginLeft: "30px",
                           }}
+                          href="https://drive.google.com/file/d/1YpeyQu3I7t9fmm1YOUKqIuSkBKAR08nd/view"
                         >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button> */}
+                          <i class="fa-solid fa-download"></i>
+                        </a>
                       </td>
                     </tr>
                     <tr>
@@ -268,30 +179,7 @@ function Dip() {
                         </p>
                       </td>{" "}
                       <td>
-                      <a className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                            marginLeft:"30px"
-                          }} href="https://drive.google.com/file/d/1vgHG4BSL8egftdQYReQFExYc3vEdjdwh/view"><i class="fa-solid fa-download"></i></a>
-                        {/* <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
+                        <a
                           className="bg-warning text-light"
                           style={{
                             border: "none",
@@ -300,10 +188,12 @@ function Dip() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
+                            marginLeft: "30px",
                           }}
+                          href="https://drive.google.com/file/d/1vgHG4BSL8egftdQYReQFExYc3vEdjdwh/view"
                         >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button> */}
+                          <i class="fa-solid fa-download"></i>
+                        </a>
                       </td>
                     </tr>
                     <tr>
@@ -315,30 +205,7 @@ function Dip() {
                         </p>
                       </td>{" "}
                       <td>
-                      <a className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                            marginLeft:"30px"
-                          }} href="https://drive.google.com/file/d/1m7GKabb_6OzxJgOBLceGH6K60Ax8NVTP/view"><i class="fa-solid fa-download"></i></a>
-                        {/* <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
+                        <a
                           className="bg-warning text-light"
                           style={{
                             border: "none",
@@ -347,10 +214,12 @@ function Dip() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
+                            marginLeft: "30px",
                           }}
+                          href="https://drive.google.com/file/d/1m7GKabb_6OzxJgOBLceGH6K60Ax8NVTP/view"
                         >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button> */}
+                          <i class="fa-solid fa-download"></i>
+                        </a>
                       </td>
                     </tr>
                     <tr>
@@ -362,30 +231,7 @@ function Dip() {
                         </p>
                       </td>{" "}
                       <td>
-                      <a className="bg-warning text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                            marginLeft:"30px"
-                          }} href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"><i class="fa-solid fa-download"></i></a>
-                        {/* <button
-                          className="bg-primary text-light"
-                          style={{
-                            border: "none",
-                            padding: "7px",
-                            paddingLeft: "13px",
-                            paddingRight: "13px",
-                            borderRadius: "5px",
-                            marginRight: "10px",
-                          }}
-                        >
-                          <i class="fa-solid fa-download"></i>
-                        </button>
-                        <button
+                        <a
                           className="bg-warning text-light"
                           style={{
                             border: "none",
@@ -394,10 +240,12 @@ function Dip() {
                             paddingRight: "13px",
                             borderRadius: "5px",
                             marginRight: "10px",
+                            marginLeft: "30px",
                           }}
+                          href="https://drive.google.com/file/d/1qsxnYjlYzzbdTObydL8m-eWKvuESAHqF/view"
                         >
-                          <i class="fa-solid fa-circle-info"></i>
-                        </button> */}
+                          <i class="fa-solid fa-download"></i>
+                        </a>
                       </td>
                     </tr>
                   </tbody>

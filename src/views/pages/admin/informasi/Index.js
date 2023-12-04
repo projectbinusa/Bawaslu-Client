@@ -119,11 +119,11 @@ function Index() {
                   <div id="butoon" role="group" class="btn-group-sm btn-group">
                     <button id="button" class="active btn-focus p-2 rounded">
                       <a
-                        href="/add-pengumuman"
+                        href="/tambah-jenis-keterangan"
                         className="text-light"
                         style={{ textDecoration: "none" }}>
                         {" "}
-                        Tambah Pengumuman
+                        Tambah Data
                       </a>
                     </button>
                   </div>
@@ -148,11 +148,10 @@ function Index() {
                     {filteredList.map((inf, index) => {
                       return (
                         <tr key={index}>
-                          <td className="text-left">{index + 1}</td>
+                          <td data-label="No" className="t">{index + 1}</td>
                           <td
-                            style={{ maxWidth: "120px" }}
                             data-label="keterangan"
-                            className="text-left">
+                            className="t">
                             {inf.jenisKeteranganInformasiDTOList[0].keterangan}
                           </td>
                           <td data-label="Aksi : " className="pt-3 pb-3 aksi">
