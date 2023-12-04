@@ -104,13 +104,13 @@ function InformasiBerkala() {
       case "Sosialisasi":
         setTable15Visible(true);
         break;
-      case "SDM,Organisasi & Administrasi":
+      case "SDM, Organisasi & Administrasi":
         setTable16Visible(true);
         break;
       case "Laporan Barang Milik Negara":
         setTable17Visible(true);
         break;
-      case "Naskah Perjanjian Hibahh Daerah":
+      case "Naskah Perjanjian Hibahh Daerahh":
         setTable18Visible(true);
         break;
       case "Piagam Penghargaan":
@@ -119,7 +119,7 @@ function InformasiBerkala() {
       case "Laporan Realisasi Anggaran":
         setTable20Visible(true);
         break;
-      case "Perjanjian kinerja":
+      case "Perjanjian Kinerja":
         setTable21Visible(true);
         break;
       case "Rencana Kerja & Anggaran":
@@ -138,7 +138,7 @@ function InformasiBerkala() {
   return (
     <div>
       <Navbar />
-    
+
       {/* <!-- project area start --> */}
       <div
         style={{
@@ -162,59 +162,61 @@ function InformasiBerkala() {
             <div className="d-flex gap-5">
               <div className="row justify-content-center">
                 <div className="">
-                  <div className="isotope-filters project-isotope-btn text-center mb-5" >
+                  <div className="isotope-filters project-isotope-btn text-center mb-5">
                     <button
-                      class="button"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
                       data-filter="*"
-                      style={{width:"100%"}}
                       onClick={() => showTable("Hasil Pengawasan")}
                     >
                       Hasil Pengawasan
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-1"
-                      style={{width:"100%"}}
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Analisa Calon Terpilih")}
                     >
                       Analisa Calon Terpilih
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-2"
-                      style={{width:"100%"}}
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Laporan Akhir Pengawasan")}
                     >
                       Laporan Akhir Pengawasan
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
-                      style={{width:"100%"}}
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Penanganan Pelanggaran")}
                     >
                       Penanganan Pelanggaran
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
-                      style={{width:"100%"}}
-                      onClick={() => showTable("Naskah Perjanjian Hibah Daerah")}
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
+                      onClick={() =>
+                        showTable("Naskah Perjanjian Hibah Daerah")
+                      }
                     >
                       Naskah Perjanjian Hibah Daerah
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
-                      style={{width:"100%"}}
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Layanan Pengaduan Publik")}
                     >
                       Layanan Pengaduan Publik
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
-                      style={{width:"100%"}}
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Sarana Partisipasi Publik")}
                     >
                       Sarana Partisipasi Publik
@@ -2080,10 +2082,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            TREN PELANGGARAN PILKADA TAHUN 2020	
-                          </p>
+                          <p> TREN PELANGGARAN PILKADA TAHUN 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2116,10 +2115,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            GRAFIK PENANGANAN PELANGGARAN 2015	
-                          </p>
+                          <p> GRAFIK PENANGANAN PELANGGARAN 2015</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2152,10 +2148,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            GRAFIK PENANGANAN PELANGGARAN 2018		
-                          </p>
+                          <p> GRAFIK PENANGANAN PELANGGARAN 2018</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2188,10 +2181,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            GRAFIK PENANGANAN PELANGGARAN 2019			
-                          </p>
+                          <p> GRAFIK PENANGANAN PELANGGARAN 2019</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2224,10 +2214,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            REKAP DATA PENANGANAN PELANGGARAN PEMILU 2019				
-                          </p>
+                          <p> REKAP DATA PENANGANAN PELANGGARAN PEMILU 2019</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2260,10 +2247,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            GRAFIK PENANGANAN PELANGGARAN 2020				
-                          </p>
+                          <p> GRAFIK PENANGANAN PELANGGARAN 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2296,10 +2280,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            REKAPITULASI PENANGANAN PELANGGARAN 2020				
-                          </p>
+                          <p> REKAPITULASI PENANGANAN PELANGGARAN 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2332,10 +2313,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PETA PENANGANAN PELANGGARAN 2020				
-                          </p>
+                          <p> PETA PENANGANAN PELANGGARAN 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2402,9 +2380,7 @@ function InformasiBerkala() {
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          NPHD 2019	
-                          </p>
+                          <p>NPHD 2019</p>
                         </td>
                         <td>
                           <button
@@ -2437,10 +2413,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            RAB 2019	
-                          </p>
+                          <p> RAB 2019</p>
                         </td>
                         <td>
                           <button
@@ -2473,10 +2446,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            NPHD 2020	
-                          </p>
+                          <p> NPHD 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2509,10 +2479,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            RAB 2020	                          
-                            </p>
+                          <p> RAB 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2545,10 +2512,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            RAB 2021		                          
-                            </p>
+                          <p> RAB 2021</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2581,10 +2545,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            RAB 2022			                          
-                            </p>
+                          <p> RAB 2022</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2651,9 +2612,7 @@ function InformasiBerkala() {
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          EMAIL PENGADUAN	
-                          </p>
+                          <p>EMAIL PENGADUAN</p>
                         </td>
                         <td>
                           <button
@@ -2686,10 +2645,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            LAYANAN PENGADUAN	
-                          </p>
+                          <p> LAYANAN PENGADUAN</p>
                         </td>
                         <td>
                           <button
@@ -2757,7 +2713,7 @@ function InformasiBerkala() {
                       <tr>
                         <td data-cell="dokumen" scope="row">
                           <p>
-                          LINK PROGRAM SOSIALISASI BAWASLU KABUPATEN BOYOLALI	
+                            LINK PROGRAM SOSIALISASI BAWASLU KABUPATEN BOYOLALI
                           </p>
                         </td>
                         <td>
@@ -2791,10 +2747,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            REKRUTMEN PANWASCAM 2020	
-                          </p>
+                          <p> REKRUTMEN PANWASCAM 2020</p>
                         </td>
                         <td>
                           <button
@@ -2827,10 +2780,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SYARAT PENDAFTARAN PANWASCAM	
-                          </p>
+                          <p> SYARAT PENDAFTARAN PANWASCAM</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2863,10 +2813,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PELANTIKAN PANWASCAM 2020		
-                          </p>
+                          <p> PELANTIKAN PANWASCAM 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2899,10 +2846,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            TEMAN NGOPI 1.0 BAWASLU KABUPATEN BOYOLALI			
-                          </p>
+                          <p> TEMAN NGOPI 1.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2935,10 +2879,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            TEMAN NGOPI 2.0 BAWASLU KABUPATEN BOYOLALI				
-                          </p>
+                          <p> TEMAN NGOPI 2.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -2971,10 +2912,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PENGUATAN KAPASITAS PANWASCAM 2020					
-                          </p>
+                          <p> PENGUATAN KAPASITAS PANWASCAM 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3009,7 +2947,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            DISKUSI DARING SKPP BAWASLU KABUPATEN BOYOLALI TAHUN 2020						
+                            DISKUSI DARING SKPP BAWASLU KABUPATEN BOYOLALI TAHUN
+                            2020
                           </p>
                         </td>{" "}
                         <td>
@@ -3043,10 +2982,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            TEMAN NGOPI 3.0 BAWASLU KABUPATEN BOYOLALI						
-                          </p>
+                          <p> TEMAN NGOPI 3.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3079,10 +3015,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "PENGAWASAN RAPID TEST"							
-                          </p>
+                          <p> SEKILAS BAWASLU "PENGAWASAN RAPID TEST"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3115,10 +3048,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PODCAST BAWASLU 1.0 BAWASLU KABUPATEN BOYOLALI						
-                          </p>
+                          <p> PODCAST BAWASLU 1.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3151,10 +3081,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PODCAST BAWASLU 2.0 BAWASLU KABUPATEN BOYOLALI						
-                          </p>
+                          <p> PODCAST BAWASLU 2.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3189,7 +3116,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "RAKOR PENANGANAN PELANGGARAN 2020"						
+                            SEKILAS BAWASLU "RAKOR PENANGANAN PELANGGARAN 2020"
                           </p>
                         </td>{" "}
                         <td>
@@ -3225,7 +3152,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "RAKOR PENYELESAIAN SENGKETA 2020"						
+                            SEKILAS BAWASLU "RAKOR PENYELESAIAN SENGKETA 2020"
                           </p>
                         </td>{" "}
                         <td>
@@ -3259,10 +3186,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "PENGAWASAN COKLIT"							
-                          </p>
+                          <p> SEKILAS BAWASLU "PENGAWASAN COKLIT"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3295,10 +3219,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PODCAST BAWASLU 3.0 BAWASLU KABUPATEN BOYOLALI							
-                          </p>
+                          <p> PODCAST BAWASLU 3.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3331,10 +3252,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            LIPUTAN KHUSUS PENGAWASAN COKLIT DESA SELO								
-                          </p>
+                          <p> LIPUTAN KHUSUS PENGAWASAN COKLIT DESA SELO</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3367,10 +3285,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            AUDIT SAMPLING COKLIT I									
-                          </p>
+                          <p> AUDIT SAMPLING COKLIT I</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3403,10 +3318,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            AUDIT SAMPLING COKLIT II									
-                          </p>
+                          <p> AUDIT SAMPLING COKLIT II</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3439,10 +3351,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PODCAST 4.0 BAWASLU KABUPATEN BOYOLALI									
-                          </p>
+                          <p> PODCAST 4.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3477,7 +3386,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            IKLAN LAYANAN MASYARAKAT "BAJOL BELUM DICOKLIT"										
+                            IKLAN LAYANAN MASYARAKAT "BAJOL BELUM DICOKLIT"
                           </p>
                         </td>{" "}
                         <td>
@@ -3513,7 +3422,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            IKLAN LAYANAN MASYARAKAT "BAJOL LAPOR KE BAWASLU"											
+                            IKLAN LAYANAN MASYARAKAT "BAJOL LAPOR KE BAWASLU"
                           </p>
                         </td>{" "}
                         <td>
@@ -3549,7 +3458,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "PENGAWASAN TAHAPAN PENCALONAN BUPATI DAN WAKIL BUPATI PILKADA TAHUN 2020"												
+                            SEKILAS BAWASLU "PENGAWASAN TAHAPAN PENCALONAN
+                            BUPATI DAN WAKIL BUPATI PILKADA TAHUN 2020"
                           </p>
                         </td>{" "}
                         <td>
@@ -3585,7 +3495,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "PENGAWASAN RAPAT PLENO TERBUKA"													
+                            SEKILAS BAWASLU "PENGAWASAN RAPAT PLENO TERBUKA"
                           </p>
                         </td>{" "}
                         <td>
@@ -3621,7 +3531,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "PENGAWASAN PENGUNDIAN TATA LETAK POSISI PASLON DALAM SURAT SUARA"													
+                            SEKILAS BAWASLU "PENGAWASAN PENGUNDIAN TATA LETAK
+                            POSISI PASLON DALAM SURAT SUARA"
                           </p>
                         </td>{" "}
                         <td>
@@ -3657,7 +3568,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "IKRAR KAMPANYE DAMAI KABUPATEN BOYOLALI"														
+                            SEKILAS BAWASLU "IKRAR KAMPANYE DAMAI KABUPATEN
+                            BOYOLALI"
                           </p>
                         </td>{" "}
                         <td>
@@ -3693,7 +3605,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            IKLAN LAYANAN MASYARAKAT "BAJOL IKUTAN DAFTAR PTPS"															
+                            IKLAN LAYANAN MASYARAKAT "BAJOL IKUTAN DAFTAR PTPS"
                           </p>
                         </td>{" "}
                         <td>
@@ -3727,10 +3639,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            NGULIK PEMILU BAWASLU KABUPATEN BOYOLALI																
-                          </p>
+                          <p> NGULIK PEMILU BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3763,10 +3672,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "PESAN UNTUK PTPS"																	
-                          </p>
+                          <p> SEKILAS BAWASLU "PESAN UNTUK PTPS"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3801,7 +3707,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "PEMETAAN KERAWANAN PEMILU DI LERENG MERAPI"																	
+                            SEKILAS BAWASLU "PEMETAAN KERAWANAN PEMILU DI LERENG
+                            MERAPI"
                           </p>
                         </td>{" "}
                         <td>
@@ -3835,10 +3742,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "PENERTIBAN APK"																		
-                          </p>
+                          <p> SEKILAS BAWASLU "PENERTIBAN APK"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3871,10 +3775,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "RAPID TEST PTPS"																			
-                          </p>
+                          <p> SEKILAS BAWASLU "RAPID TEST PTPS"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3907,10 +3808,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "AWASI PELIPATAN SURAT SUARA"																				
-                          </p>
+                          <p> SEKILAS BAWASLU "AWASI PELIPATAN SURAT SUARA"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3943,10 +3841,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            IKLAN LAYANAN MASYARAKAT "ASN HARUS NETRAL"																					
-                          </p>
+                          <p> IKLAN LAYANAN MASYARAKAT "ASN HARUS NETRAL"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -3981,7 +3876,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            APEL DARING PATROLI PENGAWASAN ANTI POLITIK UANG																						
+                            APEL DARING PATROLI PENGAWASAN ANTI POLITIK UANG
                           </p>
                         </td>{" "}
                         <td>
@@ -4015,10 +3910,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PENGAWASAN PATROLI ANTI POLITIK UANG																							
-                          </p>
+                          <p> PENGAWASAN PATROLI ANTI POLITIK UANG</p>
                         </td>{" "}
                         <td>
                           <button
@@ -4051,10 +3943,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "CATATAN UNTUK KPU"																							
-                          </p>
+                          <p> SEKILAS BAWASLU "CATATAN UNTUK KPU"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -4089,7 +3978,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PUBLIKASI KINERJA BWASLU KABUPATEN BOYOLALI TAHUN 2020																							
+                            PUBLIKASI KINERJA BWASLU KABUPATEN BOYOLALI TAHUN
+                            2020
                           </p>
                         </td>{" "}
                         <td>
@@ -4125,7 +4015,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PODCAST BAWASLU 5.0 "PEMOHON DALAM SENGKETA PROSES PEMILU																								
+                            PODCAST BAWASLU 5.0 "PEMOHON DALAM SENGKETA PROSES
+                            PEMILU
                           </p>
                         </td>{" "}
                         <td>
@@ -4161,7 +4052,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "GELAR RAKOR DESA ANTI POLITII UANG DI DESA SENGGRONG"																									
+                            SEKILAS BAWASLU "GELAR RAKOR DESA ANTI POLITII UANG
+                            DI DESA SENGGRONG"
                           </p>
                         </td>{" "}
                         <td>
@@ -4197,7 +4089,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TEASER BAWASLU KABUPATEN BOYOLALI GOES TO SCHOOL - 1.0																										
+                            TEASER BAWASLU KABUPATEN BOYOLALI GOES TO SCHOOL -
+                            1.0
                           </p>
                         </td>{" "}
                         <td>
@@ -4231,10 +4124,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEKILAS BAWASLU "LAUNCHING DESA PENGAWASAN"																										
-                          </p>
+                          <p> SEKILAS BAWASLU "LAUNCHING DESA PENGAWASAN"</p>
                         </td>{" "}
                         <td>
                           <button
@@ -4269,7 +4159,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            BAWASLU GOES TO SCHOOL 1.0 - SMK AN NUR AMPEL BOYOLALI																										
+                            BAWASLU GOES TO SCHOOL 1.0 - SMK AN NUR AMPEL
+                            BOYOLALI
                           </p>
                         </td>{" "}
                         <td>
@@ -4305,7 +4196,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PERBEDAAN ANTARA SENGKETA PILKADA DAN SENGKETA PEMILU																											
+                            PERBEDAAN ANTARA SENGKETA PILKADA DAN SENGKETA
+                            PEMILU
                           </p>
                         </td>{" "}
                         <td>
@@ -4339,10 +4231,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PODCAST BAWASLU 6.0 BAWASLU KABUPATEN BOYOLALI																											
-                          </p>
+                          <p> PODCAST BAWASLU 6.0 BAWASLU KABUPATEN BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -4375,10 +4264,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            TEKA TEKI PEMILIHAN																											
-                          </p>
+                          <p> TEKA TEKI PEMILIHAN</p>
                         </td>{" "}
                         <td>
                           <button
@@ -4413,7 +4299,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PODCAST BAWASLU 7.0 PEMBENTUKAN DESA PENGAWASAN DAN DESA NATI POLITIK UANG																												
+                            PODCAST BAWASLU 7.0 PEMBENTUKAN DESA PENGAWASAN DAN
+                            DESA NATI POLITIK UANG
                           </p>
                         </td>{" "}
                         <td>
@@ -4449,7 +4336,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW 0.1 "MEDIASI DALAM PENYELESAIAN SENGKETA PROSES PEMILU"																													
+                            TALKSHOW 0.1 "MEDIASI DALAM PENYELESAIAN SENGKETA
+                            PROSES PEMILU"
                           </p>
                         </td>{" "}
                         <td>
@@ -4485,7 +4373,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            DUKUNGAN SEKRETARIAT DALAM PERMOHONAN PENYELESAIAN SENGKETA PROSES PEMILU																													
+                            DUKUNGAN SEKRETARIAT DALAM PERMOHONAN PENYELESAIAN
+                            SENGKETA PROSES PEMILU
                           </p>
                         </td>{" "}
                         <td>
@@ -4521,7 +4410,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW 0.2 "TAHAPAN ADJUDIKASI DALAM PERMOHONAN PENYELESAIAN SENGKETA PROSES PEMILU"																													
+                            TALKSHOW 0.2 "TAHAPAN ADJUDIKASI DALAM PERMOHONAN
+                            PENYELESAIAN SENGKETA PROSES PEMILU"
                           </p>
                         </td>{" "}
                         <td>
@@ -4557,7 +4447,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            WEBINAR "PENINGKATAN PARTISIPASI MASYARAKAT MENJELANG PENGAWASAN PEMIL SERENTAK TAHUN 2024																													
+                            WEBINAR "PENINGKATAN PARTISIPASI MASYARAKAT
+                            MENJELANG PENGAWASAN PEMIL SERENTAK TAHUN 2024
                           </p>
                         </td>{" "}
                         <td>
@@ -4593,7 +4484,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            SEKILAS BAWASLU "PENGUKUHAN SAKA ADHYASTA PEMILU"																													
+                            SEKILAS BAWASLU "PENGUKUHAN SAKA ADHYASTA PEMILU"
                           </p>
                         </td>{" "}
                         <td>
@@ -4629,7 +4520,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            WEBINAR "KETERBUKAAN INFORMASI PUBLIK MENUJU PROFESIONALISME BAWASLU"																													
+                            WEBINAR "KETERBUKAAN INFORMASI PUBLIK MENUJU
+                            PROFESIONALISME BAWASLU"
                           </p>
                         </td>{" "}
                         <td>
@@ -4665,7 +4557,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW 0.3 "POTENSI SENGKETA PADA TAHAPAN PENCALONAN"																													
+                            TALKSHOW 0.3 "POTENSI SENGKETA PADA TAHAPAN
+                            PENCALONAN"
                           </p>
                         </td>{" "}
                         <td>
@@ -4701,7 +4594,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            WEBINAR "PERAN STRATEGIS PEMUDA DALAM MENGAWAL DEMOKRASI MENYONGSONG PEMILU SERENTAK 2024"																														
+                            WEBINAR "PERAN STRATEGIS PEMUDA DALAM MENGAWAL
+                            DEMOKRASI MENYONGSONG PEMILU SERENTAK 2024"
                           </p>
                         </td>{" "}
                         <td>
@@ -4737,7 +4631,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW 0.4 "10 TAHAPAN MEDIASI DALAM PENYELESAIAN SENGKETA PEMILU"																															
+                            TALKSHOW 0.4 "10 TAHAPAN MEDIASI DALAM PENYELESAIAN
+                            SENGKETA PEMILU"
                           </p>
                         </td>{" "}
                         <td>
@@ -4773,7 +4668,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            MEMUTUS MATA RANTAI POLITIK UANG DI KAKI GUNUNG MERAPI																																
+                            MEMUTUS MATA RANTAI POLITIK UANG DI KAKI GUNUNG
+                            MERAPI
                           </p>
                         </td>{" "}
                         <td>
@@ -4809,7 +4705,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            WEBINAR "MENELISIK KIPRAH PEREMPUAN DALAM PERJUANGAN MENGAWAL PEMILU DAN DEMOKRASI"																																	
+                            WEBINAR "MENELISIK KIPRAH PEREMPUAN DALAM PERJUANGAN
+                            MENGAWAL PEMILU DAN DEMOKRASI"
                           </p>
                         </td>{" "}
                         <td>
@@ -4845,7 +4742,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW "POTENSI SENGKETA PADA TAHAPAN PEMILU DAN PILKADA"																																		
+                            TALKSHOW "POTENSI SENGKETA PADA TAHAPAN PEMILU DAN
+                            PILKADA"
                           </p>
                         </td>{" "}
                         <td>
@@ -4881,7 +4779,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW 0.6"IDENTIFIKASI PERMASALAHAN PEMILU DAN PILKADA DALAM RANAH SENGKETA"																																		
+                            TALKSHOW 0.6"IDENTIFIKASI PERMASALAHAN PEMILU DAN
+                            PILKADA DALAM RANAH SENGKETA"
                           </p>
                         </td>{" "}
                         <td>
@@ -4917,7 +4816,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW "BEDAH BULETIN KALEIDOSKOP BAWASLU BOYOLALI 2021"																																		
+                            TALKSHOW "BEDAH BULETIN KALEIDOSKOP BAWASLU BOYOLALI
+                            2021"
                           </p>
                         </td>{" "}
                         <td>
@@ -4953,7 +4853,7 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            DUKUNGAN SDM DAN ANGGARAN DALAM KEGIATAN BAWASLU																																			
+                            DUKUNGAN SDM DAN ANGGARAN DALAM KEGIATAN BAWASLU
                           </p>
                         </td>{" "}
                         <td>
@@ -4989,7 +4889,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PUBLIKASI KINERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2021																																		
+                            PUBLIKASI KINERJA BAWASLU KABUPATEN BOYOLALI TAHUN
+                            2021
                           </p>
                         </td>{" "}
                         <td>
@@ -5025,7 +4926,8 @@ function InformasiBerkala() {
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            TALKSHOW URGENSI DAN SUBSTANSI PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2022																																			
+                            TALKSHOW URGENSI DAN SUBSTANSI PROGRAM KERJA BAWASLU
+                            KABUPATEN BOYOLALI TAHUN 2022
                           </p>
                         </td>{" "}
                         <td>
@@ -5059,10 +4961,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SAMBANG SEDULUR #1 (OJEK NGAWASI PEMILU)																																				
-                          </p>
+                          <p> SAMBANG SEDULUR #1 (OJEK NGAWASI PEMILU)</p>
                         </td>{" "}
                         <td>
                           <button
@@ -5095,10 +4994,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SIMULASI PENYELESAIAN SENGKETA PEMILU																																				
-                          </p>
+                          <p> SIMULASI PENYELESAIAN SENGKETA PEMILU</p>
                         </td>{" "}
                         <td>
                           <button
@@ -5131,10 +5027,7 @@ function InformasiBerkala() {
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            TALKSHOW MENGUPAS SEJARAH PENGAWASAN																																				
-                          </p>
+                          <p> TALKSHOW MENGUPAS SEJARAH PENGAWASAN</p>
                         </td>{" "}
                         <td>
                           <button
@@ -5304,123 +5197,145 @@ function InformasiBerkala() {
               <div className="row justify-content-center">
                 <div className="col-lg-12 ">
                   <div className="isotope-filters project-isotope-btn text-center mb-5">
-                  <button
-                      class="button active ml-0"
+                    <button
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
                       data-filter="*"
                       onClick={() => showTable("Profil Bawaslu")}
                     >
-Profil Bawaslu
+                      Profil Bawaslu
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-1"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("Layanan Publik Khusus")}
                     >
-Layanan Publik Khusus
+                      Layanan Publik Khusus
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-2"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Program Kerja")}
                     >
-Program Kerja
+                      Program Kerja
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("Ringkasan Kegiatan")}
                     >
-Ringkasan Kegiatan
+                      Ringkasan Kegiatan
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Sumber & Anggaran Kegiatan")}
                     >
-Sumber & Anggaran Kegiatan
+                      Sumber & Anggaran Kegiatan
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("Keuangan Bawaslu")}
                     >
-Keuangan Bawaslu
+                      Keuangan Bawaslu
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Layanan Informasi Publik")}
                     >
-Layanan Informasi Publik
+                      Layanan Informasi Publik
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("Sosialisasi")}
                     >
-Sosialisasi
+                      Sosialisasi
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
-                      onClick={() => showTable("SDM, Organisasi & Administrasi")}
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
+                      onClick={() =>
+                        showTable("SDM, Organisasi & Administrasi")
+                      }
                     >
-SDM, Organisasi & Administrasi
+                      SDM, Organisasi & Administrasi
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
-                      onClick={() => showTable("Laporan Barang milik Negara")}
+                     style={{ width: "230px", textAlign: "left" }}
+                     className="button"
+                     data-filter="*"
+                      onClick={() => showTable("Laporan Barang Milik Negara")}
                     >
-Laporan Barang milik Negara
+                      Laporan Barang milik Negara
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
-                      onClick={() => showTable("Naskah Perjanjian Hibah Daerah")}
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
+                      onClick={() =>
+                        showTable("Naskah Perjanjian Hibahh Daerahh")
+                      }
                     >
-Naskah Perjanjian Hibah Daerah
+                      Naskah Perjanjian Hibah Daerah
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("Piagam Penghargaan")}
                     >
-Piagam Penghargaan
+                      Piagam Penghargaan
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Laporan Realisasi Anggaran")}
                     >
-Laporan Realisasi Anggaran
+                      Laporan Realisasi Anggaran
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Perjanjian Kinerja")}
                     >
-Perjanjian Kinerja
+                      Perjanjian Kinerja
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("Rencana Kerja & Anggaran")}
                     >
-Rencana Kerja & Anggaran
+                      Rencana Kerja & Anggaran
                     </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("TAPKIN")}
                     >
-TAPKIN                    </button>
+                      TAPKIN{" "}
+                    </button>
                     <button
-                      class="button"
-                      data-filter=".cat-3"
+                       style={{ width: "230px", textAlign: "left" }}
+                       className="button"
+                       data-filter="*"
                       onClick={() => showTable("Pengadaan Barang & Jasa")}
                     >
-Pengadaan Barang & Jasa
+                      Pengadaan Barang & Jasa
                     </button>
                   </div>
                 </div>
@@ -5456,8 +5371,43 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
+                          <p>PROFIL WIDODO (KETUA BAWASLU BOYOLALI)</p>
+                        </td>
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
                           <p>
-                          PROFIL WIDODO (KETUA BAWASLU BOYOLALI)	
+                            {" "}
+                            PROFIL AGUS MARWANTO (ANGGOTA BAWASLU KABUPATEN
+                            BOYOLALI)
                           </p>
                         </td>
                         <td>
@@ -5493,43 +5443,8 @@ Pengadaan Barang & Jasa
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PROFIL AGUS MARWANTO (ANGGOTA BAWASLU KABUPATEN BOYOLALI)	
-                          </p>
-                        </td>
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            PROFIL LILIK WAHYU CATUR WIBOWO (ANGGOTA BAWASLU KABUPATEN BOYOLALI)	
+                            PROFIL LILIK WAHYU CATUR WIBOWO (ANGGOTA BAWASLU
+                            KABUPATEN BOYOLALI)
                           </p>
                         </td>{" "}
                         <td>
@@ -5561,222 +5476,227 @@ Pengadaan Barang & Jasa
                           </button>
                         </td>
                       </tr>
-                        <tr>
-                          <td data-cell="unduh">
-                            <p>
-                              {" "}
-                              PROFIL TEDJO DWIJANTO (ANGGOTA BAWASLU KABUPATEN BOYOLALI)		
-                            </p>
-                          </td>{" "}
-                          <td>
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-download"></i>
-                            </button>
-                            <button
-                              className="bg-warning text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-circle-info"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-cell="unduh">
-                            <p>
-                              {" "}
-                              PROFIL MUHAMAD MAHMUDI (ANGGOTA BAWASLU KABUPATEN BOYOLALI)			
-                            </p>
-                          </td>{" "}
-                          <td>
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-download"></i>
-                            </button>
-                            <button
-                              className="bg-warning text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-circle-info"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-cell="unduh">
-                            <p>
-                              {" "}
-                              PROFIL WIYANTO (KOORDINATOR SEKRETARIAT BAWASLU KABUPATEN BOYOLALI)			
-                            </p>
-                          </td>{" "}
-                          <td>
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-download"></i>
-                            </button>
-                            <button
-                              className="bg-warning text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-circle-info"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-cell="unduh">
-                            <p>
-                              {" "}
-                              PROFIL AGUS SUYANTO (KASUBAG PENGAWASAN DAN HUMAS BAWASLU KABUPATEN BOYOLALI)				
-                            </p>
-                          </td>{" "}
-                          <td>
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-download"></i>
-                            </button>
-                            <button
-                              className="bg-warning text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-circle-info"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-cell="unduh">
-                            <p>
-                              {" "}
-                              PROFIL SUSI PREHARTANTI N. (BPP BAWASLU KABUPATEN BOYOLALI)					
-                            </p>
-                          </td>{" "}
-                          <td>
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-download"></i>
-                            </button>
-                            <button
-                              className="bg-warning text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-circle-info"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-cell="unduh">
-                            <p>
-                              {" "}
-                              STRUKTUR ORGANISASI BAWASLU KABUPATEN BOYOLALI 2023						
-                            </p>
-                          </td>{" "}
-                          <td>
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-download"></i>
-                            </button>
-                            <button
-                              className="bg-warning text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}
-                            >
-                              <i class="fa-solid fa-circle-info"></i>
-                            </button>
-                          </td>
-                        </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p>
+                            {" "}
+                            PROFIL TEDJO DWIJANTO (ANGGOTA BAWASLU KABUPATEN
+                            BOYOLALI)
+                          </p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p>
+                            {" "}
+                            PROFIL MUHAMAD MAHMUDI (ANGGOTA BAWASLU KABUPATEN
+                            BOYOLALI)
+                          </p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p>
+                            {" "}
+                            PROFIL WIYANTO (KOORDINATOR SEKRETARIAT BAWASLU
+                            KABUPATEN BOYOLALI)
+                          </p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p>
+                            {" "}
+                            PROFIL AGUS SUYANTO (KASUBAG PENGAWASAN DAN HUMAS
+                            BAWASLU KABUPATEN BOYOLALI)
+                          </p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p>
+                            {" "}
+                            PROFIL SUSI PREHARTANTI N. (BPP BAWASLU KABUPATEN
+                            BOYOLALI)
+                          </p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p>
+                            {" "}
+                            STRUKTUR ORGANISASI BAWASLU KABUPATEN BOYOLALI 2023
+                          </p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
                     </tbody>
                     <div></div>
                   </table>
@@ -5814,9 +5734,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          BULETIN EDISI 1 BAWASLU BOYOLALI	
-                          </p>
+                          <p>BULETIN EDISI 1 BAWASLU BOYOLALI</p>
                         </td>
                         <td>
                           <button
@@ -5849,10 +5767,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BULETIN EDISI 2 BAWASLU BOYOLALI	
-                          </p>
+                          <p> BULETIN EDISI 2 BAWASLU BOYOLALI</p>
                         </td>
                         <td>
                           <button
@@ -5885,10 +5800,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BULETIN EDISI 3 BAWASLU BOYOLALI	
-                          </p>
+                          <p> BULETIN EDISI 3 BAWASLU BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -5921,10 +5833,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BULETIN EDISI 4 BAWASLU BOYOLALI	
-                          </p>
+                          <p> BULETIN EDISI 4 BAWASLU BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -5957,10 +5866,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BULETIN EDISI 5 BAWASLU BOYOLALI	
-                          </p>
+                          <p> BULETIN EDISI 5 BAWASLU BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -5993,10 +5899,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BULETIN EDISI 6 BAWASLU BOYOLALI	
-                          </p>
+                          <p> BULETIN EDISI 6 BAWASLU BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6029,10 +5932,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BULETIN EDISI 7 BAWASLU BOYOLALI	
-                          </p>
+                          <p> BULETIN EDISI 7 BAWASLU BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6065,10 +5965,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BULETIN EDISI 8 BAWASLU BOYOLALI	
-                          </p>
+                          <p> BULETIN EDISI 8 BAWASLU BOYOLALI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6126,9 +6023,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          BUKU BAWASLU KABUPATEN BOYOLALI		
-                          </p>
+                          <p>BUKU BAWASLU KABUPATEN BOYOLALI</p>
                         </td>
                         <td>
                           <button
@@ -6161,9 +6056,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            BUKU INDEKS KERAWANAN PEMILU 2019	                          </p>
+                          <p> BUKU INDEKS KERAWANAN PEMILU 2019 </p>
                         </td>
                         <td>
                           <button
@@ -6196,10 +6089,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            CALON TUNGGAL DITENGAH PANDEMI		
-                          </p>
+                          <p> CALON TUNGGAL DITENGAH PANDEMI</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6234,7 +6124,7 @@ Pengadaan Barang & Jasa
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            NAPAK TILAS SEJARAH PENGAWAS PEMILU DI BOYOLALI	
+                            NAPAK TILAS SEJARAH PENGAWAS PEMILU DI BOYOLALI
                           </p>
                         </td>{" "}
                         <td>
@@ -6268,10 +6158,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            SEJARAH PENGAWASAN	
-                          </p>
+                          <p> SEJARAH PENGAWASAN</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6339,7 +6226,7 @@ Pengadaan Barang & Jasa
                       <tr>
                         <td data-cell="dokumen" scope="row">
                           <p>
-                          PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2020	
+                            PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2020
                           </p>
                         </td>
                         <td>
@@ -6375,7 +6262,7 @@ Pengadaan Barang & Jasa
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2021	
+                            PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2021
                           </p>
                         </td>
                         <td>
@@ -6411,7 +6298,7 @@ Pengadaan Barang & Jasa
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2022	
+                            PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2022
                           </p>
                         </td>{" "}
                         <td>
@@ -6447,7 +6334,7 @@ Pengadaan Barang & Jasa
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2023	
+                            PROGRAM KERJA BAWASLU KABUPATEN BOYOLALI TAHUN 2023
                           </p>
                         </td>{" "}
                         <td>
@@ -6515,9 +6402,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          DAFTAR KEGIATAN BAWASLU 2020	
-                          </p>
+                          <p>DAFTAR KEGIATAN BAWASLU 2020</p>
                         </td>
                         <td>
                           <button
@@ -6550,10 +6435,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN MARET 2021	
-                          </p>
+                          <p> KEGIATAN BULAN MARET 2021</p>
                         </td>
                         <td>
                           <button
@@ -6586,10 +6468,601 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN APRIL 2021	
-                          </p>
+                          <p> KEGIATAN BULAN APRIL 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN MEI 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN JUNI 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN JULI 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN AGUSTUS 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN SEPTEMBER 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN OKTOBER 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN NOVEMBER 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN DESEMBER 2021</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN JANUARI 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN FEBRUARI 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN MARET 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN APRIL 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN MEI 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN JUNI 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN JULI 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN AGUSTUS 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN SEPTEMBER 2022</p>
+                        </td>{" "}
+                        <td>
+                          <button
+                            className="bg-primary text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-download"></i>
+                          </button>
+                          <button
+                            className="bg-warning text-light"
+                            style={{
+                              border: "none",
+                              padding: "7px",
+                              paddingLeft: "13px",
+                              paddingRight: "13px",
+                              borderRadius: "5px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <i class="fa-solid fa-circle-info"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-cell="unduh">
+                          <p> KEGIATAN BULAN OKTOBER 2022</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6624,7 +7097,8 @@ Pengadaan Barang & Jasa
                         <td data-cell="unduh">
                           <p>
                             {" "}
-                            KEGIATAN BULAN MEI 2021	
+                            REKAP KEGIATAN BAWASLU KABUPATEN BOYOLALI PER BULAN
+                            NOVEMBER TAHUN 2022
                           </p>
                         </td>{" "}
                         <td>
@@ -6658,10 +7132,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN JUNI 2021		
-                          </p>
+                          <p> KEGIATAN BULAN NOVEMBER 2022</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6694,10 +7165,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN JULI 2021		
-                          </p>
+                          <p> KEGIATAN BULAN DESEMBER 2022</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6730,10 +7198,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN AGUSTUS 2021		
-                          </p>
+                          <p> KEGIATAN BULAN JANUARI 2023</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6766,10 +7231,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN SEPTEMBER 2021		
-                          </p>
+                          <p> KEGIATAN BULAN FEBRUARI 2023</p>
                         </td>{" "}
                         <td>
                           <button
@@ -6802,658 +7264,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN OKTOBER 2021		
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN NOVEMBER 2021		
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN DESEMBER 2021			
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN JANUARI 2022		
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN FEBRUARI 2022	
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN MARET 2022	
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN APRIL 2022	
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN MEI 2022	
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN JUNI 2022	
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN JULI 2022		
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN AGUSTUS 2022		
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN SEPTEMBER 2022		
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN OKTOBER 2022		
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            REKAP KEGIATAN BAWASLU KABUPATEN BOYOLALI PER BULAN NOVEMBER TAHUN 2022			
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN NOVEMBER 2022			
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN DESEMBER 2022				
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN JANUARI 2023					
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN FEBRUARI 2023					
-                          </p>
-                        </td>{" "}
-                        <td>
-                          <button
-                            className="bg-primary text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-download"></i>
-                          </button>
-                          <button
-                            className="bg-warning text-light"
-                            style={{
-                              border: "none",
-                              padding: "7px",
-                              paddingLeft: "13px",
-                              paddingRight: "13px",
-                              borderRadius: "5px",
-                              marginRight: "10px",
-                            }}
-                          >
-                            <i class="fa-solid fa-circle-info"></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            KEGIATAN BULAN MARET 2023				
-                          </p>
+                          <p> KEGIATAN BULAN MARET 2023</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7520,9 +7331,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          DIPA BAWASLU JATENG 2019	
-                          </p>
+                          <p>DIPA BAWASLU JATENG 2019</p>
                         </td>
                         <td>
                           <button
@@ -7555,10 +7364,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA BAWASLU JATENG 2020	
-                          </p>
+                          <p> DIPA BAWASLU JATENG 2020</p>
                         </td>
                         <td>
                           <button
@@ -7591,10 +7397,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA BAWASLU JATENG 2021	
-                          </p>
+                          <p> DIPA BAWASLU JATENG 2021</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7627,10 +7430,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA BAWASLU JATENG 2022		
-                          </p>
+                          <p> DIPA BAWASLU JATENG 2022</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7697,9 +7497,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          DIPA 2018	
-                          </p>
+                          <p>DIPA 2018</p>
                         </td>
                         <td>
                           <button
@@ -7732,10 +7530,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA 2019	
-                          </p>
+                          <p> DIPA 2019</p>
                         </td>
                         <td>
                           <button
@@ -7768,10 +7563,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA 2020	
-                          </p>
+                          <p> DIPA 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7804,10 +7596,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA 2021	
-                          </p>
+                          <p> DIPA 2021</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7840,10 +7629,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA 2022 REVISI I	
-                          </p>
+                          <p> DIPA 2022 REVISI I</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7876,10 +7662,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA 2022 REVISI II	
-                          </p>
+                          <p> DIPA 2022 REVISI II</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7912,10 +7695,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            DIPA 2023	
-                          </p>
+                          <p> DIPA 2023</p>
                         </td>{" "}
                         <td>
                           <button
@@ -7972,9 +7752,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2017		
-                          </p>
+                          <p>CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2017</p>
                         </td>
                         <td>
                           <button
@@ -8007,10 +7785,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2018		
-                          </p>
+                          <p> CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2018</p>
                         </td>
                         <td>
                           <button
@@ -8043,10 +7818,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2019		
-                          </p>
+                          <p> CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2019</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8079,10 +7851,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2020	
-                          </p>
+                          <p> CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8115,10 +7884,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2021	
-                          </p>
+                          <p> CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2021</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8151,10 +7917,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2022		
-                          </p>
+                          <p> CATATAN AKHIR LAPORAN KEUANGAN ( CALK ) 2022</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8211,9 +7974,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          NERACA SATKER 2018			
-                          </p>
+                          <p>NERACA SATKER 2018</p>
                         </td>
                         <td>
                           <button
@@ -8246,10 +8007,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            NERACA SATKER 2019			
-                          </p>
+                          <p> NERACA SATKER 2019</p>
                         </td>
                         <td>
                           <button
@@ -8282,10 +8040,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            NERACA SATKER 2020			
-                          </p>
+                          <p> NERACA SATKER 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8318,10 +8073,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            NERACA SATKER 2021	
-                          </p>
+                          <p> NERACA SATKER 2021</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8354,10 +8106,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            NERACA SATKER 2022		
-                          </p>
+                          <p> NERACA SATKER 2022</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8414,9 +8163,7 @@ Pengadaan Barang & Jasa
                     <tbody>
                       <tr>
                         <td data-cell="dokumen" scope="row">
-                          <p>
-                          LAKIP 2016			
-                          </p>
+                          <p>LAKIP 2016</p>
                         </td>
                         <td>
                           <button
@@ -8449,10 +8196,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            LAKIP 2017				
-                          </p>
+                          <p> LAKIP 2017</p>
                         </td>
                         <td>
                           <button
@@ -8485,10 +8229,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            LAKIP 2019				
-                          </p>
+                          <p> LAKIP 2019</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8521,10 +8262,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            LAKIP 2020		
-                          </p>
+                          <p> LAKIP 2020</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8557,10 +8295,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            LAKIP 2021			
-                          </p>
+                          <p> LAKIP 2021</p>
                         </td>{" "}
                         <td>
                           <button
@@ -8593,10 +8328,7 @@ Pengadaan Barang & Jasa
                       </tr>
                       <tr>
                         <td data-cell="unduh">
-                          <p>
-                            {" "}
-                            LAKIP 2022				
-                          </p>
+                          <p> LAKIP 2022</p>
                         </td>{" "}
                         <td>
                           <button
