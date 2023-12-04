@@ -260,6 +260,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -273,6 +274,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -293,6 +295,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -330,6 +333,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -343,6 +347,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -366,6 +371,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -379,6 +385,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -399,6 +406,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -412,6 +420,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -436,6 +445,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -449,6 +459,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -473,6 +484,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -486,6 +498,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -506,6 +519,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -519,6 +533,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -539,6 +554,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -552,6 +568,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -575,6 +592,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -588,6 +606,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -611,6 +630,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -624,6 +644,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -644,6 +665,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -657,6 +679,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -680,6 +703,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -693,6 +717,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -716,6 +741,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -729,6 +755,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -753,6 +780,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -766,6 +794,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -786,6 +815,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -799,6 +829,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -822,6 +853,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -835,6 +867,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -855,6 +888,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -868,6 +902,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -925,6 +960,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -938,6 +974,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -992,6 +1029,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1005,6 +1043,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1025,6 +1064,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1038,6 +1078,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1058,6 +1099,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1071,6 +1113,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1091,6 +1134,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1104,6 +1148,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1128,6 +1173,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1141,6 +1187,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1165,6 +1212,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1178,6 +1226,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1202,6 +1251,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1215,6 +1265,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1238,6 +1289,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1251,6 +1303,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1274,6 +1327,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1287,6 +1341,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1307,6 +1362,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1320,6 +1376,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1340,6 +1397,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1353,6 +1411,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1373,6 +1432,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1386,6 +1446,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1410,6 +1471,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1423,6 +1485,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1447,6 +1510,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1460,6 +1524,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1484,6 +1549,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1497,6 +1563,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1517,6 +1584,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1530,6 +1598,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1553,6 +1622,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1566,6 +1636,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1589,6 +1660,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1602,6 +1674,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1626,6 +1699,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1639,6 +1713,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1663,6 +1738,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1676,6 +1752,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1700,6 +1777,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1713,6 +1791,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1733,6 +1812,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1746,6 +1826,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1770,6 +1851,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1783,6 +1865,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1807,6 +1890,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1820,6 +1904,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1874,6 +1959,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1887,6 +1973,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1910,6 +1997,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1923,6 +2011,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1943,6 +2032,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1956,6 +2046,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1980,6 +2071,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1993,6 +2085,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2017,6 +2110,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2030,6 +2124,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2054,6 +2149,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2067,6 +2163,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2087,6 +2184,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2100,6 +2198,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2120,6 +2219,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2133,6 +2233,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2153,6 +2254,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2166,6 +2268,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2186,6 +2289,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2199,6 +2303,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2219,6 +2324,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2232,6 +2338,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2252,6 +2359,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2265,6 +2373,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2285,6 +2394,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2298,6 +2408,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2318,6 +2429,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2331,6 +2443,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2385,6 +2498,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2398,6 +2512,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2418,6 +2533,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2431,6 +2547,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2451,6 +2568,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2464,6 +2582,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2484,6 +2603,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2497,6 +2617,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2517,6 +2638,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2530,6 +2652,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2550,6 +2673,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2563,6 +2687,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2617,6 +2742,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2630,6 +2756,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2650,6 +2777,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2663,6 +2791,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2719,6 +2848,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2732,6 +2862,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2752,6 +2883,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2765,6 +2897,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2785,6 +2918,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2798,6 +2932,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2818,6 +2953,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2831,6 +2967,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2851,6 +2988,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2864,6 +3002,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2884,6 +3023,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2897,6 +3037,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2917,6 +3058,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2930,6 +3072,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2954,6 +3097,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2967,6 +3111,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -2987,6 +3132,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3000,6 +3146,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3020,6 +3167,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3033,6 +3181,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3053,6 +3202,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3066,6 +3216,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3086,6 +3237,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3099,6 +3251,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3122,6 +3275,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3135,6 +3289,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3158,6 +3313,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3171,6 +3327,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3191,6 +3348,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3204,6 +3362,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3224,6 +3383,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3237,6 +3397,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3257,6 +3418,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3270,6 +3432,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3290,6 +3453,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3303,6 +3467,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3323,6 +3488,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3336,6 +3502,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3356,6 +3523,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3369,6 +3537,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3392,6 +3561,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3405,6 +3575,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3428,6 +3599,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3441,6 +3613,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3465,6 +3638,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3478,6 +3652,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3501,6 +3676,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3514,6 +3690,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3538,6 +3715,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3551,6 +3729,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3575,6 +3754,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3588,6 +3768,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3611,6 +3792,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3624,6 +3806,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3644,6 +3827,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3657,6 +3841,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3677,6 +3862,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3690,6 +3876,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3714,6 +3901,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3727,6 +3915,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3747,6 +3936,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3760,6 +3950,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3780,6 +3971,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3793,6 +3985,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3813,6 +4006,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3826,6 +4020,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3846,6 +4041,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3859,6 +4055,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3882,6 +4079,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3895,6 +4093,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3915,6 +4114,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3928,6 +4128,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3948,6 +4149,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3961,6 +4163,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3985,6 +4188,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -3998,6 +4202,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4022,6 +4227,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4035,6 +4241,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4059,6 +4266,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4072,6 +4280,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4096,6 +4305,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4109,6 +4319,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4129,6 +4340,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4142,6 +4354,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4166,6 +4379,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4179,6 +4393,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4203,6 +4418,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4216,6 +4432,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4236,6 +4453,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4249,6 +4467,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4269,6 +4488,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4282,6 +4502,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4306,6 +4527,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4319,6 +4541,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4343,6 +4566,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4356,6 +4580,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4380,6 +4605,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4393,6 +4619,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4417,6 +4644,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4430,6 +4658,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4454,6 +4683,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4467,6 +4697,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4490,6 +4721,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4503,6 +4735,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4527,6 +4760,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4540,6 +4774,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4564,6 +4799,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4577,6 +4813,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4601,6 +4838,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4614,6 +4852,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4638,6 +4877,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4651,6 +4891,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4675,6 +4916,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4688,6 +4930,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4712,6 +4955,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4725,6 +4969,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4749,6 +4994,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4762,6 +5008,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4786,6 +5033,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4799,6 +5047,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4823,6 +5072,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4836,6 +5086,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4859,6 +5110,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4872,6 +5124,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4896,6 +5149,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4909,6 +5163,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4933,6 +5188,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4946,6 +5202,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4966,6 +5223,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4979,6 +5237,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -4999,6 +5258,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5012,6 +5272,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5032,6 +5293,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5045,6 +5307,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5206,9 +5469,9 @@ function InformasiBerkala() {
                       Profil Bawaslu
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Layanan Publik Khusus")}
                     >
                       Layanan Publik Khusus
@@ -5222,9 +5485,9 @@ function InformasiBerkala() {
                       Program Kerja
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Ringkasan Kegiatan")}
                     >
                       Ringkasan Kegiatan
@@ -5238,9 +5501,9 @@ function InformasiBerkala() {
                       Sumber & Anggaran Kegiatan
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Keuangan Bawaslu")}
                     >
                       Keuangan Bawaslu
@@ -5254,17 +5517,17 @@ function InformasiBerkala() {
                       Layanan Informasi Publik
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Sosialisasi")}
                     >
                       Sosialisasi
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() =>
                         showTable("SDM, Organisasi & Administrasi")
                       }
@@ -5272,17 +5535,17 @@ function InformasiBerkala() {
                       SDM, Organisasi & Administrasi
                     </button>
                     <button
-                     style={{ width: "230px", textAlign: "left" }}
-                     className="button"
-                     data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Laporan Barang Milik Negara")}
                     >
                       Laporan Barang milik Negara
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() =>
                         showTable("Naskah Perjanjian Hibahh Daerahh")
                       }
@@ -5290,9 +5553,9 @@ function InformasiBerkala() {
                       Naskah Perjanjian Hibah Daerah
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Piagam Penghargaan")}
                     >
                       Piagam Penghargaan
@@ -5314,25 +5577,25 @@ function InformasiBerkala() {
                       Perjanjian Kinerja
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Rencana Kerja & Anggaran")}
                     >
                       Rencana Kerja & Anggaran
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("TAPKIN")}
                     >
                       TAPKIN{" "}
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
-                       className="button"
-                       data-filter="*"
+                      style={{ width: "230px", textAlign: "left" }}
+                      className="button"
+                      data-filter="*"
                       onClick={() => showTable("Pengadaan Barang & Jasa")}
                     >
                       Pengadaan Barang & Jasa
@@ -5376,6 +5639,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5389,6 +5653,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5413,6 +5678,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5426,6 +5692,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5450,6 +5717,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5463,6 +5731,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5487,6 +5756,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5500,6 +5770,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5524,6 +5795,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5537,6 +5809,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5561,6 +5834,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5574,6 +5848,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5598,6 +5873,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5611,6 +5887,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5635,6 +5912,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5648,6 +5926,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5671,6 +5950,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5684,6 +5964,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5739,6 +6020,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5752,6 +6034,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5772,6 +6055,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5785,6 +6069,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5805,6 +6090,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5818,6 +6104,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5838,6 +6125,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5851,6 +6139,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5871,6 +6160,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5884,6 +6174,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5904,6 +6195,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5917,6 +6209,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5937,6 +6230,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5950,6 +6244,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5970,6 +6265,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -5983,6 +6279,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6028,6 +6325,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6041,6 +6339,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6061,6 +6360,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6074,6 +6374,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6094,6 +6395,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6107,6 +6409,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6130,6 +6433,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6143,6 +6447,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6163,6 +6468,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6176,6 +6482,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6232,6 +6539,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6245,6 +6553,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6268,6 +6577,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6281,6 +6591,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6304,6 +6615,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6317,6 +6629,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6340,6 +6653,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6353,6 +6667,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6407,6 +6722,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6420,6 +6736,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6440,6 +6757,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6453,6 +6771,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6473,6 +6792,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6486,6 +6806,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6506,6 +6827,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6519,6 +6841,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6539,6 +6862,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6552,6 +6876,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6572,6 +6897,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6585,6 +6911,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6605,6 +6932,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6618,6 +6946,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6638,6 +6967,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6651,6 +6981,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6671,6 +7002,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6684,6 +7016,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6704,6 +7037,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6717,6 +7051,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6737,6 +7072,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6750,6 +7086,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6770,6 +7107,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6783,6 +7121,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6803,6 +7142,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6816,6 +7156,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6836,6 +7177,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6849,6 +7191,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6869,6 +7212,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6882,6 +7226,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6902,6 +7247,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6915,6 +7261,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6935,6 +7282,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6948,6 +7296,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6968,6 +7317,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -6981,6 +7331,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7001,6 +7352,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7014,6 +7366,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7034,6 +7387,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7047,6 +7401,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7067,6 +7422,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7080,6 +7436,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7104,6 +7461,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7117,6 +7475,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7137,6 +7496,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7150,6 +7510,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7170,6 +7531,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7183,6 +7545,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7203,6 +7566,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7216,6 +7580,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7236,6 +7601,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7249,6 +7615,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7269,6 +7636,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7282,6 +7650,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7336,6 +7705,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7349,6 +7719,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7369,6 +7740,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7382,6 +7754,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7402,6 +7775,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7415,6 +7789,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7435,6 +7810,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7448,6 +7824,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7502,6 +7879,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7515,6 +7893,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7535,6 +7914,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7548,6 +7928,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7568,6 +7949,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7581,6 +7963,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7601,6 +7984,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7614,6 +7998,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7634,6 +8019,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7647,6 +8033,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7667,6 +8054,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7680,6 +8068,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7700,6 +8089,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7713,6 +8103,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7757,6 +8148,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7770,6 +8162,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7790,6 +8183,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7803,6 +8197,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7823,6 +8218,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7836,6 +8232,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7856,6 +8253,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7869,6 +8267,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7889,6 +8288,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7902,6 +8302,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7922,6 +8323,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7935,6 +8337,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7979,6 +8382,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -7992,6 +8396,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8012,6 +8417,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8025,6 +8431,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8045,6 +8452,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8058,6 +8466,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8078,6 +8487,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8091,6 +8501,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8111,6 +8522,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8124,6 +8536,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8168,6 +8581,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8181,6 +8595,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8201,6 +8616,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8214,6 +8630,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8234,6 +8651,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8247,6 +8665,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8267,6 +8686,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8280,6 +8700,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8300,6 +8721,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8313,6 +8735,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8333,6 +8756,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8346,6 +8770,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8403,6 +8828,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8416,6 +8842,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8440,6 +8867,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8453,6 +8881,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8477,6 +8906,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8490,6 +8920,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8547,6 +8978,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8560,6 +8992,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8584,6 +9017,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8597,6 +9031,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8621,6 +9056,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8634,6 +9070,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8691,6 +9128,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8704,6 +9142,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8728,6 +9167,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8741,6 +9181,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8765,6 +9206,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8778,6 +9220,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8835,6 +9278,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8848,6 +9292,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8872,6 +9317,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8885,6 +9331,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8909,6 +9356,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8922,6 +9370,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8979,6 +9428,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -8992,6 +9442,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9016,6 +9467,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9029,6 +9481,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9053,6 +9506,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9066,6 +9520,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9123,6 +9578,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9136,6 +9592,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9160,6 +9617,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9173,6 +9631,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9197,6 +9656,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9210,6 +9670,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9267,6 +9728,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9280,6 +9742,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9304,6 +9767,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9317,6 +9781,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9341,6 +9806,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9354,6 +9820,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9411,6 +9878,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9424,6 +9892,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9448,6 +9917,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9461,6 +9931,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9485,6 +9956,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9498,6 +9970,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9555,6 +10028,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9568,6 +10042,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9592,6 +10067,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9605,6 +10081,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9629,6 +10106,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9642,6 +10120,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9699,6 +10178,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9712,6 +10192,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9736,6 +10217,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9749,6 +10231,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9773,6 +10256,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9786,6 +10270,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9843,6 +10328,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9856,6 +10342,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9880,6 +10367,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9893,6 +10381,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9917,6 +10406,7 @@ function InformasiBerkala() {
                         <td>
                           <button
                             className="bg-primary text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -9930,6 +10420,7 @@ function InformasiBerkala() {
                           </button>
                           <button
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
