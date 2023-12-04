@@ -247,7 +247,7 @@ function App() {
             component={AddJenisKeterangan}
             exact
           />
-          <Route path="/edit-jenis-keterangan/:namaInformasi/:id" component={EditJenisKeterangan} exact />
+          <Route path="/edit-jenis/:namaInformasi/:id" component={EditJenisKeterangan} exact />
           <Route path="/isi-keterangan/:keterangan/:id" component={IsiKeterangan} exact />
           <Route path="/add-isi-keterangan" component={AddIsiKeteranganInformasii} exact />
           <Route path="/edit-isi-keterangan/:dokumen/:id" component={EditIsiKeterangan} exact />
