@@ -1,5 +1,5 @@
 import React from "react";
-import biaya from "../../../aset/biaya.png";
+import biaya from "../../../aset/Wallet-rafiki.png";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 
