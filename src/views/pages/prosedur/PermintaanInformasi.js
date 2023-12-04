@@ -7,33 +7,7 @@ function PermintaanInformasi() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative">
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Tata Cara Permohonan Informasi
-                </h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>Permintaan</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       {/* <!-- page title end --> */}
       <div
         className="blog-area pd-top-115 pd-bottom-60 service-area bg-relative pd-top-60 pd-bottom-90"
@@ -66,7 +40,7 @@ function PermintaanInformasi() {
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6">
-              <div className="single-blog-inner style-2">
+              <div className="single-blog-inner style-2" style={{minHeight:"450px", maxHeight:"450px"}}>
                 <div className="thumb">
                   <img
                     src="https://cdn.linkumkm.id/library/8/6/5/9/3/86593_840x576.jpg"
@@ -82,7 +56,7 @@ function PermintaanInformasi() {
                       1) Penyampaian Permohonan
                     </a>
                   </h4>
-                  <p>
+                  <p style={{textAlign:"justify"}}>
                     Pemohon menyampaikan permohonan kepada PPID melalui Aplikasi
                     PPID,surat,fax,email,telepon atau datang langsung ke tempat
                     layanan PPID
@@ -91,7 +65,7 @@ function PermintaanInformasi() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="single-blog-inner style-2">
+              <div className="single-blog-inner style-2" style={{minHeight:"450px", height:"450px"}}>
                 <div className="thumb">
                   <img
                     src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/02/13/4001565610.jpg"
@@ -121,7 +95,7 @@ function PermintaanInformasi() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="single-blog-inner style-2">
+              <div className="single-blog-inner style-2" style={{minHeight:"450px", height:"450px"}}>
                 <div className="thumb">
                   <img
                     src="https://cdn1.katadata.co.id/media/images/thumb/2021/12/15/Proposal_pengajuan_dana-2021_12_15-16_22_35_d15eba1331fd01144d06d67b279b8e7e_960x640_thumb.jpg"
@@ -137,7 +111,7 @@ function PermintaanInformasi() {
                       3) Menerima Bukti
                     </a>
                   </h4>
-                  <p>
+                  <p style={{textAlign:"justify"}}>
                     Pemohon menerima bukti permohonan informasi dari
                     petugas.Informasi apabila syarat permohonan telah di
                     lengkapi{" "}
@@ -148,7 +122,7 @@ function PermintaanInformasi() {
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-6">
-              <div className="single-blog-inner style-2">
+              <div className="single-blog-inner style-2" style={{minHeight:"450px", height:"450px"}}>
                 <div className="thumb">
                   <img
                     src="https://pasardana.id/media/11420/ilustrasi-waktu-kerja.jpg?crop=0,0,0,0.15488054001243451&cropmode=percentage&width=675&height=380&rnd=132016261740000000"
@@ -164,7 +138,7 @@ function PermintaanInformasi() {
                       4) Jangka Waktu
                     </a>
                   </h4>
-                  <p>
+                  <p style={{textAlign:"justify"}}>
                     Dalam jangka waktu 10 hari kerja, pemohon menerima
                     pemberitahuan tertulis dari PPID
                   </p>
@@ -172,7 +146,7 @@ function PermintaanInformasi() {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
-              <div className="single-blog-inner style-2">
+              <div className="single-blog-inner style-2" style={{minHeight:"450px", height:"450px"}}>
                 <div className="thumb">
                   <img
                     src="https://cdn0-production-images-kly.akamaized.net/MJN9I-eHhc9eqIzLsqc0-RmOHvk=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4138775/original/064259700_1661740032-close-up-man-sealing-envelope.jpg"
@@ -188,7 +162,7 @@ function PermintaanInformasi() {
                       5) Menerima Informasi
                     </a>
                   </h4>
-                  <p>
+                  <p style={{textAlign:"justify"}}>
                     Pemohon menerima informasi Surat Keputusan PPID tentang
                     penolakan permohonan informasi dari petugas.
                   </p>

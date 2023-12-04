@@ -1,20 +1,17 @@
 import React from "react";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
-import Footer from "../../../../component/Footer";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { History } from "swiper/modules";
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { List } from "@mui/material";
 import { useEffect } from "react";
 
 function AddBeritaAdmin() {
   const [author, setAuthor] = useState("");
   const [judulBerita, setJudulBerita] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(null);
   const [categoryId, setCategoryId] = useState(0);
   const [category, setCategory] = useState([]);
   const [isiBerita, setIsiBerita] = useState("");
@@ -29,8 +26,8 @@ function AddBeritaAdmin() {
     formData.append("author", author);
     formData.append("judulBerita", judulBerita);
     formData.append("isiBerita", isiBerita);
-    formData.append("categoryIdBerita", categoryId);
-    formData.append("file", image); // Menambahkan nama file ke FormData
+    formData.append("categoryId", categoryId);
+    formData.append("file", image);
 
     try {
       await axios.post(`${API_DUMMY}/bawaslu/api/berita/add`, formData, {
@@ -39,7 +36,6 @@ function AddBeritaAdmin() {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      // //console.log(unique_id);
       setShow(false);
       Swal.fire({
         icon: "success",
@@ -47,7 +43,6 @@ function AddBeritaAdmin() {
         showConfirmButton: false,
         timer: 1500,
       });
-      // //console.log(data);
       history.push("/admin-berita");
       setTimeout(() => {
         window.location.reload();
@@ -60,14 +55,15 @@ function AddBeritaAdmin() {
   const getAllCategoryId = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all`,{
+        `${API_DUMMY}/bawaslu/api/category-berita/all`,
+        {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
-      setCategory(response.data.data);
-      console.log(response.data.data);
+      setCategory(response.data.data.content);
+      console.log(response.data.data.content);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -93,15 +89,12 @@ function AddBeritaAdmin() {
                     <form onSubmit={add}>
                       <div className="row">
                         <div className="mb-3 col-lg-6">
-                          <label
-                            for="exampleInputPassword1"
-                            className="form-label">
-                            Category
-                          </label>
+                          <label className="form-label">Category</label>
                           <select
-                            className="form-select form-select-sm"
+                            className="form-control"
                             aria-label="Small select example"
-                            onChange={(e) => setCategoryId(e.target.value)}>
+                            onChange={(e) => setCategoryId(e.target.value)}
+                          >
                             <option selected>PIlih Category</option>
                             {category.map((down) => {
                               return (
@@ -113,22 +106,20 @@ function AddBeritaAdmin() {
                         <div className="mb-3 col-lg-6">
                           <label
                             for="exampleInputEmail1"
-                            className="form-label">
-                            Author
+                            className="form-label"
+                          >
+                            Penulis Berita
                           </label>
                           <input
                             value={author}
                             onChange={(e) => setAuthor(e.target.value)}
                             type="text"
                             className="form-control"
+                            placeholder="Masukkan penulis berita"
                           />
                         </div>
                         <div className="mb-3 co-lg-6">
-                          <label
-                            for="exampleInputPassword1"
-                            className="form-label">
-                            Image
-                          </label>
+                          <label className="form-label">Gambar</label>
                           <input
                             onChange={(e) =>
                               setImage(
@@ -137,36 +128,29 @@ function AddBeritaAdmin() {
                             }
                             type="file"
                             className="form-control"
-                            id="exampleInputPassword1"
                           />
                         </div>
-                        <div className="mb-3 col-lg-6">
-                          <label
-                            for="exampleInputPassword1"
-                            className="form-label">
-                            Judul Berita
-                          </label>
+                        <div className="mb-3 col-lg-12">
+                          <label className="form-label">Judul Berita</label>
                           <input
                             value={judulBerita}
                             onChange={(e) => setJudulBerita(e.target.value)}
                             type="text"
                             className="form-control"
-                            id="exampleInputPassword1"
+                            placeholder="Masukkan judul berita"
                           />
                         </div>
-                        <div className="col-lg-6">
-                          <label
-                            for="exampleInputPassword1"
-                            className="form-label">
-                            Isi Berita
-                          </label>
-                          <div className="col-lg-6">
+                        <div className="col-lg-12">
+                          <label className="form-label">Isi Berita</label>
+                          <div className="">
                             <textarea
                               value={isiBerita}
                               onChange={(e) => setIsiBerita(e.target.value)}
                               className="form-control"
-                              placeholder="Leave a comment here"
-                              id="floatingTextarea2"></textarea>
+                              placeholder="Masukkan isi berita"
+                              id="floatingTextarea2"
+                              rows="5"
+                            ></textarea>
                           </div>
                         </div>
                       </div>

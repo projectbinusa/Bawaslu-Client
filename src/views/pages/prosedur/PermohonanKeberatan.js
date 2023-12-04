@@ -9,33 +9,7 @@ function PermohonanKeberatan() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div className="breadcrumb-area bg-black bg-relative">
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 style={{ color: "white", fontWeight: 700, fontSize: 60 }}>
-                  Tata Cara Pengajuan Keberatan
-                </h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/" style={{ textDecoration: "none" }}>
-                      Home
-                    </a>
-                  </li>
-                  <li>Permohonan</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
       {/* <!-- page title end --> */}
       <div
         className="about-area pd-bottom-120 service-area bg-relative pd-top-60 pd-bottom-90"
@@ -65,7 +39,7 @@ function PermohonanKeberatan() {
             </div>
           </div>
           <div className="col-lg-5 align-self-center order-lg-first">
-            <div className="section-title div-gabung">
+            <div className="section-title div-gabung pembungkus-gabung">
               <h5 id="text1-gabung" className="sub-title double-line text1-gabung">Bawaslu Boyolali</h5>
               <h2 id="text2-gabung" className="title mb-4 text2-gabung">
                 Tata Cara Pengajuan <br /> Keberatan
@@ -114,10 +88,10 @@ function PermohonanKeberatan() {
               />
             </div>
           </div>
-          <div className="col-lg-5 align-self-center">
+          <div className="col-lg-5 align-self-center keterangan">
             <div className="section-title">
             </div>
-            <div className="single-security-wrap-2">
+            <div className="single-security-wrap-2 keterangan">
               <div className="thumb border-bottom">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-3.webp"
@@ -144,7 +118,7 @@ function PermohonanKeberatan() {
                 </p>
               </div>
             </div> */}
-            <div className="single-security-wrap-2">
+            <div className="single-security-wrap-2 keterangan">
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-5.webp"

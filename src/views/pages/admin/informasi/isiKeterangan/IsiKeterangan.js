@@ -34,19 +34,11 @@ function IsiKeterangan() {
           page - 1
         }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
       );
-
-      // Filter data based on searchTerm
-      const filteredData = response.data.data.content.filter((isiInformasi) =>
-        isiInformasi.dokumen.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-
-      setJenisKeteranganIsiInformasi(filteredData);
-
+      setJenisKeteranganIsiInformasi(response.data.data.content);
       setPaginationInfo({
-        totalPages: Math.ceil(filteredData.length / rowsPerPage),
-        totalElements: filteredData.length,
+        totalPages: response.data.data.totalPages,
+        totalElements: response.data.data.totalElements,
       });
-
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -55,34 +47,73 @@ function IsiKeterangan() {
 
   useEffect(() => {
     getJenisKeteranganIsiInformasi(currentPage);
-  }, [page, rowsPerPage, currentPage, searchTerm]); // Tambahkan page dan rowsPerPage sebagai dependensi
-
-  const deleteData = async (id) => {
-    // ... (sama seperti sebelumnya)
-  };
+  }, [currentPage, rowsPerPage]);
 
   const handleRowsPerPageChange = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
+    setCurrentPage(1);
   };
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    setPage(0); // Reset halaman ke 0 ketika melakukan pencarian
-    setCurrentPage(1); // Reset currentPage ke 1 ketika melakukan pencarian
+    setCurrentPage(1);
   };
 
+  const deleteData = async (id) => {
+    try {
+      await axios.delete(`${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      Swal.fire({
+        icon: "success",
+        title: "Dihapus!",
+        showConfirmButton: false,
+      });
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    } catch (error) {
+      console.error("Terjadi Kesalahan", error);
+    }
+  };
+
+  const filteredList = jenisKeteranganIsiInformasi.filter((item) =>
+    Object.values(item).some(
+      (value) =>
+        typeof value === "string" &&
+        value.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+
+  const totalPages = Math.ceil(filteredList.length / rowsPerPage);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
+              <label className="form-label mt-2">Rows per page:</label>
+            </div>
+            <div className="col-auto">
+              <select
+                className="form-select form-select-xl w-auto"
+                onChange={handleRowsPerPageChange}
+                value={rowsPerPage}>
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+              </select>
+            </div>
+          </div>
           <div className="main-card mb-3 card">
-            <div className="card-header">
-              <p className="mt-3">Isi Keterangan</p>
-              <div class="ml-2 row g-3 align-items-center">
-                <div class="col-auto">
+            <div className="card-header" style={{ display: "flex" }}>
+              <p className="mt-3">Jenis Informasi</p>
+              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
                 <div class="col-auto">
@@ -229,7 +260,54 @@ function IsiKeterangan() {
                   </div>
                 </div>
               </div>
-              <Footer />
+            </div>
+            <div
+              className="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th className="text-left">No</th>
+                    <th className="text-left">Dokumen</th>
+                    <th className="text-center">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredList.map((jenis, index) => (
+                    <tr key={index}>
+                      <td className="text-left">{index + 1}</td>
+                      <td className="text-left">{jenis.dokumen}</td>
+                      <td className="text-center">
+                        <button
+                          type="button"
+                          className="btn-primary btn-sm mr-2">
+                          <a
+                            style={{ color: "white", textDecoration: "none" }}
+                            href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}>
+                            <i className="fa-solid fa-pen-to-square"></i>
+                          </a>
+                        </button>
+                        <button
+                          onClick={() => deleteData(jenis.id)}
+                          type="button"
+                          className="btn-danger btn-sm mr-2">
+                          <i className="fa-solid fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="card-header mt-3 d-flex justify-content-center">
+            <Pagination
+                count={paginationInfo.totalPages}
+                page={currentPage}
+                onChange={(event, value) => setCurrentPage(value)}
+                showFirstButton
+                showLastButton
+                color="primary"
+              />
             </div>
           </div>
         </div>

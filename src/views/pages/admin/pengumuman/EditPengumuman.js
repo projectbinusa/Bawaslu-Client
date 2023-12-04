@@ -5,7 +5,10 @@ import Footer from "../../../../component/Footer";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
 
 function EditPengumuman() {
   const [id, setId] = useState(0);
@@ -31,7 +34,7 @@ function EditPengumuman() {
         setJudulPengumuman(response.judulPengumuman);
         setTags(response.tags);
         setFile(response.image);
-        console.log("pengumuman : ",ress.data.data);
+        console.log("pengumuman : ", ress.data.data);
       })
       .catch((error) => {
         console.log(error);
@@ -84,8 +87,20 @@ function EditPengumuman() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
+                    <label for="exampleInputPassword1" className="form-label">
+                      Judul Pengumuman
+                    </label>
+                    <input
+                      value={judulPengumuman}
+                      onChange={(e) => setJudulPengumuman(e.target.value)}
+                      type="text"
+                      className="form-control"
+                      id="exampleInputPassword1"
+                    />
+                  </div>
+                  <div className="mb-3 col-lg-6">
                     <label for="exampleInputEmail1" className="form-label">
-                      Author
+                      Penulis Pengumuman
                     </label>
                     <input
                       type="text"
@@ -107,30 +122,6 @@ function EditPengumuman() {
                   </div>
                   <div className="mb-3 col-lg-6">
                     <label for="exampleInputPassword1" className="form-label">
-                      Isi Pengumuman
-                    </label>
-                    <input
-                      value={isiPengumuman}
-                      onChange={(e) => setIsiPengumuman(e.target.value)}
-                      type="text"
-                      className="form-control"
-                      id="exampleInputPassword1"
-                    />
-                  </div>
-                  <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
-                      Judul Pengumuman
-                    </label>
-                    <input
-                      value={judulPengumuman}
-                      onChange={(e) => setJudulPengumuman(e.target.value)}
-                      type="text"
-                      className="form-control"
-                      id="exampleInputPassword1"
-                    />
-                  </div>
-                  <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
                       Tags
                     </label>
                     <input
@@ -141,11 +132,25 @@ function EditPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
+                  <div className="mb-3 col-lg-12">
+                    <label for="exampleInputPassword1" className="form-label">
+                      Isi Pengumuman
+                    </label>
+                    <textarea
+                      value={isiPengumuman}
+                      onChange={(e) => setIsiPengumuman(e.target.value)}
+                      className="form-control"
+                      placeholder="Masukkan isi berita"
+                      id="floatingTextarea2"
+                      rows="5"
+                    ></textarea>
+                  </div>
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
                     href="/admin-pengumuman"
-                    style={{ color: "white", textDecoration: "none" }}>
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
                     Batal
                   </a>
                 </button>

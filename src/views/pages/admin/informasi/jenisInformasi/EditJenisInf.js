@@ -7,20 +7,20 @@ import axios from 'axios';
 import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
 
 function EditJenisInf() {
-    const[jenisInformasi, setJenisInformasi] = useState("");
+    const[namaInformasi, setNamaInformasi] = useState("");
     const param = useParams();
     const history = useHistory();
 
     useEffect(() => {
         axios
-          .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getby/` + param.id, {
+          .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getBy/` + param.id, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           })
           .then((ress) => {
             const response = ress.data.data;
-            setJenisInformasi(response.namaInformasi);
+            setNamaInformasi(response.namaInformasi);
             console.log(response.namaInformasi);
           })
           .catch((error) => {
@@ -31,8 +31,8 @@ function EditJenisInf() {
       const update = async (e) => {
         e.preventDefault();
         await axios
-          .put(`${API_DUMMY}/bawaslu/api/jenis-informasi/` + param.id, {
-            jenisInformasi, jenisInformasi
+          .put(`${API_DUMMY}/bawaslu/api/jenis-keterangan/` + param.id, {
+            namaInformasi, namaInformasi
           }, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -71,8 +71,8 @@ function EditJenisInf() {
                     Jenis Informasi
                   </label>
                   <input
-                    value={jenisInformasi}
-                    onChange={(e) => setJenisInformasi(e.target.value)}
+                    value={namaInformasi}
+                    onChange={(e) => setNamaInformasi(e.target.value)}
                     type="text"
                     className="form-control"
                   />

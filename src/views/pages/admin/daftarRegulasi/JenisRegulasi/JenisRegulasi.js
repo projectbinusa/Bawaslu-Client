@@ -112,7 +112,7 @@ const totalPages = Math.ceil(filteredList.length / rowsPerPage);
             </div>
         <div class="main-card mb-3 card">
           <div class="card-header" style={{ display: "flex" }}>
-          <p className="mt-3">Jenis Informasi</p>
+          <p className="mt-3">Jenis Regulasi</p>
             <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
               <div class="col-auto">
                 <label className="form-label mt-2">Rows per page:</label>
@@ -192,14 +192,15 @@ const totalPages = Math.ceil(filteredList.length / rowsPerPage);
             </table>
           </div>
           <div className="card-header mt-3 d-flex justify-content-center">
-            <Pagination
-              count={totalPages}
-              page={currentPage}
-              onChange={(event, value) => setCurrentPage(value)}
-              showFirstButton
-              showLastButton
-              color="primary"
-            />
+          <Pagination
+  count={paginationInfo.totalPages}
+  page={currentPage}
+  onChange={(event, value) => setCurrentPage(value)}
+  showFirstButton
+  showLastButton
+  color="primary"
+/>
+
           </div>
         </div>
       </div>

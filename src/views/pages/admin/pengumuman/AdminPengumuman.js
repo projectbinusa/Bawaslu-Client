@@ -104,8 +104,7 @@ function AdminPengumuman() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}
-              >
+                value={rowsPerPage}>
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -120,8 +119,10 @@ function AdminPengumuman() {
             onChange={handleSearchChange}
           />
           <div className="main-card mb-3 card">
-            <div className="card-header pembungkus-text-button" style={{ display: "flex" }}>
-              <p className="mt-3">Pengumuman Keterangan</p>
+            <div
+              className="card-header pembungkus-text-button"
+              style={{ display: "flex" }}>
+              <p className="mt-3">Pengumuman</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
@@ -146,13 +147,16 @@ function AdminPengumuman() {
                   onChange={handleSearchChange}
                 />
                 <div className="btn-actions-pane-right">
-                  <div role="group" className="btn-group-sm btn-group button-pembungkus">
-                    <button id="button-tambah" className="active btn-focus p-2 rounded button-tambah">
+                  <div
+                    role="group"
+                    className="btn-group-sm btn-group button-pembungkus">
+                    <button
+                      id="button-tambah"
+                      className="active btn-focus p-2 rounded button-tambah">
                       <a
                         href="/add-pengumuman"
                         className="text-light txt-tambah"
-                        style={{ textDecoration: "none" }}
-                      >
+                        style={{ textDecoration: "none" }}>
                         {" "}
                         Tambah Pengumuman
                       </a>
@@ -170,13 +174,10 @@ function AdminPengumuman() {
                   <thead>
                     <tr>
                       <th scope="col">No</th>
-                      <th scope="col">Author</th>
-                      {/* <th scope="col">
-                        Isi Pengumuman
-                      </th> */}
-                      <th scope="col">Image</th>
                       <th scope="col">Judul Pengumuman</th>
-                      <th scope="col">Tags</th>
+                      <th scope="col">Penulis</th>
+                      <th scope="col">Tanggal Dibuat</th>
+                      <th scope="col">Image</th>
                       <th scope="col" className="text-center">
                         Aksi
                       </th>
@@ -240,7 +241,7 @@ function AdminPengumuman() {
             </TableContainer>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
-                count={totalPages}
+                count={paginationInfo.totalPages}
                 page={currentPage}
                 onChange={(event, value) => setCurrentPage(value)}
                 showFirstButton

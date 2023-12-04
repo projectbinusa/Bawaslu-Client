@@ -3,14 +3,27 @@ import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
+import { Pagination } from "@mui/material";
 
 function Pengumuman() {
   const [pengumuman, setPengumuman] = useState([]);
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(9);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginationInfo, setPaginationInfo] = useState({
+    totalPages: 1,
+    totalElements: 0,
+  });
+  const [searchTerm, setSearchTerm] = useState("");
   const getAll = async () => {
     await axios
-      .get(`${API_DUMMY}/bawaslu/api/pengumuman`)
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman?page=0&size=10&sortBy=id&sortOrder=asc`)
       .then((res) => {
         setPengumuman(res.data.data.content);
+        setPaginationInfo({
+          totalPages: res.data.data.totalPages,
+          totalElements: res.data.data.totalElements,
+        });
       })
       .catch((error) => {
         alert("Terjadi kesalahan" + error);
@@ -18,38 +31,23 @@ function Pengumuman() {
   };
   useEffect(() => {
     //mengambil data, memperbarui DOM secara langsung,
-    getAll(0);
-  }, []);
+    getAll(currentPage);
+  }, [currentPage, rowsPerPage]);
+
+  const filteredList = pengumuman.filter((item) =>
+    Object.values(item).some(
+      (value) =>
+        typeof value === "string" &&
+        value.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  );
+
+  const totalPages = Math.ceil(filteredList.length / rowsPerPage);
   return (
     <div>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div
-        className="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}
-      >
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}
-        ></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 className="page-title">Pengumuman</h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>Pengumuman</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
       {/* <!-- page title end --> */}
       {/* <!-- blog area start --> */}
       <div
@@ -70,16 +68,16 @@ function Pengumuman() {
             </div>
           </div>
           <div className="row justify-content-center">
-            {pengumuman.map((isi) => {
+            {filteredList.map((isi) => {
               return (
                 <div className="col-lg-4 col-md-6">
-                  <div className="single-blog-inner style-2">
+                  <div className="single-blog-inner style-2" style={{maxHeight:"800px", minHeight:"300px"}}>
                     <div className="thumb">
-                      <img style={{maxHeight:"400px"}} src={isi.image} alt="img" />
+                      <img style={{maxHeight:"400px", minHeight:"100px"}} src={isi.image} alt="img" />
                     </div>
                     <div className="details">
-                      <h4 className="titleee" style={{cursor:"pointer"}}>
-                        <a href={`/isi-pengumuman/${isi.judulPengumuman}/${isi.id}`}>{isi.judulPengumuman}</a>
+                        <h4 className="titleee" style={{cursor:"pointer"}}>
+                        <a style={{color:"black", textDecoration:"none"}} href={`/pengumuman/${isi.judulPengumuman}/${isi.id}`}>{isi.judulPengumuman}</a>
                       </h4>
                       <ul className="blog-meta">
                         <li>
@@ -96,24 +94,16 @@ function Pengumuman() {
               );
             })}
           </div>
-          <div className="pagination justify-content-center">
-            <a className="prev page-numbers" href="http://icare.local/">
-              <i className="fa fa-angle-left"></i>
-            </a>
-            <a className="page-numbers" href="http://icare.local/">
-              1
-            </a>
-            <span className="page-numbers current">2</span>
-            <a className="page-numbers" href="http://icare.local/page/3/">
-              3
-            </a>
-            <a className="page-numbers" href="http://icare.local/page/4/">
-              4
-            </a>
-            <a className="next page-numbers" href="http://icare.local/page/3/">
-              <i className="fa fa-angle-right"></i>
-            </a>
-          </div>
+          <div className="card-header mt-3 d-flex justify-content-center">
+              <Pagination
+                count={totalPages}
+                page={currentPage}
+                onChange={(event, value) => setCurrentPage(value)}
+                showFirstButton
+                showLastButton
+                color="primary"
+              />
+            </div>
         </div>
       </div>
       {/* <!-- blog area end --> */}
