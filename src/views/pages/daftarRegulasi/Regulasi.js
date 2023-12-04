@@ -203,6 +203,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -225,6 +226,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -247,6 +249,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -269,6 +272,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -291,6 +295,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -343,6 +348,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -365,6 +371,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -387,6 +394,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -439,6 +447,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -518,6 +527,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -540,6 +550,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -562,6 +573,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -584,6 +596,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -606,6 +619,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -658,6 +672,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -737,6 +752,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -759,6 +775,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -781,6 +798,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -803,6 +821,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -825,6 +844,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -847,6 +867,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -869,6 +890,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -891,6 +913,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -913,6 +936,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -935,6 +959,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -957,6 +982,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -979,6 +1005,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1000,6 +1027,7 @@ function Regulasi() {
                         </td>{" "}
                         <td>
                           <a
+                            target="_blank"
                             className="bg-warning text-light"
                             style={{
                               border: "none",
@@ -1023,6 +1051,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1045,6 +1074,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1067,6 +1097,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1089,6 +1120,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1144,6 +1176,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1169,6 +1202,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1194,6 +1228,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1218,6 +1253,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1243,6 +1279,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1268,6 +1305,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1293,6 +1331,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1318,6 +1357,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1343,6 +1383,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1368,6 +1409,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1423,6 +1465,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1445,6 +1488,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1467,6 +1511,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1489,6 +1534,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1511,6 +1557,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1533,6 +1580,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1557,6 +1605,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1579,6 +1628,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1601,6 +1651,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1626,6 +1677,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1651,6 +1703,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1708,6 +1761,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1733,6 +1787,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
@@ -1755,6 +1810,7 @@ function Regulasi() {
                         <td>
                           <a
                             className="bg-warning text-light"
+                            target="_blank"
                             style={{
                               border: "none",
                               padding: "7px",
