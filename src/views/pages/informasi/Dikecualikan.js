@@ -19,7 +19,7 @@ function Dikecualikan() {
       >
         <div className="kolom-image mx-4 my-4 d-flex  ">
           <div className="d-lg-flex pt-lg-15 ">
-            <div className=" text d-flex flex-column gap-3 bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4">
+            <div className=" text d-flex flex-column gap-3 bg-white shadow-lg p-3 mb-5 bg-body-tertiary rounded rounded-4 p-4" style={{marginTop:"50px"}}>
               <h2 className="title">Informasi Dikecualikan</h2>
               <li>
                 <a clas="text-decoration-none text-light " href="#">

@@ -239,33 +239,45 @@ function Navbar() {
                 {/* <ul
                   class={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu"
-                >
-                  {" "}
+                > {informasi.map((informasi) => {
+                  return (
+                    <li>
+                      <a
+                        href={
+                          "/informasi/" +
+                          informasi.namaInformasi +
+                          "/" +
+                          informasi.id
+                        }
+                        style={{ textDecoration: "none" }}
+                      >
+                        <i class="metismenu-icon"></i>
+                        {informasi.namaInformasi}
+                      </a>
+                    </li>
+                  );
+                })}
+                  <li className="text-black"><a>Daftar Informasi Publik</a></li>
                   <li>
-                    <a href="/informasi-serta-merta" style={{ textDecoration: "none" }}>
-                      <i class="metismenu-icon"></i>
-                     InformsiSerta Merta
-                    </a>
-                    </li>
-                    <li> <a href="/informasi-setiap-saat" style={{ textDecoration: "none" }}>
-                      <i class="metismenu-icon"></i>
-                     Informsi Setiap Saat
-                    </a>
-                    </li>
-                   
-                    <li> <a href="/informasi-berkala" style={{ textDecoration: "none" }}>
-                      <i class="metismenu-icon"></i>
-                     Informsi Berkala
-                    </a>
-                    </li>
-                   
-                   
-                   
+                    <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
+                  </li>
+                </ul> */}
+                <ul class="sub-menu">
+                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                  <li>
+                    <a href="/informasi-serta-merta">Informasi Serta Merta</a>
+                  </li>
+                  <li>
+                    <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
+                  </li>
+                  <li>
+                    <a href="/informasi-berkala">Informasi Berkala</a>
+                  </li>
                   <li>
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
                   </li>
                   <li>
-                    <a href="/informasi-kanal">Kanal Pengawasan pemilu 2024</a>
+                    <a href="/informasi-kanal">Kanal Pengawasan Pemilu</a>
                   </li>
                 </ul>
               </li>
