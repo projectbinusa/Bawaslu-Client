@@ -221,7 +221,7 @@ function Navbar() {
                 <a href="/berita">Berita</a>
               </li>
               <li className="">
-                <a href="/library">Library</a>
+                <a href="/library">E-Library</a>
               </li>
               <li className="">
                 <a href="/pengumuman">Pengumuman</a>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../../../component/Navbar";
-// import "../../css/FormPermohonanInformasi.css";
 import "../../../css/FormPermohonanInformasi.css";
 import info from "../../../aset/undraw_settings_tab_mgiw.svg";
 import Footer from "../../../component/Footer";
@@ -116,7 +115,8 @@ const FormPermohonanInformasi = () => {
             <div className="form-permohonan section-title text-center">
               <h5
                 id="text1-gabung"
-                className="sub-title double-line text-center">
+                className="sub-title double-line text-center"
+              >
                 Bawaslu Boyolali
               </h5>
               <h2 id="text2-gabung" className="title text-center">
@@ -231,7 +231,8 @@ const FormPermohonanInformasi = () => {
                 value={caraMemperolehInformasi}
                 onChange={(e) => setCaraMemperolehnInformasi(e.target.value)}
                 class="form-select"
-                aria-label="Default select example">
+                aria-label="Default select example"
+              >
                 <option selected>Pilih Cara Memperoleh Informasi</option>
                 <option value="mengambil sendiri">Mengambil Langsung</option>
                 <option value="pos">POS</option>

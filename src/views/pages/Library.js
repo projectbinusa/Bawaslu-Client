@@ -41,7 +41,11 @@ function Library() {
                   pun dengan nyaman bersama setiap orang.
                 </p>
                 <div className="btn-wrap">
-                  <a href="#/" onClick={handleLihatKoleksiClick} style={{ textDecoration: "none" }}>
+                  <a
+                    href="#/"
+                    onClick={handleLihatKoleksiClick}
+                    style={{ textDecoration: "none" }}
+                  >
                     LIHAT KOLEKSI
                   </a>
                 </div>
@@ -62,7 +66,7 @@ function Library() {
           src="https://solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
-        <div ref={serviceAreaRef}  className="container">
+        <div ref={serviceAreaRef} className="container">
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7">
               <div className="section-title text-center">
@@ -89,10 +93,15 @@ function Library() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg">
+                      Buletin
+                    </a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 1</p>
-                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg">
+                  <a
+                    className="read-more-btn"
+                    href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg"
+                  >
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -110,10 +119,15 @@ function Library() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-2-depan-212x300-1.jpg">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-2-depan-212x300-1.jpg">
+                      Buletin
+                    </a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 2</p>
-                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-2-depan-212x300-1.jpg">
+                  <a
+                    className="read-more-btn"
+                    href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-2-depan-212x300-1.jpg"
+                  >
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -131,10 +145,15 @@ function Library() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-3-depan-212x300-1.jpg">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-3-depan-212x300-1.jpg">
+                      Buletin
+                    </a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 3</p>
-                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-3-depan-212x300-1.jpg">
+                  <a
+                    className="read-more-btn"
+                    href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-3-depan-212x300-1.jpg"
+                  >
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -152,10 +171,15 @@ function Library() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-4-depan-212x300-1.jpg">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-4-depan-212x300-1.jpg">
+                      Buletin
+                    </a>
                   </h3>
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 4</p>
-                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-4-depan-212x300-1.jpg">
+                  <a
+                    className="read-more-btn"
+                    href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-4-depan-212x300-1.jpg"
+                  >
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -173,10 +197,15 @@ function Library() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg">
+                      Buletin
+                    </a>
                   </h3>
                   <p>Jejak Pengawasan | Catatan Pengawas Pemilu 2019</p>
-                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg">
+                  <a
+                    className="read-more-btn"
+                    href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg"
+                  >
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>
@@ -194,13 +223,18 @@ function Library() {
                 </div>
                 <div className="details">
                   <h3>
-                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg">Buletin</a>
+                    <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg">
+                      Buletin
+                    </a>
                   </h3>
                   <p>
                     Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
                     Boyolali
                   </p>
-                  <a className="read-more-btn" href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg">
+                  <a
+                    className="read-more-btn"
+                    href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg"
+                  >
                     <i className="fa fa-arrow-right"></i>
                   </a>
                 </div>

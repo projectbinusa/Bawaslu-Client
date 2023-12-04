@@ -1,5 +1,5 @@
 import React from "react";
-import waktu from "../../../aset/waktu.png";
+import waktu from "../../../aset/Time management-rafiki.png";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 
