@@ -180,10 +180,10 @@ function MenuRegulasi() {
                   {filteredList.map((jenis, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No : " className="text-left">
+                        <td data-label="No : " className="">
                           {index + 1}
                         </td>
-                        <td data-label="jenis : " className="text-left">
+                        <td data-label="jenis : " className="">
                           {jenis.menuRegulasi}
                         </td>
                         <td data-label="Aksi : " class="text-center">
@@ -191,7 +191,7 @@ function MenuRegulasi() {
                             <a
                               style={{ color: "white", textDecoration: "none" }}
                               href={
-                                "/edit/" + jenis.menuRegulasi + "/" + jenis.id
+                                "/edit-data/" + jenis.menuRegulasi + "/" + jenis.id
                               }>
                               <i class="fa-solid fa-pen-to-square"></i>
                             </a>

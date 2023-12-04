@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import "../../../../css/adminBerita.css"
 
 import {
   IconButton,
@@ -266,7 +267,7 @@ function AdminBerita() {
               </div>
             </div>
             <div
-              className="table-responsive"
+              className="table-responsive-3"
               style={{ overflowX: "auto", maxWidth: "100%" }}
             >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
@@ -300,12 +301,12 @@ function AdminBerita() {
                   {list.map((berita, no) => {
                     return (
                       <tr key={no}>
-                        <td className="text-left">{no + 1}</td>
-                        <td style={{maxWidth:"150px"}} className="text-left">{berita.judulBerita}</td>
-                        {/* <td className="text-left">{berita.isiBerita}</td> */}
-                        <td className="text-left">{berita.author}</td>
-                        <td className="text-left">{berita.createdDate}</td>
-                        <td className="text-center">
+                        <td data-label="No">{no + 1}</td>
+                        <td data-label="Judul Berita">{berita.judulBerita}</td>
+                        {/* <td data-label="">{berita.isiBerita}</td> */}
+                        <td data-label="Penulis Berita">{berita.author}</td>
+                        <td data-label="Created Dtae">{berita.createdDate}</td>
+                        <td data-label="Image">
                           <img
                             src={berita.image}
                             alt="berita-image"
@@ -433,16 +434,16 @@ function AdminBerita() {
                   {filteredList1.map((kategory, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No" className="text-center text-muted">
+                        <td data-label="No" className=" text-muted">
                           {index + 1}
                         </td>
-                        <td data-label="Category" className="text-center">
+                        <td data-label="Category" className="">
                           {kategory.category}
                         </td>
-                        <td data-label="Created Date" className="text-center">
+                        <td data-label="Created Date" className="">
                           {kategory.createdDate}
                         </td>
-                        <td data-label="Aksi" className="text-center">
+                        <td data-label="Aksi" className="">
                           <button type="button" className="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}

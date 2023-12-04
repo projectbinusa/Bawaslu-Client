@@ -64,7 +64,7 @@ function EditJenisKeterangan() {
 
       Swal.fire({
         icon: "success",
-        title: "Berhasil Mengedit Data Pengumuman",
+        title: "Berhasil Mengedit",
         showConfirmButton: false,
         timer: 1500,
       });

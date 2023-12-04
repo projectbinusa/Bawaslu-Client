@@ -160,13 +160,13 @@ function JenisInformasi() {
                 <tbody>
                   {filteredList.map((jenis, index) => (
                     <tr key={index}>
-                      <td className="text-left">{(currentPage - 1) * rowsPerPage + index + 1}</td>
-                      <td className="text-left">{jenis.namaInformasi}</td>
-                      <td className="text-center">
+                      <td data-label="No" className="">{ index + 1}</td>
+                      <td data-label="Jenis Informasi" className="">{jenis.namaInformasi}</td>
+                      <td data-label="Aksi" className="text-center">
                         <button type="button" className="btn-primary btn-sm mr-2">
                           <a
                             style={{ color: "white", textDecoration: "none" }}
-                            href={`/edit-jenis-informasi/${jenis.id}`}
+                            href={`/edit-jenis-informasi/${jenis.namaInformasi}/${jenis.id}`}
                           >
                             <i className="fa-solid fa-pen-to-square"></i>
                           </a>
