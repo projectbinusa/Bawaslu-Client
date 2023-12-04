@@ -16,7 +16,7 @@ function EditJenisRegulasi() {
 
   useEffect(() => {
     axios
-      .get(`${API_DUMMY}/bawaslu/api/jenis-regulasi/getby/` + param.id, {
+      .get(`${API_DUMMY}/bawaslu/api/jenis-regulasi/get-by-id/` + param.id, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -33,13 +33,10 @@ function EditJenisRegulasi() {
 
   const update = async (e) => {
     e.preventDefault();
+    e.persist();
     await axios
       .put(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/` + param.id,
-        {
-          jenisRegulasi,
-          jenisRegulasi,
-        },
+        `${API_DUMMY}/bawaslu/api/jenis-regulasi/put/${param.id}?jenisRegulasi=${jenisRegulasi}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -49,7 +46,7 @@ function EditJenisRegulasi() {
       .then(() => {
         Swal.fire({
           icon: "success",
-          title: "Berhasil Mengedit Data Pengumuman",
+          title: "Berhasil Mengedit Data",
           showConfirmButton: false,
           timer: 1500,
         });

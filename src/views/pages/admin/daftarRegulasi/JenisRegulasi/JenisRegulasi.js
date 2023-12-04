@@ -109,7 +109,16 @@ const totalPages = Math.ceil(filteredList.length / rowsPerPage);
                   <option value={20}>20</option>
                 </select>
               </div>
+              <input
+                type="search"
+                className="form-control widget-content-right w-100"
+                placeholder="Search..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+              />
+              <br />
             </div>
+
         <div class="main-card mb-3 card">
           <div class="card-header" style={{ display: "flex" }}>
           <p className="mt-3">Jenis Regulasi</p>
@@ -166,9 +175,9 @@ const totalPages = Math.ceil(filteredList.length / rowsPerPage);
                 {filteredList.map((jenis, index) => {
                   return (
                     <tr key={index}>
-                      <td className="text-left">{index + 1}</td>
-                      <td className="text-left">{jenis.jenisRegulasi}</td>
-                      <td class="text-center">
+                      <td data-label="No" className="">{index + 1}</td>
+                      <td data-label="Jenis Regulasi" className="">{jenis.jenisRegulasi}</td>
+                      <td data-label="Aksi" class="">
                         <button type="button" class="btn-primary btn-sm mr-2">
                           <a
                             style={{ color: "white", textDecoration: "none" }}

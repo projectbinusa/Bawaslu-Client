@@ -100,6 +100,7 @@ import DetailPengumuman from "./views/pages/admin/pengumuman/DetailPengumuman";
 import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
+import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 // test
 function App() {
   return (
@@ -205,9 +206,10 @@ function App() {
           />
           {/* daftar regulasi */}
           <Route path="/regulasi/:jenisRegulasi/:id" component={MenuRegulasi} exact />
-          <Route path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
-          <Route path="/edit/:dokumen/:id" component={EditRegulasi} exact />
-          <Route path="/:menuRegulasi/:id" component={RegulasiAdmin} exact />
+          <Route path="/edit-data/:menuRegulasi/:id" component={MenuEditRegulasi} exact />
+          <PrivateRoute path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
+          <PrivateRoute path="/edit/:dokumen/:id" component={EditRegulasi} exact />
+          <PrivateRoute path="/:menuRegulasi/:id" component={RegulasiAdmin} exact />
           {/* <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact /> */}
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
@@ -239,13 +241,13 @@ function App() {
           <Route path="/admin-informasi/:namaInformasi/:id" component={Indexx} exact />
           <Route path="/jenis-informasi" component={JenisInformasi} exact />
           <Route path="/tambah-jenis-informasi" component={AddJenisInfo} exact />
-          <Route path="/edit-jenis-informasi/:id" component={EditJenisInf} exact />
+          <Route path="/edit-jenis-informasi/:namaInformasi/:id" component={EditJenisInf} exact />
           <Route
             path="/tambah-jenis-keterangan"
             component={AddJenisKeterangan}
             exact
           />
-          <Route path="/edit-jenis-keterangan/:keterangan/:id" component={EditJenisKeterangan} exact />
+          <Route path="/edit-jenis-keterangan/:namaInformasi/:id" component={EditJenisKeterangan} exact />
           <Route path="/isi-keterangan/:keterangan/:id" component={IsiKeterangan} exact />
           <Route path="/add-isi-keterangan" component={AddIsiKeteranganInformasii} exact />
           <Route path="/edit-isi-keterangan/:dokumen/:id" component={EditIsiKeterangan} exact />
