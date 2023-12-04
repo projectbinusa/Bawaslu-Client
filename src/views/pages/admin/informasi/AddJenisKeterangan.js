@@ -18,7 +18,7 @@ function AddJenisKeterangan() {
   const [show, setShow] = useState(false);
   const [informasi, setInformasi] = useState([]);
   const param = useParams();
-  const {namaInformasi} = useParams();
+  const { namaInformasi } = useParams();
   const history = useHistory();
 
   const getInformasi = async () => {
@@ -124,7 +124,6 @@ function AddJenisKeterangan() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

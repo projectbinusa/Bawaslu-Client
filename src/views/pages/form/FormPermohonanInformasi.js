@@ -11,21 +11,6 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { async } from "q";
 
 const FormPermohonanInformasi = () => {
-  // const [show, setShow] = useState(false);
-  // const history = useHistory();
-  // const [email, setEmail] = useState("");
-  // const [nama, setNama] = useState("");
-  // const [alamatPermohonan, setAlamatPermohonan] = useState("");
-  // const [pendidikan, setPendidikan] = useState("");
-  // const [noHp, setNoHp] = useState("");
-  // const [tandaPengenal, setTandaPengenal] = useState("");
-  // const [tujuanInformasi, setTujuanInformasi] = useState("");
-  // const [rincianInformasi, setRincianInformasi] = useState("");
-  // const [pekerjaan, setPekerjaan] = useState("");
-  // const [ditunjukanKepada, setdiTunjukanKepada] = useState("");
-  // const [caraMemperolehInformasi, setCaraMemperolehInformasi] = useState("");
-  // const [caraMendapatkanInformasi, setCaraMendapatkanInformasi] = useState("");
-
   const [alamat, setAlamat] = useState("");
   const [caraMendapatInformasi, setCaraMendapatkanInformasi] = useState("");
   const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("");
@@ -128,12 +113,18 @@ const FormPermohonanInformasi = () => {
         <Navbar />
         <div className="head">
           <div className="form text-center">
-          <div className="form-permohonan section-title text-center">
-                <h5 id="text1-gabung" className="sub-title double-line text-center">Bawaslu Boyolali</h5>
-                <h2 id="text2-gabung" className="title text-center">Form Permohonan Informasi</h2>
-                {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
+            <div className="form-permohonan section-title text-center">
+              <h5
+                id="text1-gabung"
+                className="sub-title double-line text-center">
+                Bawaslu Boyolali
+              </h5>
+              <h2 id="text2-gabung" className="title text-center">
+                Form Permohonan Informasi
+              </h2>
+              {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
                         atpellentesque laoreet</p> */}
-              </div>
+            </div>
             {/* <div className="info">
               <img src={info} className="img" id="img" />
             </div> */}
@@ -141,13 +132,14 @@ const FormPermohonanInformasi = () => {
           <form onSubmit={Add} className="option" style={{}}>
             <div>
               <div>
-                <p style={{}}>Nama Pemohon:</p>
+                <label for="exampleInputPassword1" className="form-label">
+                  Nama Pemohon
+                </label>
                 <input
-                  className="input"
-                  id="input"
-                  type="text"
                   value={nama}
                   onChange={(e) => setNama(e.target.value)}
+                  type="text"
+                  className="form-control"
                 />
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
@@ -160,17 +152,42 @@ const FormPermohonanInformasi = () => {
                 />
                 <br />
                 <br />
+                <p>Nomor Identitas:</p>
+                <input
+                  type="number"
+                  className=" form-control "
+                  id=""
+                  value={pekerjaan}
+                  onChange={(e) => setPekerjaan(e.target.value)}
+                />
+                <br></br>
+                <br></br>
+                <label for="exampleInputPassword1" className="form-label">
+                  Jenis Identitas
+                </label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Pilih Jenis Identitas</option>
+                  <option value="1">KTP (Kartu Tanda Penduduk)</option>
+                  <option value="2">SIM (Surat Izin Mengemudi)</option>
+                  <option value="3">KTM (Surat Tanda Mahasiswa)</option>
+                </select>
+                <br />
+                <br />
                 <p>Pekerjaan:</p>
-                <input type="text" className="input" id="input" value={pekerjaan}
-                 onChange={(e) => setPekerjaan(e.target.value)}/>
+                <input
+                  type="text"
+                  className=" form-control "
+                  id=""
+                  value={pekerjaan}
+                  onChange={(e) => setPekerjaan(e.target.value)}
+                />
                 <p className="pp">0 of 60 max characters</p>
-              
                 <br></br>
                 <br></br>
                 <p>Nomor Telp/HP:</p>
                 <input
-                  className="input"
-                  id="input"
+                  className=" form-control "
+                  id=""
                   type="number"
                   value={noHp}
                   onChange={(e) => setNoHp(e.target.value)}
@@ -179,8 +196,8 @@ const FormPermohonanInformasi = () => {
                 <br></br>
                 <p>Email:</p>
                 <input
-                  className="input"
-                  id="input"
+                  className=" form-control "
+                  id=""
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -210,13 +227,18 @@ const FormPermohonanInformasi = () => {
 
               <br></br>
               <p>Cara Memperoleh Informasi:</p>
-              <input
-                className="input"
-                id="input"
-                type="text"
+              <select
                 value={caraMemperolehInformasi}
                 onChange={(e) => setCaraMemperolehnInformasi(e.target.value)}
-              />
+                class="form-select"
+                aria-label="Default select example">
+                <option selected>Pilih Cara Memperoleh Informasi</option>
+                <option value="mengambil sendiri">Mengambil Langsung</option>
+                <option value="pos">POS</option>
+                <option value="kurir">Kurir</option>
+                <option value="fax">FAX</option>
+                <option value="email">Email</option>
+              </select>
               <br></br>
               <br></br>
               <p>Upload Photo Identitas (.jpg) size max 1mb:</p>
@@ -257,7 +279,7 @@ const FormPermohonanInformasi = () => {
               <br></br>
               <div id="div-button" className="div-button">
                 {" "}
-                <button id="btn-kirim" className="submit">
+                <button id="btn-kirim" type="submit" className="submit">
                   Kirim
                 </button>
               </div>

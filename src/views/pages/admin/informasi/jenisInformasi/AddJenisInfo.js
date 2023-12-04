@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
-import JenisInformasi from "./JenisInformasi";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 
 function AddJenisInfo() {
-  const [jenisInformasi, setJenisInformasi] = useState("");
+  const [namaInformasi, setNamaInformasi] = useState("");
   const [show, setShow] = useState(false);
   const history = useHistory();
 
@@ -18,7 +17,7 @@ function AddJenisInfo() {
 
     try {
       await axios.post(`${API_DUMMY}/bawaslu/api/jenis-informasi/add`, {
-        jenisInformasi: jenisInformasi
+        namaInformasi: namaInformasi
       }, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -54,17 +53,17 @@ function AddJenisInfo() {
               <hr />
               <form onSubmit={add}>
                 <div className="row">
-                  <div className="mb-3 col-6">
-                    <label for="exampleInputEmail1" className="form-label">
-                      Jenis Informasi
-                    </label>
-                    <input
-                      value={JenisInformasi}
-                      onChange={(e) => setJenisInformasi(e.target.value)}
-                      type="text"
-                      className="form-control"
-                    />
-                  </div>
+                <div className="mb-3 col-6">
+                  <label for="exampleInputEmail1" className="form-label">
+                    Jenis Informasi
+                  </label>
+                  <input
+                    value={namaInformasi}
+                    onChange={(e) => setNamaInformasi(e.target.value)}
+                    type="text"
+                    className="form-control"
+                  />
+                </div>
                 </div>
                 <button type="submit" className="btn-danger mt-3 mr-3">
                   <a

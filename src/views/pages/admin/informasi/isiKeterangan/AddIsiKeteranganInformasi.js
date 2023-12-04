@@ -13,8 +13,9 @@ function AddIsiKeteranganInformasi() {
   const [dokumen, setDokumen] = useState("");
   const [jenisKeterangan, setJenisKeterangan] = useState();
   const [keterangan, setKeterangan] = useState([]);
-  const [pdfDokumen, setPdfDokumen] = useState("");
+  const [pdfDokumen, setPdfDokumen] = useState(null);
   const [show, setShow] = useState(false);
+  const param = useParams();
 
   const getKeterangan = async () => {
     try {
@@ -41,10 +42,26 @@ function AddIsiKeteranganInformasi() {
     }
   };
 
-
   useEffect(() => {
     getKeterangan();
   }, []);
+
+  useEffect(() => {
+    axios
+      .get(
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/getBy/` + param.id
+      )
+      .then((ress) => {
+        const response = ress.data.data;
+        setPdfDokumen(response.pdfDokumen);
+        setDokumen(response.dokumen);
+        setJenisKeterangan(response.jenisKeterangan);
+        console.log(ress.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [param.id]); // Added param.id as a dependency to the useEffect
 
   const add = async (e) => {
     e.preventDefault();
@@ -52,43 +69,57 @@ function AddIsiKeteranganInformasi() {
 
     const formData = new FormData();
     formData.append("dokumen", dokumen);
-    formData.append("jenisKeterangan", jenisKeterangan);
-    formData.append("file", pdfDokumen);
+    formData.append("jenisKeteranganId", jenisKeterangan);
+    formData.append("upload", pdfDokumen);
 
     try {
-      await axios.post(
+      const response = await axios.post(
         `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/add`,
         formData,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "multipart/form-data",
           },
         }
       );
-      // //console.log(unique_id);
-      setShow(false);
-      Swal.fire({
-        icon: "success",
-        title: "Data Berhasil DiTambahkan",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      // //console.log(data);
-      //   history.push("/admin-pengumuman");
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
+
+      // Check the response status code
+      if (response.status !== 201) {
+        // Handle the error
+        console.log(response.data);
+        Swal.fire({
+          icon: "error",
+          title: "Gagal menambahkan data",
+          text: response.data.message,
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      } else {
+        // Handle the successful response
+        console.log(response.data);
+        Swal.fire({
+          icon: "success",
+          title: "Data berhasil ditambahkan",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+      }
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   return (
-    <div>
+    <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3">
+        <div className="container mt-3 app-main__outer">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>
@@ -100,7 +131,8 @@ function AddIsiKeteranganInformasi() {
                     <select
                       className="form-select form-select-sm"
                       aria-label="Small select example"
-                      onChange={(e) => setJenisKeterangan(e.target.value)}>
+                      onChange={(e) => setJenisKeterangan(e.target.value)}
+                      value={jenisKeterangan}>
                       <option selected>PIlih Jenis Informasi</option>
                       {keterangan.map((down) => {
                         return (
@@ -133,7 +165,7 @@ function AddIsiKeteranganInformasi() {
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
-                    href="/admin-pengumuman"
+                    href=""
                     style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
@@ -146,7 +178,6 @@ function AddIsiKeteranganInformasi() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

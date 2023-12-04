@@ -83,7 +83,7 @@ function Footer() {
 
               )
             })} */}
-            {/* <div className="col-lg-3 col-md-6">
+            <div className="col-lg-3 col-md-6">
               <div className="widget widget_nav_menu row">
                 <h4 className="widget-title">Kategori</h4>
                 {category.map((cate) => {
@@ -103,8 +103,8 @@ function Footer() {
                   );
                 })}
               </div>
-            </div> */}
-            <div className="col-lg-3 col-md-6">
+            </div>
+            {/* <div className="col-lg-3 col-md-6">
               <div className="widget widget_nav_menu">
                 <h4 className="widget-title">Kategori</h4>
                 <ul>
@@ -128,7 +128,7 @@ function Footer() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
             <div className="col-lg-3 col-md-6">
               <div className="widget widget_subscribe">
                 <h4 className="widget-title">Alamat</h4>
@@ -141,7 +141,7 @@ function Footer() {
                     {" "}
                     E-mail set.boyolali@bawaslu.go.id
                   </p>
-                  
+
                 </div>
                 {/* <label><input type="checkbox">Maecenas tempususcondime honcus sem quam  libero</input></label> */}
               </div>

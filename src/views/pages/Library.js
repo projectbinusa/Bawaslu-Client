@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import bawaslu from "../../aset/bawaslu.png";
@@ -6,7 +6,15 @@ import bawaslu1 from "../../aset/bawaslu1.png";
 import bawaslu2 from "../../aset/bawaslu2.png";
 import bawaslu3 from "../../aset/bawaslu3.png";
 
-function eLibrary() {
+function Library() {
+  const serviceAreaRef = useRef(null);
+
+  const handleLihatKoleksiClick = () => {
+    if (serviceAreaRef.current) {
+      serviceAreaRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     // <!-- team area start -->
     <>
@@ -33,7 +41,7 @@ function eLibrary() {
                   pun dengan nyaman bersama setiap orang.
                 </p>
                 <div className="btn-wrap">
-                  <a href="#buku" style={{ textDecoration: "none" }}>
+                  <a href="#/" onClick={handleLihatKoleksiClick} style={{ textDecoration: "none" }}>
                     LIHAT KOLEKSI
                   </a>
                 </div>
@@ -54,7 +62,7 @@ function eLibrary() {
           src="https://solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
-        <div className="container">
+        <div ref={serviceAreaRef}  className="container">
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7">
               <div className="section-title text-center">
@@ -207,4 +215,4 @@ function eLibrary() {
   );
 }
 
-export default eLibrary;
+export default Library;
