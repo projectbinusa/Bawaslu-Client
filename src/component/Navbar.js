@@ -277,7 +277,7 @@ function Navbar() {
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
                   </li>
                   <li>
-                    <a href="/informasi-kanal">Kanal Pengawasan Pemilu</a>
+                    <a href="/informasi-kanal">Kanal Pengawasan Pemilu 2024</a>
                   </li>
                 </ul>
               </li>

@@ -88,10 +88,10 @@ function PermohonanKeberatan() {
               />
             </div>
           </div>
-          <div className="col-lg-5 align-self-center keterangan">
+          <div className="col-lg-5 align-self-center keteranga-paddingn">
             <div className="section-title">
             </div>
-            <div className="single-security-wrap-2 keterangan">
+            <div className="single-security-wrap-2 keterangan-padding">
               <div className="thumb border-bottom">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-3.webp"
@@ -118,7 +118,7 @@ function PermohonanKeberatan() {
                 </p>
               </div>
             </div> */}
-            <div className="single-security-wrap-2 keterangan">
+            <div className="single-security-wrap-2 keterangan-padding">
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-5.webp"

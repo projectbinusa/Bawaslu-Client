@@ -16,10 +16,17 @@ const LayananInformasi = () => {
           }}
         >
           <div id="div-pembungkus">
-            <h1 id="layanan" className="layanan-informasi">
-              LAYANAN INFORMASI BERBASIS ANDROID
-            </h1>
-            <h1>_____</h1>
+          <div className="form-permohonan section-title text-center">
+              <h5
+                id="text1-gabung"
+                className="sub-title double-line text-center">
+                Bawaslu Boyolali
+              </h5>
+              <h2 id="text2-gabung" className="title text-center">
+Layanan Informasi              </h2>
+              {/* <p className="content">Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas augue
+                        atpellentesque laoreet</p> */}
+            </div>
             <br></br>
             <p id="download" className="download" >
               DOWNLOAD APLIKASI ANDROID PPID BAWASLU KAB. BOYOLALI Download
