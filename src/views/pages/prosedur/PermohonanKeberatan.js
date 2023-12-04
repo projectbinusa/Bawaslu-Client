@@ -2,6 +2,7 @@ import React from "react";
 import keberatan from "../../../aset/patner.png"
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import "../../../css/gabung.css"
 function PermohonanKeberatan() {
   return (
     //  how it work area start
@@ -64,9 +65,9 @@ function PermohonanKeberatan() {
             </div>
           </div>
           <div className="col-lg-5 align-self-center order-lg-first">
-            <div className="section-title">
-              <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
-              <h2 className="title mb-4">
+            <div className="section-title div-gabung">
+              <h5 id="text1-gabung" className="sub-title double-line text1-gabung">Bawaslu Boyolali</h5>
+              <h2 id="text2-gabung" className="title mb-4 text2-gabung">
                 Tata Cara Pengajuan <br /> Keberatan
               </h2>
             </div>
@@ -104,7 +105,7 @@ function PermohonanKeberatan() {
             </div>
           </div>
         </div>
-        <div className="row pd-top-110">
+        <div id="div-gabung-akhir" className="row pd-top-110">
           <div className="col-lg-6 col-md-9 px-xl-5 align-self-center">
             <div className="thumb mb-4 mb-lg-0">
               <img

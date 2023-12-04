@@ -104,7 +104,8 @@ function AdminPengumuman() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -113,13 +114,13 @@ function AdminPengumuman() {
           </div>
           <input
             type="search"
-            className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
+            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
           />
           <div className="main-card mb-3 card">
-            <div className="card-header" style={{ display: "flex" }}>
+            <div className="card-header pembungkus-text-button" style={{ display: "flex" }}>
               <p className="mt-3">Pengumuman Keterangan</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
@@ -145,12 +146,13 @@ function AdminPengumuman() {
                   onChange={handleSearchChange}
                 />
                 <div className="btn-actions-pane-right">
-                  <div role="group" className="btn-group-sm btn-group">
-                    <button className="active btn-focus p-2 rounded">
+                  <div role="group" className="btn-group-sm btn-group button-pembungkus">
+                    <button id="button-tambah" className="active btn-focus p-2 rounded button-tambah">
                       <a
                         href="/add-pengumuman"
-                        className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        className="text-light txt-tambah"
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Pengumuman
                       </a>
@@ -195,51 +197,12 @@ function AdminPengumuman() {
                             />
                           </td>
                           <td
-                            data-label="judulPengumuman : "
-                            className="text-left"
-                          >
+                            className="judulPengumuman"
+                            data-label="judulPengumuman : ">
                             {pengumuman.judulPengumuman}
                           </td>
-
-                          <td data-label="No : " className="text-left">
-                            {pengumuman.id}
-                          </td>
-                          <td data-label="author : " className="text-left">
-                            {pengumuman.author}
-                          </td>
-                          <td
-                            data-label="isiPengumuman : "
-                            className="text-left"
-                          >
-                            {pengumuman.isiPengumuman}
-                          </td>
-                          <td data-label="image : " className="text-left"></td>
-
-                          <td className="text-left">{index + 1}</td>
-                          <td className="text-left">{pengumuman.author}</td>
-                          <td className="text-left">
-                            <img src={pengumuman.image} alt="pengumuman" />
-                          </td>
-                          <td
-                            data-label="judulPengumuman : "
-                            className="text-left"
-                          >
-                            {pengumuman.judulPengumuman}
-                          </td>
-
-                          <td data-label="tags : ">
-                            {pengumuman.tags}
-                          </td>
-                          <td data-label="aksi : " className="text-left"></td>
-                          <td className="text-left">{pengumuman.tags}</td>
-                          <td className="text-center pt-3 pb-3 d-flex">
-                            <button
-                              type="button"
-                              className=" btn-primary btn-sm mr-2"
-                            >
-                              </button>
-                              </td>
-                          <td data-label="Aksi : " className="pt-3 pb-3 d-flex aksi">
+                          <td data-label="tags : ">{pengumuman.tags}</td>
+                          <td data-label="Aksi : " className="aksi">
                             <button
                               type="button"
                               className=".responsive-buttons btn-primary btn-sm mr-2">
@@ -264,8 +227,7 @@ function AdminPengumuman() {
                             <button
                               type="button"
                               className=" btn-danger btn-sm"
-                              onClick={() => deleteData(pengumuman.id)}
-                            >
+                              onClick={() => deleteData(pengumuman.id)}>
                               <i className="fa-solid fa-trash"></i>
                             </button>
                           </td>
