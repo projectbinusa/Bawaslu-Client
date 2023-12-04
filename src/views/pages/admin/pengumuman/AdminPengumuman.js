@@ -188,20 +188,18 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td className="text-left">{index + 1}</td>
+                          <td data-label="No :" className="">{index + 1}</td>
                           <td
-                            style={{ maxWidth: "120px" }}
-                            data-label="judulPengumuman : "
-                            className="text-left">
+                            data-label="judulPengumuman : " className="">
                             {pengumuman.judulPengumuman}
                           </td>
-                          <td className="text-left" data-label="author : ">
+                          <td className="" data-label="author : ">
                             {pengumuman.author}
                           </td>
-                          <td className="text-left">
+                          <td data-label="Created Date" className="">
                             {pengumuman.createdDate}
                           </td>
-                          <td className="td-pmbngks">
+                          <td data-label="Image : " className="td-pmbngks">
                             <img
                               style={{ width: "80px" }}
                               className="img-td"

@@ -1,5 +1,5 @@
 import React from "react";
-import keberatan from "../../../aset/patner.png"
+import keberatan from "../../../aset/Partnership-rafiki.png"
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import "../../../css/gabung.css"
