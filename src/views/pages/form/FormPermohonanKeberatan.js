@@ -14,16 +14,16 @@ import axios from "axios";
 import Swal from "sweetalert2";
 
 const FormPermohonaKeberatan = () => {
-  const [nama, setNamaPermohonan] = useState("");
+  const [namaPemohon, setNamaPemohon] = useState("");
   const [kasusPosisi, setKasusPosisi] = useState("");
-  const [noHp, setNoHp] = useState("");
+  const [noTlp, setNoTlp] = useState("");
   const [email, setEmail] = useState("");
   const [jenisIdentitas, setJenisIdentitas] = useState("");
-  const [namaPenggunaInformasi, setNamaPenggunaInformasi] = useState("");
-  const [alamat, setAlamat] = useState("");
-  const [alasan, setAlasan] = useState("");
-  const [nomorIdentitas, setNomorIdentitas] = useState("");
-  const [tandaPengenal, setFile] = useState("");
+  const [alasanPengajuanKeberatan, setAlasanPengajuanKeberatan] = useState("");
+  const [alamatPemohon, setAlamatPemohon] = useState("");
+  // const [alasan, setAlasan] = useState("");
+  const [nomorIdentitasPemohon, setNomorIdentitasPemohon] = useState("");
+  const [fotoIdentitas, setFotoIdentitas] = useState("");
   const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] =
     useState("");
   const [show, setShow] = useState(false);
@@ -32,17 +32,17 @@ const FormPermohonaKeberatan = () => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("nama", nama);
+    formData.append("namaPemohon", namaPemohon);
     formData.append("kasusPosisi", kasusPosisi);
     formData.append("email", email);
-    formData.append("noTelp", noHp);
+    formData.append("noTlp", noTlp);
     formData.append("jenisIdentitas", jenisIdentitas);
-    formData.append("namaPenggunaInformasi", namaPenggunaInformasi);
-    formData.append("alamat", alamat);
-    formData.append("alasan", alasan);
+    formData.append("alasanPengajuanKeberatan", alasanPengajuanKeberatan);
+    formData.append("alamat", alamatPemohon);
+    // formData.append("alasan", alasan);
     formData.append("tujuanPenggunaanInformasi", tujuanPenggunaanInformasi);
-    formData.append("nomorIndentitas", nomorIdentitas);
-    formData.append("file", tandaPengenal); // Upload gambar jika dipilih
+    formData.append("nomorIndentitasPemohon", nomorIdentitasPemohon);
+    formData.append("fotoIdentitas", fotoIdentitas); // Upload gambar jika dipilih
 
     try {
       await axios.post(
@@ -100,16 +100,16 @@ const FormPermohonaKeberatan = () => {
                     <input
                       className="input form-control"
                       type="text"
-                      value={nama}
-                      onChange={(e) => setNamaPermohonan(e.target.value)}
+                      value={namaPemohon}
+                      onChange={(e) => setNamaPemohon(e.target.value)}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
                     <p>Alamat Pemohon:</p>
                     <textarea
                       className="textarea"
-                      value={alamat}
-                      onChange={(e) => setAlamat(e.target.value)}
+                      value={alamatPemohon}
+                      onChange={(e) => setAlamatPemohon(e.target.value)}
                     />
                     <p className="pp">0 of 60 max characters</p>
                     <br></br>
@@ -132,8 +132,8 @@ const FormPermohonaKeberatan = () => {
                     <input
                       className="input form-control"
                       type="number"
-                      value={noHp}
-                      onChange={(e) => setNoHp(e.target.value)}
+                      value={noTlp}
+                      onChange={(e) => setNoTlp(e.target.value)}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br />
@@ -151,8 +151,8 @@ const FormPermohonaKeberatan = () => {
                     <input
                       className="input form-control"
                       type="number"
-                      value={nomorIdentitas}
-                      onChange={(e) => setNomorIdentitas(e.target.value)}
+                      value={nomorIdentitasPemohon}
+                      onChange={(e) => setNomorIdentitasPemohon(e.target.value)}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
@@ -179,8 +179,8 @@ const FormPermohonaKeberatan = () => {
                     <br></br>
                     <p>Alasan Pengajuan Keberatan</p>
                     <select
-                      value={alasan}
-                      onChange={(e) => setAlasan(e.target.value)}
+                      value={alasanPengajuanKeberatan}
+                      onChange={(e) => setAlasanPengajuanKeberatan(e.target.value)}
                       class="form-select"
                       aria-label="Default select example">
                       <option selected>Pilih Pengajuan Keberatan</option>
@@ -217,7 +217,7 @@ const FormPermohonaKeberatan = () => {
                       <div className="input-type">
                         <input
                           type="file"
-                          onChange={(e) => setFile(e.target.files[0])}
+                          onChange={(e) => setFotoIdentitas(e.target.files[0])}
                         />
                       </div>
                       <div>

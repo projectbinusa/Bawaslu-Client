@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import "../../../css/berkala.css"
 import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
@@ -159,7 +160,7 @@ function InformasiBerkala() {
             </p>
           </div>
           <div className="container">
-            <div className="d-flex gap-5">
+            <div className="d-flex gap-5 container-display">
               <div className="row justify-content-center">
                 <div className="">
                   <div className="isotope-filters project-isotope-btn text-center mb-5">
@@ -5456,7 +5457,7 @@ function InformasiBerkala() {
             </p>
           </div>
           <div className="container">
-            <div className="d-flex gap-5">
+            <div className="d-flex gap-5 container-display">
               <div className="row justify-content-center">
                 <div className="col-lg-12 ">
                   <div className="isotope-filters project-isotope-btn text-center mb-5">
