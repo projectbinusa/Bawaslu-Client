@@ -186,7 +186,7 @@ function JenisInformasi() {
             </div>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
-                count={totalPages}
+                count={paginationInfo.totalPages}
                 page={currentPage}
                 onChange={(event, value) => setCurrentPage(value)}
                 showFirstButton

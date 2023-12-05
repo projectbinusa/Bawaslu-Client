@@ -61,7 +61,7 @@ function Index() {
 
   const deleteData = async (id) => {
     try {
-      await axios.delete(`${API_DUMMY}/bawaslu/api/jenis-informasi/` + id, {
+      await axios.delete(`${API_DUMMY}/bawaslu/api/jenis-keterangan/` + id, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -164,14 +164,14 @@ function Index() {
                                     color: "white",
                                     textDecoration: "none",
                                   }}
-                                  href={`/edit-jenis-keterangan/${inf.namaInformasi}/${inf.id}`}>
+                                  href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}>
                                   <i className="fa-solid fa-pen-to-square"></i>
                                 </a>
                               </button>
                               <button
                                 type="button"
                                 className="mr-2 btn-danger btn-sm"
-                                onClick={() => deleteData(inf.id)}>
+                                onClick={() => deleteData(inf.jenisKeteranganInformasiDTOList[0].id)}>
                                 <i className="fa-solid fa-trash"></i>
                               </button>
                               <button type="button" class="btn-info btn-sm">
@@ -181,7 +181,7 @@ function Index() {
                                 "/isi-keterangan/" +
                                 inf.jenisKeteranganInformasiDTOList[0].keterangan +
                                 "/" +
-                                inf.id
+                                inf.jenisKeteranganInformasiDTOList[0].id
                               }>
                               <i class="fas fa-plus"></i>
                             </a>
