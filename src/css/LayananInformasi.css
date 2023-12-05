@@ -38,6 +38,44 @@
   width: 180px;
   height: 35px;
 }
+@media screen and (max-width: 390px) {
+  #layanan {
+    font-size: 30px;
+    width: 300px;
+  }
+  .vid {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 100px;
+    margin: 5px;
+  }
+ 
+  .download {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .imgly {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+  }
+  .img {
+    width: 0px;
+    border-radius: 5px;
+  }
+  /* .button{
+    width: 150px;
+    height: 30px;
+  } */
+  #button{
+    width: 110px;
+    height: 25px;
+  }
+  
+}
 @media screen and (max-width: 320px) {
   #layanan {
     font-size: 30px;

@@ -46,9 +46,11 @@
     .pembungkus-gabung{
         padding-right:50px ;
     }
-    .keterangan{
+    .keterangan-padding{
         padding: 10px;
         text-align: justify;
     }
+        
+    
     
 }

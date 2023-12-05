@@ -98,3 +98,14 @@ background-image: url(https://www.solverwp.com/demo/html/itechie/assets/img/bg/1
         display: flex; 
         gap: 140px;  
     }
+    #btn-selanjutnya{
+        width:100px ;
+        height: 40px;
+    }
+    @media screen  and (max-width: 768px){
+        .img-profil{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }

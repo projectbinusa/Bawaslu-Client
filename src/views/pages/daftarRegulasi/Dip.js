@@ -77,6 +77,8 @@ function Dip() {
                       <td>
                         <a
                           className="bg-warning text-light"
+                          target="_blank"
+
                           style={{
                             border: "none",
                             padding: "7px",
@@ -103,6 +105,8 @@ function Dip() {
                       <td>
                         <a
                           className="bg-warning text-light"
+                          target="_blank"
+
                           style={{
                             border: "none",
                             padding: "7px",
@@ -129,6 +133,8 @@ function Dip() {
                       <td>
                         <a
                           className="bg-warning text-light"
+                          target="_blank"
+
                           style={{
                             border: "none",
                             padding: "7px",
@@ -155,6 +161,8 @@ function Dip() {
                       <td>
                         <a
                           className="bg-warning text-light"
+                          target="_blank"
+
                           style={{
                             border: "none",
                             padding: "7px",
@@ -181,6 +189,8 @@ function Dip() {
                       <td>
                         <a
                           className="bg-warning text-light"
+                          target="_blank"
+
                           style={{
                             border: "none",
                             padding: "7px",
@@ -207,6 +217,8 @@ function Dip() {
                       <td>
                         <a
                           className="bg-warning text-light"
+                          target="_blank"
+
                           style={{
                             border: "none",
                             padding: "7px",
@@ -233,6 +245,8 @@ function Dip() {
                       <td>
                         <a
                           className="bg-warning text-light"
+                          target="_blank"
+
                           style={{
                             border: "none",
                             padding: "7px",

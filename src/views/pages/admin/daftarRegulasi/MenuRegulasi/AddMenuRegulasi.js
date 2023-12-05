@@ -48,7 +48,6 @@ function AddMenuRegulasi() {
           },
         }
       );
-      // //console.log(unique_id);
       setShow(false);
       Swal.fire({
         icon: "success",
@@ -56,8 +55,7 @@ function AddMenuRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-      // //console.log(data);
-      history.push("/admin/ ");
+      history.push("/admin-regulasi/" + idJenisRegulasi);
       setTimeout(() => {
         window.location.reload();
       }, 1500);

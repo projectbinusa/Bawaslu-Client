@@ -106,7 +106,55 @@
         
     }
 }
+@media screen and (max-width: 390px) {
+    .img-info{
 
+    }
+    .form-txt-img{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+    .h1{
+        font-size: 200px;
+    }
+    .input-type{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-kirim{
+        width: 60px;
+    }
+    #img-info{
+        width: 250px;
+    }
+    #img{
+        width: 100px;
+    }
+    .input{
+        width: 280px;
+    }
+    .textarea{
+        width: 280px;
+    }
+    .img-src{
+        width: 170px;
+    }
+    #img-info{
+        width: 220px;
+        padding-top: 10px;
+    }
+    .input-type{
+        width: 10%px;
+        height: 20%px;
+    }
+    .display-akhir{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
 @media screen and (max-width:320px) {
     .img-info{
 

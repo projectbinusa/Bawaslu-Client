@@ -1,9 +1,16 @@
 import React from "react";
+import "../../views/pages/Profil.css"
 import "../../../src/css/Profil.css";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 
 function Profil() {
+  const scrollToStrukturOrganisasi = () => {
+    const element = document.getElementById("strukturOrganisasi");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <Navbar />
@@ -21,6 +28,22 @@ function Profil() {
                 memperbaharui informasi terkait pengawasan dan pemantauan
                 pemilu.
               </p>
+              <a href="#strukturOrganisasi">
+                <button
+                id="btn-selanjutnya"
+                  className="btn btn-primary"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  // data-bs-target="#collapseOne"
+                  // aria-expanded="true"
+                  // aria-controls="collapseOne"
+                  onClick={scrollToStrukturOrganisasi}
+                 
+                >
+                  Selanjutnya{" "}
+                </button>
+              </a>
+
               {/* </div> */}
               <div className="accordion mt-4" id="accordionExample">
                 <div className="accordion-item single-accordion-inner style-2">
@@ -32,7 +55,8 @@ function Profil() {
                       data-bs-target="#collapseOne"
                       aria-expanded="true"
                       aria-controls="collapseOne"
-                      fdprocessedid="ikbz6">
+                      fdprocessedid="ikbz6"
+                    >
                       Visi
                     </button>
                   </h2>
@@ -41,7 +65,8 @@ function Profil() {
                     className="accordion-collapse collapse show"
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
-                    style={{}}>
+                    style={{}}
+                  >
                     <div className="accordion-body">
                       Terwujudnya Bawaslu sebagai Lembaga Pengawal Terpercaya
                       dalam Penyelenggaraan Pemilu Demokratis, Bermartabat, dan
@@ -58,7 +83,8 @@ function Profil() {
                       data-bs-target="#collapseTwo"
                       aria-expanded="false"
                       aria-controls="collapseTwo"
-                      fdprocessedid="2yh8m">
+                      fdprocessedid="2yh8m"
+                    >
                       Misi
                     </button>
                   </h2>
@@ -67,7 +93,8 @@ function Profil() {
                     className="accordion-collapse collapse"
                     aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample"
-                    style={{}}>
+                    style={{}}
+                  >
                     <div className="accordion-body">
                       <p style={{ color: "white" }}>
                         <ul>
@@ -114,7 +141,8 @@ function Profil() {
                       data-bs-target="#collapseThree"
                       aria-expanded="false"
                       aria-controls="collapseThree"
-                      fdprocessedid="44ky5w">
+                      fdprocessedid="44ky5w"
+                    >
                       Tugas, Fungsi dan Wewenang
                     </button>
                   </h2>
@@ -122,16 +150,37 @@ function Profil() {
                     id="collapseThree"
                     className="accordion-collapse collapse"
                     aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
+                    data-bs-parent="#accordionExample"
+                  >
                     <div className="accordion-body">
                       <p style={{ color: "white" }}>
                         <ul>
-                          <li>Menyediakan, menyimpan, mendokumentasikan dan mengamankan informasi</li>
-                          <li>Memberikan layanan informasi publik yang cepat, tepat, efisien dan gratis</li>
-                          <li>Menyusun dan menetapkan standar operasional prosedur (SOP) informasi publik</li>
-                          <li>Melakukan klasifikasi terhadap informasi dan/atau pengubahannya</li>
-                          <li>Menetapkan informasi yang dikecualikan yang telah habis jangka waktu pengecualiannya sebagai informasi yang dapat diakses dan</li>
-                          <li>Menetapkan pertimbangan tertulis atas setiap kebijakan yang diambil untuk memenuhi hak setiap orang atas informasi publik</li>
+                          <li>
+                            Menyediakan, menyimpan, mendokumentasikan dan
+                            mengamankan informasi
+                          </li>
+                          <li>
+                            Memberikan layanan informasi publik yang cepat,
+                            tepat, efisien dan gratis
+                          </li>
+                          <li>
+                            Menyusun dan menetapkan standar operasional prosedur
+                            (SOP) informasi publik
+                          </li>
+                          <li>
+                            Melakukan klasifikasi terhadap informasi dan/atau
+                            pengubahannya
+                          </li>
+                          <li>
+                            Menetapkan informasi yang dikecualikan yang telah
+                            habis jangka waktu pengecualiannya sebagai informasi
+                            yang dapat diakses dan
+                          </li>
+                          <li>
+                            Menetapkan pertimbangan tertulis atas setiap
+                            kebijakan yang diambil untuk memenuhi hak setiap
+                            orang atas informasi publik
+                          </li>
                         </ul>
                       </p>
                     </div>
@@ -139,7 +188,7 @@ function Profil() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 mt-4 mt-lg-0">
+            <div className="col-lg-6 mt-4 mt-lg-0 img-profil">
               <img
                 src="https://img.freepik.com/free-vector/profile-data-concept-illustration_114360-2770.jpg?size=626&ext=jpg&ga=GA1.1.1464020286.1696819460&semt=sph"
                 alt=""
@@ -150,7 +199,7 @@ function Profil() {
       </div>
       <div className="row pd-top-110" style={{ background: "#F1F6F9" }}>
         <div className="col-lg-6 col-md-9 px-xl-5 align-self-center">
-          <div className="container thumb mb-4 mb-lg-0">
+          <div className="container thumb mb-4 mb-lg-0 img-profil">
             <img
               style={{ borderRadius: "10px" }}
               src="https://lp2m.uma.ac.id/wp-content/uploads/2022/02/OrganisasiUMA.jpg"
@@ -158,7 +207,7 @@ function Profil() {
             />
           </div>
         </div>
-        <div className="p-5 col-lg-5 align-self-center">
+        <div className="p-5 col-lg-5 align-self-center"  id="strukturOrganisasi">
           <div className="section-title">
             <h2 className="title mb-4">Struktur Organisasi</h2>
             <p>
