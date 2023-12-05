@@ -164,7 +164,7 @@ function InformasiBerkala() {
                 <div className="">
                   <div className="isotope-filters project-isotope-btn text-center mb-5">
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Hasil Pengawasan")}
@@ -172,7 +172,7 @@ function InformasiBerkala() {
                       Hasil Pengawasan
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Analisa Calon Terpilih")}
@@ -180,7 +180,7 @@ function InformasiBerkala() {
                       Analisa Calon Terpilih
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Laporan Akhir Pengawasan")}
@@ -188,7 +188,7 @@ function InformasiBerkala() {
                       Laporan Akhir Pengawasan
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Penanganan Pelanggaran")}
@@ -196,7 +196,7 @@ function InformasiBerkala() {
                       Penanganan Pelanggaran
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() =>
@@ -206,7 +206,7 @@ function InformasiBerkala() {
                       Naskah Perjanjian Hibah Daerah
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Layanan Pengaduan Publik")}
@@ -214,7 +214,7 @@ function InformasiBerkala() {
                       Layanan Pengaduan Publik
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Sarana Partisipasi Publik")}
@@ -5198,7 +5198,7 @@ function InformasiBerkala() {
                 <div className="col-lg-12 ">
                   <div className="isotope-filters project-isotope-btn text-center mb-5">
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Profil Bawaslu")}
@@ -5206,7 +5206,7 @@ function InformasiBerkala() {
                       Profil Bawaslu
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("Layanan Publik Khusus")}
@@ -5214,7 +5214,7 @@ function InformasiBerkala() {
                       Layanan Publik Khusus
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Program Kerja")}
@@ -5222,7 +5222,7 @@ function InformasiBerkala() {
                       Program Kerja
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("Ringkasan Kegiatan")}
@@ -5230,7 +5230,7 @@ function InformasiBerkala() {
                       Ringkasan Kegiatan
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Sumber & Anggaran Kegiatan")}
@@ -5238,7 +5238,7 @@ function InformasiBerkala() {
                       Sumber & Anggaran Kegiatan
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("Keuangan Bawaslu")}
@@ -5246,7 +5246,7 @@ function InformasiBerkala() {
                       Keuangan Bawaslu
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Layanan Informasi Publik")}
@@ -5254,7 +5254,7 @@ function InformasiBerkala() {
                       Layanan Informasi Publik
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("Sosialisasi")}
@@ -5262,7 +5262,7 @@ function InformasiBerkala() {
                       Sosialisasi
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() =>
@@ -5272,7 +5272,7 @@ function InformasiBerkala() {
                       SDM, Organisasi & Administrasi
                     </button>
                     <button
-                     style={{ width: "230px", textAlign: "left" }}
+                     style={{ width: "27     0px", textAlign: "left" }}
                      className="button"
                      data-filter="*"
                       onClick={() => showTable("Laporan Barang Milik Negara")}
@@ -5280,7 +5280,7 @@ function InformasiBerkala() {
                       Laporan Barang milik Negara
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() =>
@@ -5290,7 +5290,7 @@ function InformasiBerkala() {
                       Naskah Perjanjian Hibah Daerah
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("Piagam Penghargaan")}
@@ -5298,7 +5298,7 @@ function InformasiBerkala() {
                       Piagam Penghargaan
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Laporan Realisasi Anggaran")}
@@ -5306,7 +5306,7 @@ function InformasiBerkala() {
                       Laporan Realisasi Anggaran
                     </button>
                     <button
-                      style={{ width: "230px", textAlign: "left" }}
+                      style={{ width: "27     0px", textAlign: "left" }}
                       className="button"
                       data-filter="*"
                       onClick={() => showTable("Perjanjian Kinerja")}
@@ -5314,7 +5314,7 @@ function InformasiBerkala() {
                       Perjanjian Kinerja
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("Rencana Kerja & Anggaran")}
@@ -5322,7 +5322,7 @@ function InformasiBerkala() {
                       Rencana Kerja & Anggaran
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("TAPKIN")}
@@ -5330,7 +5330,7 @@ function InformasiBerkala() {
                       TAPKIN{" "}
                     </button>
                     <button
-                       style={{ width: "230px", textAlign: "left" }}
+                       style={{ width: "27     0px", textAlign: "left" }}
                        className="button"
                        data-filter="*"
                       onClick={() => showTable("Pengadaan Barang & Jasa")}
