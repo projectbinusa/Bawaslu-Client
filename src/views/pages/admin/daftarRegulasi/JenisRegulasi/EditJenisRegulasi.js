@@ -10,7 +10,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 
 function EditJenisRegulasi() {
-  const [jenisRegulasi, setJenisRegulasi] = useState("");
+  const [jenisRegulasi, setJenisRegulasi] = useState("ass");
   const param = useParams();
   const history = useHistory();
 
@@ -24,7 +24,6 @@ function EditJenisRegulasi() {
       .then((ress) => {
         const response = ress.data.data;
         setJenisRegulasi(response.jenisRegulasi);
-        console.log(response.namaInformasi);
       })
       .catch((error) => {
         console.log(error);
@@ -33,32 +32,62 @@ function EditJenisRegulasi() {
 
   const update = async (e) => {
     e.preventDefault();
-    e.persist();
-    await axios
-      .put(
-        `${API_DUMMY}/bawaslu/api/jenis-regulasi/put/${param.id}?jenisRegulasi=${jenisRegulasi}`,
+
+    try {
+      // Assuming you've correctly set jenisRegulasi in your component state
+      const response = await axios.put(
+        `${API_DUMMY}/bawaslu/api/jenis-regulasi/put/` + param.id,
+        {
+          jenisRegulasi,
+        },
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
-      )
-      .then(() => {
-        Swal.fire({
-          icon: "success",
-          title: "Berhasil Mengedit Data",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        history.push("/jenis-regulasi");
-        setTimeout(() => {
-          window.location.reload();
-        }, 1500);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      );
+
+      console.log(response.data.data);
+      // Handle success, e.g., show a success message or navigate to another page
+    } catch (error) {
+      console.error(error);
+      // Handle error, e.g., show an error message
+    }
   };
+
+  // const update = async (e) => {
+  //   e.preventDefault();
+
+  //   await axios
+  //     .put(
+  //       `${API_DUMMY}/bawaslu/api/jenis-regulasi/put/` + param.id,
+  //       {
+  //         jenisRegulasi,
+  //         jenisRegulasi,
+  //       },
+  //       {
+  //         headers: {
+  //           Authorization: `Bearer ${localStorage.getItem("token")}`,
+  //         },
+  //       }
+  //     )
+  //     .then((ress) => {
+  //       console.log(ress.data.data);
+  //       // Swal.fire({
+  //       //   icon: "success",
+  //       //   title: "Berhasil Mengedit Data",
+  //       //   showConfirmButton: false,
+  //       //   timer: 1500,
+  //       // });
+  //       // history.push("/jenis-regulasi");
+  //       // setTimeout(() => {
+  //       //   window.location.reload();
+  //       // }, 1500);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
@@ -83,9 +112,9 @@ function EditJenisRegulasi() {
                     />
                   </div>
                 </div>
-                <button type="submit" className="btn-danger mt-3 mr-3">
+                <button type="button" className="btn-danger mt-3 mr-3">
                   <a
-                    href="/admin-regulasi"
+                    href="/jenis-regulasi"
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     {" "}
