@@ -31,7 +31,7 @@ function EditJenisInf() {
       const update = async (e) => {
         e.preventDefault();
         await axios
-          .put(`${API_DUMMY}/bawaslu/api/jenis-keterangan/` + param.id, {
+          .put(`${API_DUMMY}/bawaslu/api/jenis-informasi/` + param.id, {
             namaInformasi, namaInformasi
           }, {
             headers: {
@@ -41,7 +41,7 @@ function EditJenisInf() {
           .then(() => {
             Swal.fire({
               icon: "success",
-              title: "Berhasil Mengedit Data Pengumuman",
+              title: "Berhasil Mengedit",
               showConfirmButton: false,
               timer: 1500,
             });
