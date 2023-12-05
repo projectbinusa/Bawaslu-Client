@@ -61,8 +61,6 @@ function AddJenisKeterangan() {
         showConfirmButton: false,
         timer: 1500,
       });
-      // //console.log(data);
-      // history.push(`/admin/${namaInformasi}/${param.id}`);
       setTimeout(() => {
         window.location.reload();
       }, 1500);
