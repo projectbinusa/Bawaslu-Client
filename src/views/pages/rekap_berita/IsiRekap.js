@@ -51,31 +51,6 @@ function IsiRekap() {
   return (
     <>
       <Navbar />
-      {/* <!-- page title start --> */}
-      <div
-        className="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}>
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 className="page-title">Berita</h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>Berita</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <br />
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">

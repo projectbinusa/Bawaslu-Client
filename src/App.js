@@ -90,7 +90,7 @@ import PrivateRoute from "./utils/PrivateRoute";
 import JenisInformasi from "./views/pages/admin/informasi/jenisInformasi/JenisInformasi";
 import AddJenisInfo from "./views/pages/admin/informasi/jenisInformasi/AddJenisInfo";
 import EditJenisInf from "./views/pages/admin/informasi/jenisInformasi/EditJenisInf";
-import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+import RekapBeritaa from "./views/pages/rekap_berita/RekapBerita";
 import IsiRekap from "./views/pages/rekap_berita/IsiRekap";
 import IsiPengumumann from "./views/pages/pengumuman/IsiPengumuman";
 import AddJenisRegulasi from "./views/pages/admin/daftarRegulasi/JenisRegulasi/AddJenisRegulasi";
@@ -252,7 +252,7 @@ function App() {
           <Route path="/add-isi-keterangan" component={AddIsiKeteranganInformasii} exact />
           <Route path="/edit-isi-keterangan/:dokumen/:id" component={EditIsiKeterangan} exact />
           {/* rekap data perbulan */}
-          <Route path="/rekap-berita/:tahun_bulan" component={RekapBerita} exact />
+          <Route path="/:tahun_bulan" component={RekapBeritaa} exact />
           <Route path="/isi-rekap/:judulBerita/:id" component={IsiRekap} exact />
           <Route path="/kehumasan" component={Kehumasan} exact />
           <Route path="/pencegahan" component={Pencegahan} exact />
