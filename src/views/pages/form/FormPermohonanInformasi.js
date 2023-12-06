@@ -24,6 +24,7 @@ const FormPermohonanInformasi = () => {
   const [pendidikan, setPendidikan] = useState("");
   const [rincianYangDibutuhkan, setRincianYangDibutuhkan] = useState("");
   const [fotoIdentitas, setFotoIdentitas] = useState("");
+  const [jenisIdentitasPemohon, setJenisIdentitasPemohon] = useState("");
   const [tujuanInformasi, setTujuanInformasi] = useState("");
   const [updateDate, setUpdateDate] = useState("");
   const [show, setShow] = useState(false);
@@ -44,6 +45,7 @@ const FormPermohonanInformasi = () => {
     formData.append("caraMemperolehInformasi", caraMemperolehInformasi);
     formData.append("caraMendapatSalinanInformasi", caraMendapatSalinanInformasi);
     formData.append("fotoIdentitas", fotoIdentitas);
+    formData.append("jenisIdentitasPemohon", jenisIdentitasPemohon);
 
     try {
       await axios.post(
@@ -170,7 +172,10 @@ const FormPermohonanInformasi = () => {
                 <label for="exampleInputPassword1" className="form-label">
                   Jenis Identitas
                 </label>
-                <select class="form-select" aria-label="Default select example">
+                <select
+                 value={jenisIdentitasPemohon}
+                 onChange={(e) => setJenisIdentitasPemohon(e.target.value)} 
+                class="form-select" aria-label="Default select example">
                   <option selected>Pilih Jenis Identitas</option>
                   <option value="1">KTP (Kartu Tanda Penduduk)</option>
                   <option value="2">SIM (Surat Izin Mengemudi)</option>

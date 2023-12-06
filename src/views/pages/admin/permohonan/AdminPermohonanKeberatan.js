@@ -236,7 +236,7 @@ function AdminPermohonanKeberatan() {
                           data-label="jenis identitas : "
                           className="text-llef"
                         >
-                          {informasi.alasanPengajuanKeberataan}
+                          {informasi.alasanPengajuanKeberatan}
                         </td>
                         <td
                           data-label="jenis identitas : "

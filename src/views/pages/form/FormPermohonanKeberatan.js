@@ -38,10 +38,10 @@ const FormPermohonaKeberatan = () => {
     formData.append("noTlp", noTlp);
     formData.append("jenisIdentitas", jenisIdentitas);
     formData.append("alasanPengajuanKeberatan", alasanPengajuanKeberatan);
-    formData.append("alamat", alamatPemohon);
+    formData.append("alamatPemohon", alamatPemohon);
     // formData.append("alasan", alasan);
     formData.append("tujuanPenggunaanInformasi", tujuanPenggunaanInformasi);
-    formData.append("nomorIndentitasPemohon", nomorIdentitasPemohon);
+    formData.append("nomorIdentitasPemohon", nomorIdentitasPemohon);
     formData.append("fotoIdentitas", fotoIdentitas); // Upload gambar jika dipilih
 
     try {
@@ -125,7 +125,6 @@ const FormPermohonaKeberatan = () => {
                       <option value="KTM">KTM (Surat Tanda Mahasiswa)</option>
                     </select>
                     <p className="pp">0 of 30 max characters</p>
-                    <br></br>
                     <br></br>
                     <br></br>
                     <p>Nomor Telp/HP:</p>
