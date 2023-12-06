@@ -8,7 +8,6 @@ import Swal from "sweetalert2";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import "../../../../../src/css/adminBerita.css";
 import { Pagination, TableContainer, TablePagination } from "@mui/material";
-import AddPengumuman from "./AddPengumuman";
 
 function AdminPengumuman() {
   const [list, setList] = useState([]);
@@ -185,58 +184,53 @@ function AdminPengumuman() {
                     </tr>
                   </thead>
                   <tbody>
+                    {/* {filteredList.map((pengumuman, index) => ( */}
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No :" className="">{index + 1}</td>
-                          <td
-                            data-label="judulPengumuman : " className="">
-                            {pengumuman.judulPengumuman}
-                          </td>
-                          <td className="" data-label="author : ">
-                            {pengumuman.author}
-                          </td>
-                          <td data-label="Created Date" className="">
-                            {pengumuman.createdDate}
-                          </td>
-                          <td data-label="Image : " className="td-pmbngks">
+                          <td data-label="No : ">{index + 1}</td>
+                          <td data-label="author : ">{pengumuman.author}</td>
+                          <td>
                             <img
-                              style={{ width: "80px" }}
-                              className="img-td"
+                              style={{ width: "100px" }}
                               src={pengumuman.image}
                               alt="pengumuman"
                             />
                           </td>
-                          <td data-label="Aksi : " className="pt-3 pb-3 aksi">
-                            <div className="d-flex justify-content-center">
-                              <button
-                                type="button"
-                                className=".responsive-buttons btn-primary btn-sm mr-2">
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={`/edit-pengumuman/${pengumuman.id}`}>
-                                  <i className="fa-solid fa-pen-to-square"></i>
-                                </a>
-                              </button>
-                              <button type="button" class="btn-warning mr-2 btn-sm">
-                            <a
-                              className="text-light"
-                              href={
-                                "/detail-pengumuman/" + pengumuman.id
-                              }>
-                              <i class="fas fa-info-circle"></i>
-                            </a>
-                          </button>
-                              <button
-                                type="button"
-                                className=" btn-danger btn-sm"
-                                onClick={() => deleteData(pengumuman.id)}>
-                                <i className="fa-solid fa-trash"></i>
-                              </button>
-                            </div>
+                          <td
+                            className="judulPengumuman"
+                            data-label="judulPengumuman : ">
+                            {pengumuman.judulPengumuman}
+                          </td>
+                          <td data-label="tags : ">{pengumuman.tags}</td>
+                          <td data-label="Aksi : " className="aksi">
+                            <button
+                              type="button"
+                              className=".responsive-buttons btn-primary btn-sm mr-2">
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-pengumuman/${pengumuman.id}`}>
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn-warning mr-2 btn-sm">
+                              <a
+                                className="text-light"
+                                href={"/detail-pengumuman/" + pengumuman.id}>
+                                <i class="fas fa-info-circle"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              className=" btn-danger btn-sm"
+                              onClick={() => deleteData(pengumuman.id)}>
+                              <i className="fa-solid fa-trash"></i>
+                            </button>
                           </td>
                         </tr>
                       );

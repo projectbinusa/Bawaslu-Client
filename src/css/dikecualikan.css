@@ -6,9 +6,11 @@
         font-size: 20px !important;
     }
     .kolom-image{
+       
         flex-wrap: wrap !important;
     }
     .text{
+   margin-top: 50px;
         font-size: 10px !important;
     }
     #div-img{
