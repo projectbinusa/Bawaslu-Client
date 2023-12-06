@@ -204,10 +204,13 @@ function AdminPermohonanKeberatan() {
                           {index + 1}
                         </td>
                         <td data-label="email : " className="text-llef">
-                          {informasi.nama}
+                          {informasi.namaPemohon}
                         </td>
                         <td data-label="nama : " className="text-llef">
                           {informasi.email}
+                        </td>
+                        <td data-label="nama : " className="text-llef">
+                          {informasi.alamatPemohon}
                         </td>
 
                         <td data-label="alamat : " className="text-llef">
