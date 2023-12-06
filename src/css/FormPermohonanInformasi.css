@@ -157,6 +157,64 @@ padding: 0;
   width: 400px;
 padding-top: 60px;
 }
+@media screen and (max-width: 390px) {
+  .head{
+    padding-top: 80px;
+}
+.h1 {
+width: 200px;
+font-size: 37px;
+}
+.form{
+padding: 10px;
+display: flex;
+gap: 10px;
+flex-direction: column;
+}
+.form-permohonan{
+padding-top: 100px;
+}
+.form-txt{
+padding-top: 100px;
+}
+.option{
+margin: 25px;
+justify-content: center;
+gap: 25px;
+display: flex;
+flex-direction: column;
+}
+.input{
+width: 250px;
+}
+#input{
+width: 170px;
+}
+.select{
+width: 250px;
+}
+.textarea{
+width:50px;
+}
+#textarea{
+width: 240px;
+}
+.button{
+width: 100px;
+}
+
+
+.info{
+width: 250px;
+padding-right: 15px;
+}
+
+#img{
+width: 2500px;
+
+
+}
+}
 @media screen and (max-width: 320px) {
     .head{
         padding-top: 80px;

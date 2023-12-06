@@ -74,6 +74,7 @@ function InformasiStandarProsedur() {
                       </td>
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -120,6 +121,7 @@ function InformasiStandarProsedur() {
                       </td>
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -166,6 +168,7 @@ function InformasiStandarProsedur() {
                       </td>{" "}
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -212,6 +215,7 @@ function InformasiStandarProsedur() {
                       </td>{" "}
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -258,6 +262,7 @@ function InformasiStandarProsedur() {
                       </td>{" "}
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -304,6 +309,7 @@ function InformasiStandarProsedur() {
                       </td>{" "}
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -350,6 +356,7 @@ function InformasiStandarProsedur() {
                       </td>{" "}
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",
@@ -396,6 +403,7 @@ function InformasiStandarProsedur() {
                       </td>{" "}
                       <td>
                       <a className="bg-warning text-light"
+                       target="_blank"
                           style={{
                             border: "none",
                             padding: "7px",

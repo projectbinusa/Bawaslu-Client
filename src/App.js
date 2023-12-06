@@ -203,7 +203,7 @@ function App() {
             exact
           />
           {/* daftar regulasi */}
-          <Route path="/regulasi/:jenisRegulasi/:id" component={MenuRegulasi} exact />
+          <Route path="/admin-regulasi/:id" component={MenuRegulasi} exact />
           <Route path="/edit-data/:menuRegulasi/:id" component={MenuEditRegulasi} exact />
           <PrivateRoute path="/add-menu-regulasi" component={AddMenuRegulasi} exact />
           <PrivateRoute path="/edit/:dokumen/:id" component={EditRegulasi} exact />
@@ -245,7 +245,7 @@ function App() {
             component={AddJenisKeterangan}
             exact
           />
-          <Route path="/edit-jenis-keterangan/:namaInformasi/:id" component={EditJenisKeterangan} exact />
+          <Route path="/edit-jenis/:namaInformasi/:id" component={EditJenisKeterangan} exact />
           <Route path="/isi-keterangan/:keterangan/:id" component={IsiKeterangan} exact />
           <Route path="/add-isi-keterangan" component={AddIsiKeteranganInformasii} exact />
           <Route path="/edit-isi-keterangan/:dokumen/:id" component={EditIsiKeterangan} exact />

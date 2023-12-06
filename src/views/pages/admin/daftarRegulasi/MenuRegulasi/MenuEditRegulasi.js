@@ -44,11 +44,21 @@ function MenuEditRegulasi() {
 
   const update = async (e) => {
     e.preventDefault();
-    e.persist();
+
+    const reqs = {
+      idJenisRegulasi: idJenisRegulasi,
+      menuRegulasi: menuRegulasi,
+    };
 
     try {
       await axios.put(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/put/${param.id}?idJenisRegulasi=${idJenisRegulasi}&menuRegulasi=${menuRegulasi}`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/put/${param.id}`,
+        reqs,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
 
       Swal.fire({
@@ -89,7 +99,7 @@ function MenuEditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}
-                      value={idJenisRegulasi}>
+                    >
                       <option selected>PIlih Jenis Regulasi</option>
                       {jenisRegulasi.map((down) => {
                         return (

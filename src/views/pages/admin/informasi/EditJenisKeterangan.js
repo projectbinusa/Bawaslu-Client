@@ -23,7 +23,7 @@ function EditJenisKeterangan() {
       .then((ress) => {
         const response = ress.data.data;
         setKeterangan(response.keterangan);
-        setJenisInformasi(response.id);
+        setJenisInformasi(response.jenisInformasi);
       })
       .catch((error) => {
         console.log(error);
