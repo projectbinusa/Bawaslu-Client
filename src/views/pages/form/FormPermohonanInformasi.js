@@ -11,7 +11,7 @@ import { async } from "q";
 
 const FormPermohonanInformasi = () => {
   const [alamatPemohon, setAlamatPemohon] = useState("");
-  const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] = useState("");
+  // const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] = useState("");
   const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("");
   const [createDate, setCreateDate] = useState("");
   const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] = useState("");
@@ -24,7 +24,7 @@ const FormPermohonanInformasi = () => {
   const [pendidikan, setPendidikan] = useState("");
   const [rincianYangDibutuhkan, setRincianYangDibutuhkan] = useState("");
   const [fotoIdentitas, setFotoIdentitas] = useState("");
-  const [jenisIdentitasPemohon, setJenisIdentitasPemohon] = useState("");
+  const [jenisIdentitas, setJenisIdentitasPemohon] = useState("");
   const [tujuanInformasi, setTujuanInformasi] = useState("");
   const [updateDate, setUpdateDate] = useState("");
   const [show, setShow] = useState(false);
@@ -43,9 +43,9 @@ const FormPermohonanInformasi = () => {
     // formData.append("pekerjaan", pekerjaan);
     formData.append("tujuanPenggunaanInformasi", tujuanPenggunaanInformasi);
     formData.append("caraMemperolehInformasi", caraMemperolehInformasi);
-    formData.append("caraMendapatSalinanInformasi", caraMendapatSalinanInformasi);
+    // formData.append("caraMendapatSalinanInformasi", caraMendapatSalinanInformasi);
     formData.append("fotoIdentitas", fotoIdentitas);
-    formData.append("jenisIdentitasPemohon", jenisIdentitasPemohon);
+    formData.append("jenisIdentitas", jenisIdentitas);
 
     try {
       await axios.post(
@@ -173,7 +173,7 @@ const FormPermohonanInformasi = () => {
                   Jenis Identitas
                 </label>
                 <select
-                 value={jenisIdentitasPemohon}
+                 value={jenisIdentitas}
                  onChange={(e) => setJenisIdentitasPemohon(e.target.value)} 
                 class="form-select" aria-label="Default select example">
                   <option selected>Pilih Jenis Identitas</option>
@@ -214,7 +214,7 @@ const FormPermohonanInformasi = () => {
                 />{" "}
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
-                <p>Rincian Yang Dibutuhkan (Tambah Keterangan Bila Perlu):</p>
+                {/* <p>Rincian Yang Dibutuhkan (Tambah Keterangan Bila Perlu):</p>
                 <textarea
                   value={rincianYangDibutuhkan}
                   onChange={(e) => setRincianYangDibutuhkan(e.target.value)}
@@ -222,7 +222,7 @@ const FormPermohonanInformasi = () => {
                   id="textarea"
                 />
                 <p className="pp">0 of 100 max characters</p>
-                <br></br>
+                <br></br> */}
               </div>
             </div>
             <div className="tujuan">
@@ -253,7 +253,7 @@ const FormPermohonanInformasi = () => {
               <br></br>
               <br></br>
               <br></br>
-              <p>Cara Mendapat Salinan Informasi:</p>
+              {/* <p>Cara Mendapat Salinan Informasi:</p>
               <select
                 value={caraMendapatSalinanInformasi}
                 onChange={(e) => setCaraMendapatSalinanInformasi(e.target.value)}
@@ -268,7 +268,7 @@ const FormPermohonanInformasi = () => {
                 <option value="email">Email</option>
               </select>
               <br></br>
-              <br></br>
+              <br></br> */}
               <p>Upload Photo Identitas (.jpg) size max 1mb:</p>
               <input
                 type="file"
