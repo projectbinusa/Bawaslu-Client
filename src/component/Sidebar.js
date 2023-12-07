@@ -71,6 +71,7 @@ function Sidebar() {
               type="button"
               class="hamburger hamburger--elastic mobile-toggle-nav"
             >
+              {/*  */}
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
@@ -137,6 +138,7 @@ function Sidebar() {
                   })}
                 </ul>
               </li>
+              {/*  */}
               <li>
                 <a style={{ textDecoration: "none" }} href="/jenis-regulasi">
                   <i class="fa-solid fa-clipboard-list  metismenu-icon"></i>
@@ -167,6 +169,7 @@ function Sidebar() {
               </li>
               <li class="app-sidebar__heading">Permohonan</li>
               <li>
+                {/*  */}
                 <a
                   style={{ textDecoration: "none" }}
                   href="/adminn-permohonan-informasi"
