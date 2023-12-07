@@ -206,6 +206,7 @@ function AdminBerita() {
         <div className="container mt-3 app-main__outer">
           <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div className="col-auto">
+              {/* a */}
               <label className="form-label mt-2">Rows per page:</label>
             </div>
             <div className="col-auto">
@@ -232,6 +233,7 @@ function AdminBerita() {
               <p className="mt-3">Berita</p>
               <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div className="col-auto">
+                  {/* a */}
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
                 <div className="col-auto">
@@ -357,6 +359,7 @@ function AdminBerita() {
           {/* Category */}
           <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div class="col-auto">
+{/*                */}
               <label className="form-label mt-2">Rows per page:</label>
             </div>
             <div class="col-auto">
@@ -384,6 +387,7 @@ function AdminBerita() {
               <p className="mt-3">Kategori Berita</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
+                  {/*  */}
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
                 <div class="col-auto">
