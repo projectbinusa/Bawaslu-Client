@@ -30,7 +30,7 @@ function RegulasiAdmin() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${
           param.id
-        }&page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=ASC`
+        }&page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
       setRegulasi(response.data.data.content);
       setPaginationInfo({

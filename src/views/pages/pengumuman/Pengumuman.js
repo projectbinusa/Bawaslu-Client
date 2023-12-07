@@ -15,9 +15,9 @@ function Pengumuman() {
     totalElements: 0,
   });
   const [searchTerm, setSearchTerm] = useState("");
-  const getAll = async () => {
+  const getAll = async (page) => {
     await axios
-      .get(`${API_DUMMY}/bawaslu/api/pengumuman?page=0&size=10&sortBy=id&sortOrder=asc`)
+      .get(`${API_DUMMY}/bawaslu/api/pengumuman?page=${page - 1}&size=${9}&sortBy=id&sortOrder=desc`)
       .then((res) => {
         setPengumuman(res.data.data.content);
         setPaginationInfo({
@@ -77,7 +77,7 @@ function Pengumuman() {
                     </div>
                     <div className="details">
                         <h4 className="titleee" style={{cursor:"pointer"}}>
-                        <a style={{color:"black", textDecoration:"none"}} href={`/pengumuman/${isi.judulPengumuman}/${isi.id}`}>{isi.judulPengumuman}</a>
+                        <a style={{color:"black", textDecoration:"none"}} href={`/pengumuman/${isi.id}`}>{isi.judulPengumuman}</a>
                       </h4>
                       <ul className="blog-meta">
                         <li>

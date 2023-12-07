@@ -29,7 +29,9 @@ function MenuRegulasi() {
   const getMenuRegulasi = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=${param.id}&page=${page - 1}&size=${rowsPerPage}`
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/get-by-jenis-regulasi?id-jenis-regulasi=${
+          param.id
+        }&page=${page - 1}&size=${rowsPerPage}`
       );
       setMenuRegulasi(response.data.data);
       console.log(response.data.data);
@@ -41,7 +43,6 @@ function MenuRegulasi() {
   useEffect(() => {
     getMenuRegulasi(currentPage);
   }, [currentPage, rowsPerPage]);
-
 
   const handleRowsPerPageChange = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
@@ -96,7 +97,7 @@ function MenuRegulasi() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-        <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
@@ -119,9 +120,10 @@ function MenuRegulasi() {
             onChange={handleSearchChange}
           />
           <div class="main-card mb-3 card">
-            <div class="card-header" style={{display:"flex"}}>
-            {menuRegulasi.length > 0 && menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
-            <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+            <div class="card-header" style={{ display: "flex" }}>
+              {menuRegulasi.length > 0 &&
+                menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
+              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
@@ -191,7 +193,10 @@ function MenuRegulasi() {
                             <a
                               style={{ color: "white", textDecoration: "none" }}
                               href={
-                                "/edit-data/" + jenis.menuRegulasi + "/" + jenis.id
+                                "/edit-data/" +
+                                jenis.menuRegulasi +
+                                "/" +
+                                jenis.id
                               }>
                               <i class="fa-solid fa-pen-to-square"></i>
                             </a>
@@ -205,12 +210,7 @@ function MenuRegulasi() {
                           <button type="button" class="btn-info btn-sm">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
-                              href={
-                                "/" +
-                                jenis.menuRegulasi +
-                                "/" +
-                                jenis.id
-                              }>
+                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}>
                               <i class="fas fa-plus"></i>
                             </a>
                           </button>
@@ -221,15 +221,15 @@ function MenuRegulasi() {
                 </tbody>
               </table>
               <div className="card-header mt-3 d-flex justify-content-center">
-              <Pagination
-                count={paginationInfo.totalPages}
-                page={currentPage}
-                onChange={(event, value) => setCurrentPage(value)}
-                showFirstButton
-                showLastButton
-                color="primary"
-              />
-            </div>
+                <Pagination
+                  count={paginationInfo.totalPages}
+                  page={currentPage}
+                  onChange={(event, value) => setCurrentPage(value)}
+                  showFirstButton
+                  showLastButton
+                  color="primary"
+                />
+              </div>
             </div>
           </div>
         </div>
