@@ -156,12 +156,11 @@ function AdminPermohonanInformasi() {
                   </div>
                 </div>
                 <div
-                  class="table-responsive overflow-x-scroll"
-                  style={{ overflowX: "auto" }}
+                  class="table-responsive"
+                  style={{ overflowX: "auto", width:"100%" }}
                 >
                   <table
-                    class="align-middle table mb-0 table table-borderless table-striped table-hover"
-                    style={{ minWidth: "100%" }}
+                  class="align-middle table mb-0 table-borderless table-striped table-hover" style={{width:"full", border:"2px solid red"}}
                   >
                     <thead>
                       <tr>
@@ -180,28 +179,28 @@ function AdminPermohonanInformasi() {
                         <th scope="col" className="text-center">
                           Cara Memperoleh{" "}
                         </th>
-                        <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-center">
                           Cara Mendapat salinan{" "}
-                        </th>
+                        </th> */}
                         <th scope="col" className="text-center">
                           Email{" "}
                         </th>
-                        <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-center">
                           Foto Identitas Pemohon{" "}
-                        </th>
-                        
+                        </th> */}
+
                         <th scope="col" className="text-center">
                           Jenis Identitas
                         </th>
-                        <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-center">
                           Nomor Identitas Pemohon{" "}
-                        </th>
-                        <th scope="col" className="text-center">
+                        </th> */}
+                        {/* <th scope="col" className="text-center">
                           Rincian Yang Dibutuhkan
-                        </th>
-                        <th scope="col" className="text-center">
+                        </th> */}
+                        {/* <th scope="col" className="text-center">
                           Tujuan Penggunaan Informasi
-                        </th>
+                        </th> */}
                         <th scope="col" className="text-center">
                           Aksi
                         </th>
@@ -232,33 +231,33 @@ function AdminPermohonanInformasi() {
                             >
                               <p>{informasi.caraMemperolehInformasi}</p>
                             </td>
-                            <td
+                            {/* <td
                               data-label="tujuan informasi : "
                               className="text-left"
                             >
                               <p>{informasi.caraMendapatSalinanInformasi}</p>
-                            </td>
+                            </td> */}
                             <td
                               data-label="tujuan informasi : "
                               className="text-left"
                             >
                               <p>{informasi.email}</p>
                             </td>
-                            <td data-label="alamat : " className="text-left">
+                            {/* <td data-label="alamat : " className="text-left">
                               <p>{informasi.fotoIdentitas}</p>
-                            </td>
+                            </td> */}
                             <td data-label="email : " className="text-left">
                               <p>{informasi.jenisIdentitas}</p>
                             </td>
-                            <td data-label="email : " className="text-left">
-                              <p>{informasi.nomorIdentitas}</p>
-                            </td>
-                            <td data-label="email : " className="text-left">
+                            {/* <td data-label="email : " className="text-left">
+                              <p>{informasi.nomorIdentitasPemohon}</p>
+                            </td> */}
+                            {/* <td data-label="email : " className="text-left">
                               <p>{informasi.rincianYangDibutuhkan}</p>
-                            </td>
-                            <td data-label="email : " className="text-left">
+                            </td> */}
+                            {/* <td data-label="email : " className="text-left">
                               <p>{informasi.tujuanPenggunaanInformasi}</p>
-                            </td>
+                            </td> */}
                             <td data-label="Aksi : " class="text-center">
                               <button
                                 type="button"
