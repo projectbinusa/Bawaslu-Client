@@ -87,7 +87,7 @@ function EditPengumuman() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Judul Pengumuman
                     </label>
                     <input
@@ -99,7 +99,7 @@ function EditPengumuman() {
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputEmail1" className="form-label">
+                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
                       Penulis Pengumuman
                     </label>
                     <input
@@ -110,7 +110,7 @@ function EditPengumuman() {
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Image
                     </label>
                     <input
@@ -120,8 +120,8 @@ function EditPengumuman() {
                       id="exampleInputPassword1"
                     />
                   </div>
-                  <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                  <div className="mb-3 col-lg-6"> 
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Tags
                     </label>
                     <input
@@ -133,7 +133,7 @@ function EditPengumuman() {
                     />
                   </div>
                   <div className="mb-3 col-lg-12">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Isi Pengumuman
                     </label>
                     <textarea

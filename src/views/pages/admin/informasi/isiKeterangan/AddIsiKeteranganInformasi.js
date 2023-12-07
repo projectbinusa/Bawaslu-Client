@@ -128,7 +128,7 @@ function AddIsiKeteranganInformasi() {
               <form onSubmit={add}>
                 <div className="row">
                   <div className="col-6">
-                    <label className="form-label">Jenis Keterangan</label>
+                    <label className="form-label font-weight-bold">Jenis Keterangan</label>
                     <select
                       className="form-select form-select-sm"
                       aria-label="Small select example"
@@ -143,7 +143,7 @@ function AddIsiKeteranganInformasi() {
                     </select>
                   </div>
                   <div className="mb-3 col-6">
-                    <label for="exampleInputEmail1" className="form-label">
+                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
                       Dokumen
                     </label>
                     <input
@@ -154,6 +154,7 @@ function AddIsiKeteranganInformasi() {
                     />
                   </div>
                   <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
                     <label for="exampleInputEmail1" className="form-label">
                      Link Dokumen
                     </label>

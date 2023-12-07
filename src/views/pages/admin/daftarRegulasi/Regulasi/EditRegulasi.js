@@ -92,7 +92,7 @@ function EditRegulasi() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Menu Regulasi
                     </label>
                     <select
@@ -101,7 +101,7 @@ function EditRegulasi() {
                       aria-label="Small select example"
                       onChange={(e) => setIdMenuRegulasi(e.target.value)}
                       value={idMenuRegulasi}>
-                      <option selected>PIlih Jenis Regulasi</option>
+                      <option selected>Pilih Jenis Regulasi</option>
                       {regulasi.map((down) => {
                         return (
                           <option value={down.id}>{down.menuRegulasi}</option>
@@ -111,7 +111,7 @@ function EditRegulasi() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Dokumen
                     </label>
                     <input
@@ -123,7 +123,7 @@ function EditRegulasi() {
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Gambar Dokumen
                     </label>
                     <input

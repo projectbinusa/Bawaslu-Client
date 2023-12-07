@@ -77,7 +77,8 @@ const FormPermohonaKeberatan = () => {
             <div className="form-permohonan section-title text-center">
               <h5
                 id="text1-gabung"
-                className="sub-title double-line text-center">
+                className="sub-title double-line text-center"
+              >
                 Bawaslu Boyolali
               </h5>
               <h2 id="text2-gabung" className="title text-center">
@@ -96,7 +97,12 @@ const FormPermohonaKeberatan = () => {
                 <div className="display-akhir">
                   <div>
                     {" "}
-                    <p>Nama Pemohon:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Nama Pemohon :
+                    </label>{" "}
                     <input
                       className="input form-control"
                       type="text"
@@ -105,7 +111,12 @@ const FormPermohonaKeberatan = () => {
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
-                    <p>Alamat Pemohon:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Alamat Pemohon :
+                    </label>{" "}
                     <textarea
                       className="textarea"
                       value={alamatPemohon}
@@ -113,12 +124,18 @@ const FormPermohonaKeberatan = () => {
                     />
                     <p className="pp">0 of 60 max characters</p>
                     <br></br>
-                    <p>Jenis Identitas Pemohon:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Jenis Identitas Pemohon :
+                    </label>{" "}
                     <select
                       onChange={(e) => setJenisIdentitas(e.target.value)}
                       value={jenisIdentitas}
                       class="form-select"
-                      aria-label="Default select example">
+                      aria-label="Default select example"
+                    >
                       <option selected>Pilih Jenis Identitas</option>
                       <option value="KTP">KTP (Kartu Tanda Penduduk)</option>
                       <option value="SIM">SIM (Surat Izin Mengemudi)</option>
@@ -127,7 +144,12 @@ const FormPermohonaKeberatan = () => {
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
                     <br></br>
-                    <p>Nomor Telp/HP:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Nomor Tlp/Hp :{" "}
+                    </label>{" "}
                     <input
                       className="input form-control"
                       type="number"
@@ -136,7 +158,12 @@ const FormPermohonaKeberatan = () => {
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br />
-                    <p>Kasus Posisi:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Kasus Posisi :{" "}
+                    </label>{" "}
                     <textarea
                       className="textarea"
                       type="text"
@@ -146,7 +173,12 @@ const FormPermohonaKeberatan = () => {
                     <p className="pp">0 of 100 max characters</p>
                   </div>
                   <div className="div-email">
-                    <p>Nomor Identitas Pemohon:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Nomor Identitas Pemohon :{" "}
+                    </label>{" "}
                     <input
                       className="input form-control"
                       type="number"
@@ -155,7 +187,12 @@ const FormPermohonaKeberatan = () => {
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
-                    <p>Email:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Email :{" "}
+                    </label>{" "}
                     <input
                       className="form-control"
                       type="email"
@@ -164,9 +201,13 @@ const FormPermohonaKeberatan = () => {
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
-
                     <br></br>
-                    <p>Tujuan Penggunaan Informasi:</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Tujuan Penggunaan Informasi :
+                    </label>{" "}
                     <textarea
                       className="textarea"
                       value={tujuanPenggunaanInformasi}
@@ -176,12 +217,20 @@ const FormPermohonaKeberatan = () => {
                     />
                     <p className="pp">0 of 100 max characters</p>
                     <br></br>
-                    <p>Alasan Pengajuan Keberatan</p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Alesan Pengajuan Keberatan :{" "}
+                    </label>{" "}
                     <select
                       value={alasanPengajuanKeberatan}
-                      onChange={(e) => setAlasanPengajuanKeberatan(e.target.value)}
+                      onChange={(e) =>
+                        setAlasanPengajuanKeberatan(e.target.value)
+                      }
                       class="form-select"
-                      aria-label="Default select example">
+                      aria-label="Default select example"
+                    >
                       <option selected>Pilih Pengajuan Keberatan</option>
                       <option value="Permohonan Informasi Ditolak">
                         Permohonan Informasi Ditolak
@@ -210,7 +259,12 @@ const FormPermohonaKeberatan = () => {
                     <p className="pp">0 of 100 max characters</p>
                     <br></br>
                     <br></br>
-                    <p>Upload Photo Identitas (.jpg) size max 1mb </p>
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold"
+                    >
+                      Upload Foto Identitas Pemohon (.jpg) size max 1 mb :
+                    </label>{" "}
                     <div className="input-type">
                       {" "}
                       <div className="input-type">

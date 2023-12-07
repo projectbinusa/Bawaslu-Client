@@ -81,7 +81,7 @@ function AddRegulasi() {
               <form onSubmit={addData}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Jenis Regulasi
                     </label>
                     <select
@@ -98,7 +98,7 @@ function AddRegulasi() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Dokumen
                     </label>
                     <input
@@ -110,7 +110,7 @@ function AddRegulasi() {
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Gambar Dokumen
                     </label>
                     <input
