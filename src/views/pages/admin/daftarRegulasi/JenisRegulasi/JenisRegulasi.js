@@ -5,6 +5,7 @@ import { API_DUMMY } from "../../../../../utils/base_URL";
 import Sidebar from "../../../../../component/Sidebar";
 import Header from "../../../../../component/Header";
 import Swal from "sweetalert2";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 function JenisRegulasi() {
   const [list, setList] = useState([]);
@@ -16,6 +17,7 @@ function JenisRegulasi() {
     totalElements: 0,
   });
   const [searchTerm, setSearchTerm] = useState("");
+  const history = useHistory();
 
   const getAll = async (page) => {
     try {
@@ -85,6 +87,7 @@ function JenisRegulasi() {
         });
       }
       setTimeout(() => {
+        history.push("/jenis-regulasi");
         window.location.reload();
       }, 1500);
     });

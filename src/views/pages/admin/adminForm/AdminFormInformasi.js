@@ -120,6 +120,7 @@ function AdminFormInformasi() {
           timer: 1500,
         });
         setTimeout(() => {
+          history.push("/admin-permohonan-informsi");
           window.location.reload();
         }, 1500);
       } else {

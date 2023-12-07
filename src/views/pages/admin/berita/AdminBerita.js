@@ -38,6 +38,7 @@ function AdminBerita() {
   });
   const [searchResults1, setSearchResults1] = useState([]);
   const [searchTerm1, setSearchTerm1] = useState("");
+  const history = useHistory();
 
   const getAll = async (page) => {
     try {
@@ -105,6 +106,7 @@ function AdminBerita() {
             });
 
             setTimeout(() => {
+              history.push("/admin-berita");
               window.location.reload();
             }, 1500);
           });
@@ -139,6 +141,7 @@ function AdminBerita() {
             });
 
             setTimeout(() => {
+              history.push("/admin-berita");
               window.location.reload();
             }, 1500);
           });
