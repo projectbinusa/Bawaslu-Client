@@ -176,26 +176,26 @@ function AdminPermohonanInformasi() {
                         <th scope="col" className="text-center">
                           Cara Memperoleh{" "}
                         </th>
-                        <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-center">
                           Cara Mendapat salinan{" "}
-                        </th>
+                        </th> */}
                         <th scope="col" className="text-center">
                           Email{" "}
                         </th>
-                        <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-center">
                           Foto Identitas Pemohon{" "}
                         </th>
 
                         {/* <th scope="col" className="text-center">
                           Jenis Identitas
                         </th>
-                        <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-center">
                           Nomor Identitas Pemohon{" "}
-                        </th>
-                        <th scope="col" className="text-center">
+                        </th> */}
+                        {/* <th scope="col" className="text-center">
                           Rincian Yang Dibutuhkan
-                        </th>
-                        <th scope="col" className="text-center">
+                        </th> */}
+                        {/* <th scope="col" className="text-center">
                           Tujuan Penggunaan Informasi
                         </th> */}
                         <th scope="col" className="text-center">
@@ -227,11 +227,11 @@ function AdminPermohonanInformasi() {
                               className="text-left">
                               <p>{informasi.caraMemperolehInformasi}</p>
                             </td>
-                            <td
+                            {/* <td
                               data-label="tujuan informasi : "
                               className="text-left">
                               <p>{informasi.caraMendapatSalinanInformasi}</p>
-                            </td>
+                            </td> */}
                             <td
                               data-label="tujuan informasi : "
                               className="text-left">
@@ -247,13 +247,13 @@ function AdminPermohonanInformasi() {
                             {/* <td data-label="email : " className="text-left">
                               <p>{informasi.jenisIdentitas}</p>
                             </td>
-                            <td data-label="email : " className="text-left">
-                              <p>{informasi.nomorIdentitas}</p>
-                            </td>
-                            <td data-label="email : " className="text-left">
+                            {/* <td data-label="email : " className="text-left">
+                              <p>{informasi.nomorIdentitasPemohon}</p>
+                            </td> */}
+                            {/* <td data-label="email : " className="text-left">
                               <p>{informasi.rincianYangDibutuhkan}</p>
-                            </td>
-                            <td data-label="email : " className="text-left">
+                            </td> */}
+                            {/* <td data-label="email : " className="text-left">
                               <p>{informasi.tujuanPenggunaanInformasi}</p>
                             </td> */}
                             <td data-label="Aksi : " class="text-center">

@@ -67,7 +67,7 @@ function MenuEditRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-      history.push("/");
+      history.push("/admin-regulasi/" + menuRegulasi);
       setTimeout(() => {
         window.location.reload();
       }, 1500);
