@@ -21,7 +21,7 @@ function Dip() {
               <div id="display" className="col-lg-12">
                 <div
                   id="widht"
-                  className="isotope-filters project-isotope-btn text-left mb-5"
+                  className="button-dik isotope-filters project-isotope-btn text-left mb-5"
                 >
                   {/* {list.map((menu) => {
                     return (

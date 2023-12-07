@@ -18,6 +18,12 @@
     .text2-gabung{
         text-align: center;
     }
+    #thumb{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 320px) {

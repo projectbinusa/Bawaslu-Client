@@ -9,10 +9,7 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
-
-import "../../../../../../src/css/adminBerita.css";
-
-import Pagination from "@mui/material/Pagination";
+import { Pagination } from "@mui/material";
 
 function IsiKeterangan() {
   const [jenisKeteranganIsiInformasi, setJenisKeteranganIsiInformasi] =
@@ -126,11 +123,12 @@ function IsiKeterangan() {
                 <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div className="col-auto">
+                <div class="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -140,7 +138,7 @@ function IsiKeterangan() {
               <div className="d-flex ml-auto gap-3">
                 <input
                   type="search"
-                  className="form-control widget-content-right w-75 d-lg-block d-none"
+                  className="form-control widget-content-right w-75"
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={handleSearchChange}
@@ -149,13 +147,123 @@ function IsiKeterangan() {
                   <div role="group" className="btn-group-sm btn-group">
                     <button className="active btn-focus p-2 rounded">
                       <a
-                        href={"/add-isi-keterangan"}
+                        href={`/tambah-isi-keterangan/${param.id}`}
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
-                        {" "}
+                        style={{ textDecoration: "none" }}
+                      >
                         Tambah Data
                       </a>
                     </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="table-responsive"
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col" className="text-left">
+                      No
+                    </th>
+                    <th scope="col" className="text-left">
+                      Dokumen
+                    </th>
+                    <th scope="col" className="text-center">
+                      Aksi
+                    </th>
+                  </tr>
+                </thead>
+               
+                <thead>
+                  {Array.isArray(jenisKeteranganIsiInformasi) &&
+                    jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
+                      <tr key={index}>
+                        <td className="text-left">{index + 1}</td>
+                        <td className="text-left">{isiInformasi.dokumen}</td>
+                        <td class="text-center">
+                          <button type="button" class="btn-primary btn-sm mr-2"><a style={{color:"white", textDecoration:"none"}} href={`/edit-isi-keterangan/${isiInformasi.id}`}>
+                            <i class="fa-solid fa-pen-to-square"></i></a>
+                          </button>
+                          <button
+                            type="button"
+                            className="btn-danger btn-sm"
+                            onClick={() => deleteData(isiInformasi.id)}
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                        ))}
+                    </thead>
+                  
+                    <tbody>
+                      {Array.isArray(jenisKeteranganIsiInformasi) &&
+                        jenisKeteranganIsiInformasi.map(
+                          (isiInformasi, index) => (
+                            <tr key={index}>
+                              <td data-label="No : " className="text-left">
+                                {index + 1}
+                              </td>
+                              <td data-label="dokumen : " className="text-left">
+                                {isiInformasi.dokumen}
+                              </td>
+                              <td data-label="Aksi : " class="text-center">
+                                <button
+                                  type="button"
+                                  class="btn-primary btn-sm mr-2">
+                                  <a
+                                    style={{
+                                      color: "white",
+                                      textDecoration: "none",
+                                    }}
+                                    href={`/edit-isi-keterangan/${isiInformasi.id}`}>
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                  </a>
+                                </button>
+                              </td>
+
+                              <td className="text-left">{index + 1}</td>
+                              <td className="text-left">
+                                {isiInformasi.dokumen}
+                              </td>
+                              <td className="text-center">
+                                <button
+                                  type="button"
+                                  className="btn-primary btn-sm mr-2">
+                                  <a
+                                    style={{
+                                      color: "white",
+                                      textDecoration: "none",
+                                    }}
+                                    href={`/edit-isi-keterangan/${isiInformasi.id}`}>
+                                    <i className="fa-solid fa-pen-to-square"></i>
+                                  </a>
+                                </button>
+                                <button
+                                  type="button"
+                                  className="btn-danger btn-sm"
+                                  onClick={() => deleteData(isiInformasi.id)}>
+                                  <i className="fa-solid fa-trash"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          )
+                        )}
+                    </tbody>
+                  </table>
+                  <div className="card-header mt-3 d-flex justify-content-center">
+                    <Pagination
+                      count={paginationInfo.totalPages}
+                      page={currentPage}
+                      onChange={(event, value) => setCurrentPage(value)}
+                      showFirstButton
+                      showLastButton
+                      color="primary"
+                    />
+                    <div></div>
                   </div>
                 </div>
               </div>
@@ -210,8 +318,7 @@ function IsiKeterangan() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+   
   );
 }
 

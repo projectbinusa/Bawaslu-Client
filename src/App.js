@@ -119,7 +119,7 @@ function App() {
           <Route path="/berita" component={Berita} exact />
           <Route path="/edit-category-berita/:id" component={EditCategory} exact />
           {/* daftar informasi */}
-          <Route path="/informasi-serta-merta" component={SertaMerta} exact />
+          <Route path="/informasi/:namaInformasi/:id" component={Informasii} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
@@ -164,14 +164,12 @@ function App() {
             exact
           />
           {/* daftar regulasi */}
-          <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi" component={Regulasi} exact />
-          <Route path="/dip" component={Dip} exact />
-          <Route
-            path="/standar-operasional-prosedur"
-            component={InformasiStandarProsedur}
-            exact
-          />
+
+          <PrivateRoute path="/regulasi/:menuRegulasi/:id" component={RegulasiAdmin} exact />
+          <Route path="/menu-regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
+        
+           
+          
           {/* admin */}
           <PrivateRoute
             path="/admin-permohonan-informsi"
