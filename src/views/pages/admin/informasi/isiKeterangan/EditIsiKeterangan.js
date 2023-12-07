@@ -45,12 +45,15 @@ function EditIsiKeterangan() {
 
     await axios
       .put(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/${param.id}?dokumen=${dokumen}&jenisKeteranganId=${jenisKeteranganId}`,
-        formData ,
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + param.id , {
+          dokumen: dokumen,
+          pdfDokumen: pdfDokumen,
+          jenisKeteranganId: jenisKeteranganId,
+        },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+            // "Content-Type": "multipart/form-data",
           },
         }
       )
@@ -74,7 +77,11 @@ function EditIsiKeterangan() {
   const getKeterangan = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/all`
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/all`, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
       );
       setKeterangan(response.data.data);
       console.log(response.data.data);
@@ -101,13 +108,13 @@ function EditIsiKeterangan() {
                 <div className="row">
                   <div className="col-6">
                     <label className="form-label">Jenis Keterangan</label>
-                    <input
+                    {/* <input
                       className="form-control"
                       type="text"
                       value={jenisKeteranganId}
                       onChange={(e) => setJenisKeteranganId(e.target.value)}
-                    />
-                    {/* <select
+                    /> */}
+                    <select disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setJenisKeteranganId(e.target.value)}
@@ -118,7 +125,7 @@ function EditIsiKeterangan() {
                           <option value={down.id}>{down.keterangan}</option>
                         );
                       })}
-                    </select> */}
+                    </select>
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
@@ -133,6 +140,17 @@ function EditIsiKeterangan() {
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
+                     Link Dokumen
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={pdfDokumen}
+                      onChange={(e) => setPdfDokumen(e.target.value)}
+                    />
+                  </div>
+                  {/* <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       File
                     </label>
                     <input
@@ -140,7 +158,7 @@ function EditIsiKeterangan() {
                       type="file"
                       className="form-control"
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a href="" style={{ color: "white", textDecoration: "none" }}>

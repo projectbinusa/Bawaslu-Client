@@ -68,18 +68,19 @@ function AddIsiKeteranganInformasi() {
     e.persist();
 
     const formData = new FormData();
-    formData.append("dokumen", dokumen);
-    formData.append("jenisKeteranganId", jenisKeterangan);
-    formData.append("upload", pdfDokumen);
 
     try {
       const response = await axios.post(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/add`,
-        formData,
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/add`, {
+          dokumen: dokumen,
+          pdfDokumen: pdfDokumen,
+          jenisKeterangan: jenisKeterangan,
+        },
+        // formData,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
-            "Content-Type": "multipart/form-data",
+            // "Content-Type": "multipart/form-data",
           },
         }
       );
@@ -154,6 +155,17 @@ function AddIsiKeteranganInformasi() {
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
+                     Link Dokumen
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={pdfDokumen}
+                      onChange={(e) => setPdfDokumen(e.target.value)}
+                    />
+                  </div>
+                  {/* <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       File
                     </label>
                     <input
@@ -161,7 +173,7 @@ function AddIsiKeteranganInformasi() {
                       type="file"
                       className="form-control"
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a

@@ -55,14 +55,14 @@ function DetailPengumuman() {
                   />
                 ) : (
                   <img
-                    style={{ maxWidth: "400px", maxHeight: "400px", minWidth:"350px" }}
+                    style={{ maxWidth: "400px", maxHeight: "400px", minWidth:"350px", minHeight:"350px" }}
                     className="w-75 mr-auto ml-auto"
                     src={file}
                   />
                 )}
               </form>
             </div>
-            <form className="card card-body p-2" style={{ width: "100%" }}>
+            <form className="card card-body p-2">
               <div class="mb-3">
                 <label class="form-label">Author</label>
                 <input
@@ -83,7 +83,7 @@ function DetailPengumuman() {
               </div>
               <div class="mb-3">
                 <label class="form-label">Isi Pengumuman</label>
-                <textarea class="form-control" defaultValue={isiPengumuman} readOnly />
+                <textarea class="form-control" defaultValue={isiPengumuman} rows="5" readOnly/>
               </div>
               <div class="mb-3">
                 <label class="form-label">Tags</label>

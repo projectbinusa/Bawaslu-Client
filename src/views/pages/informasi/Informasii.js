@@ -45,7 +45,7 @@ function Informasii() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-keterangan/${tableId}/isi-informasi?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
 
       setIsi(response.data.data.content);
@@ -111,7 +111,7 @@ function Informasii() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-keterangan/${selectedTableId}/isi-informasi?page=${
           currentPage - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
 
       const imageData = response.data.data.content;
