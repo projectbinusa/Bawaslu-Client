@@ -32,8 +32,8 @@ function AddJenisRegulasi() {
         timer: 1500,
       });
       // //console.log(data);
-      history.push("/jenis-regulasi");
       setTimeout(() => {
+        history.push("/jenis-regulasi");
         window.location.reload();
       }, 1500);
     } catch (error) {
