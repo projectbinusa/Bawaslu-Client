@@ -67,7 +67,7 @@ function MenuEditRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-
+      history.push("/");
       setTimeout(() => {
         window.location.reload();
       }, 1500);

@@ -51,7 +51,7 @@ function RekapBerita() {
                     </div>
                     <div className="media-body align-self-center">
                       <h6 className="fs-4 title">
-                        <a href={`/isi-rekap/${berita.judulBerita}/${berita.id}`}>
+                        <a href={`/isi-rekap/data-berita/${berita.id}`}>
                           {berita.judulBerita}
                         </a>
                       </h6>

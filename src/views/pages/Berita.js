@@ -313,7 +313,7 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a
-                            href={`/page-isi-berita/${berita.judulBerita}/${berita.id}`}>
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}>
                             {berita.judulBerita}
                           </a>
 
@@ -443,7 +443,7 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href={`/Page-Berita/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
+                                  <a href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>

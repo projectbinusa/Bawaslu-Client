@@ -69,7 +69,7 @@ function PageBerita() {
         setImage(response.image);
         setTagsBerita(response.tagsBerita);
         setCategoryBerita(response.categoryBerita);
-        setCreateDate(response.creteDate);
+        setCreateDate(response.cretedDate);
         console.log(ress.data.data);
       })
       .catch((error) => {
@@ -200,7 +200,7 @@ function PageBerita() {
                           </div>
                           <div class="media-body">
                             <p>
-                              <a href={`/page-berita/${category.judulBerita}/${category.id}`}>{category.judulBerita} </a>
+                              <a href={`/page-isi-berita/${category.author}/${category.id}`}>{category.judulBerita} </a>
                             </p>
                           </div>
                         </div>

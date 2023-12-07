@@ -169,15 +169,16 @@ function AdminPengumuman() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
-                <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                style={{overflowX: "auto", width:"100%" }}>
+                <table className="align-middle mb-0 table table-borderless table-striped table-hover"
+                style={{  }}>
                   <thead>
                     <tr>
                       <th scope="col">No</th>
                       <th scope="col">Judul Pengumuman</th>
-                      <th scope="col">Penulis</th>
-                      <th scope="col">Tanggal Dibuat</th>
                       <th scope="col">Image</th>
+                      <th scope="col">Tanggal Dibuat</th>
+                      <th scope="col">Penulis</th>
                       <th scope="col" className="text-center">
                         Aksi
                       </th>
@@ -204,9 +205,10 @@ function AdminPengumuman() {
                           </td>
                           <td data-label="tags : ">{pengumuman.tags}</td>
                           <td data-label="Aksi : " className="aksi">
+                            <div className="d-flex">
                             <button
                               type="button"
-                              className=".responsive-buttons btn-primary btn-sm mr-2">
+                              className=".responsive-buttons  btn-primary btn-sm mr-2">
                               <a
                                 style={{
                                   color: "white",
@@ -218,7 +220,7 @@ function AdminPengumuman() {
                             </button>
                             <button
                               type="button"
-                              class="btn-warning mr-2 btn-sm">
+                              class="btn-warning  mr-2 btn-sm">
                               <a
                                 className="text-light"
                                 href={"/detail-pengumuman/" + pengumuman.id}>
@@ -227,10 +229,11 @@ function AdminPengumuman() {
                             </button>
                             <button
                               type="button"
-                              className=" btn-danger btn-sm"
+                              className=" btn-danger  btn-sm"
                               onClick={() => deleteData(pengumuman.id)}>
                               <i className="fa-solid fa-trash"></i>
                             </button>
+                            </div>
                           </td>
                         </tr>
                       );

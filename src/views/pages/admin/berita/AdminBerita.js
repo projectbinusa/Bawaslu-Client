@@ -275,7 +275,7 @@ function AdminBerita() {
                     <th scope="col" className="text-center">
                       No
                     </th>
-                    <th scope="col" className="text-center">
+                    <th scope="col" className="text-left">
                       Judul Berita
                     </th>
                     {/* <th scope="col" className="text-center">
@@ -300,12 +300,12 @@ function AdminBerita() {
                   {list.map((berita, no) => {
                     return (
                       <tr key={no}>
-                        <td data-label="No">{no + 1}</td>
-                        <td data-label="Judul Berita">{berita.judulBerita}</td>
+                        <td data-label="No" className="">{no + 1}</td>
+                        <td data-label="Judul Berita" className="align-justify">{berita.judulBerita}</td>
                         {/* <td data-label="">{berita.isiBerita}</td> */}
-                        <td data-label="Penulis Berita">{berita.author}</td>
-                        <td data-label="Created Dtae">{berita.createdDate}</td>
-                        <td data-label="Image">
+                        <td data-label="Penulis Berita" className="text-center">{berita.author}</td>
+                        <td data-label="Created Dtae" className="text-center">{berita.createdDate}</td>
+                        <td data-label="Image" className="text-center">
                           <img
                             src={berita.image}
                             alt="berita-image"

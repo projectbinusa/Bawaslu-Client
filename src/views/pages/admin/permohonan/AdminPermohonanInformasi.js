@@ -110,8 +110,7 @@ function AdminPermohonanInformasi() {
                   <select
                     className="form-select form-select-xl w-auto"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}
-                  >
+                    value={rowsPerPage}>
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -136,8 +135,7 @@ function AdminPermohonanInformasi() {
                       <select
                         className="form-select form-select-sm"
                         onChange={handleRowsPerPageChange}
-                        value={rowsPerPage}
-                      >
+                        value={rowsPerPage}>
                         <option value={5}>5</option>
                         <option value={10}>10</option>
                         <option value={20}>20</option>
@@ -157,12 +155,10 @@ function AdminPermohonanInformasi() {
                 </div>
                 <div
                   class="table-responsive overflow-x-scroll"
-                  style={{ overflowX: "auto" }}
-                >
+                  style={{ overflowX: "auto" }}>
                   <table
                     class="align-middle table mb-0 table table-borderless table-striped table-hover"
-                    style={{ minWidth: "100%" }}
-                  >
+                    style={{ width: "100%", overflowY: "scroll" }}>
                     <thead>
                       <tr>
                         <th scope="col" className="text-center">
@@ -171,12 +167,12 @@ function AdminPermohonanInformasi() {
                         <th scope="col" className="text-center">
                           Nama
                         </th>
-                        <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-center">
                           No Hp
                         </th>
                         <th scope="col" className="text-center">
                           Alamat Pemohon
-                        </th>
+                        </th> */}
                         <th scope="col" className="text-center">
                           Cara Memperoleh{" "}
                         </th>
@@ -189,8 +185,8 @@ function AdminPermohonanInformasi() {
                         <th scope="col" className="text-center">
                           Foto Identitas Pemohon{" "}
                         </th>
-                        
-                        <th scope="col" className="text-center">
+
+                        {/* <th scope="col" className="text-center">
                           Jenis Identitas
                         </th>
                         <th scope="col" className="text-center">
@@ -201,7 +197,7 @@ function AdminPermohonanInformasi() {
                         </th>
                         <th scope="col" className="text-center">
                           Tujuan Penggunaan Informasi
-                        </th>
+                        </th> */}
                         <th scope="col" className="text-center">
                           Aksi
                         </th>
@@ -217,37 +213,38 @@ function AdminPermohonanInformasi() {
                             <td data-label="Nama : " className="text-left">
                               <p>{informasi.namaPemohon}</p>
                             </td>
-                            <td data-label="No tlp : " className="text-left">
+                            {/* <td data-label="No tlp : " className="text-left">
                               <p>{informasi.noTlp}</p>
-                            </td>
-                            <td
+                            </td> */}
+                            {/* <td
                               data-label="alamat pemohon : "
                               className="text-left"
                             >
                               <p>{informasi.alamatPemohon}</p>
-                            </td>
+                            </td> */}
                             <td
                               data-label="rincian informasi : "
-                              className="text-left"
-                            >
+                              className="text-left">
                               <p>{informasi.caraMemperolehInformasi}</p>
                             </td>
                             <td
                               data-label="tujuan informasi : "
-                              className="text-left"
-                            >
+                              className="text-left">
                               <p>{informasi.caraMendapatSalinanInformasi}</p>
                             </td>
                             <td
                               data-label="tujuan informasi : "
-                              className="text-left"
-                            >
+                              className="text-left">
                               <p>{informasi.email}</p>
                             </td>
                             <td data-label="alamat : " className="text-left">
-                              <p>{informasi.fotoIdentitas}</p>
+                              <img
+                                style={{ width: "100px" }}
+                                src={informasi.fotoIdentitas}
+                                alt=""
+                              />
                             </td>
-                            <td data-label="email : " className="text-left">
+                            {/* <td data-label="email : " className="text-left">
                               <p>{informasi.jenisIdentitas}</p>
                             </td>
                             <td data-label="email : " className="text-left">
@@ -258,27 +255,24 @@ function AdminPermohonanInformasi() {
                             </td>
                             <td data-label="email : " className="text-left">
                               <p>{informasi.tujuanPenggunaanInformasi}</p>
-                            </td>
+                            </td> */}
                             <td data-label="Aksi : " class="text-center">
                               <button
                                 type="button"
-                                class="btn-warning mr-2 btn-sm"
-                              >
+                                class="btn-warning mr-2 btn-sm">
                                 <a
                                   className="text-light"
                                   href={
-                                    "/detail-permohonan-informasi/" +
+                                    "/detail/permohonan-informasi/" +
                                     informasi.id
-                                  }
-                                >
+                                  }>
                                   <i class="fas fa-info-circle"></i>
                                 </a>
                               </button>
                               <button
                                 type="button"
                                 class="btn-danger btn-sm"
-                                onClick={() => delete informasi.id}
-                              >
+                                onClick={() => delete informasi.id}>
                                 <i class="fa-solid fa-trash"></i>
                               </button>
                             </td>
