@@ -21,7 +21,7 @@ function JenisInformasi() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=${
           currentPage - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data);
       setPaginationInfo({

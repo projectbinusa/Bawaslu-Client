@@ -16,6 +16,7 @@ function IsiPengumuman() {
   const [image, setImage] = useState("");
   const params = useParams();
   const [id, setId] = useState();
+
   useEffect(() => {
     axios
       .get(`${API_DUMMY}/bawaslu/api/pengumuman/get/` + params.id)
@@ -57,32 +58,6 @@ function IsiPengumuman() {
   return (
     <div>
       <Navbar />
-      {/* <!-- page title start --> */}
-      <div
-        class="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}>
-        <div
-          class="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-8">
-              <div class="breadcrumb-inner text-center">
-                <h2 class="page-title">Pengumuman</h2>
-                <ul class="page-list">
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>Pengumuman</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* <!-- page title end --> */}
 
       {/* <!-- blog area start --> */}
       <div class="blog-area pd-top-120 pd-bottom-120">
@@ -94,7 +69,7 @@ function IsiPengumuman() {
                   <div class="thumb">
                     <img
                       className="pengumuman"
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230819093248.jpg"
+                      src={image}
                       alt="img"
                     />
                   </div>
@@ -108,6 +83,7 @@ function IsiPengumuman() {
                         {createdDate}
                       </li>
                     </ul>
+                    <h4 className="title">{judulPengumuman}</h4>
                     <p>{isiPengumuman}</p>
                   </div>
                   <br />
@@ -125,7 +101,7 @@ function IsiPengumuman() {
                             <div class="media-body">
                               <p>
                                 <a
-                                  href={`/isi-pengumuman/${isi.isiPengumuman}/${isi.id}`}>
+                                  href={`/pengumuman/${isi.id}`}>
                                   {isi.judulPengumuman}
                                 </a>
                               </p>

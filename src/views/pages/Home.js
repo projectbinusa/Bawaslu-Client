@@ -27,7 +27,7 @@ function Home() {
   const getAllInformasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=10&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=10&sortBy=id&sortOrder=desc`
       );
       setInformasi(response.data.data);
       console.log(response.data.data);
@@ -41,7 +41,7 @@ function Home() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita/all?page=${
           page - 1
-        }&size=5&sortBy=id&sortOrder=asc`
+        }&size=5&sortBy=id&sortOrder=desc`
       );
 
       setList(response.data.data.content);
@@ -170,7 +170,7 @@ function Home() {
                       <div className="media-left">
                         <img
                           style={{ width: "200px" }}
-                          src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                          src={berita.image}
                           alt="blog"
                         />
                       </div>
@@ -178,7 +178,7 @@ function Home() {
                         BY {berita.author}
                         <h6 className="fs-6 title">
                           <a
-                            href={`/page-berita/${berita.judulBerita}/${berita.id}`}
+                            href={`/page-isi-berita/${berita.id}`}
                           >
                             {berita.judulBerita}
                           </a>

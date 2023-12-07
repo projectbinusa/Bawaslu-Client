@@ -65,7 +65,7 @@ function Navbar() {
   const getInformasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=10&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=10&sortBy=id&sortOrder=desc`
       );
       setInformasi(response.data.data);
       console.log(response.data.data);
@@ -262,8 +262,9 @@ function Navbar() {
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
                   </li>
                 </ul> */}
-                <ul class="sub-menu">
-                  {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
+                <ul  class={`${isMobile ? "collapse" : "sub-menu"}`}
+                  id="submenu"
+                  data-bs-parent="#menu">
                   <li>
                     <a href="/informasi-serta-merta">Informasi Serta Merta</a>
                   </li>

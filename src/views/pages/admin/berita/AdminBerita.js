@@ -44,7 +44,7 @@ function AdminBerita() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/berita/all?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data.content);
       console.log(response.data.data.content);
