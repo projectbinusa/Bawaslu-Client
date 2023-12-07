@@ -74,7 +74,7 @@ function Library() {
                 <h2 className="title">Buku Bawaslu Kabupaten Boyolali</h2>
                 <p className="content">
                   Melalui website ini, Bawaslu Kabupaten Boyolali akan selalu
-                  memperbaharui informasi terkait pengawasan dan pemantauan
+                  memperbabarui {" "} informasi terkait pengawasan dan pemantauan
                   pemilu.
                 </p>
               </div>
