@@ -69,6 +69,8 @@ function MenuEditRegulasi() {
       });
 
       setTimeout(() => {
+        history.push("/admin-regulasi/" + idJenisRegulasi);
+
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -92,7 +94,7 @@ function MenuEditRegulasi() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label for="exampleInputPassword1" className="form-label">
                       Jenis Regulasi
                     </label>
                     <select
@@ -100,6 +102,7 @@ function MenuEditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}
+                      value={idJenisRegulasi}
                     >
                       <option selected>Pilih Jenis Regulasi</option>
                       {jenisRegulasi.map((down) => {
@@ -111,7 +114,7 @@ function MenuEditRegulasi() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label for="exampleInputPassword1" className="form-label">
                       Menu Regulasi
                     </label>
                     <input

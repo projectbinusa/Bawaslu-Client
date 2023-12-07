@@ -55,8 +55,8 @@ function AddMenuRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-      history.push("/admin-regulasi/" + idJenisRegulasi);
       setTimeout(() => {
+        history.push("/admin-regulasi/" + idJenisRegulasi);
         window.location.reload();
       }, 1500);
     } catch (error) {

@@ -69,6 +69,7 @@ function EditRegulasi() {
       });
 
       setTimeout(() => {
+        history.push("/rugulasi/:menuRegulasi/:id");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -92,7 +93,7 @@ function EditRegulasi() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label for="exampleInputPassword1" className="form-label">
                       Menu Regulasi
                     </label>
                     <select
@@ -100,8 +101,9 @@ function EditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdMenuRegulasi(e.target.value)}
-                      value={idMenuRegulasi}>
-                      <option selected>Pilih Jenis Regulasi</option>
+                      value={idMenuRegulasi}
+                    >
+                      <option selected>PIlih Jenis Regulasi</option>
                       {regulasi.map((down) => {
                         return (
                           <option value={down.id}>{down.menuRegulasi}</option>
@@ -111,7 +113,7 @@ function EditRegulasi() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label for="exampleInputPassword1" className="form-label">
                       Dokumen
                     </label>
                     <input
@@ -123,7 +125,7 @@ function EditRegulasi() {
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label for="exampleInputPassword1" className="form-label">
                       Gambar Dokumen
                     </label>
                     <input
@@ -137,7 +139,8 @@ function EditRegulasi() {
                 <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
                     href={"/regulasi/"}
-                    style={{ color: "white", textDecoration: "none" }}>
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
                     {" "}
                     Batal
                   </a>

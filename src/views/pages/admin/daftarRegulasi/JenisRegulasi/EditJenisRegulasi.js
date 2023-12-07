@@ -55,8 +55,8 @@ function EditJenisRegulasi() {
             showConfirmButton: false,
             timer: 1500,
           });
-          history.push("/jenis-regulasi");
           setTimeout(() => {
+            history.push("/jenis-regulasi");
             window.location.reload();
           }, 1500);
         });
