@@ -110,7 +110,8 @@ function AdminPermohonanInformasi() {
                   <select
                     className="form-select form-select-xl w-auto"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -135,7 +136,8 @@ function AdminPermohonanInformasi() {
                       <select
                         className="form-select form-select-sm"
                         onChange={handleRowsPerPageChange}
-                        value={rowsPerPage}>
+                        value={rowsPerPage}
+                      >
                         <option value={5}>5</option>
                         <option value={10}>10</option>
                         <option value={20}>20</option>
@@ -143,23 +145,24 @@ function AdminPermohonanInformasi() {
                     </div>
                   </div>
                   <div className="d-flex ml-auto gap-3">
-                <input
-                  type="search"
-                  className="form-control widget-content-right w-100 d-lg-block d-none d-md-none"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
-                <div className="btn-actions-pane-right">
-                </div>
-              </div>
+                    <input
+                      type="search"
+                      className="form-control widget-content-right w-100 d-lg-block d-none d-md-none"
+                      placeholder="Search..."
+                      value={searchTerm}
+                      onChange={handleSearchChange}
+                    />
+                    <div className="btn-actions-pane-right"></div>
+                  </div>
                 </div>
                 <div
                   class="table-responsive overflow-x-scroll"
-                  style={{ overflowX: "auto" }}>
+                  style={{ overflowX: "auto" }}
+                >
                   <table
                     class="align-middle table mb-0 table table-borderless table-striped table-hover"
-                    style={{ minWidth: "100%" }}>
+                    style={{ minWidth: "100%" }}
+                  >
                     <thead>
                       <tr>
                         <th scope="col" className="text-center">
@@ -172,19 +175,32 @@ function AdminPermohonanInformasi() {
                           No Hp
                         </th>
                         <th scope="col" className="text-center">
-                          Pekerjaan
+                          Alamat Pemohon
                         </th>
                         <th scope="col" className="text-center">
-                          Rincian Informasi
+                          Cara Memperoleh{" "}
                         </th>
                         <th scope="col" className="text-center">
-                          Tujuan Informasi
+                          Cara Mendapat salinan{" "}
                         </th>
                         <th scope="col" className="text-center">
-                          Almat
+                          Email{" "}
                         </th>
                         <th scope="col" className="text-center">
-                          Email
+                          Foto Identitas Pemohon{" "}
+                        </th>
+                        
+                        <th scope="col" className="text-center">
+                          Jenis Identitas
+                        </th>
+                        <th scope="col" className="text-center">
+                          Nomor Identitas Pemohon{" "}
+                        </th>
+                        <th scope="col" className="text-center">
+                          Rincian Yang Dibutuhkan
+                        </th>
+                        <th scope="col" className="text-center">
+                          Tujuan Penggunaan Informasi
                         </th>
                         <th scope="col" className="text-center">
                           Aksi
@@ -199,47 +215,70 @@ function AdminPermohonanInformasi() {
                               <p>{index + 1}</p>
                             </td>
                             <td data-label="Nama : " className="text-left">
-                              <p>{informasi.nama}</p>
+                              <p>{informasi.namaPemohon}</p>
                             </td>
-                            <td data-label="No hp : " className="text-left">
-                              <p>{informasi.noHp}</p>
+                            <td data-label="No tlp : " className="text-left">
+                              <p>{informasi.noTlp}</p>
                             </td>
-                            <td data-label="pekerjaan : " className="text-left">
-                              <p>{informasi.pekerjaan}</p>
+                            <td
+                              data-label="alamat pemohon : "
+                              className="text-left"
+                            >
+                              <p>{informasi.alamatPemohon}</p>
                             </td>
                             <td
                               data-label="rincian informasi : "
-                              className="text-left">
-                              <p>{informasi.rincianInformasi}</p>
+                              className="text-left"
+                            >
+                              <p>{informasi.caraMemperolehInformasi}</p>
                             </td>
                             <td
                               data-label="tujuan informasi : "
-                              className="text-left">
-                              <p>{informasi.tujuanInformasi}</p>
+                              className="text-left"
+                            >
+                              <p>{informasi.caraMendapatSalinanInformasi}</p>
+                            </td>
+                            <td
+                              data-label="tujuan informasi : "
+                              className="text-left"
+                            >
+                              <p>{informasi.email}</p>
                             </td>
                             <td data-label="alamat : " className="text-left">
-                              <p>{informasi.alamat}</p>
+                              <p>{informasi.fotoIdentitas}</p>
                             </td>
                             <td data-label="email : " className="text-left">
-                              <p>{informasi.email}</p>
+                              <p>{informasi.jenisIdentitas}</p>
+                            </td>
+                            <td data-label="email : " className="text-left">
+                              <p>{informasi.nomorIdentitas}</p>
+                            </td>
+                            <td data-label="email : " className="text-left">
+                              <p>{informasi.rincianYangDibutuhkan}</p>
+                            </td>
+                            <td data-label="email : " className="text-left">
+                              <p>{informasi.tujuanPenggunaanInformasi}</p>
                             </td>
                             <td data-label="Aksi : " class="text-center">
                               <button
                                 type="button"
-                                class="btn-warning mr-2 btn-sm">
+                                class="btn-warning mr-2 btn-sm"
+                              >
                                 <a
                                   className="text-light"
                                   href={
                                     "/detail-permohonan-informasi/" +
                                     informasi.id
-                                  }>
+                                  }
+                                >
                                   <i class="fas fa-info-circle"></i>
                                 </a>
                               </button>
                               <button
                                 type="button"
                                 class="btn-danger btn-sm"
-                                onClick={() => delete informasi.id}>
+                                onClick={() => delete informasi.id}
+                              >
                                 <i class="fa-solid fa-trash"></i>
                               </button>
                             </td>

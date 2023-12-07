@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import"../../../css/login.css"
 import { API_DUMMY } from "../../../utils/base_URL";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
@@ -79,16 +80,16 @@ function Register() {
       <div className="container d-flex justify-content-center align-items-center min-vh-100">
         {/* <!----------------------- Login Container --------------------------> */}
 
-        <div className="row border rounded-5 p-3 bg-white shadow box-area">
+        <div id="responsive-register" className="row border rounded-5 p-3 bg-white shadow box-area padding-login responsive-login">
           {/* <!--------------------------- Left Box -----------------------------> */}
 
           <div
-            className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+            className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
             style={{ background: "#103cbe" }}>
-            <div className="featured-image mb-3">
+            <div className="featured-image mb-3 img-login-register">
               <img
                 src="https://cdn3d.iconscout.com/3d/premium/thumb/form-4721284-3927997.png"
-                className="img-fluid"
+                className="img-fluid img-login"
                 style={{ width: "250px" }}
               />
             </div>

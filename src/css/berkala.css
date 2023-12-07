@@ -13,6 +13,19 @@
         gap: 10px;
     }
 }
+@media screen and (max-width: 390px) {
+    .container-display{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 768px) {
     #display{
         gap: 35px;
@@ -27,4 +40,7 @@
     #display{
         gap: 40px;
     }
+    /* #display{
+        
+    } */
 }

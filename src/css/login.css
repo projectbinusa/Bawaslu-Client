@@ -32,7 +32,7 @@ body {
 
 /*------------ For small screens------------*/
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 390px) {
 	.box-area {
 		margin: 0 10px;
 	}
@@ -43,4 +43,50 @@ body {
 	.right-box {
 		padding: 20px;
 	}
+	.img-login-register{
+	}
+	.img-login{
+		height: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.container-login{
+		margin: 50px;
+		padding: 100px;
+		padding-left: 100px;
+	}
+	.padding-login{
+		padding: 50px;
+		padding-left: 100px;
+	}
+	#responsive-register{
+		padding: 50px;
+		width: 380px;
+	}
+	#responsive-login{
+		padding: 50px;
+		width: 380px;
+	}
+}
+@media screen and (max-width:768px) {
+	#responsive-register{
+		padding: 50px;
+		width: 700px;
+		height: 500px;
+	}
+	#responsive-login{
+		padding: 50px;
+		width: 700px;
+		height: 500px;
+	}
+	.img-login{
+		height: 465px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	/* .img-login{
+		
+	} */
 }
