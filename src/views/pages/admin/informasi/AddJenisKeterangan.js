@@ -82,7 +82,7 @@ function AddJenisKeterangan() {
               <form onSubmit={add}>
                 <div className="row">
                   <div className="col-6">
-                    <label className="form-label">Jenis Informasi</label>
+                    <label className="form-label font-weight-bold">Jenis Informasi</label>
                     <select
                       className="form-select form-select-sm"
                       aria-label="Small select example"
@@ -96,7 +96,7 @@ function AddJenisKeterangan() {
                     </select>
                   </div>
                   <div className="mb-3 col-6">
-                    <label for="exampleInputEmail1" className="form-label">
+                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
                       Keterangan
                     </label>
                     <input

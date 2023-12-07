@@ -478,6 +478,11 @@ function App() {
             component={PaswasluKecamatan}
             exact
           />
+          <Route
+            path="/informasi-serta-merta"
+            component={SertaMerta}
+            exact
+          />
         </Switch>
       </main>
     </BrowserRouter>

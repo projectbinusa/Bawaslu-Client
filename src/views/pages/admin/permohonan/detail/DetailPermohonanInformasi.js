@@ -80,7 +80,7 @@ function DetailPermohonanInformasi() {
               </form>
               <form className="card card-body shadow p-2 mt-3">
                 <div class="mb-3">
-                  <label class="form-label">Email</label>
+                  <label class="form-label font-weight-bold">Email</label>
                   <input
                     type="email"
                     class="form-control"
@@ -89,7 +89,7 @@ function DetailPermohonanInformasi() {
                   />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Alamat</label>
+                  <label class="form-label font-weight-bold">Alamat</label>
                   <input
                     type="text"
                     class="form-control"
@@ -98,7 +98,7 @@ function DetailPermohonanInformasi() {
                   />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">No Handphone</label>
+                  <label class="form-label font-weight-bold">No Handphone</label>
                   <input
                     type="number"
                     class="form-control"
@@ -110,7 +110,7 @@ function DetailPermohonanInformasi() {
             </div>
             <form className="card card-body p-2" style={{ width: "100%" }}>
               <div class="mb-3">
-                <label class="form-label">Pekerjaan</label>
+                <label class="form-label font-weight-bold">Pekerjaan</label>
                 <input
                   type="text"
                   class="form-control"
@@ -119,7 +119,7 @@ function DetailPermohonanInformasi() {
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label">Rincian Informasi</label>
+                <label class="form-label font-weight-bold">Rincian Informasi</label>
                 <input
                   type="text"
                   class="form-control"
@@ -128,7 +128,7 @@ function DetailPermohonanInformasi() {
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label">Tujuan Informasi</label>
+                <label class="form-label font-weight-bold">Tujuan Informasi</label>
                 <input
                   type="text"
                   class="form-control"
@@ -137,7 +137,7 @@ function DetailPermohonanInformasi() {
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label">Cara Memperoleh Informasi</label>
+                <label class="form-label font-weight-bold">Cara Memperoleh Informasi</label>
                 <input
                   type="text"
                   class="form-control"
@@ -146,7 +146,7 @@ function DetailPermohonanInformasi() {
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label">Cara Mendapatkan Informasi</label>
+                <label class="form-label font-weight-bold">Cara Mendapatkan Informasi</label>
                 <input
                   type="text"
                   class="form-control"
@@ -155,7 +155,7 @@ function DetailPermohonanInformasi() {
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label">Di Tunjukan Kepada</label>
+                <label class="form-label font-weight-bold">Di Tunjukan Kepada</label>
                 <input
                   type="text"
                   class="form-control"

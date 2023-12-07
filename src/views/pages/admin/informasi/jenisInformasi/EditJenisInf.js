@@ -67,7 +67,7 @@ function EditJenisInf() {
             <form onSubmit={update}>
               <div className="row">
                 <div className="mb-3 col-6">
-                  <label for="exampleInputEmail1" className="form-label">
+                  <label for="exampleInputEmail1" className="form-label font-weight-bold">
                     Jenis Informasi
                   </label>
                   <input
