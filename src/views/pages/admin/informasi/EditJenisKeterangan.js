@@ -94,7 +94,7 @@ function EditJenisKeterangan() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                     <label htmlFor="exampleInputEmail1" className="form-label">
+                     <label htmlFor="exampleInputEmail1" className="form-label font-weight-bold">
                       Jenis Informasi
                     </label>
                     <select disabled
@@ -111,7 +111,7 @@ function EditJenisKeterangan() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label htmlFor="exampleInputEmail1" className="form-label">
+                    <label htmlFor="exampleInputEmail1" className="form-label font-weight-bold">
                       Keterangan
                     </label>
                     <input
