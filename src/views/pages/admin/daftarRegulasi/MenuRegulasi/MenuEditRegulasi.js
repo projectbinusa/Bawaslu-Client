@@ -69,6 +69,8 @@ function MenuEditRegulasi() {
       });
 
       setTimeout(() => {
+        history.push("/admin-regulasi/" + idJenisRegulasi);
+
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -100,7 +102,8 @@ function MenuEditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}
-                      value={idJenisRegulasi}>
+                      value={idJenisRegulasi}
+                    >
                       <option selected>PIlih Jenis Regulasi</option>
                       {jenisRegulasi.map((down) => {
                         return (
