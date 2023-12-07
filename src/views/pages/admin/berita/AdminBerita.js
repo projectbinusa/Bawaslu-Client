@@ -281,7 +281,7 @@ function AdminBerita() {
                     {/* <th scope="col" className="text-center">
                       Isi Berita
                     </th> */}
-                    <th scope="col" className="text-center">
+                    <th scope="col" className="text-center w-full" style={{width:"20px"}}>
                       Penulis Berita
                     </th>
                     <th scope="col" className="text-center">
