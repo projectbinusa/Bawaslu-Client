@@ -44,7 +44,7 @@ function RekapBerita() {
                   <div className="media">
                     <div className="media-left">
                       <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                        src={berita.image}
                         alt="blog"
                         style={{ width: "200px" }}
                       />

@@ -92,7 +92,7 @@ import AddJenisInfo from "./views/pages/admin/informasi/jenisInformasi/AddJenisI
 import EditJenisInf from "./views/pages/admin/informasi/jenisInformasi/EditJenisInf";
 import RekapBeritaa from "./views/pages/rekap_berita/RekapBerita";
 import IsiRekap from "./views/pages/rekap_berita/IsiRekap";
-import IsiPengumumann from "./views/pages/pengumuman/IsiPengumuman";
+import IsiPengumuman from "./views/pages/pengumuman/IsiPengumuman";
 import AddJenisRegulasi from "./views/pages/admin/daftarRegulasi/JenisRegulasi/AddJenisRegulasi";
 import JenisRegulasi from "./views/pages/admin/daftarRegulasi/JenisRegulasi/JenisRegulasi";
 import EditJenisRegulasi from "./views/pages/admin/daftarRegulasi/JenisRegulasi/EditJenisRegulasi";
@@ -114,7 +114,7 @@ function App() {
           <Route path="/" component={Home} exact />
           <Route path="/profil" component={Profil} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
-          <Route path="/pengumuman/:judulPengumuman/:id" component={IsiPengumumann} exact />
+          <Route path="/pengumuman/:id" component={IsiPengumuman} exact />
           <Route path="/library" component={ELibrary} exact />
           <Route path="/berita" component={Berita} exact />
           <Route path="/edit-category-berita/:id" component={EditCategory} exact />
@@ -167,9 +167,9 @@ function App() {
 
           <PrivateRoute path="/regulasi/:menuRegulasi/:id" component={RegulasiAdmin} exact />
           <Route path="/menu-regulasi/:jenisRegulasi/:id" component={Regulasi} exact />
-        
-           
-          
+
+
+
           {/* admin */}
           <PrivateRoute
             path="/admin-permohonan-informsi"
@@ -371,7 +371,7 @@ function App() {
             exact
           /> */}
           <Route
-            path="/page-berita/:judulBerita/:id"
+            path="/page-isi-berita/:id"
             component={PageBerita}
             exact
           />

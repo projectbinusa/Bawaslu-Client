@@ -26,7 +26,7 @@ function AdminPermohonanKeberatan() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/permohonan-keberatan?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`,
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }

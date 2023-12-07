@@ -151,7 +151,7 @@ function IsiRekap() {
                               </div>
                             </div>
                             <div className="media-body">
-                              <a href="/">
+                              <a href="">
                                 {judulBerita}
                               </a>
                             </div>

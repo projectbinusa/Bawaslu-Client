@@ -10,7 +10,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 
 function EditJenisRegulasi() {
-  const [jenisRegulasi, setJenisRegulasi] = useState("ass");
+  const [jenisRegulasi, setJenisRegulasi] = useState("");
   const param = useParams();
   const history = useHistory();
 
@@ -35,17 +35,31 @@ function EditJenisRegulasi() {
 
     try {
       // Assuming you've correctly set jenisRegulasi in your component state
-      const response = await axios.put(
-        `${API_DUMMY}/bawaslu/api/jenis-regulasi/put/` + param.id,
-        {
-          jenisRegulasi,
-        },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+      const response = await axios
+        .put(
+          `${API_DUMMY}/bawaslu/api/jenis-regulasi/put/${param.id}?jenisRegulasi=${jenisRegulasi}`,
+          {
+            jenisRegulasi: jenisRegulasi,
           },
-        }
-      );
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        )
+        .then((ress) => {
+          console.log(ress.data.data);
+          Swal.fire({
+            icon: "success",
+            title: "Berhasil Mengedit Data",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          history.push("/jenis-regulasi");
+          setTimeout(() => {
+            window.location.reload();
+          }, 1500);
+        });
 
       console.log(response.data.data);
       // Handle success, e.g., show a success message or navigate to another page
@@ -115,8 +129,7 @@ function EditJenisRegulasi() {
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
                     href="/jenis-regulasi"
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
+                    style={{ color: "white", textDecoration: "none" }}>
                     {" "}
                     Batal
                   </a>

@@ -28,7 +28,7 @@ function Berita() {
   const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/all?page=${page-1}&size=10&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/berita/all?page=${page-1}&size=10&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data.content);
       setPaginationInfo({
@@ -313,7 +313,7 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a
-                            href={`/page-berita/${berita.judulBerita}/${berita.id}`}>
+                            href={`/page-isi-berita/${berita.judulBerita}/${berita.id}`}>
                             {berita.judulBerita}
                           </a>
 
@@ -443,7 +443,7 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href={`/page-berita/${beritaTerbaru.judulBerita}/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
+                                  <a href={`/Page-Berita/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>

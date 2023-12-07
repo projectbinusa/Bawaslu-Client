@@ -45,12 +45,15 @@ function EditIsiKeterangan() {
 
     await axios
       .put(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/${param.id}?dokumen=${dokumen}&jenisKeteranganId=${jenisKeteranganId}`,
-        formData ,
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + param.id , {
+          dokumen: dokumen,
+          pdfDokumen: pdfDokumen,
+          jenisKeteranganId: jenisKeteranganId,
+        },
         {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${localStorage.getItem("token")}`
+            // "Content-Type": "multipart/form-data",
           },
         }
       )
@@ -137,6 +140,17 @@ function EditIsiKeterangan() {
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
+                     Link Dokumen
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      value={pdfDokumen}
+                      onChange={(e) => setPdfDokumen(e.target.value)}
+                    />
+                  </div>
+                  {/* <div className="mb-3 col-6">
+                    <label for="exampleInputEmail1" className="form-label">
                       File
                     </label>
                     <input
@@ -144,7 +158,7 @@ function EditIsiKeterangan() {
                       type="file"
                       className="form-control"
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a href="" style={{ color: "white", textDecoration: "none" }}>
