@@ -22,7 +22,7 @@ function JenisRegulasi() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-regulasi/all?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data);
       console.log(response.data.data);

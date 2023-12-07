@@ -10,19 +10,21 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { async } from "q";
 
 const FormPermohonanInformasi = () => {
-  const [alamat, setAlamat] = useState("");
-  const [caraMendapatInformasi, setCaraMendapatkanInformasi] = useState("");
+  const [alamatPemohon, setAlamatPemohon] = useState("");
+  // const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] = useState("");
   const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("");
   const [createDate, setCreateDate] = useState("");
-  const [ditunjukanKepada, setDitunjukanKepada] = useState("");
+  const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] = useState("");
   const [email, setEmail] = useState("");
   const [id, setID] = useState("");
-  const [nama, setNama] = useState("");
-  const [noHp, setNoHp] = useState("");
+  const [namaPemohon, setNamaPemohon] = useState("");
+  const [noTlp, setNoTlp] = useState("");
+  const [nomorIdentitasPemohon, setNomorIdentitasPemohon] = useState("");
   const [pekerjaan, setPekerjaan] = useState("");
   const [pendidikan, setPendidikan] = useState("");
-  const [rincianInformasi, setRincianInformasi] = useState("");
-  const [tandaPengenal, setTandaPengenal] = useState("");
+  const [rincianYangDibutuhkan, setRincianYangDibutuhkan] = useState("");
+  const [fotoIdentitas, setFotoIdentitas] = useState("");
+  const [jenisIdentitas, setJenisIdentitasPemohon] = useState("");
   const [tujuanInformasi, setTujuanInformasi] = useState("");
   const [updateDate, setUpdateDate] = useState("");
   const [show, setShow] = useState(false);
@@ -30,26 +32,31 @@ const FormPermohonanInformasi = () => {
   const Add = async (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("nama", nama);
-    formData.append("alamat", alamat);
+    formData.append("namaPemohon", namaPemohon);
+    formData.append("alamatPemohon", alamatPemohon);
     formData.append("pendidikan", pendidikan);
     formData.append("email", email);
-    formData.append("noHp", noHp);
-    formData.append("tujuanInformasi", tujuanInformasi);
-    formData.append("rincianInformasi", rincianInformasi);
-    formData.append("pekerjaan", pekerjaan);
-    formData.append("ditunjukanKepada", ditunjukanKepada);
+    formData.append("noTlp", noTlp);
+    formData.append("nomorIdentitasPemohon", nomorIdentitasPemohon);
+    // formData.append("tujuanInformasi", tujuanInformasi);
+    formData.append("rincianYangDibutuhkan", rincianYangDibutuhkan);
+    // formData.append("pekerjaan", pekerjaan);
+    formData.append("tujuanPenggunaanInformasi", tujuanPenggunaanInformasi);
     formData.append("caraMemperolehInformasi", caraMemperolehInformasi);
-    formData.append("caraMendapatkanInformasi", caraMendapatInformasi);
-    formData.append("file", tandaPengenal);
+    // formData.append("caraMendapatSalinanInformasi", caraMendapatSalinanInformasi);
+    formData.append("fotoIdentitas", fotoIdentitas);
+    formData.append("jenisIdentitas", jenisIdentitas);
 
     try {
       await axios.post(
         `${API_DUMMY}/bawaslu/api/permohonan-informasi/add`,
-        formData
-        // {
-        //   headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        // }
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
       setShow(false);
       Swal.fire({
@@ -136,8 +143,8 @@ const FormPermohonanInformasi = () => {
                   Nama Pemohon
                 </label>
                 <input
-                  value={nama}
-                  onChange={(e) => setNama(e.target.value)}
+                  value={namaPemohon}
+                  onChange={(e) => setNamaPemohon(e.target.value)}
                   type="text"
                   className="form-control"
                 />
@@ -147,8 +154,8 @@ const FormPermohonanInformasi = () => {
                 <textarea
                   className="textarea"
                   id="textarea"
-                  value={alamat}
-                  onChange={(e) => setAlamat(e.target.value)}
+                  value={alamatPemohon}
+                  onChange={(e) => setAlamatPemohon(e.target.value)}
                 />
                 <br />
                 <br />
@@ -157,15 +164,18 @@ const FormPermohonanInformasi = () => {
                   type="number"
                   className=" form-control "
                   id=""
-                  value={pekerjaan}
-                  onChange={(e) => setPekerjaan(e.target.value)}
+                  value={nomorIdentitasPemohon}
+                  onChange={(e) => setNomorIdentitasPemohon(e.target.value)}
                 />
                 <br></br>
                 <br></br>
                 <label for="exampleInputPassword1" className="form-label">
                   Jenis Identitas
                 </label>
-                <select class="form-select" aria-label="Default select example">
+                <select
+                 value={jenisIdentitas}
+                 onChange={(e) => setJenisIdentitasPemohon(e.target.value)} 
+                class="form-select" aria-label="Default select example">
                   <option selected>Pilih Jenis Identitas</option>
                   <option value="1">KTP (Kartu Tanda Penduduk)</option>
                   <option value="2">SIM (Surat Izin Mengemudi)</option>
@@ -173,7 +183,7 @@ const FormPermohonanInformasi = () => {
                 </select>
                 <br />
                 <br />
-                <p>Pekerjaan:</p>
+                {/* <p>Pekerjaan:</p>
                 <input
                   type="text"
                   className=" form-control "
@@ -181,7 +191,7 @@ const FormPermohonanInformasi = () => {
                   value={pekerjaan}
                   onChange={(e) => setPekerjaan(e.target.value)}
                 />
-                <p className="pp">0 of 60 max characters</p>
+                <p className="pp">0 of 60 max characters</p> */}
                 <br></br>
                 <br></br>
                 <p>Nomor Telp/HP:</p>
@@ -189,8 +199,8 @@ const FormPermohonanInformasi = () => {
                   className=" form-control "
                   id=""
                   type="number"
-                  value={noHp}
-                  onChange={(e) => setNoHp(e.target.value)}
+                  value={noTlp}
+                  onChange={(e) => setNoTlp(e.target.value)}
                 />
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
@@ -204,22 +214,22 @@ const FormPermohonanInformasi = () => {
                 />{" "}
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
-                <p>Rincian Yang Dibutuhkan (Tambah Keterangan Bila Perlu):</p>
+                {/* <p>Rincian Yang Dibutuhkan (Tambah Keterangan Bila Perlu):</p>
                 <textarea
-                  value={rincianInformasi}
-                  onChange={(e) => setRincianInformasi(e.target.value)}
+                  value={rincianYangDibutuhkan}
+                  onChange={(e) => setRincianYangDibutuhkan(e.target.value)}
                   className="textarea"
                   id="textarea"
                 />
                 <p className="pp">0 of 100 max characters</p>
-                <br></br>
+                <br></br> */}
               </div>
             </div>
             <div className="tujuan">
               <p>Tujuan Penggunaan Informasi:</p>
               <textarea
-                value={ditunjukanKepada}
-                onChange={(e) => setDitunjukanKepada(e.target.value)}
+                value={tujuanPenggunaanInformasi}
+                onChange={(e) => setTujuanPenggunaanInformasi(e.target.value)}
                 className="textarea"
                 id="textarea"
               />
@@ -242,10 +252,27 @@ const FormPermohonanInformasi = () => {
               </select>
               <br></br>
               <br></br>
+              <br></br>
+              {/* <p>Cara Mendapat Salinan Informasi:</p>
+              <select
+                value={caraMendapatSalinanInformasi}
+                onChange={(e) => setCaraMendapatSalinanInformasi(e.target.value)}
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option selected>Pilih Cara Mendapat Salinan Informasi</option>
+                <option value="mengambil sendiri">Mengambil Langsung</option>
+                <option value="pos">POS</option>
+                <option value="kurir">Kurir</option>
+                <option value="fax">FAX</option>
+                <option value="email">Email</option>
+              </select>
+              <br></br>
+              <br></br> */}
               <p>Upload Photo Identitas (.jpg) size max 1mb:</p>
               <input
                 type="file"
-                onChange={(e) => setTandaPengenal(e.target.files[0])}
+                onChange={(e) => setFotoIdentitas(e.target.files[0])}
               />
               <br></br>
               <p>Jaminan Perlindungan Data Pribadi:</p>

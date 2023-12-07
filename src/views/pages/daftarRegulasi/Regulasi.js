@@ -78,8 +78,8 @@ function Regulasi() {
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         >
-          <div class="container">
-            <div id="display" className="d-flex gap-5">
+          <div className="container">
+            <div id="display" className="d-flex align-center justify-center gap-5">
               <div class="row justify-content-center">
                 <div class="col-lg-12 ">
                   <div class="isotope-filters project-isotope-btn text-left mb-5">

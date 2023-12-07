@@ -32,7 +32,7 @@ function Index() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/jenis-informasi/getByIdWithKeterangan?id=${
           param.id
-        }&page=${page - 1}&size=10&sortBy=id&sortOrder=asc`,
+        }&page=${page - 1}&size=10&sortBy=id&sortOrder=desc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -209,7 +209,7 @@ function Index() {
         </div>
       </div>
     </div>
-    
+
   );
 }
 

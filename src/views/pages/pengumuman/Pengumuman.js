@@ -15,7 +15,7 @@ function Pengumuman() {
     totalElements: 0,
   });
   const [searchTerm, setSearchTerm] = useState("");
-  const getAll = async () => {
+  const getAll = async (page) => {
     await axios
       .get(
         `${API_DUMMY}/bawaslu/api/pengumuman?page=0&size=10&sortBy=id&sortOrder=asc`

@@ -32,7 +32,7 @@ function IsiKeterangan() {
           param.id
         }/isi-informasi?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
       setJenisKeteranganIsiInformasi(response.data.data.content);
       setPaginationInfo({
@@ -176,7 +176,7 @@ function IsiKeterangan() {
                     </th>
                   </tr>
                 </thead>
-               
+
                 <thead>
                   {Array.isArray(jenisKeteranganIsiInformasi) &&
                     jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
@@ -198,7 +198,7 @@ function IsiKeterangan() {
                       </tr>
                         ))}
                     </thead>
-                  
+
                     <tbody>
                       {Array.isArray(jenisKeteranganIsiInformasi) &&
                         jenisKeteranganIsiInformasi.map(
@@ -318,7 +318,7 @@ function IsiKeterangan() {
             </div>
           </div>
         </div>
-   
+
   );
 }
 

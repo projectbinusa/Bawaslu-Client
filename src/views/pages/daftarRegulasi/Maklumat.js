@@ -22,7 +22,7 @@ function Maklumat() {
           alt="img"
         />
         <div className="row">
-          <div className="col-xl-5 col-lg-6 col-md-9">
+          <div id="thumb" className="col-xl-5 col-lg-6 col-md-9">
             <div className="thumb">
               <img src={maklumat} alt="img" />
             </div>

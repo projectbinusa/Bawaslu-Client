@@ -26,7 +26,7 @@ function AdminPermohonanKeberatan() {
       const response = await axios.get(
         `${API_DUMMY}/bawaslu/api/permohonan-keberatan?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`,
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }
@@ -109,7 +109,8 @@ function AdminPermohonanKeberatan() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -134,7 +135,8 @@ function AdminPermohonanKeberatan() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -149,8 +151,7 @@ function AdminPermohonanKeberatan() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div className="btn-actions-pane-right">
-                </div>
+                <div className="btn-actions-pane-right"></div>
               </div>
             </div>
             <div class="table-responsive overflow-x-scroll">
@@ -159,6 +160,9 @@ function AdminPermohonanKeberatan() {
                   <tr>
                     <th scope="col" className="text-left">
                       No
+                    </th>
+                    <th scope="col" className="text-left">
+                      Nama
                     </th>
                     <th scope="col" className="text-left">
                       Email
@@ -179,6 +183,15 @@ function AdminPermohonanKeberatan() {
                       Jenis identitas
                     </th>
                     <th scope="col" className="text-left">
+                      Alasan Pengajuan
+                    </th>
+                    <th scope="col" className="text-left">
+                      Tujuan Penggunaan Informasi
+                    </th>
+                    <th scope="col" className="text-left">
+                      Foto Identitas{" "}
+                    </th>
+                    <th scope="col" className="text-left">
                       Aksi
                     </th>
                   </tr>
@@ -191,28 +204,51 @@ function AdminPermohonanKeberatan() {
                           {index + 1}
                         </td>
                         <td data-label="email : " className="text-llef">
+                          {informasi.namaPemohon}
+                        </td>
+                        <td data-label="nama : " className="text-llef">
                           {informasi.email}
                         </td>
                         <td data-label="nama : " className="text-llef">
-                          {informasi.nama}
+                          {informasi.alamatPemohon}
                         </td>
 
                         <td data-label="alamat : " className="text-llef">
-                          {informasi.kasusPosisi}
+                          {informasi.noTlp}
                         </td>
                         <td data-label="no telp : " className="text-llef">
-                          {informasi.noTelp}
+                          {informasi.kasusPosisi}
                         </td>
 
                         <td
                           data-label="Nomor identitas : "
-                          className="text-llef">
-                          {informasi.nomorIndentitas}
+                          className="text-llef"
+                        >
+                          {informasi.nomorIdentitasPemohon}
                         </td>
                         <td
                           data-label="jenis identitas : "
-                          className="text-llef">
+                          className="text-llef"
+                        >
                           {informasi.jenisIdentitas}
+                        </td>
+                        <td
+                          data-label="jenis identitas : "
+                          className="text-llef"
+                        >
+                          {informasi.alasanPengajuanKeberatan}
+                        </td>
+                        <td
+                          data-label="jenis identitas : "
+                          className="text-llef"
+                        >
+                          {informasi.tujuanPenggunaanInformasi}
+                        </td>
+                        <td
+                          data-label="jenis identitas : "
+                          className="text-llef"
+                        >
+                          {informasi.fotoIdentitas}
                         </td>
                         <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-warning mr-2 btn-sm">
@@ -220,14 +256,16 @@ function AdminPermohonanKeberatan() {
                               className="text-light"
                               href={
                                 "/detail-permohonan-keberatan/" + informasi.id
-                              }>
+                              }
+                            >
                               <i class="fas fa-info-circle"></i>
                             </a>
                           </button>
                           <button
                             onClick={() => deleteData(informasi.id)}
                             type="button"
-                            className="bg-danger btn-sm text-light">
+                            className="bg-danger btn-sm text-light"
+                          >
                             <i class="fas fa-trash-alt"></i>
                           </button>
                         </td>
@@ -236,16 +274,16 @@ function AdminPermohonanKeberatan() {
                   })}
                 </tbody>
               </table>
-            <div className="card-header mt-3 d-flex justify-content-center">
-              <Pagination
-                count={totalPages}
-                page={currentPage}
-                onChange={(event, value) => setCurrentPage(value)}
-                showFirstButton
-                showLastButton
-                color="primary"
-              />
-            </div>
+              <div className="card-header mt-3 d-flex justify-content-center">
+                <Pagination
+                  count={totalPages}
+                  page={currentPage}
+                  onChange={(event, value) => setCurrentPage(value)}
+                  showFirstButton
+                  showLastButton
+                  color="primary"
+                />
+              </div>
             </div>
           </div>
         </div>

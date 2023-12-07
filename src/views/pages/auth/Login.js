@@ -48,15 +48,16 @@ function Login() {
   };
 
   return (
-    <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="row border rounded-5 p-3 bg-white shadow box-area">
+    <div className="containeriimg d-flex justify-content-center align-items-center min-vh-100">
+      <div id="responsive-login" className="row border rounded-5 p-3 bg-white shadow box-area padding-login">
         <div
-          className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
+          className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
           style={{ background: "#103cbe" }}>
-          <div className="featured-image mb-3">
+          <div className="featured-image mb-3 img-login">
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/998/284/non_2x/3d-password-input-illustration-design-free-png.png"
-              className="img-fluid"
+              className="img-fluid img-login"
+              
               style={{ width: "250px" }}
               alt="Password Illustration"
             />
