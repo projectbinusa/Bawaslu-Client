@@ -12,7 +12,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 function EditRegulasi() {
   const [idMenuRegulasi, setIdMenuRegulasi] = useState(0);
   const [dokumen, setDokumen] = useState("");
-  const [pdfDokumen, setPdfDokumen] = useState("");
+  const [upload, setupload] = useState("");
   const history = useHistory();
   const [show, setShow] = useState(false);
   const [regulasi, setRegulasi] = useState([]);
@@ -38,7 +38,7 @@ function EditRegulasi() {
         console.log(ress.data.data);
         setDokumen(response.dokumen);
         setIdMenuRegulasi(response.menuRegulasi.id);
-        setPdfDokumen(response.pdfDokumen);
+        setupload(response.pdfDokumen);
       })
       .catch((error) => {
         console.log(error);
@@ -47,6 +47,9 @@ function EditRegulasi() {
 
   const update = async (e) => {
     e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("file", upload);
 
     try {
       await axios.put(
@@ -124,7 +127,7 @@ function EditRegulasi() {
                       Gambar Dokumen
                     </label>
                     <input
-                      onChange={(e) => setPdfDokumen(e.target.files[0])}
+                      onChange={(e) => setupload(e.target.files[0])}
                       type="file"
                       className="form-control"
                       id="exampleInputPassword1"

@@ -35,7 +35,7 @@ function MenuEditRegulasi() {
       .then((ress) => {
         const response = ress.data.data;
         setMenuRegulasi(response.menuRegulasi);
-        setIdJenisRegulasi(response.jenisRegulasiId);
+        setIdJenisRegulasi(response.jenisRegulasiId.id);
       })
       .catch((error) => {
         console.log(error);
@@ -52,7 +52,7 @@ function MenuEditRegulasi() {
 
     try {
       await axios.put(
-        `${API_DUMMY}/bawaslu/api/menu-regulasi/put/${param.id}`,
+        `${API_DUMMY}/bawaslu/api/menu-regulasi/put/${param.id}?idJenisRegulasi=${idJenisRegulasi}&menuRegulasi=${menuRegulasi}`,
         reqs,
         {
           headers: {
@@ -96,6 +96,7 @@ function MenuEditRegulasi() {
                       Jenis Regulasi
                     </label>
                     <select
+                      disabled
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdJenisRegulasi(e.target.value)}

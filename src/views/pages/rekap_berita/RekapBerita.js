@@ -31,30 +31,6 @@ function RekapBerita() {
   return (
     <>
       <Navbar />
-      <div
-        className="breadcrumb-area bg-relative"
-        style={{ background: "#151423" }}>
-        <div
-          className="banner-bg-img"
-          style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')`,
-          }}></div>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-xl-7 col-lg-8">
-              <div className="breadcrumb-inner text-center">
-                <h2 className="page-title">Rekap Data</h2>
-                <ul className="page-list">
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>Isi Rekap Berita</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <br />
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
@@ -68,7 +44,7 @@ function RekapBerita() {
                   <div className="media">
                     <div className="media-left">
                       <img
-                        src="https://boyolali.bawaslu.go.id/cepogo/2023/11/WhatsApp-Image-2023-11-01-at-14.10.31.jpeg"
+                        src={berita.image}
                         alt="blog"
                         style={{ width: "200px" }}
                       />

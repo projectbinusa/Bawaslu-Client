@@ -104,6 +104,7 @@ function EditBeritaAdmin() {
               <form onSubmit={updateBerita}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
+                    {/*  */}
                     <label className="form-label font-weight-bold">Category</label>
                     <select
                       className="form-control"
@@ -117,6 +118,7 @@ function EditBeritaAdmin() {
                     </select>
                   </div>
                   <div className="mb-3 col-lg-6">
+                    {/*  */}
                     <label for="exampleInputEmail1" className="form-label font-weight-bold">
                       Penulis Berita
                     </label>
@@ -129,6 +131,7 @@ function EditBeritaAdmin() {
                     />
                   </div>
                   <div className="mb-3 co-lg-6">
+                    {/*  */}
                     <label className="form-label font-weight-bold">Gambar</label>
                     <input
                       onChange={(e) =>
@@ -139,6 +142,7 @@ function EditBeritaAdmin() {
                     />
                   </div>
                   <div className="mb-3 col-lg-12">
+                    {/*  */}
                     <label className="form-label font-weight-bold">Judul Berita</label>
                     <input
                       value={judulBerita}
@@ -149,6 +153,7 @@ function EditBeritaAdmin() {
                     />
                   </div>
                   <div className="col-lg-12">
+                    {/*  */}
                     <label className="form-label font-weight-bold">Isi Berita</label>
                     <div className="">
                       <textarea

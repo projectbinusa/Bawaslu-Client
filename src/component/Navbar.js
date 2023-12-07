@@ -65,7 +65,7 @@ function Navbar() {
   const getInformasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=10&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/jenis-informasi/all?page=0&size=10&sortBy=id&sortOrder=desc`
       );
       setInformasi(response.data.data);
       console.log(response.data.data);
