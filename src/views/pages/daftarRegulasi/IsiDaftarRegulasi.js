@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
-import "../../../css/adminBerita.css"
+import "../../../css/adminBerita.css";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 import {
@@ -43,24 +43,24 @@ function IsiDaftarRegulasi() {
     }
   };
 
-    const showTable = async (tableId) => {
-      setSelectedTableId(tableId);
-      try {
-        await getRegulasi(tableId, 1);
-      } catch (error) {
-        alert("Terjadi kesalahan" + error);
-      }
-    };
+  const showTable = async (tableId) => {
+    setSelectedTableId(tableId);
+    try {
+      await getRegulasi(tableId, 1);
+    } catch (error) {
+      alert("Terjadi kesalahan" + error);
+    }
+  };
 
   useEffect(() => {
     getMenuRegulasi();
   }, []);
 
-    useEffect(() => {
-      if (list.length > 0) {
-        showTable(list[0].id);
-      }
-    }, [list]);
+  useEffect(() => {
+    if (list.length > 0) {
+      showTable(list[0].id);
+    }
+  }, [list]);
 
   useEffect(() => {
     if (selectedTableId !== null) {
@@ -120,28 +120,34 @@ function IsiDaftarRegulasi() {
                     </thead>
                     {isi.map((item) => {
                       return (
-                      <tbody>
-                        <tr>
-                          <td data-label="Dokumen" scope="row">
-                            <p>{item.dokumen}</p>
-                          </td>
-                          <td data-label="Aksi">
-                            <button
-                              className="bg-primary text-light"
-                              style={{
-                                border: "none",
-                                padding: "7px",
-                                paddingLeft: "13px",
-                                paddingRight: "13px",
-                                borderRadius: "5px",
-                                marginRight: "10px",
-                              }}>Unduh / Lihat
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
+                        <tbody>
+                          <tr>
+                            <td data-label="Dokumen" scope="row">
+                              <p>{item.dokumen}</p>
+                            </td>
+                            <td data-label="Aksi">
+                              <a
+                                href={item.pdfDokumen}
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <button
+                                  className="bg-primary text-light"
+                                  style={{
+                                    border: "none",
+                                    padding: "7px",
+                                    paddingLeft: "13px",
+                                    paddingRight: "13px",
+                                    borderRadius: "5px",
+                                    marginRight: "10px",
+                                  }}>
+                                  Unduh / Lihat
+                                </button>
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
                       );
-                            })}
+                    })}
                     <div></div>
                   </table>
                   {/* <div className="card-header mt-3 d-flex justify-content-center">

@@ -11,16 +11,19 @@ import { useEffect } from "react";
 import axios from "axios";
 import Bawaslu from "../component/Bawaslu";
 import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
+
 
 function PageBerita() {
   const [judulBerita, setJudulBerita] = useState("");
-  const [author, setAouther] = useState("");
+  const [author, setAuthor] = useState("");
   const [isiBerita, setIsiBerita] = useState("");
   const [image, setImage] = useState("");
   const [tagsBerita, setTagsBerita] = useState("");
   const [id, setId] = useState();
   const [categoryBerita, setCategoryBerita] = useState("");
-  const [createDate, setCreateDate] = useState("");
+  const [createdDate, setCreatedDate] = useState("");
   const [respon, setRespon] = useState("");
   const param = useParams();
   const history = useHistory();
@@ -36,7 +39,7 @@ function PageBerita() {
     image: "",
     tagsBerita: "",
     categoryBerita: "",
-    createDate: "",
+    createdDate: "",
   });
 
   const getAll = async () => {
@@ -61,7 +64,7 @@ function PageBerita() {
       })
       .then((ress) => {
         const response = ress.data.data;
-        setAouther(response.author);
+        setAuthor(response.author);
         setJudulBerita(response.judulBerita);
         setId(response.id);
         setIsiBerita(response.isiBerita);
@@ -69,7 +72,7 @@ function PageBerita() {
         setImage(response.image);
         setTagsBerita(response.tagsBerita);
         setCategoryBerita(response.categoryBerita);
-        setCreateDate(response.cretedDate);
+        setCreatedDate(response.createdDate);
         console.log(ress.data.data);
       })
       .catch((error) => {
@@ -148,6 +151,7 @@ function PageBerita() {
                                     style={{
                                       color: "white",
                                       backgroundColor: "#cf2830",
+                                      width :"90px"
                                     }}
                                     className="border p-2">
                                     <i className="fa-brands fa-pinterest"></i>{" "}
@@ -180,7 +184,7 @@ function PageBerita() {
                     </li>
                     <li>
                       <i class="far fa-calendar-alt"></i>
-                      {createDate}
+                      {format(new Date(createdDate || new Date()), "dd MMMM yyyy", { locale: idLocale })}
                     </li>
                   </ul>
                 </div>

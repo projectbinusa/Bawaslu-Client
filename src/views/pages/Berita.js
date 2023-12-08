@@ -6,6 +6,8 @@ import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
 import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
@@ -290,7 +292,8 @@ function Berita() {
                                   <button
                                     style={{
                                       color: "white",
-                                      backgroundColor: "#cf2830",
+                                      backgroundColor: "#cf2830" ,
+                                      width :"100px"
                                     }}
                                     className="border p-2">
                                     <i className="fa-brands fa-pinterest"></i>{" "}
@@ -325,7 +328,7 @@ function Berita() {
                           </li>
                           <li>
                             <i class="far fa-calendar-alt"></i>{" "}
-                            {berita.createdDate}
+                            <span>{format(new Date(berita.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
                           </li>
                         </ul>
                       </div>

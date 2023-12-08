@@ -8,6 +8,9 @@ import { useEffect } from "react";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
+
 
 function DetailPermohonanInformasi() {
   const [namaPemohon, setNamaPemohon] = useState("");
@@ -114,7 +117,8 @@ function DetailPermohonanInformasi() {
                   type="text"
                   class="form-control"
                   disabled
-                  value={createdDate}
+                  value=  <span>{format(new Date(createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
+
                 />
               </div>
               <div class="mb-3">

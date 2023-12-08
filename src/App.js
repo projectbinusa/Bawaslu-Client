@@ -49,7 +49,7 @@ import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
 import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
 import GpAnsor from "./views/pages/menu footer/GpAnsor";
 
-// import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
+import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
 import AddPengumuman from "./views/pages/admin/pengumuman/AddPengumuman";
 import EditPengumuman from "./views/pages/admin/pengumuman/EditPengumuman";

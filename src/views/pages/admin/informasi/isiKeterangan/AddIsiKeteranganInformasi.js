@@ -157,13 +157,7 @@ function AddIsiKeteranganInformasi() {
                   </div>
                   <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label font-weight-bold">
-<<<<<<< HEAD
                       Link Dokumen
-=======
-                    <label for="exampleInputEmail1" className="form-label font-weight-bold"/>
-                    <label for="exampleInputEmail1" className="form-label">
-                     Link Dokumen
->>>>>>> 902ba11337600905059c325680d5234651126e04
                     </label>
                     <input
                       type="text"
@@ -172,7 +166,7 @@ function AddIsiKeteranganInformasi() {
                       onChange={(e) => setPdfDokumen(e.target.value)}
                     />
                   </div>
-                  {/* <div className="mb-3 col-6">
+                   {/* <div className="mb-3 col-6">
                     <label for="exampleInputEmail1" className="form-label">
                       File
                     </label>
@@ -181,7 +175,7 @@ function AddIsiKeteranganInformasi() {
                       type="file"
                       className="form-control"
                     />
-                  </div> 
+                  </div> */}
                 </div>
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a href="" style={{ color: "white", textDecoration: "none" }}>

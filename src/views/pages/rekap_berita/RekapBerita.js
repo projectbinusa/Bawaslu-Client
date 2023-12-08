@@ -7,6 +7,9 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
+
 
 function RekapBerita() {
     const [rekap, setRekap] = useState([]);
@@ -58,7 +61,7 @@ function RekapBerita() {
                       <div className="post-info">
                         <span className="mr-3"> BY {berita.author}</span>
                         <i className="far fa-calendar-alt"></i>
-                        <span>{berita.createdDate}</span>
+                        <span>{format(new Date(berita.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
                       </div>
                       {/* <br /> */}
                       <p className="fs-6 isiBerita">
