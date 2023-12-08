@@ -32,8 +32,8 @@ function AddJenisRegulasi() {
         timer: 1500,
       });
       // //console.log(data);
-      history.push("/jenis-regulasi");
       setTimeout(() => {
+        history.push("/jenis-regulasi");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -54,7 +54,8 @@ function AddJenisRegulasi() {
               <form onSubmit={add}>
                 <div className="row">
                   <div className="mb-3 col-6">
-                    <label for="exampleInputEmail1" className="form-label">
+                    {/*  */}
+                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
                       Jenis Regulasi
                     </label>
                     <input

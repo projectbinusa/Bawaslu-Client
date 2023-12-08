@@ -69,6 +69,7 @@ function EditRegulasi() {
       });
 
       setTimeout(() => {
+        history.push("/rugulasi/:menuRegulasi/:id");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -100,7 +101,8 @@ function EditRegulasi() {
                       className="form-select form-select-sm"
                       aria-label="Small select example"
                       onChange={(e) => setIdMenuRegulasi(e.target.value)}
-                      value={idMenuRegulasi}>
+                      value={idMenuRegulasi}
+                    >
                       <option selected>PIlih Jenis Regulasi</option>
                       {regulasi.map((down) => {
                         return (
@@ -137,7 +139,8 @@ function EditRegulasi() {
                 <button type="submit" className="btn-danger mt-3 mr-3">
                   <a
                     href={"/regulasi/"}
-                    style={{ color: "white", textDecoration: "none" }}>
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
                     {" "}
                     Batal
                   </a>

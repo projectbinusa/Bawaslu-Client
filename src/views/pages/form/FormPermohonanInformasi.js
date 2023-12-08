@@ -14,7 +14,8 @@ const FormPermohonanInformasi = () => {
   // const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] = useState("");
   const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("");
   const [createDate, setCreateDate] = useState("");
-  const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] = useState("");
+  const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] =
+    useState("");
   const [email, setEmail] = useState("");
   const [id, setID] = useState("");
   const [namaPemohon, setNamaPemohon] = useState("");
@@ -139,8 +140,11 @@ const FormPermohonanInformasi = () => {
           <form onSubmit={Add} className="option" style={{}}>
             <div>
               <div>
-                <label for="exampleInputPassword1" className="form-label">
-                  Nama Pemohon
+                <label
+                  for="exampleInputPassword1"
+                  className="form-label font-weight-bold"
+                >
+                  Nama Pemohon :
                 </label>
                 <input
                   value={namaPemohon}
@@ -150,7 +154,12 @@ const FormPermohonanInformasi = () => {
                 />
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
-                <p>Alamat Pemohon:</p>
+                <label
+                  for="exampleInputPassword1"
+                  className="form-label font-weight-bold"
+                >
+                  Alamat Pemohon :
+                </label>{" "}
                 <textarea
                   className="textarea"
                   id="textarea"
@@ -159,7 +168,12 @@ const FormPermohonanInformasi = () => {
                 />
                 <br />
                 <br />
-                <p>Nomor Identitas:</p>
+                <label
+                  for="exampleInputPassword1"
+                  className="form-label font-weight-bold"
+                >
+                  Nomor Identitas :{" "}
+                </label>{" "}
                 <input
                   type="number"
                   className=" form-control "
@@ -169,14 +183,19 @@ const FormPermohonanInformasi = () => {
                 />
                 <br></br>
                 <br></br>
-                <label for="exampleInputPassword1" className="form-label">
-                  Jenis Identitas
+                <label
+                  for="exampleInputPassword1"
+                  className="form-label font-weight-bold"
+                >
+                  Jenis Identitas :
                 </label>
                 <select
-                 value={jenisIdentitas}
-                 onChange={(e) => setJenisIdentitasPemohon(e.target.value)} 
-                class="form-select" aria-label="Default select example">
-                  <option selected>Pilih Jenis Identitas</option>
+                  value={jenisIdentitas}
+                  onChange={(e) => setJenisIdentitasPemohon(e.target.value)}
+                  class="form-select"
+                  aria-label="Default select example"
+                >
+                  <option selected>Pilih Jenis Identitas </option>
                   <option value="1">KTP (Kartu Tanda Penduduk)</option>
                   <option value="2">SIM (Surat Izin Mengemudi)</option>
                   <option value="3">KTM (Surat Tanda Mahasiswa)</option>
@@ -194,7 +213,12 @@ const FormPermohonanInformasi = () => {
                 <p className="pp">0 of 60 max characters</p> */}
                 <br></br>
                 <br></br>
-                <p>Nomor Telp/HP:</p>
+                <label
+                  for="exampleInputPassword1"
+                  className="form-label font-weight-bold"
+                >
+                  Nomor Tlp/Hp :{" "}
+                </label>
                 <input
                   className=" form-control "
                   id=""
@@ -204,7 +228,12 @@ const FormPermohonanInformasi = () => {
                 />
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
-                <p>Email:</p>
+                <label
+                  for="exampleInputPassword1"
+                  className="form-label font-weight-bold"
+                >
+                  Email :{" "}
+                </label>
                 <input
                   className=" form-control "
                   id=""
@@ -226,7 +255,12 @@ const FormPermohonanInformasi = () => {
               </div>
             </div>
             <div className="tujuan">
-              <p>Tujuan Penggunaan Informasi:</p>
+              <label
+                for="exampleInputPassword1"
+                className="form-label font-weight-bold"
+              >
+                Tujuan Penggunaan Informasi :{" "}
+              </label>
               <textarea
                 value={tujuanPenggunaanInformasi}
                 onChange={(e) => setTujuanPenggunaanInformasi(e.target.value)}
@@ -234,16 +268,20 @@ const FormPermohonanInformasi = () => {
                 id="textarea"
               />
               <p className="pp">0 of 100 max characters</p>
-
               <br></br>
-              <p>Cara Memperoleh Informasi:</p>
+              <label
+                for="exampleInputPassword1"
+                className="form-label font-weight-bold"
+              >
+                Cara Memperoleh Informasi :
+              </label>
               <select
                 value={caraMemperolehInformasi}
                 onChange={(e) => setCaraMemperolehnInformasi(e.target.value)}
                 class="form-select"
                 aria-label="Default select example"
               >
-                <option selected>Pilih Cara Memperoleh Informasi</option>
+                <option selected>Pilih Cara Memperoleh Informasi </option>
                 <option value="mengambil sendiri">Mengambil Langsung</option>
                 <option value="pos">POS</option>
                 <option value="kurir">Kurir</option>
@@ -269,7 +307,12 @@ const FormPermohonanInformasi = () => {
               </select>
               <br></br>
               <br></br> */}
-              <p>Upload Photo Identitas (.jpg) size max 1mb:</p>
+              <label
+                for="exampleInputPassword1"
+                className="form-label font-weight-bold"
+              >
+                Upload Foto identitas (.jpg) max 1 mb :{" "}
+              </label>{" "}
               <input
                 type="file"
                 onChange={(e) => setFotoIdentitas(e.target.files[0])}

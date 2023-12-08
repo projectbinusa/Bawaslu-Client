@@ -55,8 +55,8 @@ function AddMenuRegulasi() {
         showConfirmButton: false,
         timer: 1500,
       });
-      history.push("/admin-regulasi/" + idJenisRegulasi);
       setTimeout(() => {
+        history.push("/admin-regulasi/" + idJenisRegulasi);
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -80,8 +80,8 @@ function AddMenuRegulasi() {
               <form onSubmit={addData}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
-                      Jenis Regulas
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                      Jenis Regulasi
                     </label>
                     <select
                       className="form-select form-select-sm"
@@ -97,7 +97,7 @@ function AddMenuRegulasi() {
                   </div>
 
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label">
+                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
                       Menu Regulasi
                     </label>
                     <input

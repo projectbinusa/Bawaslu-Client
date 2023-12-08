@@ -89,7 +89,8 @@ function AddBeritaAdmin() {
                     <form onSubmit={add}>
                       <div className="row">
                         <div className="mb-3 col-lg-6">
-                          <label className="form-label">Category</label>
+                          {/* a */}
+                          <label className="form-label  font-weight-bold ">Category</label>
                           <select
                             className="form-control"
                             aria-label="Small select example"
@@ -104,9 +105,10 @@ function AddBeritaAdmin() {
                           </select>
                         </div>
                         <div className="mb-3 col-lg-6">
+                          {/* a */}
                           <label
                             for="exampleInputEmail1"
-                            className="form-label"
+                            className="form-label  font-weight-bold "
                           >
                             Penulis Berita
                           </label>
@@ -119,7 +121,8 @@ function AddBeritaAdmin() {
                           />
                         </div>
                         <div className="mb-3 co-lg-6">
-                          <label className="form-label">Gambar</label>
+                          {/* a */}
+                          <label className="form-label font-weight-bold">Gambar</label>
                           <input
                             onChange={(e) =>
                               setImage(
@@ -131,7 +134,8 @@ function AddBeritaAdmin() {
                           />
                         </div>
                         <div className="mb-3 col-lg-12">
-                          <label className="form-label">Judul Berita</label>
+                          {/* a */}
+                          <label className="form-label font-weight-bold">Judul Berita</label>
                           <input
                             value={judulBerita}
                             onChange={(e) => setJudulBerita(e.target.value)}
@@ -141,7 +145,8 @@ function AddBeritaAdmin() {
                           />
                         </div>
                         <div className="col-lg-12">
-                          <label className="form-label">Isi Berita</label>
+                          {/* a */}
+                          <label className="form-label font-weight-bold">Isi Berita</label>
                           <div className="">
                             <textarea
                               value={isiBerita}

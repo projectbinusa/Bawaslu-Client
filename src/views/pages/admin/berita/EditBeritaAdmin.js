@@ -44,8 +44,8 @@ function EditBeritaAdmin() {
           showConfirmButton: false,
           timer: 1500,
         });
-        history.push("/admin-berita");
         setTimeout(() => {
+          history.push("/admin-berita");
           window.location.reload();
         }, 1500);
       })
@@ -104,7 +104,8 @@ function EditBeritaAdmin() {
               <form onSubmit={updateBerita}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label className="form-label">Category</label>
+                    {/*  */}
+                    <label className="form-label font-weight-bold">Category</label>
                     <select
                       className="form-control"
                       aria-label="Small select example"
@@ -117,7 +118,8 @@ function EditBeritaAdmin() {
                     </select>
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputEmail1" className="form-label">
+                    {/*  */}
+                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
                       Penulis Berita
                     </label>
                     <input
@@ -129,7 +131,8 @@ function EditBeritaAdmin() {
                     />
                   </div>
                   <div className="mb-3 co-lg-6">
-                    <label className="form-label">Gambar</label>
+                    {/*  */}
+                    <label className="form-label font-weight-bold">Gambar</label>
                     <input
                       onChange={(e) =>
                         setImage(e.target.files ? e.target.files[0] : null)
@@ -139,7 +142,8 @@ function EditBeritaAdmin() {
                     />
                   </div>
                   <div className="mb-3 col-lg-12">
-                    <label className="form-label">Judul Berita</label>
+                    {/*  */}
+                    <label className="form-label font-weight-bold">Judul Berita</label>
                     <input
                       value={judulBerita}
                       onChange={(e) => setJudulBerita(e.target.value)}
@@ -149,7 +153,8 @@ function EditBeritaAdmin() {
                     />
                   </div>
                   <div className="col-lg-12">
-                    <label className="form-label">Isi Berita</label>
+                    {/*  */}
+                    <label className="form-label font-weight-bold">Isi Berita</label>
                     <div className="">
                       <textarea
                         value={isiBerita}

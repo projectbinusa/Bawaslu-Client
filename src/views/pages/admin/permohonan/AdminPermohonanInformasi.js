@@ -160,7 +160,7 @@ function AdminPermohonanInformasi() {
                   style={{ overflowX: "auto", width:"100%" }}
                 >
                   <table
-                  class="align-middle table mb-0 table-borderless table-striped table-hover" style={{width:"full", border:"2px solid red"}}
+                  class="align-middle table mb-0 table-borderless table-striped table-hover" style={{width:"full", }}
                   >
                     <thead>
                       <tr>

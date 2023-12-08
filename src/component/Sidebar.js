@@ -56,7 +56,8 @@ function Sidebar() {
               <button
                 type="button"
                 class="hamburger close-sidebar-btn hamburger--elastic"
-                data-class="closed-sidebar">
+                data-class="closed-sidebar"
+              >
                 <span class="hamburger-box">
                   <span class="hamburger-inner"></span>
                 </span>
@@ -68,7 +69,9 @@ function Sidebar() {
           <div>
             <button
               type="button"
-              class="hamburger hamburger--elastic mobile-toggle-nav">
+              class="hamburger hamburger--elastic mobile-toggle-nav"
+            >
+              {/*  */}
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
               </span>
@@ -79,9 +82,10 @@ function Sidebar() {
           <span>
             <button
               type="button"
-              class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+              class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav"
+            >
               <span class="btn-icon-wrapper">
-                <i class="fa fa-ellipsis-v fa-w-6"></i>
+                <i class="fa-solid fa-chevron-down"></i>{" "}
               </span>
             </button>
           </span>
@@ -94,27 +98,27 @@ function Sidebar() {
                 <a
                   style={{ textDecoration: "none" }}
                   href="/admin-berita"
-                  class="mm-active">
-                  <i class="metismenu-icon pe-7s-rocket"></i>
-                  Berita
+                  class="mm-active"
+                >
+                  <i class="fa-regular fa-newspaper metismenu-icon"></i> Berita
                 </a>
               </li>
               <li>
                 <a style={{ textDecoration: "none" }} href="/admin-pengumuman">
-                  <i class="metismenu-icon pe-7s-rocket"></i>
+                  <i class="fa-solid fa-circle-info  metismenu-icon"></i>{" "}
                   Pengumuman
                 </a>
               </li>
               <li class="app-sidebar__heading">Informasi</li>
               <li>
                 <a style={{ textDecoration: "none" }} href="/jenis-informasi">
-                  <i class="metismenu-icon pe-7s-diamond"></i>
+                  <i class="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
                   Jenis Informasi
                 </a>
               </li>
               <li>
                 <a style={{ textDecoration: "none" }} href="#">
-                  <i class="metismenu-icon pe-7s-diamond"></i>
+                  <i class="fa-solid fa-bullhorn metismenu-icon "></i>
                   Informasi Publik
                   <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
@@ -124,7 +128,8 @@ function Sidebar() {
                       <li key={inf.id}>
                         <a
                           style={{ textDecoration: "none" }}
-                          href={`./admin-informasi/${inf.namaInformasi}/${inf.id}`}>
+                          href={`./admin-informasi/${inf.namaInformasi}/${inf.id}`}
+                        >
                           <i class="metismenu-icon"></i>
                           {inf.namaInformasi}
                         </a>
@@ -133,16 +138,17 @@ function Sidebar() {
                   })}
                 </ul>
               </li>
+              {/*  */}
               <li>
-                <a style={{textDecoration:"none"}} href="/jenis-regulasi">
-                  <i class="metismenu-icon pe-7s-car"></i>
+                <a style={{ textDecoration: "none" }} href="/jenis-regulasi">
+                  <i class="fa-solid fa-clipboard-list  metismenu-icon"></i>
                   Jenis Regulasi
                 </a>
               </li>
               <li>
                 <a style={{ textDecoration: "none" }} href="#">
-                  <i class="metismenu-icon pe-7s-car"></i>
-                  Daftar Regulasi
+                  <i class="fa-solid fa-list  metismenu-icon"></i> Daftar
+                  Regulasi
                   <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
                 <ul>
@@ -151,7 +157,8 @@ function Sidebar() {
                       <li>
                         <a
                           style={{ textDecoration: "none" }}
-                          href={`/admin-regulasi/${reg.id}`}>
+                          href={`/admin-regulasi/${reg.id}`}
+                        >
                           <i class="metismenu-icon"></i>
                           {reg.jenisRegulasi}
                         </a>
@@ -162,18 +169,21 @@ function Sidebar() {
               </li>
               <li class="app-sidebar__heading">Permohonan</li>
               <li>
+                {/*  */}
                 <a
                   style={{ textDecoration: "none" }}
-                  href="/adminn-permohonan-informasi">
-                  <i class="metismenu-icon pe-7s-display2"></i>
+                  href="/adminn-permohonan-informasi"
+                >
+                  <i class="fa-solid fa-circle-question  metismenu-icon"></i>{" "}
                   Permohonan Informasi
                 </a>
               </li>
               <li>
                 <a
                   style={{ textDecoration: "none" }}
-                  href="/admin-permohonan-keberatan">
-                  <i class="metismenu-icon pe-7s-display2"></i>
+                  href="/admin-permohonan-keberatan"
+                >
+                  <i class="fa-solid fa-weight-hanging metismenu-icon "></i>{" "}
                   Permohonan Keberatan
                 </a>
               </li>
