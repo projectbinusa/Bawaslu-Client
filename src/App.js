@@ -14,7 +14,6 @@ import Register from "./views/pages/auth/Register";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 import FormPermohonanInformasi from "./views/pages/form/FormPermohonanInformasi";
 import FormPermohonanKeberatan from "./views/pages/form/FormPermohonanKeberatan";
-import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
 import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
 import AddCategory from "./views/pages/admin/berita/categoryBerita/AddCategory";
@@ -102,6 +101,8 @@ import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
+import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
 // test
 function App() {
   return (
@@ -129,8 +130,18 @@ function App() {
           />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
+          <Route path="/informasi-publik" component={Informasii} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
-          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+          <Route
+            path="/informasi-berkala-kelembagaan"
+            component={InformasiBerkalaKelembagaan}
+            exact
+          />
+          <Route
+            path="/informasi-berkala-Kepemiluan"
+            component={InformasiBerkalaKepemiluan}
+            exact
+          />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
           <Route path="/informasi-kanal" component={Kanal} exact />
           {/* form online */}
@@ -144,6 +155,7 @@ function App() {
             component={FormPermohonanInformasi}
             exact
           />
+
           {/* prosedur */}
           <Route path="/waktu-layanan" component={WaktuLayanan} exact />
           <Route
@@ -463,11 +475,7 @@ function App() {
             component={IsiPengumuman}
             exact
           /> */}
-          <Route
-            path="/page-isi-berita/:id"
-            component={PageBerita}
-            exact
-          />
+          <Route path="/page-isi-berita/:id" component={PageBerita} exact />
           <Route
             path="/penyelesaian-sengketa-footer"
             component={PenyelesaianSengketaFooter}
@@ -478,11 +486,7 @@ function App() {
             component={PaswasluKecamatan}
             exact
           />
-          <Route
-            path="/informasi-serta-merta"
-            component={SertaMerta}
-            exact
-          />
+          <Route path="/informasi-serta-merta" component={SertaMerta} exact />
         </Switch>
       </main>
     </BrowserRouter>
