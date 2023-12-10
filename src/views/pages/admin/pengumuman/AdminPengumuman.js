@@ -95,7 +95,7 @@ function AdminPengumuman() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container box-tabel mt-3 app-main__outer">
           <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
@@ -175,9 +175,9 @@ function AdminPengumuman() {
                   <thead>
                     <tr>
                       <th scope="col">No</th>
-                      <th scope="col">Judul Pengumuman</th>
+                      <th scope="col" style={{minWidth:"150px"}}>Judul Pengumuman</th>
                       <th scope="col">Image</th>
-                      <th scope="col">Tanggal Dibuat</th>
+                      <th scope="col">Isi Pengumuman</th>
                       <th scope="col">Penulis</th>
                       <th scope="col" className="text-center">
                         Aksi
@@ -189,7 +189,7 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No : ">{index + 1}</td>
+                          <td data-label="No : ">{index + 1 + (currentPage - 1) * rowsPerPage}</td>
                           <td data-label="author : ">{pengumuman.author}</td>
                           <td>
                             <img
@@ -204,8 +204,8 @@ function AdminPengumuman() {
                             {pengumuman.judulPengumuman}
                           </td>
                           <td data-label="tags : ">{pengumuman.tags}</td>
-                          <td data-label="Aksi : " className="aksi">
-                            <div className="d-flex">
+                          <td data-label="Aksi : " >
+                            <div className="aksi">
                             <button
                               type="button"
                               className=".responsive-buttons  btn-primary btn-sm mr-2">

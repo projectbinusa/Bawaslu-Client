@@ -138,7 +138,7 @@ function IsiRekap() {
                       <i className="far fa-user"></i>BY {author}
                     </li>
                     <li>
-                      <i className="far fa-calendar-alt"></i>   <span>{format(new Date(createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
+                      <i className="far fa-calendar-alt"></i>   <span>{format(new Date(createdDate || new Date()), "dd MMMM yyyy", { locale: idLocale })}</span>
 
                     </li>
                   </ul>

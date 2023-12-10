@@ -37,6 +37,7 @@ function RekapBerita() {
       <br />
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
+          <h2>{rekap.length > 0 && rekap[0].createdDated}</h2>
           <div className="row">
             <div className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>

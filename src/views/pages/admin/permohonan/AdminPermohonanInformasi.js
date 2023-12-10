@@ -161,28 +161,28 @@ function AdminPermohonanInformasi() {
                     style={{ width: "100%", overflowY: "scroll" }}>
                     <thead>
                       <tr>
-                        <th scope="col" className="text-center">
+                        <th scope="col" className="text-left">
                           No
                         </th>
-                        <th scope="col" className="text-center">
+                        <th scope="col" className="text-left">
                           Nama
                         </th>
-                        {/* <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-left">
                           No Hp
                         </th>
-                        <th scope="col" className="text-center">
+                        <th scope="col" className="text-left">
                           Alamat Pemohon
                         </th> */}
-                        <th scope="col" className="text-center">
+                        <th scope="col" className="text-left">
                           Cara Memperoleh{" "}
                         </th>
-                        {/* <th scope="col" className="text-center">
+                        {/* <th scope="col" className="text-left">
                           Cara Mendapat salinan{" "}
                         </th> */}
-                        <th scope="col" className="text-center">
+                        <th scope="col" className="text-left">
                           Email{" "}
                         </th>
-                        {/* <th scope="col" className="text-center">
+                       <th scope="col" className="text-left">
                           Foto Identitas Pemohon{" "}
                         </th>
 
@@ -272,7 +272,7 @@ function AdminPermohonanInformasi() {
                               <button
                                 type="button"
                                 class="btn-danger btn-sm"
-                                onClick={() => delete informasi.id}>
+                                onClick={() => deleteData(informasi.id)}>
                                 <i class="fa-solid fa-trash"></i>
                               </button>
                             </td>

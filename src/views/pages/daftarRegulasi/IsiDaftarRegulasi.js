@@ -79,6 +79,14 @@ function IsiDaftarRegulasi() {
         }}
         className="project-area pd-top-115 pd-bottom-90">
         <div className="container">
+        <div className="row justify-content-center">
+            <div className="col-xl-6 col-lg-7 col-md-10">
+              <div className="section-title text-center">
+                <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
+                <h2 className="title">{list.length > 0 && list[0].judulBerita}</h2>
+              </div>
+            </div>
+          </div>
           <div className="d-lg-flex gap-5">
             <div className="isotope-filters project-isotope-btn text-left mb-5">
               {list.map((menu) => (

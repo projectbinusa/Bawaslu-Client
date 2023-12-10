@@ -33,13 +33,6 @@ function PageBerita() {
   const [list, setList] = useState([]);
   const [variabel, setVariabel] = useState({
     id: "",
-    judulBerita: "",
-    isiBerita: "",
-    author: "",
-    image: "",
-    tagsBerita: "",
-    categoryBerita: "",
-    createdDate: "",
   });
 
   const getAll = async () => {

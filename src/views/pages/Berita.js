@@ -293,7 +293,7 @@ function Berita() {
                                     style={{
                                       color: "white",
                                       backgroundColor: "#cf2830" ,
-                                      width :"100px"
+                                      width :"80px"
                                     }}
                                     className="border p-2">
                                     <i className="fa-brands fa-pinterest"></i>{" "}
@@ -319,8 +319,6 @@ function Berita() {
                             href={`/page-isi-berita/${berita.author}/${berita.id}`}>
                             {berita.judulBerita}
                           </a>
-
-                          <a href="">{berita.judulBerita}</a>
                         </h2>
                         <ul class="blog-meta">
                           <li>
@@ -405,7 +403,7 @@ function Berita() {
                   </div>
                   <div class="details">
                     <h2>
-                      <a href="">COntoh Berita</a>
+                      <a href="">Contoh Berita</a>
                     </h2>
                     <ul class="blog-meta">
                       <li>
@@ -450,7 +448,7 @@ function Berita() {
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>
-                                  <span>{beritaTerbaru.createdDate}</span>
+                                  <span>{format(new Date(beritaTerbaru.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
                                 </div>
                               </div>
                             </div>

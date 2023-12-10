@@ -105,7 +105,7 @@ function IsiPengumuman() {
                             <div class="media-body">
                               <p>
                                 <a
-                                  href={`/pengumuman/${isi.id}`}>
+                                  href={`/pengumuman/isi-pengumuman/${isi.id}`}>
                                   {isi.judulPengumuman}
                                 </a>
                               </p>
