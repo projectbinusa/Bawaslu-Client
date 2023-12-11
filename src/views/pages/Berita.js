@@ -5,8 +5,14 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
-import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
-
+import "../../css/berita.css";
+import {
+  FacebookShareButton,
+  PinterestShareButton,
+  TwitterShareButton,
+} from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -28,7 +34,9 @@ function Berita() {
   const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/all?page=${page-1}&size=10&sortBy=id&sortOrder=desc`
+        `${API_DUMMY}/bawaslu/api/berita/all?page=${
+          page - 1
+        }&size=10&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data.content);
       setPaginationInfo({
@@ -47,7 +55,6 @@ function Berita() {
       );
       setCategory(response.data.data);
       console.log(response.data.data);
-
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -156,50 +163,122 @@ function Berita() {
 
   return (
     <>
+    
       <Navbar />
       {/* <!-- page title start --> */}
       <div
-        class="service-area bg-overlay pd-top-120 pd-bottom-90"
+        class="service-area pd-top-120 pd-bottom-90"
         style={{
           backgroundImage: `url(${gambarTerbaru})`,
-        }}>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div
-                class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
-                style={{
-                  backgroundImage: `url(${gambarTerbaru})`,
-                  minHeight: "93%",
-                }}>
-                <h2 class="title title-berita mt-4">
-                  {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
-                </h2>
+        }}
+      >
+       <div className="container mt4">
+       <div id="carouselExampleDark" class="carousel carousel-dark slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+          </div>
+          <div class="carousel-inner" id="background-linnear">
+            <div id="background-linnear" class="carousel-item active" data-bs-interval="10000">
+              <img
+              id="background-linnear"
+                src="https://www.inilah.com/_next/image?url=https%3A%2F%2Fc.inilah.com%2Freborn%2F2023%2F11%2FIMG_20231125_WA_0020_68c10d8068.jpg&w=1920&q=75"
+                class="d-block w-100 img-fluid" 
+                alt="dokumentasi1"
+              />
+              <div  class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Berita</h1>
+                <p style={{color:"white"}}>
+                  Boyolali – Untuk menjaga suasana Pemilu 2024 agar tetap
+                  aman,damai, dan berkualitas ditengah maraknya informasi hoax.
+                  Jum’at(1/12) Bawaslu Kabupaten Boyolali...
+                </p>
               </div>
             </div>
-            <div class="col-lg-8">
-              <div class="row">
-                {listTerbaru.slice(1, 5).map((berita, index) => (
-                  <div class="col-md-6" key={index}>
-                    <div class="single-service-inner style-black text-left"  style={{
-                  backgroundImage: `url(${berita.image})`,
-                  minHeight: "93%",
-                }}>
-                      <div class="icon-box">
-                        <i class="icomoon-layer"></i>
-                      </div>
-                      <div class="details detailss">
-                        <h3>
-                          <a class="isiBerita">{berita.judulBerita}</a>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="https://jateng.bawaslu.go.id/wp-content/uploads/2019/04/Cegah-Pelanggaran-Pemilu-Bawaslu-Boyolali-Gelar-Apel-Siaga-1024x682.jpeg" class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Kehumasan</h1>
+                <p style={{color:"white"}}>
+                Jadwal pendaftaran Kelompok Penyelenggara Pemungutan Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023 mendatang. Komisi Pemilihan Umum... Read ...                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://www.bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/IMG-20220718-WA0014.jpg?itok=Ixek3vWA" class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Pencegahan</h1>
+                <p style={{color:"white"}}>
+                Badan Pengawas Pemilihan Umum - Koordinator Divisi Pencegahan, Partisipasi Masyarakat, dan Hubungan Masyarakat Bawaslu Lolly Suhenty ...                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://bawaslu.go.id/sites/default/files/foto_berita/IMG-20220822-WA0003.jpg"  class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>Penangan Pelanggaran</h1>
+                <p style={{color:"white"}}>
+                Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa: pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran administrasi Pemilu; dan/atau; tindak pidana ... </p>
+                              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230718121531.jpeg"  class="d-block w-100 img-fluid"  alt="..." />
+              <div class="carousel-caption  d-md-block text-center">
+                <h1 style={{color:"white"}}>OSDM & Diklat</h1>
+                <p style={{color:"white"}}>
+                Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih Masa Jabatan 2023-2028 Provinsi Jawa Tengah. Selengkapnya,                </p>
               </div>
             </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+       </div>
+     
       </div>
 
       <br />
@@ -222,7 +301,8 @@ function Berita() {
                         <div className="col-6">
                           <a
                             style={{ color: "black", textDecoration: "none" }}
-                            href={`category-berita/${cta.category}/${cta.id}`}>
+                            href={`category-berita/${cta.category}/${cta.id}`}
+                          >
                             {cta.category}
                           </a>
                         </div>
@@ -242,63 +322,72 @@ function Berita() {
                           <div class="col-sm-7"></div>
                           <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                             <div class="blog-share">
-                             <ul>
-                              <li>
-                                <FacebookShareButton
-                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                  media={berita.image}
-                                  description={berita.judulBerita}
-                                  quote={berita.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
-                                    Facebook
-                                  </button>
-                                </FacebookShareButton>
-                              </li>
-                              <li>
-                                <TwitterShareButton
-                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                  media={berita.image}
-                                  description={berita.judulBerita}
-                                  quote={berita.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
-                                    Twitter
-                                  </button>
-                                </TwitterShareButton>
-                              </li>
-                              <li>
-                                <PinterestShareButton
-                                  url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                  quote={berita.judulBerita}
-                                  media={berita.image}
-                                  description={berita.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                    }}
-                                    className="border p-2">
-                                    <i className="fa-brands fa-pinterest"></i>{" "}
-                                    Pin
-                                  </button>
-                                </PinterestShareButton>
-                              </li>
-                            </ul>
+                              <ul>
+                                <li>
+                                  <FacebookShareButton
+                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                    media={berita.image}
+                                    description={berita.judulBerita}
+                                    quote={berita.judulBerita}
+                                  >
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#45629f",
+                                      }}
+                                      className="border p-2"
+                                    >
+                                      <i
+                                        className="fab fa-facebook-f"
+                                        aria-hidden="true"
+                                      ></i>{" "}
+                                      Facebook
+                                    </button>
+                                  </FacebookShareButton>
+                                </li>
+                                <li>
+                                  <TwitterShareButton
+                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                    media={berita.image}
+                                    description={berita.judulBerita}
+                                    quote={berita.judulBerita}
+                                  >
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#5eb2ef",
+                                      }}
+                                      className="border p-2"
+                                    >
+                                      <i
+                                        className="fab fa-twitter"
+                                        aria-hidden="true"
+                                      ></i>{" "}
+                                      Twitter
+                                    </button>
+                                  </TwitterShareButton>
+                                </li>
+                                <li>
+                                  <PinterestShareButton
+                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                    quote={berita.judulBerita}
+                                    media={berita.image}
+                                    description={berita.judulBerita}
+                                  >
+                                    <button
+                                      style={{
+                                        color: "white",
+                                        backgroundColor: "#cf2830",
+                                        width: "80px",
+                                      }}
+                                      className="border p-2"
+                                    >
+                                      <i className="fa-brands fa-pinterest"></i>{" "}
+                                      Pin
+                                    </button>
+                                  </PinterestShareButton>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
@@ -313,11 +402,10 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a
-                            href={`/page-isi-berita/${berita.judulBerita}/${berita.id}`}>
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
+                          >
                             {berita.judulBerita}
                           </a>
-
-                          <a href="">{berita.judulBerita}</a>
                         </h2>
                         <ul class="blog-meta">
                           <li>
@@ -325,7 +413,13 @@ function Berita() {
                           </li>
                           <li>
                             <i class="far fa-calendar-alt"></i>{" "}
-                            {berita.createdDate}
+                            <span>
+                              {format(
+                                new Date(berita.createdDate),
+                                "dd MMMM yyyy",
+                                { locale: idLocale }
+                              )}
+                            </span>
                           </li>
                         </ul>
                       </div>
@@ -352,13 +446,16 @@ function Berita() {
                             <li>
                               <a href="#">
                                 <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}className="border p-2">
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#45629f",
+                                  }}
+                                  className="border p-2"
+                                >
                                   <i
                                     class="fab fa-facebook-f"
-                                    aria-hidden="true"></i>{" "}
+                                    aria-hidden="true"
+                                  ></i>{" "}
                                   Facebook
                                 </button>
                               </a>
@@ -366,13 +463,16 @@ function Berita() {
                             <li>
                               <a href="#">
                                 <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}className="border p-2">
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#5eb2ef",
+                                  }}
+                                  className="border p-2"
+                                >
                                   <i
                                     class="fab fa-twitter"
-                                    aria-hidden="true"></i>{" "}
+                                    aria-hidden="true"
+                                  ></i>{" "}
                                   Twitter
                                 </button>
                               </a>
@@ -380,10 +480,12 @@ function Berita() {
                             <li>
                               <a href="#">
                                 <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                    }}className="border p-2">
+                                  style={{
+                                    color: "white",
+                                    backgroundColor: "#cf2830",
+                                  }}
+                                  className="border p-2"
+                                >
                                   <i class="fa-brands fa-pinterest"></i> Pin
                                 </button>
                               </a>
@@ -402,7 +504,7 @@ function Berita() {
                   </div>
                   <div class="details">
                     <h2>
-                      <a href="">COntoh Berita</a>
+                      <a href="">Contoh Berita</a>
                     </h2>
                     <ul class="blog-meta">
                       <li>
@@ -427,7 +529,8 @@ function Berita() {
                 <div class="td-sidebar">
                   <div
                     class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9", overflow: "hidden" }}>
+                    style={{ background: "#F1F6F9", overflow: "hidden" }}
+                  >
                     <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
                       {listTerbaru.map((beritaTerbaru) => {
@@ -443,11 +546,21 @@ function Berita() {
                               </div>
                               <div class="media-body align-self-center">
                                 <h6 class="title">
-                                  <a href={`/Page-Berita/${beritaTerbaru.id}`}>{beritaTerbaru.judulBerita}</a>
+                                  <a
+                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}
+                                  >
+                                    {beritaTerbaru.judulBerita}
+                                  </a>
                                 </h6>
                                 <div class="post-info">
                                   <i class="far fa-calendar-alt"></i>
-                                  <span>{beritaTerbaru.createdDate}</span>
+                                  <span>
+                                    {format(
+                                      new Date(beritaTerbaru.createdDate),
+                                      "dd MMMM yyyy",
+                                      { locale: idLocale }
+                                    )}
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -458,7 +571,8 @@ function Berita() {
                   </div>
                   <div
                     class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
+                    style={{ background: "#F1F6F9" }}
+                  >
                     <h4 class="widget-title">Arsip</h4>
                     <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {
