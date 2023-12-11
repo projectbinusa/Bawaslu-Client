@@ -104,22 +104,62 @@ function Index() {
       <div id="app-main" className="app-main">
         <Sidebar />
         <div className="box-tabel container mt-3 app-main__outer">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
+              <label className="form-label mt-2">Rows per page:</label>
+            </div>
+            <div className="col-auto">
+              <select
+                className="form-select form-select-xl w-auto"
+                onChange={handleRowsPerPageChange}
+                value={rowsPerPage}>
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+              </select>
+            </div>
+          </div>
+          <div className="search">
+            <input
+              type="search"
+              className="form-control widget-content-right mt-3 mb-3 d-lg-none d-block"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+          </div>
           <div class="main-card w-100 mb-3 card">
-            <div class="card-header">
-              Jenis Informasi11
+            <div className="card-header" style={{ display: "flex" }}>
+                {jenisInformasi.length > 0 && jenisInformasi[0].namaInformasi}
+              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div className="col-auto">
+                  <label className="form-label mt-2">Rows per page:</label>
+                </div>
+                <div className="col-auto">
+                  <select
+                    className="form-select form-select-sm"
+                    onChange={handleRowsPerPageChange}
+                    value={rowsPerPage}
+                  >
+                    <option value={5}>5</option>
+                    <option value={10}>10</option>
+                    <option value={20}>20</option>
+                  </select>
+                </div>
+              </div>
               <div className="d-flex ml-auto gap-3">
                 <input
                   type="search"
-                  className="form-control widget-content-right w-75"
+                  className="form-control widget-content-right w-75 d-lg-block d-none"
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div class="btn-actions-pane-right">
-                  <div id="butoon" role="group" class="btn-group-sm btn-group">
-                    <button id="button" class="active btn-focus p-2 rounded">
+                <div className="btn-actions-pane-right">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
                       <a
-                        href="/tambah-jenis-keterangan"
+                        href={`/tambah/jenis-keterangan/${param.id}`}
                         className="text-light"
                         style={{ textDecoration: "none" }}>
                         {" "}
@@ -130,69 +170,75 @@ function Index() {
                 </div>
               </div>
             </div>
-              <div
-                className=""
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
-                <table className="align-middle mb-0 table table-borderless table-striped table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col">No</th>
-                      <th scope="col">Jenis Keterangan</th>
-                      <th scope="col" className="text-center">
-                        Aksi
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {filteredList.map((inf, index) => {
-                      return (
-                        <tr key={index}>
-                          <td data-label="No" className="text-center">{index + 1}</td>
-                          <td
-                            data-label="keterangan \"
-                            className="t">
-                            {inf.jenisKeteranganInformasiDTOList[0].keterangan}
-                          </td>
-                          <td data-label="Aksi : " className="pt-3 pb-3 aksi text-center">
-                            <div className="d-flex justify-content-center">
-                              <button
-                                type="button"
-                                className=".responsive-buttons btn-primary btn-sm mr-2">
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}>
-                                  <i className="fa-solid fa-pen-to-square"></i>
-                                </a>
-                              </button>
-                              <button
-                                type="button"
-                                className="mr-2 btn-danger btn-sm"
-                                onClick={() => deleteData(inf.jenisKeteranganInformasiDTOList[0].id)}>
-                                <i className="fa-solid fa-trash"></i>
-                              </button>
-                              <button type="button" class="btn-info btn-sm">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={
-                                "/isi-keterangan/" +
-                                inf.jenisKeteranganInformasiDTOList[0].keterangan +
-                                "/" +
-                                inf.jenisKeteranganInformasiDTOList[0].id
+            <div className="" style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Jenis Keterangan</th>
+                    <th scope="col" className="text-center">
+                      Aksi
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredList.map((inf, index) => {
+                    return (
+                      <tr key={index}>
+                        <td data-label="No">{index + 1}</td>
+                        <td data-label="keterangan \" className="t">
+                          {inf.jenisKeteranganInformasiDTOList[0].keterangan}
+                        </td>
+                        <td
+                          data-label="Aksi : "
+                          className="pt-3 pb-3 aksi text-center">
+                          <div className="d-flex justify-content-center">
+                            <button
+                              type="button"
+                              className=".responsive-buttons btn-primary btn-sm mr-2">
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}>
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              className="mr-2 btn-danger btn-sm"
+                              onClick={() =>
+                                deleteData(
+                                  inf.jenisKeteranganInformasiDTOList[0].id
+                                )
                               }>
-                              <i class="fas fa-plus"></i>
-                            </a>
-                          </button>
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
+                              <i className="fa-solid fa-trash"></i>
+                            </button>
+                            <button type="button" class="btn-info btn-sm">
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={
+                                  "/isi-keterangan/" +
+                                  inf.jenisKeteranganInformasiDTOList[0]
+                                    .keterangan +
+                                  "/" +
+                                  inf.jenisKeteranganInformasiDTOList[0].id
+                                }>
+                                <i class="fas fa-plus"></i>
+                              </a>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
             <div className="card-header mt-3 d-flex justify-content-center">
               <Pagination
                 count={paginationInfo.totalPages}
@@ -207,7 +253,6 @@ function Index() {
         </div>
       </div>
     </div>
-
   );
 }
 

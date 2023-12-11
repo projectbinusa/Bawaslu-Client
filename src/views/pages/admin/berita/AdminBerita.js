@@ -61,7 +61,9 @@ function AdminBerita() {
   const getAll1 = async (page1) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=asc&page=${page1 - 1}&size=${rowsPerPage1}&sort=id`,
+        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=asc&page=${
+          page1 - 1
+        }&size=${rowsPerPage1}&sort=id`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -213,22 +215,23 @@ function AdminBerita() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}
-              >
+                value={rowsPerPage}>
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
               </select>
             </div>
           </div>
-          <input
-            type="search"
-            className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
-          <div className="main-card mb-3 card">
+          <div className="search">
+            <input
+              type="search"
+              className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+          </div>
+          <div className="main-card box-tabel mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Berita</p>
               <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
@@ -240,8 +243,7 @@ function AdminBerita() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}
-                  >
+                    value={rowsPerPage}>
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -261,8 +263,7 @@ function AdminBerita() {
                     <button className="active btn-focus p-2 rounded">
                       <a
                         style={{ color: "white", textDecoration: "none" }}
-                        href="/add-berita-admin"
-                      >
+                        href="/add-berita-admin">
                         Tambah Berita
                       </a>
                     </button>
@@ -272,12 +273,11 @@ function AdminBerita() {
             </div>
             <div
               className="table-responsive-3"
-              style={{ overflowX: "auto", maxWidth: "100%" }}
-            >
+              style={{ overflowX: "auto", maxWidth: "100%" }}>
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th scope="col" className="text-center">
+                    <th scope="col">
                       No
                     </th>
                     <th scope="col" className="text-long">
@@ -286,7 +286,10 @@ function AdminBerita() {
                     {/* <th scope="col" className="text-center">
                       Isi Berita
                     </th> */}
-                    <th scope="col" className="text-left" style={{minWidth:"150px"}}>
+                    <th
+                      scope="col"
+                      className="text-left"
+                      style={{ minWidth: "150px" }}>
                       Penulis Berita
                     </th>
                     <th scope="col" className="text-left">
@@ -301,10 +304,16 @@ function AdminBerita() {
                   {list.map((berita, no) => {
                     return (
                       <tr key={no}>
-                        <td data-label="No" className="">{no + 1 + (currentPage - 1) * rowsPerPage}</td>
-                        <td data-label="Judul Berita" className="text-long">{berita.judulBerita}</td>
+                        <td data-label="No" className="">
+                          {no + 1 + (currentPage - 1) * rowsPerPage}
+                        </td>
+                        <td data-label="Judul Berita" className="text-long">
+                          {berita.judulBerita}
+                        </td>
                         {/* <td data-label="">{berita.isiBerita}</td> */}
-                        <td data-label="Penulis Berita" className="">{berita.author}</td>
+                        <td data-label="Penulis Berita" className="">
+                          {berita.author}
+                        </td>
                         <td data-label="Image" className="">
                           <img
                             src={berita.image}
@@ -314,16 +323,20 @@ function AdminBerita() {
                         </td>
                         <td data-label="Aksi">
                           <div className="aksi">
-                          <button type="button" className="btn-primary btn-sm mr-2">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={`/edit-berita-admin/${berita.id}`}
-                            >
-                              {" "}
-                              <i className="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
+                            <button
+                              type="button"
+                              className="btn-primary btn-sm mr-2">
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-berita-admin/${berita.id}`}>
+                                {" "}
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
                               type="button"
                               class="btn-warning  mr-2 btn-sm">
                               <a
@@ -332,13 +345,12 @@ function AdminBerita() {
                                 <i class="fas fa-info-circle"></i>
                               </a>
                             </button>
-                          <button
-                            onClick={() => deleteData(berita.id)}
-                            type="button"
-                            className="btn-danger btn-sm"
-                          >
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
+                            <button
+                              onClick={() => deleteData(berita.id)}
+                              type="button"
+                              className="btn-danger btn-sm">
+                              <i className="fa-solid fa-trash"></i>
+                            </button>
                           </div>
                         </td>
                       </tr>
@@ -362,7 +374,7 @@ function AdminBerita() {
           {/* Category */}
           <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div class="col-auto">
-{/*                */}
+              {/*                */}
               <label className="form-label mt-2">Rows per page:</label>
             </div>
             <div class="col-auto">
@@ -376,6 +388,7 @@ function AdminBerita() {
               </select>
             </div>
           </div>
+          <div className="search">
           <input
             type="search"
             className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
@@ -383,7 +396,8 @@ function AdminBerita() {
             value={searchTerm1}
             onChange={handleSearchChange1}
           />
-           <div className="mb-3 card">
+          </div>
+          <div className="mb-3 card box-tabel">
             <div
               className="card-header pembungkus-text-button"
               style={{ display: "flex" }}>
@@ -412,28 +426,26 @@ function AdminBerita() {
                   value={searchTerm1}
                   onChange={handleSearchChange1}
                 />
-              <div className="btn-actions-pane-right">
-                <div role="group" className="btn-group-sm btn-group">
-                  <button className="active btn-focus p-2 rounded">
-                    <a
-                      style={{ color: "white", textDecoration: "none" }}
-                      href="/tambah-category-berita"
-                    >
-                      Tambah Data
-                    </a>
-                  </button>
+                <div className="btn-actions-pane-right">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
+                      <a
+                        style={{ color: "white", textDecoration: "none" }}
+                        href="/tambah-category-berita">
+                        Tambah Data
+                      </a>
+                    </button>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
             <div
               className="table-responsive-3"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}
-            >
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-left">No</th>
+                    <th className="text-left nomor">No</th>
                     <th className="text-left">Kategory Berita</th>
                     <th className="text-left">Tanggal Dibuat</th>
                     <th className="text-center">Aksi</th>
@@ -443,21 +455,21 @@ function AdminBerita() {
                   {filteredList1.map((kategory, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No" className="text-muted">
-                        {index + 1 + (currentPage1 - 1) * rowsPerPage1}
+                        <td data-label="No" className="nomor">
+                          {index + 1 + (currentPage1 - 1) * rowsPerPage1}
                         </td>
-                        <td data-label="Category">
-                          {kategory.category}
-                        </td>
+                        <td data-label="Category">{kategory.category}</td>
                         <td data-label="Created Date">
                           {kategory.createdDate}
                         </td>
-                        <td data-label="Aksi" className="aksi">
-                          <button type="button" className="btn-primary btn-sm mr-2">
+                        <td data-label="Aksi">
+                          <div className="aksi">
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
-                              href={`/edit-category-berita/${kategory.id}`}
-                            >
+                              href={`/edit-category-berita/${kategory.id}`}>
                               {" "}
                               <i className="fa-solid fa-pen-to-square"></i>
                             </a>
@@ -465,10 +477,10 @@ function AdminBerita() {
                           <button
                             onClick={() => deleteData1(kategory.id)}
                             type="button"
-                            className="btn-danger btn-sm"
-                          >
+                            className="btn-danger btn-sm">
                             <i className="fa-solid fa-trash"></i>
                           </button>
+                          </div>
                         </td>
                       </tr>
                     );
@@ -476,15 +488,15 @@ function AdminBerita() {
                 </tbody>
               </table>
               <div className="card-header mt-3 d-flex justify-content-center">
-              <Pagination
-                count={paginationInfo1.totalPages1}
-                page={currentPage1}
-                onChange={(event, value) => setCurrentPage1(value)}
-                showFirstButton
-                showLastButton
-                color="primary"
-              />
-            </div>
+                <Pagination
+                  count={paginationInfo1.totalPages1}
+                  page={currentPage1}
+                  onChange={(event, value) => setCurrentPage1(value)}
+                  showFirstButton
+                  showLastButton
+                  color="primary"
+                />
+              </div>
             </div>
           </div>
         </div>

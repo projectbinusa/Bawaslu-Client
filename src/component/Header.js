@@ -154,7 +154,7 @@ function Header() {
               onClick={logout}
               type="button"
               className="btn-shadow p-1 btn-danger btn-sm">
-              <i className="fas fa-sign-out-alt"></i> Logoutiii
+              <i className="fas fa-sign-out-alt"></i> Logouti
             </button>
           </span>
         </div>{" "}

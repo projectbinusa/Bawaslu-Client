@@ -112,16 +112,16 @@ function MenuRegulasi() {
               </select>
             </div>
           </div>
+          <div className="search">
           <input
             type="search"
-            className="form-control widget-content-right container mt-2 md-2 d-lg-none d-md-block"
+            className="form-control widget-content-right mt-2 mb-2 d-lg-none d-md-block"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
-            style={{width:"330px"}}
           />
-          <br />
-          <div class="main-card mb-3 card">
+          </div>
+          <div class="main-card mb-3 card box-tabel">
             <div class="card-header" style={{ display: "flex" }}>
               {menuRegulasi.length > 0 &&
                 menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
@@ -152,7 +152,7 @@ function MenuRegulasi() {
                   <div role="group" class="btn-group-sm btn-group">
                     <button class="active btn-focus p-2 rounded">
                       <a
-                        href={`/add-menu-regulasi/${param.id}`}
+                        href={`/add/menu-regulasi/${param.id}`}
                         className="text-light"
                         style={{ textDecoration: "none" }}>
                         {" "}

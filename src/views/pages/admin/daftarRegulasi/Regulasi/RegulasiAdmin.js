@@ -58,7 +58,7 @@ function RegulasiAdmin() {
       cancelButtonText: "Cencel",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`${API_DUMMY}/bawaslu/api/menu-regulasi/delete/` + id, {
+        axios.delete(`${API_DUMMY}/bawaslu/api/regulasi/delete/` + id, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -117,6 +117,7 @@ function RegulasiAdmin() {
               </select>
             </div>
           </div>
+          <div className="search">
           <input
             type="search"
             className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
@@ -124,7 +125,8 @@ function RegulasiAdmin() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div class="main-card mb-3 card">
+          </div>
+          <div class="main-card mb-3 card box-tabel">
             <div className="card-header" style={{ display: "flex" }}>
             {regulasi.length > 0 && regulasi[0].menuRegulasi.menuRegulasi}
               <p className="mt-3"></p>
@@ -155,7 +157,7 @@ function RegulasiAdmin() {
                   <div role="group" class="btn-group-sm btn-group">
                     <button class="active btn-focus p-2 rounded">
                       <a
-                        href="/add-regulasi"
+                        href={"/add/regulasi/" + param.id}
                         className="text-light"
                         style={{ textDecoration: "none" }}>
                         {" "}
@@ -178,6 +180,9 @@ function RegulasiAdmin() {
                     <th scope="" className="text-left">
                       Dokumen
                     </th>
+                    <th scope="" className="text-left">
+                      PDF Dokumen
+                    </th>
                     <th scope="" className="text-center">
                       Aksi
                     </th>
@@ -192,6 +197,9 @@ function RegulasiAdmin() {
                         </td>
                         <td data-label="dokumen : " className="text-left">
                           {jenis.dokumen}
+                        </td>
+                        <td data-label="dokumen : " className="text-left">
+                          {jenis.pdfDokumen}
                         </td>
                         <td data-label="Aksi : " class="text-center">
                           <button type="button" class="btn-primary btn-sm mr-2">
