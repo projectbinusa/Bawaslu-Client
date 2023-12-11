@@ -60,26 +60,22 @@ function IsiPengumuman() {
       <Navbar />
 
       {/* <!-- blog area start --> */}
-      <div class="blog-area pd-top-120 pd-bottom-120">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="blog-details-page-content">
-                <div class="single-blog-inner">
-                  <div class="thumb">
-                    <img
-                      className="pengumuman"
-                      src={image}
-                      alt="img"
-                    />
+      <div className="blog-area pd-top-120 pd-bottom-120">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="blog-details-page-content">
+                <div className="single-blog-inner">
+                  <div className="thumb">
+                    <img className="pengumuman" src={image} alt="img" />
                   </div>
-                  <div class="details">
-                    <ul class="blog-meta">
+                  <div className="details">
+                    <ul className="blog-meta">
                       <li>
-                        <i class="far fa-user"></i>By {author}
+                        <i className="far fa-user"></i>By {author}
                       </li>
                       <li>
-                        <i class="far fa-calendar-alt"></i>
+                        <i className="far fa-calendar-alt"></i>
                         {createdDate}
                       </li>
                     </ul>
@@ -88,20 +84,19 @@ function IsiPengumuman() {
                   </div>
                   <br />
                   <h4 className="pt-4 mb-4">Related Posts</h4>
-                  <div class="row">
+                  <div className="row">
                     {pengumuman2.map((isi) => {
                       return (
-                        <div class="col-md-6">
-                          <div class="media single-choose-inner">
-                            <div class="media-left">
-                              <div class="icon">
-                                <i class="fas fa-bullhorn"></i>
+                        <div className="col-md-6">
+                          <div className="media single-choose-inner">
+                            <div className="media-left">
+                              <div className="icon">
+                                <i className="fas fa-bullhorn"></i>
                               </div>
                             </div>
-                            <div class="media-body">
+                            <div className="media-body">
                               <p>
-                                <a
-                                  href={`/pengumuman/${isi.id}`}>
+                                <a href={`/pengumuman/${isi.id}`}>
                                   {isi.judulPengumuman}
                                 </a>
                               </p>
@@ -114,14 +109,15 @@ function IsiPengumuman() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-12">
-              <div class="td-sidebar">
+            <div className="col-lg-4 col-12">
+              <div className="td-sidebar">
                 <Bawaslu />
                 <div
-                  class="widget widget_tag_cloud mb-0"
-                  style={{ background: "#F1F6F9" }}>
-                  <h4 class="widget-title">Berbagi</h4>
-                  <div class="tagcloud">
+                  className="widget widget_tag_cloud mb-0"
+                  style={{ background: "#F1F6F9" }}
+                >
+                  <h4 className="widget-title">Berbagi</h4>
+                  <div className="tagcloud">
                     <a
                       href="#"
                       style={{
@@ -130,8 +126,9 @@ function IsiPengumuman() {
                         alignItems: "center",
                         justifyContent: "center",
                         fontWeight: "bold",
-                      }}>
-                      <i class="fab fa-facebook"></i> Share To Facebook
+                      }}
+                    >
+                      <i className="fab fa-facebook"></i> Share To Facebook
                     </a>
                     <a
                       href="#"
@@ -141,8 +138,9 @@ function IsiPengumuman() {
                         alignItems: "center",
                         justifyContent: "center",
                         fontWeight: "bold",
-                      }}>
-                      <i class="fab fa-twitter"></i> Share To Twitter
+                      }}
+                    >
+                      <i className="fab fa-twitter"></i> Share To Twitter
                     </a>
                   </div>
                 </div>

@@ -104,8 +104,8 @@ function Index() {
       <div id="app-main" className="app-main">
         <Sidebar />
         <div id="container" className="container mt-3 app-main__outer">
-          <div id="main-card" class="main-card mb-3 card">
-            <div id="card-header" class="card-header">
+          <div id="main-card" className="main-card mb-3 card">
+            <div id="card-header" className="card-header">
               Jenis Informasi11
               <div className="d-flex ml-auto gap-3">
                 <input
@@ -115,13 +115,21 @@ function Index() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div class="btn-actions-pane-right">
-                  <div id="butoon" role="group" class="btn-group-sm btn-group">
-                    <button id="button" class="active btn-focus p-2 rounded">
+                <div className="btn-actions-pane-right">
+                  <div
+                    id="butoon"
+                    role="group"
+                    className="btn-group-sm btn-group"
+                  >
+                    <button
+                      id="button"
+                      className="active btn-focus p-2 rounded"
+                    >
                       <a
                         href="/tambah-jenis-keterangan"
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
@@ -133,7 +141,8 @@ function Index() {
             <TableContainer>
               <div
                 className="table-responsive"
-                style={{ overflowY: "auto", maxHeight: "60vh" }}>
+                style={{ overflowY: "auto", maxHeight: "60vh" }}
+              >
                 <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                   <thead>
                     <tr>
@@ -148,44 +157,56 @@ function Index() {
                     {filteredList.map((inf, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No" className="t">{index + 1}</td>
-                          <td
-                            data-label="keterangan"
-                            className="t">
+                          <td data-label="No" className="t">
+                            {index + 1}
+                          </td>
+                          <td data-label="keterangan" className="t">
                             {inf.jenisKeteranganInformasiDTOList[0].keterangan}
                           </td>
                           <td data-label="Aksi : " className="pt-3 pb-3 aksi">
                             <div className="d-flex justify-content-center">
                               <button
                                 type="button"
-                                className=".responsive-buttons btn-primary btn-sm mr-2">
+                                className=".responsive-buttons btn-primary btn-sm mr-2"
+                              >
                                 <a
                                   style={{
                                     color: "white",
                                     textDecoration: "none",
                                   }}
-                                  href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}>
+                                  href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}
+                                >
                                   <i className="fa-solid fa-pen-to-square"></i>
                                 </a>
                               </button>
                               <button
                                 type="button"
                                 className="mr-2 btn-danger btn-sm"
-                                onClick={() => deleteData(inf.jenisKeteranganInformasiDTOList[0].id)}>
+                                onClick={() =>
+                                  deleteData(
+                                    inf.jenisKeteranganInformasiDTOList[0].id
+                                  )
+                                }
+                              >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                              <button type="button" class="btn-info btn-sm">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={
-                                "/isi-keterangan/" +
-                                inf.jenisKeteranganInformasiDTOList[0].keterangan +
-                                "/" +
-                                inf.jenisKeteranganInformasiDTOList[0].id
-                              }>
-                              <i class="fas fa-plus"></i>
-                            </a>
-                          </button>
+                              <button type="button" className="btn-info btn-sm">
+                                <a
+                                  style={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                  }}
+                                  href={
+                                    "/isi-keterangan/" +
+                                    inf.jenisKeteranganInformasiDTOList[0]
+                                      .keterangan +
+                                    "/" +
+                                    inf.jenisKeteranganInformasiDTOList[0].id
+                                  }
+                                >
+                                  <i className="fas fa-plus"></i>
+                                </a>
+                              </button>
                             </div>
                           </td>
                         </tr>
@@ -209,7 +230,6 @@ function Index() {
         </div>
       </div>
     </div>
-
   );
 }
 

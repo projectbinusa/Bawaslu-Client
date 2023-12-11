@@ -20,8 +20,7 @@ function DetailPermohonanInformasi() {
   const [rincianInformasi, setRincianInformasi] = useState("");
   const [diTunjukanKepada, setDiTunjukanKepada] = useState("");
   const [caraMemperolahInformasi, setCaraMemperolehInformasi] = useState("");
-  const [caraMendapatInformasi, setCaraMendapatkanInformasi] =
-    useState("");
+  const [caraMendapatInformasi, setCaraMendapatkanInformasi] = useState("");
   const [file, setFile] = useState("");
   const param = useParams();
 
@@ -61,47 +60,51 @@ function DetailPermohonanInformasi() {
         <Sidebar />
         <div
           className="container mt-3 mb-3 overflow-y-scroll app-main__outer"
-          style={{ height: "100vh" }}>
+          style={{ height: "100vh" }}
+        >
           <div className="d-lg-flex gap-5">
             <div className="d-block">
               <form className="card card-body shadow p-2 w-100">
-              {file === null ? (
-                   <img
-                  className="rounded-circle w-75 mr-auto ml-auto"
-                  src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
-                />
-                ):(
-                  <img style={{maxWidth:"400px", maxHeight:"400px"}}
-                  className="rounded-circle w-75 mr-auto ml-auto"
-                  src={file}
-                />
+                {file === null ? (
+                  <img
+                    className="rounded-circle w-75 mr-auto ml-auto"
+                    src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
+                  />
+                ) : (
+                  <img
+                    style={{ maxWidth: "400px", maxHeight: "400px" }}
+                    className="rounded-circle w-75 mr-auto ml-auto"
+                    src={file}
+                  />
                 )}
                 <p className="text-center">Fatiya salsabila</p>
               </form>
               <form className="card card-body shadow p-2 mt-3">
-                <div class="mb-3">
-                  <label class="form-label font-weight-bold">Email</label>
+                <div className="mb-3">
+                  <label className="form-label font-weight-bold">Email</label>
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     disabled
                     value={email}
                   />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label font-weight-bold">Alamat</label>
+                <div className="mb-3">
+                  <label className="form-label font-weight-bold">Alamat</label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     disabled
                     value={alamat}
                   />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label font-weight-bold">No Handphone</label>
+                <div className="mb-3">
+                  <label className="form-label font-weight-bold">
+                    No Handphone
+                  </label>
                   <input
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     disabled
                     value={noHp}
                   />
@@ -109,56 +112,66 @@ function DetailPermohonanInformasi() {
               </form>
             </div>
             <form className="card card-body p-2" style={{ width: "100%" }}>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Pekerjaan</label>
+              <div className="mb-3">
+                <label className="form-label font-weight-bold">Pekerjaan</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={pekerjaan}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Rincian Informasi</label>
+              <div className="mb-3">
+                <label className="form-label font-weight-bold">
+                  Rincian Informasi
+                </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={rincianInformasi}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Tujuan Informasi</label>
+              <div className="mb-3">
+                <label className="form-label font-weight-bold">
+                  Tujuan Informasi
+                </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={tujuanInformasi}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Cara Memperoleh Informasi</label>
+              <div className="mb-3">
+                <label className="form-label font-weight-bold">
+                  Cara Memperoleh Informasi
+                </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={caraMemperolahInformasi}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Cara Mendapatkan Informasi</label>
+              <div className="mb-3">
+                <label className="form-label font-weight-bold">
+                  Cara Mendapatkan Informasi
+                </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={caraMendapatInformasi}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label font-weight-bold">Di Tunjukan Kepada</label>
+              <div className="mb-3">
+                <label className="form-label font-weight-bold">
+                  Di Tunjukan Kepada
+                </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={diTunjukanKepada}
                 />

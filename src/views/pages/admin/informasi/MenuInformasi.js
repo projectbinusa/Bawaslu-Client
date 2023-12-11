@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../../../../component/Header'
-import Sidebar from '../../../../component/Sidebar'
-import Footer from '../../../../component/Footer'
+import React, { useEffect, useState } from "react";
+import Header from "../../../../component/Header";
+import Sidebar from "../../../../component/Sidebar";
+import Footer from "../../../../component/Footer";
 import "../../../../../src/css/adminBerita.css";
-import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom.min';
-import Swal from 'sweetalert2';
-import { Pagination } from '@mui/material';
-import { API_DUMMY } from '../../../../utils/base_URL';
-import axios from 'axios';
-import Index from './Index';
+import {
+  useHistory,
+  useParams,
+} from "react-router-dom/cjs/react-router-dom.min";
+import Swal from "sweetalert2";
+import { Pagination } from "@mui/material";
+import { API_DUMMY } from "../../../../utils/base_URL";
+import axios from "axios";
+import Index from "./Index";
 
 function MenuInformasi() {
   const [list, setList] = useState([]);
@@ -26,7 +29,11 @@ function MenuInformasi() {
   const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${param.id}/isi-informasi?page=${page - 1}&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${
+          param.id
+        }/isi-informasi?page=${
+          page - 1
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data.content);
       setPaginationInfo({
@@ -93,19 +100,20 @@ function MenuInformasi() {
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-    <Header />
-    <div className="app-main">
-      <Sidebar />
-      <div className="container mt-3 app-main__outer">
-            <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div class="col-auto">
+      <Header />
+      <div className="app-main">
+        <Sidebar />
+        <div className="container mt-3 app-main__outer">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div class="col-auto">
+            <div className="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -119,17 +127,19 @@ function MenuInformasi() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div class="main-card mb-3 card">
-            <div class="card-header" style={{display:"flex"}}>Test
-            <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div class="col-auto">
+          <div className="main-card mb-3 card">
+            <div className="card-header" style={{ display: "flex" }}>
+              Test
+              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -144,22 +154,24 @@ function MenuInformasi() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div class="btn-actions-pane-right">
-                  <div role="group" class="btn-group-sm btn-group">
-                    <button class="active btn-focus p-2 rounded">
+                <div className="btn-actions-pane-right">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
                       <a
                         href="/"
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
                     </button>
                   </div>
                 </div>
-              </div></div>
-            <div class="table-responsive overflow-x-scroll">
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+              </div>
+            </div>
+            <div className="table-responsive overflow-x-scroll">
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th scope="col" className="text-center">
@@ -169,7 +181,7 @@ function MenuInformasi() {
                       Dokumen
                     </th>
                     <th scope="col" className="text-center">
-                     PDF Dokumen
+                      PDF Dokumen
                     </th>
                     <th scope="col" className="text-center">
                       Aksi
@@ -179,17 +191,28 @@ function MenuInformasi() {
                 <tbody>
                   {filteredList.map((inf, index) => {
                     return (
-                        <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{inf.dokumen}</td>
-                    <td> <img style={{width:"150px"}} src={inf.pdfDokumen} alt="" /></td>
-                    <td class="text-center">
-                      <button type="button" onClick={() => deleteData(inf.id)} class="btn-danger btn-sm">
-                        <i class="fa-solid fa-trash"></i>
-                      </button>
-                    </td>
-                  </tr>
-                    )
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>{inf.dokumen}</td>
+                        <td>
+                          {" "}
+                          <img
+                            style={{ width: "150px" }}
+                            src={inf.pdfDokumen}
+                            alt=""
+                          />
+                        </td>
+                        <td className="text-center">
+                          <button
+                            type="button"
+                            onClick={() => deleteData(inf.id)}
+                            className="btn-danger btn-sm"
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    );
                   })}
                 </tbody>
               </table>
@@ -206,9 +229,9 @@ function MenuInformasi() {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default MenuInformasi
+export default MenuInformasi;

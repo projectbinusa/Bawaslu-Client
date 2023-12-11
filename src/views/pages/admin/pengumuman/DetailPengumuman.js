@@ -44,7 +44,8 @@ function DetailPengumuman() {
         <Sidebar />
         <div
           className="container mt-3 app-main__outer mb-3 overflow-y-scroll"
-          style={{ height: "100vh" }}>
+          style={{ height: "100vh" }}
+        >
           <div className="d-lg-flex gap-5">
             <div className="d-block">
               <form className="card card-body shadow p-2 w-100">
@@ -55,7 +56,12 @@ function DetailPengumuman() {
                   />
                 ) : (
                   <img
-                    style={{ maxWidth: "400px", maxHeight: "400px", minWidth:"350px", minHeight:"350px" }}
+                    style={{
+                      maxWidth: "400px",
+                      maxHeight: "400px",
+                      minWidth: "350px",
+                      minHeight: "350px",
+                    }}
                     className="w-75 mr-auto ml-auto"
                     src={file}
                   />
@@ -63,31 +69,41 @@ function DetailPengumuman() {
               </form>
             </div>
             <form className="card card-body p-2">
-              <div class="mb-3">
-                <label class="form-label">Author</label>
+              <div className="mb-3">
+                <label className="form-label">Author</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={author}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label">Judul Pengumuman</label>
+              <div className="mb-3">
+                <label className="form-label">Judul Pengumuman</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   disabled
                   value={judulPengumuman}
                 />
               </div>
-              <div class="mb-3">
-                <label class="form-label">Isi Pengumuman</label>
-                <textarea class="form-control" defaultValue={isiPengumuman} rows="5" readOnly/>
+              <div className="mb-3">
+                <label className="form-label">Isi Pengumuman</label>
+                <textarea
+                  className="form-control"
+                  defaultValue={isiPengumuman}
+                  rows="5"
+                  readOnly
+                />
               </div>
-              <div class="mb-3">
-                <label class="form-label">Tags</label>
-                <input type="text" class="form-control" disabled value={tags} />
+              <div className="mb-3">
+                <label className="form-label">Tags</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  disabled
+                  value={tags}
+                />
               </div>
             </form>
           </div>

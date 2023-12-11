@@ -101,11 +101,11 @@ function AdminPermohonanKeberatan() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div class="col-auto">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div className="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div class="col-auto">
+            <div className="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
@@ -124,14 +124,14 @@ function AdminPermohonanKeberatan() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div class="main-card mb-3 card">
-            <div class="card-header">
+          <div className="main-card mb-3 card">
+            <div className="card-header">
               <p className="mt-3">Permohonan Keberatan</p>
-              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div class="col-auto">
+              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
@@ -154,8 +154,8 @@ function AdminPermohonanKeberatan() {
                 <div className="btn-actions-pane-right"></div>
               </div>
             </div>
-            <div class="table-responsive overflow-x-scroll">
-              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+            <div className="table-responsive overflow-x-scroll">
+              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th scope="col" className="text-left">
@@ -250,15 +250,18 @@ function AdminPermohonanKeberatan() {
                         >
                           {informasi.fotoIdentitas}
                         </td>
-                        <td data-label="Aksi : " class="text-center">
-                          <button type="button" class="btn-warning mr-2 btn-sm">
+                        <td data-label="Aksi : " className="text-center">
+                          <button
+                            type="button"
+                            className="btn-warning mr-2 btn-sm"
+                          >
                             <a
                               className="text-light"
                               href={
                                 "/detail-permohonan-keberatan/" + informasi.id
                               }
                             >
-                              <i class="fas fa-info-circle"></i>
+                              <i className="fas fa-info-circle"></i>
                             </a>
                           </button>
                           <button
@@ -266,7 +269,7 @@ function AdminPermohonanKeberatan() {
                             type="button"
                             className="bg-danger btn-sm text-light"
                           >
-                            <i class="fas fa-trash-alt"></i>
+                            <i className="fas fa-trash-alt"></i>
                           </button>
                         </td>
                       </tr>

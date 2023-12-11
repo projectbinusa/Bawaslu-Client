@@ -61,11 +61,14 @@ function IsiKeterangan() {
 
   const deleteData = async (id) => {
     try {
-      await axios.delete(`${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/${id}`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      await axios.delete(
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
       Swal.fire({
         icon: "success",
         title: "Dihapus!",
@@ -102,19 +105,20 @@ function IsiKeterangan() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
               </select>
             </div>
             <input
-                  type="search"
-                  className="form-control widget-content-right w-100"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
+              type="search"
+              className="form-control widget-content-right w-100"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
           </div>
           <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
@@ -123,7 +127,7 @@ function IsiKeterangan() {
                 <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
@@ -183,9 +187,17 @@ function IsiKeterangan() {
                       <tr key={index}>
                         <td className="text-left">{index + 1}</td>
                         <td className="text-left">{isiInformasi.dokumen}</td>
-                        <td class="text-center">
-                          <button type="button" class="btn-primary btn-sm mr-2"><a style={{color:"white", textDecoration:"none"}} href={`/edit-isi-keterangan/${isiInformasi.id}`}>
-                            <i class="fa-solid fa-pen-to-square"></i></a>
+                        <td className="text-center">
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2"
+                          >
+                            <a
+                              style={{ color: "white", textDecoration: "none" }}
+                              href={`/edit-isi-keterangan/${isiInformasi.id}`}
+                            >
+                              <i className="fa-solid fa-pen-to-square"></i>
+                            </a>
                           </button>
                           <button
                             type="button"
@@ -196,129 +208,130 @@ function IsiKeterangan() {
                           </button>
                         </td>
                       </tr>
-                        ))}
-                    </thead>
-
-                    <tbody>
-                      {Array.isArray(jenisKeteranganIsiInformasi) &&
-                        jenisKeteranganIsiInformasi.map(
-                          (isiInformasi, index) => (
-                            <tr key={index}>
-                              <td data-label="No : " className="text-left">
-                                {index + 1}
-                              </td>
-                              <td data-label="dokumen : " className="text-left">
-                                {isiInformasi.dokumen}
-                              </td>
-                              <td data-label="Aksi : " class="text-center">
-                                <button
-                                  type="button"
-                                  class="btn-primary btn-sm mr-2">
-                                  <a
-                                    style={{
-                                      color: "white",
-                                      textDecoration: "none",
-                                    }}
-                                    href={`/edit-isi-keterangan/${isiInformasi.id}`}>
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                  </a>
-                                </button>
-                              </td>
-
-                              <td className="text-left">{index + 1}</td>
-                              <td className="text-left">
-                                {isiInformasi.dokumen}
-                              </td>
-                              <td className="text-center">
-                                <button
-                                  type="button"
-                                  className="btn-primary btn-sm mr-2">
-                                  <a
-                                    style={{
-                                      color: "white",
-                                      textDecoration: "none",
-                                    }}
-                                    href={`/edit-isi-keterangan/${isiInformasi.id}`}>
-                                    <i className="fa-solid fa-pen-to-square"></i>
-                                  </a>
-                                </button>
-                                <button
-                                  type="button"
-                                  className="btn-danger btn-sm"
-                                  onClick={() => deleteData(isiInformasi.id)}>
-                                  <i className="fa-solid fa-trash"></i>
-                                </button>
-                              </td>
-                            </tr>
-                          )
-                        )}
-                    </tbody>
-                  </table>
-                  <div className="card-header mt-3 d-flex justify-content-center">
-                    <Pagination
-                      count={paginationInfo.totalPages}
-                      page={currentPage}
-                      onChange={(event, value) => setCurrentPage(value)}
-                      showFirstButton
-                      showLastButton
-                      color="primary"
-                    />
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
-              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th className="text-left">No</th>
-                    <th className="text-left">Dokumen</th>
-                    <th className="text-center">Aksi</th>
-                  </tr>
+                    ))}
                 </thead>
+
                 <tbody>
-                  {filteredList.map((jenis, index) => (
-                    <tr key={index}>
-                      <td data-label="No">{index + 1}</td>
-                      <td data-label="Dokumen">{jenis.dokumen}</td>
-                      <td data-label="Aksi">
-                        <button
-                          type="button"
-                          className="btn-primary btn-sm mr-2">
-                          <a
-                            style={{ color: "white", textDecoration: "none" }}
-                            href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}>
-                            <i className="fa-solid fa-pen-to-square"></i>
-                          </a>
-                        </button>
-                        <button
-                          onClick={() => deleteData(jenis.id)}
-                          type="button"
-                          className="btn-danger btn-sm mr-2">
-                          <i className="fa-solid fa-trash"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                  {Array.isArray(jenisKeteranganIsiInformasi) &&
+                    jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
+                      <tr key={index}>
+                        <td data-label="No : " className="text-left">
+                          {index + 1}
+                        </td>
+                        <td data-label="dokumen : " className="text-left">
+                          {isiInformasi.dokumen}
+                        </td>
+                        <td data-label="Aksi : " className="text-center">
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2"
+                          >
+                            <a
+                              style={{
+                                color: "white",
+                                textDecoration: "none",
+                              }}
+                              href={`/edit-isi-keterangan/${isiInformasi.id}`}
+                            >
+                              <i className="fa-solid fa-pen-to-square"></i>
+                            </a>
+                          </button>
+                        </td>
+
+                        <td className="text-left">{index + 1}</td>
+                        <td className="text-left">{isiInformasi.dokumen}</td>
+                        <td className="text-center">
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2"
+                          >
+                            <a
+                              style={{
+                                color: "white",
+                                textDecoration: "none",
+                              }}
+                              href={`/edit-isi-keterangan/${isiInformasi.id}`}
+                            >
+                              <i className="fa-solid fa-pen-to-square"></i>
+                            </a>
+                          </button>
+                          <button
+                            type="button"
+                            className="btn-danger btn-sm"
+                            onClick={() => deleteData(isiInformasi.id)}
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
               </table>
-            </div>
-            <div className="card-header mt-3 d-flex justify-content-center">
-            <Pagination
-                count={paginationInfo.totalPages}
-                page={currentPage}
-                onChange={(event, value) => setCurrentPage(value)}
-                showFirstButton
-                showLastButton
-                color="primary"
-              />
+              <div className="card-header mt-3 d-flex justify-content-center">
+                <Pagination
+                  count={paginationInfo.totalPages}
+                  page={currentPage}
+                  onChange={(event, value) => setCurrentPage(value)}
+                  showFirstButton
+                  showLastButton
+                  color="primary"
+                />
+                <div></div>
+              </div>
             </div>
           </div>
         </div>
-
+        <div
+          className="table-responsive"
+          style={{ overflowY: "auto", maxHeight: "60vh" }}
+        >
+          <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+            <thead>
+              <tr>
+                <th className="text-left">No</th>
+                <th className="text-left">Dokumen</th>
+                <th className="text-center">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredList.map((jenis, index) => (
+                <tr key={index}>
+                  <td data-label="No">{index + 1}</td>
+                  <td data-label="Dokumen">{jenis.dokumen}</td>
+                  <td data-label="Aksi">
+                    <button type="button" className="btn-primary btn-sm mr-2">
+                      <a
+                        style={{ color: "white", textDecoration: "none" }}
+                        href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}
+                      >
+                        <i className="fa-solid fa-pen-to-square"></i>
+                      </a>
+                    </button>
+                    <button
+                      onClick={() => deleteData(jenis.id)}
+                      type="button"
+                      className="btn-danger btn-sm mr-2"
+                    >
+                      <i className="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="card-header mt-3 d-flex justify-content-center">
+          <Pagination
+            count={paginationInfo.totalPages}
+            page={currentPage}
+            onChange={(event, value) => setCurrentPage(value)}
+            showFirstButton
+            showLastButton
+            color="primary"
+          />
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -100,13 +100,13 @@ function AdminPermohonanInformasi() {
       <div className="app-main">
         <Sidebar />
         <div className="app-main__outer">
-          <div class="app-main__inner">
+          <div className="app-main__inner">
             <div className="container mt-3">
-              <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-                <div class="col-auto">
+              <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+                <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div class="col-auto">
+                <div className="col-auto">
                   <select
                     className="form-select form-select-xl w-auto"
                     onChange={handleRowsPerPageChange}
@@ -125,14 +125,14 @@ function AdminPermohonanInformasi() {
                 value={searchTerm}
                 onChange={handleSearchChange}
               />
-              <div class="main-card mb-3 card">
-                <div style={{ overflowX: "auto" }} class="card-header">
+              <div className="main-card mb-3 card">
+                <div style={{ overflowX: "auto" }} className="card-header">
                   <p className="mt-3">Permohonan Informasi</p>
-                  <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                    <div class="col-auto">
+                  <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                    <div className="col-auto">
                       <label className="form-label mt-2">Rows per page:</label>
                     </div>
-                    <div class="col-auto">
+                    <div className="col-auto">
                       <select
                         className="form-select form-select-sm"
                         onChange={handleRowsPerPageChange}
@@ -156,11 +156,12 @@ function AdminPermohonanInformasi() {
                   </div>
                 </div>
                 <div
-                  class="table-responsive"
-                  style={{ overflowX: "auto", width:"100%" }}
+                  className="table-responsive"
+                  style={{ overflowX: "auto", width: "100%" }}
                 >
                   <table
-                  class="align-middle table mb-0 table-borderless table-striped table-hover" style={{width:"full", }}
+                    className="align-middle table mb-0 table-borderless table-striped table-hover"
+                    style={{ width: "full" }}
                   >
                     <thead>
                       <tr>
@@ -258,10 +259,10 @@ function AdminPermohonanInformasi() {
                             {/* <td data-label="email : " className="text-left">
                               <p>{informasi.tujuanPenggunaanInformasi}</p>
                             </td> */}
-                            <td data-label="Aksi : " class="text-center">
+                            <td data-label="Aksi : " className="text-center">
                               <button
                                 type="button"
-                                class="btn-warning mr-2 btn-sm"
+                                className="btn-warning mr-2 btn-sm"
                               >
                                 <a
                                   className="text-light"
@@ -270,15 +271,15 @@ function AdminPermohonanInformasi() {
                                     informasi.id
                                   }
                                 >
-                                  <i class="fas fa-info-circle"></i>
+                                  <i className="fas fa-info-circle"></i>
                                 </a>
                               </button>
                               <button
                                 type="button"
-                                class="btn-danger btn-sm"
+                                className="btn-danger btn-sm"
                                 onClick={() => delete informasi.id}
                               >
-                                <i class="fa-solid fa-trash"></i>
+                                <i className="fa-solid fa-trash"></i>
                               </button>
                             </td>
                           </tr>
