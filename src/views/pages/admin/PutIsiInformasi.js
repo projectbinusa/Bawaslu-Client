@@ -11,7 +11,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import Sidebar from "../../../component/Sidebar";
 import Header from "../../../component/Header";
 
-function PutPutusanPelanggaran() {
+function PutIsiInformasi() {
   const [dokumen, setDokumen] = useState("");
   const [pdfDokumen, setPdfDokumen] = useState("");
   const [jenisKeteranganId, setJenisKeteranganId] = useState(1);
@@ -196,4 +196,4 @@ function PutPutusanPelanggaran() {
   );
 }
 
-export default PutPutusanPelanggaran;
+export default PutIsiInformasi;

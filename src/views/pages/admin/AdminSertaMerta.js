@@ -6,7 +6,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-function Select() {
+function AdminSertaMerta() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -219,4 +219,4 @@ function Select() {
   );
 }
 
-export default Select;
+export default AdminSertaMerta;
