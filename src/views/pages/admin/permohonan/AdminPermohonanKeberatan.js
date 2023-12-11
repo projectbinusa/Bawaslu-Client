@@ -101,11 +101,11 @@ function AdminPermohonanKeberatan() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div className="col-auto">
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div className="col-auto">
+            <div class="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
@@ -124,14 +124,14 @@ function AdminPermohonanKeberatan() {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <div className="main-card mb-3 card">
-            <div className="card-header">
+          <div class="main-card mb-3 card">
+            <div class="card-header">
               <p className="mt-3">Permohonan Keberatan</p>
-              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div className="col-auto">
+              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div className="col-auto">
+                <div class="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
@@ -154,8 +154,8 @@ function AdminPermohonanKeberatan() {
                 <div className="btn-actions-pane-right"></div>
               </div>
             </div>
-            <div className="table-responsive overflow-x-scroll">
-              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+            <div class="table-responsive overflow-x-scroll">
+              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th scope="col" className="text-left">
@@ -174,21 +174,6 @@ function AdminPermohonanKeberatan() {
                       No Telp
                     </th>
                     <th scope="col" className="text-left">
-                      Kasus Posisi
-                    </th>
-                    <th scope="col" className="text-left">
-                      Nomor identitas
-                    </th>
-                    <th scope="col" className="text-left">
-                      Jenis identitas
-                    </th>
-                    <th scope="col" className="text-left">
-                      Alasan Pengajuan
-                    </th>
-                    <th scope="col" className="text-left">
-                      Tujuan Penggunaan Informasi
-                    </th>
-                    <th scope="col" className="text-left">
                       Foto Identitas{" "}
                     </th>
                     <th scope="col" className="text-left">
@@ -200,77 +185,54 @@ function AdminPermohonanKeberatan() {
                   {filteredList.map((informasi, index) => {
                     return (
                       <tr key={index}>
-                        <td data-label="No : " className="text-llef">
+                        <td data-label="No : " className="text-left">
                           {index + 1}
                         </td>
-                        <td data-label="email : " className="text-llef">
+                        <td data-label="email : " className="text-left">
                           {informasi.namaPemohon}
                         </td>
-                        <td data-label="nama : " className="text-llef">
+                        <td data-label="nama : " className="text-left">
                           {informasi.email}
                         </td>
-                        <td data-label="nama : " className="text-llef">
+                        <td data-label="nama : " className="text-left">
                           {informasi.alamatPemohon}
                         </td>
-
-                        <td data-label="alamat : " className="text-llef">
+                        <td data-label="nama : " className="text-left">
                           {informasi.noTlp}
                         </td>
-                        <td data-label="no telp : " className="text-llef">
-                          {informasi.kasusPosisi}
-                        </td>
-
-                        <td
-                          data-label="Nomor identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.nomorIdentitasPemohon}
-                        </td>
                         <td
                           data-label="jenis identitas : "
-                          className="text-llef"
+                          className="text-left"
                         >
-                          {informasi.jenisIdentitas}
+                          <img
+                            style={{ width: "150px" }}
+                            src={informasi.fotoIdentitas}
+                            alt=""
+                          />
                         </td>
-                        <td
-                          data-label="jenis identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.alasanPengajuanKeberatan}
-                        </td>
-                        <td
-                          data-label="jenis identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.tujuanPenggunaanInformasi}
-                        </td>
-                        <td
-                          data-label="jenis identitas : "
-                          className="text-llef"
-                        >
-                          {informasi.fotoIdentitas}
-                        </td>
-                        <td data-label="Aksi : " className="text-center">
-                          <button
-                            type="button"
-                            className="btn-warning mr-2 btn-sm"
-                          >
-                            <a
-                              className="text-light"
-                              href={
-                                "/detail-permohonan-keberatan/" + informasi.id
-                              }
+                        <td data-label="Aksi : " class="text-center">
+                          <div className="d-flex">
+                            <button
+                              type="button"
+                              class="btn-warning mr-2 btn-sm"
                             >
-                              <i className="fas fa-info-circle"></i>
-                            </a>
-                          </button>
-                          <button
-                            onClick={() => deleteData(informasi.id)}
-                            type="button"
-                            className="bg-danger btn-sm text-light"
-                          >
-                            <i className="fas fa-trash-alt"></i>
-                          </button>
+                              <a
+                                className="text-light"
+                                href={
+                                  "/detail/permohonan-keberatan/" + informasi.id
+                                }
+                              >
+                                <i class="fas fa-info-circle"></i>
+                              </a>
+                            </button>
+                            <button
+                              onClick={() => deleteData(informasi.id)}
+                              type="button"
+                              className="bg-danger btn-sm text-light"
+                            >
+                              <i class="fas fa-trash-alt"></i>
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     );

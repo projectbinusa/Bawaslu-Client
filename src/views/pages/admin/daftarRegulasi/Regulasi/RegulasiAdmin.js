@@ -182,9 +182,6 @@ function RegulasiAdmin() {
                     <th scope="" className="text-left">
                       Dokumen
                     </th>
-                    <th scope="" className="text-left">
-                      Gambar
-                    </th>
                     <th scope="" className="text-center">
                       Aksi
                     </th>
@@ -200,6 +197,7 @@ function RegulasiAdmin() {
                         <td data-label="dokumen : " className="text-left">
                           {jenis.dokumen}
                         </td>
+<<<<<<< HEAD
                         <td data-label="gambar : " className="text-left">
                           <img
                             style={{ width: "150px" }}
@@ -212,6 +210,10 @@ function RegulasiAdmin() {
                             type="button"
                             className="btn-primary btn-sm mr-2"
                           >
+=======
+                        <td data-label="Aksi : " class="text-center">
+                          <button type="button" class="btn-primary btn-sm mr-2">
+>>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
                             <a
                               style={{ color: "white", textDecoration: "none" }}
                               href={"/edit/" + jenis.dokumen + "/" + jenis.id}

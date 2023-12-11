@@ -10,6 +10,8 @@ import {
   PinterestShareButton,
   TwitterShareButton,
 } from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function Berita() {
   const [scroll, setScroll] = useState(false);
@@ -164,43 +166,43 @@ function Berita() {
       <Navbar />
       {/* <!-- page title start --> */}
       <div
-        className="service-area bg-overlay pd-top-120 pd-bottom-90"
+        class="service-area bg-overlay pd-top-120 pd-bottom-90"
         style={{
           backgroundImage: `url(${gambarTerbaru})`,
         }}
       >
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
               <div
-                className="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
+                class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
                 style={{
                   backgroundImage: `url(${gambarTerbaru})`,
                   minHeight: "93%",
                 }}
               >
-                <h2 className="title title-berita mt-4">
+                <h2 class="title title-berita mt-4">
                   {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
                 </h2>
               </div>
             </div>
-            <div className="col-lg-8">
-              <div className="row">
+            <div class="col-lg-8">
+              <div class="row">
                 {listTerbaru.slice(1, 5).map((berita, index) => (
-                  <div className="col-md-6" key={index}>
+                  <div class="col-md-6" key={index}>
                     <div
-                      className="single-service-inner style-black text-left"
+                      class="single-service-inner style-black text-left"
                       style={{
                         backgroundImage: `url(${berita.image})`,
                         minHeight: "93%",
                       }}
                     >
-                      <div className="icon-box">
-                        <i className="icomoon-layer"></i>
+                      <div class="icon-box">
+                        <i class="icomoon-layer"></i>
                       </div>
-                      <div className="details detailss">
+                      <div class="details detailss">
                         <h3>
-                          <a className="isiBerita">{berita.judulBerita}</a>
+                          <a class="isiBerita">{berita.judulBerita}</a>
                         </h3>
                       </div>
                     </div>
@@ -213,12 +215,12 @@ function Berita() {
       </div>
 
       <br />
-      <div className="blog-area pd-top-120 pd-bottom-120">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
+      <div class="blog-area pd-top-120 pd-bottom-120">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
               <div className="row">
-                <div className="widget widget_search">
+                <div class="widget widget_search">
                   <h4>
                     {" "}
                     <strong>
@@ -247,12 +249,12 @@ function Berita() {
               {list.length > 0 ? (
                 list.map((berita) => {
                   return (
-                    <div className="single-blog-inner">
-                      <div className="tag-and-share">
-                        <div className="row">
-                          <div className="col-sm-7"></div>
-                          <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                            <div className="blog-share">
+                    <div class="single-blog-inner">
+                      <div class="tag-and-share">
+                        <div class="row">
+                          <div class="col-sm-7"></div>
+                          <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                            <div class="blog-share">
                               <ul>
                                 <li>
                                   <FacebookShareButton
@@ -309,6 +311,7 @@ function Berita() {
                                       style={{
                                         color: "white",
                                         backgroundColor: "#cf2830",
+                                        width: "80px",
                                       }}
                                       className="border p-2"
                                     >
@@ -322,30 +325,34 @@ function Berita() {
                           </div>
                         </div>
                       </div>
-                      <div className="thumb">
+                      <div class="thumb">
                         <img
                           style={{ height: "450px" }}
                           src={berita.image}
                           alt="img"
                         />
                       </div>
-                      <div className="details">
+                      <div class="details">
                         <h2>
                           <a
-                            href={`/page-isi-berita/${berita.judulBerita}/${berita.id}`}
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
                           >
                             {berita.judulBerita}
                           </a>
-
-                          <a href="">{berita.judulBerita}</a>
                         </h2>
-                        <ul className="blog-meta">
+                        <ul class="blog-meta">
                           <li>
-                            <i className="far fa-user"></i>BY {berita.author}
+                            <i class="far fa-user"></i>BY {berita.author}
                           </li>
                           <li>
-                            <i className="far fa-calendar-alt"></i>{" "}
-                            {berita.createdDate}
+                            <i class="far fa-calendar-alt"></i>{" "}
+                            <span>
+                              {format(
+                                new Date(berita.createdDate),
+                                "dd MMMM yyyy",
+                                { locale: idLocale }
+                              )}
+                            </span>
                           </li>
                         </ul>
                       </div>
@@ -353,21 +360,21 @@ function Berita() {
                   );
                 })
               ) : (
-                <div className="single-blog-inner">
-                  <div className="tag-and-share">
-                    <div className="row">
-                      <div className="col-sm-7">
-                        <div className="tags d-inline-block">
+                <div class="single-blog-inner">
+                  <div class="tag-and-share">
+                    <div class="row">
+                      <div class="col-sm-7">
+                        <div class="tags d-inline-block">
                           <button className="border">
-                            <i className="fa-regular fa-thumbs-up"></i>
+                            <i class="fa-regular fa-thumbs-up"></i>
                           </button>
                           <button className="border">
-                            <i className="fa-regular fa-thumbs-down"></i>
+                            <i class="fa-regular fa-thumbs-down"></i>
                           </button>
                         </div>
                       </div>
-                      <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                        <div className="blog-share">
+                      <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                        <div class="blog-share">
                           <ul>
                             <li>
                               <a href="#">
@@ -379,7 +386,7 @@ function Berita() {
                                   className="border p-2"
                                 >
                                   <i
-                                    className="fab fa-facebook-f"
+                                    class="fab fa-facebook-f"
                                     aria-hidden="true"
                                   ></i>{" "}
                                   Facebook
@@ -396,7 +403,7 @@ function Berita() {
                                   className="border p-2"
                                 >
                                   <i
-                                    className="fab fa-twitter"
+                                    class="fab fa-twitter"
                                     aria-hidden="true"
                                   ></i>{" "}
                                   Twitter
@@ -412,7 +419,7 @@ function Berita() {
                                   }}
                                   className="border p-2"
                                 >
-                                  <i className="fa-brands fa-pinterest"></i> Pin
+                                  <i class="fa-brands fa-pinterest"></i> Pin
                                 </button>
                               </a>
                             </li>
@@ -421,23 +428,23 @@ function Berita() {
                       </div>
                     </div>
                   </div>
-                  <div className="thumb">
+                  <div class="thumb">
                     <img
                       style={{ height: "450px" }}
                       src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
                       alt="img"
                     />
                   </div>
-                  <div className="details">
+                  <div class="details">
                     <h2>
-                      <a href="">COntoh Berita</a>
+                      <a href="">Contoh Berita</a>
                     </h2>
-                    <ul className="blog-meta">
+                    <ul class="blog-meta">
                       <li>
-                        <i className="far fa-user"></i>BY admin
+                        <i class="far fa-user"></i>BY admin
                       </li>
                       <li>
-                        <i className="far fa-calendar-alt"></i> 2023-05-12
+                        <i class="far fa-calendar-alt"></i> 2023-05-12
                       </li>
                     </ul>
                   </div>
@@ -450,35 +457,43 @@ function Berita() {
                 onChange={(event, value) => setCurrentPage(value)}
               />
             </div>
-            <div className="col-lg-4 col-12">
+            <div class="col-lg-4 col-12">
               <div className="sidebar-container">
-                <div className="td-sidebar">
+                <div class="td-sidebar">
                   <div
-                    className={`widget widget-recent-post`}
+                    class={`widget widget-recent-post`}
                     style={{ background: "#F1F6F9", overflow: "hidden" }}
                   >
-                    <h4 className="widget-title">Berita Terbaru</h4>
+                    <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
                       {listTerbaru.map((beritaTerbaru) => {
                         return (
                           <li>
-                            <div className="media">
-                              <div className="media-left">
+                            <div class="media">
+                              <div class="media-left">
                                 <img
                                   src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
                                   style={{ width: "60px" }}
                                   alt="blog"
                                 />
                               </div>
-                              <div className="media-body align-self-center">
-                                <h6 className="title">
-                                  <a href={`/Page-Berita/${beritaTerbaru.id}`}>
+                              <div class="media-body align-self-center">
+                                <h6 class="title">
+                                  <a
+                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}
+                                  >
                                     {beritaTerbaru.judulBerita}
                                   </a>
                                 </h6>
-                                <div className="post-info">
-                                  <i className="far fa-calendar-alt"></i>
-                                  <span>{beritaTerbaru.createdDate}</span>
+                                <div class="post-info">
+                                  <i class="far fa-calendar-alt"></i>
+                                  <span>
+                                    {format(
+                                      new Date(beritaTerbaru.createdDate),
+                                      "dd MMMM yyyy",
+                                      { locale: idLocale }
+                                    )}
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -488,11 +503,11 @@ function Berita() {
                     </ul>
                   </div>
                   <div
-                    className="widget widget_catagory"
+                    class="widget widget_catagory"
                     style={{ background: "#F1F6F9" }}
                   >
-                    <h4 className="widget-title">Arsip</h4>
-                    <ul className="catagory-items">
+                    <h4 class="widget-title">Arsip</h4>
+                    <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {
                         const tahun_bulan = `${monthData.year}-${monthData.month}`;
                         const totalData = monthlyTotal[tahun_bulan] || 0;
@@ -500,8 +515,8 @@ function Berita() {
                         return (
                           <li key={`${tahun_bulan}`}>
                             <a href={`/${tahun_bulan}`}>
-                              <i className="fa-solid fa-file"></i>{" "}
-                              {monthData.label} {monthData.year} ({totalData})
+                              <i class="fa-solid fa-file"></i> {monthData.label}{" "}
+                              {monthData.year} ({totalData})
                             </a>
                           </li>
                         );

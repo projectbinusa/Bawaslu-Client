@@ -99,11 +99,11 @@ function JenisRegulasi() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
-            <div className="col-auto">
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+            <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
-            <div className="col-auto">
+            <div class="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
@@ -124,14 +124,14 @@ function JenisRegulasi() {
             <br />
           </div>
 
-          <div className="main-card mb-3 card">
-            <div className="card-header" style={{ display: "flex" }}>
+          <div class="main-card mb-3 card">
+            <div class="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Jenis Regulasi</p>
-              <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div className="col-auto">
+              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
+                <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
-                <div className="col-auto">
+                <div class="col-auto">
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
@@ -151,9 +151,9 @@ function JenisRegulasi() {
                   value={searchTerm}
                   onChange={handleSearchChange}
                 />
-                <div className="btn-actions-pane-right">
-                  <div role="group" className="btn-group-sm btn-group">
-                    <button className="active btn-focus p-2 rounded">
+                <div class="btn-actions-pane-right">
+                  <div role="group" class="btn-group-sm btn-group">
+                    <button class="active btn-focus p-2 rounded">
                       <a
                         href="/tambah-jenis-regulasi"
                         className="text-light"
@@ -168,10 +168,10 @@ function JenisRegulasi() {
               </div>
             </div>
             <div
-              className="table-responsive"
+              class="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
-              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+              <table class="align-middle mb-0 table-responsive table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
                     <th className="text-left">No</th>
@@ -189,24 +189,21 @@ function JenisRegulasi() {
                         <td data-label="Jenis Regulasi" className="">
                           {jenis.jenisRegulasi}
                         </td>
-                        <td data-label="Aksi" className="">
-                          <button
-                            type="button"
-                            className="btn-primary btn-sm mr-2"
-                          >
+                        <td data-label="Aksi" class="text-center">
+                          <button type="button" class="btn-primary btn-sm mr-2">
                             <a
                               style={{ color: "white", textDecoration: "none" }}
                               href={"/edit-jenis-regulasi/" + jenis.id}
                             >
-                              <i className="fa-solid fa-pen-to-square"></i>
+                              <i class="fa-solid fa-pen-to-square"></i>
                             </a>
                           </button>
                           <button
                             onClick={() => deleteData(jenis.id)}
                             type="button"
-                            className="btn-danger btn-sm mr-2"
+                            class="btn-danger btn-sm mr-2"
                           >
-                            <i className="fa-solid fa-trash"></i>
+                            <i class="fa-solid fa-trash"></i>
                           </button>
                         </td>
                       </tr>

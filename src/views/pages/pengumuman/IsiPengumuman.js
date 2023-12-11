@@ -6,6 +6,8 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function IsiPengumuman() {
   const [createdDate, setCreatedDate] = useState("");
@@ -60,23 +62,28 @@ function IsiPengumuman() {
       <Navbar />
 
       {/* <!-- blog area start --> */}
-      <div className="blog-area pd-top-120 pd-bottom-120">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="blog-details-page-content">
-                <div className="single-blog-inner">
-                  <div className="thumb">
+      <div class="blog-area pd-top-120 pd-bottom-120">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="blog-details-page-content">
+                <div class="single-blog-inner">
+                  <div class="thumb">
                     <img className="pengumuman" src={image} alt="img" />
                   </div>
-                  <div className="details">
-                    <ul className="blog-meta">
+                  <div class="details">
+                    <ul class="blog-meta">
                       <li>
-                        <i className="far fa-user"></i>By {author}
+                        <i class="far fa-user"></i>By {author}
                       </li>
                       <li>
-                        <i className="far fa-calendar-alt"></i>
-                        {createdDate}
+                        <i class="far fa-calendar-alt"></i>
+                        {format(
+                          new Date(createdDate || new Date()),
+                          "dd MMMM yyyy",
+                          { locale: idLocale }
+                        )}
+                        {/* {createdDate} */}
                       </li>
                     </ul>
                     <h4 className="title">{judulPengumuman}</h4>
@@ -84,19 +91,21 @@ function IsiPengumuman() {
                   </div>
                   <br />
                   <h4 className="pt-4 mb-4">Related Posts</h4>
-                  <div className="row">
+                  <div class="row">
                     {pengumuman2.map((isi) => {
                       return (
-                        <div className="col-md-6">
-                          <div className="media single-choose-inner">
-                            <div className="media-left">
-                              <div className="icon">
-                                <i className="fas fa-bullhorn"></i>
+                        <div class="col-md-6">
+                          <div class="media single-choose-inner">
+                            <div class="media-left">
+                              <div class="icon">
+                                <i class="fas fa-bullhorn"></i>
                               </div>
                             </div>
-                            <div className="media-body">
+                            <div class="media-body">
                               <p>
-                                <a href={`/pengumuman/${isi.id}`}>
+                                <a
+                                  href={`/pengumuman/isi-pengumuman/${isi.id}`}
+                                >
                                   {isi.judulPengumuman}
                                 </a>
                               </p>
@@ -109,15 +118,15 @@ function IsiPengumuman() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-12">
-              <div className="td-sidebar">
+            <div class="col-lg-4 col-12">
+              <div class="td-sidebar">
                 <Bawaslu />
                 <div
-                  className="widget widget_tag_cloud mb-0"
+                  class="widget widget_tag_cloud mb-0"
                   style={{ background: "#F1F6F9" }}
                 >
-                  <h4 className="widget-title">Berbagi</h4>
-                  <div className="tagcloud">
+                  <h4 class="widget-title">Berbagi</h4>
+                  <div class="tagcloud">
                     <a
                       href="#"
                       style={{
@@ -128,7 +137,7 @@ function IsiPengumuman() {
                         fontWeight: "bold",
                       }}
                     >
-                      <i className="fab fa-facebook"></i> Share To Facebook
+                      <i class="fab fa-facebook"></i> Share To Facebook
                     </a>
                     <a
                       href="#"
@@ -140,7 +149,7 @@ function IsiPengumuman() {
                         fontWeight: "bold",
                       }}
                     >
-                      <i className="fab fa-twitter"></i> Share To Twitter
+                      <i class="fab fa-twitter"></i> Share To Twitter
                     </a>
                   </div>
                 </div>

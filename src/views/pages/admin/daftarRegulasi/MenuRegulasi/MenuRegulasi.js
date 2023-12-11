@@ -115,13 +115,20 @@ function MenuRegulasi() {
           </div>
           <input
             type="search"
-            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+            className="form-control widget-content-right container mt-2 md-2 d-lg-none d-md-block"
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearchChange}
+            style={{width:"330px"}}
           />
+<<<<<<< HEAD
           <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
+=======
+          <br />
+          <div class="main-card mb-3 card">
+            <div class="card-header" style={{ display: "flex" }}>
+>>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
               {menuRegulasi.length > 0 &&
                 menuRegulasi[0].jenisRegulasiId.jenisRegulasi}
               <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
@@ -152,7 +159,7 @@ function MenuRegulasi() {
                   <div role="group" className="btn-group-sm btn-group">
                     <button className="active btn-focus p-2 rounded">
                       <a
-                        href="/add-menu-regulasi"
+                        href={`/add-menu-regulasi/${param.id}`}
                         className="text-light"
                         style={{ textDecoration: "none" }}
                       >
@@ -165,10 +172,16 @@ function MenuRegulasi() {
               </div>
             </div>
             <div
+<<<<<<< HEAD
               className="table-responsive"
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
+=======
+              class=""
+              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+>>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
                 <thead>
                   <tr>
                     <th scope="col" className="text-left">

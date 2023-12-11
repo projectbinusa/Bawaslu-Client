@@ -15,16 +15,18 @@ import {
   PinterestShareButton,
   TwitterShareButton,
 } from "react-share";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function PageBerita() {
   const [judulBerita, setJudulBerita] = useState("");
-  const [author, setAouther] = useState("");
+  const [author, setAuthor] = useState("");
   const [isiBerita, setIsiBerita] = useState("");
   const [image, setImage] = useState("");
   const [tagsBerita, setTagsBerita] = useState("");
   const [id, setId] = useState();
   const [categoryBerita, setCategoryBerita] = useState("");
-  const [createDate, setCreateDate] = useState("");
+  const [createdDate, setCreatedDate] = useState("");
   const [respon, setRespon] = useState("");
   const param = useParams();
   const history = useHistory();
@@ -34,13 +36,6 @@ function PageBerita() {
   const [list, setList] = useState([]);
   const [variabel, setVariabel] = useState({
     id: "",
-    judulBerita: "",
-    isiBerita: "",
-    author: "",
-    image: "",
-    tagsBerita: "",
-    categoryBerita: "",
-    createDate: "",
   });
 
   const getAll = async () => {
@@ -65,7 +60,7 @@ function PageBerita() {
       })
       .then((ress) => {
         const response = ress.data.data;
-        setAouther(response.author);
+        setAuthor(response.author);
         setJudulBerita(response.judulBerita);
         setId(response.id);
         setIsiBerita(response.isiBerita);
@@ -73,7 +68,7 @@ function PageBerita() {
         setImage(response.image);
         setTagsBerita(response.tagsBerita);
         setCategoryBerita(response.categoryBerita);
-        setCreateDate(response.creteDate);
+        setCreatedDate(response.createdDate);
         console.log(ress.data.data);
       })
       .catch((error) => {
@@ -88,21 +83,21 @@ function PageBerita() {
   return (
     <>
       <Navbar />
-      <div className="blog-area pd-top-120 pd-bottom-120">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
+      <div class="blog-area pd-top-120 pd-bottom-120">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
                 {judulBerita}
               </h1>
-              <div className="single-blog-inner">
-                <div className="tag-and-share">
-                  <div className="row">
-                    <div className="col-sm-7">
-                      <div className="tags d-inline-block"></div>
+              <div class="single-blog-inner">
+                <div class="tag-and-share">
+                  <div class="row">
+                    <div class="col-sm-7">
+                      <div class="tags d-inline-block"></div>
                     </div>
-                    <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div className="blog-share">
+                    <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                      <div class="blog-share">
                         <ul>
                           <li>
                             <FacebookShareButton
@@ -159,6 +154,7 @@ function PageBerita() {
                                 style={{
                                   color: "white",
                                   backgroundColor: "#cf2830",
+                                  width: "90px",
                                 }}
                                 className="border p-2"
                               >
@@ -171,7 +167,7 @@ function PageBerita() {
                     </div>
                   </div>
                 </div>
-                <div className="thumb">
+                <div class="thumb">
                   {image && image.length < 0 ? (
                     <img
                       style={{ height: "450px" }}
@@ -182,36 +178,40 @@ function PageBerita() {
                     <img style={{ height: "450px" }} src={image} alt="img" />
                   )}
                 </div>
-                <div className="details">
+                <div class="details">
                   <h2></h2>
-                  <ul className="blog-meta">
+                  <ul class="blog-meta">
                     <li>
-                      <i className="far fa-user"></i>By {author}
+                      <i class="far fa-user"></i>By {author}
                     </li>
                     <li>
-                      <i className="far fa-calendar-alt"></i>
-                      {createDate}
+                      <i class="far fa-calendar-alt"></i>
+                      {format(
+                        new Date(createdDate || new Date()),
+                        "dd MMMM yyyy",
+                        { locale: idLocale }
+                      )}
                     </li>
                   </ul>
                 </div>
                 <p>{isiBerita}</p>
               </div>
-              <div className="jnews_inline_related_post">
+              <div class="jnews_inline_related_post">
                 <h4 className="pt-4 mb-4">Related Posts</h4>
-                <div className="row">
+                <div class="row">
                   {list.map((category) => {
                     return (
-                      <div className="col-md-6">
-                        <div className="media single-choose-inner">
-                          <div className="media-left">
-                            <div className="icon">
-                              <i className="fas fa-bullhorn"></i>
+                      <div class="col-md-6">
+                        <div class="media single-choose-inner">
+                          <div class="media-left">
+                            <div class="icon">
+                              <i class="fas fa-bullhorn"></i>
                             </div>
                           </div>
-                          <div className="media-body">
+                          <div class="media-body">
                             <p>
                               <a
-                                href={`/page-berita/${category.judulBerita}/${category.id}`}
+                                href={`/page-isi-berita/${category.author}/${category.id}`}
                               >
                                 {category.judulBerita}{" "}
                               </a>
@@ -228,9 +228,9 @@ function PageBerita() {
               </div>
               <hr />
             </div>
-            <div className="col-lg-4 col-12">
+            <div class="col-lg-4 col-12">
               <div className="sidebar-container">
-                <div className="td-sidebar">
+                <div class="td-sidebar">
                   <Bawaslu />
                 </div>
               </div>

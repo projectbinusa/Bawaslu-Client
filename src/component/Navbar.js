@@ -53,7 +53,8 @@ function Navbar() {
   const getRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-regulasi/all`
+        `${API_DUMMY}/bawaslu/api/jenis-regulasi/all?page=0&size=10&sortBy=id&sortOrder=desc
+        `
       );
       setRegulasi(response.data.data);
       console.log(response.data.data);
@@ -314,10 +315,14 @@ function Navbar() {
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu2"
-                  data-bs-parent="#menu"
-                >
+                  data-bs-parent="#menu">
+                    {regulasi.map((isiRegulasi) => {
+                      return (
+                      <li><a href={`/daftar-regulasi/${isiRegulasi.jenisRegulasi}/${isiRegulasi.id}`}>{isiRegulasi.jenisRegulasi}</a></li>
+                      )
+                    })}
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
-                  <li>
+                  {/* <li>
                     <a href="/regulasi">Regulasi</a>
                   </li>
                   <li>
@@ -330,7 +335,7 @@ function Navbar() {
                   </li>
                   <li>
                     <a href="/maklumat-pelayanan">Maklumat Pelayanan</a>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li className="menu-item-has-children">
