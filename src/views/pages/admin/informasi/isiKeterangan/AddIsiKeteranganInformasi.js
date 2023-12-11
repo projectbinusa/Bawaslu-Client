@@ -179,7 +179,7 @@ function AddIsiKeteranganInformasi() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 
