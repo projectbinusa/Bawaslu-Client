@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Footer from "../../../../../component/Footer";
 import Sidebar from "../../../../../component/Sidebar";
@@ -64,28 +63,6 @@ function IsiKeterangan() {
   };
 
   const deleteData = async (id) => {
-<<<<<<< HEAD
-    try {
-      await axios.delete(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/${id}`,
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
-      Swal.fire({
-        icon: "success",
-        title: "Dihapus!",
-        showConfirmButton: false,
-      });
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
-    } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-    }
-=======
     Swal.fire({
       title: "Apakah Anda Ingin Menghapus Data Ini?",
       icon: "warning",
@@ -116,7 +93,6 @@ function IsiKeterangan() {
           });
       }
     });
->>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
   };
 
   const filteredList = jenisKeteranganIsiInformasi.filter((item) =>
@@ -168,7 +144,8 @@ function IsiKeterangan() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -189,7 +166,8 @@ function IsiKeterangan() {
                       <a
                         href={"/add-isi-keterangan"}
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
@@ -200,54 +178,8 @@ function IsiKeterangan() {
             </div>
             <div
               className="table-responsive"
-<<<<<<< HEAD
               style={{ overflowY: "auto", maxHeight: "60vh" }}
             >
-              <table className="align-middle mb-0 table table-borderless table-striped table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col" className="text-left">
-                      No
-                    </th>
-                    <th scope="col" className="text-left">
-                      Dokumen
-                    </th>
-                    <th scope="col" className="text-center">
-                      Aksi
-                    </th>
-                  </tr>
-                </thead>
-
-                <thead>
-                  {Array.isArray(jenisKeteranganIsiInformasi) &&
-                    jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
-                      <tr key={index}>
-                        <td className="text-left">{index + 1}</td>
-                        <td className="text-left">{isiInformasi.dokumen}</td>
-                        <td className="text-center">
-                          <button
-                            type="button"
-                            className="btn-primary btn-sm mr-2"
-                          >
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={`/edit-isi-keterangan/${isiInformasi.id}`}
-                            >
-                              <i className="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
-                            type="button"
-                            className="btn-danger btn-sm"
-                            onClick={() => deleteData(isiInformasi.id)}
-                          >
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-=======
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
@@ -255,65 +187,8 @@ function IsiKeterangan() {
                     <th className="text-left">Dokumen</th>
                     <th className="text-center">Aksi</th>
                   </tr>
->>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
                 </thead>
-
                 <tbody>
-<<<<<<< HEAD
-                  {Array.isArray(jenisKeteranganIsiInformasi) &&
-                    jenisKeteranganIsiInformasi.map((isiInformasi, index) => (
-                      <tr key={index}>
-                        <td data-label="No : " className="text-left">
-                          {index + 1}
-                        </td>
-                        <td data-label="dokumen : " className="text-left">
-                          {isiInformasi.dokumen}
-                        </td>
-                        <td data-label="Aksi : " className="text-center">
-                          <button
-                            type="button"
-                            className="btn-primary btn-sm mr-2"
-                          >
-                            <a
-                              style={{
-                                color: "white",
-                                textDecoration: "none",
-                              }}
-                              href={`/edit-isi-keterangan/${isiInformasi.id}`}
-                            >
-                              <i className="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                        </td>
-
-                        <td className="text-left">{index + 1}</td>
-                        <td className="text-left">{isiInformasi.dokumen}</td>
-                        <td className="text-center">
-                          <button
-                            type="button"
-                            className="btn-primary btn-sm mr-2"
-                          >
-                            <a
-                              style={{
-                                color: "white",
-                                textDecoration: "none",
-                              }}
-                              href={`/edit-isi-keterangan/${isiInformasi.id}`}
-                            >
-                              <i className="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
-                            type="button"
-                            className="btn-danger btn-sm"
-                            onClick={() => deleteData(isiInformasi.id)}
-                          >
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-=======
                   {filteredList.map((jenis, index) => (
                     <tr key={index}>
                       <td data-label="No">{index + 1}</td>
@@ -321,91 +196,40 @@ function IsiKeterangan() {
                       <td data-label="Aksi" className="text-center">
                         <button
                           type="button"
-                          className="btn-primary btn-sm mr-2">
+                          className="btn-primary btn-sm mr-2"
+                        >
                           <a
                             style={{ color: "white", textDecoration: "none" }}
-                            href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}>
+                            href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}
+                          >
                             <i className="fa-solid fa-pen-to-square"></i>
                           </a>
                         </button>
                         <button
                           onClick={() => deleteData(jenis.id)}
                           type="button"
-                          className="btn-danger btn-sm mr-2">
+                          className="btn-danger btn-sm mr-2"
+                        >
                           <i className="fa-solid fa-trash"></i>
                         </button>
                       </td>
                     </tr>
                   ))}
->>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
                 </tbody>
               </table>
-              <div className="card-header mt-3 d-flex justify-content-center">
-                <Pagination
-                  count={paginationInfo.totalPages}
-                  page={currentPage}
-                  onChange={(event, value) => setCurrentPage(value)}
-                  showFirstButton
-                  showLastButton
-                  color="primary"
-                />
-                <div></div>
-              </div>
+            </div>
+            <div className="card-header mt-3 d-flex justify-content-center">
+              <Pagination
+                count={paginationInfo.totalPages}
+                page={currentPage}
+                onChange={(event, value) => setCurrentPage(value)}
+                showFirstButton
+                showLastButton
+                color="primary"
+              />
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div
-          className="table-responsive"
-          style={{ overflowY: "auto", maxHeight: "60vh" }}
-        >
-          <table className="align-middle mb-0 table table-borderless table-striped table-hover">
-            <thead>
-              <tr>
-                <th className="text-left">No</th>
-                <th className="text-left">Dokumen</th>
-                <th className="text-center">Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredList.map((jenis, index) => (
-                <tr key={index}>
-                  <td data-label="No">{index + 1}</td>
-                  <td data-label="Dokumen">{jenis.dokumen}</td>
-                  <td data-label="Aksi">
-                    <button type="button" className="btn-primary btn-sm mr-2">
-                      <a
-                        style={{ color: "white", textDecoration: "none" }}
-                        href={`/edit-isi-keterangan/${jenis.dokumen}/${jenis.id}`}
-                      >
-                        <i className="fa-solid fa-pen-to-square"></i>
-                      </a>
-                    </button>
-                    <button
-                      onClick={() => deleteData(jenis.id)}
-                      type="button"
-                      className="btn-danger btn-sm mr-2"
-                    >
-                      <i className="fa-solid fa-trash"></i>
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="card-header mt-3 d-flex justify-content-center">
-          <Pagination
-            count={paginationInfo.totalPages}
-            page={currentPage}
-            onChange={(event, value) => setCurrentPage(value)}
-            showFirstButton
-            showLastButton
-            color="primary"
-          />
-        </div>
-=======
->>>>>>> 4940de67521dd7ea78441fc8a9987a9b6ab260f8
       </div>
     </div>
   );
