@@ -10,10 +10,13 @@ import {
 import { useEffect } from "react";
 import axios from "axios";
 import Bawaslu from "../component/Bawaslu";
-import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import {
+  FacebookShareButton,
+  PinterestShareButton,
+  TwitterShareButton,
+} from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-
 
 function PageBerita() {
   const [judulBerita, setJudulBerita] = useState("");
@@ -88,64 +91,71 @@ function PageBerita() {
                     </div>
                     <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                       <div class="blog-share">
-                      <ul>
-                              <li>
-                                <FacebookShareButton
-                                  url={`https://bawaslu.excellentsistem.com/page-berita/${judulBerita}/${id}`}
-                                  media={image}
-                                  description={judulBerita}
-                                  quote={judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
-                                    Facebook
-                                  </button>
-                                </FacebookShareButton>
-                              </li>
-                              <li>
-                                <TwitterShareButton
-                                  url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
-                                  media={image}
-                                  description={judulBerita}
-                                  quote={judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
-                                    Twitter
-                                  </button>
-                                </TwitterShareButton>
-                              </li>
-                              <li>
-                                <PinterestShareButton
-                                  url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
-                                  quote={judulBerita}
-                                  media={image}
-                                  description={judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                      width :"90px"
-                                    }}
-                                    className="border p-2">
-                                    <i className="fa-brands fa-pinterest"></i>{" "}
-                                    Pin
-                                  </button>
-                                </PinterestShareButton>
-                              </li>
-                            </ul>
+                        <ul>
+                          <li>
+                            <FacebookShareButton
+                              url={`https://bawaslu.excellentsistem.com/page-berita/${judulBerita}/${id}`}
+                              media={image}
+                              description={judulBerita}
+                              quote={judulBerita}
+                            >
+                              <button
+                                style={{
+                                  color: "white",
+                                  backgroundColor: "#45629f",
+                                }}
+                                className="border p-2"
+                              >
+                                <i
+                                  className="fab fa-facebook-f"
+                                  aria-hidden="true"
+                                ></i>{" "}
+                                Facebook
+                              </button>
+                            </FacebookShareButton>
+                          </li>
+                          <li>
+                            <TwitterShareButton
+                              url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
+                              media={image}
+                              description={judulBerita}
+                              quote={judulBerita}
+                            >
+                              <button
+                                style={{
+                                  color: "white",
+                                  backgroundColor: "#5eb2ef",
+                                }}
+                                className="border p-2"
+                              >
+                                <i
+                                  className="fab fa-twitter"
+                                  aria-hidden="true"
+                                ></i>{" "}
+                                Twitter
+                              </button>
+                            </TwitterShareButton>
+                          </li>
+                          <li>
+                            <PinterestShareButton
+                              url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
+                              quote={judulBerita}
+                              media={image}
+                              description={judulBerita}
+                            >
+                              <button
+                                style={{
+                                  color: "white",
+                                  backgroundColor: "#cf2830",
+                                  width: "90px",
+                                }}
+                                className="border p-2"
+                              >
+                                <i className="fa-brands fa-pinterest"></i> Pin
+                              </button>
+                            </PinterestShareButton>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -171,7 +181,11 @@ function PageBerita() {
                     </li>
                     <li>
                       <i class="far fa-calendar-alt"></i>
-                      {format(new Date(createdDate || new Date()), "dd MMMM yyyy", { locale: idLocale })}
+                      {format(
+                        new Date(createdDate || new Date()),
+                        "dd MMMM yyyy",
+                        { locale: idLocale }
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -191,7 +205,11 @@ function PageBerita() {
                           </div>
                           <div class="media-body">
                             <p>
-                              <a href={`/page-isi-berita/${category.author}/${category.id}`}>{category.judulBerita} </a>
+                              <a
+                                href={`/page-isi-berita/${category.author}/${category.id}`}
+                              >
+                                {category.judulBerita}{" "}
+                              </a>
                             </p>
                           </div>
                         </div>

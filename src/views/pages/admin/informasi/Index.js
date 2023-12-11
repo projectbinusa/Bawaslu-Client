@@ -161,7 +161,8 @@ function Index() {
                       <a
                         href={`/tambah/jenis-keterangan/${param.id}`}
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>

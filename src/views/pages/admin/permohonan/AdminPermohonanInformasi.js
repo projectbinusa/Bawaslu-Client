@@ -110,7 +110,8 @@ function AdminPermohonanInformasi() {
                   <select
                     className="form-select form-select-xl w-auto"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -137,7 +138,8 @@ function AdminPermohonanInformasi() {
                       <select
                         className="form-select form-select-sm"
                         onChange={handleRowsPerPageChange}
-                        value={rowsPerPage}>
+                        value={rowsPerPage}
+                      >
                         <option value={5}>5</option>
                         <option value={10}>10</option>
                         <option value={20}>20</option>
@@ -157,10 +159,12 @@ function AdminPermohonanInformasi() {
                 </div>
                 <div
                   class="table-responsive overflow-x-scroll"
-                  style={{ overflowX: "auto" }}>
+                  style={{ overflowX: "auto" }}
+                >
                   <table
                     class="align-middle table mb-0 table table-borderless table-striped table-hover"
-                    style={{ width: "100%", overflowY: "scroll" }}>
+                    style={{ width: "100%", overflowY: "scroll" }}
+                  >
                     <thead>
                       <tr>
                         <th scope="col" className="text-left">
@@ -184,7 +188,7 @@ function AdminPermohonanInformasi() {
                         <th scope="col" className="text-left">
                           Email{" "}
                         </th>
-                       <th scope="col" className="text-left">
+                        <th scope="col" className="text-left">
                           Foto Identitas Pemohon{" "}
                         </th>
 
@@ -226,7 +230,8 @@ function AdminPermohonanInformasi() {
                             </td> */}
                             <td
                               data-label="rincian informasi : "
-                              className="text-left">
+                              className="text-left"
+                            >
                               <p>{informasi.caraMemperolehInformasi}</p>
                             </td>
                             {/* <td
@@ -236,7 +241,8 @@ function AdminPermohonanInformasi() {
                             </td> */}
                             <td
                               data-label="tujuan informasi : "
-                              className="text-left">
+                              className="text-left"
+                            >
                               <p>{informasi.email}</p>
                             </td>
                             <td data-label="alamat : " className="text-left">
@@ -261,20 +267,23 @@ function AdminPermohonanInformasi() {
                             <td data-label="Aksi : " class="text-center">
                               <button
                                 type="button"
-                                class="btn-warning mr-2 btn-sm">
+                                class="btn-warning mr-2 btn-sm"
+                              >
                                 <a
                                   className="text-light"
                                   href={
                                     "/detail/permohonan-informasi/" +
                                     informasi.id
-                                  }>
+                                  }
+                                >
                                   <i class="fas fa-info-circle"></i>
                                 </a>
                               </button>
                               <button
                                 type="button"
                                 class="btn-danger btn-sm"
-                                onClick={() => deleteData(informasi.id)}>
+                                onClick={() => deleteData(informasi.id)}
+                              >
                                 <i class="fa-solid fa-trash"></i>
                               </button>
                             </td>

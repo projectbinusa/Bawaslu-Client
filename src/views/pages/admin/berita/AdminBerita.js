@@ -338,10 +338,27 @@ function AdminBerita() {
                             </button>
                             <button
                               type="button"
-                              class="btn-warning  mr-2 btn-sm">
+                              className="btn-primary btn-sm mr-2"
+                            >
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-berita-admin/${berita.id}`}
+                              >
+                                {" "}
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn-warning  mr-2 btn-sm"
+                            >
                               <a
                                 className="text-light"
-                                href={"/detail/berita/" + berita.id}>
+                                href={"/detail/berita/" + berita.id}
+                              >
                                 <i class="fas fa-info-circle"></i>
                               </a>
                             </button>
@@ -381,7 +398,8 @@ function AdminBerita() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange1}
-                value={rowsPerPage1}>
+                value={rowsPerPage1}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -400,7 +418,8 @@ function AdminBerita() {
           <div className="mb-3 card box-tabel">
             <div
               className="card-header pembungkus-text-button"
-              style={{ display: "flex" }}>
+              style={{ display: "flex" }}
+            >
               <p className="mt-3">Kategori Berita</p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
@@ -411,7 +430,8 @@ function AdminBerita() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange1}
-                    value={rowsPerPage1}>
+                    value={rowsPerPage1}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
