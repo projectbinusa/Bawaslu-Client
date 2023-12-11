@@ -99,24 +99,17 @@ function Register() {
 
           <div className="col-md-6 right-box max-h-screen">
             <form onSubmit={handleSubmit} className="row align-items-center">
-            <div class="container">
-  <div class="row">
-    <div class="col-md-12 text-center">
-      <div class="header-text mb-4">
-        <h2>
-          <img
-            style={{ width: "40px",  marginRight: "15px" }}
-            src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-            alt="Bawaslu Logo"
-          />
-          Register
-        </h2>
-        <p>Buat Akun Sekarang Agar Bisa Login</p>
-      </div>
-    </div>
-  </div>
-</div>
-
+              <div className="header-text text-center">
+                <h2>
+                  <img
+                    style={{ width: "40px" }}
+                    src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                    alt=""
+                  />{" "}
+                  Register
+                </h2>
+                <p>Buat Akun Sekarang Agar Bisa Login</p>
+              </div>
               <div className="form-group mb-3">
                 <input
                   type="text"
