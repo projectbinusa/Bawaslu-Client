@@ -137,7 +137,7 @@ function App() {
           <Route path="/informasi-publik" component={Informasii} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route
-            path="/informasi-berkala-kelembagaan"
+            path="/daftar-regulasi/informasi%20berkala%20(kelembagaan)/5"
             component={InformasiBerkalaKelembagaan}
             exact
           />
@@ -203,10 +203,10 @@ function App() {
           {/* daftar regulasi */}
 
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi" component={Regulasi} exact />
-          <Route path="/dip" component={Dip} exact />
+          <Route path="/daftar-regulasi/Regulasi/1" component={Regulasi} exact />
+          <Route path="/daftar-regulasi/DIP/2" component={Dip} exact />
           <Route
-            path="/standar-operasional-prosedur"
+            path="/daftar-regulasi/SOP/3"
             component={InformasiStandarProsedur}
             exact
           />
