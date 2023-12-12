@@ -134,7 +134,6 @@ function App() {
           />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
-          <Route path="/informasi-publik" component={Informasii} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route
             path="/informasi-berkala-kelembagaan"

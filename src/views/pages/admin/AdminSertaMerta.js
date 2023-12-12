@@ -12,34 +12,66 @@ function AdminSertaMerta() {
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
-  const [tableData, setTableData] = useState([]);
+  const [tableData, setTableData] = useState([]); // Set initial value here
 
   const { id } = useParams();
 
   const getById = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/${id}`,
+        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/all?direction=asc&page=0&size=10&sort=id`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
+
       // Handle response data as needed
+      const result = response.data;
+
+      if (result.status === "success") {
+        const selectedDataItem = result.data.content;
+        setSelectedData(selectedDataItem);
+        setPaginationInfo(result.data);
+
+        // Filter data based on search term
+        const filteredData = selectedDataItem.filter((item) =>
+          item.dokumen.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        // Set the initial table data
+        setTableData(filteredData);
+        setCurrentPage(1);
+      } else {
+        console.error("Error fetching data:", result.message);
+        // Set default data or show an error message
+        setTableData([{ dokumen: "Default Document" }]);
+        setCurrentPage(1);
+      }
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
+      // Set default data or show an error message
+      setTableData([{ dokumen: "Default Document" }]);
+      setCurrentPage(1);
     }
   };
 
   useEffect(() => {
     getById();
-  });
-
+  }, []);
   const handleChange = async (event) => {
     const selectedId = event.target.value;
     setSelectedValue(selectedId);
-    fetchData(selectedId, 1, searchTerm);
+
+    if (selectedId) {
+      fetchData(selectedId, 1, searchTerm);
+    } else {
+      // Handle the case where no option is selected
+      console.log("Pilih Keterangan Terlebih Dahulu!");
+      // You can set some state or display a message to the user
+      setTableData([]); // Clear table data
+    }
   };
 
   const fetchData = async (selectedId, page, searchTerm) => {
