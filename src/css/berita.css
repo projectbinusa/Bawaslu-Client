@@ -1,33 +1,22 @@
-    .carousel-item img {
-        object-fit: cover;
-        height: 500px; /* Atur tinggi sesuai kebutuhan Anda */
-    }
 
-    @media (max-width: 992px) {
-        .carousel-item img {
-            height: 300px; /* Atur tinggi sesuai kebutuhan Anda untuk tampilan laptop */
-        }
-    }
-    .carousel-indicators button {
-        background-color: white;
-        border: 1px solid #000; /* Jika ingin menambahkan border hitam */
-    }
+  #carouselExampleDark {
+    margin-top: 60px;
+    padding: 50px; /* Atur jarak dari layar */
+  }
 
-    .carousel-indicators .active {
-        background-color: #000; /* Warna latar belakang saat tombol aktif (hitam dalam contoh ini) */
-    }
-        @media (max-width: 768px) {
-            .carousel-caption h1,
-            .carousel-caption p {
-                color: black; /* Ganti warna teks sesuai kebutuhan */
-            }
-        }
-        @media (max-width: 390px) {
-            .carousel-caption h1,
-            .carousel-caption p {
-                color: black; /* Ganti warna teks sesuai kebutuhan */
-            }
-        }
+  .carousel-inner img {
+    height: 500px; /* Atur tinggi gambar */
+    width: auto; /* Atur lebar gambar agar tidak terdistorsi */
+    margin: 0 auto; /* Pusatkan gambar di dalam carousel */
+  }
+  .carousel-indicators button {
+    background-color: white; /* Atur warna latar belakang tombol */
+    border: 1px solid #fff; /* Atur warna border tombol */
+  }
+
+  .carousel-indicators .active {
+    background-color: #fff; /* Atur warna latar belakang tombol saat aktif */
+  }
 #background-linnear{
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
 }
