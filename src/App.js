@@ -106,6 +106,7 @@ import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkala
 import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi";
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 
 // test
 function App() {
@@ -140,6 +141,7 @@ function App() {
             component={InformasiBerkalaKelembagaan}
             exact
           />
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
           <Route
             path="/informasi-berkala-Kepemiluan"
             component={InformasiBerkalaKepemiluan}
