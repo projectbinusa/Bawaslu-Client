@@ -132,13 +132,13 @@ function App() {
                     <PrivateRoute path="/detail/berita/:id" component={DetailBerita} exact />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
-          <Route path="/informasi-publik" component={Informasii} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route
             path="/informasi-berkala-kelembagaan"
             component={InformasiBerkalaKelembagaan}
             exact
           />
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
           <Route
             path="/informasi-berkala-Kepemiluan"
             component={InformasiBerkalaKepemiluan}
@@ -320,8 +320,7 @@ function App() {
             exact
           />
           {/* admin informasi */}
-
-          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
+          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact /> */}
 
           <Route
             path="/admin-informasi/:namaInformasi/:id"
@@ -367,7 +366,7 @@ function App() {
           {/* rekap data perbulan */}
           <Route
             path="/rekap-berita/:tahun_bulan"
-            component={RekapBerita}
+            component={RekapBeritaa}
             exact
           />
           <Route

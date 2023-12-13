@@ -279,18 +279,13 @@ function Navbar() {
                   data-bs-parent="#menu"
                 >
                   <li>
-                    <a href="/informasi-publik">Daftar Informasi Publik</a>
-                  </li>
-                  <li>
                     <a href="/informasi-serta-merta">Informasi Serta Merta</a>
                   </li>
                   <li>
                     <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
                   </li>
                   <li>
-                    <a href="/informasi-berkala-kepemiluan">
-                      Informasi Berkala
-                    </a>
+                    <a href="/informasi-berkala">Informasi Berkala</a>
                   </li>
                   <li>
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
@@ -315,12 +310,19 @@ function Navbar() {
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu2"
-                  data-bs-parent="#menu">
-                    {regulasi.map((isiRegulasi) => {
-                      return (
-                      <li><a href={`/daftar-regulasi/${isiRegulasi.jenisRegulasi}/${isiRegulasi.id}`}>{isiRegulasi.jenisRegulasi}</a></li>
-                      )
-                    })}
+                  data-bs-parent="#menu"
+                >
+                  {regulasi.map((isiRegulasi) => {
+                    return (
+                      <li>
+                        <a
+                          href={`/daftar-regulasi/${isiRegulasi.jenisRegulasi}/${isiRegulasi.id}`}
+                        >
+                          {isiRegulasi.jenisRegulasi}
+                        </a>
+                      </li>
+                    );
+                  })}
                   {/* <li className="text-black"><a>Daftar Informasi Publik</a></li> */}
                   {/* <li>
                     <a href="/regulasi">Regulasi</a>
