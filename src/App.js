@@ -100,13 +100,13 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
+import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
+import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan"
+import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan"
+import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi"
+import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi"
+import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta"
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
-import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
-import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
-import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi";
-import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
-import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 
 // test
 function App() {
@@ -137,15 +137,14 @@ function App() {
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route
-            path="/informasi-berkala-kelembagaan"
+            path="/daftar-regulasi/informasi%20berkala%20(kelembagaan)/5"
             component={InformasiBerkalaKelembagaan}
             exact
           />
           <Route path="/informasi-berkala" component={InformasiBerkala} exact />
           <Route
             path="/informasi-berkala-Kepemiluan"
-            component={InformasiBerkalaKepemiluan}
-            exact
+            component={InformasiBerkalaKepemiluan}            exact
           />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
           <Route path="/informasi-kanal" component={Kanal} exact />
@@ -205,10 +204,10 @@ function App() {
           {/* daftar regulasi */}
 
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi" component={Regulasi} exact />
-          <Route path="/dip" component={Dip} exact />
+          <Route path="/daftar-regulasi/Regulasi/1" component={Regulasi} exact />
+          <Route path="/daftar-regulasi/DIP/2" component={Dip} exact />
           <Route
-            path="/standar-operasional-prosedur"
+            path="/daftar-regulasi/SOP/3"
             component={InformasiStandarProsedur}
             exact
           />
@@ -302,12 +301,12 @@ function App() {
           {/* <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact /> */}
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
-            path="/detail-permohonan-informasi/:id"
+            path="/detail/permohonan-informasi/:id"
             component={DetailPermohonanInformasi}
             exact
           />
           <Route
-            path="/detail-permohonan-keberatan/:id"
+            path="/detail/permohonan-keberatan/:id"
             component={DetailPermohonanKeberatan}
             exact
           />

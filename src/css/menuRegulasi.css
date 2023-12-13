@@ -8,6 +8,9 @@ table tbody td .aksi {
   text-align: center;
   display: flex;
 }
+#table-padding{
+  margin-top: 520px;
+}
 
 @media screen and (max-width: 600px) {
 
