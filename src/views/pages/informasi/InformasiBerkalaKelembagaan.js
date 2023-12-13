@@ -47,7 +47,7 @@ function InformasiBerkalaKelembagaan() {
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Organisasi & Administrasi
+                        Profile Bawaslu
                       </span>
                     </a>
 
