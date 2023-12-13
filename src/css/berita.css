@@ -1,4 +1,14 @@
 
+.carousel-control-prev,
+.carousel-control-next {
+  color: white;
+}
+
+/* Gaya untuk mengubah warna indicator carousel menjadi putih */
+.carousel-indicators button {
+  background-color: white;
+  border: 1px solid #fff;
+}
   #carouselExampleDark {
     margin-top: 60px;
     padding: 50px; /* Atur jarak dari layar */

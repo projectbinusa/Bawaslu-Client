@@ -299,12 +299,12 @@ function App() {
           {/* <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact /> */}
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
-            path="/detail-permohonan-informasi/:id"
+            path="/detail/permohonan-informasi/:id"
             component={DetailPermohonanInformasi}
             exact
           />
           <Route
-            path="/detail-permohonan-keberatan/:id"
+            path="/detail/permohonan-keberatan/:id"
             component={DetailPermohonanKeberatan}
             exact
           />
