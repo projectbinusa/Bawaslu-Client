@@ -107,6 +107,7 @@ import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi"
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi"
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta"
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+
 // test
 function App() {
   return (
@@ -140,6 +141,7 @@ function App() {
             component={InformasiBerkalaKelembagaan}
             exact
           />
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
           <Route
             path="/informasi-berkala-Kepemiluan"
             component={InformasiBerkalaKepemiluan}            exact
