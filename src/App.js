@@ -107,6 +107,16 @@ import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi"
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi"
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta"
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+<<<<<<< HEAD
+=======
+import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
+import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
+import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi";
+import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
+import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+
+>>>>>>> 7f1fc78db55d945490d083808d080802b31923ee
 // test
 function App() {
   return (
@@ -140,6 +150,7 @@ function App() {
             component={InformasiBerkalaKelembagaan}
             exact
           />
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
           <Route
             path="/informasi-berkala-Kepemiluan"
             component={InformasiBerkalaKepemiluan}            exact

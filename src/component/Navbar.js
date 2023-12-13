@@ -285,9 +285,7 @@ function Navbar() {
                     <a href="/informasi-setiap-saat">Informasi Setiap Saat</a>
                   </li>
                   <li>
-                    <a href="/informasi-berkala-kepemiluan">
-                      Informasi Berkala
-                    </a>
+                    <a href="/informasi-berkala">Informasi Berkala</a>
                   </li>
                   <li>
                     <a href="/informasi-dikecuali">Informasi DiKecualikan</a>
