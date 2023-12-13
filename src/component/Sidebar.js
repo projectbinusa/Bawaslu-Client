@@ -124,11 +124,6 @@ function Sidebar() {
                 </a>
                 <ul>
                   <li>
-                    <a style={{ textDecoration: "none" }} href="">
-                      <i className="metismenu-icon"></i>Publik
-                    </a>
-                  </li>
-                  <li>
                     <a
                       style={{ textDecoration: "none" }}
                       href="/admin-serta-merta"
