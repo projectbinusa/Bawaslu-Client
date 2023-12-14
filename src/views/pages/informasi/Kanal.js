@@ -13,6 +13,13 @@ import OrganisasiDanAdministrasi from "./tabs/SertaMerta/OrganisasiDanAdministra
 import Sosialisasi from "./tabs/SertaMerta/Sosialisasi";
 import PerselisihanHasilPemilu from "./tabs/SertaMerta/PerselisihanHasilPemilu";
 import Piagam from "./tabs/SertaMerta/Piagam";
+import Imbauan from "./tabs/Kanal/Imbauan";
+import Anggaran from "./tabs/Kanal/Anggaran";
+import PencegahanDanPenanganan from "./tabs/Kanal/PencegahanDanPenanganan";
+import SDMPengawasPemilu from "./tabs/Kanal/SDMPengawasPemilu";
+import HasilPengawasan from "./tabs/Kanal/HasilPengawasan";
+import SiaranPers from "./tabs/Kanal/SiaranPers";
+import Putusan from "./tabs/Kanal/Putusan";
 
 function Kanal() {
   return (
@@ -157,7 +164,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <PutusanPelanggaran />
+                      <Imbauan />
                     </div>
 
                     <div
@@ -166,7 +173,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <SengketaProsesPemilu />
+                      <Anggaran />
                     </div>
 
                     <div
@@ -175,7 +182,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <PemungutanSuaraUlang />
+                      <PencegahanDanPenanganan />
                     </div>
 
                     <div
@@ -184,7 +191,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <OrganisasiDanAdministrasi />
+                      <SDMPengawasPemilu />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -192,7 +199,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <PerselisihanHasilPemilu />
+                      <HasilPengawasan />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -200,7 +207,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <Sosialisasi />
+                      <SiaranPers />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -208,7 +215,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <Piagam />
+                      <Putusan />
                     </div>
                   </div>
                 </div>

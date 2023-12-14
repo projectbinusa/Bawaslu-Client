@@ -8,6 +8,11 @@ import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
 import HasilPengawasan from "./tabs/Berkala/kepemiluan/HasilPengawasan";
+import AnalisaCalonTerpilih from "./tabs/Berkala/kepemiluan/AnalisaCalonTerpilih";
+import LaporanAkhirPengawasan from "./tabs/Berkala/kepemiluan/LaporanAkhirPengawasan";
+import PenangananPelanggaran from "./tabs/Berkala/kepemiluan/PenangananPelanggaran";
+import NaskahPerjanjianHibahDaerah from "./tabs/Berkala/kepemiluan/NaskahPerjanjianHibahDaerah";
+import LayananPengaduanPolitik from "./tabs/Berkala/kepemiluan/LayananPengaduanPolitik";
 
 function InformasiBerkalaKepemiluan() {
   return (
@@ -162,7 +167,7 @@ function InformasiBerkalaKepemiluan() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <PutusanPelanggaran />
+                      <AnalisaCalonTerpilih />
                     </div>
 
                     <div
@@ -171,7 +176,7 @@ function InformasiBerkalaKepemiluan() {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <PutusanPelanggaran />
+                      <LaporanAkhirPengawasan />
                     </div>
 
                     <div
@@ -180,7 +185,7 @@ function InformasiBerkalaKepemiluan() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <PutusanPelanggaran />
+                      <PenangananPelanggaran />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -188,7 +193,7 @@ function InformasiBerkalaKepemiluan() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <PutusanPelanggaran />
+                      <NaskahPerjanjianHibahDaerah />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -196,7 +201,7 @@ function InformasiBerkalaKepemiluan() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <PutusanPelanggaran />
+                      <LayananPengaduanPolitik />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"

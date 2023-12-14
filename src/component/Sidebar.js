@@ -140,13 +140,24 @@ function Sidebar() {
                     </a>
                   </li>
                   <li>
-                    <a style={{ textDecoration: "none" }} href="">
+                    <a
+                      style={{ textDecoration: "none" }}
+                      href="/admin-berkala-kepemiluan"
+                    >
                       <i className="metismenu-icon"></i>Bekala Kepemiluan
                     </a>
                   </li>
                   <li>
-                    <a style={{ textDecoration: "none" }} href="">
+                    <a
+                      style={{ textDecoration: "none" }}
+                      href="/admin-berkala-kelembagaan"
+                    >
                       <i className="metismenu-icon"></i>Bekala Kelembagaan
+                    </a>
+                  </li>
+                  <li>
+                    <a style={{ textDecoration: "none" }} href="/admin-kanal">
+                      <i className="metismenu-icon"></i>Kanal
                     </a>
                   </li>
                 </ul>
