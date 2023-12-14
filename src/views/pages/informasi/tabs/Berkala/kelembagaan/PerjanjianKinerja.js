@@ -1,13 +1,13 @@
 import React from "react";
 
-function AnalisaCalonTerpilih() {
+function PerjanjianKinerja() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/16/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          "http://localhost:4040/bawaslu/api/jenis-keterangan/35/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
         );
         setData(response.data.data); // Mengasumsikan properti data berisi array informasi
       } catch (error) {
@@ -62,4 +62,5 @@ function AnalisaCalonTerpilih() {
     </div>
   );
 }
-export default AnalisaCalonTerpilih;
+
+export default PerjanjianKinerja;
