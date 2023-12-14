@@ -13,6 +13,7 @@ import "../../../../../css/menuRegulasi.css";
 import { Pagination } from "@mui/material";
 
 function MenuRegulasi() {
+  const [regulasi, setRegulasi] = useState ([]);
   const [menuRegulasi, setMenuRegulasi] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
