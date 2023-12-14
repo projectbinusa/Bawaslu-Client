@@ -12,7 +12,7 @@ import {
 } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-
+import "../../css/berita.css"
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -165,53 +165,137 @@ function Berita() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div
-        class="service-area bg-overlay pd-top-120 pd-bottom-90"
-        style={{
-          backgroundImage: `url(${gambarTerbaru})`,
-        }}
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
-              <div
-                class="section-title single-service-inner border-radius-5 p-35 style-white mb-lg-0"
-                style={{
-                  backgroundImage: `url(${gambarTerbaru})`,
-                  minHeight: "93%",
-                }}
-              >
-                <h2 class="title title-berita mt-4">
-                  {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
-                </h2>
-              </div>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators" style={{backgroundColor:"white", border:"1px solid #fff"}}>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="https://www.inilah.com/_next/image?url=https%3A%2F%2Fc.inilah.com%2Freborn%2F2023%2F11%2FIMG_20231125_WA_0020_68c10d8068.jpg&w=1920&q=75"
+              class="d-block w-100"
+              alt="Berita1"
+            />
+            <div class="carousel-caption  d-md-block">
+              <h1 style={{ color: "white" }}>Berita</h1>
+              <p style={{ color: "white" }}>
+                Hasil penelusuran Bawaslu Boyolali menyatakan Kades Jerukan,
+                Juwangi, melanggar netralitas kades dalam pemilu karena
+                mengarahkan warganya ...
+              </p>
             </div>
-            <div class="col-lg-8">
-              <div class="row">
-                {listTerbaru.slice(1, 5).map((berita, index) => (
-                  <div class="col-md-6" key={index}>
-                    <div
-                      class="single-service-inner style-black text-left"
-                      style={{
-                        backgroundImage: `url(${berita.image})`,
-                        minHeight: "93%",
-                      }}
-                    >
-                      <div class="icon-box">
-                        <i class="icomoon-layer"></i>
-                      </div>
-                      <div class="details detailss">
-                        <h3>
-                          <a class="isiBerita">{berita.judulBerita}</a>
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-1024x576.jpg"
+              class="d-block w-100"
+              alt="Berita2"
+            />
+            <div class="carousel-caption d-md-block">
+              <h1 style={{ color: "white" }}>Kehumasan</h1>
+              <p style={{ color: "white" }}>
+                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
+                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
+                mendatang. Komisi Pemilihan Umum... Read ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://pangkep.bawaslu.go.id/wp-content/uploads/2023/09/IMG_5619.jpg"
+              class="d-block w-100"
+              alt="Berita3"
+            />
+            <div class="carousel-caption d-md-block">
+              <h1 style={{ color: "white" }}>Pencegahan</h1>
+              <p style={{ color: "white" }}>
+                {" "}
+                BOYOLALI – Seiring dengan tahapan Kampanye Pemilihan umum Tahun
+                2019 yang akan segara berlangsung, Bawaslu Kabupaten Boyolali
+                memberikan ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/IMG-20220616-WA0008.jpg?itok=AdgsjibP"
+              class="d-block w-100"
+              alt="Berita4"
+            />
+            <div class="carousel-caption  d-md-block">
+              <h1 style={{ color: "white" }}>Penanganan Pelanggaran</h1>
+              <p style={{ color: "white" }}>
+                Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa:
+                pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran
+                administrasi Pemilu; dan/atau; tindak pidana ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2023/04/BENTUK-DARI-SARANA-MARKETING-BAWASLU-BOYOLALI-ADAKAN-PELATIHAN-PEMBUATAN-VIDEO-PELIPUTAN.jpeg"
+              class="d-block w-100"
+              alt="Berita5"
+            />
+            <div class="carousel-caption  d-md-block">
+              <h1 style={{ color: "white" }}>OSDM & Diklat</h1>
+              <p style={{ color: "white" }}>
+                Membangun aparatur dan kelembagaan pengawas pemilu yang kuat,
+                mandiri dan solid;; Mengembangkan pola dan metode pengawasan
+                yang efektif dan efisien;; Memperkuat ...
+              </p>
             </div>
           </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
 
       <br />
@@ -514,7 +598,7 @@ function Berita() {
 
                         return (
                           <li key={`${tahun_bulan}`}>
-                            <a href={`/${tahun_bulan}`}>
+                            <a href={`/rekap/berita/${tahun_bulan}`}>
                               <i class="fa-solid fa-file"></i> {monthData.label}{" "}
                               {monthData.year} ({totalData})
                             </a>
@@ -530,6 +614,7 @@ function Berita() {
           </div>
         </div>
       </div>
+
       {/* <!-- blog area end --> */}
       <Footer />
     </>
