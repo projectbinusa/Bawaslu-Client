@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { API_DUMMY } from "../../../utils/base_URL";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import axios from "axios";
 import Header from "../../../component/Header";
 import Sidebar from "../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
-import { API_DUMMY } from "../../../utils/base_URL";
-import axios from "axios";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-function AdminSertaMerta() {
+function AdminSetiapSaat() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -110,7 +110,7 @@ function AdminSertaMerta() {
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    fetchData(selectedValue, 1, event.target.value);
+    fetchData(selectedValue, 2, event.target.value);
   };
 
   return (
@@ -130,13 +130,13 @@ function AdminSertaMerta() {
                     onChange={handleChange}
                   >
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="1">Putusan Pelanggaran</option>;
-                    <option value="2">Sengketa Proses Pemilu</option>;
-                    <option value="3">Pemungutan Suara Ulang</option>;
-                    <option value="4">Organisasi Dan Adminstrasi</option>;
-                    <option value="5">Perselisihan Hasil Pemilu</option>;
-                    <option value="6">Sosialisasi</option>;
-                    <option value="7">Piagam Penghargaan</option>
+                    <option value="8">Organisasi Dan Administrasi</option>;
+                    <option value="9">Peraturan & Kebijakan</option>;
+                    <option value="10">MOU</option>;
+                    <option value="11">Pemantau Pemilu</option>;
+                    <option value="12">Rencana Strategi</option>;
+                    <option value="13">Materi Rakor</option>;
+                    <option value="14">Piagam Penghargaan</option>
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -244,4 +244,4 @@ function AdminSertaMerta() {
   );
 }
 
-export default AdminSertaMerta;
+export default AdminSetiapSaat;
