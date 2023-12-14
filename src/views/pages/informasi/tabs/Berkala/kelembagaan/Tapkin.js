@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-function tapkin() {
+function Tapkin() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -63,4 +64,4 @@ function tapkin() {
   );
 }
 
-export default tapkin;
+export default Tapkin;

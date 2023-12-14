@@ -149,7 +149,7 @@ function AdminSertaMerta() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/tambah-isi-informasi"
+                          href="/tambah-informasi-serta-merta"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >

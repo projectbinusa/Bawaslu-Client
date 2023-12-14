@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { API_DUMMY } from "../../../utils/base_URL";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import Header from "../../../component/Header";
 import Sidebar from "../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
+import { API_DUMMY } from "../../../utils/base_URL";
+import axios from "axios";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-function AdminSetiapSaat() {
+function AdminKanal() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -122,7 +122,7 @@ function AdminSetiapSaat() {
           <div id="container" className="container mt-3 app-main__outer">
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Admin Setiap Saat
+                Admin Kanal
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
@@ -130,13 +130,13 @@ function AdminSetiapSaat() {
                     onChange={handleChange}
                   >
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="8">Organisasi Dan Administrasi</option>;
-                    <option value="9">Peraturan & Kebijakan</option>;
-                    <option value="10">MOU</option>;
-                    <option value="11">Pemantau Pemilu</option>;
-                    <option value="12">Rencana Strategi</option>;
-                    <option value="13">Materi Rakor</option>;
-                    <option value="14">Piagam Penghargaan</option>
+                    <option value="39">Imbauan</option>;
+                    <option value="40">Anggaran</option>;
+                    <option value="41">Pencegahan & Penanganan</option>;
+                    <option value="42">SDM Pengawas Pemilu</option>;
+                    <option value="43">Hasil Pengawasan </option>;
+                    <option value="44">Siaran Pers</option>;
+                    <option value="45">Putusan</option>
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -149,7 +149,7 @@ function AdminSetiapSaat() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/tambah-informasi-setiap-saat"
+                          href="/tambah-informasi-kanal"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
@@ -244,4 +244,4 @@ function AdminSetiapSaat() {
   );
 }
 
-export default AdminSetiapSaat;
+export default AdminKanal;

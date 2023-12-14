@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { API_DUMMY } from "../../../utils/base_URL";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import Header from "../../../component/Header";
 import Sidebar from "../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
+import { API_DUMMY } from "../../../utils/base_URL";
+import axios from "axios";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-function AdminSetiapSaat() {
+function AdminBerkalaKelembagaan() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -122,7 +122,7 @@ function AdminSetiapSaat() {
           <div id="container" className="container mt-3 app-main__outer">
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Admin Setiap Saat
+                Admin Informasi Berkala Kelembagaan
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
@@ -130,13 +130,23 @@ function AdminSetiapSaat() {
                     onChange={handleChange}
                   >
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="8">Organisasi Dan Administrasi</option>;
-                    <option value="9">Peraturan & Kebijakan</option>;
-                    <option value="10">MOU</option>;
-                    <option value="11">Pemantau Pemilu</option>;
-                    <option value="12">Rencana Strategi</option>;
-                    <option value="13">Materi Rakor</option>;
-                    <option value="14">Piagam Penghargaan</option>
+                    <option value="22">Profile Bawaslu</option>;
+                    <option value="23">Layanan Publk Khusus</option>;
+                    <option value="24">Program Kerja</option>;
+                    <option value="25">Ringkasan Kegiatan</option>;
+                    <option value="26">Sumber dan Anggaran Kegiatan</option>;
+                    <option value="27">Keuangan Bawaslu</option>;
+                    <option value="28">Layanan Informasi Publik</option>
+                    <option value="29">Sosialisasi</option>
+                    <option value="30">SDM, Organisasi, & Administrasi</option>
+                    <option value="31">Laporan Barang Milik Negara</option>
+                    <option value="32">Naskah Perjanjian Hibah Daerah</option>
+                    <option value="33">Piagam Penghargaan</option>
+                    <option value="34">Laporan Realisasi Anggaran</option>
+                    <option value="35">Perjanjian Kinerja</option>
+                    <option value="36">Rencana Kerja & Anggaran</option>
+                    <option value="37">TAPKIN</option>
+                    <option value="38">Pengadaan Barang Dan Jasa</option>
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -149,7 +159,7 @@ function AdminSetiapSaat() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/tambah-informasi-setiap-saat"
+                          href="/tambah-informasi-berkala-kelembagaan"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
@@ -244,4 +254,4 @@ function AdminSetiapSaat() {
   );
 }
 
-export default AdminSetiapSaat;
+export default AdminBerkalaKelembagaan;
