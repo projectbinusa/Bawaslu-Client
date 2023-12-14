@@ -16,7 +16,7 @@ function DetailPermohonanInformasi() {
   const [createdDate, setCreatedDate] = useState("");
   const [updateDate, setUpdateDate] = useState("");
   const [alamatPemohon, setAlamatPemohon] = useState("");
-  const [nomorIdentitas, setNomorIdentitasPemohon] = useState("");
+  const [nomorIdentitasPemohon, setNomorIdentitasPemohon] = useState("");
   const [jenisIdentitas, setJenisIdentitas] = useState("");
   const [noTlp, setNoTlp] = useState("");
   const [email, setEmail] = useState("");
@@ -63,7 +63,7 @@ function DetailPermohonanInformasi() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 mb-3 app-main__outer">
-          <div className="">
+          <div className="box-tabel">
             <form className="card shadow w-100">
               <h2 className="title fw-bold fs-3 card-header">Detail</h2>
               <br />
@@ -162,7 +162,7 @@ function DetailPermohonanInformasi() {
                     type="text"
                     class="form-control"
                     disabled
-                    value={nomorIdentitas}
+                    value={nomorIdentitasPemohon}
                   />
                 </div>
                 <div class="mb-3">
