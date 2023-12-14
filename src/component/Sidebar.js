@@ -48,7 +48,7 @@ function Sidebar() {
 
   return (
     <div className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-      <div className="app-sidebar sidebar-shadow" style={{ height: "100vh" }}>
+      <div className="app-sidebar sidebar-shadow" style={{ height: "100vh",overflowY:"auto" }}>
         <div className="app-header__logo">
           <div className="logo-src"></div>
           <div className="header__pane ml-auto">
@@ -120,7 +120,7 @@ function Sidebar() {
                 <a style={{ textDecoration: "none" }} href="#">
                   <i className="fa-solid fa-bullhorn metismenu-icon "></i>
                   Isi Informasi
-                  <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                  <i class="fas fa-arrow-circle-down metismenu-state-icon caret-left"></i>
                 </a>
                 <ul>
                   <li>

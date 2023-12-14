@@ -9,6 +9,9 @@ table tbody td .aksi {
   display: flex;
   justify-content: center;
 }
+#table-padding{
+  margin-top: 520px;
+}
 
 @media screen and (max-width: 600px) {
 .box-tabel {

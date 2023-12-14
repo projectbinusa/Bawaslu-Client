@@ -1,6 +1,12 @@
 #display{
     display: flex;
 }
+@media (min-width: 992px) {
+    .nav-link {
+      width: 250px; /* Sesuaikan dengan lebar yang Anda inginkan */
+      text-align: center;
+    }
+  }
 @media screen and (max-width: 390px) {
     #display{
         display: flex;

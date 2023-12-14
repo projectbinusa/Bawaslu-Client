@@ -16,7 +16,7 @@ function DetailPermohonanInformasi() {
   const [createdDate, setCreatedDate] = useState("");
   const [updateDate, setUpdateDate] = useState("");
   const [alamatPemohon, setAlamatPemohon] = useState("");
-  const [nomorIdentitas, setNomorIdentitasPemohon] = useState("");
+  const [nomorIdentitasPemohon, setNomorIdentitasPemohon] = useState("");
   const [jenisIdentitas, setJenisIdentitas] = useState("");
   const [noTlp, setNoTlp] = useState("");
   const [email, setEmail] = useState("");
@@ -162,7 +162,7 @@ function DetailPermohonanInformasi() {
                     type="text"
                     class="form-control"
                     disabled
-                    value={nomorIdentitas}
+                    value={nomorIdentitasPemohon}
                   />
                 </div>
                 <div class="mb-3">

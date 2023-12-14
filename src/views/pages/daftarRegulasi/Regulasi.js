@@ -84,7 +84,7 @@ function Regulasi() {
               className="d-flex align-center justify-center gap-5"
             >
               <div className="row justify-content-center">
-                <div className="col-lg-12 ">
+                <div className="col-lg-12 col-md-15">
                   <div className="isotope-filters project-isotope-btn text-left mb-5">
                     {/* {list.map((menu) => {
                       return (
@@ -99,81 +99,196 @@ function Regulasi() {
                         </button>
                       );
                     })} */}
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
-                      onClick={() => showTable("Undang Undang")}
+                 
+                  </div>
+                  <div className="col-md-3">
+                    <div
+                      className="nav flex-column nav-pills nav-pills-custom"
+                      id="v-pills-tab"
+                      role="tablist"
+                      aria-orientation="vertical"
                     >
-                      Undang -Undang
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
-                      onClick={() => showTable("Peraturan Pemerintah")}
-                    >
-                      Peraturan Pemerintah
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
-                      onClick={() => showTable("Peraturan Mahkamah Agung")}
-                    >
-                      Peraturan Mahkamah Agung
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
+                      <a
+                        className="nav-link mb-3 p-3 shadow active"
+                        id="v-pills-home-tab"
+                        data-toggle="pill"
+                        href="#v-pills-home"
+                        role="tab"
+                        aria-controls="v-pills-home"
+                        aria-selected="true"
+                        data-filter="*"
+                          onClick={() => showTable("Undang Undang")} 
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          data-filter="*"
+                          onClick={() => showTable("Undang Undang")} 
+                        >
+                          Undang Undang{" "}
+                        </span>
+                      </a>
+
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-profile-tab"
+                        data-toggle="pill"
+                        href="#v-pills-profile"
+                        role="tab"
+                        aria-controls="v-pills-profile"
+                        aria-selected="false"
+                        data-filter="*"
+                        onClick={() => showTable("Peraturan Pemerintah")}
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          data-filter="*"
+                          onClick={() => showTable("Peraturan Pemerintah")}
+                        >
+                          Peraturan Pemerintahan
+                        </span>
+                      </a>
+
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-messages-tab"
+                        data-toggle="pill"
+                        href="#v-pills-messages"
+                        role="tab"
+                        aria-controls="v-pills-messages"
+                        aria-selected="false"
+                        data-filter="*"
+                        onClick={() => showTable("Peraturan Mahkamah Agung")}
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          data-filter="*"
+                          onClick={() => showTable("Peraturan Mahkamah Agung")}
+                        >
+                          Peraturan Mahkamah Agung
+                        </span>
+                      </a>
+
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-settings-tab"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        data-filter="*"
                       onClick={() => showTable("Peraturan Komisi Informasi")}
-                    >
-                      Peraturan Komisi Informasi
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
-                      onClick={() => showTable("Peraturan Menteri")}
-                    >
-                      Peraturan Menteri
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
-                      onClick={() => showTable("Perbawaslu")}
-                    >
-                      Perbawaslu{" "}
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
-                      onClick={() => showTable("Penetapan PPID")}
-                    >
-                      Penetapan PPID
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
-                      onClick={() => showTable("Surat Edaran")}
-                    >
-                      Surat Edaran
-                    </button>
-                    <button
-                      style={{ width: "210px", textAlign: "left" }}
-                      className="button"
-                      data-filter="*"
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          data-filter="*"
+                          onClick={() =>
+                            showTable("Peraturan Komisi Informasi")
+                          }
+                        >
+                          Peraturan Komisi Informasi
+                        </span>
+                      </a>
+
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-settings-tab"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        data-filter="*"
+                        onClick={() => showTable("Peraturan Menteri")}
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          data-filter="*"
+                          onClick={() => showTable("Peraturan Menteri")}
+                        >
+                          Peraturan Mentri{" "}
+                        </span>
+                      </a>
+
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-settings-tab"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        data-filter="*"
+                        onClick={() => showTable("Perbawaslu")}
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          data-filter="*"
+                          onClick={() => showTable("Perbawaslu")}
+                        >
+                          Perbawaslu
+                        </span>
+                      </a>
+
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-settings-tab"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        data-filter="*"
+                        onClick={() => showTable("Penetapan PPID")}
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          data-filter="*"
+                          onClick={() => showTable("Penetapan PPID")}
+                        >
+                          Penetapan PPID
+                        </span>
+                      </a>
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-settings-tab"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        data-filter="*"
+                        onClick={() => showTable("Surat Edaran")}
+                      >
+                        <span
+                          className="font-weight-bold small text-uppercase"
+                          onClick={() => showTable("Surat Edaran")}
+                        >
+                          Surat Edaran
+                        </span>
+                      </a>
+                      <a
+                        className="nav-link mb-3 p-3 shadow"
+                        id="v-pills-settings-tab"
+                        data-toggle="pill"
+                        href="#v-pills-settings"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        data-filter="*"
                       onClick={() => showTable("Intruksi Kabupaten")}
-                    >
-                      Intruksi Kabupaten
-                    </button>
+                      >
+                        <span className="font-weight-bold small text-uppercase"
+                        data-filter="*"
+                        onClick={() => showTable("Intruksi Kabupaten")}>
+                         Intruksi Kabupaten
+                        </span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
+              
               {/* Undang undang */}
               <div
                 className="card mb-4 shadow"

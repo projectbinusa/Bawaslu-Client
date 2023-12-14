@@ -104,6 +104,8 @@ import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan"
 import DetailBerita from "./views/pages/admin/berita/DetailBerita";
+import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi";
+import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 // test
 function App() {
   return (
@@ -134,15 +136,14 @@ function App() {
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route
-            path="/informasi-berkala-kelembagaan"
+            path="/daftar-regulasi/informasi%20berkala%20(kelembagaan)/5"
             component={InformasiBerkalaKelembagaan}
             exact
           />
-          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+          {/* <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
           <Route
             path="/informasi-berkala-Kepemiluan"
-            component={InformasiBerkalaKepemiluan}
-            exact
+            component={InformasiBerkalaKepemiluan}            exact
           />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
           <Route path="/informasi-kanal" component={Kanal} exact />
@@ -202,11 +203,9 @@ function App() {
           {/* daftar regulasi */}
 
           <Route path="/maklumat-pelayanan" component={Maklumat} exact />
-          <Route path="/regulasi" component={Regulasi} exact />
-          <Route path="/dip" component={Dip} exact />
           <Route
-            path="/standar-operasional-prosedur"
-            component={InformasiStandarProsedur}
+            path="/daftar-regulasi/:jenisRegulasi/:id"
+            component={IsiDaftarRegulasi}
             exact
           />
 
@@ -299,7 +298,7 @@ function App() {
           {/* <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact /> */}
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
-            path="/detail-permohonan-informasi/:id"
+            path="/detail/permohonan-informasi/:id"
             component={DetailPermohonanInformasi}
             exact
           />
@@ -365,7 +364,7 @@ function App() {
           />
           {/* rekap data perbulan */}
           <Route
-            path="/rekap-berita/:tahun_bulan"
+            path="/rekap/berita/:tahun_bulan"
             component={RekapBeritaa}
             exact
           />
@@ -492,7 +491,7 @@ function App() {
             component={IsiPengumuman}
             exact
           /> */}
-          <Route path="/page-isi-berita/:id" component={PageBerita} exact />
+          <Route path="/page-isi-berita/:author/:id" component={PageBerita} exact />
           <Route
             path="/penyelesaian-sengketa-footer"
             component={PenyelesaianSengketaFooter}
