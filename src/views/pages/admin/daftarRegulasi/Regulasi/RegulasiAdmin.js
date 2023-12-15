@@ -11,6 +11,7 @@ import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import "../../../../../css/menuRegulasi.css";
 import { Pagination } from "@mui/material";
+import Regulasi from "../../../daftarRegulasi/Regulasi";
 
 function MenuRegulasi() {
   const [menuRegulasi, setMenuRegulasi] = useState([]);
@@ -126,6 +127,7 @@ function MenuRegulasi() {
           <div class="main-card mb-3 card box-tabel">
             <div className="card-header" style={{ display: "flex" }}>
             {regulasi.length > 0 && regulasi[0].menuRegulasi.menuRegulasi}
+
               <p className="mt-3"></p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
@@ -252,6 +254,7 @@ function MenuRegulasi() {
                     />
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

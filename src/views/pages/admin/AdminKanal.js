@@ -6,7 +6,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
-function AdminSertaMerta() {
+function AdminKanal() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -110,7 +110,7 @@ function AdminSertaMerta() {
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    fetchData(selectedValue, 1, event.target.value);
+    fetchData(selectedValue, 2, event.target.value);
   };
 
   return (
@@ -122,7 +122,7 @@ function AdminSertaMerta() {
           <div id="container" className="container mt-3 app-main__outer">
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Admin Serta Merta
+                Admin Kanal
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
@@ -130,13 +130,13 @@ function AdminSertaMerta() {
                     onChange={handleChange}
                   >
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="1">Putusan Pelanggaran</option>;
-                    <option value="2">Sengketa Proses Pemilu</option>;
-                    <option value="3">Pemungutan Suara Ulang</option>;
-                    <option value="4">Organisasi Dan Adminstrasi</option>;
-                    <option value="5">Perselisihan Hasil Pemilu</option>;
-                    <option value="6">Sosialisasi</option>;
-                    <option value="7">Piagam Penghargaan</option>
+                    <option value="39">Imbauan</option>;
+                    <option value="40">Anggaran</option>;
+                    <option value="41">Pencegahan & Penanganan</option>;
+                    <option value="42">SDM Pengawas Pemilu</option>;
+                    <option value="43">Hasil Pengawasan </option>;
+                    <option value="44">Siaran Pers</option>;
+                    <option value="45">Putusan</option>
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -149,7 +149,7 @@ function AdminSertaMerta() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/tambah-informasi-serta-merta"
+                          href="/tambah-informasi-kanal"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
@@ -244,4 +244,4 @@ function AdminSertaMerta() {
   );
 }
 
-export default AdminSertaMerta;
+export default AdminKanal;
