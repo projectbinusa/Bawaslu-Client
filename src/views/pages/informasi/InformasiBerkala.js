@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
+
 import "../../../css/berkala.css";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
