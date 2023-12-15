@@ -4,6 +4,7 @@
         flex-direction: column;
         margin-right: 0%;
         padding-right: 2px;
+       
     }
     #display{
         display: flex;
@@ -12,6 +13,13 @@
         align-items: center;
         gap: 10px;
     }
+    
+    
+      #btn1,
+      #btn2 {
+        width: 100%;
+        margin-bottom: 10px;
+      }
 }
 @media screen and (max-width: 390px) {
     .container-display{
@@ -24,6 +32,10 @@
     .container{
         display: flex;
         flex-direction: column;
+    }
+    
+    .kelembagaan-btn{
+        width: 100px;
     }
 }
 @media screen and (max-width: 768px) {
