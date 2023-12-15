@@ -103,6 +103,7 @@ import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/Me
 import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
 import DetailBerita from "./views/pages/admin/berita/DetailBerita";
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala"
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
 import AddIsiInformasi from "./views/pages/admin/Add/AddSertaMerta";
@@ -153,7 +154,8 @@ function App() {
             component={InformasiBerkalaKelembagaan}
             exact
           />
-          {/* <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+         
           <Route
             path="/informasi-berkala-Kepemiluan"
             component={InformasiBerkalaKepemiluan}
