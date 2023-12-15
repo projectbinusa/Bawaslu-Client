@@ -12,7 +12,25 @@ table tbody td .aksi {
 #table-padding{
   margin-top: 520px;
 }
+@media (max-width: 390px) {
+  /* Center the search input */
+  .form-control.widget-content-right {
+    margin: 10px auto; /* Add margin to center the input */
+    width: 80%; /* Adjust the width as needed */
+  }
 
+  /* Increase the width of the table */
+  .table-responsive-3 table {
+    width: 100%; /* Set the table width to 100% */
+  }
+  .form-control{
+    width: 50%;
+    margin-left: 50px;
+  }
+  #seacrh-admin{
+    width: 100px;
+  }
+}
 @media screen and (max-width: 600px) {
 .box-tabel {
   overflow-y: auto;

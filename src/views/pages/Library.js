@@ -75,7 +75,7 @@ function Library() {
                 <h2 className="title">Buku Bawaslu Kabupaten Boyolali</h2>
                 <p className="content">
                   Melalui website ini, Bawaslu Kabupaten Boyolali akan selalu
-                  memperbabarui {" "} informasi terkait pengawasan dan pemantauan
+                  memperbabarui informasi terkait pengawasan dan pemantauan
                   pemilu.
                 </p>
               </div>
@@ -92,7 +92,7 @@ function Library() {
                 <div className="icon-box">
                   <i className="icomoon-application"></i>
                 </div>
-                <div className="details">
+                <div id="" className="details">
                   <h3>
                     <a href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg">
                       Buletin
