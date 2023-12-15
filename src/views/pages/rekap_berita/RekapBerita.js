@@ -26,6 +26,7 @@ function RekapBerita() {
     }
   };
 
+  //useEffect
   useEffect(() => {
     getAllRekap();
   }, [tahun_bulan]);

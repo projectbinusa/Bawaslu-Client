@@ -101,25 +101,12 @@ import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
-import DetailBerita from "./views/pages/admin/berita/DetailBerita";
-import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala"
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
-import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
-import AddIsiInformasi from "./views/pages/admin/Add/AddSertaMerta";
+import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan"
+import DetailBerita from "./views/pages/admin/berita/DetailBerita";
+import AddIsiInformasi from "./views/pages/admin/AddIsiInformasi";
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
-import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
-import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
-import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
-import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
-import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
-import AdminKanal from "./views/pages/admin/AdminKanal";
-import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
-import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
-import AddKanal from "./views/pages/admin/Add/AddKanal";
-
 // test
 function App() {
   return (
@@ -241,8 +228,8 @@ function App() {
           <Route path="/regulasi" component={Regulasi} exact />
           <Route path="/dip" component={Dip} exact />
           <Route
-            path="/standar-operasional-prosedur"
-            component={InformasiStandarProsedur}
+            path="/daftar-regulasi/:jenisRegulasi/:id"
+            component={IsiDaftarRegulasi}
             exact
           />
 
