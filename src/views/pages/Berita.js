@@ -315,7 +315,7 @@ function Berita() {
                   <div className="widget-title row">
                     {category.map((cta, index) => {
                       return (
-                        <div className="col-6">
+                        <div className="col-4">
                           <a
                             style={{ color: "black", textDecoration: "none" }}
                             href={`category-berita/${cta.category}/${cta.id}`}
@@ -598,7 +598,7 @@ function Berita() {
 
                         return (
                           <li key={`${tahun_bulan}`}>
-                            <a href={`/${tahun_bulan}`}>
+                            <a href={`/rekap/berita/${tahun_bulan}`}>
                               <i class="fa-solid fa-file"></i> {monthData.label}{" "}
                               {monthData.year} ({totalData})
                             </a>

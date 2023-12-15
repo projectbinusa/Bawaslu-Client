@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { API_DUMMY } from "../../../utils/base_URL";
+import { API_DUMMY } from "../../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function AddIsiInformasi() {
+function AddBerkalaKelembagaan() {
   const [dokumen, setDokumen] = useState("");
   const [pdfDokumen, setPdfDokumen] = useState("");
-  const [jenisKeteranganId, setJenisKeteranganId] = useState(1); // Tidak perlu dalam array jika hanya satu nilai
+  const [jenisKeteranganId, setJenisKeteranganId] = useState(2); // Tidak perlu dalam array jika hanya satu nilai
   const history = useHistory();
 
   const add = async (e) => {
@@ -35,7 +35,7 @@ function AddIsiInformasi() {
       });
 
       setTimeout(() => {
-        history.push("/admin-serta-merta");
+        history.push("/admin-berkala-kelembagaan");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -102,13 +102,23 @@ function AddIsiInformasi() {
                     onChange={(e) => setJenisKeteranganId(e.target.value)}
                   >
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="1">Putusan Pelanggaran</option>;
-                    <option value="2">Sengketa Proses Pemilu</option>;
-                    <option value="3">Pemungutan Suara Ulang</option>;
-                    <option value="4">Organisasi Dan Adminstrasi</option>;
-                    <option value="5">Perselisihan Hasil Pemilu</option>;
-                    <option value="6">Sosialisasi</option>;
-                    <option value="7">Piagam Penghargaan</option>
+                    <option value="22">Profile Bawaslu</option>;
+                    <option value="23">Layanan Publk Khusus</option>;
+                    <option value="24">Program Kerja</option>;
+                    <option value="25">Ringkasan Kegiatan</option>;
+                    <option value="26">Sumber dan Anggaran Kegiatan</option>;
+                    <option value="27">Keuangan Bawaslu</option>;
+                    <option value="28">Layanan Informasi Publik</option>
+                    <option value="29">Sosialisasi</option>
+                    <option value="30">SDM, Organisasi, & Administrasi</option>
+                    <option value="31">Laporan Barang Milik Negara</option>
+                    <option value="32">Naskah Perjanjian Hibah Daerah</option>
+                    <option value="33">Piagam Penghargaan</option>
+                    <option value="34">Laporan Realisasi Anggaran</option>
+                    <option value="35">Perjanjian Kinerja</option>
+                    <option value="36">Rencana Kerja & Anggaran</option>
+                    <option value="37">TAPKIN</option>
+                    <option value="38">Pengadaan Barang Dan Jasa</option>
                   </select>
                 </div>
               </div>
@@ -129,4 +139,4 @@ function AddIsiInformasi() {
   );
 }
 
-export default AddIsiInformasi;
+export default AddBerkalaKelembagaan;

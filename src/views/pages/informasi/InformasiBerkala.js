@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
+
+import "../../../css/berkala.css";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import gambar from "../../../asset/img/bawaslu(berita).jpeg";
@@ -44,6 +46,24 @@ function InformasiBerkala() {
                 Kelembagaan
               </a>
             </div>
+
+  <a
+    id="btn1"
+    className="col-5 btn btn-primary text-center d-flex align-items-center px-2"
+    href="/informasi-berkala-kepemiluan"
+  >
+    <span className="mx-auto">Kepemiluan</span>
+  </a>
+  <div className="col-2 text-center text-white"></div>
+  <a
+id="btn2"
+    className="col-5 btn btn-primary text-center d-flex align-items-center px-2"
+    href="/informasi-berkala-kelembagaan"
+  >
+    <span className="mx-auto">Kelembagaan</span>
+  </a>
+</div>
+
           </div>
         </div>
       </div>
