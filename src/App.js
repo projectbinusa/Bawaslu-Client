@@ -101,6 +101,7 @@ import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
+import InformasiBerkala from "./views/pages/informasi/InformasiBerkala"
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan"
 import DetailBerita from "./views/pages/admin/berita/DetailBerita";
@@ -131,6 +132,7 @@ function App() {
             component={EditCategory}
             exact
           />
+                    <PrivateRoute path="/detail/berita/:id" component={DetailBerita} exact />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
@@ -139,7 +141,8 @@ function App() {
             component={InformasiBerkalaKelembagaan}
             exact
           />
-          {/* <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+         
           <Route
             path="/informasi-berkala-Kepemiluan"
             component={InformasiBerkalaKepemiluan}
@@ -222,6 +225,11 @@ function App() {
           <Route
             path="/daftar-regulasi/:jenisRegulasi/:id"
             component={IsiDaftarRegulasi}
+          <Route path="/regulasi" component={Regulasi} exact />
+          <Route path="/dip" component={Dip} exact />
+          <Route
+            path="/daftar-regulasi/:jenisRegulasi/:id"
+            component={IsiDaftarRegulasi}
             exact
           />
 
@@ -231,7 +239,7 @@ function App() {
             component={AdminFormInformasi}
             exact
           />
-          <PrivateRoute path="/add-regulasi" component={AddRegulasi} exact />
+          <PrivateRoute path="/add/regulasi/:id" component={AddRegulasi} exact />
           <PrivateRoute
             path="/tambah-jenis-regulasi"
             component={AddJenisRegulasi}
@@ -297,7 +305,7 @@ function App() {
             exact
           />
           <PrivateRoute
-            path="/add-menu-regulasi"
+            path="/add/menu-regulasi/:id"
             component={AddMenuRegulasi}
             exact
           />
@@ -335,20 +343,7 @@ function App() {
             exact
           />
           {/* admin informasi */}
-
-          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
-          <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
-          <Route
-            path="/admin-berkala-kepemiluan"
-            component={AdminBerkalaKepemiluan}
-            exact
-          />
-          <Route
-            path="/admin-berkala-kelembagaan"
-            component={AdminBerkalaKelembagaan}
-            exact
-          />
-          <Route path="/admin-kanal" component={AdminKanal} exact />
+          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact /> */}
 
           <Route
             path="/admin-informasi/:namaInformasi/:id"
@@ -367,7 +362,7 @@ function App() {
             exact
           />
           <Route
-            path="/tambah-jenis-keterangan"
+            path="/tambah/jenis-keterangan/:id"
             component={AddJenisKeterangan}
             exact
           />
@@ -382,7 +377,7 @@ function App() {
             exact
           />
           <Route
-            path="/add-isi-keterangan"
+            path="/add/isi-keterangan/:id"
             component={AddIsiKeteranganInformasii}
             exact
           />

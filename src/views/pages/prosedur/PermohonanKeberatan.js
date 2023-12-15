@@ -3,6 +3,7 @@ import keberatan from "../../../aset/Partnership-rafiki.png"
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import "../../../css/gabung.css"
+import "../../../css/style.css"
 function PermohonanKeberatan() {
   return (
     //  how it work area start
@@ -88,11 +89,11 @@ function PermohonanKeberatan() {
               />
             </div>
           </div>
-          <div className="col-lg-5 align-self-center keteranga-paddingn">
+          <div id="padding-keberatan" className="col-lg-5 align-self-center keteranga-paddingn">
             <div className="section-title">
             </div>
-            <div className="single-security-wrap-2 keterangan-padding">
-              <div className="thumb border-bottom">
+            <div id="corn" className="single-security-wrap-2 keterangan-padding">
+              <div   className="thumb border-bottom">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-3.webp"
                   alt="img"
@@ -118,8 +119,8 @@ function PermohonanKeberatan() {
                 </p>
               </div>
             </div> */}
-            <div className="single-security-wrap-2 keterangan-padding">
-              <div className="thumb">
+            <div id="corn" className="single-security-wrap-2 keterangan-padding">
+              <div   className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-5.webp"
                   alt="img"
