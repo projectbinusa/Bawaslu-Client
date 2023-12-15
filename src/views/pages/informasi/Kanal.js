@@ -13,13 +13,19 @@ import OrganisasiDanAdministrasi from "./tabs/SertaMerta/OrganisasiDanAdministra
 import Sosialisasi from "./tabs/SertaMerta/Sosialisasi";
 import PerselisihanHasilPemilu from "./tabs/SertaMerta/PerselisihanHasilPemilu";
 import Piagam from "./tabs/SertaMerta/Piagam";
+import Imbauan from "./tabs/Kanal/Imbauan";
+import Anggaran from "./tabs/Kanal/Anggaran";
+import PencegahanDanPenanganan from "./tabs/Kanal/PencegahanDanPenanganan";
+import SDMPengawasPemilu from "./tabs/Kanal/SDMPengawasPemilu";
+import HasilPengawasan from "./tabs/Kanal/HasilPengawasan";
+import SiaranPers from "./tabs/Kanal/SiaranPers";
+import Putusan from "./tabs/Kanal/Putusan";
 
 function Kanal() {
   return (
     <div>
       <Navbar />
 
-      {/* <!-- project area start --> */}
       <div
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
@@ -53,7 +59,7 @@ function Kanal() {
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Putusan Pelanggaran
+                        Imbauan
                       </span>
                     </a>
 
@@ -67,7 +73,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Sengketa Proses Pemilu
+                        Anggaran
                       </span>
                     </a>
 
@@ -81,7 +87,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Pemungutan Suara Ulang & Susulan
+                        Pencegahan & Penanganan
                       </span>
                     </a>
 
@@ -95,7 +101,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Organisasi dan Administrasi
+                        SDM Pengawas Pemilu
                       </span>
                     </a>
 
@@ -109,7 +115,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Perselisihan Hasil Pemilihan Umum
+                        Hasil Pengawasan
                       </span>
                     </a>
 
@@ -123,7 +129,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Sosialisasi
+                        Siaran Pers
                       </span>
                     </a>
 
@@ -137,7 +143,7 @@ function Kanal() {
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Piagam Penghargaan
+                        Putusan
                       </span>
                     </a>
                   </div>
@@ -158,7 +164,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-home-tab"
                     >
-                      <PutusanPelanggaran />
+                      <Imbauan />
                     </div>
 
                     <div
@@ -167,7 +173,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
                     >
-                      <SengketaProsesPemilu />
+                      <Anggaran />
                     </div>
 
                     <div
@@ -176,7 +182,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
-                      <PemungutanSuaraUlang />
+                      <PencegahanDanPenanganan />
                     </div>
 
                     <div
@@ -185,7 +191,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <OrganisasiDanAdministrasi />
+                      <SDMPengawasPemilu />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -193,7 +199,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <PerselisihanHasilPemilu />
+                      <HasilPengawasan />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -201,7 +207,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <Sosialisasi />
+                      <SiaranPers />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-5"
@@ -209,7 +215,7 @@ function Kanal() {
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
                     >
-                      <Piagam />
+                      <Putusan />
                     </div>
                   </div>
                 </div>
