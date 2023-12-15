@@ -131,29 +131,45 @@ function App() {
             component={EditCategory}
             exact
           />
-                    <PrivateRoute path="/detail/berita/:id" component={DetailBerita} exact />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
           <Route
-            path="/daftar-regulasi/informasi%20berkala%20(kelembagaan)/5"
+            path="/informasi-berkala-kelembagaan"
             component={InformasiBerkalaKelembagaan}
             exact
           />
           {/* <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
           <Route
             path="/informasi-berkala-Kepemiluan"
-            component={InformasiBerkalaKepemiluan}            exact
+            component={InformasiBerkalaKepemiluan}
+            exact
           />
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
           <Route path="/informasi-kanal" component={Kanal} exact />
 
           {/* tambah dan ubah data informasi */}
           <Route
-            path="/tambah-isi-informasi"
-            component={AddIsiInformasi}
+            path="/tambah-informasi-serta-merta"
+            component={AddSertaMerta}
             exact
           />
+          <Route
+            path="/tambah-informasi-setiap-saat"
+            component={AddSetiapSaat}
+            exact
+          />
+          <Route
+            path="/tambah-informasi-berkala-kepemiluan"
+            component={AddBerkalaKepemiluan}
+            exact
+          />
+          <Route
+            path="/tambah-informasi-berkala-kelembagaaan"
+            component={AddBerkalaKelembagaan}
+            exact
+          />
+          <Route path="/tambah-informasi-kanal" component={AddKanal} exact />
           <Route
             path="/ubah-isi-informasi/:id"
             component={PutIsiInformasi}
@@ -215,7 +231,7 @@ function App() {
             component={AdminFormInformasi}
             exact
           />
-          <PrivateRoute path="/add/regulasi/:id" component={AddRegulasi} exact />
+          <PrivateRoute path="/add-regulasi" component={AddRegulasi} exact />
           <PrivateRoute
             path="/tambah-jenis-regulasi"
             component={AddJenisRegulasi}
@@ -281,7 +297,7 @@ function App() {
             exact
           />
           <PrivateRoute
-            path="/add/menu-regulasi/:id"
+            path="/add-menu-regulasi"
             component={AddMenuRegulasi}
             exact
           />
@@ -298,7 +314,7 @@ function App() {
           {/* <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact /> */}
           {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
           <Route
-            path="/detail/permohonan-informasi/:id"
+            path="/detail-permohonan-informasi/:id"
             component={DetailPermohonanInformasi}
             exact
           />
@@ -319,7 +335,20 @@ function App() {
             exact
           />
           {/* admin informasi */}
-          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact /> */}
+
+          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
+          <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
+          <Route
+            path="/admin-berkala-kepemiluan"
+            component={AdminBerkalaKepemiluan}
+            exact
+          />
+          <Route
+            path="/admin-berkala-kelembagaan"
+            component={AdminBerkalaKelembagaan}
+            exact
+          />
+          <Route path="/admin-kanal" component={AdminKanal} exact />
 
           <Route
             path="/admin-informasi/:namaInformasi/:id"
@@ -338,7 +367,7 @@ function App() {
             exact
           />
           <Route
-            path="/tambah/jenis-keterangan/:id"
+            path="/tambah-jenis-keterangan"
             component={AddJenisKeterangan}
             exact
           />
@@ -353,7 +382,7 @@ function App() {
             exact
           />
           <Route
-            path="/add/isi-keterangan/:id"
+            path="/add-isi-keterangan"
             component={AddIsiKeteranganInformasii}
             exact
           />
