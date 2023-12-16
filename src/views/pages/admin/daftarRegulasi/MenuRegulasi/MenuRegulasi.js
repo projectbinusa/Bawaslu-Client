@@ -171,7 +171,7 @@ function MenuRegulasi() {
               </div>
             </div>
             <div className="table-responsive" style={{ maxHeight: "60vh" }}>
-            <table className="align-middle mb-0 table table-bordere table-striped table-hover" style={{ border: 'none' }}>
+            <table className="align-middle mb-0 table  table-striped table-hover" >
                 <thead>
                   <tr>
                     <th scope="col" className="text-center">
@@ -193,7 +193,7 @@ function MenuRegulasi() {
       <td className="text-center">
         <button
           type="button"
-          className="btn btn-xs btn-primary mr-2"
+          className="btn-primary btn-sm mr-2"
         >
           <a
             style={{
@@ -208,22 +208,19 @@ function MenuRegulasi() {
         <button
           onClick={() => deleteData(jenis.id)}
           type="button"
-          className="btn btn-xs btn-danger mr-2"
+          className="btn-danger mr-2 btn-sm"
         >
           <i className="fa-solid fa-trash"></i>
         </button>
         <button
           type="button"
-          className="btn btn-xs btn-info"
+          className="btn-warning  mr-2 btn-sm"
         >
           <a
-            style={{
-              color: "white",
-              textDecoration: "none",
-            }}
+            className="text-light"
             href={`/${jenis.menuRegulasi}/${jenis.id}`}
           >
-            <i className="fas fa-plus"></i>
+            <i className="fas fa-info-circle"></i>
           </a>
         </button>
       </td>

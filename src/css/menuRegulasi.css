@@ -12,6 +12,8 @@ table tbody td .aksi {
 #table-padding{
   margin-top: 520px;
 }
+
+
 @media (max-width: 390px) {
   /* Center the search input */
   .form-control.widget-content-right {
