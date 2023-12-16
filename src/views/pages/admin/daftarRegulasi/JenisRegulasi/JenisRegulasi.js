@@ -116,13 +116,13 @@ function JenisRegulasi() {
               </select>
             </div>
             <div className="search">
-            <input
-              type="search"
-              className="form-control mb-2 widget-content-right"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-            />
+              <input
+                type="search"
+                className="form-control mb-2 widget-content-right"
+                placeholder="Search..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+              />
             </div>
             <br />
           </div>
@@ -170,10 +170,7 @@ function JenisRegulasi() {
                 </div>
               </div>
             </div>
-            <div
-              class=""
-              style={{ overflowY: "auto", maxHeight: "60vh" }}
-            >
+            <div class="" style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>

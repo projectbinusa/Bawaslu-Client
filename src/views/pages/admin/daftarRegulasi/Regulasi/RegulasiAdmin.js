@@ -115,18 +115,18 @@ function MenuRegulasi() {
             </div>
           </div>
           <div className="search">
-          <input
-            type="search"
-            className="form-control widget-content-right container mt-2 md-2 d-lg-none d-md-block"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-            style={{ width: "330px" }}
-          />
+            <input
+              type="search"
+              className="form-control widget-content-right container mt-2 md-2 d-lg-none d-md-block"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+              style={{ width: "330px" }}
+            />
           </div>
           <div class="main-card mb-3 card box-tabel">
             <div className="card-header" style={{ display: "flex" }}>
-            {regulasi.length > 0 && regulasi[0].menuRegulasi.menuRegulasi}
+              {Regulasi.length > 0 && Regulasi[0].menuRegulasi.menuRegulasi}
 
               <p className="mt-3"></p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
@@ -137,7 +137,8 @@ function MenuRegulasi() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -158,7 +159,8 @@ function MenuRegulasi() {
                       <a
                         href={"/add/regulasi/" + param.id}
                         className="text-light"
-                        style={{ textDecoration: "none" }}>
+                        style={{ textDecoration: "none" }}
+                      >
                         {" "}
                         Tambah Data
                       </a>
@@ -169,7 +171,8 @@ function MenuRegulasi() {
             </div>
             <div
               class="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
@@ -186,79 +189,76 @@ function MenuRegulasi() {
                       Aksi
                     </th>
                   </tr>
-                    </thead>
-                    <tbody>
-                      {filteredList.map((jenis, index) => {
-                        return (
-                          <tr key={index}>
-                            <td data-label="No : " className="">
-                              {index + 1}
-                            </td>
-                            <td data-label="jenis : " className="">
-                              {jenis.menuRegulasi}
-                            </td>
-                            <td data-label="Aksi : " className="text-center">
-                              <button
-                                type="button"
-                                className="btn-primary btn-sm mr-2"
-                              >
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={
-                                    "/edit-data/" +
-                                    jenis.menuRegulasi +
-                                    "/" +
-                                    jenis.id
-                                  }
-                                >
-                                  <i className="fa-solid fa-pen-to-square"></i>
-                                </a>
-                              </button>
-                              <button
-                                onClick={() => deleteData(jenis.id)}
-                                type="button"
-                                className="btn-danger btn-sm mr-2"
-                              >
-                                <i className="fa-solid fa-trash"></i>
-                              </button>
-                              <button type="button" className="btn-info btn-sm">
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={
-                                    "/" + jenis.menuRegulasi + "/" + jenis.id
-                                  }
-                                >
-                                  <i className="fas fa-plus"></i>
-                                </a>
-                              </button>
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
-                  <div className="card-header mt-3 d-flex justify-content-center">
-                    <Pagination
-                      count={paginationInfo.totalPages}
-                      page={currentPage}
-                      onChange={(event, value) => setCurrentPage(value)}
-                      showFirstButton
-                      showLastButton
-                      color="primary"
-                    />
-                  </div>
-                </div>
-
+                </thead>
+                <tbody>
+                  {filteredList.map((jenis, index) => {
+                    return (
+                      <tr key={index}>
+                        <td data-label="No : " className="">
+                          {index + 1}
+                        </td>
+                        <td data-label="jenis : " className="">
+                          {jenis.menuRegulasi}
+                        </td>
+                        <td data-label="Aksi : " className="text-center">
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2"
+                          >
+                            <a
+                              style={{
+                                color: "white",
+                                textDecoration: "none",
+                              }}
+                              href={
+                                "/edit-data/" +
+                                jenis.menuRegulasi +
+                                "/" +
+                                jenis.id
+                              }
+                            >
+                              <i className="fa-solid fa-pen-to-square"></i>
+                            </a>
+                          </button>
+                          <button
+                            onClick={() => deleteData(jenis.id)}
+                            type="button"
+                            className="btn-danger btn-sm mr-2"
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
+                          <button type="button" className="btn-info btn-sm">
+                            <a
+                              style={{
+                                color: "white",
+                                textDecoration: "none",
+                              }}
+                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}
+                            >
+                              <i className="fas fa-plus"></i>
+                            </a>
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+              <div className="card-header mt-3 d-flex justify-content-center">
+                <Pagination
+                  count={paginationInfo.totalPages}
+                  page={currentPage}
+                  onChange={(event, value) => setCurrentPage(value)}
+                  showFirstButton
+                  showLastButton
+                  color="primary"
+                />
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
   );
 }
 
