@@ -308,7 +308,9 @@ function Home() {
                       <div className="single-work-inner style-four text-center">
                         <div className="count-wrap pb-2">
                           <div className="count-inner">
-                            <h2>01</h2>
+                            <a href="/form-permohonan-informasi">
+                              <h2>01</h2>
+                            </a>
                           </div>
                         </div>
                         <div className="details-wrap">
@@ -322,12 +324,14 @@ function Home() {
                       <div className="single-work-inner style-four text-center">
                         <div className="count-wrap pb-2">
                           <div className="count-inner">
-                            <h2>02</h2>
+                            <a href="/form-permohonan-keberatan">
+                              <h2>02</h2>
+                            </a>
                           </div>
                         </div>
                         <div className="details-wrap">
                           <div className="details-inner">
-                            <h4>Formulir Kebebasan Komunikasi</h4>
+                            <h4>Formulir Permohonan Keberatan</h4>
                           </div>
                         </div>
                       </div>
@@ -338,9 +342,9 @@ function Home() {
             </div>
 
             <div className="row justify-content-center">
-              <div className="col-lg-3 col-md-6" >
-                <div className="single-service-inner text-center"style={{height: "350px"}}>
-                  <div className="details">
+              <div className="col-lg-3 col-md-6">
+                <div id="barito" className="single-service-inner text-center">
+                  <div id="" className="details">
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
@@ -348,6 +352,7 @@ function Home() {
                     />
                     <h3>Informasi Berkala</h3>
                   </div>
+                  <a href="/informasi-berkala">
                   <div className="details-hover-wrap">
                     <div className="details-hover">
                       <img
@@ -358,10 +363,12 @@ function Home() {
                       <h3>Informasi Berkala</h3>
                     </div>
                   </div>
+                  </a>
+                 
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <div className="single-service-inner text-center"style={{height: "350px"}}>
+                <div id="barito" className="single-service-inner text-center">
                   <div className="details">
                     <img
                       className="d-block w-100"
@@ -370,20 +377,22 @@ function Home() {
                     />
                     <h3>Informasi Setiap Saat</h3>
                   </div>
-                  <div className="details-hover-wrap">
-                    <div className="details-hover">
-                      <img
-                        className="d-block w-100"
-                        src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                        alt="Second slide"
-                      />
-                      <h3>Informasi Setiap Saat</h3>
+                  <a href="/informasi-setiap-saat">
+                    <div className="details-hover-wrap">
+                      <div className="details-hover">
+                        <img
+                          className="d-block w-100"
+                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                          alt="Second slide"
+                        />
+                        <h3>Informasi Setiap Saat</h3>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <div className="single-service-inner text-center"style={{height: "350px"}}>
+                <div id="barito" className="single-service-inner text-center">
                   <div className="details">
                     <img
                       className="d-block w-100"
@@ -392,20 +401,22 @@ function Home() {
                     />
                     <h3>Informasi Serta Merta</h3>
                   </div>
-                  <div className="details-hover-wrap">
-                    <div className="details-hover">
-                      <img
-                        className="d-block w-100"
-                        src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                        alt="Second slide"
-                      />
-                      <h3>Informasi Serta Merta</h3>
+                  <a href="/informasi-serta-merta">
+                    <div className="details-hover-wrap">
+                      <div className="details-hover">
+                        <img
+                          className="d-block w-100"
+                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                          alt="Second slide"
+                        />
+                        <h3>Informasi Serta Merta</h3>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <div className="single-service-inner text-center"style={{height: "350px"}}>
+                <div id="barito" className="single-service-inner text-center">
                   <div className="details">
                     <img
                       className="d-block w-100"
@@ -414,16 +425,18 @@ function Home() {
                     />
                     <h3>Infromasi Di Kecualikan</h3>
                   </div>
-                  <div className="details-hover-wrap">
-                    <div className="details-hover">
-                      <img
-                        className="d-block w-100"
-                        src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                        alt="Second slide"
-                      />
-                      <h3>Infromasi Di Kecualikan</h3>
+                  <a href="/informasi-dikecuali">
+                    <div className="details-hover-wrap">
+                      <div className="details-hover">
+                        <img
+                          className="d-block w-100"
+                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                          alt="Second slide"
+                        />
+                        <h3>Infromasi Di Kecualikan</h3>
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

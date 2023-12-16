@@ -1,0 +1,12 @@
+@media  (max-width: 390px) {
+    .container {
+        padding-left: 15px; /* Adjust the left padding as needed */
+        padding-right: 15px; /* Adjust the right padding as needed */
+        margin-left: 15px;
+        margin-right: 100px;
+      }
+      #container-admin{
+        margin-right: 20px;
+        padding-left: 100px;
+      }
+}

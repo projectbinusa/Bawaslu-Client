@@ -3,4 +3,26 @@
   .single-service-inner {
    height: 230px;
   }
+  #barito{
+    height: 350px;
+  }
+
+  @media (max-width: 390px) {
+    .single-service-inner {
+      height: 450px; /* Adjust the height for smaller screens */
+    }
+    #barito{
+      height: 400px;
+    }
+    
+  }
+  @media (max-width: 768px) {
+    .single-service-inner {
+      height: 450px; /* Adjust the height for smaller screens */
+    }
+    #barito{
+      height: 400px;
+    }
+    
+  }
 
