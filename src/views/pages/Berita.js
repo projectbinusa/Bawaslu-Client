@@ -5,7 +5,6 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
-
 import {
   FacebookShareButton,
   PinterestShareButton,
@@ -14,7 +13,6 @@ import {
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import "../../css/berita.css";
-import Swiper from "swiper";
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -167,156 +165,46 @@ function Berita() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div id="carouselExampleDark" class="carousel carousel-dark slide">
-        <div
-          class="carousel-indicators"
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.7)",
-            border: "1px solid #fff",
-          }}
-        >
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="4"
-            aria-label="Slide 5"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          {listTerbaru.map((cta, index) => {
-            return(
-
-           
-          <div class="carousel-item active" data-bs-interval="10000">
-            <div className="pmbngks-img-caraousel">
-              <img
-                id="img-berita-carousel"
-                src={cta.image}
-                class="d-block"
-                alt="Berita1"
-              />
-              <div
-                style={{ borderRadius: "0px" }}
-                class="carousel-caption  d-md-block"
-              >
-                <h1 style={{ color: "white", fontWeight: "bold" }}>{cta.judulBerita}</h1>
-                <p style={{ color: "white", fontWeight: "bold" }}>
-                 {cta.isiBerita}
-                </p>
-              </div>
-            </div>
-          </div>
-           )
-          })}
-          {listTerbaru.map((cta, index) => {
-            return (
-              <div class="carousel-item" data-bs-interval="2000">
-                <img
-                  id="img-berita-carousel"
-                  src={cta.image}
-                  class="d-block"
-                  alt="Berita2"
-                />
-                <div class="carousel-caption d-md-block">
-                  <h1 style={{ color: "white", fontWeight: "bold" }}>
-                    {cta.judulBerita}
-                  </h1>
-                  <p style={{ color: "white", fontWeight: "bold" }}>
-                    {cta.isiBerita}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-          {listTerbaru.map((cta,index) => {
-            return(
-
-           
-          <div class="carousel-item">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner padding-img">
+          <div class="carousel-item active">
             <img
-              id="img-berita-carousel"
-              src={cta.image}
-              class="d-block"
-              alt="Berita3"
+            id="img-carousel"
+              src="https://www.bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/WhatsApp%20Image%202018-12-10%20at%2012.18.18.jpeg?itok=bKIRR9lh"
+              class="d-block img-fluid"
+              alt="..."
             />
             <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white", fontWeight: "bold" }}>{cta.judulBerita}</h1>
+              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
               <p style={{ color: "white", fontWeight: "bold" }}>
-                {" "}
-                {cta.isiBerita}
-              </p>
-            </div>
-          </div>
-           )
-          })}
-
-          <div class="carousel-item">
-            <img
-              id="img-berita-carousel"
-              src="https://i0.wp.com/sampit.id/wp-content/uploads/2023/11/apel-siaga-bawaslu-boyolali-jpg.webp?fit=800%2C450&ssl=1"
-              class="d-block"
-              alt="Berita4"
-            />
-            <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white", fontWeight: "bold" }}>
-                PENANGANAN PELANGGARAN
-              </h1>
-              <p style={{ color: "white", fontWeight: "bold" }}>
-                Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa:
-                pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran
-                administrasi Pemilu; dan/atau; tindak pidana ...
+                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
+                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
+                mendatang. Komisi Pemilihan Umum... Read ...
               </p>
             </div>
           </div>
           <div class="carousel-item">
             <img
-              id="img-berita-carousel"
-              src="https://halosemarang.id/wp-content/uploads/2022/09/0e39dae6.jpg"
-              class="d-block"
-              alt="Berita5"
+                        id="img-carousel"
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-thegem-blog-default.jpg"
+              class="d-blockimg-fluid"
+              alt="..."
             />
-            <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white", fontWeight: "bold" }}>
-                OSDM & DIKLAT
-              </h1>
+            <div class="carousel-caption d-md-block">
+              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
               <p style={{ color: "white", fontWeight: "bold" }}>
-                Membangun aparatur dan kelembagaan pengawas pemilu yang kuat,
-                mandiri dan solid;; Mengembangkan pola dan metode pengawasan
-                yang efektif dan efisien;; Memperkuat ...
+                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
+                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
+                mendatang. Komisi Pemilihan Umum... Read ...
               </p>
             </div>
           </div>
+         
         </div>
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExampleFade"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -325,13 +213,14 @@ function Berita() {
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleDark"
+          data-bs-target="#carouselExampleFade"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+  
 
       <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
