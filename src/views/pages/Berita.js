@@ -5,6 +5,7 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
+
 import {
   FacebookShareButton,
   PinterestShareButton,
@@ -13,6 +14,7 @@ import {
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import "../../css/berita.css";
+import Swiper from "swiper";
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -207,11 +209,15 @@ function Berita() {
           ></button>
         </div>
         <div class="carousel-inner">
+          {listTerbaru.map((cta, index) => {
+            return(
+
+           
           <div class="carousel-item active" data-bs-interval="10000">
             <div className="pmbngks-img-caraousel">
               <img
                 id="img-berita-carousel"
-                src="https://i1.wp.com/www.fokusjateng.com/wp-content/uploads/2018/10/bawaslu.jpg?fit=432%2C289&ssl=1"
+                src={cta.image}
                 class="d-block"
                 alt="Berita1"
               />
@@ -219,48 +225,57 @@ function Berita() {
                 style={{ borderRadius: "0px" }}
                 class="carousel-caption  d-md-block"
               >
-                <h1 style={{ color: "white", fontWeight: "bold" }}>BERITA</h1>
+                <h1 style={{ color: "white", fontWeight: "bold" }}>{cta.judulBerita}</h1>
                 <p style={{ color: "white", fontWeight: "bold" }}>
-                  Hasil penelusuran Bawaslu Boyolali menyatakan Kades Jerukan,
-                  Juwangi, melanggar netralitas kades dalam pemilu karena
-                  mengarahkan warganya ...
+                 {cta.isiBerita}
                 </p>
               </div>
             </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              id="img-berita-carousel"
-              src="https://www.bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/WhatsApp%20Image%202018-12-10%20at%2012.18.18.jpeg?itok=bKIRR9lh"
-              class="d-block"
-              alt="Berita2"
-            />
-            <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
-              <p style={{ color: "white", fontWeight: "bold" }}>
-                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
-                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
-                mendatang. Komisi Pemilihan Umum... Read ...
-              </p>
-            </div>
-          </div>
+           )
+          })}
+          {listTerbaru.map((cta, index) => {
+            return (
+              <div class="carousel-item" data-bs-interval="2000">
+                <img
+                  id="img-berita-carousel"
+                  src={cta.image}
+                  class="d-block"
+                  alt="Berita2"
+                />
+                <div class="carousel-caption d-md-block">
+                  <h1 style={{ color: "white", fontWeight: "bold" }}>
+                    {cta.judulBerita}
+                  </h1>
+                  <p style={{ color: "white", fontWeight: "bold" }}>
+                    {cta.isiBerita}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+          {listTerbaru.map((cta,index) => {
+            return(
+
+           
           <div class="carousel-item">
             <img
               id="img-berita-carousel"
-              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-thegem-blog-default.jpg"
+              src={cta.image}
               class="d-block"
               alt="Berita3"
             />
             <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white", fontWeight: "bold" }}>PENCEGAHAN</h1>
+              <h1 style={{ color: "white", fontWeight: "bold" }}>{cta.judulBerita}</h1>
               <p style={{ color: "white", fontWeight: "bold" }}>
                 {" "}
-                BOYOLALI – Seiring dengan tahapan Kampanye Pemilihan umum Tahun
-                2019 yang akan segara berlangsung, Bawaslu Kabupaten Boyolali
-                memberikan ...
+                {cta.isiBerita}
               </p>
             </div>
           </div>
+           )
+          })}
+
           <div class="carousel-item">
             <img
               id="img-berita-carousel"
