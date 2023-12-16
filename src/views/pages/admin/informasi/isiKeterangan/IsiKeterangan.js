@@ -126,12 +126,12 @@ function IsiKeterangan() {
               </select>
             </div>
             <input
-                  type="search"
-                  className="form-control widget-content-right w-100 mb-2"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
+              type="search"
+              className="form-control widget-content-right w-100 mb-2"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
           </div>
           <div className="main-card mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
