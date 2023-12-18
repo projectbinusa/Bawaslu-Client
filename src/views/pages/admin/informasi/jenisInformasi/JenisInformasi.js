@@ -100,14 +100,14 @@ function JenisInformasi() {
             </div>
           </div>
           <div className="search">
-          <input
-                  type="search"
-                  className="form-control widget-content-right mt-3 mb-3 d-lg-none d-block"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
-                </div>
+            <input
+              type="search"
+              className="form-control widget-content-right mt-3 mb-3 d-lg-none d-block"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
+          </div>
           <div className="main-card box-tabel mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
               <p className="mt-3">Jenis Informasi</p>
@@ -136,10 +136,7 @@ function JenisInformasi() {
                   onChange={handleSearchChange}
                 />
                 <div className="btn-actions-pane-right">
-                  <div
-                    role="group"
-                    className="btn-group-sm btn-group"
-                  >
+                  <div role="group" className="btn-group-sm btn-group">
                     <button className="active btn-focus p-2 rounded">
                       <a
                         href="/tambah-jenis-informasi"
@@ -156,7 +153,7 @@ function JenisInformasi() {
             </div>
             <div
               className="table-responsive"
-              style={{ overflowY: "auto", maxHeight: "60vh", minWidth:"100%" }}
+              style={{ overflowY: "auto", maxHeight: "60vh", minWidth: "100%" }}
             >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
@@ -169,25 +166,32 @@ function JenisInformasi() {
                 <tbody>
                   {filteredList.map((jenis, index) => (
                     <tr key={index}>
-                      <td data-label="No" className="">{ index + 1}</td>
-                      <td data-label="Jenis Informasi" className="">{jenis.namaInformasi}</td>
+                      <td data-label="No" className="">
+                        {index + 1}
+                      </td>
+                      <td data-label="Jenis Informasi" className="">
+                        {jenis.namaInformasi}
+                      </td>
                       <td data-label="Aksi" className="text-center">
                         <div className="aksi">
-                        <button type="button" className="btn-primary btn-sm mr-2">
-                          <a
-                            style={{ color: "white", textDecoration: "none" }}
-                            href={`/edit-jenis-informasi/${jenis.namaInformasi}/${jenis.id}`}
+                          <button
+                            type="button"
+                            className="btn-primary btn-sm mr-2"
                           >
-                            <i className="fa-solid fa-pen-to-square"></i>
-                          </a>
-                        </button>
-                        <button
-                          onClick={() => deleteData(jenis.id)}
-                          type="button"
-                          className="btn-danger btn-sm mr-2"
-                        >
-                          <i className="fa-solid fa-trash"></i>
-                        </button>
+                            <a
+                              style={{ color: "white", textDecoration: "none" }}
+                              href={`/edit-jenis-informasi/${jenis.namaInformasi}/${jenis.id}`}
+                            >
+                              <i className="fa-solid fa-pen-to-square"></i>
+                            </a>
+                          </button>
+                          <button
+                            onClick={() => deleteData(jenis.id)}
+                            type="button"
+                            className="btn-danger btn-sm mr-2"
+                          >
+                            <i className="fa-solid fa-trash"></i>
+                          </button>
                         </div>
                       </td>
                     </tr>

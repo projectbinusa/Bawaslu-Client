@@ -216,7 +216,8 @@ function AdminBerita() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -244,7 +245,8 @@ function AdminBerita() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}>
+                    value={rowsPerPage}
+                  >
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -264,7 +266,8 @@ function AdminBerita() {
                     <button className="active btn-focus p-2 rounded">
                       <a
                         style={{ color: "white", textDecoration: "none" }}
-                        href="/add-berita-admin">
+                        href="/add-berita-admin"
+                      >
                         Tambah Berita
                       </a>
                     </button>
@@ -274,13 +277,12 @@ function AdminBerita() {
             </div>
             <div
               className="table-responsive-3"
-              style={{ overflowX: "auto", maxWidth: "100%" }}>
+              style={{ overflowX: "auto", maxWidth: "100%" }}
+            >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">
-                      No
-                    </th>
+                    <th scope="col">No</th>
                     <th scope="col" className="text-long">
                       Judul Berita
                     </th>
@@ -290,7 +292,8 @@ function AdminBerita() {
                     <th
                       scope="col"
                       className="text-left"
-                      style={{ minWidth: "150px" }}>
+                      style={{ minWidth: "150px" }}
+                    >
                       Penulis Berita
                     </th>
                     <th scope="col" className="text-left">
@@ -326,13 +329,15 @@ function AdminBerita() {
                           <div className="aksi">
                             <button
                               type="button"
-                              className="btn-primary btn-sm mr-2">
+                              className="btn-primary btn-sm mr-2"
+                            >
                               <a
                                 style={{
                                   color: "white",
                                   textDecoration: "none",
                                 }}
-                                href={`/edit-berita-admin/${berita.id}`}>
+                                href={`/edit-berita-admin/${berita.id}`}
+                              >
                                 {" "}
                                 <i className="fa-solid fa-pen-to-square"></i>
                               </a>
@@ -366,7 +371,8 @@ function AdminBerita() {
                             <button
                               onClick={() => deleteData(berita.id)}
                               type="button"
-                              className="btn-danger btn-sm">
+                              className="btn-danger btn-sm"
+                            >
                               <i className="fa-solid fa-trash"></i>
                             </button>
                           </div>
@@ -408,13 +414,13 @@ function AdminBerita() {
             </div>
           </div>
           <div className="search">
-          <input
-            type="search"
-            className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
-            placeholder="Search..."
-            value={searchTerm1}
-            onChange={handleSearchChange1}
-          />
+            <input
+              type="search"
+              className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
+              placeholder="Search..."
+              value={searchTerm1}
+              onChange={handleSearchChange1}
+            />
           </div>
           <div className="mb-3 card box-tabel">
             <div
@@ -452,7 +458,8 @@ function AdminBerita() {
                     <button className="active btn-focus p-2 rounded">
                       <a
                         style={{ color: "white", textDecoration: "none" }}
-                        href="/tambah-category-berita">
+                        href="/tambah-category-berita"
+                      >
                         Tambah Data
                       </a>
                     </button>
@@ -462,7 +469,8 @@ function AdminBerita() {
             </div>
             <div
               className="table-responsive-3"
-              style={{ overflowY: "auto", maxHeight: "60vh" }}>
+              style={{ overflowY: "auto", maxHeight: "60vh" }}
+            >
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
@@ -485,22 +493,28 @@ function AdminBerita() {
                         </td>
                         <td data-label="Aksi">
                           <div className="aksi">
-                          <button
-                            type="button"
-                            className="btn-primary btn-sm mr-2">
-                            <a
-                              style={{ color: "white", textDecoration: "none" }}
-                              href={`/edit-category-berita/${kategory.id}`}>
-                              {" "}
-                              <i className="fa-solid fa-pen-to-square"></i>
-                            </a>
-                          </button>
-                          <button
-                            onClick={() => deleteData1(kategory.id)}
-                            type="button"
-                            className="btn-danger btn-sm">
-                            <i className="fa-solid fa-trash"></i>
-                          </button>
+                            <button
+                              type="button"
+                              className="btn-primary btn-sm mr-2"
+                            >
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/edit-category-berita/${kategory.id}`}
+                              >
+                                {" "}
+                                <i className="fa-solid fa-pen-to-square"></i>
+                              </a>
+                            </button>
+                            <button
+                              onClick={() => deleteData1(kategory.id)}
+                              type="button"
+                              className="btn-danger btn-sm"
+                            >
+                              <i className="fa-solid fa-trash"></i>
+                            </button>
                           </div>
                         </td>
                       </tr>

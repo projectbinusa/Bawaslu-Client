@@ -5,6 +5,7 @@ import { Pagination, TableContainer } from "@mui/material";
 import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import Swal from "sweetalert2";
 
 function AdminBerkalaKelembagaan() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -19,7 +20,7 @@ function AdminBerkalaKelembagaan() {
   const getById = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/all?direction=asc&page=0&size=10&sort=id`,
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/22/isi-informasi?page=0&size=100&sortBy=id&sortOrder=asc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -106,6 +107,37 @@ function AdminBerkalaKelembagaan() {
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
     fetchData(selectedValue, value, searchTerm);
+  };
+
+  const deleteData = async (id) => {
+    Swal.fire({
+      title: "Anda Ingin Menghapus Data ?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Delete",
+      cancelButtonText: "Cencel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axios.delete(
+          `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + id,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          }
+        );
+        Swal.fire({
+          icon: "success",
+          title: "Dihapus!",
+          showConfirmButton: false,
+        });
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 1500);
+    });
   };
 
   const handleSearchChange = (event) => {
@@ -213,6 +245,7 @@ function AdminBerkalaKelembagaan() {
                               </button>
                               <button
                                 type="button"
+                                onClick={() => deleteData(inf.id)}
                                 className="mr-2 btn-danger btn-sm"
                               >
                                 <i className="fa-solid fa-trash"></i>

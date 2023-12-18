@@ -32,13 +32,17 @@ function InformasiBerkala() {
         >
           <div className="container p-5 text-center">
             <h1 className="text-center p-5">Informasi Berkala</h1>
-            <div className="row justify-content-center align-items-center">
+            <div  className="row justify-content-center align-items-center">
               <a
                 id="btn1"
                 className="col-5 btn btn-primary text-center d-flex align-items-center px-2"
                 href="/informasi-berkala-kepemiluan"
               >
+<<<<<<< HEAD
                 <span className="mx-auto">Kepemiluan</span>
+=======
+                <span className="mx-auto kelembagaan-btn">Kepemiluan</span>
+>>>>>>> 4ab8908ae2c907a8e9ccdfdea34f0ae746c80bfb
               </a>
               <div className="col-2 text-center text-white"></div>
               <a

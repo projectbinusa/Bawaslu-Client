@@ -12,7 +12,7 @@ import {
 } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-import "../../css/berita.css"
+import "../../css/berita.css";
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -51,9 +51,9 @@ function Berita() {
   const getCategoryBerita = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
+        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=desc&page=0&size=40&sort=createdDate`
       );
-      setCategory(response.data.data);
+      setCategory(response.data.data.content);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -164,141 +164,57 @@ function Berita() {
   return (
     <>
       <Navbar />
-      {/* <!-- page title start --> */}
-      <div id="carouselExampleDark" class="carousel carousel-dark slide">
-        <div class="carousel-indicators" style={{backgroundColor:"white", border:"1px solid #fff"}}>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="3"
-            aria-label="Slide 4"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to="4"
-            aria-label="Slide 5"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img
-              src="https://www.inilah.com/_next/image?url=https%3A%2F%2Fc.inilah.com%2Freborn%2F2023%2F11%2FIMG_20231125_WA_0020_68c10d8068.jpg&w=1920&q=75"
-              class="d-block w-100"
-              alt="Berita1"
-            />
-            <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white" }}>Berita</h1>
-              <p style={{ color: "white" }}>
-                Hasil penelusuran Bawaslu Boyolali menyatakan Kades Jerukan,
-                Juwangi, melanggar netralitas kades dalam pemilu karena
-                mengarahkan warganya ...
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img
-              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-1024x576.jpg"
-              class="d-block w-100"
-              alt="Berita2"
-            />
-            <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white" }}>Kehumasan</h1>
-              <p style={{ color: "white" }}>
-                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
-                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
-                mendatang. Komisi Pemilihan Umum... Read ...
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://pangkep.bawaslu.go.id/wp-content/uploads/2023/09/IMG_5619.jpg"
-              class="d-block w-100"
-              alt="Berita3"
-            />
-            <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white" }}>Pencegahan</h1>
-              <p style={{ color: "white" }}>
-                {" "}
-                BOYOLALI – Seiring dengan tahapan Kampanye Pemilihan umum Tahun
-                2019 yang akan segara berlangsung, Bawaslu Kabupaten Boyolali
-                memberikan ...
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/IMG-20220616-WA0008.jpg?itok=AdgsjibP"
-              class="d-block w-100"
-              alt="Berita4"
-            />
-            <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white" }}>Penanganan Pelanggaran</h1>
-              <p style={{ color: "white" }}>
-                Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa:
-                pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran
-                administrasi Pemilu; dan/atau; tindak pidana ...
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://jateng.bawaslu.go.id/wp-content/uploads/2023/04/BENTUK-DARI-SARANA-MARKETING-BAWASLU-BOYOLALI-ADAKAN-PELATIHAN-PEMBUATAN-VIDEO-PELIPUTAN.jpeg"
-              class="d-block w-100"
-              alt="Berita5"
-            />
-            <div class="carousel-caption  d-md-block">
-              <h1 style={{ color: "white" }}>OSDM & Diklat</h1>
-              <p style={{ color: "white" }}>
-                Membangun aparatur dan kelembagaan pengawas pemilu yang kuat,
-                mandiri dan solid;; Mengembangkan pola dan metode pengawasan
-                yang efektif dan efisien;; Memperkuat ...
-              </p>
+      <div
+        class="editors-news container"
+        style={{ marginTop: "100px", marginBottom: "50px" }}>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="d-flex position-relative float-left">
+              <h3 class="section-title">Popular News</h3>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="row">
+          <div class="col-lg-6  mb-5 mb-sm-2">
+            <div class="position-relative image-hover">
+              <img
+                src={listTerbaru.length > 0 && listTerbaru[0].image}
+                class="img-fluid"
+                alt="world-news"
+              />
+              <span class="thumb-title">BERITA</span>
+            </div>
+            <h1 class="font-weight-600 mt-3">
+              {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
+            </h1>
+            <p class="fs-15 font-weight-normal isiBerita">
+              {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
+            </p>
+          </div>
+          <div class="col-lg-6  mb-5 mb-sm-2">
+            <div class="row">
+              {listTerbaru.slice(1, 5).map((berita) => {
+                return (
+                  <div class="col-sm-6  mb-5 mb-sm-2">
+                    <div class="position-relative image-hover">
+                      <img
+                        src={berita.image}
+                        class="img-fluid"
+                        alt="world-news"
+                      />
+                      <span class="thumb-title isiBerita">BERITA</span>
+                    </div>
+                    <p class="font-weight-600 mt-3">{berita.judulBerita}</p>
+                    <p class="fs-15 font-weight-normal isiBerita">
+                      {berita.isiBerita}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
-
-      <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">
@@ -312,23 +228,46 @@ function Berita() {
                       <span style={{ color: "blue" }}>Bawaslu Boyolali</span>
                     </strong>
                   </h4>
-                  <div className="widget-title row">
+                  <div
+                    class="banner-top-thumb-wrap"
+                    style={{
+                      overflowX: "auto",
+                      whiteSpace: "nowrap",
+                      scrollbarWidth: "thin",
+                      msOverflowStyle: "none",
+                      overflowY:"hidden" // Untuk IE
+                    }}>
+                    <div class="d-lg-flex gap-3 align-items-center">
+                      {category.map((categoryBerita) => {
+                        return (
+                      <div class="d-flex justify-content-between  mb-3 mb-lg-0">
+                        <p class="m-0 font-weight-bold">
+                        <a
+                            style={{ color: "black", textDecoration: "none", background:"#F1F6F9", padding:"7px", borderRadius:"20px", border:"1px solid blue", paddingTop:"5px" }}
+                            href={`category-berita/${categoryBerita.category}/${categoryBerita.id}`}>
+                            {categoryBerita.category}
+                          </a>
+                        </p>
+                      </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  {/* <div className="widget-title row">
                     {category.map((cta, index) => {
                       return (
                         <div className="col-4">
                           <a
                             style={{ color: "black", textDecoration: "none" }}
-                            href={`category-berita/${cta.category}/${cta.id}`}
-                          >
+                            href={`category-berita/${cta.category}/${cta.id}`}>
                             {cta.category}
                           </a>
                         </div>
                       );
                     })}
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <br />
               {/* <hr className="mt-0" /> */}
               {list.length > 0 ? (
                 list.map((berita) => {
@@ -345,19 +284,16 @@ function Berita() {
                                     url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
                                     media={berita.image}
                                     description={berita.judulBerita}
-                                    quote={berita.judulBerita}
-                                  >
+                                    quote={berita.judulBerita}>
                                     <button
                                       style={{
                                         color: "white",
                                         backgroundColor: "#45629f",
                                       }}
-                                      className="border p-2"
-                                    >
+                                      className="border p-2">
                                       <i
                                         className="fab fa-facebook-f"
-                                        aria-hidden="true"
-                                      ></i>{" "}
+                                        aria-hidden="true"></i>{" "}
                                       Facebook
                                     </button>
                                   </FacebookShareButton>
@@ -367,19 +303,16 @@ function Berita() {
                                     url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
                                     media={berita.image}
                                     description={berita.judulBerita}
-                                    quote={berita.judulBerita}
-                                  >
+                                    quote={berita.judulBerita}>
                                     <button
                                       style={{
                                         color: "white",
                                         backgroundColor: "#5eb2ef",
                                       }}
-                                      className="border p-2"
-                                    >
+                                      className="border p-2">
                                       <i
                                         className="fab fa-twitter"
-                                        aria-hidden="true"
-                                      ></i>{" "}
+                                        aria-hidden="true"></i>{" "}
                                       Twitter
                                     </button>
                                   </TwitterShareButton>
@@ -389,16 +322,14 @@ function Berita() {
                                     url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
                                     quote={berita.judulBerita}
                                     media={berita.image}
-                                    description={berita.judulBerita}
-                                  >
+                                    description={berita.judulBerita}>
                                     <button
                                       style={{
                                         color: "white",
                                         backgroundColor: "#cf2830",
                                         width: "80px",
                                       }}
-                                      className="border p-2"
-                                    >
+                                      className="border p-2">
                                       <i className="fa-brands fa-pinterest"></i>{" "}
                                       Pin
                                     </button>
@@ -419,8 +350,7 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a
-                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
-                          >
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}>
                             {berita.judulBerita}
                           </a>
                         </h2>
@@ -467,12 +397,10 @@ function Berita() {
                                     color: "white",
                                     backgroundColor: "#45629f",
                                   }}
-                                  className="border p-2"
-                                >
+                                  className="border p-2">
                                   <i
                                     class="fab fa-facebook-f"
-                                    aria-hidden="true"
-                                  ></i>{" "}
+                                    aria-hidden="true"></i>{" "}
                                   Facebook
                                 </button>
                               </a>
@@ -484,12 +412,10 @@ function Berita() {
                                     color: "white",
                                     backgroundColor: "#5eb2ef",
                                   }}
-                                  className="border p-2"
-                                >
+                                  className="border p-2">
                                   <i
                                     class="fab fa-twitter"
-                                    aria-hidden="true"
-                                  ></i>{" "}
+                                    aria-hidden="true"></i>{" "}
                                   Twitter
                                 </button>
                               </a>
@@ -501,8 +427,7 @@ function Berita() {
                                     color: "white",
                                     backgroundColor: "#cf2830",
                                   }}
-                                  className="border p-2"
-                                >
+                                  className="border p-2">
                                   <i class="fa-brands fa-pinterest"></i> Pin
                                 </button>
                               </a>
@@ -546,8 +471,7 @@ function Berita() {
                 <div class="td-sidebar">
                   <div
                     class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9", overflow: "hidden" }}
-                  >
+                    style={{ background: "#F1F6F9", overflow: "hidden" }}>
                     <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
                       {listTerbaru.map((beritaTerbaru) => {
@@ -564,8 +488,7 @@ function Berita() {
                               <div class="media-body align-self-center">
                                 <h6 class="title">
                                   <a
-                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}
-                                  >
+                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>
                                     {beritaTerbaru.judulBerita}
                                   </a>
                                 </h6>
@@ -588,8 +511,7 @@ function Berita() {
                   </div>
                   <div
                     class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}
-                  >
+                    style={{ background: "#F1F6F9" }}>
                     <h4 class="widget-title">Arsip</h4>
                     <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {
