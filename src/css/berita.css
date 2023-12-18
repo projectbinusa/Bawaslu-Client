@@ -13,7 +13,31 @@
 .img-berita-carousel{
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
 }
+ #carousel-item{
+  padding: 100px;
+  margin: 100px;
+ }
+ #carouselExampleCaptions {
+  margin: 100px;
+  margin-top: 120px; /* Sesuaikan nilai sesuai kebutuhan Anda */
+  margin-bottom: 20px; /* Sesuaikan nilai sesuai kebutuhan Anda */
+}
+@media (max-width: 768px) {
 
+  #carouselExampleCaptions{
+  margin: 50px;
+  padding-top: 100px;
+  margin-top: 50px; /* Sesuaikan nilai sesuai kebutuhan Anda */
+ }
+}
+@media (max-width: 390px) {
+
+  #carouselExampleCaptions{
+  margin: 20px;
+  padding-top: 100px;
+  margin-top: 50px; /* Sesuaikan nilai sesuai kebutuhan Anda */
+ }
+}
 /*
  * jQuery FlexSlider v2.7.1
  * http://www.woothemes.com/flexslider/

@@ -165,17 +165,83 @@ function Berita() {
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      <div id="carouselExampleFade" class="carousel slide carousel-fade">
-        <div class="carousel-inner padding-img">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-            id="img-carousel"
-              src="https://www.bawaslu.go.id/sites/default/files/styles/gambar_berita_besar/public/foto_berita/WhatsApp%20Image%202018-12-10%20at%2012.18.18.jpeg?itok=bKIRR9lh"
-              class="d-block img-fluid"
+              id="width-img-carousl"
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-thegem-blog-default.jpg"
+              class="d-block w-100"
               alt="..."
             />
-            <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>
+                PENANGANAN PELANGGARAN
+              </h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa:
+                pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran
+                administrasi Pemilu; dan/atau; tindak pidana ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2020/01/WhatsApp-Image-2020-01-23-at-10.22.53.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>BERITA</h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih Masa
+                Jabatan 2023-2028 Provinsi Jawa Tengah. Selengkapnya, silahkan
+                download pada link dibawah ini.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/Samakan-Persepsi-Bawaslu-Boyolali-Sambangi-Kapolres-thegem-blog-default.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>PENCEGAHAN</h3>
               <p style={{ color: "white", fontWeight: "bold" }}>
                 Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
                 Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
@@ -185,26 +251,41 @@ function Berita() {
           </div>
           <div class="carousel-item">
             <img
-                        id="img-carousel"
-              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-thegem-blog-default.jpg"
-              class="d-blockimg-fluid"
+              src="https://imgcdn.solopos.com/@space/2023/11/apel-siaga-bawaslu-boyolali.jpg"
+              class="d-block w-100"
               alt="..."
             />
-            <div class="carousel-caption d-md-block">
-              <h1 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h1>
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h3>
               <p style={{ color: "white", fontWeight: "bold" }}>
-                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
-                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
-                mendatang. Komisi Pemilihan Umum... Read ...
+                Boyolali – Badan ... Boyolali – Badan Pengawas Pemilihan Umum
+                (Bawaslu) Kabupaten Pati ikuti kegiatan Koordinasi dan
+                Sinkronisasi Program Kehumasan dengan ...
               </p>
             </div>
           </div>
-         
+          <div class="carousel-item">
+            <img
+              src="https://halosemarang.id/wp-content/uploads/2022/09/0e39dae6.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>
+                OSDM & DIKLAT
+              </h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                OSDM & Diklat. Artikel mengenai kegiatan divi Organisasi,
+                Sumberdaya Manusia, & Diklat. No Content Available.
+                TautanLembaga.
+              </p>
+            </div>
+          </div>
         </div>
         <button
           class="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleFade"
+          data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -213,14 +294,13 @@ function Berita() {
         <button
           class="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleFade"
+          data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-  
 
       <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
