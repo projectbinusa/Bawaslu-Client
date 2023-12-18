@@ -112,7 +112,8 @@ function Index() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}>
+                value={rowsPerPage}
+              >
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -130,7 +131,7 @@ function Index() {
           </div>
           <div class="main-card w-100 mb-3 card">
             <div className="card-header" style={{ display: "flex" }}>
-                {jenisInformasi.length > 0 && jenisInformasi[0].namaInformasi}
+              {jenisInformasi.length > 0 && jenisInformasi[0].namaInformasi}
               <div className="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div className="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
@@ -192,17 +193,20 @@ function Index() {
                         </td>
                         <td
                           data-label="Aksi : "
-                          className="pt-3 pb-3 aksi text-center">
+                          className="pt-3 pb-3 aksi text-center"
+                        >
                           <div className="d-flex justify-content-center">
                             <button
                               type="button"
-                              className=".responsive-buttons btn-primary btn-sm mr-2">
+                              className=".responsive-buttons btn-primary btn-sm mr-2"
+                            >
                               <a
                                 style={{
                                   color: "white",
                                   textDecoration: "none",
                                 }}
-                                href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}>
+                                href={`/edit-jenis/${inf.jenisKeteranganInformasiDTOList[0].keterangan}/${inf.jenisKeteranganInformasiDTOList[0].id}`}
+                              >
                                 <i className="fa-solid fa-pen-to-square"></i>
                               </a>
                             </button>
@@ -213,7 +217,8 @@ function Index() {
                                 deleteData(
                                   inf.jenisKeteranganInformasiDTOList[0].id
                                 )
-                              }>
+                              }
+                            >
                               <i className="fa-solid fa-trash"></i>
                             </button>
                             <button type="button" class="btn-info btn-sm">
@@ -228,7 +233,8 @@ function Index() {
                                     .keterangan +
                                   "/" +
                                   inf.jenisKeteranganInformasiDTOList[0].id
-                                }>
+                                }
+                              >
                                 <i class="fas fa-plus"></i>
                               </a>
                             </button>

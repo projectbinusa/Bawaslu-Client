@@ -41,6 +41,7 @@ function AdminPengumuman() {
     getAll(currentPage);
   }, [currentPage, rowsPerPage]);
 
+  //delete data
   const deleteData = async (id) => {
     Swal.fire({
       title: "Anda Ingin Menghapus Data ?",
@@ -113,13 +114,13 @@ function AdminPengumuman() {
             </div>
           </div>
           <div className="search">
-          <input
-            type="search"
-            className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
+            <input
+              type="search"
+              className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
           </div>
           <div className="main-card mb-3 card box-tabel">
             <div
@@ -185,8 +186,12 @@ function AdminPengumuman() {
                 >
                   <thead>
                     <tr>
-                      <th scope="col" className="nomor">No</th>
-                      <th scope="col" style={{minWidth:"150px"}}>Judul Pengumuman</th>
+                      <th scope="col" className="nomor">
+                        No
+                      </th>
+                      <th scope="col" style={{ minWidth: "150px" }}>
+                        Judul Pengumuman
+                      </th>
                       <th scope="col">Image</th>
                       <th scope="col">Isi Pengumuman</th>
                       <th scope="col">Penulis</th>
@@ -200,7 +205,9 @@ function AdminPengumuman() {
                     {filteredList.map((pengumuman, index) => {
                       return (
                         <tr key={index}>
-                          <td data-label="No : " className="nomor">{index + 1 + (currentPage - 1) * rowsPerPage}</td>
+                          <td data-label="No : " className="nomor">
+                            {index + 1 + (currentPage - 1) * rowsPerPage}
+                          </td>
                           <td data-label="author : ">{pengumuman.author}</td>
                           <td>
                             <img

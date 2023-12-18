@@ -67,6 +67,7 @@ function AdminPermohonanKeberatan() {
 
   const totalPages = Math.ceil(filteredList.length / rowsPerPage);
 
+  //delete data
   const deleteData = async (id) => {
     Swal.fire({
       title: "Anda Ingin Menghapus Data ?",
@@ -118,13 +119,13 @@ function AdminPermohonanKeberatan() {
             </div>
           </div>
           <div className="search">
-          <input
-            type="search"
-            className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
+            <input
+              type="search"
+              className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+            />
           </div>
           <div class="main-card mb-3 card box-tabel">
             <div class="card-header">
