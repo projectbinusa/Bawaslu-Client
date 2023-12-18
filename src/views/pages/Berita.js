@@ -51,9 +51,9 @@ function Berita() {
   const getCategoryBerita = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all-limit-7`
+        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=desc&page=0&size=40&sort=createdDate`
       );
-      setCategory(response.data.data);
+      setCategory(response.data.data.content);
       console.log(response.data.data);
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
@@ -301,8 +301,6 @@ function Berita() {
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-      <br />
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">
@@ -316,23 +314,46 @@ function Berita() {
                       <span style={{ color: "blue" }}>Bawaslu Boyolali</span>
                     </strong>
                   </h4>
-                  <div className="widget-title row">
+                  <div
+                    class="banner-top-thumb-wrap"
+                    style={{
+                      overflowX: "auto",
+                      whiteSpace: "nowrap",
+                      scrollbarWidth: "thin",
+                      msOverflowStyle: "none",
+                      overflowY:"hidden" // Untuk IE
+                    }}>
+                    <div class="d-lg-flex gap-3 align-items-center">
+                      {category.map((categoryBerita) => {
+                        return (
+                      <div class="d-flex justify-content-between  mb-3 mb-lg-0">
+                        <p class="m-0 font-weight-bold">
+                        <a
+                            style={{ color: "black", textDecoration: "none", background:"#F1F6F9", padding:"7px", borderRadius:"20px", border:"1px solid blue", paddingTop:"5px" }}
+                            href={`category-berita/${categoryBerita.category}/${categoryBerita.id}`}>
+                            {categoryBerita.category}
+                          </a>
+                        </p>
+                      </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  {/* <div className="widget-title row">
                     {category.map((cta, index) => {
                       return (
                         <div className="col-4">
                           <a
                             style={{ color: "black", textDecoration: "none" }}
-                            href={`category-berita/${cta.category}/${cta.id}`}
-                          >
+                            href={`category-berita/${cta.category}/${cta.id}`}>
                             {cta.category}
                           </a>
                         </div>
                       );
                     })}
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <br />
               {/* <hr className="mt-0" /> */}
               {list.length > 0 ? (
                 list.map((berita) => {
@@ -349,19 +370,16 @@ function Berita() {
                                     url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
                                     media={berita.image}
                                     description={berita.judulBerita}
-                                    quote={berita.judulBerita}
-                                  >
+                                    quote={berita.judulBerita}>
                                     <button
                                       style={{
                                         color: "white",
                                         backgroundColor: "#45629f",
                                       }}
-                                      className="border p-2"
-                                    >
+                                      className="border p-2">
                                       <i
                                         className="fab fa-facebook-f"
-                                        aria-hidden="true"
-                                      ></i>{" "}
+                                        aria-hidden="true"></i>{" "}
                                       Facebook
                                     </button>
                                   </FacebookShareButton>
@@ -371,19 +389,16 @@ function Berita() {
                                     url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
                                     media={berita.image}
                                     description={berita.judulBerita}
-                                    quote={berita.judulBerita}
-                                  >
+                                    quote={berita.judulBerita}>
                                     <button
                                       style={{
                                         color: "white",
                                         backgroundColor: "#5eb2ef",
                                       }}
-                                      className="border p-2"
-                                    >
+                                      className="border p-2">
                                       <i
                                         className="fab fa-twitter"
-                                        aria-hidden="true"
-                                      ></i>{" "}
+                                        aria-hidden="true"></i>{" "}
                                       Twitter
                                     </button>
                                   </TwitterShareButton>
@@ -393,16 +408,14 @@ function Berita() {
                                     url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
                                     quote={berita.judulBerita}
                                     media={berita.image}
-                                    description={berita.judulBerita}
-                                  >
+                                    description={berita.judulBerita}>
                                     <button
                                       style={{
                                         color: "white",
                                         backgroundColor: "#cf2830",
                                         width: "80px",
                                       }}
-                                      className="border p-2"
-                                    >
+                                      className="border p-2">
                                       <i className="fa-brands fa-pinterest"></i>{" "}
                                       Pin
                                     </button>
@@ -423,8 +436,7 @@ function Berita() {
                       <div class="details">
                         <h2>
                           <a
-                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
-                          >
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}>
                             {berita.judulBerita}
                           </a>
                         </h2>
@@ -471,12 +483,10 @@ function Berita() {
                                     color: "white",
                                     backgroundColor: "#45629f",
                                   }}
-                                  className="border p-2"
-                                >
+                                  className="border p-2">
                                   <i
                                     class="fab fa-facebook-f"
-                                    aria-hidden="true"
-                                  ></i>{" "}
+                                    aria-hidden="true"></i>{" "}
                                   Facebook
                                 </button>
                               </a>
@@ -488,12 +498,10 @@ function Berita() {
                                     color: "white",
                                     backgroundColor: "#5eb2ef",
                                   }}
-                                  className="border p-2"
-                                >
+                                  className="border p-2">
                                   <i
                                     class="fab fa-twitter"
-                                    aria-hidden="true"
-                                  ></i>{" "}
+                                    aria-hidden="true"></i>{" "}
                                   Twitter
                                 </button>
                               </a>
@@ -505,8 +513,7 @@ function Berita() {
                                     color: "white",
                                     backgroundColor: "#cf2830",
                                   }}
-                                  className="border p-2"
-                                >
+                                  className="border p-2">
                                   <i class="fa-brands fa-pinterest"></i> Pin
                                 </button>
                               </a>
@@ -550,8 +557,7 @@ function Berita() {
                 <div class="td-sidebar">
                   <div
                     class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9", overflow: "hidden" }}
-                  >
+                    style={{ background: "#F1F6F9", overflow: "hidden" }}>
                     <h4 class="widget-title">Berita Terbaru</h4>
                     <ul>
                       {listTerbaru.map((beritaTerbaru) => {
@@ -568,8 +574,7 @@ function Berita() {
                               <div class="media-body align-self-center">
                                 <h6 class="title">
                                   <a
-                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}
-                                  >
+                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>
                                     {beritaTerbaru.judulBerita}
                                   </a>
                                 </h6>
@@ -592,8 +597,7 @@ function Berita() {
                   </div>
                   <div
                     class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}
-                  >
+                    style={{ background: "#F1F6F9" }}>
                     <h4 class="widget-title">Arsip</h4>
                     <ul class="catagory-items">
                       {archivingMonths.map((monthData) => {
