@@ -100,33 +100,46 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
-<<<<<<< HEAD
 import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
 import DetailBerita from "./views/pages/admin/berita/DetailBerita";
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
-=======
 import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
-import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
-import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
-import DetailBerita from "./views/pages/admin/berita/DetailBerita";
+// import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
+// import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
+// import DetailBerita from "./views/pages/admin/berita/DetailBerita";
 import AddIsiInformasi from "./views/pages/admin/informasi/AddInformasi";
-import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
+// import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
->>>>>>> 4ab8908ae2c907a8e9ccdfdea34f0ae746c80bfb
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
 import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
-<<<<<<< HEAD
-=======
-import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
-
->>>>>>> 4ab8908ae2c907a8e9ccdfdea34f0ae746c80bfb
+// import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
 // test
+
+// lllll
+// import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
+// import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
+// import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
+// import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
+// import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
+import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
+import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
+import AdminKanal from "./views/pages/admin/AdminKanal";
+// import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
+// import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
+// import AddKanal from "./views/pages/admin/Add/AddKanal";
+// import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
+
+// ADMIN MENU REGULASI
+import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
+// END ADMIN MENU REGULASI 
+
 function App() {
   return (
     <BrowserRouter>
@@ -248,14 +261,14 @@ function App() {
           <Route
             path="/daftar-regulasi/:jenisRegulasi/:id"
             component={IsiDaftarRegulasi}
-<<<<<<< HEAD
+            // <<<<<<< HEAD
             exact
           />
-=======
-          />
+          {/* ======= */}
+          {/* /> */}
           <Route path="/regulasi" component={Regulasi} exact />
           <Route path="/dip" component={Dip} exact />
->>>>>>> 4ab8908ae2c907a8e9ccdfdea34f0ae746c80bfb
+          {/* >>>>>>> 4ab8908ae2c907a8e9ccdfdea34f0ae746c80bfb */}
 
           {/* admin */}
 
@@ -620,6 +633,10 @@ function App() {
             exact
           />
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
+
+          {/* admin menu regulasi */}
+          <Route path="/dip-admin" component={AdminDip} exact />
+          {/* end admin menu regulasi */}
         </Switch>
       </main>
     </BrowserRouter>

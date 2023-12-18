@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import Header from "../../../component/Header";
-import Sidebar from "../../../component/Sidebar";
-import { Pagination, TableContainer } from "@mui/material";
-import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import Header from "../../../../../component/Header";
+import Sidebar from "../../../../../component/Sidebar";
+import { Pagination, TableContainer } from "@mui/material";
 
-function AdminSertaMerta() {
+function AdminDip() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
-  const [tableData, setTableData] = useState([]); // Set initial value here
+  const [tableData, setTableData] = useState([]);
+  const [default1, setDefault] = useState("SK DIP");
 
-  console.log("ini admin");
   const { id } = useParams();
 
-  const getById = async () => {
+  const getByDaftarDip = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/1/isi-informasi?page=0&size=100&sortBy=id&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/tabel-dip/all-terbaru?daftarDip=${default1}&page=0&size=100&sortBy=created_date&sortOrder=asc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -29,7 +29,6 @@ function AdminSertaMerta() {
         }
       );
 
-      // Handle response data as needed
       const result = response.data;
 
       if (result.status === "success") {
@@ -37,31 +36,30 @@ function AdminSertaMerta() {
         setSelectedData(selectedDataItem);
         setPaginationInfo(result.data);
 
-        // Filter data based on search term
         const filteredData = selectedDataItem.filter((item) =>
-          item.dokumen.toLowerCase().includes(searchTerm.toLowerCase())
+          String(item.namadokumen)
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase())
         );
 
-        // Set the initial table data
         setTableData(filteredData);
         setCurrentPage(1);
       } else {
         console.error("Error fetching data:", result.message);
-        // Set default data or show an error message
-        setTableData([{ dokumen: "Default Document" }]);
+        setTableData([{ namadokumen: "Default Document" }]);
         setCurrentPage(1);
       }
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
-      // Set default data or show an error message
-      setTableData([{ dokumen: "Default Document" }]);
+      setTableData([{ namadokumen: "Default Document" }]);
       setCurrentPage(1);
     }
   };
 
   useEffect(() => {
-    getById();
+    getByDaftarDip();
   }, []);
+
   const handleChange = async (event) => {
     const selectedId = event.target.value;
     setSelectedValue(selectedId);
@@ -69,18 +67,16 @@ function AdminSertaMerta() {
     if (selectedId) {
       fetchData(selectedId, 1, searchTerm);
     } else {
-      // Handle the case where no option is selected
-      console.log("Pilih Keterangan Terlebih Dahulu!");
-      // You can set some state or display a message to the user
-      setTableData([]); // Clear table data
+      console.log("Pilih Daftar DIP Terlebih Dahulu!");
+      setTableData([]);
     }
   };
 
-  const fetchData = async (selectedId, page, searchTerm) => {
+  const fetchData = async (selected, page, searchTerm) => {
     const response = await fetch(
-      `http://localhost:4040/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
+      `${API_DUMMY}/bawaslu/api/tabel-dip/all-terbaru?daftarDip=${selected}&page=${
         page - 1
-      }&size=10&sortBy=id&sortOrder=asc`
+      }&size=10&sortBy=created_date&sortOrder=asc`
     );
     const result = await response.json();
 
@@ -89,12 +85,10 @@ function AdminSertaMerta() {
       setSelectedData(selectedDataItem);
       setPaginationInfo(result.data);
 
-      // Filter data based on search term
       const filteredData = selectedDataItem.filter((item) =>
         item.dokumen.toLowerCase().includes(searchTerm.toLowerCase())
       );
 
-      // Set the initial table data
       setTableData(filteredData);
       setCurrentPage(page);
     } else {
@@ -112,23 +106,20 @@ function AdminSertaMerta() {
 
   const deleteData = async (id) => {
     Swal.fire({
-      title: "Anda Ingin Menghapus Data ?",
+      title: "Anda Ingin Menghapus Data?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Delete",
-      cancelButtonText: "Cencel",
+      cancelButtonText: "Batal",
+      confirmButtonText: "Hapus",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(
-          `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + id,
-          {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          }
-        );
+        axios.delete(`${API_DUMMY}/bawaslu/api/tabel-dip/delete/` + id, {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
         Swal.fire({
           icon: "success",
           title: "Dihapus!",
@@ -137,7 +128,7 @@ function AdminSertaMerta() {
       }
       setTimeout(() => {
         window.location.reload();
-      }, 1500);
+      }, 500);
     });
   };
 
@@ -150,21 +141,15 @@ function AdminSertaMerta() {
           <div id="container" className="container mt-3 app-main__outer">
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Admin Serta Merta
+                Admin DIP
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
                     aria-label="Small select example"
                     onChange={handleChange}
                   >
-                    <option value="">Pilih Jenis Informasi</option>
-                    <option value="1">Putusan Pelanggaran</option>;
-                    <option value="2">Sengketa Proses Pemilu</option>;
-                    <option value="3">Pemungutan Suara Ulang</option>;
-                    <option value="4">Organisasi Dan Adminstrasi</option>;
-                    <option value="5">Perselisihan Hasil Pemilu</option>;
-                    <option value="6">Sosialisasi</option>;
-                    <option value="7">Piagam Penghargaan</option>
+                    <option disabled>Pilih Jenis Informasi</option>
+                    <option value="SK DIP">SK DIP</option>;
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -177,7 +162,7 @@ function AdminSertaMerta() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/tambah-informasi-serta-merta"
+                          href="/tambah-dip"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
@@ -197,55 +182,46 @@ function AdminSertaMerta() {
                   <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                     <thead>
                       <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Dokumen</th>
+                        <th scope="col" className="text-center">
+                          No
+                        </th>
+                        <th scope="col" className="text-center">
+                          Dokumen
+                        </th>
                         <th scope="col" className="text-center">
                           Aksi
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      {tableData.map((inf, index) => (
+                      {tableData.map((dip, index) => (
                         <tr key={index}>
-                          <td data-label="No" className="t">
+                          <td data-label="No" className="text-center">
                             {(currentPage - 1) * 10 + index + 1}
                           </td>
-                          <td data-label="Dokumen" className="t">
-                            {inf.dokumen}
-                          </td>
+                          <td data-label="Dokumen">{dip.namadokumen}</td>
                           <td data-label="Aksi : " className="pt-3 pb-3 aksi">
                             <div className="d-flex justify-content-center">
-                              <button
-                                type="button"
-                                className=".responsive-buttons btn-primary btn-sm mr-2"
+                              <a
+                                style={{
+                                  color: "white",
+                                  textDecoration: "none",
+                                }}
+                                href={`/update-dip/${dip.id}`}
                               >
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={`/ubah-isi-informasi/${inf.id}`}
+                                <button
+                                  type="button"
+                                  className="btn-sm btn-primary mr-2"
                                 >
                                   <i className="fa-solid fa-pen-to-square"></i>
-                                </a>
-                              </button>
+                                </button>
+                              </a>
                               <button
                                 type="button"
-                                onClick={() => deleteData(inf.id)}
+                                onClick={() => deleteData(dip.id)}
                                 className="mr-2 btn-danger btn-sm"
                               >
                                 <i className="fa-solid fa-trash"></i>
-                              </button>
-                              <button type="button" className="btn-info btn-sm">
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={`/isi-keterangan/${inf.jenisKeterangan}/${inf.id}`}
-                                >
-                                  <i className="fas fa-plus"></i>
-                                </a>
                               </button>
                             </div>
                           </td>
@@ -273,4 +249,4 @@ function AdminSertaMerta() {
   );
 }
 
-export default AdminSertaMerta;
+export default AdminDip;
