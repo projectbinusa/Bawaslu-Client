@@ -126,12 +126,7 @@ function MenuRegulasi() {
           </div>
           <div class="main-card mb-3 card box-tabel">
             <div className="card-header" style={{ display: "flex" }}>
-<<<<<<< HEAD
             {menuRegulasi.length > 0 && menuRegulasi[0].menuRegulasi.menuRegulasi}
-=======
-              {Regulasi.length > 0 && Regulasi[0].menuRegulasi.menuRegulasi}
->>>>>>> 4ab8908ae2c907a8e9ccdfdea34f0ae746c80bfb
-
               <p className="mt-3"></p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">

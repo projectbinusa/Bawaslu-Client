@@ -259,6 +259,23 @@ function App() {
 
           {/* admin */}
 
+          {/* daftar informasi */}
+          <Route path="/informasi-serta-merta" component={SertaMerta} exact />
+          <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
+          <Route
+            path="/informasi-berkala-kelembagaan"
+            component={InformasiBerkalaKelembagaan}
+            exact
+          />
+          {/* <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
+          <Route
+            path="/informasi-berkala-Kepemiluan"
+            component={InformasiBerkalaKepemiluan}
+            exact
+          />
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+          <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
+          <Route path="/informasi-kanal" component={Kanal} exact />
           {/* admin informasi */}
           <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
           <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
@@ -301,6 +318,7 @@ function App() {
             component={PutIsiInformasi}
             exact
           />
+
           <PrivateRoute
             path="/admin-permohonan-informsi"
             component={AdminFormInformasi}
