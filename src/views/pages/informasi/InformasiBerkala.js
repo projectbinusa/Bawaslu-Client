@@ -18,7 +18,7 @@ function InformasiBerkala() {
       {/* <!-- project area start --> */}
       <div
         style={{
-          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundImage: "url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -26,7 +26,7 @@ function InformasiBerkala() {
       >
         <div
           style={{
-            backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
+            backgroundImage: "url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp')" ,
           }}
         >
           <div className="container p-5 text-center">
