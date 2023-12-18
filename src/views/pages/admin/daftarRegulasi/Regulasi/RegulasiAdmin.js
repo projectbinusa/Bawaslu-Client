@@ -126,6 +126,8 @@ function MenuRegulasi() {
           </div>
           <div class="main-card mb-3 card box-tabel">
             <div className="card-header" style={{ display: "flex" }}>
+              {menuRegulasi.length > 0 &&
+                menuRegulasi[0].menuRegulasi.menuRegulasi}
               {Regulasi.length > 0 && Regulasi[0].menuRegulasi.menuRegulasi}
 
               <p className="mt-3"></p>
