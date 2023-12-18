@@ -327,21 +327,7 @@ function AdminBerita() {
                         </td>
                         <td data-label="Aksi">
                           <div className="aksi">
-                            <button
-                              type="button"
-                              className="btn-primary btn-sm mr-2"
-                            >
-                              <a
-                                style={{
-                                  color: "white",
-                                  textDecoration: "none",
-                                }}
-                                href={`/edit-berita-admin/${berita.id}`}
-                              >
-                                {" "}
-                                <i className="fa-solid fa-pen-to-square"></i>
-                              </a>
-                            </button>
+                          
                             <button
                               type="button"
                               className="btn-primary btn-sm mr-2"
