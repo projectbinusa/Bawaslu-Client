@@ -164,56 +164,142 @@ function Berita() {
   return (
     <>
       <Navbar />
-      <div
-        class="editors-news container"
-        style={{ marginTop: "100px", marginBottom: "50px" }}>
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="d-flex position-relative float-left">
-              <h3 class="section-title">Popular News</h3>
+      {/* <!-- page title start --> */}
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              id="width-img-carousl"
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-thegem-blog-default.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>
+                PENANGANAN PELANGGARAN
+              </h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Dugaan pelanggaran Pemilu sebagaimana dimaksud berupa:
+                pelanggaran kode etik Penyelenggara Pemilu;; pelanggaran
+                administrasi Pemilu; dan/atau; tindak pidana ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2020/01/WhatsApp-Image-2020-01-23-at-10.22.53.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>BERITA</h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Pengumuman Calon Anggota Bawaslu Kabupaten/Kota Terpilih Masa
+                Jabatan 2023-2028 Provinsi Jawa Tengah. Selengkapnya, silahkan
+                download pada link dibawah ini.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/Samakan-Persepsi-Bawaslu-Boyolali-Sambangi-Kapolres-thegem-blog-default.jpeg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>PENCEGAHAN</h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Boyolali – Jadwal pendaftaran Kelompok Penyelenggara Pemungutan
+                Suara (KPPS) Pemilu 2024 dimulai pada 11 Desember 2023
+                mendatang. Komisi Pemilihan Umum... Read ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://imgcdn.solopos.com/@space/2023/11/apel-siaga-bawaslu-boyolali.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>KEHUMASAN</h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                Boyolali – Badan ... Boyolali – Badan Pengawas Pemilihan Umum
+                (Bawaslu) Kabupaten Pati ikuti kegiatan Koordinasi dan
+                Sinkronisasi Program Kehumasan dengan ...
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://halosemarang.id/wp-content/uploads/2022/09/0e39dae6.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption  d-md-block">
+              <h3 style={{ color: "white", fontWeight: "bold" }}>
+                OSDM & DIKLAT
+              </h3>
+              <p style={{ color: "white", fontWeight: "bold" }}>
+                OSDM & Diklat. Artikel mengenai kegiatan divi Organisasi,
+                Sumberdaya Manusia, & Diklat. No Content Available.
+                TautanLembaga.
+              </p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6  mb-5 mb-sm-2">
-            <div class="position-relative image-hover">
-              <img
-                src={listTerbaru.length > 0 && listTerbaru[0].image}
-                class="img-fluid"
-                alt="world-news"
-              />
-              <span class="thumb-title">BERITA</span>
-            </div>
-            <h1 class="font-weight-600 mt-3">
-              {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
-            </h1>
-            <p class="fs-15 font-weight-normal isiBerita">
-              {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
-            </p>
-          </div>
-          <div class="col-lg-6  mb-5 mb-sm-2">
-            <div class="row">
-              {listTerbaru.slice(1, 5).map((berita) => {
-                return (
-                  <div class="col-sm-6  mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src={berita.image}
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title isiBerita">BERITA</span>
-                    </div>
-                    <p class="font-weight-600 mt-3">{berita.judulBerita}</p>
-                    <p class="fs-15 font-weight-normal isiBerita">
-                      {berita.isiBerita}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
