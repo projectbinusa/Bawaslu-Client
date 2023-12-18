@@ -111,6 +111,13 @@ import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
+import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
+import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
+import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
+import AdminKanal from "./views/pages/admin/AdminKanal";
+import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
+
+
 // test
 function App() {
   return (
@@ -256,8 +263,8 @@ function App() {
           <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
           <Route path="/informasi-kanal" component={Kanal} exact />
           {/* admin informasi */}
-          {/* <Route path="/admin-serta-merta" component={} exact />
-          <Route path="/admin-setiap-saat" component={AdminSetiAdminSertaMertaapSaat} exact />
+          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
+          <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
           <Route
             path="/admin-berkala-kepemiluan"
             component={AdminBerkalaKepemiluan}
@@ -268,7 +275,7 @@ function App() {
             component={AdminBerkalaKelembagaan}
             exact
           />
-          <Route path="/admin-kanal" component={AdminKanal} exact /> */}
+          <Route path="/admin-kanal" component={AdminKanal} exact />
 
           {/* tambah dan ubah data informasi */}
           <Route
