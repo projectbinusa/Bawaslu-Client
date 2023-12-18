@@ -47,8 +47,14 @@ function Sidebar() {
   }, []);
 
   return (
-    <div className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header overflow-auto" style={{ height: "100vh"}}>
-      <div className="app-sidebar sidebar-shadow" style={{ height: "100vh", overflowY: "auto"}} >
+    <div
+      className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header overflow-auto"
+      style={{ height: "100vh" }}
+    >
+      <div
+        className="app-sidebar sidebar-shadow"
+        style={{ height: "100vh", overflowY: "auto" }}
+      >
         <div className="app-header__logo">
           <div className="logo-src"></div>
           <div className="header__pane ml-auto">
@@ -118,7 +124,8 @@ function Sidebar() {
               </li>
               <li>
                 <a style={{ textDecoration: "none" }} href="#">
-                <i class="fa-regular fa-paste metismenu-icon"></i>                  Isi Informasi
+                  <i class="fa-regular fa-paste metismenu-icon"></i> Isi
+                  Informasi
                   <i class="fas fa-arrow-circle-down metismenu-state-icon caret-left"></i>
                 </a>
                 <ul>
@@ -213,6 +220,38 @@ function Sidebar() {
                   })}
                 </ul>
               </li>
+
+              {/* MENU REGULASI */}
+              <li class="app-sidebar__heading">Regulasi</li>
+              <li>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="/adminn-permohonan-informasi"
+                >
+                  <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
+                  Regulasi
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="/dip-admin"
+                >
+                  <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>
+                  DIP{" "}
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="/admin-permohonan-keberatan"
+                >
+                  <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
+                  SOP
+                </a>
+              </li>
+              {/* END MENU REGULASI */}
+
               <li class="app-sidebar__heading">Permohonan</li>
               <li>
                 {/*  */}
