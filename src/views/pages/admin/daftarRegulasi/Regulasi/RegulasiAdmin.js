@@ -14,6 +14,7 @@ import { Pagination } from "@mui/material";
 import Regulasi from "../../../daftarRegulasi/Regulasi";
 
 function MenuRegulasi() {
+  const [regulasi, setRegulasi] = useState ([]);
   const [menuRegulasi, setMenuRegulasi] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
@@ -126,11 +127,7 @@ function MenuRegulasi() {
           </div>
           <div class="main-card mb-3 card box-tabel">
             <div className="card-header" style={{ display: "flex" }}>
-<<<<<<< HEAD
-            {menuRegulasi.length > 0 && menuRegulasi[0].menuRegulasi.menuRegulasi}
-=======
               {Regulasi.length > 0 && Regulasi[0].menuRegulasi.menuRegulasi}
->>>>>>> 4ab8908ae2c907a8e9ccdfdea34f0ae746c80bfb
 
               <p className="mt-3"></p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
@@ -231,17 +228,7 @@ function MenuRegulasi() {
                           >
                             <i className="fa-solid fa-trash"></i>
                           </button>
-                          <button type="button" className="btn-info btn-sm">
-                            <a
-                              style={{
-                                color: "white",
-                                textDecoration: "none",
-                              }}
-                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}
-                            >
-                              <i className="fas fa-plus"></i>
-                            </a>
-                          </button>
+
                         </td>
                       </tr>
                     );
