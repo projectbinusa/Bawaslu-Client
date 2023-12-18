@@ -111,13 +111,7 @@ function MenuRegulasi() {
                 <option value={20}>20</option>
               </select>
             </div>
-            <input
-              type="search"
-              className="form-control widget-content-right w-100"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-            />
+           
           </div>
           <div className="search">
             <input
@@ -212,17 +206,17 @@ function MenuRegulasi() {
         >
           <i className="fa-solid fa-trash"></i>
         </button>
-        <button
-          type="button"
-          className="btn-warning  mr-2 btn-sm"
-        >
-          <a
-            className="text-light"
-            href={`/${jenis.menuRegulasi}/${jenis.id}`}
-          >
-            <i className="fas fa-info-circle"></i>
-          </a>
-        </button>
+        <button type="button" className="btn-info btn-sm">
+                            <a
+                              style={{
+                                color: "white",
+                                textDecoration: "none",
+                              }}
+                              href={"/" + jenis.menuRegulasi + "/" + jenis.id}
+                            >
+                              <i className="fas fa-plus"></i>
+                            </a>
+                          </button>
       </td>
     </tr>
   ))}
@@ -243,7 +237,7 @@ function MenuRegulasi() {
           </div>
         </div>
       </div>
-      <Footer />
+      
     </div>
   );
 }
