@@ -144,7 +144,11 @@ function App() {
             component={EditCategory}
             exact
           />
-                    <PrivateRoute path="/detail/berita/:id" component={DetailBerita} exact />
+          <PrivateRoute
+            path="/detail/berita/:id"
+            component={DetailBerita}
+            exact
+          />
           {/* daftar informasi */}
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
           <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
@@ -236,6 +240,7 @@ function App() {
           <Route
             path="/daftar-regulasi/:jenisRegulasi/:id"
             component={IsiDaftarRegulasi}
+          />
           <Route path="/regulasi" component={Regulasi} exact />
           <Route path="/dip" component={Dip} exact />
           <Route
@@ -245,12 +250,63 @@ function App() {
           />
 
           {/* admin */}
+
+          {/* daftar informasi */}
+          <Route path="/informasi-serta-merta" component={SertaMerta} exact />
+          <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
+          <Route
+            path="/informasi-berkala-kelembagaan"
+            component={InformasiBerkalaKelembagaan}
+            exact
+          />
+          {/* <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
+          <Route
+            path="/informasi-berkala-Kepemiluan"
+            component={InformasiBerkalaKepemiluan}
+            exact
+          />
+          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
+          <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
+          <Route path="/informasi-kanal" component={Kanal} exact />
+
+          {/* tambah dan ubah data informasi */}
+          <Route
+            path="/tambah-informasi-serta-merta"
+            component={AddSertaMerta}
+            exact
+          />
+          <Route
+            path="/tambah-informasi-setiap-saat"
+            component={AddSetiapSaat}
+            exact
+          />
+          <Route
+            path="/tambah-informasi-berkala-kepemiluan"
+            component={AddBerkalaKepemiluan}
+            exact
+          />
+          <Route
+            path="/tambah-informasi-berkala-kelembagaan"
+            component={AddBerkalaKelembagaan}
+            exact
+          />
+          <Route path="/tambah-informasi-kanal" component={AddKanal} exact />
+          <Route
+            path="/ubah-isi-informasi/:id"
+            component={PutIsiInformasi}
+            exact
+          />
+
           <PrivateRoute
             path="/admin-permohonan-informsi"
             component={AdminFormInformasi}
             exact
           />
-          <PrivateRoute path="/add/regulasi/:id" component={AddRegulasi} exact />
+          <PrivateRoute
+            path="/add/regulasi/:id"
+            component={AddRegulasi}
+            exact
+          />
           <PrivateRoute
             path="/tambah-jenis-regulasi"
             component={AddJenisRegulasi}
@@ -337,7 +393,7 @@ function App() {
             component={DetailPermohonanInformasi}
             exact
           />
-           <Route
+          <Route
             path="/detail/permohonan-keberatan/:id"
             component={DetailPermohonanKeberatan}
             exact
@@ -526,7 +582,11 @@ function App() {
             component={IsiPengumuman}
             exact
           /> */}
-          <Route path="/page-isi-berita/:author/:id" component={PageBerita} exact />
+          <Route
+            path="/page-isi-berita/:author/:id"
+            component={PageBerita}
+            exact
+          />
           <Route
             path="/penyelesaian-sengketa-footer"
             component={PenyelesaianSengketaFooter}
