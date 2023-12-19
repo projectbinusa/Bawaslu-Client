@@ -191,7 +191,7 @@ function Dikecualikan() {
           </div>
         </div>
       </div>
-
+{/*  */}
       <Footer />
     </div>
   );

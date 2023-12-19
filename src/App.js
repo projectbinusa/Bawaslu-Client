@@ -106,12 +106,36 @@ import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
 import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
 import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
+import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
+import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
+import AdminKanal from "./views/pages/admin/AdminKanal";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
 // test
+
+// lllll
+// import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
+// import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
+// import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
+import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
+// import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
+// import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
+import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
+import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
+import AdminKanal from "./views/pages/admin/AdminKanal";
+// import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
+// import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
+// import AddKanal from "./views/pages/admin/Add/AddKanal";
+// import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
+
+// ADMIN MENU REGULASI
+import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
+// END ADMIN MENU REGULASI 
+
 function App() {
   return (
     <BrowserRouter>
@@ -238,23 +262,6 @@ function App() {
 
           {/* admin */}
 
-          {/* daftar informasi */}
-          <Route path="/informasi-serta-merta" component={SertaMerta} exact />
-          <Route path="/informasi-setiap-saat" component={SetiapSaat} exact />
-          <Route
-            path="/informasi-berkala-kelembagaan"
-            component={InformasiBerkalaKelembagaan}
-            exact
-          />
-          {/* <Route path="/informasi-berkala" component={InformasiBerkala} exact /> */}
-          <Route
-            path="/informasi-berkala-Kepemiluan"
-            component={InformasiBerkalaKepemiluan}
-            exact
-          />
-          <Route path="/informasi-berkala" component={InformasiBerkala} exact />
-          <Route path="/informasi-dikecuali" component={Dikecualikan} exact />
-          <Route path="/informasi-kanal" component={Kanal} exact />
           {/* admin informasi */}
           {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
           <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
@@ -297,7 +304,6 @@ function App() {
             component={PutIsiInformasi}
             exact
           />
-
           <PrivateRoute
             path="/admin-permohonan-informsi"
             component={AdminFormInformasi}
@@ -599,6 +605,10 @@ function App() {
             exact
           />
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
+
+          {/* admin menu regulasi */}
+          <Route path="/dip-admin" component={AdminDip} exact />
+          {/* end admin menu regulasi */}
         </Switch>
       </main>
     </BrowserRouter>
