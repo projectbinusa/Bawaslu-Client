@@ -118,7 +118,6 @@ import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan
 import AddKanal from "./views/pages/admin/Add/AddKanal";
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 
-
 // test
 
 // lllll
@@ -134,6 +133,12 @@ import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 
 // ADMIN MENU REGULASI
 import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
+import AdminSop from "./views/pages/admin/regulasi/sop/AdminSop";
+import AdminRegulasi from "./views/pages/admin/regulasi/regulasi/AdminRegulasi";
+import AddSop from "./views/pages/admin/regulasi/sop/AddSop";
+import AddDip from "./views/pages/admin/regulasi/dip/AddDip";
+import AddRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/AddRegulasiAdmin";
+import PutDip from "./views/pages/admin/regulasi/dip/PutDip";
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -617,7 +622,19 @@ function App() {
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
 
           {/* admin menu regulasi */}
+          {/* dip */}
           <Route path="/dip-admin" component={AdminDip} exact />
+          <Route path="/add-dip-admin" component={AddDip} exact />
+          {/* sop */}
+          <Route path="/sop-admin" component={AdminSop} exact />
+          <Route path="/add-sop-admin" component={AddSop} exact />
+          {/* regulasi */}
+          <Route path="/regulasi-admin" component={AdminRegulasi} exact />
+          <Route
+            path="/add-regulasi-admin"
+            component={AddRegulasiAdmin}
+            exact
+          />
           {/* end admin menu regulasi */}
         </Switch>
       </main>
