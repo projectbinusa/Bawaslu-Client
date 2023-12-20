@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../views/pages/Profil.css"
 import "../../../src/css/Profil.css";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
+import AOS from 'aos'
 
 function Profil() {
   const scrollToStrukturOrganisasi = () => {
@@ -11,13 +12,17 @@ function Profil() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    AOS.init();
+  })
   return (
     <div>
       <Navbar />
       <div className="faq-area pd-top-100 pd-bottom-90">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 pe-xl-5 align-self-center">
+            <div data-aos="fade-right" className="col-lg-6 pe-xl-5 align-self-center">
               {/* <div className="section-title mb-0"> */}
               <h2 className="title">Profile</h2>
               <p id="content" className="content"></p>
@@ -38,7 +43,7 @@ function Profil() {
                   // aria-expanded="true"
                   // aria-controls="collapseOne"
                   onClick={scrollToStrukturOrganisasi}
-                 
+
                 >
                   Selanjutnya{" "}
                 </button>
@@ -188,7 +193,8 @@ function Profil() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 mt-4 mt-lg-0 img-profil">
+            <div
+          data-aos="fade-left" className="col-lg-6 mt-4 mt-lg-0 img-profil">
               <img
                 src="https://img.freepik.com/free-vector/profile-data-concept-illustration_114360-2770.jpg?size=626&ext=jpg&ga=GA1.1.1464020286.1696819460&semt=sph"
                 alt=""
@@ -198,7 +204,8 @@ function Profil() {
         </div>
       </div>
       <div id="strukturOrganisasi" className="row pd-top-110" style={{ background: "#F1F6F9" }}>
-        <div className="col-lg-6 col-md-9 px-xl-5 align-self-center">
+        <div
+          data-aos="fade-right" className="col-lg-6 col-md-9 px-xl-5 align-self-center">
           <div className="container thumb mb-4 mb-lg-0 img-profil">
             <img
               style={{ borderRadius: "10px" }}
@@ -207,7 +214,8 @@ function Profil() {
             />
           </div>
         </div>
-        <div className="p-5 col-lg-5 align-self-center"  id="strukturOrganisasi">
+        <div
+          data-aos="fade-left" className="p-5 col-lg-5 align-self-center"  id="strukturOrganisasi">
           <div className="section-title">
             <h2 className="title mb-4">Struktur Organisasi</h2>
             <p>
@@ -279,14 +287,16 @@ function Profil() {
       <div className="how-it-work-area pd-top-100 pd-bottom-90">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-6 col-md-10">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-6 col-md-10">
               <div className="section-title text-center">
                 <h5 className="sub-title double-border">Bawaslu Boyolali</h5>
                 <h2 className="title">PPID</h2>
               </div>
             </div>
           </div>
-          <div className="how-it-work-inner">
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="how-it-work-inner">
             <img
               className="hills-line"
               src="https://solverwp.com/demo/html/itechie/assets/img/shape/1.webp"

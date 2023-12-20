@@ -13,6 +13,9 @@ import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import "../../css/home.css";
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
+import AOS from 'aos';
 
 function Home() {
   const [list, setList] = useState([]);
@@ -85,6 +88,8 @@ function Home() {
   }, [currentPage]);
 
   useEffect(() => {
+    AOS.init();
+    AOS.refresh();
     getAllTerbaru();
     getAllInformasi();
     getAllPengumuman();
@@ -94,7 +99,7 @@ function Home() {
     <div>
       <Navbar />
       <div>
-        <div
+        <div data-aos="zoom-in"
           className="banner-area banner-area-2 bg-relative "
           style={{
             backgroundImage: `url(${
@@ -168,12 +173,14 @@ function Home() {
         <div
           className="container"
           style={{ marginTop: "30px", marginBottom: "70px" }}>
-          <div className="section-title text-center">
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="section-title text-center">
             <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
             <h2 className="title">Berita Bawaslu</h2>
           </div>
           <div className="row">
-            <div className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
+            <div
+          data-aos="fade-right" className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
                 {list.map((berita) => (
                   <li key={berita.id}>
@@ -205,6 +212,7 @@ function Home() {
               </ul>
             </div>
             <div
+              data-aos="fade-left"
               className="col-lg-4 col-md-12 widget widget_catagory"
               style={{
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
@@ -275,7 +283,10 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <div className="card-header mt-3 d-flex justify-content-center">
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              className="card-header mt-3 d-flex justify-content-center">
               <Pagination
                 count={paginationInfo.totalPages}
                 page={currentPage}
@@ -295,7 +306,10 @@ function Home() {
               </div>
             </div>
 
-            <div className="how-it-work-area pd-bottom-115">
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              className="how-it-work-area pd-bottom-115">
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-6">
@@ -346,7 +360,10 @@ function Home() {
               </div>
             </div>
 
-            <div className="row justify-content-center">
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              className="row justify-content-center">
               <div className="col-lg-3 col-md-6">
                 <div id="barito" className="single-service-inner text-center">
                   <div id="" className="details">
@@ -445,130 +462,78 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="container mt-5">
-          <div className="section-title text-center">
+        <div className="container mt-5 mb-5">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            className="section-title text-center">
             <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
             <h2 className="title">Pengumuman</h2>
           </div>
           <div class="row">
-            <div class="col-lg-8">
-              <Swiper
-                spaceBetween={30}
-                slidesPerView={1}
-                navigation
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 5000 }}>
-                {pengumuman.map((png) => {
+            <div
+              data-aos="fade-right"
+              class="col-xl-8 stretch-card grid-margin">
+              <div class="position-relative">
+                <img
+                  src={pengumuman.length > 0 && pengumuman[0].image}
+                  alt="banner"
+                  class="img-fluid"
+                />
+                <div class="banner-content">
+                  <div class="badge badge-danger fs-12 font-weight-bold mb-3">
+                    Pengumuman
+                  </div>
+                  <h1 class="mb-2">
+                    {pengumuman.length > 0 && pengumuman[0].judulPengumuman}
+                  </h1>
+                  <div class="fs-12">
+                    {pengumuman.length > 0 &&
+                      pengumuman[0][
+                        format(
+                          new Date(pengumuman.createdDate || new Date()),
+                          "dd MMMM yyyy",
+                          {
+                            locale: idLocale,
+                          }
+                        )
+                      ]}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-aos="fade-left" class="col-lg-4">
+              <div class="row">
+                {pengumuman.slice(1, 5).map((png) => {
                   return (
-                    <SwiperSlide>
-                      <div className="item">
-                        <div className="carousel-content-wrapper mb-2">
-                          <div className="carousel-image">
-                            <img src={png.image} alt="" />
-                          </div>
+                    <div class="col-sm-6">
+                      <div class="pt-4 pb-4">
+                        <div class="d-flex align-items-center pb-2">
+                          <img
+                            src={png.image}
+                            class="img-xs img-rounded mr-2"
+                            alt="thumb"
+                          />
                         </div>
+                        <div class="badge badge-danger fs-12 font-weight-bold mb-3">
+                          Pengumuman
+                        </div>
+                        <p class="fs-14 m-0 font-weight-bold line-height-sm isiBerita">
+                          <a
+                            style={{ color: "black", textDecoration: "none" }}
+                            href={"/pengumuman/isi-pengumuman/" + png.id}>
+                            {png.judulPengumuman}
+                          </a>
+                        </p>
+                        <span>
+                          {format(new Date(png.createdDate), "dd MMMM yyyy", {
+                            locale: idLocale,
+                          })}
+                        </span>
                       </div>
-                    </SwiperSlide>
+                    </div>
                   );
                 })}
-              </Swiper>
-            </div>
-            <div class="col-lg-4">
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="py-3 border-bottom">
-                    <div class="d-flex align-items-center pb-2">
-                      <img
-                        src="assets/images/dashboard/Profile_1.jpg"
-                        class="img-xs img-rounded mr-2"
-                        alt="thumb"
-                      />
-                      <span class="fs-12 text-muted">Henry Itondo</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                      The Most And Least Visited Countries In The World
-                    </p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="py-3 border-bottom">
-                    <div class="d-flex align-items-center pb-2">
-                      <img
-                        src="assets/images/dashboard/Profile_2.jpg"
-                        class="img-xs img-rounded mr-2"
-                        alt="thumb"
-                      />
-                      <span class="fs-12 text-muted">Oka Tomoaki</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                      The Best Places to Travel in month August
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="pt-4 pb-4 border-bottom">
-                    <div class="d-flex align-items-center pb-2">
-                      <img
-                        src="assets/images/dashboard/Profile_2.jpg"
-                        class="img-xs img-rounded mr-2"
-                        alt="thumb"
-                      />
-                      <span class="fs-12 text-muted">Joana Leite</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                      Focus On Fun And Challenging Lifetime Activities
-                    </p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="pt-3 pb-4 border-bottom">
-                    <div class="d-flex align-items-center pb-2">
-                      <img
-                        src="assets/images/dashboard/Profile_4.jpg"
-                        class="img-xs img-rounded mr-2"
-                        alt="thumb"
-                      />
-                      <span class="fs-12 text-muted">Rita Leite</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                      Bread Is The Most Widely Consumed Food In The World
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="pt-4 pb-4">
-                    <div class="d-flex align-items-center pb-2">
-                      <img
-                        src="assets/images/dashboard/Profile_5.jpg"
-                        class="img-xs img-rounded mr-2"
-                        alt="thumb"
-                      />
-                      <span class="fs-12 text-muted">Jurrien Oldhof</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                      What Is Music, And What Does It Mean To Us
-                    </p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="pt-3 pb-4">
-                    <div class="d-flex align-items-center pb-2">
-                      <img
-                        src="assets/images/dashboard/Profile_6.jpg"
-                        class="img-xs img-rounded mr-2"
-                        alt="thumb"
-                      />
-                      <span class="fs-12 text-muted">Yamaha Toshinobu</span>
-                    </div>
-                    <p class="fs-14 m-0 font-weight-medium line-height-sm">
-                      Is Breakfast The Most Important Meal Of The Day
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
+import AOS from  'aos'
 
 function Pengumuman() {
   const [pengumuman, setPengumuman] = useState([]);
@@ -36,6 +37,7 @@ function Pengumuman() {
   useEffect(() => {
     //mengambil data, memperbarui DOM secara langsung,
     getAll(currentPage);
+    AOS.init()
   }, [currentPage, rowsPerPage]);
 
   const filteredList = pengumuman.filter((item) =>
@@ -64,7 +66,8 @@ function Pengumuman() {
       >
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-xl-6 col-lg-7 col-md-10">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-xl-6 col-lg-7 col-md-10">
               <div className="section-title text-center">
                 <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 className="title">Pengumuman</h2>
@@ -74,7 +77,8 @@ function Pengumuman() {
           <div className="row justify-content-center">
             {filteredList.map((isi) => {
               return (
-                <div className="col-lg-4 col-md-6">
+                <div data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
                   <div
                     className="single-blog-inner style-2"
                     style={{ maxHeight: "800px", minHeight: "300px" }}
@@ -112,7 +116,8 @@ function Pengumuman() {
               );
             })}
           </div>
-          <div className="card-header mt-3 d-flex justify-content-center">
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="card-header mt-3 d-flex justify-content-center">
             <Pagination
               count={totalPages}
               page={currentPage}

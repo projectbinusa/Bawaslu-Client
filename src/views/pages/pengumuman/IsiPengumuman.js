@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
+import AOS from 'aos';
 
 function IsiPengumuman() {
   const [createdDate, setCreatedDate] = useState("");
@@ -55,6 +56,7 @@ function IsiPengumuman() {
   useEffect(() => {
     //mengambil data, memperbarui DOM secara langsung,
     getAll(0);
+    AOS.init()
   }, []);
 
   return (
@@ -65,7 +67,8 @@ function IsiPengumuman() {
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8">
+            <div
+              data-aos="fade-right" class="col-lg-8">
               <div class="blog-details-page-content">
                 <div class="single-blog-inner">
                   <div class="thumb">
@@ -118,7 +121,8 @@ function IsiPengumuman() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-12">
+            <div
+              data-aos="fade-left" class="col-lg-4 col-12">
               <div class="td-sidebar">
                 <Bawaslu />
                 <div

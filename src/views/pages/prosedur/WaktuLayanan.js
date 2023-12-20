@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import waktu from "../../../aset/Time management-rafiki.png";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import AOS from 'aos';
 
 function WaktuLayanan() {
+  useEffect(() => {
+    AOS.init();
+  })
   return (
     <div>
       <Navbar />
       <div
         className="why-choose pd-top-100 pd-bottom-100 service-area bg-relative pd-top-60 pd-bottom-90"
         style={{
-          backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
+          backgroundImage: `url('https://www.imageshine.in/uploads/gallery/Free-vector-hand-painted-watercolor-abstract-watercolor-background.jpg')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -27,7 +31,8 @@ function WaktuLayanan() {
         />
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-md-8 order-lg-last">
+            <div
+          data-aos="fade-right" className="col-lg-6 col-md-8 order-lg-last">
               <div className="thumb">
                 <img
                   src={waktu}
@@ -35,7 +40,8 @@ function WaktuLayanan() {
                 />
               </div>
             </div>
-            <div className="col-lg-6 order-lg-first align-self-center">
+            <div
+          data-aos="fade-right" className="col-lg-6 order-lg-first align-self-center">
               <div className="section-title px-lg-5 mb-0 text-center">
                 <h5 id="text1-gabung" className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 id="text2-gabung" className="title">Waktu Pelayanan Informasi</h2>

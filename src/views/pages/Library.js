@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import "../../css/library.css";
@@ -6,6 +6,7 @@ import bawaslu from "../../aset/bawaslu.png";
 import bawaslu1 from "../../aset/bawaslu1.png";
 import bawaslu2 from "../../aset/bawaslu2.png";
 import bawaslu3 from "../../aset/bawaslu3.png";
+import AOS from 'aos'
 
 function Library() {
   const serviceAreaRef = useRef(null);
@@ -15,6 +16,10 @@ function Library() {
       serviceAreaRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    AOS.init()
+  },[])
 
   return (
     // <!-- team area start -->
@@ -70,7 +75,8 @@ function Library() {
         <div ref={serviceAreaRef} className="container">
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7">
-              <div className="section-title text-center">
+              <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="section-title text-center">
                 <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 className="title">Buku Bawaslu Kabupaten Boyolali</h2>
                 <p className="content">
@@ -82,7 +88,8 @@ function Library() {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div
                 className="single-service-inner style-2 text-center"
                 style={{
@@ -98,7 +105,7 @@ function Library() {
                       Buletin
                     </a>
                   </h3>
-                 
+
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 1</p>
                   <div id="btn-1" className="buletin">
                   <a 
@@ -111,7 +118,8 @@ function Library() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div
                 className="single-service-inner style-2 text-center"
                 style={{
@@ -127,7 +135,7 @@ function Library() {
                       Buletin
                     </a>
                   </h3>
-                  
+
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 2</p>
                   <div  id="btn-2" className="buletin" >
                   <a
@@ -141,7 +149,8 @@ function Library() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div
                 className="single-service-inner style-2 text-center"
                 style={{
@@ -157,7 +166,7 @@ function Library() {
                       Buletin
                     </a>
                   </h3>
-                 
+
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 3</p>
                   <div  id="btn-3" className="buletin">
                   <a
@@ -170,7 +179,8 @@ function Library() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div
                 className="single-service-inner style-2 text-center"
                 style={{
@@ -186,7 +196,7 @@ function Library() {
                       Buletin
                     </a>
                   </h3>
-          
+
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 4</p>
                   <div id="btn-4" className="buletin">
                   <a 
@@ -199,7 +209,8 @@ function Library() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div
                 className="single-service-inner style-2 text-center"
                 style={{
@@ -215,7 +226,7 @@ function Library() {
                       Buletin
                     </a>
                   </h3>
-                  
+
                   <p>Jejak Pengawasan Catatan Pengawas Pemilu 2019</p>
                   <div  id="btn-5" className="buletin">
                   <a
@@ -224,12 +235,13 @@ function Library() {
                   >
                     <i className="fa fa-arrow-right"></i>
                   </a>
-                  
+
                 </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div
                 className="single-service-inner style-2 text-center"
                 style={{
@@ -245,14 +257,19 @@ function Library() {
                       Buletin
                     </a>
                   </h3>
-                
+
                   <p >
                     Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
                     Boyolali
                   </p>
+<<<<<<< HEAD
                   <div 
                   id="btn-6" >  
                   
+=======
+                  <div style={{ marginTop:  "40px"}}>
+
+>>>>>>> 4beec4f24a668f05f8b36eebaa516d1be2c61cc5
                   <a
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg"

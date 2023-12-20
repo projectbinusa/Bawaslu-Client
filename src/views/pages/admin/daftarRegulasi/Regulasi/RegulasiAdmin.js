@@ -127,7 +127,8 @@ function MenuRegulasi() {
           </div>
           <div class="main-card mb-3 card box-tabel">
             <div className="card-header" style={{ display: "flex" }}>
-            {menuRegulasi.length > 0 && menuRegulasi[0].menuRegulasi.menuRegulasi}
+              {Regulasi.length > 0 && Regulasi[0].menuRegulasi.menuRegulasi}
+
               <p className="mt-3"></p>
               <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
                 <div class="col-auto">
@@ -227,7 +228,6 @@ function MenuRegulasi() {
                           >
                             <i className="fa-solid fa-trash"></i>
                           </button>
-                         
                         </td>
                       </tr>
                     );

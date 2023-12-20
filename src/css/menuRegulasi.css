@@ -30,7 +30,7 @@ table tbody td .aksi {
   }
   .form-control{
     width: 50%;
-    margin-left: 50px;
+    /* margin-left: 50px; */
   }
   #seacrh-admin{
     width: 100px;
