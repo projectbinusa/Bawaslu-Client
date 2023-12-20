@@ -1,3 +1,16 @@
+/* @media print {
+  .text a {
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease; 
+  }
+  
+  .text a:hover {
+    color: #3498db;
+    text-decoration: underline; 
+  }
+} */
+
 @media screen and (max-width: 768px) {
     .judul {
       font-size: 30px !important;
@@ -24,3 +37,6 @@
   .img-top{
     padding-top: 70px;
   }
+
+
+

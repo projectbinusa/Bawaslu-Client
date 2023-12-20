@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import waktu from "../../../aset/Time management-rafiki.png";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import AOS from 'aos';
 
 function WaktuLayanan() {
+  useEffect(() => {
+    AOS.init();
+  })
   return (
     <div>
       <Navbar />
@@ -27,7 +31,8 @@ function WaktuLayanan() {
         />
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 col-md-8 order-lg-last">
+            <div
+          data-aos="fade-right" className="col-lg-6 col-md-8 order-lg-last">
               <div className="thumb">
                 <img
                   src={waktu}
@@ -35,7 +40,8 @@ function WaktuLayanan() {
                 />
               </div>
             </div>
-            <div className="col-lg-6 order-lg-first align-self-center">
+            <div
+          data-aos="fade-right" className="col-lg-6 order-lg-first align-self-center">
               <div className="section-title px-lg-5 mb-0 text-center">
                 <h5 id="text1-gabung" className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 id="text2-gabung" className="title">Waktu Pelayanan Informasi</h2>

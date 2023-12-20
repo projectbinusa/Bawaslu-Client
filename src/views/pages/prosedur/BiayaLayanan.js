@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import biaya from "../../../aset/Wallet-rafiki.png";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import AOS from 'aos';
 
 function BiayaLayanan() {
+  useEffect(() => {
+    AOS.init()
+  })
   return (
     // <!-- team details page start -->
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-     
+
       {/* <!-- page title end --> */}
       <div
         className="team-details-page pd-top-120 service-area bg-relative pd-top-60 pd-bottom-90 "
@@ -33,14 +37,16 @@ function BiayaLayanan() {
         <div className="about-area ">
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-md-9 mb-5 mb-lg-0">
+              <div
+          data-aos="fade-right" className="col-lg-6 col-md-9 mb-5 mb-lg-0">
                 <div className="about-mask-bg-wrap about-mask-bg-wrap-4">
                   <div className="thumb">
                     <img src={biaya} alt="img" />
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 align-center">
+              <div
+          data-aos="fade-left" className="col-lg-6 align-center">
                 <div className="section-title px-lg-5 mb-0">
                   <h5 className="sub-title left-border">Bawaslu Boyolali</h5>
                   <h2 className="title">Biaya Layanan </h2>

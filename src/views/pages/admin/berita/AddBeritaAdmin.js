@@ -171,6 +171,9 @@ function AddBeritaAdmin() {
                       <button type="submit" className="btn-primary mt-3">
                         Submit
                       </button>
+                      <button type="button" className="btn-danger mt-3 mr-3">
+                      <a style={{color:"white", textDecoration:"none"}} href="/beritaAdmin">Batal</a>
+                      </button>
                     </form>
                   </div>
                 </div>

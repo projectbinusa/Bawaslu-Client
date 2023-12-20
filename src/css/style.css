@@ -46,6 +46,33 @@ Version: 1.0.5
   max-width: 100%;
   height: auto;
 }
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.badge-danger {
+  color: #fff;
+  background-color: #d1011c;
+}
+
+a.badge-danger:hover, a.badge-danger:focus {
+  color: #fff;
+  background-color: #9e0115;
+}
+
+a.badge-danger:focus, a.badge-danger.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(209, 1, 28, 0.5);
+}
+
 .thumb-title {
   padding: 14px 24px;
   background: #000;
@@ -76,6 +103,21 @@ Version: 1.0.5
 
 .image-hover:hover .thumb-title {
   background: #0a62fb;
+}
+.stretch-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+}
+
+.stretch-card .card {
+  width: 100%;
 }
 @media (max-width: 390px) {
   .navbar-area {

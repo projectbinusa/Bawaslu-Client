@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../../component/Footer";
 import Navbar from "../../component/Navbar";
 import axios from "axios";
+import AOS from "aos";
 import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
@@ -121,6 +122,7 @@ function Berita() {
 
   useEffect(() => {
     getAllTerbaru();
+    AOS.init();
   }, []);
 
   useEffect(() => {
@@ -164,96 +166,128 @@ function Berita() {
   return (
     <>
       <Navbar />
-      <div
-        class="editors-news container"
-        style={{ marginTop: "100px", marginBottom: "50px" }}>
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="d-flex position-relative float-left">
-              <h3 class="section-title">Popular News</h3>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6  mb-5 mb-sm-2">
-            <div class="position-relative image-hover">
-              <img
-                src={listTerbaru.length > 0 && listTerbaru[0].image}
-                class="img-fluid"
-                alt="world-news"
-              />
-              <span class="thumb-title">BERITA</span>
-            </div>
-            <h1 class="font-weight-600 mt-3">
-              {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
-            </h1>
-            <p class="fs-15 font-weight-normal isiBerita">
-              {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
-            </p>
-          </div>
-          <div class="col-lg-6  mb-5 mb-sm-2">
-            <div class="row">
-              {listTerbaru.slice(1, 5).map((berita) => {
-                return (
-                  <div class="col-sm-6  mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src={berita.image}
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title isiBerita">BERITA</span>
-                    </div>
-                    <p class="font-weight-600 mt-3">{berita.judulBerita}</p>
-                    <p class="fs-15 font-weight-normal isiBerita">
-                      {berita.isiBerita}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="blog-area pd-top-120 pd-bottom-120">
-        <div class="container">
+      <div>
+        <div
+          class="editors-news container"
+          style={{ marginTop: "100px", marginBottom: "50px" }}>
           <div class="row">
-            <div class="col-lg-8">
-              <div className="row">
-                <div class="widget widget_search">
-                  <h4>
-                    {" "}
-                    <strong>
-                      Berita{" "}
-                      <span style={{ color: "blue" }}>Bawaslu Boyolali</span>
-                    </strong>
-                  </h4>
-                  <div
-                    class="banner-top-thumb-wrap"
-                    style={{
-                      overflowX: "auto",
-                      whiteSpace: "nowrap",
-                      scrollbarWidth: "thin",
-                      msOverflowStyle: "none",
-                      overflowY:"hidden" // Untuk IE
-                    }}>
-                    <div class="d-lg-flex gap-3 align-items-center">
-                      {category.map((categoryBerita) => {
-                        return (
-                      <div class="d-flex justify-content-between  mb-3 mb-lg-0">
-                        <p class="m-0 font-weight-bold">
-                        <a
-                            style={{ color: "black", textDecoration: "none", background:"#F1F6F9", padding:"7px", borderRadius:"20px", border:"1px solid blue", paddingTop:"5px" }}
-                            href={`category-berita/${categoryBerita.category}/${categoryBerita.id}`}>
-                            {categoryBerita.category}
-                          </a>
-                        </p>
+            <div data-aos="fade-right" class="col-lg-3">
+              <div class="d-flex position-relative float-left">
+                <h3 class="section-title">Popular News</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div data-aos="fade-right" class="col-lg-6  mb-5 mb-sm-2">
+              <div class="position-relative image-hover">
+                <img
+                  src={listTerbaru.length > 0 && listTerbaru[0].image}
+                  class="img-fluid"
+                  alt="world-news"
+                />
+                <span class="thumb-title">BERITA</span>
+              </div>
+              <h1 class="font-weight-600 mt-3">
+                <a
+                  style={{ color: "black", textDecoration: "none" }}
+                  href={
+                    "/page-isi-berita/" + listTerbaru.length > 0 &&
+                    listTerbaru[0].author + "/" + listTerbaru.length > 0 &&
+                    listTerbaru[0].judulBerita
+                  }></a>{" "}
+                {listTerbaru.length > 0 && listTerbaru[0].id}
+              </h1>
+              <p class="fs-15 font-weight-normal isiBerita">
+                {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
+              </p>
+            </div>
+            <div class="col-lg-6  mb-5 mb-sm-2">
+              <div class="row">
+                {listTerbaru.slice(1, 5).map((berita) => {
+                  return (
+                    <div data-aos="fade-left" class="col-sm-6  mb-5 mb-sm-2">
+                      <div class="position-relative image-hover">
+                        <img
+                          src={berita.image}
+                          class="img-fluid"
+                          alt="world-news"
+                        />
+                        <span class="thumb-title isiBerita">BERITA</span>
                       </div>
-                        )
-                      })}
+                      <p class="font-weight-bold mt-3">
+                        <a
+                          style={{ color: "black", textDecoration: "none" }}
+                          href={
+                            "/page-isi-berita/" +
+                            berita.author +
+                            "/" +
+                            berita.id
+                          }>
+                          {berita.judulBerita}
+                        </a>
+                      </p>
+                      <p class="fs-15 font-weight-normal isiBerita">
+                        {berita.isiBerita}
+                      </p>
+                      <span>
+                        {format(new Date(berita.createdDate), "dd MMMM yyyy", {
+                          locale: idLocale,
+                        })}
+                      </span>
                     </div>
-                  </div>
-                  {/* <div className="widget-title row">
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-area pd-top-120 pd-bottom-120">
+          <div class="container">
+            <div class="row">
+              <div data-aos="fade-right" class="col-lg-8">
+                <div className="row">
+                  <div class="widget widget_search">
+                    <h4>
+                      {" "}
+                      <strong>
+                        Berita{" "}
+                        <span style={{ color: "blue" }}>Bawaslu Boyolali</span>
+                      </strong>
+                    </h4>
+                    <div
+                      class="banner-top-thumb-wrap"
+                      style={{
+                        overflowX: "auto",
+                        whiteSpace: "nowrap",
+                        scrollbarWidth: "thin",
+                        msOverflowStyle: "none",
+                        overflowY: "hidden", // Untuk IE
+                      }}>
+                      <div class="d-lg-flex gap-3 align-items-center">
+                        {category.map((categoryBerita) => {
+                          return (
+                            <div class="d-flex justify-content-between  mb-3 mb-lg-0">
+                              <p class="m-0 font-weight-bold">
+                                <a
+                                  style={{
+                                    color: "black",
+                                    textDecoration: "none",
+                                    background: "#F1F6F9",
+                                    padding: "7px",
+                                    borderRadius: "20px",
+                                    border: "1px solid blue",
+                                    paddingTop: "5px",
+                                  }}
+                                  href={`category-berita/${categoryBerita.category}/${categoryBerita.id}`}>
+                                  {categoryBerita.category}
+                                </a>
+                              </p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    {/* <div className="widget-title row">
                     {category.map((cta, index) => {
                       return (
                         <div className="col-4">
@@ -266,270 +300,271 @@ function Berita() {
                       );
                     })}
                   </div> */}
+                  </div>
                 </div>
-              </div>
-              {/* <hr className="mt-0" /> */}
-              {list.length > 0 ? (
-                list.map((berita) => {
-                  return (
-                    <div class="single-blog-inner">
-                      <div class="tag-and-share">
-                        <div class="row">
-                          <div class="col-sm-7"></div>
-                          <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                            <div class="blog-share">
-                              <ul>
-                                <li>
-                                  <FacebookShareButton
-                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                    media={berita.image}
-                                    description={berita.judulBerita}
-                                    quote={berita.judulBerita}>
-                                    <button
-                                      style={{
-                                        color: "white",
-                                        backgroundColor: "#45629f",
-                                      }}
-                                      className="border p-2">
-                                      <i
-                                        className="fab fa-facebook-f"
-                                        aria-hidden="true"></i>{" "}
-                                      Facebook
-                                    </button>
-                                  </FacebookShareButton>
-                                </li>
-                                <li>
-                                  <TwitterShareButton
-                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                    media={berita.image}
-                                    description={berita.judulBerita}
-                                    quote={berita.judulBerita}>
-                                    <button
-                                      style={{
-                                        color: "white",
-                                        backgroundColor: "#5eb2ef",
-                                      }}
-                                      className="border p-2">
-                                      <i
-                                        className="fab fa-twitter"
-                                        aria-hidden="true"></i>{" "}
-                                      Twitter
-                                    </button>
-                                  </TwitterShareButton>
-                                </li>
-                                <li>
-                                  <PinterestShareButton
-                                    url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
-                                    quote={berita.judulBerita}
-                                    media={berita.image}
-                                    description={berita.judulBerita}>
-                                    <button
-                                      style={{
-                                        color: "white",
-                                        backgroundColor: "#cf2830",
-                                        width: "80px",
-                                      }}
-                                      className="border p-2">
-                                      <i className="fa-brands fa-pinterest"></i>{" "}
-                                      Pin
-                                    </button>
-                                  </PinterestShareButton>
-                                </li>
-                              </ul>
+                {/* <hr className="mt-0" /> */}
+                {list.length > 0 ? (
+                  list.map((berita) => {
+                    return (
+                      <div class="single-blog-inner">
+                        <div class="tag-and-share">
+                          <div class="row">
+                            <div class="col-sm-7"></div>
+                            <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                              <div class="blog-share">
+                                <ul>
+                                  <li>
+                                    <FacebookShareButton
+                                      url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                      media={berita.image}
+                                      description={berita.judulBerita}
+                                      quote={berita.judulBerita}>
+                                      <button
+                                        style={{
+                                          color: "white",
+                                          backgroundColor: "#45629f",
+                                        }}
+                                        className="border p-2">
+                                        <i
+                                          className="fab fa-facebook-f"
+                                          aria-hidden="true"></i>{" "}
+                                        Facebook
+                                      </button>
+                                    </FacebookShareButton>
+                                  </li>
+                                  <li>
+                                    <TwitterShareButton
+                                      url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                      media={berita.image}
+                                      description={berita.judulBerita}
+                                      quote={berita.judulBerita}>
+                                      <button
+                                        style={{
+                                          color: "white",
+                                          backgroundColor: "#5eb2ef",
+                                        }}
+                                        className="border p-2">
+                                        <i
+                                          className="fab fa-twitter"
+                                          aria-hidden="true"></i>{" "}
+                                        Twitter
+                                      </button>
+                                    </TwitterShareButton>
+                                  </li>
+                                  <li>
+                                    <PinterestShareButton
+                                      url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                      quote={berita.judulBerita}
+                                      media={berita.image}
+                                      description={berita.judulBerita}>
+                                      <button
+                                        style={{
+                                          color: "white",
+                                          backgroundColor: "#cf2830",
+                                          width: "80px",
+                                        }}
+                                        className="border p-2">
+                                        <i className="fa-brands fa-pinterest"></i>{" "}
+                                        Pin
+                                      </button>
+                                    </PinterestShareButton>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="thumb">
-                        <img
-                          style={{ height: "450px" }}
-                          src={berita.image}
-                          alt="img"
-                        />
-                      </div>
-                      <div class="details">
-                        <h2>
-                          <a
-                            href={`/page-isi-berita/${berita.author}/${berita.id}`}>
-                            {berita.judulBerita}
-                          </a>
-                        </h2>
-                        <ul class="blog-meta">
-                          <li>
-                            <i class="far fa-user"></i>BY {berita.author}
-                          </li>
-                          <li>
-                            <i class="far fa-calendar-alt"></i>{" "}
-                            <span>
-                              {format(
-                                new Date(berita.createdDate),
-                                "dd MMMM yyyy",
-                                { locale: idLocale }
-                              )}
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  );
-                })
-              ) : (
-                <div class="single-blog-inner">
-                  <div class="tag-and-share">
-                    <div class="row">
-                      <div class="col-sm-7">
-                        <div class="tags d-inline-block">
-                          <button className="border">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                          </button>
-                          <button className="border">
-                            <i class="fa-regular fa-thumbs-down"></i>
-                          </button>
+                        <div class="thumb">
+                          <img
+                            style={{ height: "450px" }}
+                            src={berita.image}
+                            alt="img"
+                          />
                         </div>
-                      </div>
-                      <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                        <div class="blog-share">
-                          <ul>
+                        <div class="details">
+                          <h2>
+                            <a
+                              href={`/page-isi-berita/${berita.author}/${berita.id}`}>
+                              {berita.judulBerita}
+                            </a>
+                          </h2>
+                          <ul class="blog-meta">
                             <li>
-                              <a href="#">
-                                <button
-                                  style={{
-                                    color: "white",
-                                    backgroundColor: "#45629f",
-                                  }}
-                                  className="border p-2">
-                                  <i
-                                    class="fab fa-facebook-f"
-                                    aria-hidden="true"></i>{" "}
-                                  Facebook
-                                </button>
-                              </a>
+                              <i class="far fa-user"></i>BY {berita.author}
                             </li>
                             <li>
-                              <a href="#">
-                                <button
-                                  style={{
-                                    color: "white",
-                                    backgroundColor: "#5eb2ef",
-                                  }}
-                                  className="border p-2">
-                                  <i
-                                    class="fab fa-twitter"
-                                    aria-hidden="true"></i>{" "}
-                                  Twitter
-                                </button>
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#">
-                                <button
-                                  style={{
-                                    color: "white",
-                                    backgroundColor: "#cf2830",
-                                  }}
-                                  className="border p-2">
-                                  <i class="fa-brands fa-pinterest"></i> Pin
-                                </button>
-                              </a>
+                              <i class="far fa-calendar-alt"></i>{" "}
+                              <span>
+                                {format(
+                                  new Date(berita.createdDate),
+                                  "dd MMMM yyyy",
+                                  { locale: idLocale }
+                                )}
+                              </span>
                             </li>
                           </ul>
                         </div>
                       </div>
+                    );
+                  })
+                ) : (
+                  <div class="single-blog-inner">
+                    <div class="tag-and-share">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="tags d-inline-block">
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-up"></i>
+                            </button>
+                            <button className="border">
+                              <i class="fa-regular fa-thumbs-down"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                          <div class="blog-share">
+                            <ul>
+                              <li>
+                                <a href="#">
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#45629f",
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      class="fab fa-facebook-f"
+                                      aria-hidden="true"></i>{" "}
+                                    Facebook
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#5eb2ef",
+                                    }}
+                                    className="border p-2">
+                                    <i
+                                      class="fab fa-twitter"
+                                      aria-hidden="true"></i>{" "}
+                                    Twitter
+                                  </button>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="#">
+                                  <button
+                                    style={{
+                                      color: "white",
+                                      backgroundColor: "#cf2830",
+                                    }}
+                                    className="border p-2">
+                                    <i class="fa-brands fa-pinterest"></i> Pin
+                                  </button>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="thumb">
+                      <img
+                        style={{ height: "450px" }}
+                        src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="details">
+                      <h2>
+                        <a href="">Contoh Berita</a>
+                      </h2>
+                      <ul class="blog-meta">
+                        <li>
+                          <i class="far fa-user"></i>BY admin
+                        </li>
+                        <li>
+                          <i class="far fa-calendar-alt"></i> 2023-05-12
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="thumb">
-                    <img
-                      style={{ height: "450px" }}
-                      src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
-                      alt="img"
-                    />
-                  </div>
-                  <div class="details">
-                    <h2>
-                      <a href="">Contoh Berita</a>
-                    </h2>
-                    <ul class="blog-meta">
-                      <li>
-                        <i class="far fa-user"></i>BY admin
-                      </li>
-                      <li>
-                        <i class="far fa-calendar-alt"></i> 2023-05-12
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              )}
-              <Pagination
-                count={paginationInfo.totalPages}
-                color="primary"
-                page={currentPage}
-                onChange={(event, value) => setCurrentPage(value)}
-              />
-            </div>
-            <div class="col-lg-4 col-12">
-              <div className="sidebar-container">
-                <div class="td-sidebar">
-                  <div
-                    class={`widget widget-recent-post`}
-                    style={{ background: "#F1F6F9", overflow: "hidden" }}>
-                    <h4 class="widget-title">Berita Terbaru</h4>
-                    <ul>
-                      {listTerbaru.map((beritaTerbaru) => {
-                        return (
-                          <li>
-                            <div class="media">
-                              <div class="media-left">
-                                <img
-                                  src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                                  style={{ width: "60px" }}
-                                  alt="blog"
-                                />
-                              </div>
-                              <div class="media-body align-self-center">
-                                <h6 class="title">
-                                  <a
-                                    href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>
-                                    {beritaTerbaru.judulBerita}
-                                  </a>
-                                </h6>
-                                <div class="post-info">
-                                  <i class="far fa-calendar-alt"></i>
-                                  <span>
-                                    {format(
-                                      new Date(beritaTerbaru.createdDate),
-                                      "dd MMMM yyyy",
-                                      { locale: idLocale }
-                                    )}
-                                  </span>
+                )}
+                <Pagination
+                  count={paginationInfo.totalPages}
+                  color="primary"
+                  page={currentPage}
+                  onChange={(event, value) => setCurrentPage(value)}
+                />
+              </div>
+              <div data-aos="fade-left" class="col-lg-4 col-12">
+                <div className="sidebar-container">
+                  <div class="td-sidebar">
+                    <div
+                      class={`widget widget-recent-post`}
+                      style={{ background: "#F1F6F9", overflow: "hidden" }}>
+                      <h4 class="widget-title">Berita Terbaru</h4>
+                      <ul>
+                        {listTerbaru.map((beritaTerbaru) => {
+                          return (
+                            <li>
+                              <div class="media">
+                                <div class="media-left">
+                                  <img
+                                    src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                                    style={{ width: "60px" }}
+                                    alt="blog"
+                                  />
+                                </div>
+                                <div class="media-body align-self-center">
+                                  <h6 class="title">
+                                    <a
+                                      href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>
+                                      {beritaTerbaru.judulBerita}
+                                    </a>
+                                  </h6>
+                                  <div class="post-info">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>
+                                      {format(
+                                        new Date(beritaTerbaru.createdDate),
+                                        "dd MMMM yyyy",
+                                        { locale: idLocale }
+                                      )}
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                  <div
-                    class="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
-                    <h4 class="widget-title">Arsip</h4>
-                    <ul class="catagory-items">
-                      {archivingMonths.map((monthData) => {
-                        const tahun_bulan = `${monthData.year}-${monthData.month}`;
-                        const totalData = monthlyTotal[tahun_bulan] || 0;
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                    <div
+                      class="widget widget_catagory"
+                      style={{ background: "#F1F6F9" }}>
+                      <h4 class="widget-title">Arsip</h4>
+                      <ul class="catagory-items">
+                        {archivingMonths.map((monthData) => {
+                          const tahun_bulan = `${monthData.year}-${monthData.month}`;
+                          const totalData = monthlyTotal[tahun_bulan] || 0;
 
-                        return (
-                          <li key={`${tahun_bulan}`}>
-                            <a href={`/rekap/berita/${tahun_bulan}`}>
-                              <i class="fa-solid fa-file"></i> {monthData.label}{" "}
-                              {monthData.year} ({totalData})
-                            </a>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                          return (
+                            <li key={`${tahun_bulan}`}>
+                              <a href={`/rekap/berita/${tahun_bulan}`}>
+                                <i class="fa-solid fa-file"></i>{" "}
+                                {monthData.label} {monthData.year} ({totalData})
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </div>
+                    <Bawaslu />
                   </div>
-                  <Bawaslu />
                 </div>
               </div>
             </div>

@@ -115,7 +115,8 @@ function CategoryBerita() {
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div
+          data-aos="fade-right" className="col-lg-8">
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
                 {list.length > 0
                   ? list[0].categoryBerita.category
@@ -247,7 +248,8 @@ function CategoryBerita() {
                 );
               })}
             </div>
-            <div className="col-lg-4 col-12">
+            <div
+          data-aos="fade-left" className="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div className="td-sidebar">
                   <Bawaslu />

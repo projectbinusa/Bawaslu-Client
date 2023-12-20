@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
+import AOS from 'aos';
 
 
 function IsiRekap() {
@@ -50,6 +51,7 @@ function IsiRekap() {
 
   useEffect(() => {
     getAllRelatedPost();
+    AOS.init()
   }, []);
 
   return (
@@ -59,12 +61,14 @@ function IsiRekap() {
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div
+          data-aos="fade-right" className="col-lg-8">
               <div className="single-blog-inner">
                 <div className="tag-and-share">
                   <div className="row">
                     <div className="col-sm-7"></div>
-                    <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                    <div
+          data-aos="fade-right" className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
                       <div className="blog-share">
                         <ul>
                           <li>
@@ -169,7 +173,8 @@ function IsiRekap() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-12">
+            <div
+          data-aos="fade-left" className="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div className="td-sidebar">
                   <div

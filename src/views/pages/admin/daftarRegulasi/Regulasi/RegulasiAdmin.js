@@ -228,7 +228,6 @@ function MenuRegulasi() {
                           >
                             <i className="fa-solid fa-trash"></i>
                           </button>
-
                         </td>
                       </tr>
                     );

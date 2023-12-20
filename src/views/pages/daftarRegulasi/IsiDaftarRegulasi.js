@@ -11,6 +11,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import { Pagination } from "@mui/material";
 import jsPDF from "jspdf";
+import AOS from 'aos'
 
 function IsiDaftarRegulasi() {
   const param = useParams();
@@ -63,6 +64,7 @@ function IsiDaftarRegulasi() {
   };
 
   useEffect(() => {
+    AOS.init()
     getMenuRegulasi();
   }, []);
 
@@ -91,14 +93,19 @@ function IsiDaftarRegulasi() {
         <div className="container">
         <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-7 col-md-10">
-              <div className="section-title text-center">
+              <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="section-title text-center">
                 <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 className="title">{jenisRegulasi}</h2>
               </div>
             </div>
           </div>
           <div className="d-lg-flex gap-5">
-            <div className="isotope-filters project-isotope-btn text-left mb-5">
+            <div style = {{background:"white", borderRadius:"7px", height:"fit-content", minWidth:"265px"}}
+              data-aos="fade-right" className="bg-body-tertiary shadow isotope-filters project-isotope-btn text-left mb-5">
+                <div className="bg-primary" style={{borderTopLeftRadius:"7px",borderTopRightRadius:"7px"}}>
+              <h5 className="title fw-bold p-3 text-white">Menu Regulasi</h5></div>
+                <div style = {{padding : "7px"}}>
               {list.map((menu) => (
                 <button
                   key={menu.id}
@@ -111,9 +118,11 @@ function IsiDaftarRegulasi() {
                   {menu.menuRegulasi}
                 </button>
               ))}
+              </div>
             </div>
             {list.map((menu) => (
               <div
+              data-aos="fade-left"
                 className="card mb-4 shadow"
                 id="table1"
                 style={{

@@ -72,6 +72,7 @@ function DetailPermohonanKeberatan() {
               <div className="card-body">
                 {fotoIdentitas === null ? (
                   <img
+                  style={{ maxWidth: "400px", maxHeight: "400px" }}
                     className="rounded w-75 d-block mr-auto ml-auto"
                     src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
                   />
