@@ -1,11 +1,12 @@
 .div {
-  background-image: url(https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db);
+  padding: 20px;
+  background-image:url(https://media.istockphoto.com/id/1473121061/vector/vector-illustration-with-blue-curves-overlapping-background-margins-and-gradient-waves-and.jpg?s=612x612&w=0&k=20&c=Mp7wTkbVW2opnPEA-UzZvt8yjYMKo12Bkv7LHApDXqY=) ;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .vid {
   display: flex;
-  padding: 25px;
+  padding: 55px;
   align-items: center;
   justify-content: center;
   gap: 50px;
