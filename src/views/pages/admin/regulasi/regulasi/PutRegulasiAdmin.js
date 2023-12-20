@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
@@ -10,17 +9,17 @@ import axios from "axios";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
 
-function PutDip() {
+function PutRegulasiAdmin() {
   const [link, setLink] = useState("");
   const [namaDokumen, setNamaDokumen] = useState("");
-  const [daftarDip, setDaftarDip] = useState("");
+  const [daftarRegulasi, setDaftarRegulasi] = useState("");
   const history = useHistory();
   const { id } = useParams();
 
   const getById = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/tabel-dip/get/${id}`,
+        `${API_DUMMY}/bawaslu/api/tabel-regulasi/get/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -31,9 +30,9 @@ function PutDip() {
       const data = response.data.data;
       console.log(data);
 
-      setNamaDokumen(data.namadokumen || "");
+      setNamaDokumen(data.namaDokumen || "");
       setLink(data.pdfDokumen || "");
-      setDaftarDip(data.daftarDip || "");
+      setDaftarRegulasi(data.daftarRegulasi || "");
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
@@ -47,9 +46,9 @@ function PutDip() {
     e.preventDefault();
     try {
       await axios.put(
-        `${API_DUMMY}/bawaslu/api/tabel-dip/put/${id}`,
+        `${API_DUMMY}/bawaslu/api/tabel-regulasi/put/${id}`,
         {
-          daftarDip: daftarDip,
+          daftarRegulasi: daftarRegulasi,
           namaDokumen: namaDokumen,
           pdfDokumen: link,
         },
@@ -68,7 +67,7 @@ function PutDip() {
       });
 
       setTimeout(() => {
-        history.push("/dip-admin");
+        history.push("/regulasi-admin");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -90,16 +89,24 @@ function PutDip() {
                 <div className="row">
                   <div className="mb-3 col-lg-6">
                     <label className="form-label  font-weight-bold ">
-                      Daftar DIP
+                      Daftar Regulasi
                     </label>
                     <select
                       className="form-control"
                       aria-label="Small select example"
-                      value={daftarDip}
-                      onChange={(e) => setDaftarDip(e.target.value)}
+                      value={daftarRegulasi}
+                      onChange={(e) => setDaftarRegulasi(e.target.value)}
                     >
-                      <option>PIlih Daftar DIP</option>
-                      <option value="SK DIP">SK DIP</option>
+                        <option>PIlih Daftar Regulasi</option>
+                        <option value="Undang-Undang">Undang-Undang</option>;
+                        <option value="Peraturan Pemerintah">Peraturan Pemerintah</option>;
+                        <option value="Peraturan Mahkamah Agung">Peraturan Mahkamah Agung</option>;
+                        <option value="Peraturan Komisi Informasi">Peraturan Komisi Informasi</option>;
+                        <option value="Peraturan Menteri">Peraturan Menteri</option>;
+                        <option value="Perbawaslu">Perbawaslu</option>;
+                        <option value="Penetapan PPID">Penetapan PPID</option>;
+                        <option value="Surat Edaran">Surat Edaran</option>;
+                        <option value="Instruksi Kabupaten">Instruksi Kabupaten</option>;
                     </select>
                   </div>
                   <div className="mb-3 col-lg-6">
@@ -107,7 +114,7 @@ function PutDip() {
                       for="exampleInputEmail1"
                       className="form-label  font-weight-bold "
                     >
-                      Nama Dokumen DIP
+                      Nama Dokumen Regulasi
                     </label>
                     <input
                       value={namaDokumen}
@@ -135,7 +142,7 @@ function PutDip() {
                   <button type="button" className="btn-danger mt-3">
                     <a
                       style={{ color: "white", textDecoration: "none" }}
-                      href="/dip-admin"
+                      href="/regulasi-admin"
                     >
                       Batal
                     </a>
@@ -153,4 +160,4 @@ function PutDip() {
   );
 }
 
-export default PutDip;
+export default PutRegulasiAdmin;
