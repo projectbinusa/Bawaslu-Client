@@ -38,7 +38,6 @@ function InformasiBerkala() {
                   className="col-5 btn btn-primary text-center d-flex align-items-center px-2"
                   href="/informasi-berkala-kepemiluan"
                 >
-                  <span className="mx-auto">Kepemiluan</span>
                   <span className="mx-auto kelembagaan-btn">Kepemiluan</span>
                 </a>
                 <div className="col-2 text-center text-white"></div>
@@ -47,7 +46,7 @@ function InformasiBerkala() {
                   className="col-5 btn btn-primary text-center d-flex align-items-center px-2"
                   href="/informasi-berkala-kelembagaan"
                 >
-                  <span className="mx-auto">Kelembagaan</span>
+                  <span className="mx-auto kelambagaan-btn">Kelembagaan</span>
                 </a>
               </div>
             </div>
