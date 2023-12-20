@@ -1,14 +1,19 @@
 import React from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
+import AOS from 'aos';
+import { useEffect } from "react";
 
 function PenyelesaianSengketa() {
+  useEffect(() => {
+    AOS.init()
+  })
   return (
     // <!-- service area-5 start -->
     <>
       <Navbar />
       {/* <!-- page title start --> */}
-      
+
       {/* <!-- page title end --> */}
       <div
         className="service-area-5 pd-top-120 pd-bottom-120 service-area bg-relative pd-top-60 pd-bottom-90"
@@ -32,7 +37,8 @@ function PenyelesaianSengketa() {
         <div className="container">
           <div className="section-title">
             <div className="row justify-content-center">
-              <div className="col-lg-6 col-md-8">
+              <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-6 col-md-8">
                 <h5 id="text1-gabung" className="sub-title double-line" style={{ marginLeft: "35%" }}>
                   Bawaslu Boyolali
                 </h5>
@@ -44,7 +50,8 @@ function PenyelesaianSengketa() {
             </div>
           </div>
           <div className="row justify-content-center">
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
@@ -74,7 +81,8 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
@@ -104,7 +112,8 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
@@ -134,7 +143,8 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img
@@ -167,7 +177,8 @@ function PenyelesaianSengketa() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
               <div className="single-service-inner style-5 text-center" style={{height:"430px"}}>
                 <div className="thumb">
                   <img

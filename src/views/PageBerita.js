@@ -17,6 +17,7 @@ import {
 } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
+import AOS from "aos";
 
 function PageBerita() {
   const [judulBerita, setJudulBerita] = useState("");
@@ -74,6 +75,7 @@ function PageBerita() {
 
   useEffect(() => {
     getAll();
+    AOS.init();
   }, []);
 
   return (
@@ -82,7 +84,7 @@ function PageBerita() {
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8">
+            <div data-aos="fade-right" class="col-lg-8">
               <div class="single-blog-inner">
                 <div class="tag-and-share">
                   <div class="row">
@@ -97,19 +99,16 @@ function PageBerita() {
                               url={`https://bawaslu.excellentsistem.com/page-berita/${judulBerita}/${id}`}
                               media={image}
                               description={judulBerita}
-                              quote={judulBerita}
-                            >
+                              quote={judulBerita}>
                               <button
                                 style={{
                                   color: "white",
                                   backgroundColor: "#45629f",
                                 }}
-                                className="border p-2"
-                              >
+                                className="border p-2">
                                 <i
                                   className="fab fa-facebook-f"
-                                  aria-hidden="true"
-                                ></i>{" "}
+                                  aria-hidden="true"></i>{" "}
                                 Facebook
                               </button>
                             </FacebookShareButton>
@@ -119,19 +118,16 @@ function PageBerita() {
                               url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
                               media={image}
                               description={judulBerita}
-                              quote={judulBerita}
-                            >
+                              quote={judulBerita}>
                               <button
                                 style={{
                                   color: "white",
                                   backgroundColor: "#5eb2ef",
                                 }}
-                                className="border p-2"
-                              >
+                                className="border p-2">
                                 <i
                                   className="fab fa-twitter"
-                                  aria-hidden="true"
-                                ></i>{" "}
+                                  aria-hidden="true"></i>{" "}
                                 Twitter
                               </button>
                             </TwitterShareButton>
@@ -141,16 +137,14 @@ function PageBerita() {
                               url={`https://bawaslu.excellentsistem.com/category-berita/${judulBerita}/${id}`}
                               quote={judulBerita}
                               media={image}
-                              description={judulBerita}
-                            >
+                              description={judulBerita}>
                               <button
                                 style={{
                                   color: "white",
                                   backgroundColor: "#cf2830",
                                   width: "90px",
                                 }}
-                                className="border p-2"
-                              >
+                                className="border p-2">
                                 <i className="fa-brands fa-pinterest"></i> Pin
                               </button>
                             </PinterestShareButton>
@@ -172,9 +166,7 @@ function PageBerita() {
                   )}
                 </div>
                 <div class="details">
-                  <h2>
-                    {judulBerita}
-                  </h2>
+                  <h2>{judulBerita}</h2>
                   <ul class="blog-meta">
                     <li>
                       <i class="far fa-user"></i>By {author}
@@ -206,8 +198,7 @@ function PageBerita() {
                           <div class="media-body">
                             <p>
                               <a
-                                href={`/page-isi-berita/${category.author}/${category.id}`}
-                              >
+                                href={`/page-isi-berita/${category.author}/${category.id}`}>
                                 {category.judulBerita}{" "}
                               </a>
                             </p>
@@ -223,7 +214,7 @@ function PageBerita() {
               </div>
               <hr />
             </div>
-            <div class="col-lg-4 col-12">
+            <div data-aos="fade-left" class="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div class="td-sidebar">
                   <Bawaslu />

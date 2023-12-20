@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import "../../../css/FormPermohonanInformasi.css";
 import info from "../../../aset/undraw_settings_tab_mgiw.svg";
@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { async } from "q";
+import AOS from 'aos';
 
 const FormPermohonanInformasi = () => {
   const [alamatPemohon, setAlamatPemohon] = useState("");
@@ -74,52 +75,17 @@ const FormPermohonanInformasi = () => {
     }
   };
 
-  // const add = async (e) => {
-  //   e.preventDefault();
-
-  //   const formData = new FormData();
-  //   formData.append("nama", nama);
-  //   formData.append("alamat", alamatPermohonan);
-  //   formData.append("pendidikan", pendidikan);
-  //   formData.append("noHp", noHp);
-  //   formData.append("tujuanInformasi", tujuanInformasi);
-  //   formData.append("rincianInformasi", rincianInformasi);
-  //   formData.append("pekerjaan", pekerjaan);
-  //   formData.append("ditunjukanKepada", ditunjukanKepada);
-  //   formData.append("caraMemperolehInformasi", caraMemperolehInformasi);
-  //   formData.append("caraMendapatkanInformasi", caraMendapatkanInformasi);
-  //   formData.append("file", tandaPengenal); // Upload gambar jika dipilih
-
-  //   try {
-  //     await axios.post(
-  //       `${API_DUMMY}/bawaslu/api/permohonan-informasi/add`,
-  //       formData,
-  //       {
-  //         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-  //       }
-  //     );
-
-  //     setShow(false);
-  //     Swal.fire({
-  //       icon: "success",
-  //       title: "Berhasil Ditambahkan",
-  //       showConfirmButton: false,
-  //       timer: 1500,
-  //     });
-  //     setTimeout(() => {
-  //       window.location.reload();
-  //     }, 1500);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+useEffect(() => {
+  AOS.init()
+})
 
   return (
     <>
       <div>
         <Navbar />
         <div className="head">
-          <div className="form text-center">
+          <div data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom" className="form text-center">
             <div className="form-permohonan section-title text-center">
               <h5
                 id="text1-gabung"
@@ -139,7 +105,8 @@ const FormPermohonanInformasi = () => {
           </div>
           <form onSubmit={Add} className="option" style={{}}>
             <div>
-              <div>
+              <div
+              data-aos="fade-right">
                 <label
                   for="exampleInputPassword1"
                   className="form-label font-weight-bold"
@@ -254,7 +221,8 @@ const FormPermohonanInformasi = () => {
                 <br></br> */}
               </div>
             </div>
-            <div className="tujuan">
+            <div
+              data-aos="fade-left" className="tujuan">
               <label
                 for="exampleInputPassword1"
                 className="form-label font-weight-bold"

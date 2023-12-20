@@ -100,13 +100,12 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
-import RekapBerita from "./views/pages/rekap_berita/RekapBerita";
+
+import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
+import DetailBerita from "./views/pages/admin/berita/DetailBerita";
+import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
 import InformasiBerkalaKelembagaan from "./views/pages/informasi/InformasiBerkalaKelembagaan";
 import InformasiBerkalaKepemiluan from "./views/pages/informasi/InformasiBerkalaKepemiluan";
-import DetailBerita from "./views/pages/admin/berita/DetailBerita";
-import AddIsiInformasi from "./views/pages/admin/informasi/AddInformasi";
-import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
 import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
@@ -117,7 +116,8 @@ import AdminKanal from "./views/pages/admin/AdminKanal";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
-import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
+import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
+
 
 // test
 
@@ -127,7 +127,6 @@ import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegula
 // import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
 // import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
 // import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
-
 // import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 // import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 // import AddKanal from "./views/pages/admin/Add/AddKanal";
@@ -135,7 +134,7 @@ import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegula
 
 // ADMIN MENU REGULASI
 import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
-// END ADMIN MENU REGULASI 
+// END ADMIN MENU REGULASI
 
 function App() {
   return (
@@ -258,9 +257,8 @@ function App() {
           <Route
             path="/daftar-regulasi/:jenisRegulasi/:id"
             component={IsiDaftarRegulasi}
+            exact
           />
-          <Route path="/regulasi" component={Regulasi} exact />
-          <Route path="/dip" component={Dip} exact />
 
           {/* admin */}
 
@@ -366,6 +364,16 @@ function App() {
           <PrivateRoute
             path="/adminn-permohonan-informasi"
             component={AdminPermohonanInformasi}
+            exact
+          />
+          <PrivateRoute
+            path="/detail/permohonan-informasi/:id"
+            component={DetailPermohonanInformasi}
+            exact
+          />
+          <PrivateRoute
+            path="/detail/permohonan-keberatan/:id"
+            component={DetailPermohonanKeberatan}
             exact
           />
           <PrivateRoute

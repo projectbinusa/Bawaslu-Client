@@ -71,6 +71,7 @@ function DetailPermohonanInformasi() {
               <div className="card-body">
                 {fotoIdentitas === null ? (
                   <img
+                  style={{ maxWidth: "400px", maxHeight: "400px" }}
                     className="rounded d-block w-100 mr-auto ml-auto"
                     src="https://cdn.icon-icons.com/icons2/2506/PNG/512/user_icon_150670.png"
                   />
