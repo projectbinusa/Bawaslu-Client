@@ -226,7 +226,7 @@ function Sidebar() {
               <li>
                 <a
                   style={{ textDecoration: "none" }}
-                  href="/adminn-permohonan-informasi"
+                  href="/regulasi-admin"
                 >
                   <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
                   Regulasi
@@ -244,7 +244,7 @@ function Sidebar() {
               <li>
                 <a
                   style={{ textDecoration: "none" }}
-                  href="/admin-permohonan-keberatan"
+                  href="/sop-admin"
                 >
                   <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
                   SOP
