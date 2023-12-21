@@ -117,21 +117,6 @@ import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan
 import AddKanal from "./views/pages/admin/Add/AddKanal";
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 
-
-// test
-
-// lllll
-// import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-// import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
-// import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-// import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
-// import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
-// import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
-// import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
-// import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
-// import AddKanal from "./views/pages/admin/Add/AddKanal";
-// import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
-
 // ADMIN MENU REGULASI
 import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
 import AdminSop from "./views/pages/admin/regulasi/sop/AdminSop";
