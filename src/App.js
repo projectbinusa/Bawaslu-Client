@@ -115,23 +115,7 @@ import AdminKanal from "./views/pages/admin/AdminKanal";
 import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
 import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
 import AddKanal from "./views/pages/admin/Add/AddKanal";
-
-// test
-
-// lllll
-// import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-// import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
-// import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-import AdminSetiapSaat from "./views/pages/admin/AdminSetiapSaat";
-// import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
-// import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
-import AdminBerkalaKepemiluan from "./views/pages/admin/AdminBerkalaKepemiluan";
-import AdminBerkalaKelembagaan from "./views/pages/admin/AdminBerkalaKelembagaan";
-import AdminKanal from "./views/pages/admin/AdminKanal";
-// import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
-// import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
-// import AddKanal from "./views/pages/admin/Add/AddKanal";
-// import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
+import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 
 // ADMIN MENU REGULASI
 import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
