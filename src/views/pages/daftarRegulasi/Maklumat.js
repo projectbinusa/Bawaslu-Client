@@ -16,6 +16,11 @@ function Maklumat() {
           backgroundSize: "cover",
         }}
       >
+       <img
+          className="shape-left-top top_image_bounce"
+          src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
+          alt="img"
+        />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
@@ -63,7 +68,7 @@ function Maklumat() {
               </p>
             </div>
           </div>
-        </div>
+        </div>     
       </div>
       <Footer />
     </>
