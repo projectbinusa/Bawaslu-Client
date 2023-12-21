@@ -127,6 +127,9 @@ import AddRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/AddRegulasiA
 import PutDip from "./views/pages/admin/regulasi/dip/PutDip";
 import PutSop from "./views/pages/admin/regulasi/sop/PutSop";
 import PutRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/PutRegulasiAdmin";
+import RegulasiPublic from "./views/pages/regulasi/RegulasiPublic";
+import DipPublic from "./views/pages/regulasi/DipPublic";
+import SopPublic from "./views/pages/regulasi/SopPublic";
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -609,7 +612,7 @@ function App() {
           />
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
 
-          {/* admin menu regulasi */}
+          {/* ADMIN MENU REGULASI */}
           {/* dip */}
           <Route path="/dip-admin" component={AdminDip} exact />
           <Route path="/add-dip-admin" component={AddDip} exact />
@@ -627,7 +630,13 @@ function App() {
             exact
           />
           <Route path="/put-admin/regulasi/:id" component={PutRegulasiAdmin} exact />
-          {/* end admin menu regulasi */}
+          {/* END ADMIN MENU REGULASI */}
+
+          {/* PUBLIC MENU REGULASI */}
+          <Route path="/regulasi-public" component={RegulasiPublic} exact />
+          <Route path="/dip-public" component={DipPublic} exact />
+          <Route path="/sop-public" component={SopPublic} exact />
+          {/* END PUBLIC MENU REGULASI */}
         </Switch>
       </main>
     </BrowserRouter>
