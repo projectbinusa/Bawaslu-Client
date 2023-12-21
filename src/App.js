@@ -100,7 +100,6 @@ import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
 import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
-
 import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
 import DetailBerita from "./views/pages/admin/berita/DetailBerita";
 import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
@@ -118,22 +117,16 @@ import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan
 import AddKanal from "./views/pages/admin/Add/AddKanal";
 import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
 
-
-// test
-
-// lllll
-// import PutIsiInformasi from "./views/pages/admin/PutIsiInformasi";
-// import AdminSertaMerta from "./views/pages/admin/AdminSertaMerta";
-// import InformasiBerkala from "./views/pages/informasi/InformasiBerkala";
-// import AddSertaMerta from "./views/pages/admin/Add/AddSertaMerta";
-// import AddSetiapSaat from "./views/pages/admin/Add/AddSetiapSaat";
-// import AddBerkalaKepemiluan from "./views/pages/admin/Add/AddBerkalaKepemiluan";
-// import AddBerkalaKelembagaan from "./views/pages/admin/Add/AddBerkalaKelembagaan";
-// import AddKanal from "./views/pages/admin/Add/AddKanal";
-// import IsiDaftarRegulasi from "../src/views/pages/daftarRegulasi/IsiDaftarRegulasi";
-
 // ADMIN MENU REGULASI
 import AdminDip from "./views/pages/admin/regulasi/dip/AdminDip";
+import AdminSop from "./views/pages/admin/regulasi/sop/AdminSop";
+import AdminRegulasi from "./views/pages/admin/regulasi/regulasi/AdminRegulasi";
+import AddSop from "./views/pages/admin/regulasi/sop/AddSop";
+import AddDip from "./views/pages/admin/regulasi/dip/AddDip";
+import AddRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/AddRegulasiAdmin";
+import PutDip from "./views/pages/admin/regulasi/dip/PutDip";
+import PutSop from "./views/pages/admin/regulasi/sop/PutSop";
+import PutRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/PutRegulasiAdmin";
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -263,7 +256,7 @@ function App() {
           {/* admin */}
 
           {/* admin informasi */}
-          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
+          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
           <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
           <Route
             path="/admin-berkala-kepemiluan"
@@ -275,7 +268,7 @@ function App() {
             component={AdminBerkalaKelembagaan}
             exact
           />
-          <Route path="/admin-kanal" component={AdminKanal} exact />
+          <Route path="/admin-kanal" component={AdminKanal} exact /> */}
 
           {/* tambah dan ubah data informasi */}
           <Route
@@ -617,7 +610,23 @@ function App() {
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />
 
           {/* admin menu regulasi */}
+          {/* dip */}
           <Route path="/dip-admin" component={AdminDip} exact />
+          <Route path="/add-dip-admin" component={AddDip} exact />
+          <Route path="/put-admin/dip/:id" component={PutDip} exact />
+
+          {/* sop */}
+          <Route path="/sop-admin" component={AdminSop} exact />
+          <Route path="/add-sop-admin" component={AddSop} exact />
+          <Route path="/put-admin/sop/:id" component={PutSop} exact />
+          {/* regulasi */}
+          <Route path="/regulasi-admin" component={AdminRegulasi} exact />
+          <Route
+            path="/add-regulasi-admin"
+            component={AddRegulasiAdmin}
+            exact
+          />
+          <Route path="/put-admin/regulasi/:id" component={PutRegulasiAdmin} exact />
           {/* end admin menu regulasi */}
         </Switch>
       </main>

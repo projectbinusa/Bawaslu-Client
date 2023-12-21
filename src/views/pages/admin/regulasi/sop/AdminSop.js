@@ -7,21 +7,21 @@ import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
 
-function AdminDip() {
+function AdminSop() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({});
   const [searchTerm, setSearchTerm] = useState("");
   const [tableData, setTableData] = useState([]);
-  const [default1, setDefault] = useState("SK DIP");
+  const [default1, setDefault] = useState("SOP");
 
   const { id } = useParams();
 
-  const getByDaftarDip = async () => {
+  const getByDaftarSop = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/tabel-dip/all-terbaru?daftarDip=${default1}&page=0&size=100&sortBy=created_date&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/tabel-sop/all-terbaru?daftarSop=${default1}&page=0&size=100&sortBy=created_date&sortOrder=asc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -37,7 +37,7 @@ function AdminDip() {
         setPaginationInfo(result.data);
 
         const filteredData = selectedDataItem.filter((item) =>
-          String(item.namadokumen)
+          String(item.namaDokumen)
             .toLowerCase()
             .includes(searchTerm.toLowerCase())
         );
@@ -46,18 +46,18 @@ function AdminDip() {
         setCurrentPage(1);
       } else {
         console.error("Error fetching data:", result.message);
-        setTableData([{ namadokumen: "Default Document" }]);
+        setTableData([{ namaDokumen: "Default Document" }]);
         setCurrentPage(1);
       }
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
-      setTableData([{ namadokumen: "Default Document" }]);
+      setTableData([{ namaDokumen: "Default Document" }]);
       setCurrentPage(1);
     }
   };
 
   useEffect(() => {
-    getByDaftarDip();
+    getByDaftarSop();
   }, []);
 
   const handleChange = async (event) => {
@@ -67,14 +67,14 @@ function AdminDip() {
     if (selectedId) {
       fetchData(selectedId, 1, searchTerm);
     } else {
-      console.log("Pilih Daftar DIP Terlebih Dahulu!");
+      console.log("Pilih Daftar SOP Terlebih Dahulu!");
       setTableData([]);
     }
   };
 
   const fetchData = async (selected, page, searchTerm) => {
     const response = await fetch(
-      `${API_DUMMY}/bawaslu/api/tabel-dip/all-terbaru?daftarDip=${selected}&page=${
+      `${API_DUMMY}/bawaslu/api/tabel-sop/all-terbaru?daftarSop=${selected}&page=${
         page - 1
       }&size=10&sortBy=created_date&sortOrder=asc`
     );
@@ -115,7 +115,7 @@ function AdminDip() {
       confirmButtonText: "Hapus",
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`${API_DUMMY}/bawaslu/api/tabel-dip/delete/` + id, {
+        axios.delete(`${API_DUMMY}/bawaslu/api/tabel-sop/delete/` + id, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -141,7 +141,7 @@ function AdminDip() {
           <div id="container" className="container mt-3 app-main__outer">
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Admin DIP
+                Admin SOP
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
@@ -149,7 +149,7 @@ function AdminDip() {
                     onChange={handleChange}
                   >
                     <option disabled>Pilih Jenis Informasi</option>
-                    <option value="SK DIP">SK DIP</option>;
+                    <option value="SOP">SOP</option>;
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -162,7 +162,7 @@ function AdminDip() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/add-dip-admin"
+                          href="/add-sop-admin"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
@@ -185,7 +185,7 @@ function AdminDip() {
                         <th scope="col" className="text-center">
                           No
                         </th>
-                        <th scope="col" className="text-center">
+                        <th scope="col">
                           Dokumen
                         </th>
                         <th scope="col" className="text-center">
@@ -194,12 +194,12 @@ function AdminDip() {
                       </tr>
                     </thead>
                     <tbody>
-                      {tableData.map((dip, index) => (
+                      {tableData.map((sop, index) => (
                         <tr key={index}>
                           <td data-label="No" className="text-center">
                             {(currentPage - 1) * 10 + index + 1}
                           </td>
-                          <td data-label="Dokumen">{dip.namadokumen}</td>
+                          <td data-label="Dokumen">{sop.namaDokumen}</td>
                           <td data-label="Aksi : " className="pt-3 pb-3 aksi">
                             <div className="d-flex justify-content-center">
                               <a
@@ -207,7 +207,7 @@ function AdminDip() {
                                   color: "white",
                                   textDecoration: "none",
                                 }}
-                                href={`/put-admin/dip/${dip.id}`}
+                                href={`/put-admin/sop/${sop.id}`}
                               >
                                 <button
                                   type="button"
@@ -218,7 +218,7 @@ function AdminDip() {
                               </a>
                               <button
                                 type="button"
-                                onClick={() => deleteData(dip.id)}
+                                onClick={() => deleteData(sop.id)}
                                 className="mr-2 btn-danger btn-sm"
                               >
                                 <i className="fa-solid fa-trash"></i>
@@ -249,4 +249,4 @@ function AdminDip() {
   );
 }
 
-export default AdminDip;
+export default AdminSop;

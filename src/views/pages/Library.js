@@ -107,7 +107,7 @@ function Library() {
                   </h3>
 
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 1</p>
-                  <div className="buletin" style={{marginTop: "55px"}}>
+                  <div id="btn-1" className="buletin">
                   <a
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-1-depan-212x300-1.jpg"
@@ -137,8 +137,9 @@ function Library() {
                   </h3>
 
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 2</p>
-                  <div className="buletin" style={{marginTop: "55px"}}>
+                  <div  id="btn-2" className="buletin" >
                   <a
+
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-2-depan-212x300-1.jpg"
                   >
@@ -167,7 +168,7 @@ function Library() {
                   </h3>
 
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 3</p>
-                  <div className="buletin" style={{marginTop: "55px"}}>
+                  <div  id="btn-3" className="buletin">
                   <a
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-3-depan-212x300-1.jpg"
@@ -197,7 +198,7 @@ function Library() {
                   </h3>
 
                   <p>Buletin Bawaslu Kabupaten Boyolali Edisi 4</p>
-                  <div className="buletin" style={{marginTop: "55px"}}>
+                  <div id="btn-4" className="buletin">
                   <a
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/buletin-edisi-4-depan-212x300-1.jpg"
@@ -227,7 +228,7 @@ function Library() {
                   </h3>
 
                   <p>Jejak Pengawasan Catatan Pengawas Pemilu 2019</p>
-                  <div className="buletin" style={{marginTop: "40px"}}>
+                  <div  id="btn-5" className="buletin">
                   <a
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Jejak-Pengawasan-depan-212x300-1.jpg"
@@ -261,13 +262,14 @@ function Library() {
                     Napak Tilas | Sejarah Pengawasan Pemilihan Umum Kab.
                     Boyolali
                   </p>
-                  <div style={{ marginTop:  "40px"}}>
+                  <div
+                  id="btn-6" >
 
                   <a
                     className="btn-primary" style={{borderRadius: "100%", padding: "15px",}}
                     href="https://boyolali.bawaslu.go.id/cepogo/2023/09/Napak-Tilas-Depan-212x300-1.jpg"
                   >
-                    <i className="fa fa-arrow-right"></i>
+                      <i className="fa fa-arrow-right"></i>
                   </a>
                   </div>
                 </div>
