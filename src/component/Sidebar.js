@@ -49,7 +49,6 @@ function Sidebar() {
   return (
     <div
       className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header overflow-auto"
-      style={{ height: "100vh" }}
     >
       <div
         className="app-sidebar sidebar-shadow"
