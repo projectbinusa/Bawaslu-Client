@@ -51,11 +51,11 @@ function Kanal() {
                   >
                     <a
                       className="nav-link mb-3 p-3 shadow active"
-                      id="v-pills-home-tab"
+                      id="v-pills-imbauan-tab"
                       data-toggle="pill"
-                      href="#v-pills-home"
+                      href="#v-pills-imbauan"
                       role="tab"
-                      aria-controls="v-pills-home"
+                      aria-controls="v-pills-imbauan"
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -65,11 +65,11 @@ function Kanal() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-profile-tab"
+                      id="v-pills-anggaran-tab"
                       data-toggle="pill"
-                      href="#v-pills-profile"
+                      href="#v-pills-anggaran"
                       role="tab"
-                      aria-controls="v-pills-profile"
+                      aria-controls="v-pills-anggaran"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -79,11 +79,11 @@ function Kanal() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-messages-tab"
+                      id="v-pills-pencegahan-tab"
                       data-toggle="pill"
-                      href="#v-pills-messages"
+                      href="#v-pills-pencegahan"
                       role="tab"
-                      aria-controls="v-pills-messages"
+                      aria-controls="v-pills-pencegahan"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -93,11 +93,11 @@ function Kanal() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-sdm-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-sdm"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-sdm"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -107,11 +107,11 @@ function Kanal() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-hasil-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-hasil"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-hasil"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -121,11 +121,11 @@ function Kanal() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-siaran-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-siaran"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-siaran"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -135,11 +135,11 @@ function Kanal() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-putusan-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-putusan"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-putusan"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -151,7 +151,10 @@ function Kanal() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div style={{}} className="card-header bg-primary text-light">
+                    <div
+                      style={{}}
+                      className="card-header bg-primary text-light"
+                    >
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Kanal Pengawasan Pemilu 2024</h4>
@@ -160,60 +163,60 @@ function Kanal() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white show active p-3"
-                      id="v-pills-home"
+                      id="v-pills-imbauan"
                       role="tabpanel"
-                      aria-labelledby="v-pills-home-tab"
+                      aria-labelledby="v-pills-imbauan-tab"
                     >
                       <Imbauan />
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-profile"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-anggaran"
                       role="tabpanel"
-                      aria-labelledby="v-pills-profile-tab"
+                      aria-labelledby="v-pills-anggaran-tab"
                     >
                       <Anggaran />
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-messages"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-pencegahan"
                       role="tabpanel"
-                      aria-labelledby="v-pills-messages-tab"
+                      aria-labelledby="v-pills-pencegahan-tab"
                     >
                       <PencegahanDanPenanganan />
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-sdm"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-sdm-tab"
                     >
                       <SDMPengawasPemilu />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-hasil"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-hasil-tab"
                     >
                       <HasilPengawasan />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-siaran"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-siaran-tab"
                     >
                       <SiaranPers />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-putusan"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-putusan-tab"
                     >
                       <Putusan />
                     </div>
