@@ -1,19 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
-import gambar from "../../../asset/img/bawaslu(berita).jpeg";
-import axios from "axios";
-import { API_DUMMY } from "../../../utils/base_URL";
-import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
 import OrganisasiDanAdministrasiSetiapSaat from "./tabs/SetiapSaat/OrganisasiDanAdminsitrasiSetiapSaat";
 import PeraturanDanKebijakan from "./tabs/SetiapSaat/PeraturanDanKebijakan";
 import MOU from "./tabs/SetiapSaat/MOU";
-import PemantauPemilu from "./tabs/SetiapSaat/PemantauPemilu";
 import RencanaStrategi from "./tabs/SetiapSaat/RencanaStrategi";
 import MateriRakor from "./tabs/SetiapSaat/MateriRakor";
 import PiagamSetiapSaat from "./tabs/SetiapSaat/PiagamSetiapSaat";
+import PemantauPemilu from "./tabs/SetiapSaat/PemantauPemilu";
 
 function SetiapSaat() {
   return (
@@ -60,11 +54,11 @@ function SetiapSaat() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-profile-tab"
+                      id="v-pills-peraturan-tab"
                       data-toggle="pill"
-                      href="#v-pills-profile"
+                      href="#v-pills-peraturan"
                       role="tab"
-                      aria-controls="v-pills-profile"
+                      aria-controls="v-pills-peraturan"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -88,11 +82,11 @@ function SetiapSaat() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-pemantau-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-pemantau"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-pemantau"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -102,11 +96,11 @@ function SetiapSaat() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-rencana-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-rencana"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-rencana"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -116,11 +110,11 @@ function SetiapSaat() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-materi-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-materi"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-materi"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -130,11 +124,11 @@ function SetiapSaat() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-piagam-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-piagam"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-piagam"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -163,44 +157,52 @@ function SetiapSaat() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-profile"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-peraturan"
                       role="tabpanel"
-                      aria-labelledby="v-pills-profile-tab"
+                      aria-labelledby="v-pills-peraturan-tab"
                     >
                       <PeraturanDanKebijakan />
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-messages"
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
                     >
                       <MOU />
                     </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-pemantau"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-pemantau-tab"
+                    >
+                      <PemantauPemilu />
+                    </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-rencana"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-rencana-tab"
                     >
                       <RencanaStrategi />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-materi"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-materi-tab"
                     >
                       <MateriRakor />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
-                      id="v-pills-settings"
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-piagam"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-piagam-tab"
                     >
                       <PiagamSetiapSaat />
                     </div>

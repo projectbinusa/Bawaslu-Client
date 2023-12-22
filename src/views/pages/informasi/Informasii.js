@@ -87,11 +87,11 @@ function Informasii() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-profile-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-profile"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -101,11 +101,11 @@ function Informasii() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-profile-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-profile"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -115,11 +115,11 @@ function Informasii() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-profile-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-profile"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -129,11 +129,11 @@ function Informasii() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-profile-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-profile"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -162,7 +162,7 @@ function Informasii() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-profile"
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
@@ -171,7 +171,7 @@ function Informasii() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-messages"
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
@@ -180,7 +180,7 @@ function Informasii() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
@@ -188,7 +188,7 @@ function Informasii() {
                       <OrganisasiDanAdministrasi />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
@@ -196,7 +196,7 @@ function Informasii() {
                       <PerselisihanHasilPemilu />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
@@ -204,7 +204,7 @@ function Informasii() {
                       <Sosialisasi />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
