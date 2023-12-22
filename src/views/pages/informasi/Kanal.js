@@ -168,7 +168,7 @@ function Kanal() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-profile"
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
@@ -177,7 +177,7 @@ function Kanal() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-messages"
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
@@ -186,7 +186,7 @@ function Kanal() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
@@ -194,7 +194,7 @@ function Kanal() {
                       <SDMPengawasPemilu />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
@@ -202,7 +202,7 @@ function Kanal() {
                       <HasilPengawasan />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
@@ -210,7 +210,7 @@ function Kanal() {
                       <SiaranPers />
                     </div>
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"

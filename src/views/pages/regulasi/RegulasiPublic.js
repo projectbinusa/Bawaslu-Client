@@ -185,7 +185,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-profile"
                       role="tabpanel"
                       aria-labelledby="v-pills-profile-tab"
@@ -194,7 +194,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-messages"
                       role="tabpanel"
                       aria-labelledby="v-pills-messages-tab"
@@ -203,7 +203,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-settings-tab"
@@ -212,7 +212,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-pm"
                       role="tabpanel"
                       aria-labelledby="v-pills-pm-tab"
@@ -221,7 +221,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-perbawaslu"
                       role="tabpanel"
                       aria-labelledby="v-pills-perbawaslu-tab"
@@ -230,7 +230,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-ppid"
                       role="tabpanel"
                       aria-labelledby="v-pills-ppid-tab"
@@ -239,7 +239,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-se"
                       role="tabpanel"
                       aria-labelledby="v-pills-se-tab"
@@ -248,7 +248,7 @@ function RegulasiPublic() {
                     </div>
 
                     <div
-                      className="tab-pane fade shadow rounded bg-white p-5"
+                      className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-ik"
                       role="tabpanel"
                       aria-labelledby="v-pills-ik-tab"

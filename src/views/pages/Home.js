@@ -1,21 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import banner from "../../aset/banner.jpeg";
 import gudang from "../../aset/gudang.png";
 import formulir from "../../aset/formulir.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import {EffectCoverflow, Pagination, Navigation} from "swiper";
+import slide_image_1 from "../../aset/Bawaslu-RI-300x73-1.png";
+import slide_image_2 from "../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
+import slide_image_3 from "../../aset/KPU-300x73-1.png";
+import slide_image_4 from "../../aset/bawaslu-jateng-300x73-1.png";
+import slide_image_5 from "../../aset/dkpp-300x73-1.png";
+import "../../css/swipper.css";
+// import 'swiper/components/navigation/navigation.scss';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
-import { Pagination } from "@mui/material";
+// import { Pagination } from "@mui/material";
 import "../../css/home.css";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-import AOS from 'aos';
+import AOS from "aos";
+import { Pagination } from "@mui/material";
 
 function Home() {
   const [list, setList] = useState([]);
@@ -95,17 +108,46 @@ function Home() {
     getAllPengumuman();
   }, []);
 
+  const slides = [
+    {
+      title: "Nike",
+      image:
+        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/09/WhatsApp-Image-2020-09-05-at-20.15.11.jpeg",
+      bgColor: "#9FA051",
+    },
+    {
+      title: "Puma",
+      image:
+        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/01/WhatsApp-Image-2020-01-23-at-10.22.53.jpeg",
+      bgColor: "#9B89C5",
+    },
+    { title: "Yeeze", image: "images/yeeze.jpg", bgColor: "#D7A594" },
+  ];
+  const swiper = useRef(null);
+  const currentSlideIndex = useRef(0);
+
+  const handlePrev = () => {
+    currentSlideIndex.current = swiper.current.activeIndex;
+    swiper.current.slidePrev();
+  };
+
+  const handleNext = () => {
+    currentSlideIndex.current = swiper.current.activeIndex;
+    swiper.current.slideNext();
+  };
   return (
     <div>
       <Navbar />
       <div>
-        <div data-aos="zoom-in"
+        <div
+          data-aos="zoom-in"
           className="banner-area banner-area-2 bg-relative "
           style={{
             backgroundImage: `url(${
               listTerbaru.length > 0 && listTerbaru[0].image
             })`,
-          }}>
+          }}
+        >
           <div className="bg-overlay-gradient" />
           <div
             className="banner-bg-img"
@@ -123,7 +165,8 @@ function Home() {
                   <div className="banner-inner">
                     <h1
                       className="sub-title left-border text-primary"
-                      style={{ fontSize: "50px" }}>
+                      style={{ fontSize: "50px" }}
+                    >
                       Berita
                     </h1>
                   </div>
@@ -139,7 +182,8 @@ function Home() {
         {/* intro area start */}
         <div
           className="intro-area mg-top--100 bg-relative"
-          style={{ minHeight: "100ppx" }}>
+          style={{ minHeight: "100ppx" }}
+        >
           <div className="container">
             <div className="row justify-content-center">
               {listTerbaru.slice(1, 4).map((berita, index) => (
@@ -150,7 +194,8 @@ function Home() {
                       background: "#F1F6F9",
                       maxHeight: "200px",
                       minHeight: "200px",
-                    }}>
+                    }}
+                  >
                     <div className="thumb media">
                       <div className="media-left">
                         <i className="fa-solid fa-newspaper"></i>
@@ -169,18 +214,103 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <div className="Container">
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            loop={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+            }}
+            className="swiper_container"
+          >
+            <SwiperSlide>
+              <img
+                src="https://jateng.bawaslu.go.id/wp-content/uploads/2023/04/BENTUK-DARI-SARANA-MARKETING-BAWASLU-BOYOLALI-ADAKAN-PELATIHAN-PEMBUATAN-VIDEO-PELIPUTAN.jpeg"
+                alt="slide_image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-1024x576.jpg"
+                alt="slide_image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/Samakan-Persepsi-Bawaslu-Boyolali-Sambangi-Kapolres-thegem-blog-default.jpeg"
+                alt="slide_image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://jateng.bawaslu.go.id/wp-content/uploads/2023/11/IMG_20231101_160325-scaled-thegem-blog-default.jpg"
+                alt="slide_image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://static.republika.co.id/uploads/images/inpicture_slide/mantan-asn-di-lingkungan-pemkab-boyolali-pernah-dimutasi-berjarak_231124221102-722.jpg"
+                alt="slide_image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://pusdem.lppm.uns.ac.id/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-07-at-18.00.24-1-1024x768.jpeg"
+                alt="slide_image"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src="https://joglosemarnews.com/images/2022/12/2212-bawaslu.jpg"
+                alt="slide_image"
+              />
+            </SwiperSlide>
+
+            {/* <div className="slider-controler">
+              <div className="swiper-button-prev slider-arrow">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </div>
+              <div className="swiper-button-next slider-arrow">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </div>
+              <div className="swiper-pagination"></div>
+            </div> */}
+          </Swiper>
+          <div className="slider-controler">
+        <div className="swiper-button-prev slider-arrow" onClick={handlePrev}>
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+        <div className="swiper-button-next slider-arrow" onClick={handleNext}>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        <div className="swiper-pagination"></div>
+      </div>
+        </div>
         {/* intro area end */}
         <div
           className="container"
-          style={{ marginTop: "30px", marginBottom: "70px" }}>
-          <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" className="section-title text-center">
+          style={{ marginTop: "30px", marginBottom: "70px" }}
+        >
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            className="section-title text-center"
+          >
             <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
             <h2 className="title">Berita Bawaslu</h2>
           </div>
           <div className="row">
             <div
-          data-aos="fade-right" className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
+              data-aos="fade-right"
+              className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5"
+            >
               <ul>
                 {list.map((berita) => (
                   <li key={berita.id}>
@@ -196,7 +326,8 @@ function Home() {
                         BY {berita.author}
                         <h6 className="fs-6 title">
                           <a
-                            href={`/page-isi-berita/${berita.author}/${berita.id}`}>
+                            href={`/page-isi-berita/${berita.author}/${berita.id}`}
+                          >
                             {berita.judulBerita}
                           </a>
                         </h6>
@@ -220,7 +351,8 @@ function Home() {
                 borderRadius: "10px",
                 background: "#F1F6F9",
                 float: "inline-end",
-              }}>
+              }}
+            >
               <h4 className="widget-title">
                 Tautan{" "}
                 <span className="text-primary">
@@ -233,7 +365,8 @@ function Home() {
                   <a
                     href="https://bawaslu.go.id/"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
                       alt=""
@@ -244,7 +377,8 @@ function Home() {
                   <a
                     href="https://dkpp.go.id/"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
                       alt=""
@@ -255,7 +389,8 @@ function Home() {
                   <a
                     href="https://www.mkri.id/"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
                       alt=""
@@ -266,7 +401,8 @@ function Home() {
                   <a
                     href="https://jateng.bawaslu.go.id/"
                     target="_blank"
-                    rel="noopener noreferrer">
+                    rel="noopener noreferrer"
+                  >
                     <img
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
                       alt=""
@@ -286,7 +422,8 @@ function Home() {
             <div
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
-              className="card-header mt-3 d-flex justify-content-center">
+              className="card-header mt-3 d-flex justify-content-center"
+            >
               <Pagination
                 count={paginationInfo.totalPages}
                 page={currentPage}
@@ -309,7 +446,8 @@ function Home() {
             <div
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
-              className="how-it-work-area pd-bottom-115">
+              className="how-it-work-area pd-bottom-115"
+            >
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-6">
@@ -363,7 +501,8 @@ function Home() {
             <div
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
-              className="row justify-content-center">
+              className="row justify-content-center"
+            >
               <div className="col-lg-3 col-md-6">
                 <div id="barito" className="single-service-inner text-center">
                   <div id="" className="details">
@@ -466,14 +605,16 @@ function Home() {
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
-            className="section-title text-center">
+            className="section-title text-center"
+          >
             <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
             <h2 className="title">Pengumuman</h2>
           </div>
           <div class="row">
             <div
               data-aos="fade-right"
-              class="col-xl-8 stretch-card grid-margin">
+              class="col-xl-8 stretch-card grid-margin"
+            >
               <div class="position-relative">
                 <img
                   src={pengumuman.length > 0 && pengumuman[0].image}
@@ -521,7 +662,8 @@ function Home() {
                         <p class="fs-14 m-0 font-weight-bold line-height-sm isiBerita">
                           <a
                             style={{ color: "black", textDecoration: "none" }}
-                            href={"/pengumuman/isi-pengumuman/" + png.id}>
+                            href={"/pengumuman/isi-pengumuman/" + png.id}
+                          >
                             {png.judulPengumuman}
                           </a>
                         </p>
@@ -542,6 +684,7 @@ function Home() {
       <Footer />
     </div>
   );
+  
 }
 
 export default Home;
