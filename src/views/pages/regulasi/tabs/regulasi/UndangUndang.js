@@ -1,23 +1,25 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { API_DUMMY } from "../../../../../utils/base_URL";
 
-function Putusan() {
+function UndangUndang() {
   const [data, setData] = useState(null);
+  const [undang, setUndang] = useState("Undang-Undang");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/46/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          `${API_DUMMY}/bawaslu/api/tabel-regulasi/all-terbaru?daftarRegulasi=${undang}&order=asc&page=0&size=10&sort=created_date`
         );
-        setData(response.data.data); // Mengasumsikan properti data berisi array informasi
+        setData(response.data.data);
       } catch (error) {
-        console.error("Error saat mengambil data:", error);
+        console.error("Error saat mengambil data :", error);
       }
     };
 
     fetchData();
-  }, []); // Array dependensi kosong agar data diambil hanya sekali saat komponen dimuat
+  }, []);
 
   return (
     <div className="responsive-3">
@@ -35,7 +37,7 @@ function Putusan() {
                 <React.Fragment key={item.id}>
                   <tr>
                     <td className="" data-cell="dokumen" scope="row">
-                      {item.dokumen}
+                      {item.namaDokumen}
                     </td>
                     <td className="">
                       <a href={item.pdfDokumen}>
@@ -64,4 +66,4 @@ function Putusan() {
   );
 }
 
-export default Putusan;
+export default UndangUndang;

@@ -1,25 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
-import Footer from "../../../component/Footer";
 import Navbar from "../../../component/Navbar";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
-import gambar from "../../../asset/img/bawaslu(berita).jpeg";
-import axios from "axios";
-import { API_DUMMY } from "../../../utils/base_URL";
-import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
-import HasilPengawasan from "./tabs/Berkala/kepemiluan/HasilPengawasan";
-import AnalisaCalonTerpilih from "./tabs/Berkala/kepemiluan/AnalisaCalonTerpilih";
-import LaporanAkhirPengawasan from "./tabs/Berkala/kepemiluan/LaporanAkhirPengawasan";
-import PenangananPelanggaran from "./tabs/Berkala/kepemiluan/PenangananPelanggaran";
-import NaskahPerjanjianHibahDaerah from "./tabs/Berkala/kepemiluan/NaskahPerjanjianHibahDaerah";
-import LayananPengaduanPolitik from "./tabs/Berkala/kepemiluan/LayananPengaduanPolitik";
+import UndangUndang from "./tabs/regulasi/UndangUndang";
+import Footer from "../../../component/Footer";
+import PeraturanPemerintah from "./tabs/regulasi/PeraturanPemerintah";
+import PeraturanMahkamahAgung from "./tabs/regulasi/PeraturanMahkamahAgung";
+import PeraturanKomisiInformasi from "./tabs/regulasi/PeraturanKomisiInformasi";
+import PeraturanMenteri from "./tabs/regulasi/PeraturanMenteri";
+import Perbawaslu from "./tabs/regulasi/Perbawaslu";
+import PenetapanPPID from "./tabs/regulasi/PenetapanPPID";
+import SuratEdaran from "./tabs/regulasi/SuratEdaran";
+import InstruksiKabupaten from "./tabs/regulasi/InstruksiKabupaten";
 
-function InformasiBerkalaKepemiluan() {
+function RegulasiPublic() {
   return (
     <div>
       <Navbar />
-
-      {/* <!-- project area start --> */}
       <div
         style={{
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
@@ -45,99 +40,127 @@ function InformasiBerkalaKepemiluan() {
                   >
                     <a
                       className="nav-link mb-3 p-3 shadow active"
-                      id="v-pills-hasil-tab"
+                      id="v-pills-home-tab"
                       data-toggle="pill"
-                      href="#v-pills-hasil"
+                      href="#v-pills-home"
                       role="tab"
-                      aria-controls="v-pills-hasil"
+                      aria-controls="v-pills-home"
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Hasil Pengawasan
+                        Undang-Undang
                       </span>
                     </a>
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-analisa-tab"
+                      id="v-pills-profile-tab"
                       data-toggle="pill"
-                      href="#v-pills-analisa"
+                      href="#v-pills-profile"
                       role="tab"
-                      aria-controls="v-pills-analisa"
+                      aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Analisa Calon Terpilih
+                        Peraturan Pemerintah
                       </span>
                     </a>
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-laporan-tab"
+                      id="v-pills-messages-tab"
                       data-toggle="pill"
-                      href="#v-pills-laporan"
+                      href="#v-pills-messages"
                       role="tab"
-                      aria-controls="v-pills-laporan"
+                      aria-controls="v-pills-messages"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Laporan Akhir Pengawasan
+                        Peraturan Mahkamah Agung
                       </span>
                     </a>
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-penanganan-tab"
+                      id="v-pills-profile-tab"
                       data-toggle="pill"
-                      href="#v-pills-penanganan"
+                      href="#v-pills-profile"
                       role="tab"
-                      aria-controls="v-pills-penanganan"
+                      aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Penanganan Pelanggaran
+                        Peraturan Komisi Informasi
                       </span>
                     </a>
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-naskah-tab"
+                      id="v-pills-pm-tab"
                       data-toggle="pill"
-                      href="#v-pills-naskah"
+                      href="#v-pills-pm"
                       role="tab"
-                      aria-controls="v-pills-naskah"
+                      aria-controls="v-pills-pm"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Naskah Perjanjian Hibah Daerah
+                        Peraturan Menteri
                       </span>
                     </a>
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-layanan-tab"
+                      id="v-pills-perbawaslu-tab"
                       data-toggle="pill"
-                      href="#v-pills-layanan"
+                      href="#v-pills-perbawaslu"
                       role="tab"
-                      aria-controls="v-pills-layanan"
+                      aria-controls="v-pills-perbawaslu"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Layanan Pengaduan Politik
+                        Perbawaslu
                       </span>
                     </a>
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-sarana-tab"
+                      id="v-pills-ppid-tab"
                       data-toggle="pill"
-                      href="#v-pills-sarana"
+                      href="#v-pills-ppid"
                       role="tab"
-                      aria-controls="v-pills-sarana"
+                      aria-controls="v-pills-ppid"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
-                        Sarana partisipasi Publik
+                        Penetapan PPID
+                      </span>
+                    </a>
+
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-se-tab"
+                      data-toggle="pill"
+                      href="#v-pills-se"
+                      role="tab"
+                      aria-controls="v-pills-se"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Surat Edaran
+                      </span>
+                    </a>
+
+                    <a
+                      className="nav-link mb-3 p-3 shadow"
+                      id="v-pills-ik-tab"
+                      data-toggle="pill"
+                      href="#v-pills-ik"
+                      role="tab"
+                      aria-controls="v-pills-ik"
+                      aria-selected="false"
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                        Instruksi Kabupaten
                       </span>
                     </a>
                   </div>
@@ -148,68 +171,89 @@ function InformasiBerkalaKepemiluan() {
                     <div className="card-header bg-primary text-light">
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
-                          <h4>Informasi Berkala Kepemiluan</h4>
+                          <h4>Regulasi</h4>
                         </div>
                       </div>
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white show active p-3"
-                      id="v-pills-hasil"
+                      id="v-pills-home"
                       role="tabpanel"
-                      aria-labelledby="v-pills-hasil-tab"
+                      aria-labelledby="v-pills-home-tab"
                     >
-                      <HasilPengawasan />
+                      <UndangUndang />
                     </div>
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-analisa"
+                      id="v-pills-profile"
                       role="tabpanel"
-                      aria-labelledby="v-pills-analisa-tab"
+                      aria-labelledby="v-pills-profile-tab"
                     >
-                      <AnalisaCalonTerpilih />
+                      <PeraturanPemerintah />
                     </div>
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-laporan"
+                      id="v-pills-messages"
                       role="tabpanel"
-                      aria-labelledby="v-pills-laporan-tab"
+                      aria-labelledby="v-pills-messages-tab"
                     >
-                      <LaporanAkhirPengawasan />
+                      <PeraturanMahkamahAgung />
                     </div>
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-penanganan"
+                      id="v-pills-settings"
                       role="tabpanel"
-                      aria-labelledby="v-pills-penanganan-tab"
+                      aria-labelledby="v-pills-settings-tab"
                     >
-                      <PenangananPelanggaran />
+                      <PeraturanKomisiInformasi />
                     </div>
+
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-naskah"
+                      id="v-pills-pm"
                       role="tabpanel"
-                      aria-labelledby="v-pills-naskah-tab"
+                      aria-labelledby="v-pills-pm-tab"
                     >
-                      <NaskahPerjanjianHibahDaerah />
+                      <PeraturanMenteri />
                     </div>
+
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-layanan"
+                      id="v-pills-perbawaslu"
                       role="tabpanel"
-                      aria-labelledby="v-pills-layanan-tab"
+                      aria-labelledby="v-pills-perbawaslu-tab"
                     >
-                      <LayananPengaduanPolitik />
+                      <Perbawaslu />
                     </div>
+
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-putusan"
+                      id="v-pills-ppid"
                       role="tabpanel"
-                      aria-labelledby="v-pills-putusan-tab"
+                      aria-labelledby="v-pills-ppid-tab"
                     >
-                      <PutusanPelanggaran />
+                      <PenetapanPPID />
+                    </div>
+
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-se"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-se-tab"
+                    >
+                      <SuratEdaran />
+                    </div>
+
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-ik"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-ik-tab"
+                    >
+                      <InstruksiKabupaten />
                     </div>
                   </div>
                 </div>
@@ -224,4 +268,4 @@ function InformasiBerkalaKepemiluan() {
   );
 }
 
-export default InformasiBerkalaKepemiluan;
+export default RegulasiPublic;

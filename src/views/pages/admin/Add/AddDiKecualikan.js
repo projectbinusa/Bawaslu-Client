@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function AddKanal() {
+function AddDiKecualikan() {
   const [dokumen, setDokumen] = useState("");
   const [pdfDokumen, setPdfDokumen] = useState("");
   const [jenisKeteranganId, setJenisKeteranganId] = useState(2); // Tidak perlu dalam array jika hanya satu nilai
@@ -35,7 +35,7 @@ function AddKanal() {
       });
 
       setTimeout(() => {
-        history.push("/admin-kanal");
+        history.push("/admin-dikecualikan");
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -101,14 +101,7 @@ function AddKanal() {
                     value={jenisKeteranganId}
                     onChange={(e) => setJenisKeteranganId(e.target.value)}
                   >
-                    <option value="">Pilih Jenis Informasi</option>
-                    <option value="40">Imbauan</option>;
-                    <option value="41">Anggaran</option>;
-                    <option value="42">Pencegahan & Penanganan</option>;
-                    <option value="43">SDM Pengawas Pemilu</option>;
-                    <option value="44">Hasil Pengawasan </option>;
-                    <option value="45">Siaran Pers</option>;
-                    <option value="46">Putusan</option>
+                    <option value="39">Informasi Di Kecualikan</option>;
                   </select>
                 </div>
               </div>
@@ -129,4 +122,4 @@ function AddKanal() {
   );
 }
 
-export default AddKanal;
+export default AddDiKecualikan;
