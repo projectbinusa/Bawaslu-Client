@@ -130,6 +130,8 @@ import PutRegulasiAdmin from "./views/pages/admin/regulasi/regulasi/PutRegulasiA
 import RegulasiPublic from "./views/pages/regulasi/RegulasiPublic";
 import DipPublic from "./views/pages/regulasi/DipPublic";
 import SopPublic from "./views/pages/regulasi/SopPublic";
+import AdminDiKecualikan from "./views/pages/admin/AdminDiKecualikan";
+import AddDiKecualikan from "./views/pages/admin/Add/AddDiKecualikan";
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -259,7 +261,7 @@ function App() {
           {/* admin */}
 
           {/* admin informasi */}
-          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
+          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
           <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
           <Route
             path="/admin-berkala-kepemiluan"
@@ -271,7 +273,12 @@ function App() {
             component={AdminBerkalaKelembagaan}
             exact
           />
-          <Route path="/admin-kanal" component={AdminKanal} exact /> */}
+          <Route
+            path="/admin-dikecualikan"
+            component={AdminDiKecualikan}
+            exact
+          />
+          <Route path="/admin-kanal" component={AdminKanal} exact />
 
           {/* tambah dan ubah data informasi */}
           <Route
@@ -292,6 +299,11 @@ function App() {
           <Route
             path="/tambah-informasi-berkala-kelembagaan"
             component={AddBerkalaKelembagaan}
+            exact
+          />
+          <Route
+            path="/tambah-informasi-dikecualikan"
+            component={AddDiKecualikan}
             exact
           />
           <Route path="/tambah-informasi-kanal" component={AddKanal} exact />
@@ -629,7 +641,11 @@ function App() {
             component={AddRegulasiAdmin}
             exact
           />
-          <Route path="/put-admin/regulasi/:id" component={PutRegulasiAdmin} exact />
+          <Route
+            path="/put-admin/regulasi/:id"
+            component={PutRegulasiAdmin}
+            exact
+          />
           {/* END ADMIN MENU REGULASI */}
 
           {/* PUBLIC MENU REGULASI */}

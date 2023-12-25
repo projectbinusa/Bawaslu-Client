@@ -82,11 +82,11 @@ function RegulasiPublic() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-profile-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-profile"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-profile"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
