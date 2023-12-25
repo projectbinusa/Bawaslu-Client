@@ -145,7 +145,7 @@ function InformasiBerkalaKepemiluan() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header bg-primary text-light">
+                    <div className="card-header w-auto bg-primary text-light">
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Informasi Berkala Kepemiluan</h4>
@@ -163,7 +163,8 @@ function InformasiBerkalaKepemiluan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-analisa"
+                      id="v-pills-profile"
+
                       role="tabpanel"
                       aria-labelledby="v-pills-analisa-tab"
                     >
@@ -172,7 +173,8 @@ function InformasiBerkalaKepemiluan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-laporan"
+                      id="v-pills-messages"
+
                       role="tabpanel"
                       aria-labelledby="v-pills-laporan-tab"
                     >
@@ -181,7 +183,8 @@ function InformasiBerkalaKepemiluan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-penanganan"
+                      id="v-pills-settings"
+
                       role="tabpanel"
                       aria-labelledby="v-pills-penanganan-tab"
                     >
@@ -189,7 +192,6 @@ function InformasiBerkalaKepemiluan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-naskah"
                       role="tabpanel"
                       aria-labelledby="v-pills-naskah-tab"
                     >
@@ -197,7 +199,7 @@ function InformasiBerkalaKepemiluan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-layanan"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-layanan-tab"
                     >
@@ -205,7 +207,7 @@ function InformasiBerkalaKepemiluan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-putusan"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-putusan-tab"
                     >

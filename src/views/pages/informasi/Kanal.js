@@ -151,10 +151,6 @@ function Kanal() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div
-                      style={{}}
-                      className="card-header bg-primary text-light"
-                    >
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Kanal Pengawasan Pemilu 2024</h4>
@@ -172,7 +168,6 @@ function Kanal() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-anggaran"
                       role="tabpanel"
                       aria-labelledby="v-pills-anggaran-tab"
                     >
@@ -181,7 +176,8 @@ function Kanal() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-pencegahan"
+                      id="v-pills-messages"
+
                       role="tabpanel"
                       aria-labelledby="v-pills-pencegahan-tab"
                     >
@@ -190,7 +186,7 @@ function Kanal() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-sdm"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-sdm-tab"
                     >
@@ -198,7 +194,7 @@ function Kanal() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-hasil"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-hasil-tab"
                     >
@@ -206,7 +202,7 @@ function Kanal() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-siaran"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-siaran-tab"
                     >
@@ -214,7 +210,7 @@ function Kanal() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-putusan"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-putusan-tab"
                     >
