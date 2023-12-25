@@ -140,7 +140,7 @@ function SetiapSaat() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header bg-primary text-light">
+                    <div className="card-header w-auto bg-primary text-light">
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Informasi Setiap Saat</h4>
@@ -158,8 +158,7 @@ function SetiapSaat() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-peraturan"
-                      role="tabpanel"
+                      id="v-pills-profile"
                       aria-labelledby="v-pills-peraturan-tab"
                     >
                       <PeraturanDanKebijakan />
@@ -184,7 +183,7 @@ function SetiapSaat() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-rencana"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-rencana-tab"
                     >
@@ -192,7 +191,6 @@ function SetiapSaat() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-materi"
                       role="tabpanel"
                       aria-labelledby="v-pills-materi-tab"
                     >
@@ -200,7 +198,7 @@ function SetiapSaat() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-piagam"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-piagam-tab"
                     >

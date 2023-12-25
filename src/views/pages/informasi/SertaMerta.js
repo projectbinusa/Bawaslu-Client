@@ -140,7 +140,7 @@ function SertaMerta() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header bg-primary text-light">
+                    <div className="card-header w-auto bg-primary text-light">
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Informasi Serta Merta</h4>
@@ -158,7 +158,7 @@ function SertaMerta() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-sengketa"
+                      id="v-pills-profile"
                       role="tabpanel"
                       aria-labelledby="v-pills-sengketa-tab"
                     >
@@ -167,7 +167,6 @@ function SertaMerta() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-pemungutan"
                       role="tabpanel"
                       aria-labelledby="v-pills-pemungutan-tab"
                     >
@@ -176,7 +175,7 @@ function SertaMerta() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-organisasi"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-organisasi-tab"
                     >
@@ -184,7 +183,7 @@ function SertaMerta() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-perselisihan"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-perselisihan-tab"
                     >
@@ -192,7 +191,7 @@ function SertaMerta() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-sosialisasi"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-sosialisasi-tab"
                     >
@@ -200,7 +199,7 @@ function SertaMerta() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-piagam"
+                      id="v-pills-settings"
                       role="tabpanel"
                       aria-labelledby="v-pills-piagam-tab"
                     >
