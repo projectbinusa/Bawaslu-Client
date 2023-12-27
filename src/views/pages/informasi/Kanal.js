@@ -151,71 +151,69 @@ function Kanal() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                      <div style={{ display: "flex" }}>
-                        <div className="px-3">
-                          <h4>Kanal Pengawasan Pemilu 2024</h4>
-                        </div>
+                    <div style={{ display: "flex" }}>
+                      <div className="px-3">
+                        <h4>Kanal Pengawasan Pemilu 2024</h4>
                       </div>
                     </div>
-                    <div
-                      className="tab-pane fade shadow rounded bg-white show active p-3"
-                      id="v-pills-imbauan"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-imbauan-tab"
-                    >
-                      <Imbauan />
-                    </div>
+                  </div>
+                  <div
+                    className="tab-pane fade shadow rounded bg-white show active p-3"
+                    id="v-pills-imbauan"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-imbauan-tab"
+                  >
+                    <Imbauan />
+                  </div>
 
-                    <div
-                      className="tab-pane fade shadow rounded bg-white p-3"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-anggaran-tab"
-                    >
-                      <Anggaran />
-                    </div>
+                  <div
+                    className="tab-pane fade shadow rounded bg-white p-3"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-anggaran-tab"
+                  >
+                    <Anggaran />
+                  </div>
 
-                    <div
-                      className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-messages"
+                  <div
+                    className="tab-pane fade shadow rounded bg-white p-3"
+                    id="v-pills-messages"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-pencegahan-tab"
+                  >
+                    <PencegahanDanPenanganan />
+                  </div>
 
-                      role="tabpanel"
-                      aria-labelledby="v-pills-pencegahan-tab"
-                    >
-                      <PencegahanDanPenanganan />
-                    </div>
-
-                    <div
-                      className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-sdm-tab"
-                    >
-                      <SDMPengawasPemilu />
-                    </div>
-                    <div
-                      className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-hasil-tab"
-                    >
-                      <HasilPengawasan />
-                    </div>
-                    <div
-                      className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-siaran-tab"
-                    >
-                      <SiaranPers />
-                    </div>
-                    <div
-                      className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-putusan-tab"
-                    >
-                      <Putusan />
-                    </div>
+                  <div
+                    className="tab-pane fade shadow rounded bg-white p-3"
+                    id="v-pills-settings"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-sdm-tab"
+                  >
+                    <SDMPengawasPemilu />
+                  </div>
+                  <div
+                    className="tab-pane fade shadow rounded bg-white p-3"
+                    id="v-pills-settings"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-hasil-tab"
+                  >
+                    <HasilPengawasan />
+                  </div>
+                  <div
+                    className="tab-pane fade shadow rounded bg-white p-3"
+                    id="v-pills-settings"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-siaran-tab"
+                  >
+                    <SiaranPers />
+                  </div>
+                  <div
+                    className="tab-pane fade shadow rounded bg-white p-3"
+                    id="v-pills-settings"
+                    role="tabpanel"
+                    aria-labelledby="v-pills-putusan-tab"
+                  >
+                    <Putusan />
                   </div>
                 </div>
               </div>
@@ -223,7 +221,6 @@ function Kanal() {
           </section>
         </div>
       </div>
-
       <Footer />
     </div>
   );
