@@ -151,34 +151,11 @@ function PutIsiInformasi() {
                       onChange={(e) => setPdfDokumen(e.target.value)}
                     />
                   </div>
-                  <div className="mb-3 col-12">
-                    <label
-                      htmlFor="pdfDokumen"
-                      className="form-label font-weight-bold"
-                    >
-                      Jenis Keterangan
-                    </label>
-                    <select
-                      className="form-select form-select-sm"
-                      aria-label="Small select example"
-                      value={jenisKeteranganId}
-                      onChange={(e) => setJenisKeteranganId(e.target.value)}
-                    >
-                      <option value="">Pilih Jenis Informasi</option>
-                      <option value="1">Putusan Pelanggaran</option>;
-                      <option value="2">Sengketa Proses Pemilu</option>;
-                      <option value="3">Pemungutan Suara Ulang</option>;
-                      <option value="4">Organisasi Dan Adminstrasi</option>;
-                      <option value="5">Perselisihan Hasil Pemilu</option>;
-                      <option value="6">Sosialisasi</option>;
-                      <option value="7">Piagam Penghargaan</option>
-                    </select>
-                  </div>
                 </div>
 
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
-                    href={"/path-ke-halaman-terkait"}
+                    href={"/admin-serta-merta"}
                     style={{ color: "white", textDecoration: "none" }}
                   >
                     Batal
