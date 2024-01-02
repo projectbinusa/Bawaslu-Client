@@ -40,11 +40,11 @@ function SertaMerta() {
                   >
                     <a
                       className="nav-link mb-3 p-3 shadow active"
-                      id="v-pills-home-tab"
+                      id="v-pills-putusan-tab"
                       data-toggle="pill"
-                      href="#v-pills-home"
+                      href="#v-pills-putusan"
                       role="tab"
-                      aria-controls="v-pills-home"
+                      aria-controls="v-pills-putusan"
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -54,11 +54,11 @@ function SertaMerta() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-profile-tab"
+                      id="v-pills-sengketa-tab"
                       data-toggle="pill"
-                      href="#v-pills-profile"
+                      href="#v-pills-sengketa"
                       role="tab"
-                      aria-controls="v-pills-profile"
+                      aria-controls="v-pills-sengketa"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -68,11 +68,11 @@ function SertaMerta() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-messages-tab"
+                      id="v-pills-pemungutan-tab"
                       data-toggle="pill"
-                      href="#v-pills-messages"
+                      href="#v-pills-pemungutan"
                       role="tab"
-                      aria-controls="v-pills-messages"
+                      aria-controls="v-pills-pemungutan"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -82,11 +82,11 @@ function SertaMerta() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-organisasi-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-organisasi"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-organisasi"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -96,11 +96,11 @@ function SertaMerta() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-perselisihan-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-perselisihan"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-perselisihan"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -110,11 +110,11 @@ function SertaMerta() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-sosialisasi-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-sosialisasi"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-sosialisasi"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -124,11 +124,11 @@ function SertaMerta() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-settings-tab"
+                      id="v-pills-piagam-tab"
                       data-toggle="pill"
-                      href="#v-pills-settings"
+                      href="#v-pills-piagam"
                       role="tab"
-                      aria-controls="v-pills-settings"
+                      aria-controls="v-pills-piagam"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -149,9 +149,9 @@ function SertaMerta() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white show active p-3"
-                      id="v-pills-home"
+                      id="v-pills-putusan"
                       role="tabpanel"
-                      aria-labelledby="v-pills-home-tab"
+                      aria-labelledby="v-pills-putusan-tab"
                     >
                       <PutusanPelanggaran />
                     </div>
@@ -160,16 +160,15 @@ function SertaMerta() {
                       className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-profile"
                       role="tabpanel"
-                      aria-labelledby="v-pills-profile-tab"
+                      aria-labelledby="v-pills-sengketa-tab"
                     >
                       <SengketaProsesPemilu />
                     </div>
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-messages"
                       role="tabpanel"
-                      aria-labelledby="v-pills-messages-tab"
+                      aria-labelledby="v-pills-pemungutan-tab"
                     >
                       <PemungutanSuaraUlang />
                     </div>
@@ -178,7 +177,7 @@ function SertaMerta() {
                       className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-organisasi-tab"
                     >
                       <OrganisasiDanAdministrasi />
                     </div>
@@ -186,7 +185,7 @@ function SertaMerta() {
                       className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-perselisihan-tab"
                     >
                       <PerselisihanHasilPemilu />
                     </div>
@@ -194,7 +193,7 @@ function SertaMerta() {
                       className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-sosialisasi-tab"
                     >
                       <Sosialisasi />
                     </div>
@@ -202,7 +201,7 @@ function SertaMerta() {
                       className="tab-pane fade shadow rounded bg-white p-3"
                       id="v-pills-settings"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-piagam-tab"
                     >
                       <Piagam />
                     </div>

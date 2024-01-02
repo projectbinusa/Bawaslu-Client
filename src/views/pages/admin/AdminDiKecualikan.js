@@ -7,7 +7,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
 
-function AdminKanal() {
+function AdminDiKecualikan() {
   const [selectedValue, setSelectedValue] = useState("");
   const [selectedData, setSelectedData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,7 +20,7 @@ function AdminKanal() {
   const getById = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/40/isi-informasi?page=0&size=100&sortBy=id&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/39/isi-informasi?page=0&size=100&sortBy=id&sortOrder=asc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -154,7 +154,7 @@ function AdminKanal() {
           <div id="container" className="container mt-3 app-main__outer">
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
-                Admin Kanal
+                Admin Informasi Berkala Kepemiluan
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
@@ -162,13 +162,7 @@ function AdminKanal() {
                     onChange={handleChange}
                   >
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="40">Imbauan</option>;
-                    <option value="41">Anggaran</option>;
-                    <option value="42">Pencegahan & Penanganan</option>;
-                    <option value="43">SDM Pengawas Pemilu</option>;
-                    <option value="44">Hasil Pengawasan </option>;
-                    <option value="45">Siaran Pers</option>;
-                    <option value="46">Putusan</option>
+                    <option value="15">Informasi Di Kecualikan</option>;
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -181,7 +175,7 @@ function AdminKanal() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/tambah-informasi-kanal"
+                          href="/tambah-informasi-dikecualikan"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
@@ -277,4 +271,4 @@ function AdminKanal() {
   );
 }
 
-export default AdminKanal;
+export default AdminDiKecualikan;

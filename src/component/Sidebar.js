@@ -47,9 +47,7 @@ function Sidebar() {
   }, []);
 
   return (
-    <div
-      className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header overflow-auto"
-    >
+    <div className="app-theme-white body-tabs-shadow fixed-sidebar fixed-header overflow-auto">
       <div
         className="app-sidebar sidebar-shadow"
         style={{ height: "100vh", overflowY: "auto" }}
@@ -115,12 +113,12 @@ function Sidebar() {
                 </a>
               </li>
               <li className="app-sidebar__heading">Informasi</li>
-              <li>
+              {/* <li>
                 <a style={{ textDecoration: "none" }} href="/jenis-informasi">
                   <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
                   Jenis Informasi
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a style={{ textDecoration: "none" }} href="#">
                   <i class="fa-regular fa-paste metismenu-icon"></i> Isi
@@ -161,13 +159,21 @@ function Sidebar() {
                     </a>
                   </li>
                   <li>
+                    <a
+                      style={{ textDecoration: "none" }}
+                      href="/admin-dikecualikan"
+                    >
+                      <i className="metismenu-icon"></i>Di Kecualikan
+                    </a>
+                  </li>
+                  <li>
                     <a style={{ textDecoration: "none" }} href="/admin-kanal">
                       <i className="metismenu-icon"></i>Kanal
                     </a>
                   </li>
                 </ul>
               </li>
-              <li>
+              {/* <li>
                 <a style={{ textDecoration: "none" }} href="#">
                   <i class="fa-solid fa-bullhorn metismenu-icon "></i>
                   Informasi Publik
@@ -188,32 +194,23 @@ function Sidebar() {
                     );
                   })}
                 </ul>
-              </li>
+              </li> */}
               {/* MENU REGULASI */}
               <li class="app-sidebar__heading">Regulasi</li>
               <li>
-                <a
-                  style={{ textDecoration: "none" }}
-                  href="/regulasi-admin"
-                >
+                <a style={{ textDecoration: "none" }} href="/regulasi-admin">
                   <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
                   Regulasi
                 </a>
               </li>
               <li>
-                <a
-                  style={{ textDecoration: "none" }}
-                  href="/dip-admin"
-                >
+                <a style={{ textDecoration: "none" }} href="/dip-admin">
                   <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>
                   DIP{" "}
                 </a>
               </li>
               <li>
-                <a
-                  style={{ textDecoration: "none" }}
-                  href="/sop-admin"
-                >
+                <a style={{ textDecoration: "none" }} href="/sop-admin">
                   <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
                   SOP
                 </a>

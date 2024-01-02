@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import folder from "../../../aset/folder.png";
 import informasi from "../../../aset/informasi.svg";
 import "../../../css/dikecualikan.css";
+import axios from "axios";
 
 function Dikecualikan() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:4040/bawaslu/api/jenis-keterangan/39/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+        );
+        setData(response.data.data); // Mengasumsikan properti data berisi array informasi
+      } catch (error) {
+        console.error("Error saat mengambil data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); // Array dependensi kosong agar data diambil hanya sekali saat komponen dimuat
+
   return (
     <div>
       <Navbar />
@@ -69,312 +87,42 @@ function Dikecualikan() {
       </div> */}
         <div className="style-logo">
           <div class="row d-row-none pmbngks-txt-folder">
-            <div class="d-flex col-lg-5 col-10  shadow  p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view">
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
+            {data &&
+              data.content.map((item) => (
+                <React.Fragment key={item.id}>
+                  <div class="d-flex col-lg-5 col-10  shadow  p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
+                    <a href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view">
+                      <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
+                        <img src={folder} alt="File" width="50" />
+                      </div>
+                    </a>
 
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
-                    target="_blank"
-                    style={{ color: "black" }}
-                  >
-                    PENETAPAN PPID PENGECUALIAN INFORMASI PENYELESAIAN SENGKETA
-                    PEMILIHAN
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow  p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/1xGVaZ2S5ocCsBpDYCd_uqG7KSKFpIwtX/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a href="https://www.pendis.kemenag.go.id/"></a>
-                <h6>
-                  <a
-                    href="https://www.pendis.kemenag.go.id/"
-                    target="_blank"
-                  ></a>
-                  <a
-                    style={{ color: "black" }}
-                    href="https://www.pendis.kemenag.go.id/"
-                    target="_blank"
-                  >
-                    PENETAPAN PPID PENGECUALIAN SEBAGIAN PEMBERITAHUAN STATUS
-                    LAPORAN
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow  p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/1lUbJZ1XUAGgam2QS0xga9j78AkA1Vub6/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a href="https://haji.kemenag.go.id/" target="_blank"></a>
-                <h6>
-                  <a href="https://haji.kemenag.go.id/" target="_blank"></a>
-                  <a
-                    style={{ color: "black" }}
-                    href="https://haji.kemenag.go.id/"
-                    target="_blank"
-                  >
-                    PENETAPAN PPID PENGECUALIAN INFORMASI MERORANDUM NASKAH
-                    RAHASIA
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/1I-gJAi_gFSfNV8t8EoHpmpvgcUgzzyuJ/view"
-                    target="_blank"
-                    style={{color:"black"}}
-
-                  >
-                    PENETAPAN PPID KLASIFIKASI INFORMASI DIKECUALIKAN
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-
-            <div class="d-flex col-lg-5 col-10  shadow p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/1446FsNHBT2FqZzhmHJH0jo6hARS4pSaD/view"
-                    target="_blank"
-                    style={{color:"black"}}
-
-                  >
-                    PENETAPAN PPID INFORMASI PENGAWASAN PEMILU PEMILIHAN YANG
-                    DIKECUALIKAN
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/1FYaGFbiBeo1CxrumV1Xp0vRlDv09JOat/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/1FYaGFbiBeo1CxrumV1Xp0vRlDv09JOat/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/1FYaGFbiBeo1CxrumV1Xp0vRlDv09JOat/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/1FYaGFbiBeo1CxrumV1Xp0vRlDv09JOat/view"
-                    target="_blank"
-                    style={{color:"black"}}
-
-                  >
-                    PENETAPAN PPID INFORMASI PENANGANAN PERKARA HUKUM DI
-                    PENGADILAN YANG DIKECUALIKAN
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/14VuM1oSmnsiSqt2CCzYICJgUuVREwBVJ/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/14VuM1oSmnsiSqt2CCzYICJgUuVREwBVJ/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/14VuM1oSmnsiSqt2CCzYICJgUuVREwBVJ/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/14VuM1oSmnsiSqt2CCzYICJgUuVREwBVJ/view"
-                    target="_blank"
-                    style={{color:"black"}}
-
-                  >
-                    PENETAPAN PPID PENGECUALIAN INFORMASI DIKECUALIKAN TENTANG
-                    ALAT KERJA PENGAWASAN
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/1VEruZ10wBkatUPsL9fY-yxkQI8f6wr_C/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/1VEruZ10wBkatUPsL9fY-yxkQI8f6wr_C/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/1VEruZ10wBkatUPsL9fY-yxkQI8f6wr_C/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/1VEruZ10wBkatUPsL9fY-yxkQI8f6wr_C/view"
-                    target="_blank"
-                    style={{color:"black"}}
-
-                  >
-                    PENETAPAN PPID PENGECUALIAN INFORMASI TERKAIT PENANGANAN
-                    PELANGGARAN PEMILU
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                    target="_blank"
-                    style={{color:"black"}}
-
-                  >
-                    PENETAPAN PPID PENGECUALIAN INFORMASI TERKAIT TINDAK PIDANA
-                    PEMILU{" "}
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
-            <div class="d-flex col-lg-5 col-10  shadow p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-              <a
-                href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                target="_blank"
-              >
-                <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                  <img src={folder} alt="File" width="50" />
-                </div>
-              </a>
-              <div class="post-content media-body">
-                <a
-                  href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                  target="_blank"
-                ></a>
-                <h6>
-                  <a
-                    href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                    target="_blank"
-                  ></a>
-                  <a
-                    href="https://drive.google.com/file/d/15aapWDMSydJ_hlNUMqSXNAbjje_J3Hbz/view"
-                    target="_blank"
-                    style={{color:"black"}}
-
-                  >
-                    PENETAPAN PPID INFORMASI SELEKSI PENGAWAS PEMILU ADHOC YANG
-                    DIKECUALIKAN{" "}
-                  </a>
-                </h6>
-                <span class="text-muted font-small">Bawaslu Boyolali</span>
-              </div>
-            </div>
+                    <div class="post-content media-body">
+                      <a
+                        href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
+                        target="_blank"
+                      ></a>
+                      <h6>
+                        <a
+                          href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
+                          target="_blank"
+                        ></a>
+                        <a
+                          href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
+                          target="_blank"
+                          style={{ color: "black" }}
+                        >
+                          PENETAPAN PPID PENGECUALIAN INFORMASI PENYELESAIAN
+                          SENGKETA PEMILIHAN
+                        </a>
+                      </h6>
+                      <span class="text-muted font-small">
+                        Bawaslu Boyolali
+                      </span>
+                    </div>
+                  </div>
+                </React.Fragment>
+              ))}
           </div>
           <div
             className="col-lg-4 col-md-8 widget widget_catagory logo-dikecualikan"
