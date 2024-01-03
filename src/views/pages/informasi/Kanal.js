@@ -20,6 +20,7 @@ import SDMPengawasPemilu from "./tabs/Kanal/SDMPengawasPemilu";
 import HasilPengawasan from "./tabs/Kanal/HasilPengawasan";
 import SiaranPers from "./tabs/Kanal/SiaranPers";
 import Putusan from "./tabs/Kanal/Putusan";
+import "../../../css/Kanal.css"
 
 function Kanal() {
   return (
@@ -42,7 +43,7 @@ function Kanal() {
           <section>
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3" style={{justifyContent: 'center', alignItems: 'center' }}>
                   <div
                     className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
@@ -150,13 +151,13 @@ function Kanal() {
                 </div>
 
                 <div className="col-md-9">
-                  <div className="tab-content" id="v-pills-tabContent">
-                    <div style={{ display: "flex" }}>
-                      <div className="px-3">
-                        <h4>Kanal Pengawasan Pemilu 2024</h4>
+                <div className="card-header w-auto bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
+                      <div style={{ display: "flex" }}>
+                        <div className="px-3">
+                          <h4>Kanal Pengawasan Pemilu</h4>
+                        </div>
                       </div>
                     </div>
-                  </div>
                   <div
                     className="tab-pane fade shadow rounded bg-white show active p-3"
                     id="v-pills-imbauan"
