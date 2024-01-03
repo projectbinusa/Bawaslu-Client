@@ -298,12 +298,14 @@ function Home() {
               className="swiper-button-prev slider-arrow"
               onClick={handlePrev}
             >
-              <ion-icon name="arrow-back-outline"></ion-icon>
+              <i class="fa-solid fa-circle-chevron-left "  name="arrow-back-outline"></i>
+              {/* <ion-icon ></ion-icon> */}
             </div>
             <div
               className="swiper-button-next slider-arrow"
               onClick={handleNext}
             >
+             <i class="fa-solid fa-circle-chevron-right"></i>
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
             <div className="swiper-pagination"></div>
