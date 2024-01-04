@@ -10,6 +10,7 @@ import {
   PinterestShareButton,
   TwitterShareButton,
 } from "react-share";
+import AOS from "aos"
 
 function CategoryBerita() {
   const [list, setList] = useState([]);
@@ -44,6 +45,7 @@ function CategoryBerita() {
     getAll();
     getAllTerbaru();
     getRelated();
+    AOS.init()
   }, []);
 
   const getAllTerbaru = async () => {
@@ -56,7 +58,7 @@ function CategoryBerita() {
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
-  };;
+  };
 
   return (
     <>
@@ -197,7 +199,7 @@ function CategoryBerita() {
                     <div className="thumb">
                       <img
                         style={{ height: "450px" }}
-                        src={category.berita}
+                        src={category.image}
                         alt="img"
                       />
                     </div>
