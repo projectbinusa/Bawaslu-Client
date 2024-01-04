@@ -509,7 +509,8 @@ function Berita() {
                       class={`widget widget-recent-post`}
                       style={{ background: "#F1F6F9", overflow: "hidden", boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px",
                       border: "1px solid blue" }}>
-                      <h4 class="widget-title">Berita Terbaru</h4>
+                      <h4 class="widget-title">
+                      <i class="fa-solid fa-newspaper"></i> Berita Terbaru</h4>
                       <ul>
                         {listTerbaru.map((beritaTerbaru) => {
                           return (
@@ -550,7 +551,7 @@ function Berita() {
                       class="widget widget_catagory"
                       style={{ background: "#F1F6F9",
                       border: "1px solid blue", boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px" }}>
-                      <h4 class="widget-title">Arsip</h4>
+                      <h4 class="widget-title"> <i class="fa-solid fa-folder-open"></i> Arsip</h4>
                       <ul class="catagory-items">
                         {archivingMonths.map((monthData) => {
                           const tahun_bulan = `${monthData.year}-${monthData.month}`;

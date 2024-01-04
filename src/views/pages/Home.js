@@ -287,7 +287,7 @@ function Home() {
           <div className="row">
             <div
               data-aos="fade-right"
-              className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5"
+              className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5 "
             >
               <ul>
                 {list.map((berita) => (
@@ -322,16 +322,20 @@ function Home() {
             </div>
             <div
               data-aos="fade-left"
-              className="col-lg-4 col-md-12 widget widget_catagory"
+              className="col-lg-4 col-md-12 widget widget_catagory "
               style={{
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                 padding: "30px",
                 borderRadius: "10px",
                 background: "#F1F6F9",
                 float: "inline-end",
+                background:" rgb(241, 246, 249)",
+                 border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
+                
               }}
             >
               <h4 className="widget-title">
+              <i class="fa-regular fa-file-lines"></i> {" "}
                 Tautan{" "}
                 <span className="text-primary">
                   <strong>Lembaga</strong>
