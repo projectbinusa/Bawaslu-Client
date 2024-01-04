@@ -6,8 +6,8 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-import AOS from  'aos'
-import "../../../css/card.css"
+import AOS from "aos";
+import "../../../css/card.css";
 
 function Pengumuman() {
   const [pengumuman, setPengumuman] = useState([]);
@@ -38,7 +38,7 @@ function Pengumuman() {
   useEffect(() => {
     //mengambil data, memperbarui DOM secara langsung,
     getAll(currentPage);
-    AOS.init()
+    AOS.init();
   }, [currentPage, rowsPerPage]);
 
   const filteredList = pengumuman.filter((item) =>
@@ -63,12 +63,13 @@ function Pengumuman() {
           backgroundImage: `url('https://img.freepik.com/free-vector/white-elegant-texture-background_23-2148430934.jpg?w=740&t=st=1698973959~exp=1698974559~hmac=418240e9f8d698b9b7f2c0907f5c8e0013885b44976fa36e713b8801491993db')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-        }}
-      >
+        }}>
         <div className="container">
           <div className="row justify-content-center">
-            <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" className="col-xl-6 col-lg-7 col-md-10">
+            <div
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              className="col-xl-6 col-lg-7 col-md-10">
               <div className="section-title text-center">
                 <h5 className="sub-title double-line">Bawaslu Boyolali</h5>
                 <h2 className="title">Pengumuman</h2>
@@ -76,29 +77,46 @@ function Pengumuman() {
             </div>
           </div>
 
-<section class="light">
-	<div class="container py-2">
-  {filteredList.map((isi) => {
-              return (
-		<article class="postcard light blue">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src={isi.image} alt="Image Title" />
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title blue"><a href="#" style={{color:"black", textDecoration:"none"}}>{isi.judulPengumuman}</a></h1>
-				<div class="postcard__subtitle small">
-					<time datetime="2020-05-25 12:00:00">
-						<i class="fas fa-calendar-alt mr-2 text-black"></i><span className="text-black">{format(new Date(isi.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
-					</time>
-				</div>
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt text-black">{isi.isiPengumuman}</div>
-			</div>
-		</article>
-              );
-            })}
-	</div>
-</section>
+          <section class="light">
+            <div class="container py-2">
+              {filteredList.map((isi) => {
+                return (
+                  <article class="postcard light blue">
+                    <a class="postcard__img_link" href="#">
+                      <img
+                        class="postcard__img"
+                        src={isi.image}
+                        alt="Image Title"
+                      />
+                    </a>
+                    <div class="postcard__text t-dark">
+                      <h1 class="postcard__title blue">
+                        <a
+                          href={`/pengumuman/isi-pengumuman/${isi.id}`}
+                          style={{ color: "black", textDecoration: "none" }}>
+                          {isi.judulPengumuman}
+                        </a>
+                      </h1>
+                      <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                          <i class="fas fa-calendar-alt mr-2 text-black"></i>
+                          <span className="text-black">
+                            {format(new Date(isi.createdDate), "dd MMMM yyyy", {
+                              locale: idLocale,
+                            })}
+                          </span>
+                        </time>
+                      </div>
+                      <div class="postcard__bar"></div>
+                      <div class="postcard__preview-txt text-black">
+                        {isi.isiPengumuman}
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
           {/* <div className="row justify-content-center">
             {filteredList.map((isi) => {
               return (
@@ -141,8 +159,10 @@ function Pengumuman() {
               );
             })}
           </div> */}
-          <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" className="card-header mt-3 d-flex justify-content-center">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            className="card-header mt-3 d-flex justify-content-center">
             <Pagination
               count={totalPages}
               page={currentPage}
