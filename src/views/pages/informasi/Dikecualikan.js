@@ -7,7 +7,7 @@ import "../../../css/dikecualikan.css";
 import axios from "axios";
 
 function Dikecualikan() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,7 +15,8 @@ function Dikecualikan() {
         const response = await axios.get(
           "http://localhost:4040/bawaslu/api/jenis-keterangan/39/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
         );
-        setData(response.data.data); // Mengasumsikan properti data berisi array informasi
+        setData(response.data.data.content); // Mengasumsikan properti data berisi array informasi
+        console.log(response.data.data.content); // Mengasumsikan properti data berisi array informasi
       } catch (error) {
         console.error("Error saat mengambil data:", error);
       }
@@ -45,7 +46,7 @@ function Dikecualikan() {
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
-        <div className="form text-center">
+        <div className="form1 text-center mt-0">
           <div className="form-permohonan section-title text-center">
             <h5 id="text1-gabung" className="sub-title double-line text-center">
               Bawaslu Boyolali
@@ -70,7 +71,7 @@ function Dikecualikan() {
       >
         <div>
           <div className="textIcon row">
-            <a href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view">
+            <a href={data.pdfDokumen}>
               <div className="col-3">
                 <h5 className="text-decoration-none text-dark h4-text">
                   <div>
@@ -87,11 +88,11 @@ function Dikecualikan() {
       </div> */}
         <div className="style-logo">
           <div class="row d-row-none pmbngks-txt-folder">
-            {data &&
-              data.content.map((item) => (
+            {data.map((item) => {
+              return(
                 <React.Fragment key={item.id}>
                   <div class="d-flex col-lg-5 col-10  shadow  p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
-                    <a href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view">
+                    <a href={item.pdfDokumen}>
                       <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
                         <img src={folder} alt="File" width="50" />
                       </div>
@@ -99,7 +100,7 @@ function Dikecualikan() {
 
                     <div class="post-content media-body">
                       <a
-                        href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
+                        href={item.pdfDokumen}
                         target="_blank"
                       ></a>
                       <h6>
@@ -108,12 +109,11 @@ function Dikecualikan() {
                           target="_blank"
                         ></a>
                         <a
-                          href="https://drive.google.com/file/d/1mW-PRMO3mxAl5kWy9U_2cSjoFVTWyD8E/view"
+                          href={item.pdfDokumen}
                           target="_blank"
                           style={{ color: "black" }}
                         >
-                          PENETAPAN PPID PENGECUALIAN INFORMASI PENYELESAIAN
-                          SENGKETA PEMILIHAN
+                          {item.dokumen}
                         </a>
                       </h6>
                       <span class="text-muted font-small">
@@ -122,15 +122,15 @@ function Dikecualikan() {
                     </div>
                   </div>
                 </React.Fragment>
-              ))}
+              )})}
           </div>
           <div
-            className="col-lg-4 col-md-8 widget widget_catagory logo-dikecualikan"
+            className="col-lg-3 col-md-8 widget widget_catagory logo-dikecualikan"
             style={{
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
               // padding: "10px 30px 10px 30px",
               borderRadius: "10px",
-              background: "#F1F6F9",
+              background: "#EEF5FF",
               float: "inline-end",
             }}
           >
