@@ -140,7 +140,7 @@ function SetiapSaat() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header w-auto bg-primary text-light">
+                    <div className="card-header w-auto bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Informasi Setiap Saat</h4>
