@@ -113,12 +113,12 @@ function Sidebar() {
                 </a>
               </li>
               <li className="app-sidebar__heading">Informasi</li>
-              <li>
+              {/* <li>
                 <a style={{ textDecoration: "none" }} href="/jenis-informasi">
                   <i className="fa-regular fa-rectangle-list  metismenu-icon"></i>{" "}
                   Jenis Informasi
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a style={{ textDecoration: "none" }} href="#">
                   <i class="fa-regular fa-paste metismenu-icon"></i> Isi
@@ -173,7 +173,7 @@ function Sidebar() {
                   </li>
                 </ul>
               </li>
-              <li>
+              {/* <li>
                 <a style={{ textDecoration: "none" }} href="#">
                   <i class="fa-solid fa-bullhorn metismenu-icon "></i>
                   Informasi Publik
@@ -194,7 +194,7 @@ function Sidebar() {
                     );
                   })}
                 </ul>
-              </li>
+              </li> */}
               {/* MENU REGULASI */}
               <li class="app-sidebar__heading">Regulasi</li>
               <li>

@@ -48,7 +48,7 @@ function SopPublic() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header bg-primary text-light">
+                    <div className="card-header bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Standar Operasional Prosedur</h4>
