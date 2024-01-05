@@ -255,13 +255,15 @@ function Berita() {
                       </strong>
                     </h4>
                     <div
-                      class="banner-top-thumb-wrap"
+                      class="banner-top-thumb-wrap scrol"
                       style={{
                         overflowX: "auto",
                         whiteSpace: "nowrap",
                         scrollbarWidth: "thin",
                         msOverflowStyle: "none",
-                        overflowY: "hidden", // Untuk IE
+                        overflowY: "hidden",
+                        paddingTop:"5px",
+                        paddingBottom:"8px",
                       }}>
                       <div class="d-lg-flex gap-3 align-items-center">
                         {category.map((categoryBerita) => {
@@ -505,7 +507,8 @@ function Berita() {
                   <div class="td-sidebar">
                     <div
                       class={`widget widget-recent-post`}
-                      style={{ background: "#F1F6F9", overflow: "hidden" }}>
+                      style={{ background: "#F1F6F9", overflow: "hidden", boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px",
+                      border: "1px solid blue" }}>
                       <h4 class="widget-title">Berita Terbaru</h4>
                       <ul>
                         {listTerbaru.map((beritaTerbaru) => {
@@ -545,7 +548,8 @@ function Berita() {
                     </div>
                     <div
                       class="widget widget_catagory"
-                      style={{ background: "#F1F6F9" }}>
+                      style={{ background: "#F1F6F9",
+                      border: "1px solid blue", boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px" }}>
                       <h4 class="widget-title">Arsip</h4>
                       <ul class="catagory-items">
                         {archivingMonths.map((monthData) => {

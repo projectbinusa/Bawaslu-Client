@@ -4,7 +4,8 @@ function Bawaslu() {
   return (
     <div
     className="widget widget_catagory"
-    style={{ background:"#F1F6F9" }}>
+    style={{ background: "#F1F6F9", overflow: "hidden", boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px",
+    border: "1px solid #6DB9EF" }}>
     <h4 className="widget-title">
       Tautan{" "}
       <span className="text-primary">
