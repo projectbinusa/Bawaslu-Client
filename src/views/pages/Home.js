@@ -222,20 +222,7 @@ function Home() {
           class="carousel slide container padding-img"
           data-ride="carousel"
         >
-          {/* <div class="carousel-indicators">
-            {listCaraousel.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to={index}
-                class={index === activeIndex ? "active" : ""}
-                aria-current={index === activeIndex ? "true" : "false"}
-                aria-label={`Slide ${index + 1}`}
-                onClick={() => setActiveIndex(index)}
-              ></button>
-            ))}
-          </div> */}
+         
           <div class="carousel-inner">
             {/* <div class="carousel-item active">
               <img
