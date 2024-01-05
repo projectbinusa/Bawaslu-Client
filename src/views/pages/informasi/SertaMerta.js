@@ -143,7 +143,7 @@ function SertaMerta() {
                     <div className="card-header w-auto bg-primary text-light"style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }} >
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
-                          <h4>Informasi Serta Merta</h4>
+                          <h4>Informasi Serta Mertaa</h4>
                         </div>
                       </div>
                     </div>

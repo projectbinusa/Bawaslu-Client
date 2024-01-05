@@ -34,6 +34,7 @@ function Home() {
   const [list, setList] = useState([]);
   const [pengumuman, setPengumuman] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
+  const [listCaraousel, setListCaraousel] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({
     totalPages: 1,
@@ -83,6 +84,16 @@ function Home() {
     }
   };
 
+  const getAllCarousel = async () => {
+    try {
+      const response = await axios.get(`${API_DUMMY}/bawaslu/api/carousel/all`);
+      setListCaraousel(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log("Terjadi Kesalahan", error);
+    }
+  };
+
   const getAllPengumuman = async (page) => {
     await axios
       .get(
@@ -106,35 +117,25 @@ function Home() {
     getAllTerbaru();
     getAllInformasi();
     getAllPengumuman();
+    getAllCarousel();
   }, []);
 
-  const slides = [
-    {
-      title: "Nike",
-      image:
-        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/09/WhatsApp-Image-2020-09-05-at-20.15.11.jpeg",
-      bgColor: "#9FA051",
-    },
-    {
-      title: "Puma",
-      image:
-        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/01/WhatsApp-Image-2020-01-23-at-10.22.53.jpeg",
-      bgColor: "#9B89C5",
-    },
-    { title: "Yeeze", image: "images/yeeze.jpg", bgColor: "#D7A594" },
-  ];
+  
 
-  const swiper = useRef(null);
-  const currentSlideIndex = useRef(0);
+ 
 
-  const handlePrev = () => {
-    currentSlideIndex.current = swiper.current.activeIndex;
-    swiper.current.slidePrev();
-  };
+    const [activeIndex, setActiveIndex] = useState(0);
+    const handlePrevSlide = () => {
+      
+      setActiveIndex((prevIndex) =>
+        prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
+      );
+    };
 
-  const handleNext = () => {
-    currentSlideIndex.current = swiper.current.activeIndex;
-    swiper.current.slideNext();
+    const handleNextSlide = () => {
+      setActiveIndex((prevIndex) =>
+        prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
+      );
   };
   return (
     <div>
@@ -216,100 +217,59 @@ function Home() {
           </div>
         </div>
 
-        <div className="Container">
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={true}
-            slidesPerView={"auto"}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 100,
-              modifier: 2.5,
-            }}
-            className="swiper_container"
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',}}
-              pagination={{
-                el: '.swiper-pagination',
-                clickable: true,
-              }}
-              onSwiper={(swiperInstance) => (swiper.current = swiperInstance)}
-         
-          >
-            <SwiperSlide>
-              <img
-                src="https://jateng.bawaslu.go.id/wp-content/uploads/2023/04/BENTUK-DARI-SARANA-MARKETING-BAWASLU-BOYOLALI-ADAKAN-PELATIHAN-PEMBUATAN-VIDEO-PELIPUTAN.jpeg"
-                alt="slide_image"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/IMG-20180905-WA0010-1024x576.jpg"
-                alt="slide_image"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide container padding-img"
+          data-ride="carousel"
+        >
+          {/* <div class="carousel-indicators">
+            {listCaraousel.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to={index}
+                class={index === activeIndex ? "active" : ""}
+                aria-current={index === activeIndex ? "true" : "false"}
+                aria-label={`Slide ${index + 1}`}
+                onClick={() => setActiveIndex(index)}
+              ></button>
+            ))}
+          </div> */}
+          <div class="carousel-inner">
+            {/* <div class="carousel-item active">
               <img
                 src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/Samakan-Persepsi-Bawaslu-Boyolali-Sambangi-Kapolres-thegem-blog-default.jpeg"
-                alt="slide_image"
+                class="d-block w-100"
+                alt="..."
               />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://jateng.bawaslu.go.id/wp-content/uploads/2023/11/IMG_20231101_160325-scaled-thegem-blog-default.jpg"
-                alt="slide_image"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://static.republika.co.id/uploads/images/inpicture_slide/mantan-asn-di-lingkungan-pemkab-boyolali-pernah-dimutasi-berjarak_231124221102-722.jpg"
-                alt="slide_image"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://pusdem.lppm.uns.ac.id/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-07-at-18.00.24-1-1024x768.jpeg"
-                alt="slide_image"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src="https://joglosemarnews.com/images/2022/12/2212-bawaslu.jpg"
-                alt="slide_image"
-              />
-            </SwiperSlide>
-
-            {/* <div className="slider-controler">
-              <div className="swiper-button-prev slider-arrow">
-                <ion-icon name="arrow-back-outline"></ion-icon>
-              </div>
-              <div className="swiper-button-next slider-arrow">
-                <ion-icon name="arrow-forward-outline"></ion-icon>
-              </div>
-              <div className="swiper-pagination"></div>
             </div> */}
-          </Swiper>
-          <div className="slider-controler">
-            <div
-              className="swiper-button-prev slider-arrow"
-              onClick={handlePrev}
-            >
-              <i class="fa-solid fa-circle-chevron-left "  name="arrow-back-outline"></i>
-              {/* <ion-icon ></ion-icon> */}
-            </div>
-            <div
-              className="swiper-button-next slider-arrow"
-              onClick={handleNext}
-            >
-             <i class="fa-solid fa-circle-chevron-right"></i>
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-            <div className="swiper-pagination"></div>
+            {listCaraousel.map((caraousel, index) => (
+              <div key={index} class={`carousel-item ${index === activeIndex ? "active" : ""}`}>
+                <img src={caraousel.foto} class="d-block w-100" alt="..." />
+              </div>
+            ))}
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+            onClick={handlePrevSlide}
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+            onClick={handleNextSlide}
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
         {/* intro area end */}
         <div
@@ -327,7 +287,7 @@ function Home() {
           <div className="row">
             <div
               data-aos="fade-right"
-              className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5"
+              className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5 "
             >
               <ul>
                 {list.map((berita) => (
@@ -362,16 +322,20 @@ function Home() {
             </div>
             <div
               data-aos="fade-left"
-              className="col-lg-4 col-md-12 widget widget_catagory"
+              className="col-lg-4 col-md-12 widget widget_catagory "
               style={{
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                 padding: "30px",
                 borderRadius: "10px",
                 background: "#F1F6F9",
                 float: "inline-end",
+                background:" rgb(241, 246, 249)",
+                 border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
+                
               }}
             >
               <h4 className="widget-title">
+              <i class="fa-regular fa-file-lines"></i> {" "}
                 Tautan{" "}
                 <span className="text-primary">
                   <strong>Lembaga</strong>

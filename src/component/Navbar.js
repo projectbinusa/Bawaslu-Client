@@ -88,7 +88,7 @@ function Navbar() {
               <div className="logo1">
                 <a href="/">
                   <img
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/logo.png"
+                    src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
                     alt="img"
                   />
                 </a>
@@ -186,10 +186,13 @@ function Navbar() {
             </button>
           </div>
           <div className="d-inline-block d-lg-none">
+            <a href="/">
             <img
-              src="https://boyolali.bawaslu.go.id/cepogo/2023/09/logo.png"
+              src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
               alt="img"
             />
+            </a>
+           
           </div>
           <div
             className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
