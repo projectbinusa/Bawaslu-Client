@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../../../css/login.css";
 import { API_DUMMY } from "../../../utils/base_URL";
 import Swal from "sweetalert2";
+import Ikon from "../../../aset/ikon-web.png"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 function Register() {
   const [username, setUsername] = useState("");
@@ -15,27 +16,6 @@ function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (username.trim() === "" || password.trim() === "") {
-      setErrorMessage("Username dan password harus diisi.");
-      return;
-    }
-
-    if (
-      password.length < 8 ||
-      !/[A-Z]/.test(password) ||
-      !/[a-z]/.test(password)
-    ) {
-      Swal.fire({
-        icon: "error",
-        title:
-          "Password harus memiliki minimal 8 karakter, satu huruf besar, dan satu huruf kecil.",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-      return;
-    }
-
     try {
       const response = await axios.post(`${API_DUMMY}/register`, {
         username,
@@ -80,7 +60,8 @@ function Register() {
       <div className="containeriimg d-flex justify-content-center align-items-center min-vh-100">
         {/* <!----------------------- Login Container --------------------------> */}
 
-        <div
+        <div style={{background:" rgb(241, 246, 249)",
+                 border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"}}
           id="responsive-login"
           className="row border rounded-5 p-3 bg-white  box-area padding-login"
         >
@@ -107,7 +88,7 @@ function Register() {
                 <h2>
                   <img
                     style={{ width: "40px" }}
-                    src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                    src={Ikon}
                     alt=""
                   />{" "}
                   Register
