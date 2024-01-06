@@ -185,8 +185,8 @@ function CategoryBerita() {
                                       color: "white",
                                       backgroundColor: "#cf2830",
                                     }}
-                                    className="border p-2">
-                                    <i className="fa-brands fa-pinterest"></i>{" "}
+                                    className="border px-4 p-2">
+                                    <i className="fa-brands fa-pinterest "></i>{" "}
                                     Pin
                                   </button>
                                 </PinterestShareButton>

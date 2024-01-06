@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { async } from "q";
-import AOS from 'aos';
+import AOS from "aos";
 
 const FormPermohonanInformasi = () => {
   const [alamatPemohon, setAlamatPemohon] = useState("");
@@ -75,17 +75,20 @@ const FormPermohonanInformasi = () => {
     }
   };
 
-useEffect(() => {
-  AOS.init()
-})
+  useEffect(() => {
+    AOS.init();
+  });
 
   return (
     <>
       <div>
         <Navbar />
-        <div className="head">
-          <div data-aos="fade-up"
-     data-aos-anchor-placement="bottom-bottom" className="form text-center">
+        <div className="head" style={{marginBottom: "100px"}}>
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="bottom-bottom"
+            className="form text-center"
+          >
             <div className="form-permohonan section-title text-center">
               <h5
                 id="text1-gabung"
@@ -103,10 +106,12 @@ useEffect(() => {
               <img src={info} className="img" id="img" />
             </div> */}
           </div>
-          <form onSubmit={Add} className="option" style={{}}>
+          <div className="spacer"></div>
+
+          <form onSubmit={Add} className="option" style={{marginTop: "100px"}}>
             <div>
-              <div
-              data-aos="fade-right">
+              <div data-aos="fade-right">
+                {""}
                 <label
                   for="exampleInputPassword1"
                   className="form-label font-weight-bold"
@@ -221,8 +226,7 @@ useEffect(() => {
                 <br></br> */}
               </div>
             </div>
-            <div
-              data-aos="fade-left" className="tujuan">
+            <div data-aos="fade-left" className="tujuan">
               <label
                 for="exampleInputPassword1"
                 className="form-label font-weight-bold"
@@ -286,7 +290,9 @@ useEffect(() => {
                 onChange={(e) => setFotoIdentitas(e.target.files[0])}
               />
               <br></br>
-              <p>Jaminan Perlindungan Data Pribadi:</p>
+              <label className="form-label font-weight-bold">
+                Jaminan Perlindungan Data Pribadi:
+              </label>
               <ol>
                 <li>
                   Permintaan data pribadi untuk kepentingan pelayanan informasi

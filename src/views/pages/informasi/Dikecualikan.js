@@ -136,6 +136,7 @@ function Dikecualikan() {
             }}
           >
             <h4 className="widget-title">
+            <i class="fa-regular fa-file-lines"></i> {" "}
               Tautan{" "}
               <span className="text-primary">
                 <strong>Lembaga</strong>
