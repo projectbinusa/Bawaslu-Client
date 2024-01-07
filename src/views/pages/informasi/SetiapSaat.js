@@ -40,11 +40,11 @@ function SetiapSaat() {
                   >
                     <a
                       className="nav-link mb-3 p-3 shadow active"
-                      id="v-pills-home-tab"
+                      id="v-pills-organisasi-tab"
                       data-toggle="pill"
-                      href="#v-pills-home"
+                      href="#v-pills-organisasi"
                       role="tab"
-                      aria-controls="v-pills-home"
+                      aria-controls="v-pills-organisasi"
                       aria-selected="true"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -68,11 +68,11 @@ function SetiapSaat() {
 
                     <a
                       className="nav-link mb-3 p-3 shadow"
-                      id="v-pills-messages-tab"
+                      id="v-pills-mou-tab"
                       data-toggle="pill"
-                      href="#v-pills-messages"
+                      href="#v-pills-mou"
                       role="tab"
-                      aria-controls="v-pills-messages"
+                      aria-controls="v-pills-mou"
                       aria-selected="false"
                     >
                       <span className="font-weight-bold small text-uppercase">
@@ -140,7 +140,13 @@ function SetiapSaat() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header w-auto bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
+                    <div
+                      className="card-header w-auto bg-primary text-light"
+                      style={{
+                        borderTopLeftRadius: "5px",
+                        borderTopRightRadius: "5px",
+                      }}
+                    >
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Informasi Setiap Saat</h4>
@@ -158,7 +164,7 @@ function SetiapSaat() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-profile"
+                      id="v-pills-peraturan"
                       aria-labelledby="v-pills-peraturan-tab"
                     >
                       <PeraturanDanKebijakan />
@@ -166,9 +172,9 @@ function SetiapSaat() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-messages"
+                      id="v-pills-mou"
                       role="tabpanel"
-                      aria-labelledby="v-pills-messages-tab"
+                      aria-labelledby="v-pills-mou-tab"
                     >
                       <MOU />
                     </div>
@@ -183,7 +189,7 @@ function SetiapSaat() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-rencana"
                       role="tabpanel"
                       aria-labelledby="v-pills-rencana-tab"
                     >
@@ -191,6 +197,7 @@ function SetiapSaat() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-materi"
                       role="tabpanel"
                       aria-labelledby="v-pills-materi-tab"
                     >
@@ -198,7 +205,7 @@ function SetiapSaat() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-piagam"
                       role="tabpanel"
                       aria-labelledby="v-pills-piagam-tab"
                     >
