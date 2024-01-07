@@ -87,8 +87,8 @@ function Register() {
               <div className="header-text text-center">
                 <h2>
                   <img
-                    style={{ width: "40px" }}
-                    src={Ikon}
+                    style={{ width: "40px",  }}
+                    src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
                     alt=""
                   />{" "}
                   Register

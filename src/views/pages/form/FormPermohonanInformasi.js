@@ -83,7 +83,7 @@ const FormPermohonanInformasi = () => {
     <>
       <div>
         <Navbar />
-        <div className="head">
+        <div className="head" style={{marginBottom: "101px"}}>
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
@@ -106,9 +106,12 @@ const FormPermohonanInformasi = () => {
               <img src={info} className="img" id="img" />
             </div> */}
           </div>
-          <form onSubmit={Add} className="option" style={{}}>
+          <div className="spacer"></div>
+
+          <form onSubmit={Add} className="option" style={{marginTop: "100px"}}>
             <div>
               <div data-aos="fade-right">
+                {""}
                 <label
                   for="exampleInputPassword1"
                   className="form-label font-weight-bold"

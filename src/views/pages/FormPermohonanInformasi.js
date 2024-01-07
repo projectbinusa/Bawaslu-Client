@@ -3,6 +3,7 @@ import Navbar from "../../component/Navbar";
 import "../../css/FormPermohonanInformasi.css";
 import info from "../../aset/undraw_settings_tab_mgiw.svg";
 import Footer from "../../component/Footer";
+
 const PermohonanInformasi = () => {
   return (
     <>

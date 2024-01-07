@@ -125,10 +125,11 @@ function Dikecualikan() {
               )})}
           </div>
           <div
-            className="col-lg-3 col-md-8 widget widget_catagory logo-dikecualikan"
+            className="col-lg-4 col-md-12 widget widget_catagory logo-dikecualikan"
             style={{
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
               // padding: "10px 30px 10px 30px",
+              padding: "30px",
               borderRadius: "10px",
               background: "#EEF5FF",
               float: "inline-end",

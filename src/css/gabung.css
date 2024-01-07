@@ -27,6 +27,8 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        padding-left: 100px;
+        margin-left: 50px;
     }
    
     #icon-text-waktu{

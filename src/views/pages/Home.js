@@ -34,7 +34,7 @@ function Home() {
   const [list, setList] = useState([]);
   const [pengumuman, setPengumuman] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
-  const [listCaraousel, setListCaraousel] = useState([]);
+  const [listCaraousel, setListCaraousel] = useState([])
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({
     totalPages: 1,
@@ -83,7 +83,6 @@ function Home() {
       console.error("Terjadi Kesalahan", error);
     }
   };
-
   const getAllCarousel = async () => {
     try {
       const response = await axios.get(`${API_DUMMY}/bawaslu/api/carousel/all`);
@@ -93,7 +92,6 @@ function Home() {
       console.log("Terjadi Kesalahan", error);
     }
   };
-
   const getAllPengumuman = async (page) => {
     await axios
       .get(
@@ -107,6 +105,7 @@ function Home() {
       });
   };
 
+
   useEffect(() => {
     getAll(currentPage);
   }, [currentPage]);
@@ -119,12 +118,7 @@ function Home() {
     getAllPengumuman();
     getAllCarousel();
   }, []);
-
-  
-
- 
-
-    const [activeIndex, setActiveIndex] = useState(0);
+ const [activeIndex, setActiveIndex] = useState(0);
     const handlePrevSlide = () => {
       
       setActiveIndex((prevIndex) =>
@@ -137,6 +131,37 @@ function Home() {
         prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
       );
   };
+  const slides = [
+    {
+      title: "Nike",
+      image:
+        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/09/WhatsApp-Image-2020-09-05-at-20.15.11.jpeg",
+      bgColor: "#9FA051",
+    },
+    {
+      title: "Puma",
+      image:
+        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/01/WhatsApp-Image-2020-01-23-at-10.22.53.jpeg",
+      bgColor: "#9B89C5",
+    },
+    { title: "Yeeze", image: "images/yeeze.jpg", bgColor: "#D7A594" },
+  ];
+
+ 
+
+    // const [activeIndex, setActiveIndex] = useState(0);
+    // const handlePrevSlide = () => {
+      
+    //   setActiveIndex((prevIndex) =>
+    //     prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
+    //   );
+    // };
+
+    // const handleNextSlide = () => {
+    //   setActiveIndex((prevIndex) =>
+    //     prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
+    //   );
+  // };
   return (
     <div>
       <Navbar />
@@ -222,20 +247,7 @@ function Home() {
           class="carousel slide container padding-img"
           data-ride="carousel"
         >
-          {/* <div class="carousel-indicators">
-            {listCaraousel.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to={index}
-                class={index === activeIndex ? "active" : ""}
-                aria-current={index === activeIndex ? "true" : "false"}
-                aria-label={`Slide ${index + 1}`}
-                onClick={() => setActiveIndex(index)}
-              ></button>
-            ))}
-          </div> */}
+         
           <div class="carousel-inner">
             {/* <div class="carousel-item active">
               <img
@@ -665,6 +677,7 @@ function Home() {
       </div>
       <Footer />
     </div>
+    
   );
 }
 
