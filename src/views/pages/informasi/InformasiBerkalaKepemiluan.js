@@ -13,6 +13,7 @@ import LaporanAkhirPengawasan from "./tabs/Berkala/kepemiluan/LaporanAkhirPengaw
 import PenangananPelanggaran from "./tabs/Berkala/kepemiluan/PenangananPelanggaran";
 import NaskahPerjanjianHibahDaerah from "./tabs/Berkala/kepemiluan/NaskahPerjanjianHibahDaerah";
 import LayananPengaduanPolitik from "./tabs/Berkala/kepemiluan/LayananPengaduanPolitik";
+import SaranaPartisipasiPublik from "./tabs/Berkala/kepemiluan/SaranaPartisipasiPublik";
 
 function InformasiBerkalaKepemiluan() {
   return (
@@ -145,7 +146,13 @@ function InformasiBerkalaKepemiluan() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header w-auto bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
+                    <div
+                      className="card-header w-auto bg-primary text-light"
+                      style={{
+                        borderTopLeftRadius: "5px",
+                        borderTopRightRadius: "5px",
+                      }}
+                    >
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Informasi Berkala Kepemiluan</h4>
@@ -163,8 +170,7 @@ function InformasiBerkalaKepemiluan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-profile"
-
+                      id="v-pills-analisa"
                       role="tabpanel"
                       aria-labelledby="v-pills-analisa-tab"
                     >
@@ -173,8 +179,7 @@ function InformasiBerkalaKepemiluan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-messages"
-
+                      id="v-pills-laporan"
                       role="tabpanel"
                       aria-labelledby="v-pills-laporan-tab"
                     >
@@ -183,8 +188,7 @@ function InformasiBerkalaKepemiluan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-penanganan"
                       role="tabpanel"
                       aria-labelledby="v-pills-penanganan-tab"
                     >
@@ -192,6 +196,7 @@ function InformasiBerkalaKepemiluan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-naskah"
                       role="tabpanel"
                       aria-labelledby="v-pills-naskah-tab"
                     >
@@ -199,7 +204,7 @@ function InformasiBerkalaKepemiluan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-layanan"
                       role="tabpanel"
                       aria-labelledby="v-pills-layanan-tab"
                     >
@@ -207,11 +212,19 @@ function InformasiBerkalaKepemiluan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-putusan"
                       role="tabpanel"
                       aria-labelledby="v-pills-putusan-tab"
                     >
                       <PutusanPelanggaran />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-sarana"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-sarana-tab"
+                    >
+                      <SaranaPartisipasiPublik />
                     </div>
                   </div>
                 </div>
