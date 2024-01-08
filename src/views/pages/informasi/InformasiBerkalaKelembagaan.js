@@ -260,7 +260,13 @@ function InformasiBerkalaKelembagaan() {
 
                 <div className="col-md-9">
                   <div className="tab-content" id="v-pills-tabContent">
-                    <div className="card-header w-auto bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
+                    <div
+                      className="card-header w-auto bg-primary text-light"
+                      style={{
+                        borderTopLeftRadius: "5px",
+                        borderTopRightRadius: "5px",
+                      }}
+                    >
                       <div style={{ display: "flex" }}>
                         <div className="px-3">
                           <h4>Informasi Berkala Kelembagaan</h4>
@@ -278,7 +284,7 @@ function InformasiBerkalaKelembagaan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-profile"
+                      id="v-pills-khusus"
                       role="tabpanel"
                       aria-labelledby="v-pills-khusus-tab"
                     >
@@ -287,7 +293,7 @@ function InformasiBerkalaKelembagaan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-messages"
+                      id="v-pills-program"
                       role="tabpanel"
                       aria-labelledby="v-pills-program-tab"
                     >
@@ -296,7 +302,7 @@ function InformasiBerkalaKelembagaan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-ringkasan"
                       role="tabpanel"
                       aria-labelledby="v-pills-ringkasan-tab"
                     >
@@ -304,7 +310,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-sumber"
                       role="tabpanel"
                       aria-labelledby="v-pills-sumber-tab"
                     >
@@ -312,7 +318,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-keuangan"
                       role="tabpanel"
                       aria-labelledby="v-pills-keuangan-tab"
                     >
@@ -320,8 +326,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-layanan"
                       role="tabpanel"
                       aria-labelledby="v-pills-layanan-tab"
                     >
@@ -329,8 +334,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-sosialisasi"
                       role="tabpanel"
                       aria-labelledby="v-pills-sosialisasi-tab"
                     >
@@ -338,8 +342,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-sdm"
                       role="tabpanel"
                       aria-labelledby="v-pills-sdm-tab"
                     >
@@ -347,8 +350,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-laporan"
                       role="tabpanel"
                       aria-labelledby="v-pills-laporan-tab"
                     >
@@ -356,8 +358,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-naskah"
                       role="tabpanel"
                       aria-labelledby="v-pills-naskah-tab"
                     >
@@ -365,8 +366,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-piagam"
                       role="tabpanel"
                       aria-labelledby="v-pills-piagam-tab"
                     >
@@ -374,8 +374,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-realisasi"
                       role="tabpanel"
                       aria-labelledby="v-pills-realisasi-tab"
                     >
@@ -383,8 +382,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-perjanjian"
                       role="tabpanel"
                       aria-labelledby="v-pills-perjanjian-tab"
                     >
@@ -393,15 +391,15 @@ function InformasiBerkalaKelembagaan() {
 
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-ringkasan"
                       role="tabpanel"
-                      aria-labelledby="v-pills-settings-tab"
+                      aria-labelledby="v-pills-ringkasan-tab"
                     >
                       <RingkasanKegiatan />
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-rencana"
                       role="tabpanel"
                       aria-labelledby="v-pills-rencana-tab"
                     >
@@ -409,7 +407,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
+                      id="v-pills-tapkin"
                       role="tabpanel"
                       aria-labelledby="v-pills-tapkin-tab"
                     >
@@ -417,8 +415,7 @@ function InformasiBerkalaKelembagaan() {
                     </div>
                     <div
                       className="tab-pane fade shadow rounded bg-white p-3"
-                      id="v-pills-settings"
-
+                      id="v-pills-pengadaan"
                       role="tabpanel"
                       aria-labelledby="v-pills-pengadaan-tab"
                     >

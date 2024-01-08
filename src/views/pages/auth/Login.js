@@ -78,9 +78,9 @@ function Login() {
              
                 <img
                   style={{ width: "40px" }}
-                  src={Ikon}
+                  src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
                   alt="Bawaslu Logo"
-                />
+                /> {" "}
                 Login
               </h2>
               <p>Selamat Datang Kembali</p>
