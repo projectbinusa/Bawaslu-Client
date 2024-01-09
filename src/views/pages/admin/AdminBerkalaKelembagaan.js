@@ -161,6 +161,7 @@ function AdminBerkalaKelembagaan() {
                 className="form-select form-select-xl w-auto"
                 onChange={handleChange}
                 // value={rowsPerPage}
+                // a
               >
                 <option value="">Pilih</option>
                     <option value="22">Profile Bawaslu</option>;
