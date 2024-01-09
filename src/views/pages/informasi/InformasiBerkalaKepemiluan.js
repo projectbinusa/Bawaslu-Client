@@ -14,8 +14,12 @@ import PenangananPelanggaran from "./tabs/Berkala/kepemiluan/PenangananPelanggar
 import NaskahPerjanjianHibahDaerah from "./tabs/Berkala/kepemiluan/NaskahPerjanjianHibahDaerah";
 import LayananPengaduanPolitik from "./tabs/Berkala/kepemiluan/LayananPengaduanPolitik";
 import SaranaPartisipasiPublik from "./tabs/Berkala/kepemiluan/SaranaPartisipasiPublik";
+import AOS from "aos";
 
 function InformasiBerkalaKepemiluan() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <div>
       <Navbar />
@@ -37,7 +41,7 @@ function InformasiBerkalaKepemiluan() {
           <section>
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3"  data-aos="fade-right">
                   <div
                     className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
@@ -144,7 +148,7 @@ function InformasiBerkalaKepemiluan() {
                   </div>
                 </div>
 
-                <div className="col-md-9">
+                <div className="col-md-9"  data-aos="fade-left">
                   <div className="tab-content" id="v-pills-tabContent">
                     <div
                       className="card-header w-auto bg-primary text-light"

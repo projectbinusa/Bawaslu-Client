@@ -24,8 +24,12 @@ import PerjanjianKinerja from "./tabs/Berkala/kelembagaan/PerjanjianKinerja";
 import RencanaKerjaAnggaran from "./tabs/Berkala/kelembagaan/RencanaKerjaAnggaran";
 import Tapkin from "./tabs/Berkala/kelembagaan/Tapkin";
 import PengadaanBarang from "./tabs/Berkala/kelembagaan/PengadaanBarang";
+import AOS from "aos";
 
 function InformasiBerkalaKelembagaan() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <div>
       <Navbar />
@@ -47,7 +51,7 @@ function InformasiBerkalaKelembagaan() {
           <section>
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3" data-aos="fade-right">
                   <div
                     className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
@@ -258,7 +262,7 @@ function InformasiBerkalaKelembagaan() {
                   </div>
                 </div>
 
-                <div className="col-md-9">
+                <div className="col-md-9" data-aos="fade-left">
                   <div className="tab-content" id="v-pills-tabContent">
                     <div
                       className="card-header w-auto bg-primary text-light"

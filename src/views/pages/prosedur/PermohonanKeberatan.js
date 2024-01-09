@@ -35,7 +35,7 @@ function PermohonanKeberatan() {
         />
         <div className="row justify-content-end p-3 p-lg-0">
           <div
-            data-aos="fade-right"
+            data-aos="fade-left"
             className="col-lg-6 px-xl-5 order-lg-last text-lg-end">
             <div className="thumb">
               <img
@@ -45,9 +45,9 @@ function PermohonanKeberatan() {
             </div>
           </div>
           <div
-            data-aos="fade-left"
+            data-aos="fade-right"
             className="col-lg-5 align-self-center order-lg-first">
-            <div className="section-title div-gabung pembungkus-gabung">
+            <div className="section-title div-gabung pembungkus-gabung"  data-aos="fade-up">
               <h5
                 id="text1-gabung"
                 className="sub-title double-line text1-gabung">
@@ -57,6 +57,7 @@ function PermohonanKeberatan() {
                 Tata Cara Pengajuan <br /> Keberatan
               </h2>
             </div>
+            
             <div className="single-security-wrap">
               <div className="thumb">
                 <img
@@ -80,7 +81,7 @@ function PermohonanKeberatan() {
                   alt="img"
                 />
               </div>
-              <div data-aos="fade-left" className="details">
+              <div  className="details">
                 <h5>Pengajuan Keberatan</h5>
                 <p>
                   Pemohon informasi publik mengajukan keberatan kepada atasan
@@ -91,6 +92,8 @@ function PermohonanKeberatan() {
             </div>
           </div>
         </div>
+
+        
         <div id="div-gabung-akhir" className="row pd-top-110">
           <div
             data-aos="fade-right"
@@ -100,14 +103,14 @@ function PermohonanKeberatan() {
             </div>
           </div>
           <div
-            data-aos="fade-left"
+          
             id="padding-keberatan"
             className="col-lg-5 align-self-center keteranga-paddingn">
             <div className="section-title"></div>
             <div
               id="corn"
               className="single-security-wrap-2 keterangan-padding">
-              <div className="thumb border-bottom">
+              <div className="thumb border-bottom"   data-aos="fade-left">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-3.webp"
                   alt="img"
@@ -134,6 +137,7 @@ function PermohonanKeberatan() {
               </div>
             </div> */}
             <div
+              data-aos="fade-left"
               id="corn"
               className="single-security-wrap-2 keterangan-padding">
               <div className="thumb">
