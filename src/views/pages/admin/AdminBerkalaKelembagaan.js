@@ -152,10 +152,7 @@ function AdminBerkalaKelembagaan() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container box-tabel mt-3 app-main__outer">
-          <div class=" row g-3 align-items-center d-lg-none d-md-none d-block" >
-            <div class="col-auto" style={{alignItems:"center", display:"flex", justifyContent:"center"}}>
-              <p className="form-label mt-2" style={{textAlign:"center"}}>Rows per page:</p>
-            </div>
+          <div class=" row g-3 align-items-center d-lg-none d-md-flex" >
             <div class="col-auto">
               <select
                 className="form-select form-select-xl w-auto"
@@ -163,7 +160,7 @@ function AdminBerkalaKelembagaan() {
                 // value={rowsPerPage}
                 // alfy
               >
-                <option value="">Pilih</option>
+                <option value="">Pilih Jenis Informasi</option>
                     <option value="22">Profile Bawaslu</option>;
                     <option value="23">Layanan Publk Khusus</option>;
                     <option value="24">Program Kerja</option>;
@@ -182,38 +179,14 @@ function AdminBerkalaKelembagaan() {
                     <option value="37">TAPKIN</option>
                     <option value="38">Pengadaan Barang Dan Jasa</option>
               </select>
-            </div>
+            </div>  
           </div>
-          <div className="search d-lg-none d-md-none d-flex">
-            <input
-              type="search"
-              className="form-control widget-content-right w-100 mt-2 md-2 d-lg-none d-md-block"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-            />
-            </div>
+          
             <div id="main-card" className="main-card box-tabel mb-3 card">
            
             <div className=" mb-3 d-lg-none d-md-none d-flex">
-            <div className="card-header" style={{ display: "flex" }}>
-              <p className="mt-3">Berita</p>
-              <div className="ml-2 row g-3 align-items-center d-lg-block d-none d-md-none">
-                <div className="col-auto">
-                  {/* a */}
-                  <label className="form-label mt-2">Rows per page:</label>
-                </div>
-                <div className="col-auto">
-                  <select
-                    className="form-select form-select-sm"
-                    onChange={handleChange}
-                  >
-                    <option value={5}>5</option>
-                    <option value={10}>10</option>
-                    <option value={20}>20</option>
-                  </select>
-                </div>
-              </div>
+            <div className="card-header " style={{ display: "block" }}>
+              <p className="mt-3">Admin Informasi Berkala Kelembagaan</p>
               <div className="d-flex ml-auto gap-3">
                 <input
                   type="search"
@@ -222,7 +195,7 @@ function AdminBerkalaKelembagaan() {
                   value={searchTerm}
                   onChange={handleChange}
                 />
-                <div className="btn-actions-pane-right">
+                <div className="align-items">
                   <div role="group" className="btn-group-sm btn-group">
                     <button className="active btn-focus p-2 rounded">
                       <a
@@ -243,10 +216,7 @@ function AdminBerkalaKelembagaan() {
               style={{ display: "flex" }}
             >
               <p className="mt-3"> Admin Informasi Berkala Kelembagaan</p>
-              <div class="ml-2 row g-3 align-items-center d-lg-flex d-none d-md-none">
-                <div class="col-auto">
-                  <label className="form-label mt-2">Rows per page:</label>
-                </div>
+              <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
                 <div class="col-auto">
                 <select
                     className="form-select form-select-sm"
@@ -320,57 +290,7 @@ function AdminBerkalaKelembagaan() {
                 </div>
               </div>
             </div>
-              {/* <div id="card-header" className="card-header" style={{ display: "flex",}}>
-               <p className="mt-3"> Admin Informasi Berkala Kelembagaan</p>
               
-                <div className="col-auto">
-                  <select
-                    className="form-select form-select-xl w-auto"
-                    aria-label="Small select example"
-                    onChange={handleChange}
-                  >
-                    <option value="">Pilih Jenis Informasi</option>
-                    <option value="22">Profile Bawaslu</option>;
-                    <option value="23">Layanan Publk Khusus</option>;
-                    <option value="24">Program Kerja</option>;
-                    <option value="25">Ringkasan Kegiatan</option>;
-                    <option value="26">Sumber dan Anggaran Kegiatan</option>;
-                    <option value="27">Keuangan Bawaslu</option>;
-                    <option value="28">Layanan Informasi Publik</option>
-                    <option value="29">Sosialisasi</option>
-                    <option value="30">SDM, Organisasi, & Administrasi</option>
-                    <option value="31">Laporan Barang Milik Negara</option>
-                    <option value="32">Naskah Perjanjian Hibah Daerah</option>
-                    <option value="33">Piagam Penghargaan</option>
-                    <option value="34">Laporan Realisasi Anggaran</option>
-                    <option value="35">Perjanjian Kinerja</option>
-                    <option value="36">Rencana Kerja & Anggaran</option>
-                    <option value="37">TAPKIN</option>
-                    <option value="38">Pengadaan Barang Dan Jasa</option>
-                  </select>
-                  <div className="btn-actions-pane-right">
-                    <div
-                      id="butoon"
-                      role="group"
-                      className="btn-group-sm btn-group"
-                    >
-                      <button
-                        id="button"
-                        className="active btn-focus p-2 rounded"
-                      >
-                        <a
-                          href="/tambah-informasi-berkala-kelembagaan"
-                          className="text-light"
-                          style={{ textDecoration: "none" }}
-                        >
-                          {" "}
-                          Tambah Data
-                        </a>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
               <TableContainer>
                 <div
                   className="table-responsive"

@@ -152,6 +152,25 @@ function AdminBerkalaKepemiluan() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
+          <div class=" row g-3 align-items-center d-lg-none d-md-flex" >
+            <div class="col-auto">
+              <select
+                className="form-select form-select-xl w-auto"
+                onChange={handleChange}
+                // value={rowsPerPage}
+                // alfy
+              >
+                <option value="">Pilih Jenis Informasi</option>
+                    <option value="15">Hasil Pengawasan</option>;
+                    <option value="16">Analisa Calon Terpilih</option>;
+                    <option value="19">Laporan Akhir Pengawasan</option>;
+                    <option value="20">Penanganan Pelanggaran</option>;
+                    <option value="21">Naskah Perjanjian Hibah Daerah</option>;
+                    <option value="22">Layanan Pengaduan Publik</option>;
+                    <option value="23">Sarana Partisipasi Publik</option>
+              </select>
+            </div>
+          </div>
             <div id="main-card" className="main-card mb-3 card">
               <div id="card-header" className="card-header">
                 Admin Informasi Berkala Kepemiluan
