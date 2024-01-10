@@ -462,6 +462,7 @@ function Berita() {
                                     style={{
                                       color: "white",
                                       backgroundColor: "#cf2830",
+                                      width: "80px",
                                     }}
                                     className="border p-2">
                                     <i class="fa-brands fa-pinterest"></i> Pin
