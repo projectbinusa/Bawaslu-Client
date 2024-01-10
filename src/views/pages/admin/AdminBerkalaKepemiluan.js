@@ -151,7 +151,7 @@ function AdminBerkalaKepemiluan() {
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container mt-3 app-main__outer">
+          <div id="container" className="container box-tabel mt-3 app-main__outer">
           <div class=" row g-3 align-items-center d-lg-none d-md-flex" >
             <div class="col-auto">
               <select
@@ -171,8 +171,34 @@ function AdminBerkalaKepemiluan() {
               </select>
             </div>
           </div>
-            <div id="main-card" className="main-card mb-3 card">
-              <div id="card-header" className="card-header">
+            <div id="main-card" className="main-card box-tabel mb-3 card">
+             <div className=" mb-3 d-lg-none d-md-none d-flex">
+            <div className="card-header " style={{ display: "block" }}>
+              <p className="mt-3">Admin Informasi Berkala Kelembagaan</p>
+              <div className="d-flex ml-auto gap-3">
+                <input
+                  type="search"
+                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleChange}
+                />
+                <div className="align-items">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
+                      <a
+                        style={{ color: "white", textDecoration: "none" }}
+                        href="/add-berita-admin"
+                      >
+                        Tambah Berita
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+              <div id="card-header" className="card-header d-lg-flex d-none d-md-none">
                 Admin Informasi Berkala Kepemiluan
                 <div className="d-flex ml-auto gap-3">
                   <select

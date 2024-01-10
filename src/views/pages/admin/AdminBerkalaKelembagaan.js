@@ -275,7 +275,7 @@ function AdminBerkalaKelembagaan() {
                   >
                     <button
                       id="button-tambah"
-                      className="active btn-focus p-2 rounded button-tambah"
+                      className="active btn-focus rounded button-tambah"
                     >
                      <a
                           href="/tambah-informasi-berkala-kelembagaan"
