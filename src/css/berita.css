@@ -52,13 +52,7 @@
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
- @font-face {
-    font-family: 'flexslider-icon';
-    /* src: url('../fonts/flexslider-icon.eot');
-    src: url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../fonts/flexslider-icon.woff') format('woff'), url('../fonts/flexslider-icon.ttf') format('truetype'), url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg'); */
-    font-weight: normal;
-    font-style: normal;
-  }
+
   /* ====================================================================================================================
    * RESETS
    * ====================================================================================================================*/
@@ -328,7 +322,7 @@
     max-width: 100%; /* Membuat gambar sesuai lebar maksimum */
     height: auto;    /* Menjaga aspek ratio gambar */
   }
-  
+
   .carousel-caption {
     padding: 20px;    /* Menambahkan padding pada caption */
   }
@@ -411,7 +405,7 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
     padding-left: 50px;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -434,7 +428,7 @@
 .wrap-opacity2 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -452,7 +446,7 @@
 
 .wrapper3-berita {
     width: 370px;
-   
+
 }
 
 .wrap-img3-berita {
@@ -460,13 +454,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 290px;
-   
+
 }
 
 .wrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -510,7 +504,7 @@
 .wrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -529,7 +523,7 @@
 }
 .a-href{
     display: flex;
-    gap: 100px; 
+    gap: 100px;
     text-align: center;
     padding: 20px;
     justify-content: center;
@@ -548,7 +542,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 .pmbngks-txt-logo{
     display: flex;
@@ -585,12 +579,12 @@
         padding-top: 100px;
     }
     #wrap-img1 {
-       
+
         height: 450px;
     }
     #warper-opacity1 {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 450px;
     }
     #worapp-text1 {
@@ -601,12 +595,12 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
     #wrap-img2 {
-      
+
         height: 450px;
     }
     #wrap-opacity2 {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 450px;
     }
     #wrap-text2 {
@@ -618,17 +612,17 @@
     }
     #wrap-img3 {
         height: 217px;
-       
+
     }
     .wrap-opacity3 {
-       
+
         height:200px;
     }
     #warapper3 {
         width: 200px;
         padding-top: 100px;
        }
-       #wrap-immg4 {    
+       #wrap-immg4 {
         height: 217px;
     }
     #a-txt{
@@ -651,7 +645,7 @@
     #hr{
         width: 250px;
     }
-    
+
 }
 @media screen and (max-width: 768px) {
     #pmbngks-img {
@@ -668,12 +662,12 @@
         padding-top: 100px;
     }
     #wrap-img1-berita {
-       
+
         height: 450px;
     }
     #warper-opacity1-berita {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 450px;
     }
     #wrapp-text1-berita {
@@ -689,18 +683,18 @@
         padding-top: 100px;
        }
     #warapper3-berita {
-      
+
         height: 250px;
     }
     #wrap-opacity3-berita {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 350px;
         padding: 1px;
     }
     #wrap-opacity5-berita {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 350px;
         padding: 1px;
     }
@@ -709,7 +703,7 @@
         font-size: 15px;
         padding: 5px;
         padding-top:100px;
-        text-align: end;
+        text-align: flex-end;
         text-align: center;
     }
     .wrap-text4-berita {
@@ -730,24 +724,24 @@
     }
     #wrap-img3-berita {
         height: 230px;
-       
+
     }
     #wrap-img5-berita {
         height: 230px;
-       
+
     }
     .wrap-opacity3 {
-       
+
         height:230px;
     }
     #warapper3-berita {
         width: 220px;
         padding-top: 100px;
        }
-       #wrap-img4-berita {    
+       #wrap-img4-berita {
         height: 210px;
     }
-       #wrap-img6-berita {    
+       #wrap-img6-berita {
         height: 210px;
     }
     #pmbngks-img2-berita{
@@ -778,7 +772,7 @@
     #txt-h3-kehumasan{
         padding-right: 100px;
     }
-    
+
 }
 @media screen and (max-width: 390px) {
     #pmbngks-img-berita{
@@ -791,13 +785,13 @@
         padding-top: 0px;
     }
     #wrap-img1-berita {
-       
+
         height: 150px;
     }
     #wrap-img1-berita {
         display: flex;
         text-align: center;
-        align-items: end;
+        align-items: flex-end;
         height: 250px;
     }
     #wrapp-text1-berita {
@@ -813,19 +807,19 @@
         padding-top: 0px;
        }
     #wrap-img2 {
-      
+
         height: 150px;
     }
     #wrap-opacity2 {
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 355px;
     }
     #warper-opacity1-berita {
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         height: 150px;
         width: 355px;
     }
@@ -838,11 +832,11 @@
     }
     #wrap-img3 {
         height: 200px;
-       
+
     }
-    
+
     .wrap-opacity3 {
-       
+
         height:80px;
     }
     #wrap-opacity3 {
@@ -852,7 +846,7 @@
         width: 280px;
         padding-top: 10px;
        }
-       #wrap-immg4 {    
+       #wrap-immg4 {
         height: 200px;
     }
     #pmbngks-img2-berita{
@@ -884,7 +878,7 @@
     }
     #a-href{
         display: flex;
-        gap: 20px; 
+        gap: 20px;
         text-align: center;
         padding: 20px;
         justify-content: center;
@@ -918,6 +912,6 @@
         font-size: 13px;
     }
     #txt-h3-kehumasan{
-padding-right: 20px;    
+padding-right: 20px;
 }
 }

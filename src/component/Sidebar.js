@@ -112,6 +112,12 @@ function Sidebar() {
                   Pengumuman
                 </a>
               </li>
+              <li>
+                <a style={{ textDecoration: "none" }} href="/admin-page-carousel">
+                <i class="fas fa-images metismenu-icon"></i>{" "}
+                  Carousel
+                </a>
+              </li>
               <li className="app-sidebar__heading">Informasi</li>
               {/* <li>
                 <a style={{ textDecoration: "none" }} href="/jenis-informasi">
