@@ -2,12 +2,6 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import "../../../css/dip.css";
-import PutusanPelanggaran from "../informasi/tabs/SertaMerta/PutusanPelanggaran";
-import SengketaProsesPemilu from "../informasi/tabs/SertaMerta/SengketaProsesPemilu";
-import PemungutanSuaraUlang from "../informasi/tabs/SertaMerta/PemungutanSuaraUlang";
-import OrganisasiDanAdministrasi from "../informasi/tabs/SertaMerta/OrganisasiDanAdministrasi";
-import PerselisihanHasilPemilu from "../informasi/tabs/SertaMerta/PerselisihanHasilPemilu";
-import Sosialisasi from "../menu footer/Sosialisasi";
 import Piagam from "../informasi/tabs/SertaMerta/Piagam";
 function Dip() {
   return (
@@ -22,7 +16,7 @@ function Dip() {
         }}
         className="project-area pd-top-110 pd-bottom-90"
       >
-        
+
          <section>
             <div className="container">
               <div className="row">
@@ -63,7 +57,7 @@ function Dip() {
               className="card mb-4 shadow table-responsive"
               style={{ width: "100%" }}
             >
-             
+
               <div className="card-body bg-body-tertiary table-container rounded">
                 <table className="table table1 responsive-3 table-striped table-hover border rounded">
                   <thead>
@@ -271,7 +265,7 @@ function Dip() {
               </div>
             </div>
           </section>
-      
+
       </div>
       <Footer />
     </div>

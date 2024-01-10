@@ -1,19 +1,6 @@
-import React, { useEffect, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import "../../../css/LayananInformasi.css";
-// import "react-owl-carousel2/src/owl.carousel.css";
-// import "react-owl-carousel2/src/owl.theme.default.css";
-import "../../../css/InformasiStandarProsedur.css";
-import axios from "axios";
-import { API_DUMMY } from "../../../utils/base_URL";
-import Piagam from "../informasi/tabs/SertaMerta/Piagam";
-import Sosialisasi from "../menu footer/Sosialisasi";
-import PerselisihanHasilPemilu from "../informasi/tabs/SertaMerta/PerselisihanHasilPemilu";
-import OrganisasiDanAdministrasi from "../informasi/tabs/SertaMerta/OrganisasiDanAdministrasi";
-import PemungutanSuaraUlang from "../informasi/tabs/SertaMerta/PemungutanSuaraUlang";
-import SengketaProsesPemilu from "../informasi/tabs/SertaMerta/SengketaProsesPemilu";
-import PutusanPelanggaran from "../informasi/tabs/SertaMerta/PutusanPelanggaran";
 
 function InformasiStandarProsedur() {
   return (
@@ -30,7 +17,7 @@ function InformasiStandarProsedur() {
         }}
         className="project-area pd-top-110 pd-bottom-90"
       >
-        
+
         <section>
           <div className="container">
             <div className="row">
