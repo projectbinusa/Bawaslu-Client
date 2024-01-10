@@ -25,9 +25,6 @@ import AdminPermohonanInformasi from "./views/pages/admin/permohonan/AdminPermoh
 import AdminPermohonanKeberatan from "./views/pages/admin/permohonan/AdminPermohonanKeberatan";
 import DetailPermohonanInformasi from "./views/pages/admin/permohonan/detail/DetailPermohonanInformasi";
 import DetailPermohonanKeberatan from "./views/pages/admin/permohonan/detail/DetailPermohonanKeberatan";
-import Kehumasan from "./views/pages/menu footer/Kehumasan";
-import Pencegahan from "./views/pages/menu footer/Pencegahan";
-import Sosialisasi from "./views/pages/menu footer/Sosialisasi";
 import WaktuLayanan from "./views/pages/prosedur/WaktuLayanan";
 import BiayaLayanan from "./views/pages/prosedur/BiayaLayanan";
 import PermohonanKeberatan from "./views/pages/prosedur/PermohonanKeberatan";
@@ -37,16 +34,6 @@ import LayananInformasi from "./views/pages/form/LayananInformasi";
 import PermintaanInformasi from "./views/pages/prosedur/PermintaanInformasi";
 import Dip from "./views/pages/daftarRegulasi/Dip";
 import InformasiStandarProsedur from "./views/pages/daftarRegulasi/InformasiStandarProsedur";
-import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
-import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
-import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
-import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
-import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
-import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
-import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
-import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
-import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
-import GpAnsor from "./views/pages/menu footer/GpAnsor";
 
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
@@ -57,22 +44,6 @@ import Indexx from "./views/pages/admin/informasi/Index";
 
 import AddMenuRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/AddMenuRegulasi";
 // import AddMenuRegulasi "./"
-
-import PemiluPartisipatif from "./views/pages/menu footer/PemiluPartisipatif";
-import Kpu from "./views/pages/menu footer/Kpu";
-import PemiluBermartabat from "./views/pages/menu footer/PemiluBermartabat";
-import KecamatanSelo from "./views/pages/menu footer/KecamatanSelo";
-import KampanyePemilu from "./views/pages/menu footer/KampanyePemilu";
-import PerkuatPemahaman from "./views/pages/menu footer/PerkuatPemahaman";
-import PengumumanCalonAnggota from "./views/pages/menu footer/PengumumanCalonAnggota";
-import PengumumanHasiltesKesehatan from "./views/pages/menu footer/PengumumanHasiltesKesehatan";
-import PengumumanHasiltesWawancara from "./views/pages/menu footer/PengumumanHasiltesWawancara";
-import PengumumanPerpanjangantesTertulis from "./views/pages/menu footer/PengumumanPerpanjangantesTertulis";
-import PengumumanPelaksanaan from "./views/pages/menu footer/PengumumanPelaksanaan";
-import PengumumanHasilSeleksi from "./views/pages/menu footer/PengumumanHasilSeleksi";
-import PengumumanLowonganSatpam from "./views/pages/menu footer/PengumumanLowonganSatpam";
-import PenyelesaianSengketaFooter from "./views/pages/menu footer/PenyelesaianSengketaFooter";
-import PengumumanFooter from "./views/pages/menu footer/PengumumanFooter";
 import AddJenisKeterangan from "./views/pages/admin/informasi/AddJenisKeterangan";
 import EditJenisKeterangan from "./views/pages/admin/informasi/EditJenisKeterangan";
 import IsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/IsiKeterangan";
@@ -81,7 +52,6 @@ import EditIsiKeterangan from "./views/pages/admin/informasi/isiKeterangan/EditI
 import RegulasiAdmin from "./views/pages/admin/daftarRegulasi/Regulasi/RegulasiAdmin";
 import EditRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/EditRegulasi";
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuRegulasi";
-import PaswasluKecamatan from "./views/pages/menu footer/PaswasluKecamatan";
 import Kanal from "./views/pages/informasi/Kanal";
 import PageBerita from "./views/PageBerita";
 import Informasii from "./views/pages/informasi/Informasii";
@@ -132,6 +102,9 @@ import DipPublic from "./views/pages/regulasi/DipPublic";
 import SopPublic from "./views/pages/regulasi/SopPublic";
 import AdminDiKecualikan from "./views/pages/admin/AdminDiKecualikan";
 import AddDiKecualikan from "./views/pages/admin/Add/AddDiKecualikan";
+import PageCarousel from "./views/pages/admin/caraousel/PageCarousel";
+import EditCarousel from "./views/pages/admin/caraousel/EditCarousel";
+import AddCarousel from "./views/pages/admin/caraousel/AddCarousel";
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -182,28 +155,28 @@ function App() {
           <Route path="/informasi-kanal" component={Kanal} exact />
 
           {/* tambah dan ubah data informasi */}
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-serta-merta"
             component={AddSertaMerta}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-setiap-saat"
             component={AddSetiapSaat}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-berkala-kepemiluan"
             component={AddBerkalaKepemiluan}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-berkala-kelembagaaan"
             component={AddBerkalaKelembagaan}
             exact
           />
-          <Route path="/tambah-informasi-kanal" component={AddKanal} exact />
-          <Route
+          <PrivateRoute path="/tambah-informasi-kanal" component={AddKanal} exact />
+          <PrivateRoute
             path="/ubah-isi-informasi/:id"
             component={PutIsiInformasi}
             exact
@@ -259,55 +232,57 @@ function App() {
           />
 
           {/* admin */}
-
+          <PrivateRoute path="/admin-page-carousel" component={PageCarousel} exact/>
+          <PrivateRoute path="/edit-page-carousel/:id" component={EditCarousel} exact/>
+          <PrivateRoute path="/add-page-carousel" component={AddCarousel} exact/>
           {/* admin informasi */}
-          <Route path="/admin-serta-merta" component={AdminSertaMerta} exact />
-          <Route path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
-          <Route
+          <PrivateRoute path="/admin-serta-merta" component={AdminSertaMerta} exact />
+          <PrivateRoute path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
+          <PrivateRoute
             path="/admin-berkala-kepemiluan"
             component={AdminBerkalaKepemiluan}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/admin-berkala-kelembagaan"
             component={AdminBerkalaKelembagaan}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/admin-dikecualikan"
             component={AdminDiKecualikan}
             exact
           />
-          <Route path="/admin-kanal" component={AdminKanal} exact />
+          <PrivateRoute path="/admin-kanal" component={AdminKanal} exact />
 
           {/* tambah dan ubah data informasi */}
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-serta-merta"
             component={AddSertaMerta}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-setiap-saat"
             component={AddSetiapSaat}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-berkala-kepemiluan"
             component={AddBerkalaKepemiluan}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-berkala-kelembagaan"
             component={AddBerkalaKelembagaan}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/tambah-informasi-dikecualikan"
             component={AddDiKecualikan}
             exact
           />
-          <Route path="/tambah-informasi-kanal" component={AddKanal} exact />
-          <Route
+          <PrivateRoute path="/tambah-informasi-kanal" component={AddKanal} exact />
+          <PrivateRoute
             path="/ubah-isi-informasi/:id"
             component={PutIsiInformasi}
             exact
@@ -390,8 +365,8 @@ function App() {
             exact
           />
           {/* daftar regulasi */}
-          <Route path="/admin-regulasi/:id" component={MenuRegulasi} exact />
-          <Route
+          <PrivateRoute path="/admin-regulasi/:id" component={MenuRegulasi} exact />
+          <PrivateRoute
             path="/edit-data/:menuRegulasi/:id"
             component={MenuEditRegulasi}
             exact
@@ -411,41 +386,46 @@ function App() {
             component={RegulasiAdmin}
             exact
           />
-          {/* <Route path="/edit/:regulasi/:id" component={EditRegulasi} exact /> */}
-          {/* <Route path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
-          <Route
+          {/* <PrivateRoute path="/edit/:regulasi/:id" component={EditRegulasi} exact /> */}
+          {/* <PrivateRoute path="/admin-informasi-serta-merta" component={AdminSertaMerta} exact /> */}
+          <PrivateRoute
             path="/detail-permohonan-informasi/:id"
             component={DetailPermohonanInformasi}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/detail/permohonan-keberatan/:id"
             component={DetailPermohonanKeberatan}
             exact
           />
-          <Route path="/tambah-category-berita" component={AddCategory} exact />
-          <Route
+          <PrivateRoute path="/tambah-category-berita" component={AddCategory} exact />
+          <PrivateRoute
             path="/category-berita/:category/:id"
             component={CategoryBerita}
             exact
           />
-          <Route
+          <PrivateRoute
             path="/edit-category-berita/:id"
             component={EditCategory}
             exact
           />
           {/* admin informasi */}
-          {/* <Route path="/admin-serta-merta" component={AdminSertaMerta} exact /> */}
+          {/* <PrivateRoute path="/admin-serta-merta" component={AdminSertaMerta} exact /> */}
 
-          <Route
+          <PrivateRoute
             path="/admin-informasi/:namaInformasi/:id"
             component={Indexx}
             exact
           />
-          <Route path="/jenis-informasi" component={JenisInformasi} exact />
-          <Route
+          <PrivateRoute path="/jenis-informasi" component={JenisInformasi} exact />
+          <PrivateRoute
             path="/tambah-jenis-informasi"
             component={AddJenisInfo}
+            exact
+          />
+          <Route
+            path="/page-isi-berita/:author/:id"
+            component={PageBerita}
             exact
           />
           <Route
@@ -487,139 +467,6 @@ function App() {
           <Route
             path="/isi-rekap/:judulBerita/:id"
             component={IsiRekap}
-            exact
-          />
-          <Route path="/kehumasan" component={Kehumasan} exact />
-          <Route path="/pencegahan" component={Pencegahan} exact />
-          <Route path="/sosialisasi" component={Sosialisasi} exact />
-
-          <Route
-            path="/penanganan-pelanggaran"
-            component={PenangananPelanggaran}
-            exact
-          />
-          <Route path="/tak-berkategori" component={TakBerkategori} exact />
-          <Route path="/OSDM-dan-Diklat" component={OSDMdanDiklat} exact />
-          <Route path="/pengumuman-footer" component={PengumumanFooter} exact />
-          <Route
-            path="/dialog-interaktif-isu-pemilu-di-sosial-media"
-            component={DialogKehumasan}
-            exact
-          />
-          <Route
-            path="/pesta-demokrasi-semakin-dekat-bawaslu-diminta-menjadi-narasumber-sosialisasi-pemilu-2024"
-            component={PestaDemokrasi}
-            exact
-          />
-          <Route
-            path="/bawaslu-boyolali-bersama-uns-lakukan-penandatanganan-mou"
-            component={PenandatangananMou}
-            exact
-          />
-          <Route
-            path="/bawaslu-mengawasi-verifikasi-administrasi-perbaikan-dokumen-persyaratan-bakal-calon-dprd-kab-kota"
-            component={VerifikasiAdministrasi}
-            exact
-          />
-          <Route
-            path="/panwaslu-kecamatan-karanggede-lakukan-kegiatan-sosialisasi-denga-pemilih-pemula"
-            component={PemilihSosialisasi}
-            exact
-          />
-          <Route
-            path="/bawaslu-boyolali-tandatangani-nphd-pendanaan-pemilukada-2024"
-            component={TandatgnNPHD}
-            exact
-          />
-          <Route
-            path="/gp-ansor-dan-panwaslu-musuk-jalin-kerjasama"
-            component={GpAnsor}
-            exact
-          />
-          <Route
-            path="/bawaslu-boyolali-ajak-masyarakat-terlibat-dalam-pengawasan-pemilu-partisipatif"
-            component={PemiluPartisipatif}
-            exact
-          />
-          <Route
-            path="/kpu-boyolali-gelar-kirab-pemilu-2024-bawaslu-boyolali-turut-hadir-dan-mengawasi"
-            component={Kpu}
-            exact
-          />
-          <Route
-            path="/ciptakan-pemilu-2024-bermartabat-panwascam-tamansari-ajak-pemuda-pemudi-untuk-mengawasi"
-            component={PemiluBermartabat}
-            exact
-          />
-          <Route
-            path="/bawaslu-boyolali-lakukan-supervisi-pemutakhiran-data-pemilih-ke-kecamatan-selo"
-            component={KecamatanSelo}
-            exact
-          />
-          <Route
-            path="/bawaslu-provinsi-jawa-tengah-lakukan-supervisi-pemetaan-potensi-pelanggaran-tahapan-kampanye-pemilu-2024"
-            component={KampanyePemilu}
-            exact
-          />
-          <Route
-            path="/perkuat-pemahaman-penyelesaian-sengketa-bawaslu-adakan-rapat-fasilitasi-dengan-panwascam"
-            component={PerkuatPemahaman}
-            exact
-          />
-          <Route
-            path="/pengumuman-calon-anggota-bawaslu"
-            component={PengumumanCalonAnggota}
-            exact
-          />
-          <Route
-            path="/pengumuman-hasil-tes-kesehatan-dan-tes-wawancara-serta-jadwal-uji-kelayakan-dan-kepatutan-calon-anggota-bawaslu-kab-kota-provinsi-jawa-tengah-zona-iii"
-            component={PengumumanHasiltesKesehatan}
-            exact
-          />
-          <Route
-            path="/pengumuman-tes-wawancara-seleksi-calon-anggota-bawaslu-kab-kota-2023-provinsi-jawa-tengah-zona-iii"
-            component={PengumumanHasiltesWawancara}
-            exact
-          />
-          <Route
-            path="/pengumuman-perpanjangan-hasil-tes-tertulis-dan-tes-psikologi-dan-perubahan-waktu-pelaksanaan-tes-kesehatan-calon-anggota-bawaslu-kab-kota"
-            component={PengumumanPerpanjangantesTertulis}
-            exact
-          />
-          <Route
-            path="/pengumuman-pelaksanaan-test-psikologi-calon-anggota-bawaslu-kabupaten-kota-provinsi-jawa-tengah-zona-iii"
-            component={PengumumanPelaksanaan}
-            exact
-          />
-          <Route
-            path="/pengumuman-hasil-seleksi-administrasi-bakal-calon-anggota-bawaslu-kabupaten-kota-2023-2028-zona-iii"
-            component={PengumumanHasilSeleksi}
-            exact
-          />
-          <Route
-            path="/pengumuman-lowongan-pekerjaan-satpam"
-            component={PengumumanLowonganSatpam}
-            exact
-          />
-          {/* <Route
-
-            path="/isi-pengumuman/:judulPengumuman/:id"
-            component={IsiPengumuman}
-            exact
-          /> */}
-          <Route
-            path="/page-isi-berita/:author/:id"
-            component={PageBerita}
-            exact
-          />
-          <Route
-            path="/penyelesaian-sengketa-footer"
-            component={PenyelesaianSengketaFooter}
-            exact
-          />
-          <Route
-            path="/panwaslu-kecamatan-karanggede-lakukan-kegiatan-sosialisasi-denga-pemilih-pemula"
-            component={PaswasluKecamatan}
             exact
           />
           <Route path="/informasi-serta-merta" component={SertaMerta} exact />

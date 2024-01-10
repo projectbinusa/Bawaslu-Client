@@ -25,14 +25,14 @@
 #wrapp-opacity1 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
 #wrapp-text1{
     color: white;
-    font-size: 20px; 
-    padding: 50px; 
+    font-size: 20px;
+    padding: 50px;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -47,7 +47,7 @@
 .wrap-opacity2 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -67,7 +67,7 @@
 .warappper3 {
     width: 300px;
     padding-top: 100px;
-   
+
 }
 
 .wrap-img3 {
@@ -75,13 +75,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
-   
+
 }
 
 .wrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -103,7 +103,7 @@
 .wrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -117,7 +117,7 @@
 }
 .a-href{
     display: flex;
-    gap: 100px; 
+    gap: 100px;
     text-align: center;
     padding: 20px;
     justify-content: center;
@@ -136,7 +136,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 .pmbngks-txt-logo{
     display: flex;
@@ -163,12 +163,12 @@
     #warappper3 {
         width: 300px;
         padding-top: 100px;
-       
+
     }
     #wrappper1 {
         width: 350px;
         padding-top: 100px;
-       
+
     }
     #wrapp-img2 {
         height: 450px;
@@ -190,7 +190,7 @@
     #warappper3 {
         width: 300px;
         padding-top: 100px;
-       
+
     }
     #wrapp-img3 {
         height: 215px;
@@ -204,7 +204,7 @@
     #warappper3 {
         width: 180px;
         padding-top: 100px;
-       
+
     }
     #wrappper1{
         width: 300px;
@@ -231,7 +231,7 @@
     #wrappper3 {
         width: 250px;
         padding-top: 100px;
-       
+
     }
     #wrapp-img3 {
         height: 170px;
@@ -253,7 +253,7 @@
     #img-logo{
         padding-right: 100px;
     }
-   
+
     #tautan{
 padding-right: 100px;
     }
@@ -266,7 +266,7 @@ padding-right: 100px;
         height: 200px;
         /* border: 1px solid red; */
     }
-    #wrapp-text1 {  
+    #wrapp-text1 {
         font-size: 9px;
         padding: 5px 23px;
         text-align: center;
@@ -274,7 +274,7 @@ padding-right: 100px;
     #wrappper2 {
         width: 280px;
         padding-top: 10px;
-       
+
     }
     #wrapp-img2 {
         height: 200px;
@@ -283,7 +283,7 @@ padding-right: 100px;
     #warappper3 {
         width:280px;
         padding-top: 10px;
-       
+
     }
     #wrapp-img3 {
         height: 100px;
@@ -296,16 +296,16 @@ padding-right: 100px;
     #al-txt{
         font-size: 10px;
     }
-   
+
     #hhr{
         width: 300px;
         text-align: center;
     }
     #tautan{
         padding: 5px;
-       
+
     }
-   
+
     #img-logo{
 padding: 5px ;
  }

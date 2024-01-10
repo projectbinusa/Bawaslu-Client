@@ -1,20 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
-import banner from "../../aset/banner.jpeg";
-import gudang from "../../aset/gudang.png";
-import formulir from "../../aset/formulir.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-// import {EffectCoverflow, Pagination, Navigation} from "swiper";
-import slide_image_1 from "../../aset/Bawaslu-RI-300x73-1.png";
-import slide_image_2 from "../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
-import slide_image_3 from "../../aset/KPU-300x73-1.png";
-import slide_image_4 from "../../aset/bawaslu-jateng-300x73-1.png";
-import slide_image_5 from "../../aset/dkpp-300x73-1.png";
 import "../../css/swipper.css";
 // import 'swiper/components/navigation/navigation.scss';
 // Import Swiper styles
@@ -34,7 +20,7 @@ function Home() {
   const [list, setList] = useState([]);
   const [pengumuman, setPengumuman] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
-  const [listCaraousel, setListCaraousel] = useState([])
+  const [listCaraousel, setListCaraousel] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({
     totalPages: 1,
@@ -83,6 +69,7 @@ function Home() {
       console.error("Terjadi Kesalahan", error);
     }
   };
+
   const getAllCarousel = async () => {
     try {
       const response = await axios.get(`${API_DUMMY}/bawaslu/api/carousel/all`);
@@ -92,6 +79,7 @@ function Home() {
       console.log("Terjadi Kesalahan", error);
     }
   };
+
   const getAllPengumuman = async (page) => {
     await axios
       .get(
@@ -105,7 +93,6 @@ function Home() {
       });
   };
 
-
   useEffect(() => {
     getAll(currentPage);
   }, [currentPage]);
@@ -118,9 +105,14 @@ function Home() {
     getAllPengumuman();
     getAllCarousel();
   }, []);
- const [activeIndex, setActiveIndex] = useState(0);
+
+
+
+
+
+    const [activeIndex, setActiveIndex] = useState(0);
     const handlePrevSlide = () => {
-      
+
       setActiveIndex((prevIndex) =>
         prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
       );
@@ -131,37 +123,6 @@ function Home() {
         prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
       );
   };
-  const slides = [
-    {
-      title: "Nike",
-      image:
-        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/09/WhatsApp-Image-2020-09-05-at-20.15.11.jpeg",
-      bgColor: "#9FA051",
-    },
-    {
-      title: "Puma",
-      image:
-        "https://jateng.bawaslu.go.id/wp-content/uploads/2020/01/WhatsApp-Image-2020-01-23-at-10.22.53.jpeg",
-      bgColor: "#9B89C5",
-    },
-    { title: "Yeeze", image: "images/yeeze.jpg", bgColor: "#D7A594" },
-  ];
-
- 
-
-    // const [activeIndex, setActiveIndex] = useState(0);
-    // const handlePrevSlide = () => {
-      
-    //   setActiveIndex((prevIndex) =>
-    //     prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
-    //   );
-    // };
-
-    // const handleNextSlide = () => {
-    //   setActiveIndex((prevIndex) =>
-    //     prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
-    //   );
-  // };
   return (
     <div>
       <Navbar />
@@ -242,45 +203,39 @@ function Home() {
           </div>
         </div>
 
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide container padding-img"
-          data-ride="carousel"
-        >
-         
-          <div class="carousel-inner">
-            {/* <div class="carousel-item active">
-              <img
-                src="https://jateng.bawaslu.go.id/wp-content/uploads/2018/09/Samakan-Persepsi-Bawaslu-Boyolali-Sambangi-Kapolres-thegem-blog-default.jpeg"
-                class="d-block w-100"
-                alt="..."
-              />
-            </div> */}
-            {listCaraousel.map((caraousel, index) => (
-              <div key={index} class={`carousel-item ${index === activeIndex ? "active" : ""}`}>
-                <img src={caraousel.foto} class="d-block w-100" alt="..." />
+        <div id="carouselExampleFade" className="carousel slide carousel-fade container">
+          <div className="carousel-inner">
+            {listCaraousel.map((item, index) => (
+              <div
+                key={item.id}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                <img
+                  src={item.foto}
+                  className="d-block w-100 shadow"
+                  alt={item.namaCarousel}
+                />
               </div>
             ))}
           </div>
           <button
-            class="carousel-control-prev"
+            className="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-            onClick={handlePrevSlide}
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
           </button>
           <button
-            class="carousel-control-next"
+            className="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-            onClick={handleNextSlide}
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
         {/* intro area end */}
@@ -343,7 +298,7 @@ function Home() {
                 float: "inline-end",
                 background:" rgb(241, 246, 249)",
                  border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
-                
+
               }}
             >
               <h4 className="widget-title">
@@ -507,7 +462,7 @@ function Home() {
                     />
                     <h3>Informasi Berkala</h3>
                   </div>
-                  <a href="/informasi-berkala">
+                  <a href="/informasi-berkala"></a>
                   <div className="details-hover-wrap">
                     <div className="details-hover">
                       <img
@@ -518,8 +473,6 @@ function Home() {
                       <h3>Informasi Berkala</h3>
                     </div>
                   </div>
-                  </a>
-                 
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
@@ -679,7 +632,6 @@ function Home() {
       </div>
       <Footer />
     </div>
-    
   );
 }
 

@@ -207,7 +207,7 @@ function CategoryBerita() {
                       <h2>
                         <a
                           style={{ color: "black", textDecoration: "none" }}
-                          href={`/page-berita/${category.judulBerita}/${category.id}`}>
+                          href={`/page-isi-berita/${category.author}/${category.id}`}>
                           {category.judulBerita}
                         </a>
                       </h2>
@@ -236,7 +236,7 @@ function CategoryBerita() {
                               <div className="media-body">
                                 <p>
                                   <a
-                                    href={`/page-berita/${post.judulBerita}/${post.id}`}>
+                                    href={`/page-isi-berita/${post.author}/${post.id}`}>
                                     {post.judulBerita}
                                   </a>
                                 </p>

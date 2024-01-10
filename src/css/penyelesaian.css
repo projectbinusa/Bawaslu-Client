@@ -24,7 +24,7 @@
 .wrap-opacity1 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -47,7 +47,7 @@
 .wrap-opacity2 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -67,7 +67,7 @@
 .wrapper3 {
     width: 300px;
     padding-top: 100px;
-   
+
 }
 
 #wrap-img3-penyelesaian {
@@ -75,13 +75,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;
-   
+
 }
 
 .wrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -101,7 +101,7 @@
 .wrap-opacity4 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
@@ -109,14 +109,14 @@
 .wrap-opacity3 {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0));
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     height: inherit;
 }
 
 
 .a-href{
     display: flex;
-    gap: 100px; 
+    gap: 100px;
     text-align: center;
     padding: 20px;
     justify-content: center;
@@ -135,7 +135,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 .pmbngks-txt-logo{
     display: flex;
@@ -148,12 +148,12 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
-    }  
+    }
 #pmbngks-img-penyelesaian {
         display: flex;
         gap: 10px;
         padding: 20px;
-    }  
+    }
     #wrapper1-penyelesaian{
         width: 300px;
     }
@@ -213,7 +213,7 @@
         flex-direction: column;
         gap: 5px;
         padding: 20px;
-    }   
+    }
     #wrapper1-penyelesaian{
         width: 280px;
         height: 600px;
@@ -274,5 +274,5 @@
     #h3-penyelesaian{
         text-align: center;
     }
-   
+
 }
