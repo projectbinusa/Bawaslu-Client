@@ -151,10 +151,10 @@ function AdminSetiapSaat() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container box-tabel mt-3 app-main__outer">
-            <div class=" row g-3 align-items-center d-lg-none d-md-flex" >
+            <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
               <div class="col-auto">
                 <select
-                  className="form-select form-select-xl w-auto"
+                  className="form-select form-select-xl"style={{width:"360px"}}
                   onChange={handleChange}
                 // value={rowsPerPage}
                 // alfy
@@ -172,38 +172,39 @@ function AdminSetiapSaat() {
             </div>
             <div id="main-card" className="main-card box-tabel mb-3 card">
               <div className="d-lg-none d-md-none d-flex ">
-                <div id="card-header" className="card-header ">
-                Admin Setiap Saat
-                <div className="btn-actions-pane-right">
-                    <div
-                      role="group"
-                      className="btn-group-sm btn-group button-pembungkus"
-                    >
-                      <button
-                        id="button-tambah"
-                        className="active btn-focus rounded button-tambah"
+              <div className="card-header " style={{ display: "block" }}>
+              <p className="mt-3">Admin Informasi Setiap Saat</p>
+              <div className="d-block ml-auto mr-auto">
+                <input
+                  type="search"
+                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleChange}
+                />
+                <div className="align-items">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
+                      <a
+                        style={{ color: "white", textDecoration: "none" }}
+                        href="/add-berita-admin"
                       >
-                        <a
-                          href="/tambah-informasi-berkala-kelembagaan"
-                          className="text-light"
-                          style={{ textDecoration: "none" }}
-                        >
-                          {" "}
-                          Tambah Data
-                        </a>
-                      </button>
-                    </div>
+                        Tambah Data
+                      </a>
+                    </button>
                   </div>
-
-              </div></div>
+                </div>
+              </div>
+              </div>
+              </div>
 
 
               <div
-                className="card-header pembungkus-text-button  d-lg-flex  d-md-none d-none"
+                className="card-header pembungkus-text-button  d-lg-flex  d-md-flex d-none"
                 style={{ display: "flex" }}
               >
                 <p className="mt-3"> Admin Informasi Setiap Saat</p>
-                <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+                <div class="ml-2 row g-3 align-items-center d-lg-none d-md-none d-flex">
                   <div class="col-auto">
                     <select
                       className="form-select form-select-sm"
@@ -237,11 +238,11 @@ function AdminSetiapSaat() {
                   <div className="btn-actions-pane-right">
                     <div
                       role="group"
-                      className="btn-group-sm btn-group button-pembungkus"
+                      className="btn-group-sm btn-group"
                     >
                       <button
-                        id="button-tambah"
-                        className="active btn-focus rounded button-tambah"
+                        id="button"
+                        className="active btn-focus rounded p-2"
                       >
                         <a
                           href="/tambah-informasi-berkala-kelembagaan"

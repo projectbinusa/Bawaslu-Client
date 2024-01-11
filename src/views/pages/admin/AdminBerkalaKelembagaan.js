@@ -152,10 +152,10 @@ function AdminBerkalaKelembagaan() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container box-tabel mt-3 app-main__outer">
-          <div class=" row g-3 align-items-center d-lg-none d-md-flex" >
+          <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
             <div class="col-auto">
               <select
-                className="form-select form-select-xl w-auto"
+                className="form-select form-select-xl"style={{width:"360px"}}
                 onChange={handleChange}
                 // value={rowsPerPage}
                 // alfy
@@ -187,7 +187,7 @@ function AdminBerkalaKelembagaan() {
             <div className=" mb-3 d-lg-none d-md-none d-flex">
             <div className="card-header " style={{ display: "block" }}>
               <p className="mt-3">Admin Informasi Berkala Kelembagaan</p>
-              <div className="d-flex ml-auto gap-3">
+              <div className="d-block ml-auto mr-auto">
                 <input
                   type="search"
                   className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
@@ -202,7 +202,7 @@ function AdminBerkalaKelembagaan() {
                         style={{ color: "white", textDecoration: "none" }}
                         href="/add-berita-admin"
                       >
-                        Tambah Berita
+                        Tambah Data
                       </a>
                     </button>
                   </div>
@@ -212,11 +212,11 @@ function AdminBerkalaKelembagaan() {
            
           </div>
             <div
-              className="card-header pembungkus-text-button  d-lg-flex  d-md-none d-none"
+              className="card-header pembungkus-text-button  d-lg-flex  d-md-flex d-none"
               style={{ display: "flex" }}
             >
               <p className="mt-3"> Admin Informasi Berkala Kelembagaan</p>
-              <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+              <div class="ml-2 row g-3 align-items-center d-lg-none d-md-none d-flex">
                 <div class="col-auto">
                 <select
                     className="form-select form-select-sm"
@@ -271,11 +271,11 @@ function AdminBerkalaKelembagaan() {
                 <div className="btn-actions-pane-right">
                   <div
                     role="group"
-                    className="btn-group-sm btn-group button-pembungkus"
+                    className="btn-group-sm btn-group"
                   >
                     <button
-                      id="button-tambah"
-                      className="active btn-focus rounded button-tambah"
+                      id="button"
+                      className="active btn-focus rounded p-2"
                     >
                      <a
                           href="/tambah-informasi-berkala-kelembagaan"
