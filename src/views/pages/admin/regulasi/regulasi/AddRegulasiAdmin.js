@@ -41,7 +41,12 @@ function AddRegulasiAdmin() {
         window.location.reload();
       }, 1500);
     } catch (error) {
-      console.log(error);
+        if (error.ressponse && error.response.status === 401) {
+          localStorage.clear();
+          history.push("/login");
+        } else {
+          console.log(error);
+        }
     }
   };
 
@@ -121,7 +126,7 @@ function AddRegulasiAdmin() {
                         <button type="submit" className="btn-primary mt-3">
                           Tambah
                         </button>
-                      
+
                     </form>
                   </div>
                 </div>

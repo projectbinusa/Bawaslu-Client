@@ -71,7 +71,12 @@ function PutSop() {
         window.location.reload();
       }, 1500);
     } catch (error) {
-      console.error("Terjadi Kesalahan", error);
+        if (error.ressponse && error.response.status === 401) {
+          localStorage.clear();
+          history.push("/login");
+        } else {
+          console.log(error);
+        }
     }
   };
 

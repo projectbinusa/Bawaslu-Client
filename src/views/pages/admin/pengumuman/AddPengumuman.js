@@ -41,7 +41,7 @@ function AddPengumuman() {
       });
       history.push("/admin-pengumuman");
       setTimeout(() => {
-      
+
         window.location.reload();
       }, 1500);
     } catch (error) {

@@ -7,9 +7,11 @@ import axios from "axios";
 import "../../../../../src/css/adminBerita.css";
 import Swal from "sweetalert2";
 import { Pagination } from "@mui/material";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function AdminPermohonanInformasi() {
   const [list, setList] = useState([]);
+  const history = useHistory();
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
@@ -93,6 +95,13 @@ function AdminPermohonanInformasi() {
       setTimeout(() => {
         window.location.reload();
       }, 1500);
+    }) .catch((error) => {
+      if (error.ressponse && error.response.status === 401) {
+        localStorage.clear();
+        history.push("/login");
+      } else {
+        console.log(error);
+      }
     });
   };
   return (

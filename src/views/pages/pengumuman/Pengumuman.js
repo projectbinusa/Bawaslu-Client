@@ -81,7 +81,7 @@ function Pengumuman() {
             <div class="container py-2">
               {filteredList.map((isi) => {
                 return (
-                  <article class="postcard light blue">
+                  <article class="postcard light blue" data-aos="zoom-in">
                     <a class="postcard__img_link" href="#">
                       <img
                         class="postcard__img"
