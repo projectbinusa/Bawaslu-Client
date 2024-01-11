@@ -288,19 +288,7 @@ function Berita() {
                         })}
                       </div>
                     </div>
-                    {/* <div className="widget-title row">
-                    {category.map((cta, index) => {
-                      return (
-                        <div className="col-4">
-                          <a
-                            style={{ color: "black", textDecoration: "none" }}
-                            href={`category-berita/${cta.category}/${cta.id}`}>
-                            {cta.category}
-                          </a>
-                        </div>
-                      );
-                    })}
-                  </div> */}
+                    {/*  */}
                   </div>
                 </div>
                 {/* <hr className="mt-0" /> */}
