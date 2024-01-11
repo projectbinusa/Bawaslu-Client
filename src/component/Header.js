@@ -126,15 +126,7 @@ function Header() {
           />
           <div className="header__pane ml-auto">
             <div>           
-              <button
-                type="button"
-                className="hamburger close-sidebar-btn hamburger--elastic"
-                data-className="closed-sidebar"
-              >
-                <span className="hamburger-box">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
+             
             </div>
           </div>
         </div>

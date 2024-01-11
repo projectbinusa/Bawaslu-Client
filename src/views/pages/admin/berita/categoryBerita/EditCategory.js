@@ -92,8 +92,16 @@ function EditCategory() {
                     />
                   </div>
                 </div>
+                <button type="button" className="btn-danger mt-3 mr-3">
+                  <a
+                    href={"/admin-berita"}
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    Batal
+                  </a>
+                </button>
                 <button type="submit" className="btn-primary mt-3">
-                  Submit
+                  Simpan
                 </button>
               </form>
             </div>

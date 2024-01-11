@@ -37,6 +37,11 @@
   }
   
 @media screen and (max-width:768px) {
+  #strukturOrganisasi{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
     .pembungkus-gabung{
         display: flex;
         flex-direction: column;
@@ -87,6 +92,11 @@
 }
 
 @media screen and (max-width: 320px) {
+  #strukturOrganisasi{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
     /* .d-lg-none {
         display: none !important;
       }
@@ -132,6 +142,11 @@
     
 }
 @media (max-width: 390px) {
+  #strukturOrganisasi{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
     /* .d-lg-none {
         display: none !important;
       }
