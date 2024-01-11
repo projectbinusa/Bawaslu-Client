@@ -212,6 +212,7 @@ function Profil() {
               src="https://lp2m.uma.ac.id/wp-content/uploads/2022/02/OrganisasiUMA.jpg"
               alt="img"
             />
+            {/*  */}
           </div>
         </div>
         <div
