@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import SKDIP from "./tabs/dip/SKDIP";

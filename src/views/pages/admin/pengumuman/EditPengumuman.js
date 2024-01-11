@@ -11,7 +11,6 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 
 function EditPengumuman() {
-  const [id, setId] = useState(0);
   const [author, setAuthor] = useState("");
   const [isiPengumuman, setIsiPengumuman] = useState("");
   const [file, setFile] = useState("");

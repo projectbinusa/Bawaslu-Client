@@ -9,7 +9,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-import AOS from 'aos';
+import AOS from "aos";
 function RekapBerita() {
   const [rekap, setRekap] = useState([]);
   const { tahun_bulan } = useParams();
@@ -32,24 +32,36 @@ function RekapBerita() {
     AOS.init();
   }, [tahun_bulan]);
 
+  const getLatestDataFirst = () => {
+    return rekap
+      .slice()
+      .sort((a, b) => new Date(b.createdDate) - new Date(a.createdDate));
+  };
+
   return (
     <>
       <Navbar />
       <br />
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
-          <h2
-          data-aos="fade-right">{format(new Date(rekap.length > 0 && rekap[0].createdDate), "dd MMMM yyyy", {
-            locale: idLocale,
-          })}</h2>
+          <h2 data-aos="fade-right">
+            {format(
+              new Date(rekap.length > 0 && rekap[0].createdDate),
+              "dd MMMM yyyy",
+              {
+                locale: idLocale,
+              }
+            )}
+          </h2>
           <br />
           <br />
           <div className="row">
             <div
-          data-aos="fade-right" className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
+              data-aos="fade-right"
+              className="col-lg-8 col-md-12 widget widget-recent-post pe-lg-5">
               <ul>
                 {rekap.length > 0 ? (
-                  rekap.map((berita, index) => {
+                  getLatestDataFirst().map((berita, index) => {
                     return (
                       <li>
                         <div className="media">
@@ -91,8 +103,7 @@ function RekapBerita() {
               </ul>
             </div>
             <div className="col-lg-4 col-12">
-              <div
-          data-aos="fade-left" className="sidebar-container">
+              <div data-aos="fade-left" className="sidebar-container">
                 <div className="td-sidebar">
                   <Bawaslu />
                 </div>

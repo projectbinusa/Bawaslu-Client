@@ -78,7 +78,7 @@ function Berita() {
   };
 
   const archivingMonths = Array.from({ length: 12 }, (_, index) => {
-    const month = index + 1;
+    const month = (index + 1).toString().padStart(2, '0');
     return {
       month,
       year: currentYear,
@@ -173,7 +173,7 @@ function Berita() {
           <div class="row">
             <div data-aos="fade-right" class="col-lg-3">
               <div class="d-flex position-relative float-left">
-                <h3 class="section-title">Popular News</h3>
+                <h3 class="section-title">Berita Terbaru</h3>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ function Berita() {
               <div class="position-relative image-hover">
                 <img
                   src={listTerbaru.length > 0 && listTerbaru[0].image}
-                  class="img-fluid"
+                  class="img-fluid w-100"
                   alt="world-news"
                 />
                 <span class="thumb-title">BERITA</span>
@@ -209,8 +209,9 @@ function Berita() {
                       <div class="position-relative image-hover">
                         <img
                           src={berita.image}
-                          class="img-fluid"
+                          class="img-fluid "
                           alt="world-news"
+                          style={{maxHeight:"160px", maxWidth:"180px"}}
                         />
                         <span class="thumb-title isiBerita">BERITA</span>
                       </div>
@@ -225,9 +226,6 @@ function Berita() {
                           }>
                           {berita.judulBerita}
                         </a>
-                      </p>
-                      <p class="fs-15 font-weight-normal isiBerita">
-                        {berita.isiBerita}
                       </p>
                       <span>
                         {format(new Date(berita.createdDate), "dd MMMM yyyy", {
@@ -317,7 +315,7 @@ function Berita() {
                                 <ul>
                                   <li>
                                     <FacebookShareButton
-                                      url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                      url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
                                       media={berita.image}
                                       description={berita.judulBerita}
                                       quote={berita.judulBerita}>
@@ -336,7 +334,7 @@ function Berita() {
                                   </li>
                                   <li>
                                     <TwitterShareButton
-                                      url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                      url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
                                       media={berita.image}
                                       description={berita.judulBerita}
                                       quote={berita.judulBerita}>
@@ -355,7 +353,7 @@ function Berita() {
                                   </li>
                                   <li>
                                     <PinterestShareButton
-                                      url={`https://bawaslu.excellentsistem.com/berita/${berita.judulBerita}/${berita.id}`}
+                                      url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
                                       quote={berita.judulBerita}
                                       media={berita.image}
                                       description={berita.judulBerita}>
