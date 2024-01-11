@@ -33,7 +33,7 @@ function PermohonanKeberatan() {
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
-        <div className="row justify-content-end p-3 p-lg-0">
+        <div className="row justify-content-center p-3 p-lg-0">
           <div
             data-aos="fade-right"
             className="col-lg-6 px-xl-5 order-lg-last text-lg-end">
@@ -46,7 +46,7 @@ function PermohonanKeberatan() {
           </div>
           <div
             data-aos="fade-left"
-            className="col-lg-5 align-self-center order-lg-first">
+            className="col-lg-5 align-self-center order-lg-first" >
             <div className="section-title div-gabung pembungkus-gabung">
               <h5
                 id="text1-gabung"
