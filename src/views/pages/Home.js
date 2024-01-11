@@ -15,6 +15,11 @@ import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import AOS from "aos";
 import { Pagination } from "@mui/material";
+import bawasluRI from "../../aset/Bawaslu-RI-300x73-1.png"
+import dkpp from "../../aset/dkpp-300x73-1.png";
+import mahkama from "../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
+import kpu from "../../aset/KPU-300x73-1.png";
+import bawasluJateng from "../../aset/bawaslu-jateng-300x73-1.png";
 
 function Home() {
   const [list, setList] = useState([]);
@@ -317,7 +322,7 @@ function Home() {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
+                      src={bawasluRI}
                       alt=""
                     />
                   </a>
@@ -329,7 +334,7 @@ function Home() {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
+                      src={dkpp}
                       alt=""
                     />
                   </a>
@@ -341,7 +346,7 @@ function Home() {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
+                      src={mahkama}
                       alt=""
                     />
                   </a>
@@ -353,7 +358,7 @@ function Home() {
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
+                      src={kpu}
                       alt=""
                     />
                   </a>
@@ -361,7 +366,7 @@ function Home() {
                 <li>
                   <a href="https://jateng.bawaslu.go.id/" target="_blank">
                     <img
-                      src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
+                      src={bawasluJateng}
                       alt=""
                     />
                   </a>
