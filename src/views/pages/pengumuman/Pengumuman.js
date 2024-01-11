@@ -77,8 +77,8 @@ function Pengumuman() {
             </div>
           </div>
 
-          <section class="light">
-            <div class="container py-2">
+          <section class="light"  data-aos="fade-right">
+            <div class="container py-2" >
               {filteredList.map((isi) => {
                 return (
                   <article class="postcard light blue" data-aos="zoom-in">

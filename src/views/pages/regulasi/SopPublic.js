@@ -2,8 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import SOP from "./tabs/sop/SOP";
+import AOS from "aos";
 
 function SopPublic() {
+  useEffect(() => {
+    AOS.init();
+  },[]);
   return (
     <div>
       <Navbar />
@@ -23,7 +27,7 @@ function SopPublic() {
           <section>
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3"  data-aos="fade-right">
                   <div
                     className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
@@ -47,7 +51,7 @@ function SopPublic() {
                 </div>
 
                 <div className="col-md-9">
-                  <div className="tab-content" id="v-pills-tabContent">
+                  <div className="tab-content" id="v-pills-tabContent"  data-aos="fade-left">
                     <div className="card-header bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
                       <div style={{ display: "flex" }}>
                         <div className="px-3">

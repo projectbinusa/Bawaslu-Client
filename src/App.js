@@ -14,7 +14,7 @@ import Register from "./views/pages/auth/Register";
 import Dikecualikan from "./views/pages/informasi/Dikecualikan";
 import FormPermohonanInformasi from "./views/pages/form/FormPermohonanInformasi";
 import FormPermohonanKeberatan from "./views/pages/form/FormPermohonanKeberatan";
-import Regulasi from "./views/pages/daftarRegulasi/Regulasi";
+
 import AdminFormInformasi from "./views/pages/admin/adminForm/AdminFormInformasi";
 import AddCategory from "./views/pages/admin/berita/categoryBerita/AddCategory";
 import EditCategory from "./views/pages/admin/berita/categoryBerita/EditCategory";
@@ -34,6 +34,16 @@ import LayananInformasi from "./views/pages/form/LayananInformasi";
 import PermintaanInformasi from "./views/pages/prosedur/PermintaanInformasi";
 import Dip from "./views/pages/daftarRegulasi/Dip";
 import InformasiStandarProsedur from "./views/pages/daftarRegulasi/InformasiStandarProsedur";
+import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
+import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
+import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
+import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
+import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
+import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
+import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
+import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
+import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
+import GpAnsor from "./views/pages/menu footer/GpAnsor";
 
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
