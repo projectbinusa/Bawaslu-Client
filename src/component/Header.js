@@ -125,7 +125,7 @@ function Header() {
             src="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Bawaslu.png"
           />
           <div className="header__pane ml-auto">
-            <div>
+            <div>           
               <button
                 type="button"
                 className="hamburger close-sidebar-btn hamburger--elastic"
