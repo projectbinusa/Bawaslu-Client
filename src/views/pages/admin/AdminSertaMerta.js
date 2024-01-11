@@ -6,6 +6,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
+import "../../../css/gabung.css"
 
 function AdminSertaMerta() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -78,8 +79,7 @@ function AdminSertaMerta() {
 
   const fetchData = async (selectedId, page, searchTerm) => {
     const response = await fetch(
-      `http://localhost:4040/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
-        page - 1
+      `http://localhost:4040/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${page - 1
       }&size=10&sortBy=id&sortOrder=asc`
     );
     const result = await response.json();
@@ -148,8 +148,55 @@ function AdminSertaMerta() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
-            <div id="main-card" className="main-card mb-3 card">
-              <div id="card-header" className="card-header">
+          <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
+            <div class="col-auto">
+              <select
+                className="form-select form-select-xl"style={{width:"360px"}}
+                onChange={handleChange}
+                // value={rowsPerPage}
+                // alfy
+              >
+              <option value="">Pilih Jenis Informasi</option>
+                    <option value="15">Hasil Pengawasan</option>;
+                    <option value="16">Analisa Calon Terpilih</option>;
+                    <option value="19">Laporan Akhir Pengawasan</option>;
+                    <option value="20">Penanganan Pelanggaran</option>;
+                    <option value="21">Naskah Perjanjian Hibah Daerah</option>;
+                    <option value="22">Layanan Pengaduan Publik</option>;
+                    <option value="23">Sarana Partisipasi Publik</option>
+              </select>
+            </div>
+          </div>
+            <div id="main-card" className="main-card box-tabel mb-3 card">
+              <div className="">
+              <div className=" mb-3 d-lg-none d-md-none d-flex">
+            <div className="card-header " style={{ display: "block" }}>
+              <p className="mt-3">Admin Informasi Serta Merta</p>
+              <div className="d-block ml-auto mr-auto">
+                <input
+                  type="search"
+                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleChange}
+                />
+                <div className="align-items">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
+                      <a
+                        style={{ color: "white", textDecoration: "none" }}
+                        href="/add-berita-admin"
+                      >
+                        Tambah Data
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+                {/* Laptop */}
+                <div id="card-header" className="card-header d-lg-flex d-none d-md-flex">
                 Admin Serta Merta
                 <div className="d-flex ml-auto gap-3">
                   <select
@@ -158,13 +205,13 @@ function AdminSertaMerta() {
                     onChange={handleChange}
                   >
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="1">Putusan Pelanggaran</option>;
-                    <option value="2">Sengketa Proses Pemilu</option>;
-                    <option value="3">Pemungutan Suara Ulang</option>;
-                    <option value="4">Organisasi Dan Adminstrasi</option>;
-                    <option value="5">Perselisihan Hasil Pemilu</option>;
-                    <option value="6">Sosialisasi</option>;
-                    <option value="7">Piagam Penghargaan</option>
+                    <option value="15">Hasil Pengawasan</option>;
+                    <option value="16">Analisa Calon Terpilih</option>;
+                    <option value="19">Laporan Akhir Pengawasan</option>;
+                    <option value="20">Penanganan Pelanggaran</option>;
+                    <option value="21">Naskah Perjanjian Hibah Daerah</option>;
+                    <option value="22">Layanan Pengaduan Publik</option>;
+                    <option value="23">Sarana Partisipasi Publik</option>
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -177,17 +224,19 @@ function AdminSertaMerta() {
                         className="active btn-focus p-2 rounded"
                       >
                         <a
-                          href="/tambah-informasi-serta-merta"
-                          className="text-light"
-                          style={{ textDecoration: "none" }}
-                        >
-                          {" "}
-                          Tambah Data
-                        </a>
+                            href="/tambah-informasi-serta-merta"
+                            className="text-light"
+                            style={{ textDecoration: "none" }}
+                          >
+                            {" "}
+                            Tambah Data
+                          </a>
                       </button>
                     </div>
                   </div>
                 </div>
+              </div>
+
               </div>
               <TableContainer>
                 <div

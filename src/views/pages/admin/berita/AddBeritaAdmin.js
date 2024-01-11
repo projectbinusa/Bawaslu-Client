@@ -49,7 +49,12 @@ function AddBeritaAdmin() {
         window.location.reload();
       }, 1500);
     } catch (error) {
-      console.log(error);
+      if (error.ressponse && error.response.status === 401) {
+        localStorage.clear();
+        history.push("/login");
+      } else {
+        console.log(error);
+      }
     }
   };
 
@@ -97,8 +102,7 @@ function AddBeritaAdmin() {
                           <select
                             className="form-control"
                             aria-label="Small select example"
-                            onChange={(e) => setCategoryId(e.target.value)}
-                          >
+                            onChange={(e) => setCategoryId(e.target.value)}>
                             <option selected>PIlih Category</option>
                             {category.map((down) => {
                               return (
@@ -111,8 +115,7 @@ function AddBeritaAdmin() {
                           {/* a */}
                           <label
                             for="exampleInputEmail1"
-                            className="form-label  font-weight-bold "
-                          >
+                            className="form-label  font-weight-bold ">
                             Penulis Berita
                           </label>
                           <input
@@ -163,19 +166,20 @@ function AddBeritaAdmin() {
                               className="form-control"
                               placeholder="Masukkan isi berita"
                               id="floatingTextarea2"
-                              rows="5"
-                            ></textarea>
+                              rows="5"></textarea>
                           </div>
                         </div>
                       </div>
                       <button type="button" className="btn-danger mt-3 mr-3">
-                      <a style={{color:"white", textDecoration:"none"}} href="/admin-berita">Batal</a>
-                      </button>
-                      {" "}
-                      <button type="submit" className="btn-primary mt-3">         
+                        <a
+                          style={{ color: "white", textDecoration: "none" }}
+                          href="/admin-berita">
+                          Batal
+                        </a>
+                      </button>{" "}
+                      <button type="submit" className="btn-primary mt-3">
                         Submit
                       </button>
-                     
                     </form>
                   </div>
                 </div>

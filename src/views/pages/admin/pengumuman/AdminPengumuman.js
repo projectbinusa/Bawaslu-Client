@@ -12,6 +12,7 @@ import { Pagination, TableContainer, TablePagination } from "@mui/material";
 function AdminPengumuman() {
   const [list, setList] = useState([]);
   const [page, setPage] = useState(0);
+  const history = useHistory();
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginationInfo, setPaginationInfo] = useState({
@@ -67,6 +68,13 @@ function AdminPengumuman() {
       setTimeout(() => {
         window.location.reload();
       }, 1500);
+    }) .catch((error) => {
+      if (error.ressponse && error.response.status === 401) {
+        localStorage.clear();
+        history.push("/login");
+      } else {
+        console.log(error);
+      }
     });
   };
 

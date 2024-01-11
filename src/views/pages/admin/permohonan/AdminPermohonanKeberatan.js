@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import "../../../../../src/css/adminBerita.css";
 import { Pagination } from "@mui/material";
 import Swal from "sweetalert2";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function AdminPermohonanKeberatan() {
   const [list, setList] = useState([]);
@@ -20,6 +21,7 @@ function AdminPermohonanKeberatan() {
     totalElements: 0,
   });
   const [searchTerm, setSearchTerm] = useState("");
+  const history = useHistory();
 
   const getAll = async (page) => {
     try {
@@ -93,6 +95,13 @@ function AdminPermohonanKeberatan() {
       setTimeout(() => {
         window.location.reload();
       }, 1500);
+    }) .catch((error) => {
+      if (error.ressponse && error.response.status === 401) {
+        localStorage.clear();
+        history.push("/login");
+      } else {
+        console.log(error);
+      }
     });
   };
 

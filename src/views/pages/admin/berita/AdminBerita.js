@@ -61,7 +61,7 @@ function AdminBerita() {
   const getAll1 = async (page1) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=asc&page=${
+        `${API_DUMMY}/bawaslu/api/category-berita/all?direction=desc&page=${
           page1 - 1
         }&size=${rowsPerPage1}&sort=id`,
         {
@@ -305,7 +305,7 @@ function AdminBerita() {
                   </tr>
                 </thead>
                 <tbody>
-                  {list.map((berita, no) => {
+                  {filteredList.map((berita, no) => {
                     return (
                       <tr key={no}>
                         <td data-label="No" className="">

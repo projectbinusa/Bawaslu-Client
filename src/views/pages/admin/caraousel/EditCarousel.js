@@ -15,26 +15,31 @@ function EditCarousel() {
   const [namaCarousel, setNamaCarousel] = useState("");
   const param = useParams();
   const history = useHistory();
-    const [carouselData, setCarouselData] = useState({})
+  const [carouselData, setCarouselData] = useState({});
 
-    useEffect(() => {
-        axios
-          .get(`${API_DUMMY}/bawaslu/api/carousel/ById/` + param.id, {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          })
-          .then((response) => {
-            const responseData = response.data;
-            console.log("carousel : ", responseData);
-            setCarouselData(responseData);
-            setNamaCarousel(responseData.namaCarousel);
-            setFile(responseData.file);
-          })
-          .catch((error) => {
-            console.error('Error fetching carousel data:', error);
-          });
-      }, [param.id]);
+  useEffect(() => {
+    axios
+      .get(`${API_DUMMY}/bawaslu/api/carousel/ById/` + param.id, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((response) => {
+        const responseData = response.data;
+        console.log("carousel : ", responseData);
+        setCarouselData(responseData);
+        setNamaCarousel(responseData.namaCarousel);
+        setFile(responseData.file);
+      })
+      .catch((error) => {
+        if (error.ressponse && error.response.status === 401) {
+          localStorage.clear();
+          history.push("/login");
+        } else {
+          console.log(error);
+        }
+      });
+  }, [param.id]);
 
   //edit pengumuman
   const update = async (e) => {
@@ -63,7 +68,12 @@ function EditCarousel() {
         }, 1500);
       })
       .catch((error) => {
-        console.log(error);
+        if (error.ressponse && error.response.status === 401) {
+          localStorage.clear();
+          history.push("/login");
+        } else {
+          console.log(error);
+        }
       });
   };
 
@@ -80,7 +90,9 @@ function EditCarousel() {
               <form onSubmit={update}>
                 <div className="row">
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputEmail1" className="form-label font-weight-bold">
+                    <label
+                      for="exampleInputEmail1"
+                      className="form-label font-weight-bold">
                       Name Carousel
                     </label>
                     <input
@@ -91,7 +103,9 @@ function EditCarousel() {
                     />
                   </div>
                   <div className="mb-3 col-lg-6">
-                    <label for="exampleInputPassword1" className="form-label font-weight-bold">
+                    <label
+                      for="exampleInputPassword1"
+                      className="form-label font-weight-bold">
                       Image
                     </label>
                     <input
@@ -105,8 +119,7 @@ function EditCarousel() {
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
                     href="/admin-page-carousel"
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
+                    style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
                 </button>
