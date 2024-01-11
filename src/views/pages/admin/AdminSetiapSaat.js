@@ -77,8 +77,7 @@ function AdminSetiapSaat() {
 
   const fetchData = async (selectedId, page, searchTerm) => {
     const response = await fetch(
-      `http://localhost:4040/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
-        page - 1
+      `http://localhost:4040/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${page - 1
       }&size=10&sortBy=id&sortOrder=asc`
     );
     const result = await response.json();
@@ -151,14 +150,79 @@ function AdminSetiapSaat() {
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container mt-3 app-main__outer">
-            <div id="main-card" className="main-card mb-3 card">
-              <div id="card-header" className="card-header">
+          <div id="container" className="container box-tabel mt-3 app-main__outer">
+            <div class=" row g-3 align-items-center d-lg-none d-md-flex" >
+              <div class="col-auto">
+                <select
+                  className="form-select form-select-xl w-auto"
+                  onChange={handleChange}
+                // value={rowsPerPage}
+                // alfy
+                >
+                  <option value="">Pilih Jenis Informasi</option>
+                  <option value="8">Organisasi Dan Administrasi</option>;
+                  <option value="9">Peraturan & Kebijakan</option>;
+                  <option value="10">MOU</option>;
+                  <option value="11">Pemantau Pemilu</option>;
+                  <option value="12">Rencana Strategi</option>;
+                  <option value="13">Materi Rakor</option>;
+                  <option value="14">Piagam Penghargaan</option>
+                </select>
+              </div>
+            </div>
+            <div id="main-card" className="main-card box-tabel mb-3 card">
+              <div className="d-lg-none d-md-none d-flex ">
+                <div id="card-header" className="card-header ">
                 Admin Setiap Saat
+                <div className="btn-actions-pane-right">
+                    <div
+                      role="group"
+                      className="btn-group-sm btn-group button-pembungkus"
+                    >
+                      <button
+                        id="button-tambah"
+                        className="active btn-focus rounded button-tambah"
+                      >
+                        <a
+                          href="/tambah-informasi-berkala-kelembagaan"
+                          className="text-light"
+                          style={{ textDecoration: "none" }}
+                        >
+                          {" "}
+                          Tambah Data
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+
+              </div></div>
+
+
+              <div
+                className="card-header pembungkus-text-button  d-lg-flex  d-md-none d-none"
+                style={{ display: "flex" }}
+              >
+                <p className="mt-3"> Admin Informasi Setiap Saat</p>
+                <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+                  <div class="col-auto">
+                    <select
+                      className="form-select form-select-sm"
+                      onChange={handleChange}
+                    >
+                      <option value="">Pilih Jenis Informasi</option>
+                      <option value="8">Organisasi Dan Administrasi</option>;
+                      <option value="9">Peraturan & Kebijakan</option>;
+                      <option value="10">MOU</option>;
+                      <option value="11">Pemantau Pemilu</option>;
+                      <option value="12">Rencana Strategi</option>;
+                      <option value="13">Materi Rakor</option>;
+                      <option value="14">Piagam Penghargaan</option>
+                    </select>
+                  </div>
+                </div>
                 <div className="d-flex ml-auto gap-3">
                   <select
-                    className="form-select form-select-sm"
-                    aria-label="Small select example"
+                    className="form-select form-select-xl w-auto"
                     onChange={handleChange}
                   >
                     <option value="">Pilih Jenis Informasi</option>
@@ -172,16 +236,15 @@ function AdminSetiapSaat() {
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
-                      id="butoon"
                       role="group"
-                      className="btn-group-sm btn-group"
+                      className="btn-group-sm btn-group button-pembungkus"
                     >
                       <button
-                        id="button"
-                        className="active btn-focus p-2 rounded"
+                        id="button-tambah"
+                        className="active btn-focus rounded button-tambah"
                       >
                         <a
-                          href="/tambah-informasi-setiap-saat"
+                          href="/tambah-informasi-berkala-kelembagaan"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
