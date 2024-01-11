@@ -10,6 +10,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function DetailPermohonanInformasi() {
   const [namaPemohon, setNamaPemohon] = useState("");
@@ -28,6 +29,7 @@ function DetailPermohonanInformasi() {
   const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] =
     useState("");
   const param = useParams();
+  const history = useHistory();
 
   //permohonan informasi
   useEffect(() => {
@@ -54,7 +56,12 @@ function DetailPermohonanInformasi() {
         setCaraMendapatSalinanInformasi(list_data.caraMendapatSalinanInformasi);
       })
       .catch((error) => {
-        alert("Terjadi Kesalahan " + error);
+        if (error.ressponse && error.response.status === 401) {
+          localStorage.clear();
+          history.push("/login");
+        } else {
+          console.log(error);
+        }
       });
   }, [param.id]);
 

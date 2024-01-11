@@ -72,40 +72,12 @@ function PutIsiInformasi() {
         window.location.reload();
       }, 1500);
     } catch (error) {
-      console.error("Terjadi Kesalahan", error);
-
-      // const deleteData = async (id) => {
-      //   try {
-      //     await axios.delete(
-      //       `${API_DUMMY}/bawaslu/api/isi-keterangan-informasi/` + id,
-      //       {
-      //         headers: {
-      //           Authorization: `Bearer ${localStorage.getItem("token")}`,
-      //         },
-      //       }
-      //     );
-
-      //     Swal.fire({
-      //       icon: "success",
-      //       title: "Dihapus!",
-      //       showConfirmButton: false,
-      //     });
-
-      //     // Setelah SweetAlert ditampilkan, refresh halaman
-      //     setTimeout(() => {
-      //       // Arahkan pengguna kembali ke halaman AdminPutusanPelanggaran
-      //       history.push("/admin-serta-merta");
-      //     }, 1500);
-      //   } catch (error) {
-      //     console.error("Terjadi Kesalahan", error);
-      //   }
-      // };
-
-      // Swal.fire({
-      //   icon: "error",
-      //   title: "Terjadi Kesalahan",
-      //   text: error.response.data.message || "Something went wrong!",
-      // });
+        if (error.ressponse && error.response.status === 401) {
+          localStorage.clear();
+          history.push("/login");
+        } else {
+          console.log(error);
+        }
     }
   };
 
