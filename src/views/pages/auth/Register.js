@@ -69,7 +69,7 @@ function Register() {
 
           <div id="gambar"
             className="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
-           
+
           >
             <div className="featured-image mb-3 img-login-register">
               <img
@@ -88,7 +88,7 @@ function Register() {
                 <h2>
                   <img
                     style={{ width: "40px",  }}
-                    src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
+                    src={Ikon}
                     alt=""
                   />{" "}
                   Register

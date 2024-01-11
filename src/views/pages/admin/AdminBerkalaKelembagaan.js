@@ -179,11 +179,11 @@ function AdminBerkalaKelembagaan() {
                     <option value="37">TAPKIN</option>
                     <option value="38">Pengadaan Barang Dan Jasa</option>
               </select>
-            </div>  
+            </div>
           </div>
-          
+
             <div id="main-card" className="main-card box-tabel mb-3 card">
-           
+
             <div className=" mb-3 d-lg-none d-md-none d-flex">
             <div className="card-header " style={{ display: "block" }}>
               <p className="mt-3">Admin Informasi Berkala Kelembagaan</p>
@@ -209,7 +209,7 @@ function AdminBerkalaKelembagaan() {
                 </div>
               </div>
             </div>
-           
+
           </div>
             <div
               className="card-header pembungkus-text-button  d-lg-flex  d-md-flex d-none"
@@ -290,7 +290,7 @@ function AdminBerkalaKelembagaan() {
                 </div>
               </div>
             </div>
-              
+
               <TableContainer>
                 <div
                   className="table-responsive"
@@ -337,17 +337,6 @@ function AdminBerkalaKelembagaan() {
                                 className="mr-2 btn-danger btn-sm"
                               >
                                 <i className="fa-solid fa-trash"></i>
-                              </button>
-                              <button type="button" className="btn-info btn-sm">
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={`/isi-keterangan/${inf.jenisKeterangan}/${inf.id}`}
-                                >
-                                  <i className="fas fa-plus"></i>
-                                </a>
                               </button>
                             </div>
                           </td>
