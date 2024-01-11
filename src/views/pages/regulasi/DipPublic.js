@@ -1,8 +1,12 @@
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import SKDIP from "./tabs/dip/SKDIP";
+import AOS from "aos";
 
 function DipPublic() {
+  useEffect(() => {
+    AOS.init();
+  },[]);
   return (
     <div>
       <Navbar />
@@ -22,7 +26,7 @@ function DipPublic() {
           <section>
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3"  data-aos="fade-right">
                   <div
                     className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
@@ -46,7 +50,7 @@ function DipPublic() {
                 </div>
 
                 <div className="col-md-9">
-                  <div className="tab-content" id="v-pills-tabContent">
+                  <div className="tab-content" id="v-pills-tabContent"  data-aos="fade-left">
                     <div className="card-header bg-primary text-light" style={{ borderTopLeftRadius: '5px', borderTopRightRadius: '5px' }}>
                       <div style={{ display: "flex" }}>
                         <div className="px-3">

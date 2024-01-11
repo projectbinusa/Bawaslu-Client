@@ -21,11 +21,16 @@ import HasilPengawasan from "./tabs/Kanal/HasilPengawasan";
 import SiaranPers from "./tabs/Kanal/SiaranPers";
 import Putusan from "./tabs/Kanal/Putusan";
 import "../../../css/Kanal.css";
+import AOS from "aos";
 
 function Kanal() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <div>
       <Navbar />
+
 
       <div
         style={{
@@ -44,6 +49,7 @@ function Kanal() {
             <div className="container">
               <div className="row">
                 <div
+                 data-aos="fade-right"
                   className="col-md-3"
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
@@ -153,7 +159,7 @@ function Kanal() {
                   </div>
                 </div>
 
-                <div className="col-md-9">
+                <div className="col-md-9"  data-aos="fade-left">
                   <div
                     className="card-header w-auto bg-primary text-light"
                     style={{
