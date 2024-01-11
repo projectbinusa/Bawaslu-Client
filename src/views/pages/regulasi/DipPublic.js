@@ -2,6 +2,7 @@ import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import SKDIP from "./tabs/dip/SKDIP";
 import AOS from "aos";
+import { useEffect } from "react";
 
 function DipPublic() {
   useEffect(() => {

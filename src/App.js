@@ -32,18 +32,6 @@ import PenyelesaianSengketa from "./views/pages/prosedur/PenyelesaianSengketa";
 import Maklumat from "./views/pages/daftarRegulasi/Maklumat";
 import LayananInformasi from "./views/pages/form/LayananInformasi";
 import PermintaanInformasi from "./views/pages/prosedur/PermintaanInformasi";
-import Dip from "./views/pages/daftarRegulasi/Dip";
-import InformasiStandarProsedur from "./views/pages/daftarRegulasi/InformasiStandarProsedur";
-import PenangananPelanggaran from "./views/pages/menu footer/PenangananPelanggaran";
-import TakBerkategori from "./views/pages/menu footer/TakBerkategori,";
-import OSDMdanDiklat from "./views/pages/menu footer/OSDMdanDiklat";
-import DialogKehumasan from "./views/pages/menu footer/DialogKehumasan";
-import PestaDemokrasi from "./views/pages/menu footer/PestaDemokrasi";
-import PenandatangananMou from "./views/pages/menu footer/PenandatangananMou";
-import VerifikasiAdministrasi from "./views/pages/menu footer/VerifikasiAdministrasi";
-import PemilihSosialisasi from "./views/pages/menu footer/PemilihSosialisasi";
-import TandatgnNPHD from "./views/pages/menu footer/TandatgnNPHD";
-import GpAnsor from "./views/pages/menu footer/GpAnsor";
 
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";

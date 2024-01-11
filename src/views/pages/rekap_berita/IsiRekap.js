@@ -11,6 +11,7 @@ import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "r
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import AOS from 'aos';
+import Bawaslu from "../../../component/Bawaslu";
 
 
 function IsiRekap() {
@@ -73,7 +74,7 @@ function IsiRekap() {
                         <ul>
                           <li>
                         <FacebookShareButton
-                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   media={image}
                                   quote={judulBerita}>
                                   <button
@@ -91,7 +92,7 @@ function IsiRekap() {
                               </li>
                               <li>
                                 <TwitterShareButton
-                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   media={image}
                                   quote={judulBerita}>
                                   <button
@@ -109,7 +110,7 @@ function IsiRekap() {
                               </li>
                               <li>
                                 <PinterestShareButton
-                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   quote={judulBerita}
                                   media={image}>
                                   <button
@@ -177,58 +178,7 @@ function IsiRekap() {
           data-aos="fade-left" className="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div className="td-sidebar">
-                  <div
-                    className="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
-                    <h4 className="widget-title">
-                      Tautan{" "}
-                      <span className="text-primary">
-                        <strong>Lembaga</strong>
-                      </span>
-                    </h4>
-                    <ul className="catagory-items">
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                 <Bawaslu/>
                 </div>
               </div>
             </div>
