@@ -8,6 +8,7 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
+import AOS from "aos";
 
 function EditBeritaAdmin() {
   const [author, setAuthor] = useState("");
@@ -97,12 +98,16 @@ function EditBeritaAdmin() {
     getAllCategoryId();
   }, []);
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container mt-3 app-main__outer"  data-aos="fade-left">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Edit Data</h1>
@@ -117,7 +122,7 @@ function EditBeritaAdmin() {
                       aria-label="Small select example"
                       onChange={(e) => setCategoryId(e.target.value)}
                     >
-                      <option selected value={categoryId.id}>{categoryId.category}</option>
+                      <option selected>Pilih Category</option>
                       {category.map((down) => {
                         return <option value={down.id}>{down.category}</option>;
                       })}

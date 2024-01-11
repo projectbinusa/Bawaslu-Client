@@ -286,17 +286,7 @@ function AdminKanal() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                              <button type="button" className="btn-info btn-sm">
-                                <a
-                                  style={{
-                                    color: "white",
-                                    textDecoration: "none",
-                                  }}
-                                  href={`/isi-keterangan/${inf.jenisKeterangan}/${inf.id}`}
-                                >
-                                  <i className="fas fa-plus"></i>
-                                </a>
-                              </button>
+                          
                             </div>
                           </td>
                         </tr>
