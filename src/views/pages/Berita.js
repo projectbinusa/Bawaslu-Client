@@ -14,6 +14,7 @@ import {
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import "../../css/berita.css";
+import logoBawaslu from "../../aset/ikon-web.png";
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
@@ -78,7 +79,7 @@ function Berita() {
   };
 
   const archivingMonths = Array.from({ length: 12 }, (_, index) => {
-    const month = (index + 1).toString().padStart(2, '0');
+    const month = (index + 1).toString().padStart(2, "0");
     return {
       month,
       year: currentYear,
@@ -211,7 +212,7 @@ function Berita() {
                           src={berita.image}
                           class="img-fluid "
                           alt="world-news"
-                          style={{maxHeight:"160px", maxWidth:"180px"}}
+                          style={{ maxHeight: "160px", maxWidth: "180px" }}
                         />
                         <span class="thumb-title isiBerita">BERITA</span>
                       </div>
@@ -260,8 +261,8 @@ function Berita() {
                         scrollbarWidth: "thin",
                         msOverflowStyle: "none",
                         overflowY: "hidden",
-                        paddingTop:"5px",
-                        paddingBottom:"8px",
+                        paddingTop: "5px",
+                        paddingBottom: "8px",
                       }}>
                       <div class="d-lg-flex gap-3 align-items-center">
                         {category.map((categoryBerita) => {
@@ -287,19 +288,7 @@ function Berita() {
                         })}
                       </div>
                     </div>
-                    {/* <div className="widget-title row">
-                    {category.map((cta, index) => {
-                      return (
-                        <div className="col-4">
-                          <a
-                            style={{ color: "black", textDecoration: "none" }}
-                            href={`category-berita/${cta.category}/${cta.id}`}>
-                            {cta.category}
-                          </a>
-                        </div>
-                      );
-                    })}
-                  </div> */}
+                    {/*  */}
                   </div>
                 </div>
                 {/* <hr className="mt-0" /> */}
@@ -335,7 +324,7 @@ function Berita() {
                                   <li>
                                     <TwitterShareButton
                                       url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
-                                      media={berita.image}
+                                      media={berita.image} // Pastikan berita.image berisi URL gambar yang dapat diakses
                                       description={berita.judulBerita}
                                       quote={berita.judulBerita}>
                                       <button
@@ -355,7 +344,7 @@ function Berita() {
                                     <PinterestShareButton
                                       url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
                                       quote={berita.judulBerita}
-                                      media={berita.image}
+                                      media={berita.image} // Pastikan berita.image berisi URL gambar yang dapat diakses
                                       description={berita.judulBerita}>
                                       <button
                                         style={{
@@ -505,10 +494,15 @@ function Berita() {
                   <div class="td-sidebar">
                     <div
                       class={`widget widget-recent-post`}
-                      style={{ background: "#F1F6F9", overflow: "hidden", boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px",
-                      border: "1px solid blue" }}>
+                      style={{
+                        background: "#F1F6F9",
+                        overflow: "hidden",
+                        boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px",
+                        border: "1px solid blue",
+                      }}>
                       <h4 class="widget-title">
-                      <i class="fa-solid fa-newspaper"></i> Berita Terbaru</h4>
+                        <i class="fa-solid fa-newspaper"></i> Berita Terbaru
+                      </h4>
                       <ul>
                         {listTerbaru.map((beritaTerbaru) => {
                           return (
@@ -516,8 +510,8 @@ function Berita() {
                               <div class="media">
                                 <div class="media-left">
                                   <img
-                                    src="https://jombang.bawaslu.go.id/wp-content/uploads/2019/04/Logo-Bawaslu-2018-Icon-PNG-HD.png"
-                                    style={{ width: "60px" }}
+                                    src={logoBawaslu}
+                                    style={{ width: "90px" }}
                                     alt="blog"
                                   />
                                 </div>
@@ -547,9 +541,15 @@ function Berita() {
                     </div>
                     <div
                       class="widget widget_catagory"
-                      style={{ background: "#F1F6F9",
-                      border: "1px solid blue", boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px" }}>
-                      <h4 class="widget-title"> <i class="fa-solid fa-folder-open"></i> Arsip</h4>
+                      style={{
+                        background: "#F1F6F9",
+                        border: "1px solid blue",
+                        boxShadow: " rgba(47, 60, 95, 0.24) 0px 6px 10px",
+                      }}>
+                      <h4 class="widget-title">
+                        {" "}
+                        <i class="fa-solid fa-folder-open"></i> Arsip
+                      </h4>
                       <ul class="catagory-items">
                         {archivingMonths.map((monthData) => {
                           const tahun_bulan = `${monthData.year}-${monthData.month}`;

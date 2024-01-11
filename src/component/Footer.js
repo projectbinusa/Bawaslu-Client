@@ -152,7 +152,7 @@ function Footer() {
           <div className="container">
             <div className="row">
               <div className="col-md-12 align-self-center footer-media">
-              <ul className="social-media  d-block d-md-block d-lg-none d-md-flex gap-2">
+              <ul className="social-media d-lg-none d-md-flex gap-2" style={{alignItems:"center", justifyContent:"center"}}>
                     <li>
                       <a
                         className="facebook"
