@@ -7,6 +7,7 @@ import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
 import Pengumuman from "../../../pengumuman/Pengumuman";
+import "../../../../../css/dip.css"
 
 function AdminDip() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -150,9 +151,51 @@ function AdminDip() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
-            <div id="main-card" className="main-card mb-3 card">
-              <div id="card-header" className="card-header">
-                Admin DIP
+          <div class=" align-items-center d-lg-none d-md-none d-flex" >
+            <div class="">
+              <select
+                className="form-select" style={{width:"360px"}}
+                onChange={handleChange}
+                // value={rowsPerPage}
+                // alfy
+              >
+              <option disabled>Pilih Jenis Informasi</option>
+                    <option value="SK DIP">SK DIP1</option>;
+              </select>
+            </div>
+          </div> 
+
+
+            <div id="main-card" className="box-tabel main-card mb-3 card">
+            <div className=" mb-3 d-lg-none d-md-none d-flex">
+            <div className="card-header " style={{ display: "block" }}>
+              <p className="mt-3">Admin Informasi DIP</p>
+              <div className="d-block ml-auto mr-auto">
+                <input
+                  type="search"
+                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={handleChange}
+                />
+                <div className="align-items">
+                  <div role="group" className="btn-group-sm btn-group">
+                    <button className="active btn-focus p-2 rounded">
+                      <a
+                        style={{ color: "white", textDecoration: "none" }}
+                        href="/add-berita-admin"
+                      >
+                        Tambah Data
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+
+              <div id="card-header" className="card-header d-lg-flex d-none d-md-flex">
+                Admin Informasi DIP
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"

@@ -152,10 +152,10 @@ function AdminKanal() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
-          <div class=" row g-3 align-items-center d-lg-none d-md-flex" >
+          <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
             <div class="col-auto">
               <select
-                className="form-select form-select-xl w-auto"
+                className="form-select form-select-xl"style={{width:"360px"}}
                 onChange={handleChange}
                 // value={rowsPerPage}
                 // alfy
@@ -174,8 +174,8 @@ function AdminKanal() {
             <div id="main-card" className="main-card mb-3 card box-tabel">
             <div className=" mb-3 d-lg-none d-md-none d-flex">
             <div className="card-header " style={{ display: "block" }}>
-              <p className="mt-3">Admin Informasi Dikecualikan</p>
-              <div className="d-flex ml-auto gap-3">
+              <p className="mt-3">Admin Informasi Kanal</p>
+              <div className="d-block ml-auto mr-auto">
                 <input
                   type="search"
                   className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
@@ -190,7 +190,7 @@ function AdminKanal() {
                         style={{ color: "white", textDecoration: "none" }}
                         href="/add-berita-admin"
                       >
-                        Tambah Berita
+                        Tambah Data
                       </a>
                     </button>
                   </div>
@@ -199,8 +199,8 @@ function AdminKanal() {
               </div>
             </div>
 
-              <div id="card-header" className="card-header d-lg-flex d-none d-md-none">
-                Admin Kanal
+              <div id="card-header" className="card-header d-lg-flex d-none d-md-flex">
+                Admin Informasi Kanal
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
