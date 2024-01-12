@@ -104,9 +104,6 @@ function CategoryBerita() {
                       <span class="thumb-title isiBerita">BERITA</span>
                     </div>
                     <p class="font-weight-600 mt-3">{berita.judulBerita}</p>
-                    <p class="fs-15 font-weight-normal isiBerita">
-                      {berita.isiBerita}
-                    </p>
                   </div>
                 );
               })}

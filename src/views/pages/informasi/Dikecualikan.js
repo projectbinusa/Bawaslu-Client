@@ -5,9 +5,14 @@ import folder from "../../../aset/folder.png";
 import informasi from "../../../aset/informasi.svg";
 import "../../../css/dikecualikan.css";
 import axios from "axios";
+import AOS from "aos";
 
 function Dikecualikan() {
   const [data, setData] = useState([]);
+
+  useEffect(() => {
+    AOS.init();
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,7 +51,7 @@ function Dikecualikan() {
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
           alt="img"
         />
-        <div className="form1 text-center mt-0">
+        <div className="form1 text-center mt-0"  data-aos="fade-up">
           <div className="form-permohonan section-title text-center">
             <h5 id="text1-gabung" className="sub-title double-line text-center">
               Bawaslu Boyolali
@@ -125,6 +130,7 @@ function Dikecualikan() {
               )})}
           </div>
           <div
+           data-aos="fade-right"
             className="col-lg-4 col-md-12 widget widget_catagory logo-dikecualikan"
             style={{
               boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",

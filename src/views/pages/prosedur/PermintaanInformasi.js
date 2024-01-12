@@ -83,7 +83,7 @@ function PermintaanInformasi() {
                   </div>
                 </div>
               </article>
-              <article class="postcard light blue">
+              <article class="postcard light blue" data-aos="fade-left">
                 <a class="postcard__img_link" href="#">
                   <img
                     class="postcard__img"
@@ -113,7 +113,7 @@ function PermintaanInformasi() {
                   </div>
                 </div>
               </article>
-              <article class="postcard light blue">
+              <article class="postcard light blue" data-aos="fade-right">
                 <a class="postcard__img_link" href="#">
                   <img
                     class="postcard__img"
@@ -142,7 +142,7 @@ function PermintaanInformasi() {
                   </div>
                 </div>
               </article>
-              <article class="postcard light blue">
+              <article class="postcard light blue" data-aos="fade-left">
                 <a class="postcard__img_link" href="#">
                   <img
                     class="postcard__img"
@@ -171,7 +171,7 @@ function PermintaanInformasi() {
                   </div>
                 </div>
               </article>
-              <article class="postcard light blue" >
+              <article class="postcard light blue" data-aos="fade-right">
                 <a class="postcard__img_link" href="#">
                   <img
                     class="postcard__img"

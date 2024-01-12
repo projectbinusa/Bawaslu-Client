@@ -8,8 +8,12 @@ import RencanaStrategi from "./tabs/SetiapSaat/RencanaStrategi";
 import MateriRakor from "./tabs/SetiapSaat/MateriRakor";
 import PiagamSetiapSaat from "./tabs/SetiapSaat/PiagamSetiapSaat";
 import PemantauPemilu from "./tabs/SetiapSaat/PemantauPemilu";
+import AOS from "aos";
 
 function SetiapSaat() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <div>
       <Navbar />
@@ -31,7 +35,7 @@ function SetiapSaat() {
           <section>
             <div className="container">
               <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-3" data-aos="fade-right">
                   <div
                     className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
@@ -138,7 +142,7 @@ function SetiapSaat() {
                   </div>
                 </div>
 
-                <div className="col-md-9">
+                <div className="col-md-9" data-aos="fade-left">
                   <div className="tab-content" id="v-pills-tabContent">
                     <div
                       className="card-header w-auto bg-primary text-light"

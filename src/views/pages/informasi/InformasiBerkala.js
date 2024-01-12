@@ -9,8 +9,12 @@ import gambar from "../../../asset/img/bawaslu(berita).jpeg";
 import axios from "axios";
 import { API_DUMMY } from "../../../utils/base_URL";
 import PutusanPelanggaran from "./tabs/SertaMerta/PutusanPelanggaran";
+import AOS from "aos";
 
 function InformasiBerkala() {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <div>
       <Navbar />
@@ -30,18 +34,20 @@ function InformasiBerkala() {
           }}
         >
           <div className="container p-5 text-center">
-            <h1 className="text-center p-5">Informasi Berkala</h1>
+            <h1 className="text-center p-5"  data-aos="fade-up">Informasi Berkala</h1>
             <div className="row justify-content-center align-items-center">
               <div className="row justify-content-center align-items-center">
-                <a
+                <a  data-aos="fade-right"
                   id="btn1"
                   className="col-5 btn btn-primary text-center d-flex align-items-center px-2"
                   href="/informasi-berkala-kepemiluan"
                 >
                   <span className="mx-auto kelembagaan-btn">Kepemiluan</span>
                 </a>
+
                 <div className="col-2 text-center text-white"></div>
                 <a
+                 data-aos="fade-left"
                   id="btn2"
                   className="col-5 btn btn-primary text-center d-flex align-items-center px-2"
                   href="/informasi-berkala-kelembagaan"

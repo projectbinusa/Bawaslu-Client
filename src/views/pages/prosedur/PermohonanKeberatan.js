@@ -35,10 +35,10 @@ function PermohonanKeberatan() {
         />
         <div className="row justify-content-center p-3 p-lg-0">
           <div
-            data-aos="fade-right"
+            data-aos="fade-left"
             className="col-lg-6 px-xl-5 order-lg-last text-lg-end">
             <div className="thumb">
-              <img
+              <img style={{marginTop:"50px"}}
                 src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/tab/2.webp"
                 alt="img"
               />
@@ -57,7 +57,7 @@ function PermohonanKeberatan() {
                 Tata Cara Pengajuan <br /> Keberatan
               </h2>
             </div>
-            <div className="single-security-wrap">
+            <div data-aos="fade-right" className="single-security-wrap">
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-2.webp"
@@ -73,14 +73,14 @@ function PermohonanKeberatan() {
                 </p>
               </div>
             </div>
-            <div className="single-security-wrap">
+            <div data-aos="fade-right" className="single-security-wrap">
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-4.webp"
                   alt="img"
                 />
               </div>
-              <div data-aos="fade-left" className="details">
+              <div className="details">
                 <h5>Pengajuan Keberatan</h5>
                 <p>
                   Pemohon informasi publik mengajukan keberatan kepada atasan
@@ -95,7 +95,7 @@ function PermohonanKeberatan() {
           <div
             data-aos="fade-right"
             className="col-lg-6 col-md-9 px-xl-5 align-self-center">
-            <div className="thumb mb-4 mb-lg-0">
+            <div className="thumb mb-4">
               <img src={keberatan} style={{ width: "100%" }} alt="img" />
             </div>
           </div>

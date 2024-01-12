@@ -36,7 +36,7 @@ function Library() {
         <div className="container service-area bg-relative pd-top-60 pd-bottom-90 ">
           <div className="row">
             <div className="col-lg-6 col-md-9">
-              <div className="banner-inner">
+              <div className="banner-inner" data-aos="fade-right">
                 <h4 className="sub-title">Kanal Literasi</h4>
                 <h2 className="title">
                   Perpustakaan Digital Bawaslu<span> Kabupaten Boyolali</span>
