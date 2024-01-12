@@ -35,7 +35,7 @@ function IsiKeterangan() {
           param.id
         }/isi-informasi?page=${
           page - 1
-        }&size=${rowsPerPage}&sortBy=id&sortOrder=asc`
+        }&size=${rowsPerPage}&sortBy=id&sortOrder=desc`
       );
       setJenisKeteranganIsiInformasi(response.data.data.content);
       setPaginationInfo({

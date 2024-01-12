@@ -6,6 +6,7 @@ import informasi from "../../../aset/informasi.svg";
 import "../../../css/dikecualikan.css";
 import axios from "axios";
 import AOS from "aos";
+import { API_DUMMY } from "../../../utils/base_URL";
 
 function Dikecualikan() {
   const [data, setData] = useState([]);
@@ -18,7 +19,7 @@ function Dikecualikan() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/39/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          `${API_DUMMY}/bawaslu/api/jenis-keterangan/39/isi-informasi?page=0&size=10&sortBy=id&sortOrder=desc`
         );
         setData(response.data.data.content); // Mengasumsikan properti data berisi array informasi
         console.log(response.data.data.content); // Mengasumsikan properti data berisi array informasi

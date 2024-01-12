@@ -20,7 +20,7 @@ function AdminBerkalaKepemiluan() {
   const getById = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/15/isi-informasi?page=0&size=100&sortBy=id&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/15/isi-informasi?page=0&size=100&sortBy=id&sortOrder=desc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -77,9 +77,9 @@ function AdminBerkalaKepemiluan() {
 
   const fetchData = async (selectedId, page, searchTerm) => {
     const response = await fetch(
-      `http://localhost:4040/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
+      `${API_DUMMY}/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
         page - 1
-      }&size=10&sortBy=id&sortOrder=asc`
+      }&size=10&sortBy=id&sortOrder=desc`
     );
     const result = await response.json();
 
