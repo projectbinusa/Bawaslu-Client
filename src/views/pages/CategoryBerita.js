@@ -168,6 +168,7 @@ function CategoryBerita() {
                         </div>
                       </div>
                     </div>
+{/*  */}
                     <div className="thumb">
                       <img
                         style={{ height: "450px" }}
@@ -194,7 +195,7 @@ function CategoryBerita() {
                         </li>
                       </ul>
                     </div>
-                  
+
                     <div className="row">
                       {related.map((post) => {
                         return (

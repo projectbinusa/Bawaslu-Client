@@ -7,20 +7,24 @@ import { API_DUMMY } from "../../utils/base_URL";
 import { Pagination } from "@mui/material";
 import Bawaslu from "../../component/Bawaslu";
 import {
+  FacebookIcon,
   FacebookShareButton,
+  PinterestIcon,
   PinterestShareButton,
+  TwitterIcon,
   TwitterShareButton,
 } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import "../../css/berita.css";
 import logoBawaslu from "../../aset/ikon-web.png";
+import { Helmet } from "react-helmet";
+import EditBeritaAdmin from "./admin/berita/EditBeritaAdmin";
 function Berita() {
   const [scroll, setScroll] = useState(false);
   const [list, setList] = useState([]);
   const [listTerbaru, setListTerbaru] = useState([]);
   const [category, setCategory] = useState([]);
-  const [november, setNovember] = useState([]);
   const currentYear = new Date().getFullYear();
   const [monthlyData, setMonthlyData] = useState({});
   const [monthlyTotal, setMonthlyTotal] = useState({});
@@ -29,8 +33,6 @@ function Berita() {
     totalPages: 1,
     totalElements: 0,
   });
-  const [searchResults, setSearchResults] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
   const [gambarTerbaru, setGambarTerbaru] = useState("");
 
   const getAll = async (page) => {
@@ -164,8 +166,54 @@ function Berita() {
     fetchData();
   }, []);
 
+  const [socialMeta, setSocialMeta] = useState({
+    title: "",
+    description: "",
+    imageUrl: "",
+    url: "",
+  });
+
+  // useEffect(() => {
+  //   const dataBerita = () => {
+  //     list.map((berita1) => {
+  //       return(
+  //       const url = `https://bawaslu.excellentsistem.com/page-isi-berita/${berita1.author}/${berita1.id}`;
+  //       setSocialMeta({
+  //         title: berita1.judulBerita,
+  //         description: berita1.isiBerita,
+  //         imageUrl: berita1.image,
+  //         url: url,
+  //       });
+  //       )
+  //     });
+  //   };
+  //   dataBerita();
+  // }, [list]);
+
+  //    useEffect(() => {
+  //   const dataBerita = () => {
+  //       list.map((berita1) => {
+  //         const url = `https://bawaslu.excellentsistem.com/page-isi-berita/${berita1.author}/${berita1.id}`;
+  //         setSocialMeta({
+  //           title: berita1.judulBerita,
+  //           description: berita1.isiBerita,
+  //           imageUrl: berita1.image,
+  //           url: url,
+  //         });
+  //         return null;
+  //       });
+  //   };
+  //   dataBerita();
+  // }, [list]);
+
   return (
     <>
+      {/* <Helmet>
+        <meta property="og:title" content={socialMeta.title} />
+        <meta property="og:description" content={socialMeta.description} />
+        <meta property="og:image" content={socialMeta.imageUrl} />
+        <meta property="og:url" content={socialMeta.url} />
+      </Helmet> */}
       <Navbar />
       <div>
         <div
@@ -305,57 +353,23 @@ function Berita() {
                                   <li>
                                     <FacebookShareButton
                                       url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
-                                      media={berita.image}
-                                      description={berita.judulBerita}
                                       quote={berita.judulBerita}>
-                                      <button
-                                        style={{
-                                          color: "white",
-                                          backgroundColor: "#45629f",
-                                        }}
-                                        className="border p-2">
-                                        <i
-                                          className="fab fa-facebook-f"
-                                          aria-hidden="true"></i>{" "}
-                                        Facebook
-                                      </button>
+                                      <FacebookIcon size={38} round={true} />
                                     </FacebookShareButton>
                                   </li>
                                   <li>
                                     <TwitterShareButton
                                       url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
-                                      media={berita.image} // Pastikan berita.image berisi URL gambar yang dapat diakses
-                                      description={berita.judulBerita}
-                                      quote={berita.judulBerita}>
-                                      <button
-                                        style={{
-                                          color: "white",
-                                          backgroundColor: "#5eb2ef",
-                                        }}
-                                        className="border p-2">
-                                        <i
-                                          className="fab fa-twitter"
-                                          aria-hidden="true"></i>{" "}
-                                        Twitter
-                                      </button>
+                                      title={berita.judulBerita}>
+                                      <TwitterIcon size={38} round={true} />
                                     </TwitterShareButton>
                                   </li>
                                   <li>
                                     <PinterestShareButton
                                       url={`https://bawaslu.excellentsistem.com/page-isi-berita/${berita.author}/${berita.id}`}
-                                      quote={berita.judulBerita}
-                                      media={berita.image} // Pastikan berita.image berisi URL gambar yang dapat diakses
-                                      description={berita.judulBerita}>
-                                      <button
-                                        style={{
-                                          color: "white",
-                                          backgroundColor: "#cf2830",
-                                          width: "80px",
-                                        }}
-                                        className="border p-2">
-                                        <i className="fa-brands fa-pinterest"></i>{" "}
-                                        Pin
-                                      </button>
+                                      description={berita.judulBerita}
+                                      media={berita.image}>
+                                      <PinterestIcon size={38} round={true} />
                                     </PinterestShareButton>
                                   </li>
                                 </ul>
