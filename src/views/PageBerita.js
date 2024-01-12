@@ -179,6 +179,7 @@ function PageBerita() {
                         alt="world-news"
                         style={{ maxHeight: "160px", maxWidth: "180px" }}
                       />
+                      {/*  */}
                       <span class="thumb-title isiBerita">BERITA</span>
                     </div>
                     <p class="font-weight-bold mt-3">
