@@ -6,8 +6,11 @@ import { API_DUMMY } from "../../utils/base_URL";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import Bawaslu from "../../component/Bawaslu";
 import {
+  FacebookIcon,
   FacebookShareButton,
+  PinterestIcon,
   PinterestShareButton,
+  TwitterIcon,
   TwitterShareButton,
 } from "react-share";
 import AOS from "aos"
@@ -139,17 +142,7 @@ function CategoryBerita() {
                                   media={category.image}
                                   description={category.judulBerita}
                                   quote={category.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
-                                    Facebook
-                                  </button>
+                                 <FacebookIcon size={38} round={true}/>
                                 </FacebookShareButton>
                               </li>
                               <li>
@@ -158,17 +151,7 @@ function CategoryBerita() {
                                   media={category.image}
                                   description={category.judulBerita}
                                   quote={category.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
-                                    Twitter
-                                  </button>
+                                 <TwitterIcon size={38} round={true}/>
                                 </TwitterShareButton>
                               </li>
                               <li>
@@ -177,15 +160,7 @@ function CategoryBerita() {
                                   quote={category.judulBerita}
                                   media={category.image}
                                   description={category.judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                    }}
-                                    className="border px-4 p-2">
-                                    <i className="fa-brands fa-pinterest "></i>{" "}
-                                    Pin
-                                  </button>
+                                 <PinterestIcon size={38} round={true}/>
                                 </PinterestShareButton>
                               </li>
                             </ul>
@@ -219,7 +194,7 @@ function CategoryBerita() {
                         </li>
                       </ul>
                     </div>
-                    <p>{category.isiBerita}</p>
+                  
                     <div className="row">
                       {related.map((post) => {
                         return (
