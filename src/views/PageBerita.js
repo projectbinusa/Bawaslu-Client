@@ -8,8 +8,11 @@ import { useEffect } from "react";
 import axios from "axios";
 import Bawaslu from "../component/Bawaslu";
 import {
+  FacebookIcon,
   FacebookShareButton,
+  PinterestIcon,
   PinterestShareButton,
+  TwitterIcon,
   TwitterShareButton,
 } from "react-share";
 import { format } from "date-fns";
@@ -99,12 +102,7 @@ function PageBerita() {
               media={image}
               description={description}
               quote={quote}>
-              <button
-                style={{ color: "white", backgroundColor: "#45629f" }}
-                className="border p-2">
-                <i className="fab fa-facebook-f" aria-hidden="true"></i>{" "}
-                Facebook
-              </button>
+             <FacebookIcon size={38} round={true}/>
             </FacebookShareButton>
           </li>
           <li>
@@ -113,11 +111,7 @@ function PageBerita() {
               media={image}
               description={description}
               quote={quote}>
-              <button
-                style={{ color: "white", backgroundColor: "#5eb2ef" }}
-                className="border p-2">
-                <i className="fab fa-twitter" aria-hidden="true"></i> Twitter
-              </button>
+             <TwitterIcon size={38} round={true}/>
             </TwitterShareButton>
           </li>
           <li>
@@ -126,22 +120,16 @@ function PageBerita() {
               media={image}
               description={description}
               quote={quote}>
-              <button
-                style={{
-                  color: "white",
-                  backgroundColor: "#cf2830",
-                  width: "90px",
-                }}
-                className="border p-2">
-                <i className="fa-brands fa-pinterest"></i> Pin
-              </button>
+              <PinterestIcon size={38} round={true}/>
             </PinterestShareButton>
           </li>
         </ul>
       </div>
     );
   };
-
+  const paragraphs = isiBerita.split("\n").map((paragraph, index) => (
+    <p key={index}>{paragraph}</p>
+  ));
   return (
     <>
       <Navbar />
@@ -261,7 +249,7 @@ function PageBerita() {
                     </li>
                   </ul>
                 </div>
-                <p>{isiBerita}</p>
+                <p>{paragraphs}</p>
               </div>
               <div class="jnews_inline_related_post">
                 <h4 className="pt-4 mb-4">Related Posts</h4>
