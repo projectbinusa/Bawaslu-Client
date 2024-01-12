@@ -145,6 +145,15 @@ function InformasiBerkalaKepemiluan() {
                         Sarana partisipasi Publik
                       </span>
                     </a>
+                    <a
+                      className="btn btn-primary mb-3 p-3 shadow" style={{textDecoration:"none"}}
+                      href="/informasi-berkala"
+                      
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                      Kembali
+                      </span>
+                  </a>
                   </div>
                 </div>
 
