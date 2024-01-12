@@ -7,7 +7,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
-import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import {  FacebookIcon, FacebookShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import AOS from 'aos';
@@ -54,6 +54,21 @@ function IsiRekap() {
     getAllRelatedPost();
     AOS.init()
   }, []);
+  const createParagraphs = (text) => {
+    const paragraphs = text.split("\n").map((paragraph, index) => (
+      <p key={index}>{paragraph}</p>
+    ));
+
+    const result = [];
+    for (let i = 0; i < paragraphs.length; i += 5) {
+      result.push(
+        <div key={i / 5} className="five-paragraphs">
+          {paragraphs.slice(i, i + 5)}
+        </div>
+      );
+    }
+    return result;
+  };
 
   return (
     <>
@@ -77,17 +92,7 @@ function IsiRekap() {
                                   url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   media={image}
                                   quote={judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
-                                    Facebook
-                                  </button>
+                                 <FacebookIcon size={38} round={true}/>
                                 </FacebookShareButton>
                               </li>
                               <li>
@@ -95,17 +100,8 @@ function IsiRekap() {
                                   url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   media={image}
                                   quote={judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
-                                    Twitter
-                                  </button>
+                                               <TwitterIcon size={38} round={true}/>
+
                                 </TwitterShareButton>
                               </li>
                               <li>
@@ -113,16 +109,7 @@ function IsiRekap() {
                                   url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   quote={judulBerita}
                                   media={image}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                      width :"90px"
-                                    }}
-                                    className="border p-2">
-                                    <i className="fa-brands fa-pinterest"></i>{" "}
-                                    Pin
-                                  </button>
+                                  <PinterestIcon size={38} round={true}/>
                                 </PinterestShareButton>
                               </li>
                         </ul>
@@ -148,7 +135,7 @@ function IsiRekap() {
 
                     </li>
                   </ul>
-                  <p>{isiBerita}</p>
+                  <p> {createParagraphs(isiBerita)}</p>
                   <br />
                   <div className="row">
                     <h2 className="title">Related Post</h2>
