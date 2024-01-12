@@ -26,8 +26,8 @@ function SumberDanAnggaranKegiatan() {
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col text-center"> Dokumen</th>
-              <th scope="col text-center"> Pdf Document</th>
+              <th scope="col" className="text-center"> Dokumen</th>
+              <th scope="col" className="text-center"> Pdf Document</th>
             </tr>
           </thead>
           <tbody>
@@ -35,7 +35,7 @@ function SumberDanAnggaranKegiatan() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                    <td className="" data-cell="dokumen" scope="row">
+                    <td className="" data-cell="dokumen">
                       {item.dokumen}
                     </td>
                     <td className="">

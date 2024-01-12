@@ -126,7 +126,7 @@ function Sidebar() {
                 </a>
               </li> */}
               <li>
-                <a style={{ textDecoration: "none" }} href="#">
+                <a href="#" style={{ textDecoration: "none" }}>
                   <i class="fa-regular fa-paste metismenu-icon"></i> Isi
                   Informasi
                   <i class="fas fa-arrow-circle-down metismenu-state-icon caret-left"></i>
