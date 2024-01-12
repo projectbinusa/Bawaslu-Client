@@ -44,7 +44,7 @@ function IsiDaftarRegulasi() {
   const getRegulasi = async (tableId) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${tableId}&page=0&size=10&sortBy=updatedDate&sortOrder=ASC`
+        `${API_DUMMY}/bawaslu/api/regulasi/get-by-menu-regulasi?id-menu-regulasi=${tableId}&page=0&size=10&sortBy=updatedDate&sortOrder=desc`
       );
       setIsi(response.data.data.content);
     } catch (error) {
