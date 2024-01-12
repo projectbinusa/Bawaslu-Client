@@ -1,12 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import Swal from "sweetalert2";
 import { API_DUMMY } from "../utils/base_URL";
 
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
-  const history = useHistory();
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -128,7 +126,7 @@ function Navbar() {
                       className="facebook"
                       href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
                       target="_blank"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-facebook-f"></i>
                     </a>
                   </li>
@@ -137,7 +135,7 @@ function Navbar() {
                       className="twitter"
                       href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
                       target="_blank"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-twitter"></i>
                     </a>
                   </li>
@@ -146,7 +144,7 @@ function Navbar() {
                       className="instagram"
                       href="https://www.instagram.com/bawaslu_boyolali/"
                       target="_blank"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-instagram"></i>
                     </a>
                   </li>
@@ -155,7 +153,7 @@ function Navbar() {
                       className="youtube"
                       href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
                       target="_blank"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-youtube"></i>
                     </a>
                   </li>
@@ -168,8 +166,7 @@ function Navbar() {
       <nav
         className={`navbar-area navbar-area-2 navbar-expand-lg ${
           isSticky ? "sticky-active" : ""
-        }`}
-      >
+        }`}>
         <div className="container nav-container">
           <div className="responsive-mobile-menu">
             <button
@@ -179,25 +176,22 @@ function Navbar() {
               onClick={toggleMenu}
               data-target="#Iitechie_main_menu"
               aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
+              aria-label="Toggle navigation">
               <span className="icon-left"></span>
               <span className="icon-right"></span>
             </button>
           </div>
           <div className="d-inline-block d-lg-none">
             <a href="/">
-            <img
-              src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
-              alt="img"
-            />
+              <img
+                src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
+                alt="img"
+              />
             </a>
-           
           </div>
           <div
             className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
-            id="Iitechie_main_menu"
-          >
+            id="Iitechie_main_menu">
             <ul className="navbar-nav menu-open text-lg-start">
               <li className="">
                 <a href="/">Home</a>
@@ -221,15 +215,13 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}
-                >
+                  onClick={toggleSubmenu}>
                   Informasi Publik
                 </a>
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu"
-                  data-bs-parent="#menu"
-                >
+                  data-bs-parent="#menu">
                   <li>
                     <a href="/informasi-serta-merta">Informasi Serta Merta</a>
                   </li>
@@ -254,15 +246,13 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}
-                >
+                  onClick={toggleSubmenu}>
                   Daftar Regulasi
                 </a>
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu2"
-                  data-bs-parent="#menu"
-                >
+                  data-bs-parent="#menu">
                   <li>
                     <a href="/regulasi-public">Regulasi</a>
                   </li>
@@ -284,15 +274,13 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}
-                >
+                  onClick={toggleSubmenu}>
                   Form Online
                 </a>
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu3"
-                  data-bs-parent="#menu"
-                >
+                  data-bs-parent="#menu">
                   <li>
                     <a href="/form-permohonan-informasi">
                       Form Permohonan Informasi
@@ -317,15 +305,13 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}
-                >
+                  onClick={toggleSubmenu}>
                   Prosedur
                 </a>
                 <ul
                   className={`${isMobile ? "collapse" : "sub-menu"}`}
                   id="submenu4"
-                  data-bs-parent="#menu"
-                >
+                  data-bs-parent="#menu">
                   <li>
                     <a href="/prosedur-permintaan-informasi">
                       Prosedur Permintaan Informasi

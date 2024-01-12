@@ -14,21 +14,16 @@ const FormPermohonanInformasi = () => {
   const [alamatPemohon, setAlamatPemohon] = useState("");
   // const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] = useState("");
   const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("");
-  const [createDate, setCreateDate] = useState("");
   const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] =
     useState("");
   const [email, setEmail] = useState("");
-  const [id, setID] = useState("");
   const [namaPemohon, setNamaPemohon] = useState("");
   const [noTlp, setNoTlp] = useState("");
   const [nomorIdentitasPemohon, setNomorIdentitasPemohon] = useState("");
-  const [pekerjaan, setPekerjaan] = useState("");
   const [pendidikan, setPendidikan] = useState("");
   const [rincianYangDibutuhkan, setRincianYangDibutuhkan] = useState("");
   const [fotoIdentitas, setFotoIdentitas] = useState("");
   const [jenisIdentitas, setJenisIdentitasPemohon] = useState("");
-  const [tujuanInformasi, setTujuanInformasi] = useState("");
-  const [updateDate, setUpdateDate] = useState("");
   const [show, setShow] = useState(false);
 
   const Add = async (e) => {
@@ -240,18 +235,6 @@ const FormPermohonanInformasi = () => {
                 />{" "}
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
-                {/* <p>Rincian Yang Dibutuhkan (Tambah Keterangan Bila Perlu):</p>
-                <textarea
-                  value={rincianYangDibutuhkan}
-   onChange={(e) => {
-                        if (e.target.value.length <= 31) {
-                          setNamaPemohon(e.target.value);
-                        }
-                      }}                  className={`textarea ${tujuanPenggunaanInformasi.length >= 31 ? "border-danger bg-danger-subtle": "" }`}
-                  id="textarea"
-                />
-                <p className="pp">0 of 100 max characters</p>
-                <br></br> */}
               </div>
             </div>
             <div data-aos="fade-left" className="tujuan">
@@ -293,25 +276,6 @@ const FormPermohonanInformasi = () => {
               <br></br>
               <br></br>
               <br></br>
-              {/* <p>Cara Mendapat Salinan Informasi:</p>
-              <select
-                value={caraMendapatSalinanInformasi}
-   onChange={(e) => {
-                        if (e.target.value.length <= 31) {
-                          setNamaPemohon(e.target.value);
-                        }
-                      }}                className="form-select"
-                aria-label="Default select example"
-              >
-                <option selected>Pilih Cara Mendapat Salinan Informasi</option>
-                <option value="mengambil sendiri">Mengambil Langsung</option>
-                <option value="pos">POS</option>
-                <option value="kurir">Kurir</option>
-                <option value="fax">FAX</option>
-                <option value="email">Email</option>
-              </select>
-              <br></br>
-              <br></br> */}
               <label
                 for="exampleInputPassword1"
                 className="form-label font-weight-bold">

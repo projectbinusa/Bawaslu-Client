@@ -27,7 +27,6 @@ function PageBerita() {
   const [id, setId] = useState();
   const [categoryBerita, setCategoryBerita] = useState("");
   const [createdDate, setCreatedDate] = useState("");
-  const [respon, setRespon] = useState("");
   const param = useParams();
   const [list, setList] = useState([]);
   const [variabel, setVariabel] = useState({
@@ -147,77 +146,74 @@ function PageBerita() {
     <>
       <Navbar />
       <div
-          class="editors-news container"
-          style={{ marginTop: "100px", marginBottom: "50px" }}>
-          <div class="row">
-            <div data-aos="fade-right" class="col-lg-3">
-              <div class="d-flex position-relative float-left">
-                <h3 class="section-title">Berita Terbaru</h3>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div data-aos="fade-right" class="col-lg-6  mb-5 mb-sm-2">
-              <div class="position-relative image-hover">
-                <img
-                  src={listTerbaru.length > 0 && listTerbaru[0].image}
-                  class="img-fluid w-100"
-                  alt="world-news"
-                />
-                <span class="thumb-title">BERITA</span>
-              </div>
-              <h1 class="font-weight-600 mt-3">
-                <a
-                  style={{ color: "black", textDecoration: "none" }}
-                  href={
-                    "/page-isi-berita/" + listTerbaru.length > 0 &&
-                    listTerbaru[0].author + "/" + listTerbaru.length > 0 &&
-                    listTerbaru[0].judulBerita
-                  }></a>{" "}
-                {listTerbaru.length > 0 && listTerbaru[0].id}
-              </h1>
-              <p class="fs-15 font-weight-normal isiBerita">
-                {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
-              </p>
-            </div>
-            <div class="col-lg-6  mb-5 mb-sm-2">
-              <div class="row">
-                {listTerbaru.slice(1, 5).map((berita) => {
-                  return (
-                    <div data-aos="fade-left" class="col-sm-6  mb-5 mb-sm-2">
-                      <div class="position-relative image-hover">
-                        <img
-                          src={berita.image}
-                          class="img-fluid "
-                          alt="world-news"
-                          style={{maxHeight:"160px", maxWidth:"180px"}}
-                        />
-                        <span class="thumb-title isiBerita">BERITA</span>
-                      </div>
-                      <p class="font-weight-bold mt-3">
-                        <a
-                          style={{ color: "black", textDecoration: "none" }}
-                          href={
-                            "/page-isi-berita/" +
-                            berita.author +
-                            "/" +
-                            berita.id
-                          }>
-                          {berita.judulBerita}
-                        </a>
-                      </p>
-                      <span>
-                        {format(new Date(berita.createdDate), "dd MMMM yyyy", {
-                          locale: idLocale,
-                        })}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
+        class="editors-news container"
+        style={{ marginTop: "100px", marginBottom: "50px" }}>
+        <div class="row">
+          <div data-aos="fade-right" class="col-lg-3">
+            <div class="d-flex position-relative float-left">
+              <h3 class="section-title">Berita Terbaru</h3>
             </div>
           </div>
         </div>
+        <div class="row">
+          <div data-aos="fade-right" class="col-lg-6  mb-5 mb-sm-2">
+            <div class="position-relative image-hover">
+              <img
+                src={listTerbaru.length > 0 && listTerbaru[0].image}
+                class="img-fluid w-100"
+                alt="world-news"
+              />
+              <span class="thumb-title">BERITA</span>
+            </div>
+            <h1 class="font-weight-600 mt-3">
+              <a
+                style={{ color: "black", textDecoration: "none" }}
+                href={
+                  "/page-isi-berita/" + listTerbaru.length > 0 &&
+                  listTerbaru[0].author + "/" + listTerbaru.length > 0 &&
+                  listTerbaru[0].judulBerita
+                }></a>{" "}
+              {listTerbaru.length > 0 && listTerbaru[0].id}
+            </h1>
+            <p class="fs-15 font-weight-normal isiBerita">
+              {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
+            </p>
+          </div>
+          <div class="col-lg-6  mb-5 mb-sm-2">
+            <div class="row">
+              {listTerbaru.slice(1, 5).map((berita) => {
+                return (
+                  <div data-aos="fade-left" class="col-sm-6  mb-5 mb-sm-2">
+                    <div class="position-relative image-hover">
+                      <img
+                        src={berita.image}
+                        class="img-fluid "
+                        alt="world-news"
+                        style={{ maxHeight: "160px", maxWidth: "180px" }}
+                      />
+                      <span class="thumb-title isiBerita">BERITA</span>
+                    </div>
+                    <p class="font-weight-bold mt-3">
+                      <a
+                        style={{ color: "black", textDecoration: "none" }}
+                        href={
+                          "/page-isi-berita/" + berita.author + "/" + berita.id
+                        }>
+                        {berita.judulBerita}
+                      </a>
+                    </p>
+                    <span>
+                      {format(new Date(berita.createdDate), "dd MMMM yyyy", {
+                        locale: idLocale,
+                      })}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">

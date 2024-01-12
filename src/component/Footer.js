@@ -1,5 +1,5 @@
 import axios from "axios";
-import "../css/gabung.css"
+import "../css/gabung.css";
 import React, { useEffect, useState } from "react";
 import { API_DUMMY } from "../utils/base_URL";
 
@@ -46,7 +46,8 @@ function Footer() {
                       <a
                         className="facebook"
                         href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                         <i className="fab fa-facebook-f"></i>
                       </a>
                     </li>
@@ -54,7 +55,8 @@ function Footer() {
                       <a
                         className="twitter"
                         href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                         <i className="fab fa-twitter"></i>
                       </a>
                     </li>
@@ -62,7 +64,8 @@ function Footer() {
                       <a
                         className="instagram"
                         href="https://www.instagram.com/bawaslu_boyolali/"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                         <i className="fab fa-instagram"></i>
                       </a>
                     </li>
@@ -70,7 +73,8 @@ function Footer() {
                       <a
                         className="youtube"
                         href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                         <i className="fab fa-youtube"></i>
                       </a>
                     </li>
@@ -141,7 +145,6 @@ function Footer() {
                     {" "}
                     E-mail set.boyolali@bawaslu.go.id
                   </p>
-
                 </div>
                 {/* <label><input type="checkbox">Maecenas tempususcondime honcus sem quam  libero</input></label> */}
               </div>
@@ -153,40 +156,46 @@ function Footer() {
           <div className="container">
             <div className="row">
               <div className="col-md-12 align-self-center footer-media">
-              <ul className="social-media d-lg-none d-md-flex gap-2" style={{alignItems:"center", justifyContent:"center"}}>
-                    <li>
-                      <a
-                        className="facebook"
-                        href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
-                        target="_blank">
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="twitter"
-                        href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
-                        target="_blank">
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="instagram"
-                        href="https://www.instagram.com/bawaslu_boyolali/"
-                        target="_blank">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="youtube"
-                        href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
-                        target="_blank">
-                        <i className="fab fa-youtube"></i>
-                      </a>
-                    </li>
-                  </ul>
+                <ul
+                  className="social-media d-lg-none d-md-flex gap-2"
+                  style={{ alignItems: "center", justifyContent: "center" }}>
+                  <li>
+                    <a
+                      className="facebook"
+                      href="https://www.facebook.com/Bawaslu.Kabupaten.Boyolali"
+                      target="_blank"
+                      rel="noreferrer">
+                      <i className="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="twitter"
+                      href="https://twitter.com/i/flow/login?redirect_after_login=%2Fbawasluboyolali"
+                      target="_blank"
+                      rel="noreferrer">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="instagram"
+                      href="https://www.instagram.com/bawaslu_boyolali/"
+                      target="_blank"
+                      rel="noreferrer">
+                      <i className="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="youtube"
+                      href="https://www.youtube.com/channel/UC-OZT-HT_Qg7cUmo-oHfkAw"
+                      target="_blank"
+                      rel="noreferrer">
+                      <i className="fab fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
                 <p>© 2023. Bawaslu Kabupaten Boyolali.</p>
               </div>
             </div>

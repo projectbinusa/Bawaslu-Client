@@ -67,15 +67,6 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const toggleSubmenu = () => {
-    setSubmenuOpen(!submenuOpen);
-  };
-
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
@@ -88,7 +79,6 @@ function Header() {
     };
   }, []);
 
-  const isMobile = windowWidth < 992;
 
   const logout = () => {
     Swal.fire({
@@ -125,8 +115,8 @@ function Header() {
             src="https://upload.wikimedia.org/wikipedia/commons/6/62/Logo_Bawaslu.png"
           />
           <div className="header__pane ml-auto">
-            <div>           
-             
+            <div>
+
             </div>
           </div>
         </div>
