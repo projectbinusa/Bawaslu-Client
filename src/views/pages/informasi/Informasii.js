@@ -70,7 +70,7 @@ function Informasii() {
                         Sengketa Proses Pemilu
                       </span>
                     </a>
-
+{/*  */}
                     <a
                       className="nav-link mb-3 p-3 shadow"
                       id="v-pills-messages-tab"
