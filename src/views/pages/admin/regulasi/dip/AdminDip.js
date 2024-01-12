@@ -24,7 +24,7 @@ function AdminDip() {
   const getByDaftarDip = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/tabel-dip/all-terbaru?daftarDip=${default1}&page=0&size=100&sortBy=created_date&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/tabel-dip/all-terbaru?daftarDip=${default1}&page=0&size=100&sortBy=created_date&sortOrder=desc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -79,7 +79,7 @@ function AdminDip() {
     const response = await fetch(
       `${API_DUMMY}/bawaslu/api/tabel-dip/all-terbaru?daftarDip=${selected}&page=${
         page - 1
-      }&size=10&sortBy=created_date&sortOrder=asc`
+      }&size=10&sortBy=created_date&sortOrder=desc`
     );
     const result = await response.json();
 
@@ -163,7 +163,7 @@ function AdminDip() {
                     <option value="SK DIP">SK DIP1</option>;
               </select>
             </div>
-          </div> 
+          </div>
 
 
             <div id="main-card" className="box-tabel main-card mb-3 card">
@@ -275,7 +275,7 @@ function AdminDip() {
                                 type="button"
                                 onClick={() => deleteData(dip.id)}
                                 className="mr-2 btn-danger btn-sm"
-                                
+
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>

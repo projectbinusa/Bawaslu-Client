@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { API_DUMMY } from "../../../../../utils/base_URL";
 
 function PeraturanDanKebijakan() {
   const [data, setData] = useState(null);
@@ -8,7 +9,7 @@ function PeraturanDanKebijakan() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/9/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          `${API_DUMMY}/bawaslu/api/jenis-keterangan/9/isi-informasi?page=0&size=10&sortBy=id&sortOrder=desc`
         );
         setData(response.data.data); // Mengasumsikan properti data berisi array informasi
       } catch (error) {

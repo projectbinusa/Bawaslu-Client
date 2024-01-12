@@ -21,7 +21,7 @@ function AdminRegulasi() {
   const getByDaftarRegulasi = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/tabel-regulasi/all-terbaru?daftarRegulasi=${default1}&page=0&size=100&sortBy=created_date&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/tabel-regulasi/all-terbaru?daftarRegulasi=${default1}&page=0&size=100&sortBy=created_date&sortOrder=desc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -75,7 +75,7 @@ function AdminRegulasi() {
   const fetchData = async (selected, page, searchTerm) => {
     const response = await fetch(
       `${API_DUMMY}/bawaslu/api/tabel-regulasi/all-terbaru?daftarRegulasi=${selected}&page=${page - 1
-      }&size=10&sortBy=created_date&sortOrder=asc`
+      }&size=10&sortBy=created_date&sortOrder=desc`
     );
     const result = await response.json();
 
