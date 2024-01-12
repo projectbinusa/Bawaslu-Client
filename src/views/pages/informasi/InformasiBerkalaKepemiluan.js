@@ -156,7 +156,7 @@ function InformasiBerkalaKepemiluan() {
                   </a>
                   </div>
                 </div>
-
+{/*  */}
                 <div className="col-md-9"  data-aos="fade-left">
                   <div className="tab-content" id="v-pills-tabContent">
                     <div
