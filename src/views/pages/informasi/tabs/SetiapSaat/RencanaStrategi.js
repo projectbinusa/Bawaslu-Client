@@ -11,7 +11,7 @@ function RencanaStrategi() {
         const response = await axios.get(
           `${API_DUMMY}/bawaslu/api/jenis-keterangan/12/isi-informasi?page=0&size=10&sortBy=id&sortOrder=desc`
         );
-        setData(response.data.data); // Mengasumsikan properti data berisi array informasi
+        setData(response.data.data); 
       } catch (error) {
         console.error("Error saat mengambil data:", error);
       }
