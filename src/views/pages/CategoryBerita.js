@@ -195,7 +195,7 @@ function CategoryBerita() {
                         </li>
                       </ul>
                     </div>
-                  
+
                     <div className="row">
                       {related.map((post) => {
                         return (

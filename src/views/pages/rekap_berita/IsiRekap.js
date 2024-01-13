@@ -99,7 +99,7 @@ function IsiRekap() {
                                 <TwitterShareButton
                                   url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   media={image}
-                                  quote={judulBerita}>
+                                  title={judulBerita}>
                                                <TwitterIcon size={38} round={true}/>
 
                                 </TwitterShareButton>

@@ -102,7 +102,7 @@ function PageBerita() {
               media={image}
               description={description}
               quote={quote}>
-             <FacebookIcon size={38} round={true}/>
+              <FacebookIcon size={38} round={true} />
             </FacebookShareButton>
           </li>
           <li>
@@ -110,8 +110,8 @@ function PageBerita() {
               url={url}
               media={image}
               description={description}
-              quote={quote}>
-             <TwitterIcon size={38} round={true}/>
+              title={quote}>
+              <TwitterIcon size={38} round={true} />
             </TwitterShareButton>
           </li>
           <li>
@@ -120,16 +120,16 @@ function PageBerita() {
               media={image}
               description={description}
               quote={quote}>
-              <PinterestIcon size={38} round={true}/>
+              <PinterestIcon size={38} round={true} />
             </PinterestShareButton>
           </li>
         </ul>
       </div>
     );
   };
-  const paragraphs = isiBerita.split("\n").map((paragraph, index) => (
-    <p key={index}>{paragraph}</p>
-  ));
+  const paragraphs = isiBerita
+    .split("\n")
+    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
   return (
     <>
       <Navbar />
@@ -214,12 +214,34 @@ function PageBerita() {
                       <div class="tags d-inline-block"></div>
                     </div>
                     <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <ShareButtons
-                        url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${id}`}
-                        media={image}
-                        description={judulBerita}
-                        quote={judulBerita}
-                      />
+                      <div className="blog-share">
+                        <ul>
+                          <li>
+                            <FacebookShareButton
+                              url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${param.id}`}
+                              media={image}
+                              quote={judulBerita}>
+                              <FacebookIcon size={38} round={true} />
+                            </FacebookShareButton>
+                          </li>
+                          <li>
+                            <TwitterShareButton
+                              url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${param.id}`}
+                              media={image}
+                              title={judulBerita}>
+                              <TwitterIcon size={38} round={true} />
+                            </TwitterShareButton>
+                          </li>
+                          <li>
+                            <PinterestShareButton
+                              url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${param.id}`}
+                              quote={judulBerita}
+                              media={image}>
+                              <PinterestIcon size={38} round={true} />
+                            </PinterestShareButton>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
