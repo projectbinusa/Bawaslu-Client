@@ -5,6 +5,7 @@ import { TableContainer } from '@mui/material';
 import Sidebar from '../../../../component/Sidebar';
 import Header from '../../../../component/Header';
 import Swal from 'sweetalert2';
+import AOS from "aos";
 
 function PageCarousel() {
   const [caraousel, setCarousel] = useState([]);
@@ -50,12 +51,16 @@ function PageCarousel() {
   useEffect(() => {
     getAll();
   })
+
+  useEffect(() => {
+    AOS.init();
+  },[]);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
     <Header />
     <div className="app-main">
       <Sidebar />
-      <div className="container box-tabel mt-3 app-main__outer">
+      <div className="container box-tabel mt-3 app-main__outer"  data-aos="fade-left">
         <div className="main-card mb-3 card box-tabel">
           <div
             className="card-header pembungkus-text-button"

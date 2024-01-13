@@ -6,6 +6,8 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
+import AOS from "aos";
+
 
 function AdminBerkalaKepemiluan() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -145,13 +147,17 @@ function AdminBerkalaKepemiluan() {
     fetchData(selectedValue, 2, event.target.value);
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div>
       <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container box-tabel mt-3 app-main__outer">
+          <div id="container" className="container box-tabel mt-3 app-main__outer"  data-aos="fade-left">
           <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
             <div class="col-auto">
               <select

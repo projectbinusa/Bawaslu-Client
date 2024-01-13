@@ -31,10 +31,6 @@ import PenyelesaianSengketa from "./views/pages/prosedur/PenyelesaianSengketa";
 import Maklumat from "./views/pages/daftarRegulasi/Maklumat";
 import LayananInformasi from "./views/pages/form/LayananInformasi";
 import PermintaanInformasi from "./views/pages/prosedur/PermintaanInformasi";
-<<<<<<< HEAD
-
-=======
->>>>>>> decefd000b78e43529e87f2dc1404309cbbc3945
 
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
