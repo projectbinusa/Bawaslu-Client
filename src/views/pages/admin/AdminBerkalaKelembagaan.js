@@ -20,7 +20,7 @@ function AdminBerkalaKelembagaan() {
   const getById = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/jenis-keterangan/22/isi-informasi?page=0&size=100&sortBy=id&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/jenis-keterangan/22/isi-informasi?page=0&size=100&sortBy=id&sortOrder=desc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -77,9 +77,9 @@ function AdminBerkalaKelembagaan() {
 
   const fetchData = async (selectedId, page, searchTerm) => {
     const response = await fetch(
-      `http://localhost:4040/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
+      `${API_DUMMY}/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
         page - 1
-      }&size=10&sortBy=id&sortOrder=asc`
+      }&size=10&sortBy=id&sortOrder=desc`
     );
     const result = await response.json();
 
@@ -179,11 +179,11 @@ function AdminBerkalaKelembagaan() {
                     <option value="37">TAPKIN</option>
                     <option value="38">Pengadaan Barang Dan Jasa</option>
               </select>
-            </div>  
+            </div>
           </div>
-          
+
             <div id="main-card" className="main-card box-tabel mb-3 card">
-           
+
             <div className=" mb-3 d-lg-none d-md-none d-flex">
             <div className="card-header " style={{ display: "block" }}>
               <p className="mt-3">Admin Informasi Berkala Kelembagaan</p>
@@ -209,7 +209,7 @@ function AdminBerkalaKelembagaan() {
                 </div>
               </div>
             </div>
-           
+
           </div>
             <div
               className="card-header pembungkus-text-button  d-lg-flex  d-md-flex d-none"
@@ -290,7 +290,7 @@ function AdminBerkalaKelembagaan() {
                 </div>
               </div>
             </div>
-              
+
               <TableContainer>
                 <div
                   className="table-responsive"

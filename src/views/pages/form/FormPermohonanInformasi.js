@@ -14,21 +14,16 @@ const FormPermohonanInformasi = () => {
   const [alamatPemohon, setAlamatPemohon] = useState("");
   // const [caraMendapatSalinanInformasi, setCaraMendapatSalinanInformasi] = useState("");
   const [caraMemperolehInformasi, setCaraMemperolehnInformasi] = useState("");
-  const [createDate, setCreateDate] = useState("");
   const [tujuanPenggunaanInformasi, setTujuanPenggunaanInformasi] =
     useState("");
   const [email, setEmail] = useState("");
-  const [id, setID] = useState("");
   const [namaPemohon, setNamaPemohon] = useState("");
   const [noTlp, setNoTlp] = useState("");
   const [nomorIdentitasPemohon, setNomorIdentitasPemohon] = useState("");
-  const [pekerjaan, setPekerjaan] = useState("");
   const [pendidikan, setPendidikan] = useState("");
   const [rincianYangDibutuhkan, setRincianYangDibutuhkan] = useState("");
   const [fotoIdentitas, setFotoIdentitas] = useState("");
   const [jenisIdentitas, setJenisIdentitasPemohon] = useState("");
-  const [tujuanInformasi, setTujuanInformasi] = useState("");
-  const [updateDate, setUpdateDate] = useState("");
   const [show, setShow] = useState(false);
 
   const Add = async (e) => {
@@ -63,7 +58,7 @@ const FormPermohonanInformasi = () => {
       setShow(false);
       Swal.fire({
         icon: "success",
-        title: "Berhasil Ditambahkan",
+        title: "Berhasil Mengajukan Permohonan Informasi",
         showConfirmButton: false,
         timer: 1500,
       });
@@ -83,17 +78,15 @@ const FormPermohonanInformasi = () => {
     <>
       <div>
         <Navbar />
-        <div className="head" style={{marginBottom: "100px"}}>
+        <div className="head">
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
-            className="form text-center"
-          >
+            className="form text-center">
             <div className="form-permohonan section-title text-center">
               <h5
                 id="text1-gabung"
-                className="sub-title double-line text-center"
-              >
+                className="sub-title double-line text-center">
                 Bawaslu Boyolali
               </h5>
               <h2 id="text2-gabung" className="title text-center">
@@ -108,65 +101,79 @@ const FormPermohonanInformasi = () => {
           </div>
           <div className="spacer"></div>
 
-          <form onSubmit={Add} className="option" style={{marginTop: "100px"}}>
+          <form
+            onSubmit={Add}
+            className="option"
+            style={{ marginTop: "100px" }}>
             <div>
               <div data-aos="fade-right">
                 {""}
                 <label
                   for="exampleInputPassword1"
-                  className="form-label font-weight-bold"
-                >
+                  className="form-label font-weight-bold">
                   Nama Pemohon :
                 </label>
                 <input
                   value={namaPemohon}
-                  onChange={(e) => setNamaPemohon(e.target.value)}
+                  onChange={(e) => {
+                    if (e.target.value.length <= 31) {
+                      setNamaPemohon(e.target.value);
+                    }
+                  }}
                   type="text"
-                  className="form-control"
+                  className={`form-control ${namaPemohon.length >= 31 ? "border-danger bg-danger-subtle": "" }`}
                 />
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <label
                   for="exampleInputPassword1"
-                  className="form-label font-weight-bold"
-                >
+                  className="form-label font-weight-bold">
                   Alamat Pemohon :
                 </label>{" "}
                 <textarea
-                  className="textarea"
+                  className={`textarea ${alamatPemohon.length >= 61 ? "border-danger bg-danger-subtle": "" }`}
                   id="textarea"
                   value={alamatPemohon}
-                  onChange={(e) => setAlamatPemohon(e.target.value)}
+                  onChange={(e) => {
+                    if (e.target.value.length <= 61) {
+                      setAlamatPemohon(e.target.value);
+                    }
+                  }}
                 />
+                <p className="pp">0 of 60 max characters</p>
                 <br />
                 <br />
                 <label
                   for="exampleInputPassword1"
-                  className="form-label font-weight-bold"
-                >
+                  className="form-label font-weight-bold">
                   Nomor Identitas :{" "}
                 </label>{" "}
                 <input
                   type="number"
-                  className=" form-control "
+                  className={`form-control ${
+                    nomorIdentitasPemohon.length >= 31 ? "border-danger bg-danger-subtle" : ""
+                  }`}
                   id=""
                   value={nomorIdentitasPemohon}
-                  onChange={(e) => setNomorIdentitasPemohon(e.target.value)}
+                  onChange={(e) => {
+                    if (e.target.value.length <= 31) {
+                      setNomorIdentitasPemohon(e.target.value);
+                    }
+                  }}
                 />
+                <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <br></br>
                 <label
                   for="exampleInputPassword1"
-                  className="form-label font-weight-bold"
-                >
+                  className="form-label font-weight-bold">
                   Jenis Identitas :
                 </label>
                 <select
                   value={jenisIdentitas}
                   onChange={(e) => setJenisIdentitasPemohon(e.target.value)}
                   className="form-select"
-                  aria-label="Default select example"
-                >
+                  aria-label="Default select example">
                   <option selected>Pilih Jenis Identitas </option>
                   <option value="1">KTP (Kartu Tanda Penduduk)</option>
                   <option value="2">SIM (Surat Izin Mengemudi)</option>
@@ -177,82 +184,88 @@ const FormPermohonanInformasi = () => {
                 {/* <p>Pekerjaan:</p>
                 <input
                   type="text"
-                  className=" form-control "
+                  className={`form-control ${noTlp.length >= 31 ? "border-danger bg-danger-subtle" : ""}`}
                   id=""
                   value={pekerjaan}
-                  onChange={(e) => setPekerjaan(e.target.value)}
-                />
+   onChange={(e) => {
+                        if (e.target.value.length <= 31) {
+                          setNamaPemohon(e.target.value);
+                        }
+                      }}                />
                 <p className="pp">0 of 60 max characters</p> */}
                 <br></br>
                 <br></br>
                 <label
                   for="exampleInputPassword1"
-                  className="form-label font-weight-bold"
-                >
+                  className="form-label font-weight-bold">
                   Nomor Tlp/Hp :{" "}
                 </label>
                 <input
-                  className=" form-control "
+                  className={`form-control ${
+                    noTlp.length >= 31 ? "border-danger bg-danger-subtle" : ""
+                  }`}
                   id=""
                   type="number"
                   value={noTlp}
-                  onChange={(e) => setNoTlp(e.target.value)}
+                  onChange={(e) => {
+                    if (e.target.value.length <= 31) {
+                      setNoTlp(e.target.value);
+                    }
+                  }}
                 />
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
                 <label
                   for="exampleInputPassword1"
-                  className="form-label font-weight-bold"
-                >
+                  className="form-label font-weight-bold">
                   Email :{" "}
                 </label>
                 <input
-                  className=" form-control "
+                  className={`form-control ${
+                    email.length >= 31 ? "border-danger bg-danger-subtle" : ""
+                  }`}
                   id=""
                   type="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                    if (e.target.value.length <= 31) {
+                      setEmail(e.target.value);
+                    }
+                  }}
                 />{" "}
                 <p className="pp">0 of 30 max characters</p>
                 <br></br>
-                {/* <p>Rincian Yang Dibutuhkan (Tambah Keterangan Bila Perlu):</p>
-                <textarea
-                  value={rincianYangDibutuhkan}
-                  onChange={(e) => setRincianYangDibutuhkan(e.target.value)}
-                  className="textarea"
-                  id="textarea"
-                />
-                <p className="pp">0 of 100 max characters</p>
-                <br></br> */}
               </div>
             </div>
             <div data-aos="fade-left" className="tujuan">
               <label
                 for="exampleInputPassword1"
-                className="form-label font-weight-bold"
-              >
+                className="form-label font-weight-bold">
                 Tujuan Penggunaan Informasi :{" "}
               </label>
               <textarea
                 value={tujuanPenggunaanInformasi}
-                onChange={(e) => setTujuanPenggunaanInformasi(e.target.value)}
-                className="textarea"
+                onChange={(e) => {
+                  if (e.target.value.length <= 100) {
+                    setTujuanPenggunaanInformasi(e.target.value);
+                  }
+                }}
+                className={`textarea ${tujuanPenggunaanInformasi.length >= 100 ? "border-danger bg-danger-subtle": "" }`}
                 id="textarea"
               />
               <p className="pp">0 of 100 max characters</p>
               <br></br>
               <label
                 for="exampleInputPassword1"
-                className="form-label font-weight-bold"
-              >
+                className="form-label font-weight-bold">
                 Cara Memperoleh Informasi :
               </label>
               <select
                 value={caraMemperolehInformasi}
-                onChange={(e) => setCaraMemperolehnInformasi(e.target.value)}
+                onChange={(e) =>
+                    setCaraMemperolehnInformasi(e.target.value)}
                 className="form-select"
-                aria-label="Default select example"
-              >
+                aria-label="Default select example">
                 <option selected>Pilih Cara Memperoleh Informasi </option>
                 <option value="mengambil sendiri">Mengambil Langsung</option>
                 <option value="pos">POS</option>
@@ -263,27 +276,10 @@ const FormPermohonanInformasi = () => {
               <br></br>
               <br></br>
               <br></br>
-              {/* <p>Cara Mendapat Salinan Informasi:</p>
-              <select
-                value={caraMendapatSalinanInformasi}
-                onChange={(e) => setCaraMendapatSalinanInformasi(e.target.value)}
-                className="form-select"
-                aria-label="Default select example"
-              >
-                <option selected>Pilih Cara Mendapat Salinan Informasi</option>
-                <option value="mengambil sendiri">Mengambil Langsung</option>
-                <option value="pos">POS</option>
-                <option value="kurir">Kurir</option>
-                <option value="fax">FAX</option>
-                <option value="email">Email</option>
-              </select>
-              <br></br>
-              <br></br> */}
               <label
                 for="exampleInputPassword1"
-                className="form-label font-weight-bold"
-              >
-                Upload Foto identitas (.jpg) max 1 mb :{" "}
+                className="form-label font-weight-bold">
+                Upload Foto identitas :{" "}
               </label>{" "}
               <input
                 type="file"

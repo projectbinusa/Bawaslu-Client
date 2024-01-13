@@ -67,15 +67,6 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const toggleSubmenu = () => {
-    setSubmenuOpen(!submenuOpen);
-  };
-
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowWidth(window.innerWidth);
@@ -88,7 +79,6 @@ function Header() {
     };
   }, []);
 
-  const isMobile = windowWidth < 992;
 
   const logout = () => {
     Swal.fire({
@@ -126,15 +116,7 @@ function Header() {
           />
           <div className="header__pane ml-auto">
             <div>
-              <button
-                type="button"
-                className="hamburger close-sidebar-btn hamburger--elastic"
-                data-className="closed-sidebar"
-              >
-                <span className="hamburger-box">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
+
             </div>
           </div>
         </div>

@@ -25,6 +25,7 @@ import RencanaKerjaAnggaran from "./tabs/Berkala/kelembagaan/RencanaKerjaAnggara
 import Tapkin from "./tabs/Berkala/kelembagaan/Tapkin";
 import PengadaanBarang from "./tabs/Berkala/kelembagaan/PengadaanBarang";
 import AOS from "aos";
+import "../../../css/gabung.css"
 
 function InformasiBerkalaKelembagaan() {
   useEffect(() => {
@@ -258,7 +259,16 @@ function InformasiBerkalaKelembagaan() {
                       <span className="font-weight-bold small text-uppercase">
                         Piagam Penghargaan
                       </span>
-                    </a>
+                  </a>
+                  <a
+                      className="btn btn-primary mb-3 p-3 shadow" style={{textDecoration:"none"}}
+                      href="/informasi-berkala"
+                      
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                      Kembali
+                      </span>
+                  </a>
                   </div>
                 </div>
 

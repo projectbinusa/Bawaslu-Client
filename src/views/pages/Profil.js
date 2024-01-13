@@ -206,12 +206,13 @@ function Profil() {
       <div id="strukturOrganisasi" className="row pd-top-110" style={{ background: "#F1F6F9" }}>
         <div
           data-aos="fade-right" className="col-lg-6 col-md-9 px-xl-5 align-self-center">
-          <div className="container thumb mb-4 mb-lg-0 img-profil">
+          <div className="container thumb mb-4 mb-lg-0 img-profil                                                                                                                           ">
             <img
               style={{ borderRadius: "10px" }}
               src="https://lp2m.uma.ac.id/wp-content/uploads/2022/02/OrganisasiUMA.jpg"
               alt="img"
             />
+            {/*  */}
           </div>
         </div>
         <div
@@ -224,7 +225,7 @@ function Profil() {
             </p>
           </div>
           <div id="singel-security" className="single-security-wrap-2 keterangan">
-            <div id="img-struktur" className="thumb border-bottom">
+            <div id="img-struktur" className="thumb border-bottom d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"
@@ -237,7 +238,7 @@ function Profil() {
             </div>
           </div>
           <div id="singel-security" className="single-security-wrap-2 keterangan">
-            <div id="img-struktur" className="thumb border-bottom">
+            <div id="img-struktur" className="thumb border-bottom d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"
@@ -250,7 +251,7 @@ function Profil() {
             </div>
           </div>
           <div id="singel-security" className="single-security-wrap-2 keterangan">
-            <div id="img-struktur"  className="thumb border-bottom">
+            <div id="img-struktur"  className="thumb border-bottom d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"
@@ -266,7 +267,7 @@ function Profil() {
             </div>
           </div>
           <div id="singel-security" className="single-security-wrap-2 keterangan">
-            <div  id="img-struktur"  className="thumb">
+            <div  id="img-struktur"  className="thumb d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
                 alt="img"

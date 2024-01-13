@@ -7,10 +7,11 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import Navbar from "../../../component/Navbar";
 import Footer from "../../../component/Footer";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
-import { FacebookShareButton, PinterestShareButton, TwitterShareButton } from "react-share";
+import {  FacebookIcon, FacebookShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton } from "react-share";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import AOS from 'aos';
+import Bawaslu from "../../../component/Bawaslu";
 
 
 function IsiRekap() {
@@ -53,6 +54,21 @@ function IsiRekap() {
     getAllRelatedPost();
     AOS.init()
   }, []);
+  const createParagraphs = (text) => {
+    const paragraphs = text.split("\n").map((paragraph, index) => (
+      <p key={index}>{paragraph}</p>
+    ));
+
+    const result = [];
+    for (let i = 0; i < paragraphs.length; i += 5) {
+      result.push(
+        <div key={i / 5} className="five-paragraphs">
+          {paragraphs.slice(i, i + 5)}
+        </div>
+      );
+    }
+    return result;
+  };
 
   return (
     <>
@@ -73,55 +89,27 @@ function IsiRekap() {
                         <ul>
                           <li>
                         <FacebookShareButton
-                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   media={image}
                                   quote={judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
-                                    Facebook
-                                  </button>
+                                 <FacebookIcon size={38} round={true}/>
                                 </FacebookShareButton>
                               </li>
                               <li>
                                 <TwitterShareButton
-                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   media={image}
-                                  quote={judulBerita}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      className="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
-                                    Twitter
-                                  </button>
+                                  title={judulBerita}>
+                                               <TwitterIcon size={38} round={true}/>
+
                                 </TwitterShareButton>
                               </li>
                               <li>
                                 <PinterestShareButton
-                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/${judulBerita}/${param.id}`}
+                                  url={`https://bawaslu.excellentsistem.com/isi-rekap/data-berita/${param.id}`}
                                   quote={judulBerita}
                                   media={image}>
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                      width :"90px"
-                                    }}
-                                    className="border p-2">
-                                    <i className="fa-brands fa-pinterest"></i>{" "}
-                                    Pin
-                                  </button>
+                                  <PinterestIcon size={38} round={true}/>
                                 </PinterestShareButton>
                               </li>
                         </ul>
@@ -147,7 +135,7 @@ function IsiRekap() {
 
                     </li>
                   </ul>
-                  <p>{isiBerita}</p>
+                  <p> {createParagraphs(isiBerita)}</p>
                   <br />
                   <div className="row">
                     <h2 className="title">Related Post</h2>
@@ -177,58 +165,7 @@ function IsiRekap() {
           data-aos="fade-left" className="col-lg-4 col-12">
               <div className="sidebar-container">
                 <div className="td-sidebar">
-                  <div
-                    className="widget widget_catagory"
-                    style={{ background: "#F1F6F9" }}>
-                    <h4 className="widget-title">
-                      Tautan{" "}
-                      <span className="text-primary">
-                        <strong>Lembaga</strong>
-                      </span>
-                    </h4>
-                    <ul className="catagory-items">
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                            alt=""
-                          />
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                 <Bawaslu/>
                 </div>
               </div>
             </div>

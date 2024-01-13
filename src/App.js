@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Home from "./views/pages/Home";
 import SertaMerta from "./views/pages/informasi/SertaMerta";
@@ -32,7 +31,10 @@ import PenyelesaianSengketa from "./views/pages/prosedur/PenyelesaianSengketa";
 import Maklumat from "./views/pages/daftarRegulasi/Maklumat";
 import LayananInformasi from "./views/pages/form/LayananInformasi";
 import PermintaanInformasi from "./views/pages/prosedur/PermintaanInformasi";
+<<<<<<< HEAD
 
+=======
+>>>>>>> decefd000b78e43529e87f2dc1404309cbbc3945
 
 // import AdminSertaMerta from "./views/pages/admin/informasi/AdminSertaMerta";
 import AdminPengumuman from "./views/pages/admin/pengumuman/AdminPengumuman";
@@ -53,7 +55,6 @@ import EditRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/EditRegula
 import MenuRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuRegulasi";
 import Kanal from "./views/pages/informasi/Kanal";
 import PageBerita from "./views/PageBerita";
-import Informasii from "./views/pages/informasi/Informasii";
 import PrivateRoute from "./utils/PrivateRoute";
 import JenisInformasi from "./views/pages/admin/informasi/jenisInformasi/JenisInformasi";
 import AddJenisInfo from "./views/pages/admin/informasi/jenisInformasi/AddJenisInfo";
@@ -67,7 +68,6 @@ import EditJenisRegulasi from "./views/pages/admin/daftarRegulasi/JenisRegulasi/
 import DetailPengumuman from "./views/pages/admin/pengumuman/DetailPengumuman";
 import CategoryBerita from "./views/pages/CategoryBerita";
 import AddRegulasi from "./views/pages/admin/daftarRegulasi/Regulasi/AddRegulasi";
-import MenuInformasi from "./views/pages/admin/informasi/MenuInformasi";
 import MenuEditRegulasi from "./views/pages/admin/daftarRegulasi/MenuRegulasi/MenuEditRegulasi";
 import IsiDaftarRegulasi from "./views/pages/daftarRegulasi/IsiDaftarRegulasi";
 import DetailBerita from "./views/pages/admin/berita/DetailBerita";

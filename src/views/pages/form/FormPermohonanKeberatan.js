@@ -106,32 +106,48 @@ const FormPermohonaKeberatan = () => {
                     {" "}
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Nama Pemohon :
                     </label>{" "}
                     <input
-                      className="input form-control"
+                      className={`input form-control ${
+                        namaPemohon.length >= 31
+                          ? "border-danger bg-danger-subtle"
+                          : ""
+                      }`}
                       type="text"
                       value={namaPemohon}
-                      onChange={(e) => setNamaPemohon(e.target.value)}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 31) {
+                          setNamaPemohon(e.target.value);
+                        }
+                      }}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Alamat Pemohon :
                     </label>{" "}
                     <textarea
-                      className="textarea"
+                      className={`textarea ${
+                        alamatPemohon.length >= 61
+                          ? "border-danger bg-danger-subtle"
+                          : ""
+                      }`}
                       value={alamatPemohon}
-                      onChange={(e) => setAlamatPemohon(e.target.value)}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 61) {
+                          setAlamatPemohon(e.target.value);
+                        }
+                      }}
                     />
                     <p className="pp">0 of 60 max characters</p>
                     <br></br>
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Jenis Identitas Pemohon :
                     </label>{" "}
                     <select
@@ -149,75 +165,101 @@ const FormPermohonaKeberatan = () => {
                     <br></br>
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Nomor Tlp/Hp :{" "}
                     </label>{" "}
                     <input
-                      className="input form-control"
+                      className={`form-control ${noTlp.length >= 31 ? "border-danger bg-danger-subtle" : ""}`}
                       type="number"
                       value={noTlp}
-                      onChange={(e) => setNoTlp(e.target.value)}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 31) {
+                          setNoTlp(e.target.value);
+                        }
+                      }}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br />
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Kasus Posisi :{" "}
                     </label>{" "}
                     <textarea
-                      className="textarea"
+                      className={`textarea ${
+                        kasusPosisi.length >= 100
+                          ? "border-danger bg-danger-subtle"
+                          : ""
+                      }`}
                       type="text"
                       value={kasusPosisi}
-                      onChange={(e) => setKasusPosisi(e.target.value)}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 100) {
+                          setKasusPosisi(e.target.value);
+                        }
+                      }}
                     />
                     <p className="pp">0 of 100 max characters</p>
                   </div>
                   <div data-aos="fade-left" className="div-email">
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Nomor Identitas Pemohon :{" "}
                     </label>{" "}
                     <input
-                      className="input form-control"
+                      className={`form-control ${nomorIdentitasPemohon.length >= 31 ? "border-danger bg-danger-subtle" : ""}`}
                       type="number"
                       value={nomorIdentitasPemohon}
-                      onChange={(e) => setNomorIdentitasPemohon(e.target.value)}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 31) {
+                          setNomorIdentitasPemohon(e.target.value);
+                        }
+                      }}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Email :{" "}
                     </label>{" "}
                     <input
-                      className="form-control"
+                      className={`form-control ${email.length >= 31 ? "border-danger bg-danger-subtle" : ""}`}
                       type="email"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      onChange={(e) => {
+                        if (e.target.value.length <= 31) {
+                          setEmail(e.target.value);
+                        }
+                      }}
                     />
                     <p className="pp">0 of 30 max characters</p>
                     <br></br>
                     <br></br>
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Tujuan Penggunaan Informasi :
                     </label>{" "}
                     <textarea
-                      className="textarea"
+                      className={`textarea ${
+                        tujuanPenggunaanInformasi.length >= 100
+                          ? "border-danger bg-danger-subtle"
+                          : ""
+                      }`}
                       value={tujuanPenggunaanInformasi}
-                      onChange={(e) =>
-                        setTujuanPenggunaanInformasi(e.target.value)
-                      }
+                      onChange={(e) => {
+                        if (e.target.value.length <= 100) {
+                          setTujuanPenggunaanInformasi(e.target.value);
+                        }
+                      }}
                     />
                     <p className="pp">0 of 100 max characters</p>
                     <br></br>
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
+                      className={`form-label font-weight-bold`}>
                       Alesan Pengajuan Keberatan :{" "}
                     </label>{" "}
                     <select
@@ -252,13 +294,12 @@ const FormPermohonaKeberatan = () => {
                         Tertentu
                       </option>
                     </select>
-                    <p className="pp">0 of 100 max characters</p>
                     <br></br>
                     <br></br>
                     <label
                       for="exampleInputPassword1"
-                      className="form-label font-weight-bold">
-                      Upload Foto Identitas Pemohon (.jpg) size max 1 mb :
+                      className={`form-label font-weight-bold`}>
+                      Upload Foto Identitas Pemohon :
                     </label>{" "}
                     <div className="input-type">
                       {" "}
@@ -270,11 +311,12 @@ const FormPermohonaKeberatan = () => {
                       </div>
                       <div>
                         {" "}
+                      </div>
+                    </div>
+                        <br />
                         <button type="submit" className="btn-kirim">
                           Kirim
                         </button>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </form>

@@ -33,7 +33,7 @@ function WaktuLayanan() {
         <div className="container">
           <div className="row">
             <div
-          data-aos="fade-right" className="col-lg-6 col-md-8\ order-lg-last">
+          data-aos="fade-left" className="col-lg-6 col-md-8\ order-lg-last">
               <div id="thumb-img" className="thumb">
                 <img
                 id="thumb-img"

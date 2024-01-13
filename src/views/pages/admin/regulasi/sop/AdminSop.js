@@ -21,7 +21,7 @@ function AdminSop() {
   const getByDaftarSop = async () => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/tabel-sop/all-terbaru?daftarSop=${default1}&page=0&size=100&sortBy=created_date&sortOrder=asc`,
+        `${API_DUMMY}/bawaslu/api/tabel-sop/all-terbaru?daftarSop=${default1}&page=0&size=100&sortBy=created_date&sortOrder=desc`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -76,7 +76,7 @@ function AdminSop() {
     const response = await fetch(
       `${API_DUMMY}/bawaslu/api/tabel-sop/all-terbaru?daftarSop=${selected}&page=${
         page - 1
-      }&size=10&sortBy=created_date&sortOrder=asc`
+      }&size=10&sortBy=created_date&sortOrder=desc`
     );
     const result = await response.json();
 
@@ -173,6 +173,7 @@ function AdminSop() {
                       >
                         Tambah Data
                       </a>
+                      {/* a */}
                     </button>
                   </div>
                 </div>

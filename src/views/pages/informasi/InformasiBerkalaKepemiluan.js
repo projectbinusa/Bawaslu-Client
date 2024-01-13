@@ -145,9 +145,18 @@ function InformasiBerkalaKepemiluan() {
                         Sarana partisipasi Publik
                       </span>
                     </a>
+                    <a
+                      className="btn btn-primary mb-3 p-3 shadow" style={{textDecoration:"none"}}
+                      href="/informasi-berkala"
+                      
+                    >
+                      <span className="font-weight-bold small text-uppercase">
+                      Kembali
+                      </span>
+                  </a>
                   </div>
                 </div>
-
+{/*  */}
                 <div className="col-md-9"  data-aos="fade-left">
                   <div className="tab-content" id="v-pills-tabContent">
                     <div

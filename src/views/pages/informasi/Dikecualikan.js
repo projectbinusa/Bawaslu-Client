@@ -6,6 +6,14 @@ import informasi from "../../../aset/informasi.svg";
 import "../../../css/dikecualikan.css";
 import axios from "axios";
 import AOS from "aos";
+import { API_DUMMY } from "../../../utils/base_URL";
+import bawasluRI from "../../../aset/Bawaslu-RI-300x73-1.png"
+import dkpp from "../../../aset/dkpp-300x73-1.png"
+import mahkamah from "../../../aset/MAHKAMAKONSTITUSI-300x73-1.png"
+import kpu from "../../../aset/KPU-300x73-1.png"
+import bawasluJateng from "../../../aset/bawaslu-jateng-300x73-1.png"
+
+
 
 function Dikecualikan() {
   const [data, setData] = useState([]);
@@ -18,7 +26,7 @@ function Dikecualikan() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/39/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          `${API_DUMMY}/bawaslu/api/jenis-keterangan/39/isi-informasi?page=0&size=10&sortBy=id&sortOrder=desc`
         );
         setData(response.data.data.content); // Mengasumsikan properti data berisi array informasi
         console.log(response.data.data.content); // Mengasumsikan properti data berisi array informasi
@@ -159,7 +167,7 @@ function Dikecualikan() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
+                    src={bawasluRI}
                     alt=""
                   />
                 </a>
@@ -171,7 +179,7 @@ function Dikecualikan() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
+                    src={dkpp}
                     alt=""
                   />
                 </a>
@@ -183,7 +191,7 @@ function Dikecualikan() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
+                    src={mahkamah}
                     alt=""
                   />
                 </a>
@@ -195,7 +203,7 @@ function Dikecualikan() {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
+                    src={kpu}
                     alt=""
                   />
                 </a>
@@ -203,7 +211,7 @@ function Dikecualikan() {
               <li>
                 <a href="https://jateng.bawaslu.go.id/" target="_blank">
                   <img
-                    src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
+                    src={bawasluJateng}
                     alt=""
                   />
                 </a>

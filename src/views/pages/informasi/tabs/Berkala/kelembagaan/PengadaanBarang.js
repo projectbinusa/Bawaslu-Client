@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { API_DUMMY } from "../../../../../../utils/base_URL";
 
 function PengadaanBarang() {
   const [data, setData] = useState(null);
@@ -8,7 +9,7 @@ function PengadaanBarang() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/bawaslu/api/jenis-keterangan/38/isi-informasi?page=0&size=10&sortBy=id&sortOrder=asc"
+          `${API_DUMMY}/bawaslu/api/jenis-keterangan/38/isi-informasi?page=0&size=10&sortBy=id&sortOrder=desc`
         );
         setData(response.data.data); // Mengasumsikan properti data berisi array informasi
       } catch (error) {
@@ -25,8 +26,8 @@ function PengadaanBarang() {
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col text-center"> Dokumen</th>
-              <th scope="col text-center"> Pdf Document</th>
+              <th scope="col" className="text-center"> Dokumen</th>
+              <th scope="col" className="text-center"> Pdf Document</th>
             </tr>
           </thead>
           <tbody>

@@ -22,7 +22,7 @@ function Pengumuman() {
   const getAll = async (page) => {
     await axios
       .get(
-        `${API_DUMMY}/bawaslu/api/pengumuman?page=0&size=10&sortBy=id&sortOrder=asc`
+        `${API_DUMMY}/bawaslu/api/pengumuman?page=0&size=10&sortBy=id&sortOrder=desc`
       )
       .then((res) => {
         setPengumuman(res.data.data.content);
