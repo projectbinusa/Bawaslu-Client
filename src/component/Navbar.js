@@ -189,24 +189,24 @@ function Navbar() {
               />
             </a>
           </div>
-          <div
+          <div style={{ width: "max-content"}}
             className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu">
             <ul className="navbar-nav menu-open text-lg-start">
               <li className="">
-                <a href="/">Home</a>
+                <a href="/" style={{paddingLeft: "10px"}}>Home</a>
               </li>
               <li className="">
-                <a href="/profil">Profile</a>
+                <a href="/profil"  style={{paddingLeft: "10px"}}>Profile</a>
               </li>
               <li className="">
-                <a href="/berita">Berita</a>
+                <a href="/berita"  style={{paddingLeft: "10px"}}>Berita</a>
               </li>
               <li className="">
-                <a href="/library">E-Library</a>
+                <a href="/library"  style={{paddingLeft: "10px"}}>E-Library</a>
               </li>
               <li className="">
-                <a href="/pengumuman">Pengumuman</a>
+                <a href="/pengumuman"  style={{paddingLeft: "10px"}}>Pengumuman</a>
               </li>
               <li className="menu-item-has-children">
                 <a

@@ -26,8 +26,14 @@ function PutusanPelanggaran() {
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col" className="text-center"> Dokumen</th>
-              <th scope="col" className="text-center"> Pdf Document</th>
+              <th scope="col" className="text-center">
+                {" "}
+                Dokumen
+              </th>
+              <th scope="col" className="text-center">
+                {" "}
+                Pdf Document
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -35,13 +41,29 @@ function PutusanPelanggaran() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                    <td className="" data-cell="dokumen" scope="row">
+                    <td
+                      className=""
+                      data-cell="dokumen"
+                      scope="row"
+                      style={{ width: "500px" }}
+                    >
                       {item.dokumen}
                     </td>
-                    <td className="">
-                      <a href={item.pdfDokumen}>
+                    <td
+                      className=""
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                   
+                      }}
+                    >
+                      <a
+                        href={item.pdfDokumen}
+                      
+                      >
                         <button
-                          className="bg-primary text-light"
+                          className="bg-primary text-light ml-auto"
                           style={{
                             border: "none",
                             padding: "7px",
