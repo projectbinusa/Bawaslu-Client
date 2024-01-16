@@ -10,6 +10,7 @@ import "../../../css/indexadmin.css";
 import { API_DUMMY } from "../../../utils/base_URL";
 import Sidebar from "../../../component/Sidebar";
 import Header from "../../../component/Header";
+import AOS from "aos";
 
 function PutIsiInformasi() {
   const [dokumen, setDokumen] = useState("");
@@ -81,12 +82,16 @@ function PutIsiInformasi() {
     }
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container mt-3 app-main__outer" data-aos="fade-left">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Ubah Data</h1>

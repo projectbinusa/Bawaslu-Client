@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import AOS from "aos";
+
 
 function AddDiKecualikan() {
   const [dokumen, setDokumen] = useState("");
@@ -49,6 +51,9 @@ function AddDiKecualikan() {
       });
     }
   };
+  useEffect(() => {
+    AOS.init();
+  },[]);
 
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -56,7 +61,7 @@ function AddDiKecualikan() {
       {/* ... (Header, Sidebar, etc.) ... */}
       <Sidebar/>
       <div className="app-main">
-      <div className="container mt-3 app-main__outer">
+      <div className="container mt-3 app-main__outer" data-aos="fade-left">
         <div className="card shadow">
           <div className="card-body">
             <h1 className="fs-4">Form Tambah Data</h1>
