@@ -152,7 +152,7 @@ function AdminDip() {
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
           <div class=" align-items-center d-lg-none d-md-none d-flex" >
-            <div class="">
+            <div class="" style={{paddingLeft:"10px"}}>
               <select
                 className="form-select" style={{width:"360px"}}
                 onChange={handleChange}

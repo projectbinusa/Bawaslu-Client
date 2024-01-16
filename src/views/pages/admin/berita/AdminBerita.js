@@ -212,7 +212,7 @@ function AdminBerita() {
       <div className="app-main">
         <Sidebar />
         <div className="container box-table mt-3 app-main__outer" data-aos="fade-left">
-          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex" style={{paddingLeft:"55px"}}>
             <div className="col-auto">
               {/* a */}
               <label className="form-label mt-2">Rows per page:</label>
@@ -229,7 +229,7 @@ function AdminBerita() {
               </select>
             </div>
           </div>
-          <div className="search">
+          <div className="search" style={{paddingLeft:"17px"}}>
             <input
               type="search"
               className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
@@ -386,7 +386,7 @@ function AdminBerita() {
           </div>
 
           {/* Category */}
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex" style={{paddingLeft:"55px"}}>
             <div class="col-auto">
               {/*                */}
               <label className="form-label mt-2">Rows per page:</label>
@@ -403,7 +403,7 @@ function AdminBerita() {
               </select>
             </div>
           </div>
-          <div className="search">
+          <div className="search" style={{paddingLeft:"17px"}}>
             <input
               type="search"
               className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"

@@ -111,7 +111,7 @@ function AdminPermohonanKeberatan() {
       <div className="app-main">
         <Sidebar />
         <div className="container mt-3 app-main__outer">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex"style={{paddingLeft:"55px"}}>
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
@@ -127,7 +127,7 @@ function AdminPermohonanKeberatan() {
               </select>
             </div>
           </div>
-          <div className="search">
+          <div className="search" style={{paddingLeft:"17px"}}>
             <input
               type="search"
               className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
