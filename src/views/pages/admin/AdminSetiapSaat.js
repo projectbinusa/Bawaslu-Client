@@ -155,7 +155,7 @@ function AdminSetiapSaat() {
           <Sidebar />
           <div id="container" className="container box-tabel mt-3 app-main__outer"  data-aos="fade-left">
             <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
-              <div class="col-auto">
+              <div class="col-auto" style={{paddingLeft:"17px"}}>
                 <select
                   className="form-select form-select-xl"style={{width:"360px"}}
                   onChange={handleChange}

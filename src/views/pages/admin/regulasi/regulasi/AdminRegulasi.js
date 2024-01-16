@@ -142,7 +142,7 @@ function AdminRegulasi() {
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer">
             <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
-              <div class="col-auto">
+              <div class="col-auto" style={{paddingLeft:"17px"}}>
                 <select
                   className="form-select form-select-xl"style={{width:"360px"}}
                   onChange={handleChange}
@@ -179,7 +179,7 @@ function AdminRegulasi() {
                     <button className="active btn-focus p-2 rounded">
                       <a
                         style={{ color: "white", textDecoration: "none" }}
-                        href="/add-berita-admin"
+                        href="/add-regulasi-admin"
                       >
                         Tambah Data
                       </a>

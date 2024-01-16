@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { API_DUMMY } from "../utils/base_URL";
+import "../css/gabung.css"
 
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -192,7 +193,7 @@ function Navbar() {
           <div style={{ width: "max-content"}}
             className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu">
-            <ul className="navbar-nav menu-open text-lg-start">
+            <ul className="navbar-reponsive navbar-nav menu-open text-lg-start">
               <li className="">
                 <a href="/" style={{paddingLeft: "10px"}}>Home</a>
               </li>
