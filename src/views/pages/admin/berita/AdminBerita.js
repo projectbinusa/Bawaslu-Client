@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import AOS from "aos";
 
 import {
   IconButton,
@@ -160,6 +161,10 @@ function AdminBerita() {
     getAll1(currentPage1);
   }, [currentPage1, rowsPerPage1]);
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+  
   const handleRowsPerPageChange = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
@@ -206,7 +211,7 @@ function AdminBerita() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container box-table mt-3 app-main__outer">
+        <div className="container box-table mt-3 app-main__outer" data-aos="fade-left">
           <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div className="col-auto">
               {/* a */}

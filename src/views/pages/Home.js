@@ -478,7 +478,7 @@ function Home() {
                       <h3>Informasi Berkala</h3>
                     </div>
                   </div>
-                  </a>                
+                  </a>                                                                                                                                                                                                                                                        
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
