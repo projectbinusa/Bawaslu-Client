@@ -7,6 +7,7 @@ import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
 import "../../../../../src/css/adminBerita.css";
 import { Pagination, TableContainer, TablePagination } from "@mui/material";
+import AOS from "aos";
 
 function AdminPengumuman() {
   const [list, setList] = useState([]);
@@ -40,6 +41,10 @@ function AdminPengumuman() {
   useEffect(() => {
     getAll(currentPage);
   }, [currentPage, rowsPerPage]);
+
+  useEffect(() => {
+    AOS.init();
+  },[]);
 
   //delete data
   const deleteData = async (id) => {
@@ -103,7 +108,7 @@ function AdminPengumuman() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container box-tabel mt-3 app-main__outer">
+        <div className="container box-tabel mt-3 app-main__outer"  data-aos="fade-left">
           <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>

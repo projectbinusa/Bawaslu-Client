@@ -285,6 +285,7 @@ function AdminSertaMerta() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
+                            
                             </div>
                           </td>
                         </tr>
