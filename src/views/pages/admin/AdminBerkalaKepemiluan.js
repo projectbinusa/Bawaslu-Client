@@ -159,7 +159,7 @@ function AdminBerkalaKepemiluan() {
           <Sidebar />
           <div id="container" className="container box-tabel mt-3 app-main__outer"  data-aos="fade-left">
           <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
-            <div class="col-auto">
+            <div class="col-auto" style={{paddingLeft:"17px"}}>
               <select
                 className="form-select form-select-xl" style={{width:"360px"}}
                 onChange={handleChange}
@@ -180,7 +180,7 @@ function AdminBerkalaKepemiluan() {
             <div id="main-card" className="main-card box-tabel mb-3 card">
              <div className=" mb-3 d-lg-none d-md-none d-flex">
             <div className="card-header " style={{ display: "block" }}>
-              <p className="mt-3">Admin Informasi Berkala Kelembagaan</p>
+              <p className="mt-3">Admin Informasi Berkala Kepemiluan</p>
               <div className="d-block ml-auto mr-auto">
                 <input
                   type="search"

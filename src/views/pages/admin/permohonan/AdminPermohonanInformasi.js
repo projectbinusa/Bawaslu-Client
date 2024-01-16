@@ -112,7 +112,7 @@ function AdminPermohonanInformasi() {
         <div className="app-main__outer">
           <div class="app-main__inner">
             <div className="container mt-3">
-              <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+              <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex" style={{paddingLeft:"50px"}}>
                 <div class="col-auto">
                   <label className="form-label mt-2">Rows per page:</label>
                 </div>
@@ -128,7 +128,7 @@ function AdminPermohonanInformasi() {
                   </select>
                 </div>
               </div>
-              <div className="search">
+              <div className="search" style={{paddingLeft:"17px"}}>
                 <input
                   type="search"
                   className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"

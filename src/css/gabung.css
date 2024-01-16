@@ -42,6 +42,11 @@
     
   
 @media screen and (max-width:768px) {
+  .navbar-reponsive{
+    overflow-y: scroll; 
+    height: 85vh;
+    overflow-x: hidden;
+  }
   #strukturOrganisasi{
     justify-content: center;
     align-items: center;
@@ -97,6 +102,11 @@
 }
 
 @media screen and (max-width: 320px) {
+  .navbar-reponsive{
+    overflow-x: scroll;
+    height: 85vh;
+    overflow-x: hidden;
+  }
   #strukturOrganisasi{
     justify-content: center;
     align-items: center;
@@ -147,6 +157,11 @@
     
 }
 @media (max-width: 390px) {
+  .navbar-reponsive{
+    overflow: scroll;
+    height: 85vh;
+    overflow-x: hidden;
+  }
   #strukturOrganisasi{
     justify-content: center;
     align-items: center;
