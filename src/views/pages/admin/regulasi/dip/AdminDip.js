@@ -183,7 +183,7 @@ function AdminDip() {
                     <button className="active btn-focus p-2 rounded">
                       <a
                         style={{ color: "white", textDecoration: "none" }}
-                        href="/add-berita-admin"
+                        href="/add-dip-admin"
                       >
                         Tambah Data
                       </a>
