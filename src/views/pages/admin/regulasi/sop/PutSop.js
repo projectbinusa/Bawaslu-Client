@@ -8,6 +8,7 @@ import {
 import axios from "axios";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import AOS from "aos";
 
 function PutSop() {
   const [link, setLink] = useState("");
@@ -80,12 +81,16 @@ function PutSop() {
     }
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container mt-3 app-main__outer"  data-aos="fade-left">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Ubah Data</h1>

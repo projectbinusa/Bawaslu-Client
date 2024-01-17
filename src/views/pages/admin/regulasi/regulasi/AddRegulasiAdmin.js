@@ -1,10 +1,11 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import AOS from "aos";
 
 function AddRegulasiAdmin() {
   const [namaDokumen, setNamaDokumen] = useState("");
@@ -50,12 +51,16 @@ function AddRegulasiAdmin() {
     }
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="app-main__outer">
+        <div className="app-main__outer"   data-aos="fade-left">
           <div className="app-main__inner">
             <div className="row">
               <div className="col-md-12">
