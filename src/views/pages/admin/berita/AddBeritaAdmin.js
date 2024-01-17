@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect } from "react";
+import AOS from "aos";
 
 function AddBeritaAdmin() {
   const [author, setAuthor] = useState("");
@@ -79,12 +80,16 @@ function AddBeritaAdmin() {
     getAllCategoryId();
   }, []);
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+  
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="app-main__outer">
+        <div className="app-main__outer"  data-aos="fade-left">
           <div className="app-main__inner">
             <div className="row">
               <div className="col-md-12">

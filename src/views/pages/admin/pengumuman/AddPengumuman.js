@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../../../../component/Footer";
 import Header from "../../../../component/Header";
 import Sidebar from "../../../../component/Sidebar";
@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import axios from "axios";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import AOS from "aos";
 
 function AddPengumuman() {
   const [author, setAuthor] = useState("");
@@ -48,12 +49,16 @@ function AddPengumuman() {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    AOS.init();
+  },[]);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container mt-3 app-main__outer"  data-aos="fade-left">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Tambah Data</h1>

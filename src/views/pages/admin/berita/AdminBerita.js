@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import { API_DUMMY } from "../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import AOS from "aos";
 
 import {
   IconButton,
@@ -160,6 +161,10 @@ function AdminBerita() {
     getAll1(currentPage1);
   }, [currentPage1, rowsPerPage1]);
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+  
   const handleRowsPerPageChange = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
@@ -206,8 +211,8 @@ function AdminBerita() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container box-table mt-3 app-main__outer">
-          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+        <div className="container box-table mt-3 app-main__outer" data-aos="fade-left">
+          <div className="ml-2 row g-3 align-items-center d-lg-none d-md-flex" style={{paddingLeft:"55px"}}>
             <div className="col-auto">
               {/* a */}
               <label className="form-label mt-2">Rows per page:</label>
@@ -224,7 +229,7 @@ function AdminBerita() {
               </select>
             </div>
           </div>
-          <div className="search">
+          <div className="search" style={{paddingLeft:"17px"}}>
             <input
               type="search"
               className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"
@@ -381,7 +386,7 @@ function AdminBerita() {
           </div>
 
           {/* Category */}
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex">
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex" style={{paddingLeft:"55px"}}>
             <div class="col-auto">
               {/*                */}
               <label className="form-label mt-2">Rows per page:</label>
@@ -392,13 +397,14 @@ function AdminBerita() {
                 onChange={handleRowsPerPageChange1}
                 value={rowsPerPage1}
               >
+                {/*  */}
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
               </select>
             </div>
           </div>
-          <div className="search">
+          <div className="search" style={{paddingLeft:"17px"}}>
             <input
               type="search"
               className="form-control widget-content-right w-100 mt-2 mb-2 d-lg-none d-md-block"

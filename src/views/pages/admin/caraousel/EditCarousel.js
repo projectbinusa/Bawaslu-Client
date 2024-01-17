@@ -9,6 +9,7 @@ import {
   useHistory,
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
+import AOS from "aos";
 
 function EditCarousel() {
   const [file, setFile] = useState("");
@@ -77,12 +78,16 @@ function EditCarousel() {
       });
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container mt-3 app-main__outer"  data-aos="fade-left">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Edit Data</h1>

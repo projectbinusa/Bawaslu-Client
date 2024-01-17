@@ -6,6 +6,7 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
+import AOS from "aos";
 
 function AdminKanal() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -145,15 +146,20 @@ function AdminKanal() {
     fetchData(selectedValue, 2, event.target.value);
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
+  // 
   return (
     <div>
       <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container mt-3 app-main__outer">
+          <div id="container" className="container mt-3 app-main__outer"  data-aos="fade-left">
           <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
-            <div class="col-auto">
+            <div class="col-auto"style={{paddingLeft:"17px"}}>
               <select
                 className="form-select form-select-xl"style={{width:"360px"}}
                 onChange={handleChange}
@@ -286,6 +292,7 @@ function AdminKanal() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
+                          
                             </div>
                           </td>
                         </tr>

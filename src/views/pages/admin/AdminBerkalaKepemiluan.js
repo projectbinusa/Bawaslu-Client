@@ -6,6 +6,8 @@ import { API_DUMMY } from "../../../utils/base_URL";
 import axios from "axios";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import Swal from "sweetalert2";
+import AOS from "aos";
+
 
 function AdminBerkalaKepemiluan() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -145,15 +147,19 @@ function AdminBerkalaKepemiluan() {
     fetchData(selectedValue, 2, event.target.value);
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div>
       <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container box-tabel mt-3 app-main__outer">
+          <div id="container" className="container box-tabel mt-3 app-main__outer"  data-aos="fade-left">
           <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
-            <div class="col-auto">
+            <div class="col-auto" style={{paddingLeft:"17px"}}>
               <select
                 className="form-select form-select-xl" style={{width:"360px"}}
                 onChange={handleChange}
@@ -174,7 +180,7 @@ function AdminBerkalaKepemiluan() {
             <div id="main-card" className="main-card box-tabel mb-3 card">
              <div className=" mb-3 d-lg-none d-md-none d-flex">
             <div className="card-header " style={{ display: "block" }}>
-              <p className="mt-3">Admin Informasi Berkala Kelembagaan</p>
+              <p className="mt-3">Admin Informasi Berkala Kepemiluan</p>
               <div className="d-block ml-auto mr-auto">
                 <input
                   type="search"
@@ -285,6 +291,7 @@ function AdminBerkalaKepemiluan() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
+                            
                             </div>
                           </td>
                         </tr>

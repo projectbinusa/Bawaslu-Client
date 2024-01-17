@@ -19,14 +19,14 @@ function HasilPengawasan() {
 
     fetchData();
   }, []); // Array dependensi kosong agar data diambil hanya sekali saat komponen dimuat
-
+// 
   return (
     <div className="responsive-3">
       <div className="card-body bg-body-tertiary table-container rounded">
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col" className="text-center"> Dokumen</th>
+              <th scope="col" className="text-center">  Dokumen</th>
               <th scope="col" className="text-center"> Pdf Document</th>
             </tr>
           </thead>
@@ -35,10 +35,15 @@ function HasilPengawasan() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                    <td className="" data-cell="dokumen" scope="row">
+                    <td className="" data-cell="dokumen" scope="row" style={{ width: "500px" }}>
                       {item.dokumen}
                     </td>
-                    <td className="">
+                    <td className=""  style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                   
+                      }}>
                       <a href={item.pdfDokumen}>
                         <button
                           className="bg-primary text-light"

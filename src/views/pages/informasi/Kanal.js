@@ -49,7 +49,7 @@ function Kanal() {
             <div className="container">
               <div className="row">
                 <div
-                 data-aos="fade-right"
+                  data-aos="fade-right"
                   className="col-md-3"
                   style={{ justifyContent: "center", alignItems: "center" }}
                 >
@@ -159,8 +159,8 @@ function Kanal() {
                   </div>
                 </div>
 
-                <div className="col-md-9"  data-aos="fade-left">
-                  <div
+                <div className="col-md-9" data-aos="fade-left">
+                  <div className="tab-content" id="v-pills-tabContent">    <div
                     className="card-header w-auto bg-primary text-light"
                     style={{
                       borderTopLeftRadius: "5px",
@@ -173,65 +173,67 @@ function Kanal() {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="tab-pane fade shadow rounded bg-white show active p-3"
-                    id="v-pills-imbauan"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-imbauan-tab"
-                  >
-                    <Imbauan />
+                    <div
+                      className="tab-pane fade shadow rounded bg-white show active p-3"
+                      id="v-pills-imbauan"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-imbauan-tab"
+                    >
+                      <Imbauan />
+                    </div>
+
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-anggaran"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-anggaran-tab"
+                    >
+                      <Anggaran />
+                    </div>
+
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-pencegahan"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-pencegahan-tab"
+                    >
+                      <PencegahanDanPenanganan />
+                    </div>
+
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-sdm"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-sdm-tab"
+                    >
+                      <SDMPengawasPemilu />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-hasil"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-hasil-tab"
+                    >
+                      <HasilPengawasan />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-siaran"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-siaran-tab"
+                    >
+                      <SiaranPers />
+                    </div>
+                    <div
+                      className="tab-pane fade shadow rounded bg-white p-3"
+                      id="v-pills-putusan"
+                      role="tabpanel"
+                      aria-labelledby="v-pills-putusan-tab"
+                    >
+                      <Putusan />
+                    </div>
                   </div>
 
-                  <div
-                    className="tab-pane fade shadow rounded bg-white p-3"
-                    id="v-pills-anggaran"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-anggaran-tab"
-                  >
-                    <Anggaran />
-                  </div>
-
-                  <div
-                    className="tab-pane fade shadow rounded bg-white p-3"
-                    id="v-pills-pencegahan"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-pencegahan-tab"
-                  >
-                    <PencegahanDanPenanganan />
-                  </div>
-
-                  <div
-                    className="tab-pane fade shadow rounded bg-white p-3"
-                    id="v-pills-sdm"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-sdm-tab"
-                  >
-                    <SDMPengawasPemilu />
-                  </div>
-                  <div
-                    className="tab-pane fade shadow rounded bg-white p-3"
-                    id="v-pills-hasil"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-hasil-tab"
-                  >
-                    <HasilPengawasan />
-                  </div>
-                  <div
-                    className="tab-pane fade shadow rounded bg-white p-3"
-                    id="v-pills-siaran"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-siaran-tab"
-                  >
-                    <SiaranPers />
-                  </div>
-                  <div
-                    className="tab-pane fade shadow rounded bg-white p-3"
-                    id="v-pills-putusan"
-                    role="tabpanel"
-                    aria-labelledby="v-pills-putusan-tab"
-                  >
-                    <Putusan />
-                  </div>
                 </div>
               </div>
             </div>
