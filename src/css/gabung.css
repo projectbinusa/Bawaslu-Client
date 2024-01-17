@@ -17,6 +17,15 @@
 .btn-kembali-berkala{
   width: 100px;
 }
+#width-navbar-content{
+  width: max-content;
+}
+@media screen and (max-width:1440){
+  #width-navbar-content{
+    width: max-content;
+  }
+  
+}
 /* .d-lg-none {
     display: none !important;
   }
