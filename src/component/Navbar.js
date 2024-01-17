@@ -182,6 +182,7 @@ function Navbar() {
               <span className="icon-right"></span>
             </button>
           </div>
+          
           <div className="d-inline-block d-lg-none">
             <a href="/">
               <img
