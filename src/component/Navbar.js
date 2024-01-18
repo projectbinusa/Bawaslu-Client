@@ -190,7 +190,7 @@ function Navbar() {
               />
             </a>
           </div>
-          <div style={{ width: "max-content"}}
+          <div    style={{ width: windowWidth > 800 ? "max-content" : "" }}
             className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu">
             <ul className="navbar-reponsive navbar-nav menu-open text-lg-start">
