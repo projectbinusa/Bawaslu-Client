@@ -11,8 +11,8 @@ const LayananInformasi = () => {
   });
   return (
     <>
-        <Navbar />
-        <div className="div">
+      <Navbar />
+      <div className="div">
         <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
@@ -88,14 +88,15 @@ const LayananInformasi = () => {
             </div>
           </div>
           <img
-                    className="shape-image-sm top_image_bounce"
-                    src="https://solverwp.com/demo/html/itechie/assets/img/about/4sm.webp"
-                    alt="img"
-                  />
+            className="shape-image-sm top_image_bounce"
+            src="https://solverwp.com/demo/html/itechie/assets/img/about/4sm.webp"
+            alt="img"
+          />
         </div>
-        </div>
+      </div>
+     
 
-        <Footer />
+      <Footer />
     </>
   );
 };
