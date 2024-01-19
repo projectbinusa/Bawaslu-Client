@@ -276,6 +276,8 @@ function AdminPermohonanKeberatan() {
         </div>
       </div>
     </div>
+    </div>
+    </div>
   );
 }
 
