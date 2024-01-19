@@ -8,6 +8,7 @@ import Sidebar from "../../../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
 import Pengumuman from "../../../pengumuman/Pengumuman";
 import "../../../../../css/dip.css"
+import AOS from "aos";
 
 function AdminDip() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -144,13 +145,17 @@ function AdminDip() {
     });
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div>
       <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container mt-3 app-main__outer">
+          <div id="container" className="container mt-3 app-main__outer"  data-aos="fade-left">
           <div class=" align-items-center d-lg-none d-md-none d-flex" >
             <div class="" style={{paddingLeft:"10px"}}>
               <select

@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import Header from "../../../../../component/Header";
 import Sidebar from "../../../../../component/Sidebar";
 import { Pagination, TableContainer } from "@mui/material";
+import AOS from "aos";
 
 function AdminSop() {
   const [selectedValue, setSelectedValue] = useState("");
@@ -132,14 +133,18 @@ function AdminSop() {
     });
   };
 
+
+  useEffect(() => {
+    AOS.init();
+  },[]);
   return (
     <div>
       <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container mt-3 app-main__outer">
-          <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
+          <div id="container" className="container mt-3 app-main__outer"  data-aos="fade-lef">
+          <div clasName="row g-3 align-items-center d-lg-none d-md-none d-flex">
             <div class="col-auto" style={{paddingLeft:"17px"}}>
               <select
                 className="form-select form-select-xl" style={{width:"360px"}}
