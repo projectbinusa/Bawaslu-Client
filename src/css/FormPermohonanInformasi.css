@@ -43,12 +43,15 @@ padding: 0;
 .pp {
   font-size: 13px;
 }
-.select {
+/* .select {
   width: 500px;
-}
+} */
 .textarea {
   width: 500px;
   height: 80px;
+}
+#responsive-select{
+  width: 500px;
 }
 .tujuan {
   display: flex;
@@ -71,6 +74,9 @@ padding: 0;
   width:80px ;
   border: 1px solid black;
 }
+/* .form-select{
+  width: 400px;
+} */
 @media screen and (max-width: 1024px) {
   .form {
     padding-top: 100px;
@@ -112,6 +118,9 @@ padding: 0;
   
 }
 @media screen and (max-width: 768px) {
+  #responsive-select{
+    width: 300px;
+  }
   .form {
     padding-top: 50px;
     justify-content: center;

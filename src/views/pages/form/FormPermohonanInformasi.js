@@ -260,11 +260,11 @@ const FormPermohonanInformasi = () => {
                 className="form-label font-weight-bold">
                 Cara Memperoleh Informasi :
               </label>
-              <select
+              <select id="responsive-select"
                 value={caraMemperolehInformasi}
                 onChange={(e) =>
                     setCaraMemperolehnInformasi(e.target.value)}
-                className="form-select"
+                className="form-select responsive-select"
                 aria-label="Default select example">
                 <option selected>Pilih Cara Memperoleh Informasi </option>
                 <option value="mengambil sendiri">Mengambil Langsung</option>

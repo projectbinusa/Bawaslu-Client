@@ -7,7 +7,23 @@
   margin-right: auto;
 }
 
+
+@media screen and (max-width: 768px) {
+  .button {
+    width: 550px;
+
+  }
+  .rows-rspnv{
+    padding-left: 210px;
+  }
+}
 @media only screen and (max-width: 390px) {
+  .search{
+    padding-left: 17px;
+  }
+  .rows-rspnv{
+    padding-left: 5px;
+  }
     .container {
         padding-left: 15px; /* Adjust the left padding as needed */
         padding-right: 15px; /* Adjust the right padding as needed */
@@ -25,15 +41,11 @@
         justify-content: center;
       }
 }
-@media screen and (max-width: 768px) {
-  .button {
-    width: 550px;
-
-  }
-}
-
 /* Media query untuk layar dengan lebar 390px */
 @media screen and (max-width: 390px) {
+  .rows-rspnv{
+    padding-left: 60px;
+  }
   .button {
     /* Gaya responsif untuk lebar 390px di sini */
   }
