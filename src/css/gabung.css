@@ -166,6 +166,10 @@
     
 }
 @media (max-width: 390px) {
+  .posisi{
+    position:relative;
+
+  }
   .navbar-reponsive{
     overflow: scroll;
     height: 85vh;

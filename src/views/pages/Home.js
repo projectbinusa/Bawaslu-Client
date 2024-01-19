@@ -291,7 +291,7 @@ function Home() {
             </div>
             <div
               data-aos="fade-left"
-              className="col-lg-4 col-md-12 widget widget_catagory "
+              className="col-lg-4 col-md-12 widget widget_catagory tautan-lembaga-rspnv"
               style={{
                 boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                 padding: "30px",
