@@ -5,7 +5,7 @@ import Footer from "../../../../../component/Footer";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { History } from "swiper/modules";
+
 import { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useEffect } from "react";
