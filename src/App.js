@@ -100,6 +100,7 @@ import AddDiKecualikan from "./views/pages/admin/Add/AddDiKecualikan";
 import PageCarousel from "./views/pages/admin/caraousel/PageCarousel";
 import EditCarousel from "./views/pages/admin/caraousel/EditCarousel";
 import AddCarousel from "./views/pages/admin/caraousel/AddCarousel";
+ 
 // END ADMIN MENU REGULASI
 
 function App() {
@@ -112,6 +113,7 @@ function App() {
           <Route path="/register" component={Register} exact />
           {/* page */}
           <Route path="/" component={Home} exact />
+        
           <Route path="/profil" component={Profil} exact />
           <Route path="/pengumuman" component={Pengumuman} exact />
           <Route

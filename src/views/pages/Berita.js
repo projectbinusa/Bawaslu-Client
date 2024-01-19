@@ -218,7 +218,7 @@ function Berita() {
       <div>
         <div
           class="editors-news container"
-          style={{ marginTop: "100px", marginBottom: "50px" }}>
+          style={{ marginTop: "0px", marginBottom: "50px" }}>
           <div class="row">
             <div data-aos="fade-right" class="col-lg-3">
               <div class="d-flex position-relative float-left">
@@ -554,7 +554,7 @@ function Berita() {
                       </ul>
                     </div>
                     <div
-                      class="widget widget_catagory"
+                      class="widget widget_catagory "
                       style={{
                         background: "#F1F6F9",
                         border: "1px solid blue",

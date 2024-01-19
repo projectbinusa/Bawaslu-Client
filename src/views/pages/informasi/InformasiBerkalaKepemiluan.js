@@ -40,6 +40,13 @@ function InformasiBerkalaKepemiluan() {
         >
           <section>
             <div className="container">
+            <a
+                href="/informasi-berkala"
+                className="d-lg-none d-md-none d-flex w-100 posisi"
+                style={{ fontSize: "34px", color: "black" , paddingBottom:"10px", textDecoration:"none"}}
+              >
+                <i className="fas fa-chevron-left"></i>
+              </a>
               <div className="row">
                 <div className="col-md-3"  data-aos="fade-right">
                   <div
@@ -146,11 +153,13 @@ function InformasiBerkalaKepemiluan() {
                       </span>
                     </a>
                     <a
-                      className="btn btn-primary mb-3 p-3 shadow" style={{textDecoration:"none"}}
+                      className="btn btn-primary mb-3 p-3 shadow d-lg-flex d-md-flex d-none" style={{textDecoration:"none",textAlign:"center"}}
                       href="/informasi-berkala"
-                      
+                    
                     >
+                      
                       <span className="font-weight-bold small text-uppercase">
+                        
                       Kembali
                       </span>
                   </a>
