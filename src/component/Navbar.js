@@ -182,6 +182,7 @@ function Navbar() {
               <span className="icon-right"></span>
             </button>
           </div>
+          
           <div className="d-inline-block d-lg-none">
             <a href="/">
               <img
@@ -190,24 +191,24 @@ function Navbar() {
               />
             </a>
           </div>
-          <div    style={{ width: windowWidth > 800 ? "max-content" : "" }}
+          <div style={{ width: windowWidth > 800 ? "max-content" : "", textAlign: "center", }}
             className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
-            id="Iitechie_main_menu">
+            id="Iitechie_main_menu text-navbar-rspnv">
             <ul className="navbar-reponsive navbar-nav menu-open text-lg-start">
               <li className="">
-                <a href="/" style={{paddingLeft: "10px"}}>Home</a>
+                <a href="/" style={{paddingLeft: "15px"}}>Home</a>
               </li>
               <li className="">
-                <a href="/profil"  style={{paddingLeft: "10px"}}>Profile</a>
+                <a href="/profil"  style={{paddingLeft: "15px"}}>Profile</a>
               </li>
               <li className="">
-                <a href="/berita"  style={{paddingLeft: "10px"}}>Berita</a>
+                <a href="/berita"  style={{paddingLeft: "15px"}}>Berita</a>
               </li>
               <li className="">
-                <a href="/library"  style={{paddingLeft: "10px"}}>E-Library</a>
+                <a href="/library"  style={{paddingLeft: "15px"}}>E-Library</a>
               </li>
               <li className="">
-                <a href="/pengumuman"  style={{paddingLeft: "10px"}}>Pengumuman</a>
+                <a href="/pengumuman"  style={{paddingLeft: "15px"}}>Pengumuman</a>
               </li>
               <li className="menu-item-has-children">
                 <a
@@ -216,7 +217,8 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}>
+                  onClick={toggleSubmenu}
+                  >
                   Informasi Publik
                 </a>
                 <ul

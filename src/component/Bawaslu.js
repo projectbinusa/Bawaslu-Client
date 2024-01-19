@@ -8,7 +8,7 @@ import bawasluJateng from "../aset/bawaslu-jateng-300x73-1.png";
 function Bawaslu() {
   return (
     <div
-      className="widget widget_catagory"
+      className="widget widget_catagory tautan-lembaga-rspnv"
       style={{
         background: "#F1F6F9",
         overflow: "hidden",

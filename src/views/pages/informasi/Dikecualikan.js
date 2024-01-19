@@ -138,86 +138,86 @@ function Dikecualikan() {
               )})}
           </div>
           <div
-           data-aos="fade-right"
-            className="col-lg-4 col-md-12 widget widget_catagory logo-dikecualikan"
-            style={{
-              boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-              // padding: "10px 30px 10px 30px",
-              padding: "30px",
-              borderRadius: "10px",
-              background: "#EEF5FF",
-              float: "inline-end",
-              background:" rgb(241, 246, 249)",
-              border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
-            }}
-          >
-            <h4 className="widget-title">
-            <i class="fa-regular fa-file-lines"></i> {" "}
-              Tautan{" "}
-              <span className="text-primary">
-                <strong>Lembaga</strong>
-              </span>
-            </h4>
-            <br />
-            <ul className="catagory-items">
-              <li>
-                <a
-                  href="https://bawaslu.go.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={bawasluRI}
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://dkpp.go.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={dkpp}
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.mkri.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={mahkamah}
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://jateng.bawaslu.go.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={kpu}
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="https://jateng.bawaslu.go.id/" target="_blank">
-                  <img
-                    src={bawasluJateng}
-                    alt=""
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+              data-aos="fade-left"
+              className="col-lg-4 col-md-12 widget widget_catagory  tautan-lembaga-rspnv"
+              style={{
+                boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                padding: "30px",
+                borderRadius: "10px",
+                background: "#F1F6F9",
+                float: "inline-end",
+                background:" rgb(241, 246, 249)",
+                 border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
+
+              }}
+            >
+              <h4 className="widget-title">
+              <i class="fa-regular fa-file-lines"></i> {" "}
+                Tautan{" "}
+                <span className="text-primary">
+                  <strong>Lembaga</strong>
+                </span>
+              </h4>
+              <br />
+              <ul className="catagory-items">
+                <li>
+                  <a
+                    href="https://bawaslu.go.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={bawasluRI}
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://dkpp.go.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={dkpp}
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.mkri.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={mahkamah}
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://jateng.bawaslu.go.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={kpu}
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://jateng.bawaslu.go.id/" target="_blank">
+                    <img
+                      src={bawasluJateng}
+                      alt=""
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
           {/*  */}
         </div>
       </div>
