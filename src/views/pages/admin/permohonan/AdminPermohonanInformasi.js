@@ -8,6 +8,7 @@ import "../../../../../src/css/adminBerita.css";
 import Swal from "sweetalert2";
 import { Pagination } from "@mui/material";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import AOS from "aos";
 
 function AdminPermohonanInformasi() {
   const [list, setList] = useState([]);
@@ -104,12 +105,16 @@ function AdminPermohonanInformasi() {
       }
     });
   };
+
+  useEffect(() => {
+    AOS.init();
+  },[]);
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="app-main__outer">
+        <div className="app-main__outer" data-aos= "fade-left">
           <div class="app-main__inner">
             <div className="container mt-3">
               <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex rows-rspnv" >

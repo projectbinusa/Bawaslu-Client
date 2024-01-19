@@ -8,6 +8,8 @@ import {
 import axios from "axios";
 import { API_DUMMY } from "../../../../../utils/base_URL";
 import Swal from "sweetalert2";
+import AOS from "aos";
+
 
 function PutRegulasiAdmin() {
   const [link, setLink] = useState("");
@@ -41,6 +43,10 @@ function PutRegulasiAdmin() {
   useEffect(() => {
     getById();
   }, []);
+
+  useEffect(() => {
+    AOS.init();
+  },[]);
 
   const updateData = async (e) => {
     e.preventDefault();
@@ -85,7 +91,7 @@ function PutRegulasiAdmin() {
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 app-main__outer">
+        <div className="container mt-3 app-main__outer"  data-aos="fade-left">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="fs-4">Form Ubah Data</h1>

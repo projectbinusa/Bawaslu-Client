@@ -4,9 +4,6 @@ import Footer from "../../component/Footer";
 import "../../css/swipper.css";
 // import 'swiper/components/navigation/navigation.scss';
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import axios from "axios";
 import { API_DUMMY } from "../../utils/base_URL";
 // import { Pagination } from "@mui/material";

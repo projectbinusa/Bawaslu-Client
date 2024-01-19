@@ -10,7 +10,7 @@ import {
   useParams,
 } from "react-router-dom/cjs/react-router-dom.min";
 import { Pagination } from "@mui/material";
-import jsPDF from "jspdf";
+
 import AOS from "aos";
 
 function IsiDaftarRegulasi() {

@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import AOS from "aos";
 
 function DetailPermohonanInformasi() {
   const [namaPemohon, setNamaPemohon] = useState("");
@@ -65,12 +66,16 @@ function DetailPermohonanInformasi() {
       });
   }, [param.id]);
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
-        <div className="container mt-3 mb-3 app-main__outer">
+        <div className="container mt-3 mb-3 app-main__outer"  data-aos="fade-left">
           <div className="box-tabel">
             <form className="card shadow w-100">
               <h2 className="title fw-bold fs-3 card-header">Detail</h2>

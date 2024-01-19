@@ -36,10 +36,17 @@ function SKDIP() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                    <td className="" data-cell="dokumen" scope="row">
+                    <td className="" data-cell="dokumen" scope="row"  style={{ width: "500px" }}>
                       {item.namadokumen}
                     </td>
-                    <td className="">
+                    <td className=""  style={{
+                    
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                       
+                   
+                      }}>
                       <a href={item.pdfDokumen}>
                         <button
                           className="bg-primary text-light"
