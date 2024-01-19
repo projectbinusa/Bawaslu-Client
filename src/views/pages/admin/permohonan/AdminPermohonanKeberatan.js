@@ -10,6 +10,7 @@ import "../../../../../src/css/adminBerita.css";
 import { Pagination } from "@mui/material";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import AOS from "aos";
 
 function AdminPermohonanKeberatan() {
   const [list, setList] = useState([]);
@@ -105,13 +106,22 @@ function AdminPermohonanKeberatan() {
     });
   };
 
+  useEffect(() => {
+    AOS.init();
+  },[]);
+
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
       <Header />
       <div className="app-main">
         <Sidebar />
+
+        <div className="container mt-3 app-main__outer" data-aos="fade-left">
+          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex"style={{paddingLeft:"55px"}}>
+
         <div className="container mt-3 app-main__outer">
           <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex rows-rspnv">
+
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
