@@ -59,8 +59,9 @@ function AddKanal() {
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
      <Header/>
       {/* ... (Header, Sidebar, etc.) ... */}
-      <Sidebar/>
+      
       <div className="app-main">
+      <Sidebar/>
       <div className="container mt-3 app-main__outer" data-aos="fade-left">
         <div className="card shadow">
           <div className="card-body">
