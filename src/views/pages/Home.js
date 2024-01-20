@@ -206,14 +206,14 @@ function Home() {
         </div>
 
         <div id="carouselExampleFade" className="carousel slide carousel-fade container">
-          <div className="carousel-inner">
+          <div className="carousel-inner h-75">
             {listCaraousel.map((item, index) => (
               <div
                 key={item.id}
                 className={`carousel-item ${index === 0 ? "active" : ""}`}>
                 <img
                   src={item.foto}
-                  className="d-block w-100 shadow"
+                  className="d-block w-100 shadow h-75"
                   alt={item.namaCarousel}
                 />
               </div>
@@ -475,7 +475,7 @@ function Home() {
                       <h3>Informasi Berkala</h3>
                     </div>
                   </div>
-                  </a>                                                                                                                                                                                                                                                        
+                  </a>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">

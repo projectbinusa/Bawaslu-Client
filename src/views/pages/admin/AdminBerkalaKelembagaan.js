@@ -165,7 +165,7 @@ function AdminBerkalaKelembagaan() {
                 // value={rowsPerPage}
                 // alfy
               >
-                <option value="">Pilih Jenis Informasi</option>
+                   <option value="">Pilih Jenis Informasi</option>
                     <option value="22">Profile Bawaslu</option>;
                     <option value="23">Layanan Publk Khusus</option>;
                     <option value="24">Program Kerja</option>;
@@ -343,7 +343,7 @@ function AdminBerkalaKelembagaan() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                          
+
                             </div>
                           </td>
                         </tr>
