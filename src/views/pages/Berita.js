@@ -338,7 +338,6 @@ function Berita() {
                     {/*  */}
                   </div>
                 </div>
-                {/* <hr className="mt-0" /> */}
                 {list.length > 0 ? (
                   list.map((berita) => {
                     return (
@@ -409,15 +408,16 @@ function Berita() {
                         </div>
                       </div>
                     );
-                <Pagination
-                  count={paginationInfo.totalPages}
-                  color="primary"
-                  page={currentPage}
-                  onChange={(event, value) => setCurrentPage(value)}
-                />
+                    <Pagination
+                      count={paginationInfo.totalPages}
+                      color="primary"
+                      page={currentPage}
+                      onChange={(event, value) => setCurrentPage(value)}
+                    />
                   })
                 ) : (
-                  <h1 style={{textAlign:"center", marginTop:"12px"}}>Tidak Ada Data</h1>
+                  
+                  <h1 style={{ textAlign: "center", marginTop: "20px" }}>Data Barita Saat Ini Belum Ada</h1>
                 )}
               </div>
               <div data-aos="fade-left" class="col-lg-4 col-12">
