@@ -12,7 +12,7 @@ import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import AOS from "aos";
 import { Pagination } from "@mui/material";
-import bawasluRI from "../../aset/Bawaslu-RI-300x73-1.png"
+import bawasluRI from "../../aset/Bawaslu-RI-300x73-1.png";
 import dkpp from "../../aset/dkpp-300x73-1.png";
 import mahkama from "../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 import kpu from "../../aset/KPU-300x73-1.png";
@@ -108,22 +108,17 @@ function Home() {
     getAllCarousel();
   }, []);
 
+  const [activeIndex, setActiveIndex] = useState(0);
+  const handlePrevSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
+    );
+  };
 
-
-
-
-    const [activeIndex, setActiveIndex] = useState(0);
-    const handlePrevSlide = () => {
-
-      setActiveIndex((prevIndex) =>
-        prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
-      );
-    };
-
-    const handleNextSlide = () => {
-      setActiveIndex((prevIndex) =>
-        prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
-      );
+  const handleNextSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
+    );
   };
   return (
     <div>
@@ -205,38 +200,61 @@ function Home() {
           </div>
         </div>
 
-        <div id="carouselExampleFade" className="carousel slide carousel-fade container">
+        <div
+          id="carouselExampleFade"
+          className="carousel slide carousel-fade container"
+        >
           <div className="carousel-inner">
-            {listCaraousel.map((item, index) => (
-              <div
-                key={item.id}
-                className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                <img
-                  src={item.foto}
-                  className="d-block w-100 shadow"
-                  alt={item.namaCarousel}
-                />
+            {listCaraousel.length > 0 ? (
+              listCaraousel.map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                >
+                  <img
+                    src={item.foto}
+                    className="d-block w-100 shadow"
+                    alt={item.namaCarousel}
+                  />
+                </div>
+              ))
+            ) : (
+              <div>
+                <h1
+                  style={{
+                    marginTop: "200px",
+                    marginBottom: "20px",
+                    textAlign: "center",
+                  }}
+                >
+                  Tidak ada Carousel yang tersedia.
+                </h1>
               </div>
-            ))}
+            )}
           </div>
+
           <button
             className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev">
+            data-bs-slide="prev"
+          >
             <span
               className="carousel-control-prev-icon"
-              aria-hidden="true"></span>
+              aria-hidden="true"
+            ></span>
             <span className="visually-hidden">Previous</span>
           </button>
           <button
             className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleFade"
-            data-bs-slide="next">
+            data-bs-slide="next"
+          >
             <span
               className="carousel-control-next-icon"
-              aria-hidden="true"></span>
+              aria-hidden="true"
+            ></span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
@@ -298,14 +316,13 @@ function Home() {
                 borderRadius: "10px",
                 background: "#F1F6F9",
                 float: "inline-end",
-                background:" rgb(241, 246, 249)",
-                 border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
-
+                background: " rgb(241, 246, 249)",
+                border: "1px solid blue",
+                boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px",
               }}
             >
               <h4 className="widget-title">
-              <i class="fa-regular fa-file-lines"></i> {" "}
-                Tautan{" "}
+                <i class="fa-regular fa-file-lines"></i> Tautan{" "}
                 <span className="text-primary">
                   <strong>Lembaga</strong>
                 </span>
@@ -318,10 +335,7 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={bawasluRI}
-                      alt=""
-                    />
+                    <img src={bawasluRI} alt="" />
                   </a>
                 </li>
                 <li>
@@ -330,10 +344,7 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={dkpp}
-                      alt=""
-                    />
+                    <img src={dkpp} alt="" />
                   </a>
                 </li>
                 <li>
@@ -342,10 +353,7 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={mahkama}
-                      alt=""
-                    />
+                    <img src={mahkama} alt="" />
                   </a>
                 </li>
                 <li>
@@ -354,18 +362,12 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src={kpu}
-                      alt=""
-                    />
+                    <img src={kpu} alt="" />
                   </a>
                 </li>
                 <li>
                   <a href="https://jateng.bawaslu.go.id/" target="_blank">
-                    <img
-                      src={bawasluJateng}
-                      alt=""
-                    />
+                    <img src={bawasluJateng} alt="" />
                   </a>
                 </li>
               </ul>
@@ -465,17 +467,17 @@ function Home() {
                     <h3>Informasi Berkala</h3>
                   </div>
                   <a href="/informasi-berkala">
-                  <div className="details-hover-wrap">
-                    <div className="details-hover">
-                      <img
-                        className="d-block w-100"
-                        src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                        alt="Second slide"
-                      />
-                      <h3>Informasi Berkala</h3>
+                    <div className="details-hover-wrap">
+                      <div className="details-hover">
+                        <img
+                          className="d-block w-100"
+                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                          alt="Second slide"
+                        />
+                        <h3>Informasi Berkala</h3>
+                      </div>
                     </div>
-                  </div>
-                  </a>                                                                                                                                                                                                                                                        
+                  </a>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
@@ -554,6 +556,8 @@ function Home() {
           </div>
         </div>
         <div className="container mt-5 mb-5">
+          {pengumuman.length > 0 ? (
+            <>
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
@@ -597,9 +601,8 @@ function Home() {
             </div>
             <div data-aos="fade-left" class="col-lg-4">
               <div class="row">
-                {pengumuman.slice(1, 5).map((png) => {
-                  return (
-                    <div class="col-sm-6">
+                {pengumuman.map((png) => (
+                    <div class="col-sm-6" key={png.id}>
                       <div class="pt-4 pb-4">
                         <div class="d-flex align-items-center pb-2">
                           <img
@@ -626,11 +629,16 @@ function Home() {
                         </span>
                       </div>
                     </div>
-                  );
-                })}
+                  ))}
               </div>
             </div>
           </div>
+          </>
+          ):(
+            <div>
+            <h1 style={{marginTop: "20px", textAlign: "center"}}>Tidak ada pengumuman  yang tersedia.</h1>
+          </div>
+          )}
         </div>
       </div>
       <Footer />
