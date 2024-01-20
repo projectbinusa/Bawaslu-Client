@@ -29,7 +29,7 @@ function EditBeritaAdmin() {
     formData.append("author", author);
     formData.append("judulBerita", judulBerita);
     formData.append("isiBerita", isiBerita);
-    formData.append("categoryId", categoryId.id);
+    formData.append("categoryId", categoryId);
     formData.append("file", image);
 
     await axios

@@ -162,14 +162,14 @@ function AdminSetiapSaat() {
                 // value={rowsPerPage}
                 // alfy
                 >
-                  <option value="">Pilih Jenis Informasi</option>
-                  <option value="8">Organisasi Dan Administrasi</option>;
-                  <option value="9">Peraturan & Kebijakan</option>;
-                  <option value="10">MOU</option>;
-                  <option value="11">Pemantau Pemilu</option>;
-                  <option value="12">Rencana Strategi</option>;
-                  <option value="13">Materi Rakor</option>;
-                  <option value="14">Piagam Penghargaan</option>
+                 <option value="">Pilih Jenis Informasi</option>
+                    <option value="8">Organisasi Dan Administrasi</option>;
+                    <option value="9">Peraturan & Kebijakan</option>;
+                    <option value="10">MOU</option>;
+                    <option value="11">Pemantau Pemilu</option>;
+                    <option value="12">Rencana Strategi</option>;
+                    <option value="13">Materi Rakor</option>;
+                    <option value="14">Piagam Penghargaan</option>
                 </select>
               </div>
             </div>
@@ -213,14 +213,14 @@ function AdminSetiapSaat() {
                       className="form-select form-select-sm"
                       onChange={handleChange}
                     >
-                      <option value="">Pilih Jenis Informasi</option>
-                      <option value="8">Organisasi Dan Administrasi</option>;
-                      <option value="9">Peraturan & Kebijakan</option>;
-                      <option value="10">MOU</option>;
-                      <option value="11">Pemantau Pemilu</option>;
-                      <option value="12">Rencana Strategi</option>;
-                      <option value="13">Materi Rakor</option>;
-                      <option value="14">Piagam Penghargaan</option>
+                       <option value="">Pilih Jenis Informasi</option>
+                    <option value="8">Organisasi Dan Administrasi</option>;
+                    <option value="9">Peraturan & Kebijakan</option>;
+                    <option value="10">MOU</option>;
+                    <option value="11">Pemantau Pemilu</option>;
+                    <option value="12">Rencana Strategi</option>;
+                    <option value="13">Materi Rakor</option>;
+                    <option value="14">Piagam Penghargaan</option>
                     </select>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ function AdminSetiapSaat() {
                     className="form-select form-select-xl w-auto"
                     onChange={handleChange}
                   >
-                    <option value="">Pilih Jenis Informasi</option>
+                     <option value="">Pilih Jenis Informasi</option>
                     <option value="8">Organisasi Dan Administrasi</option>;
                     <option value="9">Peraturan & Kebijakan</option>;
                     <option value="10">MOU</option>;
@@ -307,7 +307,7 @@ function AdminSetiapSaat() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                           
+
                             </div>
                           </td>
                         </tr>

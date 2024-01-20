@@ -291,7 +291,7 @@ function AdminBerkalaKepemiluan() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                            
+
                             </div>
                           </td>
                         </tr>

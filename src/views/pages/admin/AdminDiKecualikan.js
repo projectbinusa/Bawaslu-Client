@@ -78,7 +78,8 @@ function AdminDiKecualikan() {
 
   const fetchData = async (selectedId, page, searchTerm) => {
     const response = await fetch(
-      `${API_DUMMY}/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${page - 1
+      `${API_DUMMY}/bawaslu/api/jenis-keterangan/${selectedId}/isi-informasi?page=${
+        page - 1
       }&size=10&sortBy=id&sortOrder=desc`
     );
     const result = await response.json();
@@ -147,7 +148,7 @@ function AdminDiKecualikan() {
 
   useEffect(() => {
     AOS.init();
-  },[]);
+  }, []);
 
   return (
     <div>
@@ -155,73 +156,73 @@ function AdminDiKecualikan() {
         <Header />
         <div id="app-main" className="app-main">
           <Sidebar />
-          <div id="container" className="container mt-3 app-main__outer"  data-aos="fade-left">
-            <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex" >
-              <div class="col-auto"style={{paddingLeft:"17px"}}>
+          <div
+            id="container"
+            className="container mt-3 app-main__outer"
+            data-aos="fade-left">
+            <div class=" row g-3 align-items-center d-lg-none d-md-none d-flex">
+              <div class="col-auto" style={{ paddingLeft: "17px" }}>
                 <select
-                  className="form-select form-select-xl"style={{width:"360px"}}
+                  className="form-select form-select-xl"
+                  style={{ width: "360px" }}
                   onChange={handleChange}
-                // value={rowsPerPage}
-                // alfy
                 >
-                  <option value="">Pilih Jenis Informasi</option>
-                  <option value="15">Informasi Di Kecualikan</option>;
+                    <option value="">Pilih Jenis Informasi</option>
+                    <option value="39">Informasi Di Kecualikan</option>
                 </select>
               </div>
             </div>
             <div id="main-card" className="main-card box-tabel mb-3 card">
-            <div className=" mb-3 d-lg-none d-md-none d-flex">
-            <div className="card-header " style={{ display: "block" }}>
-              <p className="mt-3">Admin Informasi Dikecualikan</p>
-              <div className="d-block ml-auto mr-auto">
-                <input
-                  type="search"
-                  className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={handleChange}
-                />
-                <div className="align-items">
-                  <div role="group" className="btn-group-sm btn-group">
-                    <button className="active btn-focus p-2 rounded">
-                      <a
-                        style={{ color: "white", textDecoration: "none" }}
-                        href="/add-berita-admin"
-                      >
-                        Tambah Data
-                      </a>
-                    </button>
+              <div className=" mb-3 d-lg-none d-md-none d-flex">
+                <div className="card-header " style={{ display: "block" }}>
+                  <p className="mt-3">Admin Informasi Dikecualikan</p>
+                  <div className="d-block ml-auto mr-auto">
+                    <input
+                      type="search"
+                      className="form-control widget-content-right w-75 d-lg-block d-none d-md-none"
+                      placeholder="Search..."
+                      value={searchTerm}
+                      onChange={handleChange}
+                    />
+                    <div className="align-items">
+                      <div role="group" className="btn-group-sm btn-group">
+                        <button className="active btn-focus p-2 rounded">
+                          <a
+                            style={{ color: "white", textDecoration: "none" }}
+                            href="/add-berita-admin">
+                            Tambah Data
+                          </a>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              </div>
-            </div>
-              <div id="card-header" className="card-header  d-lg-flex d-none d-md-flex" style={{display:"block"}}>
+              <div
+                id="card-header"
+                className="card-header  d-lg-flex d-none d-md-flex"
+                style={{ display: "block" }}>
                 Admin Informasi Dikecualikan
                 <div className="d-flex ml-auto gap-3">
                   <select
                     className="form-select form-select-sm"
                     aria-label="Small select example"
-                    onChange={handleChange}
-                  >
+                    onChange={handleChange}>
                     <option value="">Pilih Jenis Informasi</option>
-                    <option value="15">Informasi Di Kecualikan</option>;
+                    <option value="39">Informasi Di Kecualikan</option>
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
                       id="butoon"
                       role="group"
-                      className="btn-group-sm btn-group"
-                    >
+                      className="btn-group-sm btn-group">
                       <button
                         id="button"
-                        className="active btn-focus p-2 rounded"
-                      >
+                        className="active btn-focus p-2 rounded">
                         <a
                           href="/tambah-informasi-dikecualikan"
                           className="text-light"
-                          style={{ textDecoration: "none" }}
-                        >
+                          style={{ textDecoration: "none" }}>
                           {" "}
                           Tambah Data
                         </a>
@@ -233,8 +234,7 @@ function AdminDiKecualikan() {
               <TableContainer>
                 <div
                   className="table-responsive"
-                  style={{ overflowY: "auto", maxHeight: "60vh" }}
-                >
+                  style={{ overflowY: "auto", maxHeight: "60vh" }}>
                   <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                     <thead>
                       <tr>
@@ -258,26 +258,22 @@ function AdminDiKecualikan() {
                             <div className="d-flex justify-content-center">
                               <button
                                 type="button"
-                                className=".responsive-buttons btn-primary btn-sm mr-2"
-                              >
+                                className=".responsive-buttons btn-primary btn-sm mr-2">
                                 <a
                                   style={{
                                     color: "white",
                                     textDecoration: "none",
                                   }}
-                                  href={`/ubah-isi-informasi/${inf.id}`}
-                                >
+                                  href={`/ubah-isi-informasi/${inf.id}`}>
                                   <i className="fa-solid fa-pen-to-square"></i>
                                 </a>
                               </button>
                               <button
                                 type="button"
                                 onClick={() => deleteData(inf.id)}
-                                className="mr-2 btn-danger btn-sm"
-                              >
+                                className="mr-2 btn-danger btn-sm">
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                            
                             </div>
                           </td>
                         </tr>
