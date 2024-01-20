@@ -19,7 +19,7 @@ function PeraturanMahkamahAgung() {
     };
 
     fetchData();
-  }, []);
+  }, [default1]);
 
   return (
     <div className="responsive-3">
