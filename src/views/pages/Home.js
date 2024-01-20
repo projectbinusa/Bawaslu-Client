@@ -266,7 +266,7 @@ function Home() {
                         <img
                           style={{ width: "200px" }}
                           src={berita.image}
-                          alt="blog"
+
                         />
                       </div>
                       <div className="media-body align-self-center">
@@ -320,7 +320,7 @@ function Home() {
                   >
                     <img
                       src={bawasluRI}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -332,7 +332,7 @@ function Home() {
                   >
                     <img
                       src={dkpp}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -344,7 +344,7 @@ function Home() {
                   >
                     <img
                       src={mahkama}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -356,7 +356,7 @@ function Home() {
                   >
                     <img
                       src={kpu}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -364,7 +364,7 @@ function Home() {
                   <a href="https://jateng.bawaslu.go.id/" target="_blank">
                     <img
                       src={bawasluJateng}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -460,7 +460,7 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Informasi Berkala</h3>
                   </div>
@@ -470,7 +470,7 @@ function Home() {
                       <img
                         className="d-block w-100"
                         src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                        alt="Second slide"
+
                       />
                       <h3>Informasi Berkala</h3>
                     </div>
@@ -484,7 +484,7 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Informasi Setiap Saat</h3>
                   </div>
@@ -494,7 +494,7 @@ function Home() {
                         <img
                           className="d-block w-100"
                           src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
+
                         />
                         <h3>Informasi Setiap Saat</h3>
                       </div>
@@ -508,7 +508,7 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Informasi Serta Merta</h3>
                   </div>
@@ -518,7 +518,7 @@ function Home() {
                         <img
                           className="d-block w-100"
                           src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
+
                         />
                         <h3>Informasi Serta Merta</h3>
                       </div>
@@ -532,7 +532,7 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Infromasi Di Kecualikan</h3>
                   </div>
@@ -542,7 +542,7 @@ function Home() {
                         <img
                           className="d-block w-100"
                           src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
+
                         />
                         <h3>Infromasi Di Kecualikan</h3>
                       </div>
@@ -570,7 +570,6 @@ function Home() {
               <div class="position-relative">
                 <img
                   src={pengumuman.length > 0 && pengumuman[0].image}
-                  alt="banner"
                   class="img-fluid"
                 />
                 <div class="banner-content">
@@ -605,7 +604,6 @@ function Home() {
                           <img
                             src={png.image}
                             class="img-xs img-rounded mr-2"
-                            alt="thumb"
                           />
                         </div>
                         <div class="badge badge-danger fs-12 font-weight-bold mb-3">

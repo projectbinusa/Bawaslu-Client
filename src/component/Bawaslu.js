@@ -29,7 +29,7 @@ function Bawaslu() {
             rel="noopener noreferrer">
             <img
               src={bawasluRI}
-              alt=""
+
             />
           </a>
         </li>
@@ -40,7 +40,7 @@ function Bawaslu() {
             rel="noopener noreferrer">
             <img
               src={dkpp}
-              alt=""
+
             />
           </a>
         </li>
@@ -51,7 +51,7 @@ function Bawaslu() {
             rel="noopener noreferrer">
             <img
               src={mahkama}
-              alt=""
+
             />
           </a>
         </li>
@@ -62,7 +62,7 @@ function Bawaslu() {
             rel="noopener noreferrer">
             <img
               src={kpu}
-              alt=""
+
             />
           </a>
         </li>
@@ -73,7 +73,7 @@ function Bawaslu() {
             rel="noopener noreferrer">
             <img
               src={bawasluJateng}
-              alt=""
+
             />
           </a>
         </li>

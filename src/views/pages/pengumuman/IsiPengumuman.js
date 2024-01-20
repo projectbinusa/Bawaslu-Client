@@ -84,7 +84,7 @@ function IsiPengumuman() {
   <div class="col-sm-7"></div>
   <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
     <div class="blog-share">
-      <ul class="list-inline"> 
+      <ul class="list-inline">
         <li class="list-inline-item">
         <FacebookShareButton
                                       url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
@@ -101,7 +101,7 @@ function IsiPengumuman() {
         <li class="list-inline-item">
           <PinterestShareButton  url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
                                       quote={judulPengumuman}  media={image}>
-                                         
+
             <PinterestIcon size={38} round={true} />
           </PinterestShareButton>
         </li>
@@ -112,7 +112,7 @@ function IsiPengumuman() {
 </div>
 {/* // */}
                   <div class="thumb">
-                    <img className="pengumuman" src={image} alt="img" />
+                    <img className="pengumuman" src={image}  />
                   </div>
                   <div class="details">
                     <ul class="blog-meta">
@@ -138,7 +138,7 @@ function IsiPengumuman() {
                     {pengumuman2.map((isi) => {
                       return (
                         <div class="col-md-6">
-                          
+
                           <div class="media single-choose-inner">
                             <div class="media-left">
                               <div class="icon">
@@ -166,7 +166,7 @@ function IsiPengumuman() {
               data-aos="fade-left" class="col-lg-4 col-12">
               <div class="td-sidebar">
                 <Bawaslu />
-              
+
               </div>
             </div>
           </div>

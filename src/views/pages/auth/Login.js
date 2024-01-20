@@ -65,7 +65,6 @@ function Login() {
               src="https://static.vecteezy.com/system/resources/previews/010/998/284/non_2x/3d-password-input-illustration-design-free-png.png"
               className="img-fluid img-login"
               style={{ width: "250px" }}
-              alt="Password Illustration"
             />
           </div>
 
@@ -79,7 +78,6 @@ function Login() {
                 <img
                   style={{ width: "40px" }}
                   src={Ikon}
-                  alt="Bawaslu Logo"
                 /> {" "}
                 Login
               </h2>

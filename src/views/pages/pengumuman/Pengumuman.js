@@ -86,7 +86,7 @@ function Pengumuman() {
                       <img
                         class="postcard__img"
                         src={isi.image}
-                        alt="Image Title"
+
                       />
                     </a>
                     <div class="postcard__text t-dark">
@@ -130,7 +130,7 @@ function Pengumuman() {
                       <img
                         style={{ maxHeight: "400px", minHeight: "100px", borderTopRightRadius:"10px", borderTopLeftRadius:"10px" }}
                         src={isi.image}
-                        alt="img"
+
                       />
                     </div>
                     <div className="details">

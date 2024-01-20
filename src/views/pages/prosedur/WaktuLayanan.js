@@ -23,12 +23,12 @@ function WaktuLayanan() {
         <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
         <div className="container">
           <div className="row">
@@ -38,7 +38,7 @@ function WaktuLayanan() {
                 <img
                 id="thumb-img"
                   src={waktu}
-                  alt="img"
+
                 />
               </div>
             </div>

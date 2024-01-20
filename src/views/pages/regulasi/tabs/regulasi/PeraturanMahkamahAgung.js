@@ -40,12 +40,12 @@ function PeraturanMahkamahAgung() {
                       {item.namaDokumen}
                     </td>
                     <td className=""  style={{
-                    
+
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                   
-               
+
+
                   }}>
                       <a href={item.pdfDokumen}>
                         <button
