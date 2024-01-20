@@ -150,7 +150,7 @@ function AdminKanal() {
     AOS.init();
   },[]);
 
-  // 
+  //
   return (
     <div>
       <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -167,13 +167,13 @@ function AdminKanal() {
                 // alfy
               >
               <option value="">Pilih Jenis Informasi</option>
-                    <option value="15">Hasil Pengawasan</option>;
-                    <option value="16">Analisa Calon Terpilih</option>;
-                    <option value="19">Laporan Akhir Pengawasan</option>;
-                    <option value="20">Penanganan Pelanggaran</option>;
-                    <option value="21">Naskah Perjanjian Hibah Daerah</option>;
-                    <option value="22">Layanan Pengaduan Publik</option>;
-                    <option value="23">Sarana Partisipasi Publik</option>
+                    <option value="40">Imbauan</option>;
+                    <option value="41">Anggaran</option>;
+                    <option value="42">Pencegahan & Penanganan</option>;
+                    <option value="43">SDM Pengawas Pemilu</option>;
+                    <option value="44">Hasil Pengawasan </option>;
+                    <option value="45">Siaran Pers</option>;
+                    <option value="46">Putusan</option>
               </select>
             </div>
           </div>
@@ -292,7 +292,7 @@ function AdminKanal() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                          
+
                             </div>
                           </td>
                         </tr>
