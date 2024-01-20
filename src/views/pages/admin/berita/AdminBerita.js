@@ -164,7 +164,7 @@ function AdminBerita() {
   useEffect(() => {
     AOS.init();
   },[]);
-  
+
   const handleRowsPerPageChange = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
@@ -326,7 +326,6 @@ function AdminBerita() {
                         <td data-label="Image" className="">
                           <img
                             src={berita.image}
-                            alt="berita-image"
                             style={{ height: "4.5rem", width: "4.5rem" }}
                           />
                         </td>

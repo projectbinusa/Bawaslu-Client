@@ -52,12 +52,12 @@ function Dikecualikan() {
         <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
         <div className="form1 text-center mt-0"  data-aos="fade-up">
           <div className="form-permohonan section-title text-center">
@@ -88,7 +88,7 @@ function Dikecualikan() {
               <div className="col-3">
                 <h5 className="text-decoration-none text-dark h4-text">
                   <div>
-                    <img src={folder} alt="" />
+                    <img src={folder}  />
                   </div>{" "}
                   PENETAPAN PPID PENGECUALIAN INFORMASI PENYELESAIAN SENGKETA
                   PEMILIHAN
@@ -107,7 +107,7 @@ function Dikecualikan() {
                   <div class="d-flex col-lg-5 col-10  shadow  p-25 hover-up-2 transition-normal mb-30 border-radius-10 folder-txt">
                     <a href={item.pdfDokumen}>
                       <div class="post-thumb mr-15 img-hover-scale overflow-hidden">
-                        <img src={folder} alt="File" width="50" />
+                        <img src={folder} width="50" />
                       </div>
                     </a>
 
@@ -168,7 +168,7 @@ function Dikecualikan() {
                   >
                     <img
                       src={bawasluRI}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -180,7 +180,7 @@ function Dikecualikan() {
                   >
                     <img
                       src={dkpp}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -192,7 +192,7 @@ function Dikecualikan() {
                   >
                     <img
                       src={mahkamah}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -204,7 +204,7 @@ function Dikecualikan() {
                   >
                     <img
                       src={kpu}
-                      alt=""
+
                     />
                   </a>
                 </li>
@@ -212,7 +212,7 @@ function Dikecualikan() {
                   <a href="https://jateng.bawaslu.go.id/" target="_blank">
                     <img
                       src={bawasluJateng}
-                      alt=""
+
                     />
                   </a>
                 </li>

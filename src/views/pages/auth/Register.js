@@ -89,7 +89,7 @@ function Register() {
                   <img
                     style={{ width: "40px",  }}
                     src={Ikon}
-                    alt=""
+
                   />{" "}
                   Register
                 </h2>

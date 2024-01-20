@@ -21,12 +21,12 @@ function PermintaanInformasi() {
         <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
         <div className="container">
           <div className="row justify-content-center">
@@ -45,7 +45,7 @@ function PermintaanInformasi() {
                 <div className="thumb">
                   <img
                     src="https://cdn.linkumkm.id/library/8/6/5/9/3/86593_840x576.jpg"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details my-custom-details" style={{ color: "white", backgroundColor: "black" }}>
@@ -70,7 +70,7 @@ function PermintaanInformasi() {
                 <div className="thumb">
                   <img
                     src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/2023/02/13/4001565610.jpg"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details">
@@ -100,7 +100,7 @@ function PermintaanInformasi() {
                 <div className="thumb">
                   <img
                     src="https://cdn1.katadata.co.id/media/images/thumb/2021/12/15/Proposal_pengajuan_dana-2021_12_15-16_22_35_d15eba1331fd01144d06d67b279b8e7e_960x640_thumb.jpg"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details">
@@ -127,7 +127,7 @@ function PermintaanInformasi() {
                 <div className="thumb">
                   <img
                     src="https://pasardana.id/media/11420/ilustrasi-waktu-kerja.jpg?crop=0,0,0,0.15488054001243451&cropmode=percentage&width=675&height=380&rnd=132016261740000000"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details">
@@ -151,7 +151,7 @@ function PermintaanInformasi() {
                 <div className="thumb">
                   <img
                     src="https://cdn0-production-images-kly.akamaized.net/MJN9I-eHhc9eqIzLsqc0-RmOHvk=/800x450/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4138775/original/064259700_1661740032-close-up-man-sealing-envelope.jpg"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details">

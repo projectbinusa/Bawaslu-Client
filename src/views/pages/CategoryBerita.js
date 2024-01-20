@@ -84,7 +84,6 @@ function CategoryBerita() {
                 <img
                   src={listTerbaru.length > 0 && listTerbaru[0].image}
                   class="img-fluid w-100"
-                  alt="world-news"
                 />
                 <span class="thumb-title">BERITA</span>
               </div>
@@ -113,7 +112,6 @@ function CategoryBerita() {
                         <img
                           src={berita.image}
                           class="img-fluid "
-                          alt="world-news"
                           style={{ maxHeight: "160px", maxWidth: "180px" }}
                         />
                         <span class="thumb-title isiBerita">BERITA</span>
@@ -201,7 +199,7 @@ function CategoryBerita() {
                       <img
                         style={{ height: "450px" }}
                         src={category.image}
-                        alt="img"
+
                       />
                     </div>
                     <div className="details">

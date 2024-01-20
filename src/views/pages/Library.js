@@ -59,18 +59,18 @@ function Library() {
             </div>
           </div>
         </div>
-      </div>  
+      </div>
       {/* <!-- service area start --> */}
       <div className="service-area bg-relative pd-top-115 pd-bottom-90">
         <img
           className="shape-left-top top_image_bounce"
           src="https://solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
         <div ref={serviceAreaRef} className="container">
           <div className="row justify-content-center">

@@ -19,7 +19,7 @@ function PeraturanMahkamahAgung() {
     };
 
     fetchData();
-  }, []);
+  }, [default1]);
 
   return (
     <div className="responsive-3">
@@ -40,12 +40,12 @@ function PeraturanMahkamahAgung() {
                       {item.namaDokumen}
                     </td>
                     <td className=""  style={{
-                    
+
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                   
-               
+
+
                   }}>
                       <a href={item.pdfDokumen}>
                         <button

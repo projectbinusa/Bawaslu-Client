@@ -264,7 +264,7 @@ function AdminPermohonanInformasi() {
                               <img
                                 style={{ width: "100px" }}
                                 src={informasi.fotoIdentitas}
-                                alt=""
+
                               />
                             </td>
                             {/* <td data-label="email : " className="text-left">

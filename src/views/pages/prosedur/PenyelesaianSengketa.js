@@ -27,12 +27,12 @@ function PenyelesaianSengketa() {
         <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
         <div className="container">
           <div className="section-title">
@@ -56,12 +56,12 @@ function PenyelesaianSengketa() {
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-01.webp"
-                    alt="img"
+
                   />
                   <img
                     className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-001.webp"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details-wrap">
@@ -87,12 +87,12 @@ function PenyelesaianSengketa() {
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-05.webp"
-                    alt="img"
+
                   />
                   <img
                     className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-005.webp"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details-wrap">
@@ -118,12 +118,12 @@ function PenyelesaianSengketa() {
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-04.webp"
-                    alt="img"
+
                   />
                   <img
                     className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/service-004.webp"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details-wrap">
@@ -149,12 +149,12 @@ function PenyelesaianSengketa() {
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/3.webp"
-                    alt="img"
+
                   />
                   <img
                     className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/03.webp"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details-wrap" style={{ height: "150px" }}>
@@ -183,12 +183,12 @@ function PenyelesaianSengketa() {
                 <div className="thumb">
                   <img
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/2.webp"
-                    alt="img"
+
                   />
                   <img
                     className="icon"
                     src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/service/02.webp"
-                    alt="img"
+
                   />
                 </div>
                 <div className="details-wrap" style={{ height: "150px" }}>

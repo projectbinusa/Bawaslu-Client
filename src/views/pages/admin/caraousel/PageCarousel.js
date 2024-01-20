@@ -127,7 +127,6 @@ function PageCarousel() {
                           <img
                             style={{ width: "100px" }}
                             src={crs.foto}
-                            alt="crs"
                           />
                         </td>
                         <td data-label="Aksi : ">

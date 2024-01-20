@@ -231,7 +231,6 @@ function Berita() {
                 <img
                   src={listTerbaru.length > 0 && listTerbaru[0].image}
                   class="img-fluid w-100"
-                  alt="world-news"
                 />
                 <span class="thumb-title">BERITA</span>
               </div>
@@ -258,7 +257,6 @@ function Berita() {
                         <img
                           src={berita.image}
                           class="img-fluid "
-                          alt="world-news"
                           style={{ maxHeight: "160px", maxWidth: "180px" }}
                         />
                         <span class="thumb-title isiBerita">BERITA</span>
@@ -379,7 +377,7 @@ function Berita() {
                           <img
                             style={{ height: "450px" }}
                             src={berita.image}
-                            alt="img"
+
                           />
                         </div>
                         <div class="details">
@@ -441,7 +439,7 @@ function Berita() {
                                     <img
                                       src={logoBawaslu}
                                       style={{ width: "90px" }}
-                                      alt="blog"
+
                                     />
                                   </div>
                                   <div class="media-body align-self-center">
@@ -479,7 +477,7 @@ function Berita() {
                                   <img
                                     src={logoBawaslu}
                                     style={{ width: "90px" }}
-                                    alt="blog"
+
                                   />
                                 </div>
                                 <div class="media-body align-self-center">

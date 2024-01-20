@@ -229,7 +229,7 @@ function AdminPermohonanKeberatan() {
                           <img
                             style={{ width: "150px" }}
                             src={informasi.fotoIdentitas}
-                            alt=""
+
                           />
                         </td>
                         <td data-label="Aksi : " class="text-center">

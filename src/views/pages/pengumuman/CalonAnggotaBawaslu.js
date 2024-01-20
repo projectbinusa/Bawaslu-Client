@@ -46,7 +46,7 @@ function CalonAnggotaBawaslu() {
                     <img
                       className="pengumuman"
                       src="https://boyolali.bawaslu.go.id/cepogo/2023/09/20230819093248.jpg"
-                      alt="img"
+
                     />
                   </div>
                   <div className="details">
@@ -153,7 +153,7 @@ function CalonAnggotaBawaslu() {
                       >
                         <img
                           src="https://boyolali.bawaslu.go.id/cepogo/2023/09/Bawaslu-RI-300x73-1.png"
-                          alt=""
+
                         />
                       </a>
                     </li>
@@ -165,7 +165,7 @@ function CalonAnggotaBawaslu() {
                       >
                         <img
                           src="https://boyolali.bawaslu.go.id/cepogo/2023/09/dkpp-300x73-1.png"
-                          alt=""
+
                         />
                       </a>
                     </li>
@@ -177,7 +177,7 @@ function CalonAnggotaBawaslu() {
                       >
                         <img
                           src="https://boyolali.bawaslu.go.id/cepogo/2023/09/MAHKAMAKONSTITUSI-300x73-1.png"
-                          alt=""
+
                         />
                       </a>
                     </li>
@@ -189,7 +189,7 @@ function CalonAnggotaBawaslu() {
                       >
                         <img
                           src="https://boyolali.bawaslu.go.id/cepogo/2023/09/KPU-300x73-1.png"
-                          alt=""
+
                         />
                       </a>
                     </li>
@@ -201,7 +201,7 @@ function CalonAnggotaBawaslu() {
                       >
                         <img
                           src="https://boyolali.bawaslu.go.id/cepogo/2023/09/bawaslu-jateng-300x73-1.png"
-                          alt=""
+
                         />
                       </a>
                     </li>

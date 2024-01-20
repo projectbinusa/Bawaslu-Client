@@ -142,7 +142,6 @@ function PageBerita() {
                 <img
                   src={listTerbaru.length > 0 && listTerbaru[0].image}
                   class="img-fluid w-100"
-                  alt="world-news"
                 />
                 <span class="thumb-title">BERITA</span>
               </div>
@@ -171,7 +170,6 @@ function PageBerita() {
                         <img
                           src={berita.image}
                           class="img-fluid "
-                          alt="world-news"
                           style={{ maxHeight: "160px", maxWidth: "180px" }}
                         />
                         <span class="thumb-title isiBerita">BERITA</span>
@@ -226,10 +224,10 @@ function PageBerita() {
                     <img
                       style={{ height: "450px" }}
                       src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
-                      alt="img"
+
                     />
                   ) : (
-                    <img style={{ height: "450px" }} src={image} alt="img" />
+                    <img style={{ height: "450px" }} src={image}  />
                   )}
                 </div>
                 <div class="details">
