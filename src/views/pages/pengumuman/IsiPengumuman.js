@@ -110,7 +110,7 @@ function IsiPengumuman() {
   </div>
 </div>
 </div>
-
+{/* // */}
                   <div class="thumb">
                     <img className="pengumuman" src={image} alt="img" />
                   </div>
