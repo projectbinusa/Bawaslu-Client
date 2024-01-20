@@ -33,9 +33,9 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             cd Bawaslu-Client
-            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S git pull origin develop
+            echo "${{ secrets.SSH_PASSWORD }}" | sudo -S sudo git pull origin develop
             echo "${{ secrets.SSH_PASSWORD }}" | sudo -S npm install
-            echo ${{ secrets.SSH_PASSWORD }} | sudo -S npm run build
+            echo ${{ secrets.SSH_PASSWORD }} | sudo -S sudo npm run build
             sudo rm -rf /var/www/*  # Hapus konten eksisting di direktori Apache
             sudo cp -r build/* /var/www/  # Salin konten build ke direktori Apache
             cd /etc/apache2/sites-enabled
