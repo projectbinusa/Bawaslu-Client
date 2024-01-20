@@ -8,7 +8,7 @@ import "../../../css/gabung.css"
 function WaktuLayanan() {
   useEffect(() => {
     AOS.init();
-  })
+  },[])
   return (
     <div>
       <Navbar />

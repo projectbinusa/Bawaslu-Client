@@ -8,7 +8,7 @@ import AOS from "aos";
 function PermohonanKeberatan() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     //  how it work area start
     <>

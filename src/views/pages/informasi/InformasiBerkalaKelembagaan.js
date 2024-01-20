@@ -30,7 +30,7 @@ import "../../../css/gabung.css"
 function InformasiBerkalaKelembagaan() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <div>
       <Navbar />
@@ -49,9 +49,9 @@ function InformasiBerkalaKelembagaan() {
             backgroundImage: `url('https://www.solverwp.com/demo/html/itechie/assets/img/bg/1.webp') `,
           }}
         >
-          
+
           <section>
-            
+
             <div className="container">
             <a
                 href="/informasi-berkala"
@@ -61,17 +61,17 @@ function InformasiBerkalaKelembagaan() {
                 <i className="fas fa-chevron-left"></i>
               </a>
               <div className="row">
-                
+
                 <div className="col-md-3" data-aos="fade-right">
-                  
+
                   <div
                     className="nav flex-column nav-pills nav-pills-custom"
                     id="v-pills-tab"
                     role="tablist"
                     aria-orientation="vertical"
-                    
+
                   >
-                    
+
                     <a
                       className="nav-link mb-3 p-3 shadow active"
                       id="v-pills-profile-tab"
@@ -276,15 +276,15 @@ function InformasiBerkalaKelembagaan() {
                   <a
                       className="btn btn-primary mb-3 p-3 shadow d-lg-flex d-md-flex d-none" style={{textDecoration:"none",textAlign:"center"}}
                       href="/informasi-berkala"
-                    
+
                     >
-                      
+
                       <span className="font-weight-bold small text-uppercase">
-                        
+
                       Kembali
                       </span>
                   </a>
-                 
+
                   </div>
                 </div>
 

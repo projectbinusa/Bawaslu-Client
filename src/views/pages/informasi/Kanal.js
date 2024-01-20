@@ -26,7 +26,7 @@ import AOS from "aos";
 function Kanal() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <div>
       <Navbar />
