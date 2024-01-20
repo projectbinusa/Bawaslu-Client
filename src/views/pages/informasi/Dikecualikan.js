@@ -20,7 +20,7 @@ function Dikecualikan() {
 
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
 
   useEffect(() => {
     const fetchData = async () => {

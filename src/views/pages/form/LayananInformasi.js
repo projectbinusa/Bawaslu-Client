@@ -8,7 +8,7 @@ import AOS from "aos";
 const LayananInformasi = () => {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <>
       <Navbar />
@@ -94,7 +94,7 @@ const LayananInformasi = () => {
           />
         </div>
       </div>
-     
+
 
       <Footer />
     </>

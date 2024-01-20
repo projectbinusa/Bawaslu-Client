@@ -19,7 +19,7 @@ import AOS from "aos";
 function InformasiBerkalaKepemiluan() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <div>
       <Navbar />
@@ -155,11 +155,11 @@ function InformasiBerkalaKepemiluan() {
                     <a
                       className="btn btn-primary mb-3 p-3 shadow d-lg-flex d-md-flex d-none" style={{textDecoration:"none",textAlign:"center"}}
                       href="/informasi-berkala"
-                    
+
                     >
-                      
+
                       <span className="font-weight-bold small text-uppercase">
-                        
+
                       Kembali
                       </span>
                   </a>

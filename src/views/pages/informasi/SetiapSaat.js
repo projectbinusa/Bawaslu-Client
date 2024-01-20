@@ -13,7 +13,7 @@ import AOS from "aos";
 function SetiapSaat() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <div>
       <Navbar />

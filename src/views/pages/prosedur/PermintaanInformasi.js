@@ -7,7 +7,7 @@ import AOS from "aos";
 function PermintaanInformasi() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <>
       <Navbar />

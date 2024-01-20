@@ -15,7 +15,7 @@ function Profil() {
 
   useEffect(() => {
     AOS.init();
-  })
+  },[])
   return (
     <div>
       <Navbar />

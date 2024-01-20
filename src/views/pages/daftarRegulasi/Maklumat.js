@@ -11,7 +11,7 @@ function Maklumat() {
 
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <>
       <Navbar />
