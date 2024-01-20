@@ -38,3 +38,6 @@ jobs:
             echo ${{ secrets.SSH_PASSWORD }} | sudo -S npm run build
             sudo rm -rf /var/www/*  # Hapus konten eksisting di direktori Apache
             sudo cp -r build/* /var/www/  # Salin konten build ke direktori Apache
+            cd /etc/apache2/sites-enabled
+            sudo apachectl configtest
+            sudo service apache2 restart
