@@ -335,7 +335,6 @@ function Berita() {
                         })}
                       </div>
                     </div>
-                    {/*  */}
                   </div>
                 </div>
                 {list.length > 0 ? (
@@ -416,10 +415,10 @@ function Berita() {
                     />
                   })
                 ) : (
-                  
                   <h1 style={{ textAlign: "center", marginTop: "20px" }}>Data Barita Saat Ini Belum Ada</h1>
                 )}
               </div>
+                    {/*  */}
               <div data-aos="fade-left" class="col-lg-4 col-12">
                 <div className="sidebar-container">
                   <div class="td-sidebar">
