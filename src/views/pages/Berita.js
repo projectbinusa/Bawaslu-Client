@@ -415,7 +415,7 @@ function Berita() {
                     />
                   })
                 ) : (
-                  <h1 style={{ textAlign: "center", marginTop: "20px" }}>Data Barita Saat Ini Belum Ada</h1>
+                  <h1 style={{ textAlign: "center", marginTop: "40px", fontWeight:"bold" }}>Data Berita Saat Ini Belum Ada</h1>
                 )}
               </div>
                     {/*  */}
