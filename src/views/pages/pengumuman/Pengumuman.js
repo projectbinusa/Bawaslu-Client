@@ -86,7 +86,6 @@ function Pengumuman() {
                       <img
                         class="postcard__img"
                         src={isi.image}
-
                       />
                     </a>
                     <div class="postcard__text t-dark">
@@ -117,48 +116,6 @@ function Pengumuman() {
               })}
             </div>
           </section>
-          {/* <div className="row justify-content-center">
-            {filteredList.map((isi) => {
-              return (
-                <div data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
-                  <div
-                    className="single-blog-inner style-2 shadow"
-                    style={{ maxHeight: "800px", minHeight: "300px", borderRadius:"10px" }}
-                  >
-                    <div className="thumb">
-                      <img
-                        style={{ maxHeight: "400px", minHeight: "100px", borderTopRightRadius:"10px", borderTopLeftRadius:"10px" }}
-                        src={isi.image}
-
-                      />
-                    </div>
-                    <div className="details">
-                      <h4 className="titleee" style={{ cursor: "pointer" }}>
-                        <a
-                          style={{ color: "black", textDecoration: "none" }}
-                          href={`/pengumuman/isi-pengumuman/${isi.id}`}
-                        >
-                          {isi.judulPengumuman}
-                        </a>
-                      </h4>
-
-                      <ul className="blog-meta">
-                        <li>
-                          <i className="far fa-user"></i> {isi.author}
-                        </li>
-                        <li>
-                          <i className="far fa-calendar-alt"></i>{" "}
-                          <span>{format(new Date(isi.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
-                        </li>
-                      </ul>
-                      <p className="isiPengumuman">{isi.isiPengumuman}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div> */}
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
