@@ -88,7 +88,7 @@ function Navbar() {
                 <a href="/">
                   <img
                     src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
-                    alt="img"
+
                   />
                 </a>
               </div>
@@ -182,12 +182,12 @@ function Navbar() {
               <span className="icon-right"></span>
             </button>
           </div>
-          
+
           <div className="d-inline-block d-lg-none">
             <a href="/">
               <img
                 src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
-                alt="img"
+
               />
             </a>
           </div>

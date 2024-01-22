@@ -14,6 +14,8 @@ import {
   TwitterShareButton,
 } from "react-share";
 import AOS from "aos"
+import { format } from "date-fns";
+import idLocale from "date-fns/locale/id";
 
 function CategoryBerita() {
   const [list, setList] = useState([]);
@@ -77,42 +79,66 @@ function CategoryBerita() {
           </div>
         </div>
         <div class="row">
-          <div class="col-lg-6  mb-5 mb-sm-2">
-            <div class="position-relative image-hover">
-              <img
-                src={listTerbaru.length > 0 && listTerbaru[0].image}
-                class="img-fluid"
-                alt="world-news"
-              />
-              <span class="thumb-title">BERITA</span>
+            <div data-aos="fade-right" class="col-lg-6  mb-5 mb-sm-2">
+              <div class="position-relative image-hover">
+                <img
+                  src={listTerbaru.length > 0 && listTerbaru[0].image}
+                  class="img-fluid w-100"
+                />
+                <span class="thumb-title">BERITA</span>
+              </div>
+              <h2 class="font-weight-600 mt-3">
+                <a
+                  className="isiBerita"
+                  style={{ color: "black", textDecoration: "none" }}
+                  href={
+                    "/page-isi-berita/" + listTerbaru.length > 0 &&
+                    listTerbaru[0].author + "/" + listTerbaru.length > 0 &&
+                    listTerbaru[0].id
+                  }>
+                  {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
+                </a>{" "}
+              </h2>
+              <p class="fs-15 font-weight-normal isiBerita">
+                {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
+              </p>
             </div>
-            <h1 class="font-weight-600 mt-3">
-              {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
-            </h1>
-            <p class="fs-15 font-weight-normal isiBerita">
-              {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
-            </p>
-          </div>
-          <div class="col-lg-6  mb-5 mb-sm-2">
-            <div class="row">
-              {listTerbaru.slice(1, 5).map((berita) => {
-                return (
-                  <div class="col-sm-6  mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src={berita.image}
-                        class="img-fluid"
-                        alt="world-news"
-                      />
-                      <span class="thumb-title isiBerita">BERITA</span>
+            <div class="col-lg-6  mb-5 mb-sm-2">
+              <div class="row">
+                {listTerbaru.slice(1, 5).map((berita) => {
+                  return (
+                    <div data-aos="fade-left" class="col-sm-6  mb-5 mb-sm-2">
+                      <div class="position-relative image-hover">
+                        <img
+                          src={berita.image}
+                          class="img-fluid "
+                          style={{ maxHeight: "160px", maxWidth: "180px" }}
+                        />
+                        <span class="thumb-title isiBerita">BERITA</span>
+                      </div>
+                      <p class="font-weight-bold mt-3">
+                        <a
+                          style={{ color: "black", textDecoration: "none" }}
+                          href={
+                            "/page-isi-berita/" +
+                            berita.author +
+                            "/" +
+                            berita.id
+                          }>
+                          {berita.judulBerita}
+                        </a>
+                      </p>
+                      <span>
+                        {format(new Date(berita.createdDate), "dd MMMM yyyy", {
+                          locale: idLocale,
+                        })}
+                      </span>
                     </div>
-                    <p class="font-weight-600 mt-3">{berita.judulBerita}</p>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
       </div>
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
@@ -173,7 +199,7 @@ function CategoryBerita() {
                       <img
                         style={{ height: "450px" }}
                         src={category.image}
-                        alt="img"
+
                       />
                     </div>
                     <div className="details">

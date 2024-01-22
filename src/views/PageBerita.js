@@ -136,72 +136,67 @@ function PageBerita() {
       <div
         class="editors-news container"
         style={{ marginTop: "100px", marginBottom: "50px" }}>
-        <div class="row">
-          <div data-aos="fade-right" class="col-lg-3">
-            <div class="d-flex position-relative float-left">
-              <h3 class="section-title">Berita Terbaru</h3>
+         <div class="row">
+            <div data-aos="fade-right" class="col-lg-6  mb-5 mb-sm-2">
+              <div class="position-relative image-hover">
+                <img
+                  src={listTerbaru.length > 0 && listTerbaru[0].image}
+                  class="img-fluid w-100"
+                />
+                <span class="thumb-title">BERITA</span>
+              </div>
+              <h2 class="font-weight-600 mt-3">
+                <a
+                  className="isiBerita"
+                  style={{ color: "black", textDecoration: "none" }}
+                  href={
+                    "/page-isi-berita/" + listTerbaru.length > 0 &&
+                    listTerbaru[0].author + "/" + listTerbaru.length > 0 &&
+                    listTerbaru[0].id
+                  }>
+                  {listTerbaru.length > 0 && listTerbaru[0].judulBerita}
+                </a>{" "}
+              </h2>
+              <p class="fs-15 font-weight-normal isiBerita">
+                {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
+              </p>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div data-aos="fade-right" class="col-lg-6  mb-5 mb-sm-2">
-            <div class="position-relative image-hover">
-              <img
-                src={listTerbaru.length > 0 && listTerbaru[0].image}
-                class="img-fluid w-100"
-                alt="world-news"
-              />
-              <span class="thumb-title">BERITA</span>
-            </div>
-            <h1 class="font-weight-600 mt-3">
-              <a
-                style={{ color: "black", textDecoration: "none" }}
-                href={
-                  "/page-isi-berita/" + listTerbaru.length > 0 &&
-                  listTerbaru[0].author + "/" + listTerbaru.length > 0 &&
-                  listTerbaru[0].judulBerita
-                }></a>{" "}
-              {listTerbaru.length > 0 && listTerbaru[0].id}
-            </h1>
-            <p class="fs-15 font-weight-normal isiBerita">
-              {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
-            </p>
-          </div>
-          <div class="col-lg-6  mb-5 mb-sm-2">
-            <div class="row">
-              {listTerbaru.slice(1, 5).map((berita) => {
-                return (
-                  <div data-aos="fade-left" class="col-sm-6  mb-5 mb-sm-2">
-                    <div class="position-relative image-hover">
-                      <img
-                        src={berita.image}
-                        class="img-fluid "
-                        alt="world-news"
-                        style={{ maxHeight: "160px", maxWidth: "180px" }}
-                      />
-                      {/*  */}
-                      <span class="thumb-title isiBerita">BERITA</span>
+            <div class="col-lg-6  mb-5 mb-sm-2">
+              <div class="row">
+                {listTerbaru.slice(1, 5).map((berita) => {
+                  return (
+                    <div data-aos="fade-left" class="col-sm-6  mb-5 mb-sm-2">
+                      <div class="position-relative image-hover">
+                        <img
+                          src={berita.image}
+                          class="img-fluid "
+                          style={{ maxHeight: "160px", maxWidth: "180px" }}
+                        />
+                        <span class="thumb-title isiBerita">BERITA</span>
+                      </div>
+                      <p class="font-weight-bold mt-3">
+                        <a
+                          style={{ color: "black", textDecoration: "none" }}
+                          href={
+                            "/page-isi-berita/" +
+                            berita.author +
+                            "/" +
+                            berita.id
+                          }>
+                          {berita.judulBerita}
+                        </a>
+                      </p>
+                      <span>
+                        {format(new Date(berita.createdDate), "dd MMMM yyyy", {
+                          locale: idLocale,
+                        })}
+                      </span>
                     </div>
-                    <p class="font-weight-bold mt-3">
-                      <a
-                        style={{ color: "black", textDecoration: "none" }}
-                        href={
-                          "/page-isi-berita/" + berita.author + "/" + berita.id
-                        }>
-                        {berita.judulBerita}
-                      </a>
-                    </p>
-                    <span>
-                      {format(new Date(berita.createdDate), "dd MMMM yyyy", {
-                        locale: idLocale,
-                      })}
-                    </span>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
       </div>
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
@@ -214,34 +209,13 @@ function PageBerita() {
                       <div class="tags d-inline-block"></div>
                     </div>
                     <div className="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                      <div className="blog-share">
-                        <ul>
-                          <li>
-                            <FacebookShareButton
-                              url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${param.id}`}
-                              media={image}
-                              quote={judulBerita}>
-                              <FacebookIcon size={38} round={true} />
-                            </FacebookShareButton>
-                          </li>
-                          <li>
-                            <TwitterShareButton
-                              url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${param.id}`}
-                              media={image}
-                              title={judulBerita}>
-                              <TwitterIcon size={38} round={true} />
-                            </TwitterShareButton>
-                          </li>
-                          <li>
-                            <PinterestShareButton
-                              url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${param.id}`}
-                              quote={judulBerita}
-                              media={image}>
-                              <PinterestIcon size={38} round={true} />
-                            </PinterestShareButton>
-                          </li>
-                        </ul>
-                      </div>
+                    <ShareButtons
+        url={`https://bawaslu.excellentsistem.com/page-isi-berita/${author}/${param.id}`}
+        image={image}
+        description={isiBerita}
+        quote={judulBerita}
+        title={judulBerita}
+      />
                     </div>
                   </div>
                 </div>
@@ -250,10 +224,10 @@ function PageBerita() {
                     <img
                       style={{ height: "450px" }}
                       src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
-                      alt="img"
+
                     />
                   ) : (
-                    <img style={{ height: "450px" }} src={image} alt="img" />
+                    <img style={{ height: "450px" }} src={image}  />
                   )}
                 </div>
                 <div class="details">

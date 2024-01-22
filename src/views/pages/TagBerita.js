@@ -54,7 +54,7 @@ function TagBerita() {
                       <img
                         className="img-tag"
                         src="https://i0.wp.com/fahum.umsu.ac.id/wp-content/uploads/2023/07/apa-itu-kampanye-sejarah-perkembangan-dan-jenisnya.jpg?resize=700%2C375&ssl=1"
-                        alt=""
+
                       />
                     </div>
                     <div className="kmpnye">

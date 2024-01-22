@@ -14,7 +14,7 @@ import AOS from "aos";
 function InformasiBerkala() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <div>
       <Navbar />

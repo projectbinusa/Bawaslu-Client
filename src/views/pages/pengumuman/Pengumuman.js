@@ -79,6 +79,7 @@ function Pengumuman() {
 
           <section class="light"  data-aos="fade-right">
             <div class="container py-2" >
+<<<<<<< HEAD
             {filteredList.length > 0 ? (
   filteredList.map((isi) => (
     <article class="postcard light blue" data-aos="zoom-in">
@@ -103,6 +104,43 @@ function Pengumuman() {
             <span className="text-black">
               {format(new Date(isi.createdDate), "dd MMMM yyyy", {
                 locale: idLocale,
+=======
+              {filteredList.map((isi) => {
+                return (
+                  <article class="postcard light blue" data-aos="zoom-in">
+                    <a class="postcard__img_link" href="#">
+                      <img
+                        class="postcard__img"
+                        src={isi.image}
+
+                      />
+                    </a>
+                    <div class="postcard__text t-dark">
+                      <h1 class="postcard__title blue">
+                        <a
+                          href={`/pengumuman/isi-pengumuman/${isi.id}`}
+                          style={{ color: "black", textDecoration: "none" }}>
+                          {isi.judulPengumuman}
+                        </a>
+                      </h1>
+                      <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                          <i class="fas fa-calendar-alt mr-2 text-black"></i>
+                          <span className="text-black">
+                            {format(new Date(isi.createdDate), "dd MMMM yyyy", {
+                              locale: idLocale,
+                            })}
+                          </span>
+                        </time>
+                      </div>
+                      <div class="postcard__bar"></div>
+                      <div class="postcard__preview-txt text-black">
+                        {isi.isiPengumuman}
+                      </div>
+                    </div>
+                  </article>
+                );
+>>>>>>> 46d26adf7e1d0c62769536e1af9e09445d25e62e
               })}
             </span>
           </time>
@@ -136,7 +174,7 @@ function Pengumuman() {
                       <img
                         style={{ maxHeight: "400px", minHeight: "100px", borderTopRightRadius:"10px", borderTopLeftRadius:"10px" }}
                         src={isi.image}
-                        alt="img"
+
                       />
                     </div>
                     <div className="details">

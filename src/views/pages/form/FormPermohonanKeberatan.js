@@ -72,7 +72,7 @@ const FormPermohonaKeberatan = () => {
 
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <>
       <div>

@@ -26,12 +26,12 @@ function BiayaLayanan() {
         <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
         {/* <!-- about area start --> */}
         <div className="about-area ">
@@ -41,7 +41,7 @@ function BiayaLayanan() {
           data-aos="fade-right" className="col-lg-6 col-md-9 mb-5 mb-lg-0">
                 <div className="about-mask-bg-wrap about-mask-bg-wrap-4">
                   <div className="thumb">
-                    <img src={biaya} alt="img" />
+                    <img src={biaya}  />
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ function BiayaLayanan() {
                 <img
                     className="shape-image-sm top_image_bounce"
                     src="https://solverwp.com/demo/html/itechie/assets/img/about/4sm.webp"
-                    alt="img"
+
                   />
               </div>
             </div>

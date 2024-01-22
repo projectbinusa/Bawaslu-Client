@@ -200,37 +200,19 @@ function Home() {
           </div>
         </div>
 
-        <div
-          id="carouselExampleFade"
-          className="carousel slide carousel-fade container"
-        >
+        <div id="carouselExampleFade" className="carousel slide carousel-fade container">
           <div className="carousel-inner">
-            {listCaraousel.length > 0 ? (
-              listCaraousel.map((item, index) => (
-                <div
-                  key={item.id}
-                  className={`carousel-item ${index === 0 ? "active" : ""}`}
-                >
-                  <img
-                    src={item.foto}
-                    className="d-block w-100 shadow"
-                    alt={item.namaCarousel}
-                  />
-                </div>
-              ))
-            ) : (
-              <div>
-                <h1
-                  style={{
-                    marginTop: "200px",
-                    marginBottom: "20px",
-                    textAlign: "center",
-                  }}
-                >
-                  Tidak ada Carousel yang tersedia.
-                </h1>
+            {listCaraousel.map((item, index) => (
+              <div
+                key={item.id}
+                className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                <img
+                  src={item.foto}
+                  className="d-block w-100 shadow"
+                  alt={item.namaCarousel}
+                />
               </div>
-            )}
+            ))}
           </div>
 
           <button
@@ -284,7 +266,7 @@ function Home() {
                         <img
                           style={{ width: "200px" }}
                           src={berita.image}
-                          alt="blog"
+
                         />
                       </div>
                       <div className="media-body align-self-center">
@@ -335,7 +317,10 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={bawasluRI} alt="" />
+                    <img
+                      src={bawasluRI}
+                      alt=""
+                    />
                   </a>
                 </li>
                 <li>
@@ -344,7 +329,10 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={dkpp} alt="" />
+                    <img
+                      src={dkpp}
+                      alt=""
+                    />
                   </a>
                 </li>
                 <li>
@@ -353,7 +341,10 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={mahkama} alt="" />
+                    <img
+                      src={mahkama}
+                      alt=""
+                    />
                   </a>
                 </li>
                 <li>
@@ -362,12 +353,18 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={kpu} alt="" />
+                    <img
+                      src={kpu}
+                      alt=""
+                    />
                   </a>
                 </li>
                 <li>
                   <a href="https://jateng.bawaslu.go.id/" target="_blank">
-                    <img src={bawasluJateng} alt="" />
+                    <img
+                      src={bawasluJateng}
+                      alt=""
+                    />
                   </a>
                 </li>
               </ul>
@@ -462,22 +459,22 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Informasi Berkala</h3>
                   </div>
                   <a href="/informasi-berkala">
-                    <div className="details-hover-wrap">
-                      <div className="details-hover">
-                        <img
-                          className="d-block w-100"
-                          src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
-                        />
-                        <h3>Informasi Berkala</h3>
-                      </div>
+                  <div className="details-hover-wrap">
+                    <div className="details-hover">
+                      <img
+                        className="d-block w-100"
+                        src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
+                        alt="Second slide"
+                      />
+                      <h3>Informasi Berkala</h3>
                     </div>
-                  </a>
+                  </div>
+                  </a>                                                                                                                                                                                                                                                        
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
@@ -486,7 +483,7 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Informasi Setiap Saat</h3>
                   </div>
@@ -496,7 +493,7 @@ function Home() {
                         <img
                           className="d-block w-100"
                           src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
+
                         />
                         <h3>Informasi Setiap Saat</h3>
                       </div>
@@ -510,7 +507,7 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Informasi Serta Merta</h3>
                   </div>
@@ -520,7 +517,7 @@ function Home() {
                         <img
                           className="d-block w-100"
                           src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
+
                         />
                         <h3>Informasi Serta Merta</h3>
                       </div>
@@ -534,7 +531,7 @@ function Home() {
                     <img
                       className="d-block w-100"
                       src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                      alt="Second slide"
+
                     />
                     <h3>Infromasi Di Kecualikan</h3>
                   </div>
@@ -544,7 +541,7 @@ function Home() {
                         <img
                           className="d-block w-100"
                           src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-                          alt="Second slide"
+
                         />
                         <h3>Infromasi Di Kecualikan</h3>
                       </div>
@@ -574,7 +571,6 @@ function Home() {
               <div class="position-relative">
                 <img
                   src={pengumuman.length > 0 && pengumuman[0].image}
-                  alt="banner"
                   class="img-fluid"
                 />
                 <div class="banner-content">
@@ -608,7 +604,6 @@ function Home() {
                           <img
                             src={png.image}
                             class="img-xs img-rounded mr-2"
-                            alt="thumb"
                           />
                         </div>
                         <div class="badge badge-danger fs-12 font-weight-bold mb-3">

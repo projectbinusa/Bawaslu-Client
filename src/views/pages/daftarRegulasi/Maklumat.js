@@ -11,7 +11,7 @@ function Maklumat() {
 
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <>
       <Navbar />
@@ -27,25 +27,25 @@ function Maklumat() {
        <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
       <div className="container">
   <div className="row">
     <div id="thumb-img" className="col-xl-5 col-lg-6 col-md-9 mt-5" data-aos="fade-right">
       <div className="thumb">
-        <img src={maklumat} alt="img" />
+        <img src={maklumat}  />
       </div>
     </div>
 
     <div className="col-xl-7 col-lg-6 mt-5" data-aos="fade-left">
       <div className="section-title px-lg-5 mb-0">
         <h2 className="title mb-4">
-          <img src="https://www.solverwp.com/demo/html/itechie/assets/img/about/01.webp" alt="img" />
+          <img src="https://www.solverwp.com/demo/html/itechie/assets/img/about/01.webp"  />
           Maklumat Pelayanan Informasi PPID Bawaslu Kabupaten Boyolali
         </h2>
         <p>

@@ -38,8 +38,7 @@ function Berita() {
   const getAll = async (page) => {
     try {
       const response = await axios.get(
-        `${API_DUMMY}/bawaslu/api/berita/all?page=${
-          page - 1
+        `${API_DUMMY}/bawaslu/api/berita/all?page=${page - 1
         }&size=10&sortBy=id&sortOrder=desc`
       );
       setList(response.data.data.content);
@@ -232,7 +231,6 @@ function Berita() {
                 <img
                   src={listTerbaru.length > 0 && listTerbaru[0].image}
                   class="img-fluid w-100"
-                  alt="world-news"
                 />
                 <span class="thumb-title">BERITA</span>
               </div>
@@ -259,7 +257,6 @@ function Berita() {
                         <img
                           src={berita.image}
                           class="img-fluid "
-                          alt="world-news"
                           style={{ maxHeight: "160px", maxWidth: "180px" }}
                         />
                         <span class="thumb-title isiBerita">BERITA</span>
@@ -336,15 +333,14 @@ function Berita() {
                         })}
                       </div>
                     </div>
-                    {/*  */}
                   </div>
                 </div>
-                {/* <hr className="mt-0" /> */}
                 {list.length > 0 ? (
                   list.map((berita) => {
                     return (
                       <div class="single-blog-inner">
                         <div class="tag-and-share">
+
                           <div class="row">
                             <div class="col-sm-7"></div>
                             <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
@@ -381,7 +377,7 @@ function Berita() {
                           <img
                             style={{ height: "450px" }}
                             src={berita.image}
-                            alt="img"
+
                           />
                         </div>
                         <div class="details">
@@ -409,100 +405,18 @@ function Berita() {
                         </div>
                       </div>
                     );
+                    <Pagination
+                      count={paginationInfo.totalPages}
+                      color="primary"
+                      page={currentPage}
+                      onChange={(event, value) => setCurrentPage(value)}
+                    />
                   })
                 ) : (
-                  <div class="single-blog-inner">
-                    <div class="tag-and-share">
-                      <div class="row">
-                        <div class="col-sm-7">
-                          <div class="tags d-inline-block">
-                            <button className="border">
-                              <i class="fa-regular fa-thumbs-up"></i>
-                            </button>
-                            <button className="border">
-                              <i class="fa-regular fa-thumbs-down"></i>
-                            </button>
-                          </div>
-                        </div>
-                        <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-                          <div class="blog-share">
-                            <ul>
-                              <li>
-                                <a href="#">
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#45629f",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      class="fab fa-facebook-f"
-                                      aria-hidden="true"></i>{" "}
-                                    Facebook
-                                  </button>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#">
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#5eb2ef",
-                                    }}
-                                    className="border p-2">
-                                    <i
-                                      class="fab fa-twitter"
-                                      aria-hidden="true"></i>{" "}
-                                    Twitter
-                                  </button>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#">
-                                  <button
-                                    style={{
-                                      color: "white",
-                                      backgroundColor: "#cf2830",
-                                    }}
-                                    className="border p-2">
-                                    <i class="fa-brands fa-pinterest"></i> Pin
-                                  </button>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="thumb">
-                      <img
-                        style={{ height: "450px" }}
-                        src="https://tapanuliutara.bawaslu.go.id/wp-content/uploads/2019/09/punya-logo-baru-bawaslu-kian-bersemangat-iil.jpg"
-                        alt="img"
-                      />
-                    </div>
-                    <div class="details">
-                      <h2>
-                        <a href="">Contoh Berita</a>
-                      </h2>
-                      <ul class="blog-meta">
-                        <li>
-                          <i class="far fa-user"></i>BY admin
-                        </li>
-                        <li>
-                          <i class="far fa-calendar-alt"></i> 2023-05-12
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <h1 style={{ textAlign: "center", marginTop: "40px", fontWeight:"bold" }}>Data Berita Saat Ini Belum Ada</h1>
                 )}
-                <Pagination
-                  count={paginationInfo.totalPages}
-                  color="primary"
-                  page={currentPage}
-                  onChange={(event, value) => setCurrentPage(value)}
-                />
               </div>
+                    {/*  */}
               <div data-aos="fade-left" class="col-lg-4 col-12">
                 <div className="sidebar-container">
                   <div class="td-sidebar">
@@ -516,6 +430,43 @@ function Berita() {
                       }}>
                       <h4 class="widget-title">
                         <i class="fa-solid fa-newspaper"></i> Berita Terbaru
+                        {listTerbaru.length > 0 ? (
+                          <ul>
+                            {listTerbaru.map((beritaTerbaru) => (
+                              <li key={beritaTerbaru.id}>
+                                <div class="media">
+                                  <div class="media-left">
+                                    <img
+                                      src={logoBawaslu}
+                                      style={{ width: "90px" }}
+
+                                    />
+                                  </div>
+                                  <div class="media-body align-self-center">
+                                    <h6 class="title">
+                                      <a
+                                        href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>
+                                        {beritaTerbaru.judulBerita}
+                                      </a>
+                                    </h6>
+                                    <div class="post-info">
+                                      <i class="far fa-calendar-alt"></i>
+                                      <span>
+                                        {format(
+                                          new Date(beritaTerbaru.createdDate),
+                                          "dd MMMM yyyy",
+                                          { locale: idLocale }
+                                        )}
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <h2 className="title">Tidak Ada Data Berita Terbaru</h2>
+                        )}
                       </h4>
                       <ul>
                         {listTerbaru.map((beritaTerbaru) => {
@@ -526,7 +477,7 @@ function Berita() {
                                   <img
                                     src={logoBawaslu}
                                     style={{ width: "90px" }}
-                                    alt="blog"
+
                                   />
                                 </div>
                                 <div class="media-body align-self-center">

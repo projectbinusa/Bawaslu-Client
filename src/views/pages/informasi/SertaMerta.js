@@ -12,10 +12,10 @@ import AOS from "aos";
 
 
 function SertaMerta() {
-  
+
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     <div>
       <Navbar />

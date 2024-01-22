@@ -72,7 +72,7 @@ const FormPermohonanInformasi = () => {
 
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
 
   return (
     <>

@@ -199,7 +199,7 @@ function MenuInformasi() {
                           <img
                             style={{ width: "150px" }}
                             src={inf.pdfDokumen}
-                            alt=""
+
                           />
                         </td>
                         <td class="text-center">

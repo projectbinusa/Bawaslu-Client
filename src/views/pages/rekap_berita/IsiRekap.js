@@ -118,7 +118,7 @@ function IsiRekap() {
                   </div>
                 </div>
                 <div className="thumb">
-                  <img style={{ height: "450px" }} src={image} alt="img" />
+                  <img style={{ height: "450px" }} src={image}  />
                 </div>
                 <div className="details">
                   <h2>

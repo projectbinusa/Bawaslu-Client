@@ -225,7 +225,6 @@ function AdminPengumuman() {
                             <img
                               style={{ width: "100px" }}
                               src={pengumuman.image}
-                              alt="pengumuman"
                             />
                           </td>
                           <td

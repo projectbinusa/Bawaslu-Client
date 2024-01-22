@@ -8,7 +8,7 @@ import AOS from "aos";
 function PermohonanKeberatan() {
   useEffect(() => {
     AOS.init();
-  });
+  },[]);
   return (
     //  how it work area start
     <>
@@ -26,12 +26,12 @@ function PermohonanKeberatan() {
         <img
           className="shape-left-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/3.webp"
-          alt="img"
+
         />
         <img
           className="shape-right-top top_image_bounce"
           src="https://www.solverwp.com/demo/html/itechie/assets/img/shape/4.webp"
-          alt="img"
+
         />
         <div className="row justify-content-center p-3 p-lg-0">
           <div
@@ -40,7 +40,7 @@ function PermohonanKeberatan() {
             <div className="thumb">
               <img style={{marginTop:"50px"}}
                 src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/tab/2.webp"
-                alt="img"
+
               />
             </div>
           </div>
@@ -61,7 +61,7 @@ function PermohonanKeberatan() {
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-2.webp"
-                  alt="img"
+
                 />
               </div>
               <div className="details">
@@ -77,7 +77,7 @@ function PermohonanKeberatan() {
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-4.webp"
-                  alt="img"
+
                 />
               </div>
               <div className="details">
@@ -96,7 +96,7 @@ function PermohonanKeberatan() {
             data-aos="fade-right"
             className="col-lg-6 col-md-9 px-xl-5 align-self-center">
             <div className="thumb mb-4">
-              <img src={keberatan} style={{ width: "100%" }} alt="img" />
+              <img src={keberatan} style={{ width: "100%" }}  />
             </div>
           </div>
           <div
@@ -110,7 +110,7 @@ function PermohonanKeberatan() {
               <div className="thumb border-bottom">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-3.webp"
-                  alt="img"
+
                 />
               </div>
               <div data-aos="fade-left" className="details">
@@ -123,7 +123,7 @@ function PermohonanKeberatan() {
             </div>
             {/* <div className="single-security-wrap-2">
               <div className="thumb border-bottom">
-                <img src="assets/img/home-cyber/about/icon-4.webp" alt="img" />
+                <img src="assets/img/home-cyber/about/icon-4.webp"  />
               </div>
               <div className="details">
                 <h5>Menerima Tanggapan</h5>
@@ -139,7 +139,7 @@ function PermohonanKeberatan() {
               <div className="thumb">
                 <img
                   src="https://www.solverwp.com/demo/html/itechie/assets/img/home-cyber/about/icon-5.webp"
-                  alt="img"
+
                 />
               </div>
               <div className="details">

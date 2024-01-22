@@ -161,14 +161,15 @@ function AdminSertaMerta() {
                 // value={rowsPerPage}
                 // alfy
               >
-              <option value="">Pilih Jenis Informasi</option>
-                    <option value="15">Hasil Pengawasan</option>;
-                    <option value="16">Analisa Calon Terpilih</option>;
-                    <option value="19">Laporan Akhir Pengawasan</option>;
-                    <option value="20">Penanganan Pelanggaran</option>;
-                    <option value="21">Naskah Perjanjian Hibah Daerah</option>;
-                    <option value="22">Layanan Pengaduan Publik</option>;
-                    <option value="23">Sarana Partisipasi Publik</option>
+               <option value="">Pilih Jenis Informasi</option>
+                    <option value="1">Putusan Pelanggaran</option>;
+                    <option value="2">Sengketa Proses Pemilu</option>;
+                    <option value="3">Pemungutan Suara Ulang</option>;
+                    <option value="4">Organisasi Dan Adminstrasi</option>;
+                    <option value="5">Perselisihan Hasil Pemilu</option>;
+                    <option value="6">Sosialisasi</option>;
+                    <option value="7">Piagam Penghargaan</option>
+
               </select>
             </div>
           </div>
@@ -209,14 +210,15 @@ function AdminSertaMerta() {
                     aria-label="Small select example"
                     onChange={handleChange}
                   >
-                    <option value="">Pilih Jenis Informasi</option>
-                    <option value="15">Hasil Pengawasan</option>;
-                    <option value="16">Analisa Calon Terpilih</option>;
-                    <option value="19">Laporan Akhir Pengawasan</option>;
-                    <option value="20">Penanganan Pelanggaran</option>;
-                    <option value="21">Naskah Perjanjian Hibah Daerah</option>;
-                    <option value="22">Layanan Pengaduan Publik</option>;
-                    <option value="23">Sarana Partisipasi Publik</option>
+                     <option value="">Pilih Jenis Informasi</option>
+                    <option value="1">Putusan Pelanggaran</option>;
+                    <option value="2">Sengketa Proses Pemilu</option>;
+                    <option value="3">Pemungutan Suara Ulang</option>;
+                    <option value="4">Organisasi Dan Adminstrasi</option>;
+                    <option value="5">Perselisihan Hasil Pemilu</option>;
+                    <option value="6">Sosialisasi</option>;
+                    <option value="7">Piagam Penghargaan</option>
+
                   </select>
                   <div className="btn-actions-pane-right">
                     <div
@@ -290,7 +292,7 @@ function AdminSertaMerta() {
                               >
                                 <i className="fa-solid fa-trash"></i>
                               </button>
-                            
+
                             </div>
                           </td>
                         </tr>

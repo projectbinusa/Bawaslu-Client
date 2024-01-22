@@ -15,7 +15,7 @@ function Profil() {
 
   useEffect(() => {
     AOS.init();
-  })
+  },[])
   return (
     <div>
       <Navbar />
@@ -197,7 +197,7 @@ function Profil() {
           data-aos="fade-left" className="col-lg-6 mt-4 mt-lg-0 img-profil">
               <img
                 src="https://img.freepik.com/free-vector/profile-data-concept-illustration_114360-2770.jpg?size=626&ext=jpg&ga=GA1.1.1464020286.1696819460&semt=sph"
-                alt=""
+
               />
             </div>
           </div>
@@ -210,7 +210,7 @@ function Profil() {
             <img
               style={{ borderRadius: "10px" }}
               src="https://lp2m.uma.ac.id/wp-content/uploads/2022/02/OrganisasiUMA.jpg"
-              alt="img"
+
             />
             {/*  */}
           </div>
@@ -228,7 +228,7 @@ function Profil() {
             <div id="img-struktur" className="thumb border-bottom d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
-                alt="img"
+
               />
             </div>
             <div className="details">
@@ -241,7 +241,7 @@ function Profil() {
             <div id="img-struktur" className="thumb border-bottom d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
-                alt="img"
+
               />
             </div>
             <div className="details">
@@ -254,7 +254,7 @@ function Profil() {
             <div id="img-struktur"  className="thumb border-bottom d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
-                alt="img"
+
               />
             </div>
             <div className="details">
@@ -270,7 +270,7 @@ function Profil() {
             <div  id="img-struktur"  className="thumb d-lg-flex d-md-none d-none">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1053/1053244.png"
-                alt="img"
+
               />
             </div>
             <div className="details">
@@ -301,7 +301,7 @@ function Profil() {
             <img
               className="hills-line"
               src="https://solverwp.com/demo/html/itechie/assets/img/shape/1.webp"
-              alt="img"
+
             />
             <div className="row">
               <div className="col-lg-3 col-md-6">
