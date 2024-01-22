@@ -170,50 +170,65 @@ function Home() {
           style={{ minHeight: "100ppx" }}
         >
           <div className="container">
-            <div className="row justify-content-center">
-              {listTerbaru.slice(1, 4).map((berita, index) => (
-                <div className="col-lg-4 col-md-6">
-                  <div
-                    className="single-intro-inner shadow p-3 mb-5 rounded"
-                    style={{
-                      background: "#F1F6F9",
-                      maxHeight: "200px",
-                      minHeight: "200px",
-                    }}
-                  >
-                    <div className="thumb media">
-                      <div className="media-left">
-                        <i className="fa-solid fa-newspaper"></i>
-                      </div>
-                      <div className="media-body align-self-center">
-                        <h4>Berita</h4>
-                      </div>
-                    </div>
-                    <div className="details isiBerita">
-                      <p>{berita.judulBerita}</p>
-                    </div>
-                    <br />
-                  </div>
-                </div>
-              ))}
+          <div className="row justify-content-center">
+  {listTerbaru.length > 0 ? (
+    listTerbaru.map((berita, index) => (
+      <div className="col-lg-4 col-md-6" key={index}>
+        <div
+          className="single-intro-inner shadow p-3 mb-5 rounded"
+          style={{
+            background: "#F1F6F9",
+            maxHeight: "200px",
+            minHeight: "200px",
+          }}
+        >
+          <div className="thumb media">
+            <div className="media-left">
+              <i className="fa-solid fa-newspaper"></i>
             </div>
+            <div className="media-body align-self-center">
+              <h4>Berita</h4>
+            </div>
+          </div>
+          <div className="details isiBerita">
+            <p>{berita.judulBerita}</p>
+          </div>
+          <br />
+        </div>
+      </div>
+    ))
+  ) : (
+    <h1 style={{ textAlign: "center", marginTop: "40px", fontWeight: "bold" }}>
+      Data Berita Saat Ini Belum Ada
+    </h1>
+  )}
+</div>
+
           </div>
         </div>
 
         <div id="carouselExampleFade" className="carousel slide carousel-fade container">
-          <div className="carousel-inner">
-            {listCaraousel.map((item, index) => (
-              <div
-                key={item.id}
-                className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                <img
-                  src={item.foto}
-                  className="d-block w-100 shadow"
-                  alt={item.namaCarousel}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="carousel-inner">
+  {listCaraousel.length > 0 ? (
+    listCaraousel.map((item, index) => (
+      <div
+        key={item.id}
+        className={`carousel-item ${index === 0 ? "active" : ""}`}
+      >
+        <img
+          src={item.foto}
+          className="d-block w-100 shadow"
+          alt={item.namaCarousel}
+        />
+      </div>
+    ))
+  ) : (
+    <h1 style={{ textAlign: "center", marginTop: "200px", marginBottom: "40px", fontWeight: "bold" }}>
+      Data Carousel Saat Ini Belum Ada
+    </h1>
+  )}
+</div>
+
 
           <button
             className="carousel-control-prev"
@@ -632,7 +647,7 @@ function Home() {
           </>
           ):(
             <div>
-            <h1 style={{marginTop: "20px", textAlign: "center"}}>Tidak ada pengumuman  yang tersedia.</h1>
+            <h1 style={{marginTop: "20px", textAlign: "center",  fontWeight:"bold"}}>Data Pengumuman Saat Ini Belum Ada</h1>
           </div>
           )}
         </div>
