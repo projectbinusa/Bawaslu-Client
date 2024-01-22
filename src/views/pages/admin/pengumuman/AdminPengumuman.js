@@ -198,7 +198,7 @@ function AdminPengumuman() {
                 >
                   <thead>
                     <tr>
-                      <th scope="col" className="nomor">
+                      <th className="nomor">
                         No
                       </th>
                       <th scope="col" style={{ minWidth: "150px" }}>
@@ -207,7 +207,7 @@ function AdminPengumuman() {
                       <th scope="col">Image</th>
                       <th scope="col">Isi Pengumuman</th>
                       <th scope="col">Penulis</th>
-                      <th scope="col" className="text-center">
+                      <th className="text-center">
                         Aksi
                       </th>
                     </tr>

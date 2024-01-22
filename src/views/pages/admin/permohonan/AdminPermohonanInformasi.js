@@ -182,44 +182,44 @@ function AdminPermohonanInformasi() {
                   >
                     <thead>
                       <tr>
-                        <th scope="col" className="text-left">
+                        <th className="text-left">
                           No
                         </th>
-                        <th scope="col" className="text-left">
+                        <th className="text-left">
                           Nama
                         </th>
-                        {/* <th scope="col" className="text-left">
+                        {/* <th className="text-left">
                           No Hp
                         </th>
-                        <th scope="col" className="text-left">
+                        <th className="text-left">
                           Alamat Pemohon
                         </th> */}
-                        <th scope="col" className="text-left">
+                        <th className="text-left">
                           Cara Memperoleh{" "}
                         </th>
-                        {/* <th scope="col" className="text-left">
+                        {/* <th className="text-left">
                           Cara Mendapat salinan{" "}
                         </th> */}
-                        <th scope="col" className="text-left">
+                        <th className="text-left">
                           Email{" "}
                         </th>
-                        <th scope="col" className="text-left">
+                        <th className="text-left">
                           Foto Identitas Pemohon{" "}
                         </th>
 
-                        {/* <th scope="col" className="text-center">
+                        {/* <th className="text-center">
                           Jenis Identitas
                         </th>
-                        {/* <th scope="col" className="text-center">
+                        {/* <th className="text-center">
                           Nomor Identitas Pemohon{" "}
                         </th> */}
-                        {/* <th scope="col" className="text-center">
+                        {/* <th className="text-center">
                           Rincian Yang Dibutuhkan
                         </th> */}
-                        {/* <th scope="col" className="text-center">
+                        {/* <th className="text-center">
                           Tujuan Penggunaan Informasi
                         </th> */}
-                        <th scope="col" className="text-center">
+                        <th className="text-center">
                           Aksi
                         </th>
                       </tr>
