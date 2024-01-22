@@ -36,10 +36,10 @@ function PeraturanMahkamahAgung() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                    <td className="" data-cell="dokumen" style={{ width: "500px" }}>
+                    <td data-cell="dokumen" style={{ width: "500px" }}>
                       {item.namaDokumen}
                     </td>
-                    <td className=""  style={{
+                    <td  style={{
 
                     display: "flex",
                     justifyContent: "center",
