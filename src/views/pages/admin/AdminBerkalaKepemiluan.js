@@ -254,7 +254,7 @@ function AdminBerkalaKepemiluan() {
                       <tr>
                         <th scope="col">No</th>
                         <th scope="col">Dokumen</th>
-                        <th scope="col" className="text-center">
+                        <th className="text-center">
                           Aksi
                         </th>
                       </tr>

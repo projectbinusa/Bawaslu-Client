@@ -26,11 +26,11 @@ function PutusanPelanggaran() {
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col" className="text-center">
+              <th className="text-center">
                 {" "}
                 Dokumen
               </th>
-              <th scope="col" className="text-center">
+              <th className="text-center">
                 {" "}
                 Pdf Document
               </th>
@@ -55,12 +55,12 @@ function PutusanPelanggaran() {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                   
+
                       }}
                     >
                       <a
                         href={item.pdfDokumen}
-                      
+
                       >
                         <button
                           className="bg-primary text-light ml-auto"

@@ -27,8 +27,8 @@ function PeraturanMahkamahAgung() {
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col" className="text-center"> Dokumen</th>
-              <th scope="col" className="text-center"> Pdf Document</th>
+              <th className="text-center"> Dokumen</th>
+              <th className="text-center"> Pdf Document</th>
             </tr>
           </thead>
           <tbody>

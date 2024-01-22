@@ -26,8 +26,8 @@ function Imbauan() {
         <table className="table table1 responsive-3 table-striped table-hover border rounded">
           <thead>
             <tr>
-              <th scope="col" className="text-center"> Dokumen</th>
-              <th scope="col" className="text-center"> Pdf Document</th>
+              <th className="text-center"> Dokumen</th>
+              <th className="text-center"> Pdf Document</th>
             </tr>
           </thead>
           <tbody>
@@ -35,7 +35,7 @@ function Imbauan() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                   
+
                     <td className="" data-cell="dokumen" scope="row" style={{ width: "500px" }}>
                       {item.dokumen}
                     </td>
@@ -43,7 +43,7 @@ function Imbauan() {
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                   
+
                       }}>
                       <a href={item.pdfDokumen}>
                         <button

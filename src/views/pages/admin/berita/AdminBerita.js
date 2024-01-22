@@ -288,10 +288,10 @@ function AdminBerita() {
                 <thead>
                   <tr>
                     <th scope="col">No</th>
-                    <th scope="col" className="text-long">
+                    <th className="text-long">
                       Judul Berita
                     </th>
-                    {/* <th scope="col" className="text-center">
+                    {/* <th className="text-center">
                       Isi Berita
                     </th> */}
                     <th
@@ -301,10 +301,10 @@ function AdminBerita() {
                     >
                       Penulis Berita
                     </th>
-                    <th scope="col" className="text-left">
+                    <th className="text-left">
                       Image
                     </th>
-                    <th scope="col" className="text-center">
+                    <th className="text-center">
                       Aksi
                     </th>
                   </tr>

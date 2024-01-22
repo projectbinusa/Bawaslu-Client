@@ -180,25 +180,25 @@ function AdminPermohonanKeberatan() {
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th scope="col" className="text-left">
+                    <th className="text-left">
                       No
                     </th>
-                    <th scope="col" className="text-left">
+                    <th className="text-left">
                       Nama
                     </th>
-                    <th scope="col" className="text-left">
+                    <th className="text-left">
                       Email
                     </th>
-                    <th scope="col" className="text-left">
+                    <th className="text-left">
                       Alamat
                     </th>
-                    <th scope="col" className="text-left">
+                    <th className="text-left">
                       No Telp
                     </th>
-                    <th scope="col" className="text-left">
+                    <th className="text-left">
                       Foto Identitas{" "}
                     </th>
-                    <th scope="col" className="text-center">
+                    <th className="text-center">
                       Aksi
                     </th>
                   </tr>

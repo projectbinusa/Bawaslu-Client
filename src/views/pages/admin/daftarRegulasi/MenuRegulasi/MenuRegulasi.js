@@ -111,7 +111,7 @@ function MenuRegulasi() {
                 <option value={20}>20</option>
               </select>
             </div>
-           
+
           </div>
           <div className="search">
             <input
@@ -168,13 +168,13 @@ function MenuRegulasi() {
             <table className="align-middle mb-0 table  table-striped table-hover" >
                 <thead>
                   <tr>
-                    <th scope="col" className="text-center">
+                    <th className="text-center">
                       No
                     </th>
-                    <th scope="col" className="text-center">
+                    <th className="text-center">
                       Menu Regulasi
                     </th>
-                    <th scope="col" className="text-center">
+                    <th className="text-center">
                       Aksi
                     </th>
                   </tr>
@@ -237,7 +237,7 @@ function MenuRegulasi() {
           </div>
         </div>
       </div>
-      
+
     </div>
   );
 }

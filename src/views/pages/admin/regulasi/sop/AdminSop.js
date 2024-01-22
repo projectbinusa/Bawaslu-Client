@@ -227,13 +227,13 @@ function AdminSop() {
                   <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                     <thead>
                       <tr>
-                        <th scope="col" className="text-center">
+                        <th className="text-center">
                           No
                         </th>
                         <th scope="col">
                           Dokumen
                         </th>
-                        <th scope="col" className="text-center">
+                        <th className="text-center">
                           Aksi
                         </th>
                       </tr>
