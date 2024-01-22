@@ -240,9 +240,9 @@ function Berita() {
                   href={
                     "/page-isi-berita/" + listTerbaru.length > 0 &&
                     listTerbaru[0].author + "/" + listTerbaru.length > 0 &&
-                    listTerbaru[0].judulBerita
-                  }></a>{" "}
-                {listTerbaru.length > 0 && listTerbaru[0].id}
+                    listTerbaru[0].id
+                  }>
+                {listTerbaru.length > 0 && listTerbaru[0].judulBerita}</a>{" "}
               </h1>
               <p class="fs-15 font-weight-normal isiBerita">
                 {listTerbaru.length > 0 && listTerbaru[0].isiBerita}
