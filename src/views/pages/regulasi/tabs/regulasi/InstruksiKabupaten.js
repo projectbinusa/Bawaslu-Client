@@ -36,7 +36,7 @@ function InstruksiKabupaten() {
               data.content.map((item) => (
                 <React.Fragment key={item.id}>
                   <tr>
-                    <td className="" data-cell="dokumen" scope="row" style={{ width: "500px" }}>
+                    <td className="" data-cell="dokumen" style={{ width: "500px" }}>
                       {item.namaDokumen}
                     </td>
                     <td className=""  style={{

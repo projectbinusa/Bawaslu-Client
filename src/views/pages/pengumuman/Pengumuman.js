@@ -79,92 +79,43 @@ function Pengumuman() {
 
           <section class="light"  data-aos="fade-right">
             <div class="container py-2" >
-            {filteredList.length > 0 ? (
-  filteredList.map((isi) => (
-    <article class="postcard light blue" data-aos="zoom-in">
-      <a class="postcard__img_link" href="#">
-        <img
-          class="postcard__img"
-          src={isi.image}
-          alt="Image Title"
-        />
-      </a>
-      <div class="postcard__text t-dark">
-        <h1 class="postcard__title blue">
-          <a
-            href={`/pengumuman/isi-pengumuman/${isi.id}`}
-            style={{ color: "black", textDecoration: "none" }}>
-            {isi.judulPengumuman}
-          </a>
-        </h1>
-        <div class="postcard__subtitle small">
-          <time datetime="2020-05-25 12:00:00">
-            <i class="fas fa-calendar-alt mr-2 text-black"></i>
-            <span className="text-black">
-              {format(new Date(isi.createdDate), "dd MMMM yyyy", {
-                locale: idLocale,
-              })}
-            </span>
-          </time>
-        </div>
-        <div class="postcard__bar"></div>
-        <div class="postcard__preview-txt text-black">
-          {isi.isiPengumuman}
-        </div>
-      </div>
-    </article>
-  ))
-) : (
-  <div>
-    <h1 style={{marginTop: "20px", textAlign: "center", fontWeight:"bold"}}>Data Pengumuman Saat Ini Belum Ada</h1>
-  
-  </div>
-)}
-
-            </div>
-          </section>
-          {/* <div className="row justify-content-center">
-            {filteredList.map((isi) => {
-              return (
-                <div data-aos="fade-up"
-                data-aos-anchor-placement="bottom-bottom" className="col-lg-4 col-md-6">
-                  <div
-                    className="single-blog-inner style-2 shadow"
-                    style={{ maxHeight: "800px", minHeight: "300px", borderRadius:"10px" }}
-                  >
-                    <div className="thumb">
+              {filteredList.map((isi) => {
+                return (
+                  <article class="postcard light blue" data-aos="zoom-in">
+                    <a class="postcard__img_link" href="#">
                       <img
-                        style={{ maxHeight: "400px", minHeight: "100px", borderTopRightRadius:"10px", borderTopLeftRadius:"10px" }}
+                        class="postcard__img"
                         src={isi.image}
-
                       />
-                    </div>
-                    <div className="details">
-                      <h4 className="titleee" style={{ cursor: "pointer" }}>
+                    </a>
+                    <div class="postcard__text t-dark">
+                      <h1 class="postcard__title blue">
                         <a
-                          style={{ color: "black", textDecoration: "none" }}
                           href={`/pengumuman/isi-pengumuman/${isi.id}`}
-                        >
+                          style={{ color: "black", textDecoration: "none" }}>
                           {isi.judulPengumuman}
                         </a>
-                      </h4>
-
-                      <ul className="blog-meta">
-                        <li>
-                          <i className="far fa-user"></i> {isi.author}
-                        </li>
-                        <li>
-                          <i className="far fa-calendar-alt"></i>{" "}
-                          <span>{format(new Date(isi.createdDate), "dd MMMM yyyy", { locale: idLocale })}</span>
-                        </li>
-                      </ul>
-                      <p className="isiPengumuman">{isi.isiPengumuman}</p>
+                      </h1>
+                      <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                          <i class="fas fa-calendar-alt mr-2 text-black"></i>
+                          <span className="text-black">
+                            {format(new Date(isi.createdDate), "dd MMMM yyyy", {
+                              locale: idLocale,
+                            })}
+                          </span>
+                        </time>
+                      </div>
+                      <div class="postcard__bar"></div>
+                      <div class="postcard__preview-txt text-black">
+                        {isi.isiPengumuman}
+                      </div>
                     </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div> */}
+                  </article>
+                );
+              })}
+            </div>
+          </section>
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
