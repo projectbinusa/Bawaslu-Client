@@ -144,13 +144,11 @@ function AdminSop() {
         <div id="app-main" className="app-main">
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer"  data-aos="fade-lef">
-          <div clasName="row g-3 align-items-center d-lg-none d-md-none d-flex">
+          <div clasName="row g-3 align-items-center">
             <div class="col-auto" style={{paddingLeft:"17px"}}>
               <select
-                className="form-select form-select-xl" style={{width:"360px"}}
+                className="form-select form-select-xl d-lg-none d-md-flex" style={{width:"360px"}}
                 onChange={handleChange}
-                // value={rowsPerPage}
-                // alfy
               >
                <option disabled>Pilih Jenis Informasi</option>
                     <option value="SOP">SOP</option>;

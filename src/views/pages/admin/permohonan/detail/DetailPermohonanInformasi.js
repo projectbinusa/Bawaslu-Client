@@ -197,18 +197,7 @@ function DetailPermohonanInformasi() {
                     value={noTlp}
                   />
                 </div>
-                <div class="mb-3">
-                  <label class="form-label fw-bold">
-                    Rincian Yang Dibutukan
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    disabled
-                    value={rincianYangDiButuhkan}
-                  />
-                </div>
-                <div class="mb-3">
+               <div class="mb-3">
                   <label class="form-label fw-bold">
                     Tujuan Penggunaan Informasi
                   </label>
