@@ -172,7 +172,7 @@ function Index() {
                 </div>
               </div>
             </div>
-            <div className="" style={{ overflowY: "auto", maxHeight: "60vh" }}>
+            <div style={{ overflowY: "auto", maxHeight: "60vh" }}>
               <table className="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>

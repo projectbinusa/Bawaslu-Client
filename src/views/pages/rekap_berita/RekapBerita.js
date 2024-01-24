@@ -68,7 +68,6 @@ function RekapBerita() {
                           <div className="media-left">
                             <img
                               src={berita.image}
-
                               style={{ width: "200px" }}
                             />
                           </div>

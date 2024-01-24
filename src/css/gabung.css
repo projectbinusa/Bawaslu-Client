@@ -24,7 +24,7 @@
   #width-navbar-content{
     width: max-content;
   }
-  
+
 }
 /* .d-lg-none {
     display: none !important;
@@ -40,19 +40,19 @@
       /* display: none !important;
     } */
   }
-  
+
   /* Sembunyikan dropdown laptop pada layar mobile */
   @media (max-width: 991px) {
     /* .d-md-none {
       display: none !important;
     } */
   }
- 
-    
-  
+
+
+
 @media screen and (max-width:768px) {
   .navbar-reponsive{
-    overflow-y: scroll; 
+    overflow-y: scroll;
     height: 85vh;
     overflow-x: hidden;
   }
@@ -81,13 +81,13 @@
         padding-left: 100px;
         margin-left: 50px;
     }
-   
+
     #icon-text-waktu{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
+
     }
     #icon-waktu1{
         padding-right: 120px;
@@ -140,7 +140,7 @@
         /* padding-right: 100px; */
         text-align: center;
     }
-   
+
     .div-gabung{
         /* padding-left: 90px; */
         text-align: center;
@@ -162,8 +162,8 @@
         align-items: center;
         justify-content: center;
       }
-    
-    
+
+
 }
 @media (max-width: 390px) {
   .posisi{

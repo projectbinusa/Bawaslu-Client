@@ -2338,7 +2338,7 @@ ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  left: 0;
+  right: 0;
   top: 100%;
   -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
@@ -3067,7 +3067,7 @@ ul {
     border-top: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    margin-left: 0;
+    margin-left: 20px;
     padding-bottom: 0;
     height: auto;
     overflow: hidden;
