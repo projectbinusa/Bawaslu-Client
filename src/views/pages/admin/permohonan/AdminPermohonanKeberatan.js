@@ -80,35 +80,37 @@ function AdminPermohonanKeberatan() {
       cancelButtonColor: "#d33",
       confirmButtonText: "Delete",
       cancelButtonText: "Cencel",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        axios.delete(`${API_DUMMY}/bawaslu/api/permohonan-keberatan/` + id, {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        });
-        Swal.fire({
-          icon: "success",
-          title: "Dihapus!",
-          showConfirmButton: false,
-        });
-      }
-      setTimeout(() => {
-        window.location.reload();
-      }, 1500);
-    }) .catch((error) => {
-      if (error.ressponse && error.response.status === 401) {
-        localStorage.clear();
-        history.push("/login");
-      } else {
-        console.log(error);
-      }
-    });
+    })
+      .then((result) => {
+        if (result.isConfirmed) {
+          axios.delete(`${API_DUMMY}/bawaslu/api/permohonan-keberatan/` + id, {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+          });
+          Swal.fire({
+            icon: "success",
+            title: "Dihapus!",
+            showConfirmButton: false,
+          });
+        }
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+      })
+      .catch((error) => {
+        if (error.ressponse && error.response.status === 401) {
+          localStorage.clear();
+          history.push("/login");
+        } else {
+          console.log(error);
+        }
+      });
   };
 
   useEffect(() => {
     AOS.init();
-  },[]);
+  }, []);
 
   return (
     <div className="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -117,11 +119,7 @@ function AdminPermohonanKeberatan() {
         <Sidebar />
 
         <div className="container mt-3 app-main__outer" data-aos="fade-left">
-          <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex"style={{paddingLeft:"55px"}}>
-
-        <div className="container mt-3 app-main__outer">
           <div class="ml-2 row g-3 align-items-center d-lg-none d-md-flex rows-rspnv">
-
             <div class="col-auto">
               <label className="form-label mt-2">Rows per page:</label>
             </div>
@@ -129,8 +127,7 @@ function AdminPermohonanKeberatan() {
               <select
                 className="form-select form-select-xl w-auto"
                 onChange={handleRowsPerPageChange}
-                value={rowsPerPage}
-              >
+                value={rowsPerPage}>
                 <option value={5}>5</option>
                 <option value={10}>10</option>
                 <option value={20}>20</option>
@@ -157,8 +154,7 @@ function AdminPermohonanKeberatan() {
                   <select
                     className="form-select form-select-sm"
                     onChange={handleRowsPerPageChange}
-                    value={rowsPerPage}
-                  >
+                    value={rowsPerPage}>
                     <option value={5}>5</option>
                     <option value={10}>10</option>
                     <option value={20}>20</option>
@@ -180,27 +176,13 @@ function AdminPermohonanKeberatan() {
               <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                   <tr>
-                    <th className="text-left">
-                      No
-                    </th>
-                    <th className="text-left">
-                      Nama
-                    </th>
-                    <th className="text-left">
-                      Email
-                    </th>
-                    <th className="text-left">
-                      Alamat
-                    </th>
-                    <th className="text-left">
-                      No Telp
-                    </th>
-                    <th className="text-left">
-                      Foto Identitas{" "}
-                    </th>
-                    <th className="text-center">
-                      Aksi
-                    </th>
+                    <th className="text-left">No</th>
+                    <th className="text-left">Nama</th>
+                    <th className="text-left">Email</th>
+                    <th className="text-left">Alamat</th>
+                    <th className="text-left">No Telp</th>
+                    <th className="text-left">Foto Identitas </th>
+                    <th className="text-center">Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -224,34 +206,29 @@ function AdminPermohonanKeberatan() {
                         </td>
                         <td
                           data-label="jenis identitas : "
-                          className="text-left"
-                        >
+                          className="text-left">
                           <img
                             style={{ width: "150px" }}
                             src={informasi.fotoIdentitas}
-
                           />
                         </td>
                         <td data-label="Aksi : " class="text-center">
                           <div className="d-flex">
                             <button
                               type="button"
-                              class="btn-warning mr-2 btn-sm"
-                            >
+                              class="btn-warning mr-2 btn-sm">
                               <a
                                 className="text-light"
                                 href={
                                   "/detail/permohonan-keberatan/" + informasi.id
-                                }
-                              >
+                                }>
                                 <i class="fas fa-info-circle"></i>
                               </a>
                             </button>
                             <button
                               onClick={() => deleteData(informasi.id)}
                               type="button"
-                              className="bg-danger btn-sm text-light"
-                            >
+                              className="bg-danger btn-sm text-light">
                               <i class="fas fa-trash-alt"></i>
                             </button>
                           </div>
@@ -276,8 +253,6 @@ function AdminPermohonanKeberatan() {
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   );
 }

@@ -159,8 +159,6 @@ function AdminSetiapSaat() {
                 <select
                   className="form-select form-select-xl"style={{width:"360px"}}
                   onChange={handleChange}
-                // value={rowsPerPage}
-                // alfy
                 >
                  <option value="">Pilih Jenis Informasi</option>
                     <option value="8">Organisasi Dan Administrasi</option>;
@@ -190,7 +188,7 @@ function AdminSetiapSaat() {
                     <button className="active btn-focus p-2 rounded">
                       <a
                         style={{ color: "white", textDecoration: "none" }}
-                        href="/add-berita-admin"
+                        href="/tambah-informasi-setiap-saat"
                       >
                         Tambah Data
                       </a>
@@ -248,7 +246,7 @@ function AdminSetiapSaat() {
                         className="active btn-focus rounded p-2"
                       >
                         <a
-                          href="/tambah-informasi-berkala-kelembagaan"
+                          href="/tambah-informasi-setiap-saat"
                           className="text-light"
                           style={{ textDecoration: "none" }}
                         >
