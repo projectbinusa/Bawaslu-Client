@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { API_DUMMY } from "../utils/base_URL";
-import "../css/gabung.css"
+import "../css/gabung.css";
 
 function Navbar() {
   const [isSticky, setIsSticky] = useState(false);
@@ -86,10 +86,7 @@ function Navbar() {
             <div className="col-lg-3 d-lg-inline-block d-none">
               <div className="logo1">
                 <a href="/">
-                  <img
-                    src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
-
-                  />
+                  <img src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png" />
                 </a>
               </div>
             </div>
@@ -168,7 +165,7 @@ function Navbar() {
         className={`navbar-area navbar-area-2 navbar-expand-lg ${
           isSticky ? "sticky-active" : ""
         }`}>
-        <div className="container nav-container">
+        <div className="container nav-container m-0">
           <div className="responsive-mobile-menu">
             <button
               className={`d-lg-none menu toggle-btn ${
@@ -185,30 +182,37 @@ function Navbar() {
 
           <div className="d-inline-block d-lg-none">
             <a href="/">
-              <img
-                src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png"
-
-              />
+              <img src="https://boyolali.bawaslu.go.id/sites/boyolali/files/bawaslu_logo.png" />
             </a>
           </div>
-          <div style={{ width: windowWidth > 800 ? "max-content" : "", textAlign: "center", }}
+          <div
+            style={{
+              width: windowWidth > 800 ? "max-content" : "",
+              textAlign: "center",
+            }}
             className={`collapse navbar-collapse ${menuOpen ? "sopen" : ""}`}
             id="Iitechie_main_menu text-navbar-rspnv">
-            <ul className="navbar-reponsive navbar-nav menu-open text-lg-start">
+            <ul
+              className="navbar-reponsive navbar-nav menu-open text-lg-start"
+              style={{
+                marginLeft: "auto",
+                marginRight: "auto",
+                display: "flex",
+              }}>
               <li className="">
-                <a href="/" style={{paddingLeft: "15px"}}>Home</a>
+                <a href="/" style={{paddingLeft:"15px"}}>Home</a>
               </li>
               <li className="">
-                <a href="/profil"  style={{paddingLeft: "15px"}}>Profile</a>
+                <a href="/profil" style={{paddingLeft:"15px"}}>Profile</a>
               </li>
               <li className="">
-                <a href="/berita"  style={{paddingLeft: "15px"}}>Berita</a>
+                <a href="/berita" style={{paddingLeft:"15px"}}>Berita</a>
               </li>
               <li className="">
-                <a href="/library"  style={{paddingLeft: "15px"}}>E-Library</a>
+                <a href="/library" style={{paddingLeft:"15px"}}>E-Library</a>
               </li>
               <li className="">
-                <a href="/pengumuman"  style={{paddingLeft: "15px"}}>Pengumuman</a>
+                <a href="/pengumuman" style={{paddingLeft:"15px"}}>Pengumuman</a>
               </li>
               <li className="menu-item-has-children">
                 <a
@@ -217,8 +221,7 @@ function Navbar() {
                   aria-controls="navbarSupportedContent"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
-                  onClick={toggleSubmenu}
-                  >
+                  onClick={toggleSubmenu}>
                   Informasi Publik
                 </a>
                 <ul
