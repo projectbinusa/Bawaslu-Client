@@ -12,7 +12,7 @@ import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
 import AOS from "aos";
 import { Pagination } from "@mui/material";
-import bawasluRI from "../../aset/Bawaslu-RI-300x73-1.png"
+import bawasluRI from "../../aset/Bawaslu-RI-300x73-1.png";
 import dkpp from "../../aset/dkpp-300x73-1.png";
 import mahkama from "../../aset/MAHKAMAKONSTITUSI-300x73-1.png";
 import kpu from "../../aset/KPU-300x73-1.png";
@@ -108,22 +108,17 @@ function Home() {
     getAllCarousel();
   }, []);
 
+  const [activeIndex, setActiveIndex] = useState(0);
+  const handlePrevSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
+    );
+  };
 
-
-
-
-    const [activeIndex, setActiveIndex] = useState(0);
-    const handlePrevSlide = () => {
-
-      setActiveIndex((prevIndex) =>
-        prevIndex === 0 ? listCaraousel.length - 1 : prevIndex - 1
-      );
-    };
-
-    const handleNextSlide = () => {
-      setActiveIndex((prevIndex) =>
-        prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
-      );
+  const handleNextSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === listCaraousel.length - 1 ? 0 : prevIndex + 1
+    );
   };
   return (
     <div>
@@ -175,68 +170,88 @@ function Home() {
           style={{ minHeight: "100ppx" }}
         >
           <div className="container">
-            <div className="row justify-content-center">
-              {listTerbaru.slice(1, 4).map((berita, index) => (
-                <div className="col-lg-4 col-md-6">
-                  <div
-                    className="single-intro-inner shadow p-3 mb-5 rounded"
-                    style={{
-                      background: "#F1F6F9",
-                      maxHeight: "200px",
-                      minHeight: "200px",
-                    }}
-                  >
-                    <div className="thumb media">
-                      <div className="media-left">
-                        <i className="fa-solid fa-newspaper"></i>
-                      </div>
-                      <div className="media-body align-self-center">
-                        <h4>Berita</h4>
-                      </div>
-                    </div>
-                    <div className="details isiBerita">
-                      <p>{berita.judulBerita}</p>
-                    </div>
-                    <br />
-                  </div>
-                </div>
-              ))}
+          <div className="row justify-content-center">
+  {listTerbaru.length > 0 ? (
+    listTerbaru.map((berita, index) => (
+      <div className="col-lg-4 col-md-6" key={index}>
+        <div
+          className="single-intro-inner shadow p-3 mb-5 rounded"
+          style={{
+            background: "#F1F6F9",
+            maxHeight: "200px",
+            minHeight: "200px",
+          }}
+        >
+          <div className="thumb media">
+            <div className="media-left">
+              <i className="fa-solid fa-newspaper"></i>
             </div>
+            <div className="media-body align-self-center">
+              <h4>Berita</h4>
+            </div>
+          </div>
+          <div className="details isiBerita">
+            <p>{berita.judulBerita}</p>
+          </div>
+          <br />
+        </div>
+      </div>
+    ))
+  ) : (
+    <h1 style={{ textAlign: "center", marginTop: "40px", fontWeight: "bold" }}>
+      Data Berita Saat Ini Belum Ada
+    </h1>
+  )}
+</div>
+
           </div>
         </div>
 
         <div id="carouselExampleFade" className="carousel slide carousel-fade container">
-          <div className="carousel-inner h-75">
-            {listCaraousel.map((item, index) => (
-              <div
-                key={item.id}
-                className={`carousel-item ${index === 0 ? "active" : ""}`}>
-                <img
-                  src={item.foto}
-                  className="d-block w-100 shadow h-75"
-                  alt={item.namaCarousel}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="carousel-inner">
+  {listCaraousel.length > 0 ? (
+    listCaraousel.map((item, index) => (
+      <div
+        key={item.id}
+        className={`carousel-item ${index === 0 ? "active" : ""}`}
+      >
+        <img
+          src={item.foto}
+          className="d-block w-100 shadow"
+          alt={item.namaCarousel}
+        />
+      </div>
+    ))
+  ) : (
+    <h1 style={{ textAlign: "center", marginTop: "200px", marginBottom: "40px", fontWeight: "bold" }}>
+      Data Carousel Saat Ini Belum Ada
+    </h1>
+  )}
+</div>
+
+
           <button
             className="carousel-control-prev"
             type="button"
             data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev">
+            data-bs-slide="prev"
+          >
             <span
               className="carousel-control-prev-icon"
-              aria-hidden="true"></span>
+              aria-hidden="true"
+            ></span>
             <span className="visually-hidden">Previous</span>
           </button>
           <button
             className="carousel-control-next"
             type="button"
             data-bs-target="#carouselExampleFade"
-            data-bs-slide="next">
+            data-bs-slide="next"
+          >
             <span
               className="carousel-control-next-icon"
-              aria-hidden="true"></span>
+              aria-hidden="true"
+            ></span>
             <span className="visually-hidden">Next</span>
           </button>
         </div>
@@ -298,14 +313,13 @@ function Home() {
                 borderRadius: "10px",
                 background: "#F1F6F9",
                 float: "inline-end",
-                background:" rgb(241, 246, 249)",
-                 border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"
-
+                background: " rgb(241, 246, 249)",
+                border: "1px solid blue",
+                boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px",
               }}
             >
               <h4 className="widget-title">
-              <i class="fa-regular fa-file-lines"></i> {" "}
-                Tautan{" "}
+                <i class="fa-regular fa-file-lines"></i> Tautan{" "}
                 <span className="text-primary">
                   <strong>Lembaga</strong>
                 </span>
@@ -320,7 +334,7 @@ function Home() {
                   >
                     <img
                       src={bawasluRI}
-
+                      alt=""
                     />
                   </a>
                 </li>
@@ -332,7 +346,7 @@ function Home() {
                   >
                     <img
                       src={dkpp}
-
+                      alt=""
                     />
                   </a>
                 </li>
@@ -344,7 +358,7 @@ function Home() {
                   >
                     <img
                       src={mahkama}
-
+                      alt=""
                     />
                   </a>
                 </li>
@@ -356,7 +370,7 @@ function Home() {
                   >
                     <img
                       src={kpu}
-
+                      alt=""
                     />
                   </a>
                 </li>
@@ -364,7 +378,7 @@ function Home() {
                   <a href="https://jateng.bawaslu.go.id/" target="_blank">
                     <img
                       src={bawasluJateng}
-
+                      alt=""
                     />
                   </a>
                 </li>
@@ -470,12 +484,12 @@ function Home() {
                       <img
                         className="d-block w-100"
                         src="https://zaib.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2018/11/software-20.png"
-
+                        alt="Second slide"
                       />
                       <h3>Informasi Berkala</h3>
                     </div>
                   </div>
-                  </a>
+                  </a>                                                                                                                                                                                                                                                        
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
@@ -554,6 +568,8 @@ function Home() {
           </div>
         </div>
         <div className="container mt-5 mb-5">
+          {pengumuman.length > 0 ? (
+            <>
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
@@ -591,14 +607,14 @@ function Home() {
                         )
                       ]}
                   </div>
+                  {/*  */}
                 </div>
               </div>
             </div>
             <div data-aos="fade-left" class="col-lg-4">
               <div class="row">
-                {pengumuman.slice(1, 5).map((png) => {
-                  return (
-                    <div class="col-sm-6">
+                {pengumuman.map((png) => (
+                    <div class="col-sm-6" key={png.id}>
                       <div class="pt-4 pb-4">
                         <div class="d-flex align-items-center pb-2">
                           <img
@@ -624,11 +640,16 @@ function Home() {
                         </span>
                       </div>
                     </div>
-                  );
-                })}
+                  ))}
               </div>
             </div>
           </div>
+          </>
+          ):(
+            <div>
+            <h1 style={{marginTop: "20px", textAlign: "center",  fontWeight:"bold"}}>Data Pengumuman Saat Ini Belum Ada</h1>
+          </div>
+          )}
         </div>
       </div>
       <Footer />
