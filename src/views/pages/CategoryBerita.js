@@ -148,7 +148,7 @@ function CategoryBerita() {
               <h1 style={{ fontWeight: "bold", fontSize: "45px" }}>
                 {list.length > 0
                   ? list[0].categoryBerita.category
-                  : "Category Tidak Ditemukan"}
+                  : "Data Category Saat Ini Belum Ada"}
               </h1>
               <br />
               {list.map((category) => {

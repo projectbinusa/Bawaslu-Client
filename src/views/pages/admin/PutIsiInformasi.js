@@ -18,28 +18,9 @@ function PutIsiInformasi() {
   const [jenisKeteranganId, setJenisKeteranganId] = useState(1);
   const history = useHistory();
   const { id } = useParams();
-  const [namaInformasi, setNamaInformasi] = useState("");
-  const param = useParams()
 
   useEffect(() => {
     getById();
-  }, []);
-
-  useEffect(() => {
-    axios
-      .get(`${API_DUMMY}/bawaslu/api/jenis-informasi/getBy/` + param.id, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      })
-      .then((ress) => {
-        const response = ress.data.data;
-        setNamaInformasi(response.namaInformasi);
-        console.log(response.namaInformasi);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
   }, []);
 
   const getById = async () => {
@@ -61,6 +42,15 @@ function PutIsiInformasi() {
     } catch (error) {
       console.error("Terjadi Kesalahan", error);
     }
+  };
+
+  const pathMappings = {
+    22: "/admin-berkala-kelembagaan",
+    15: "/admin-berkala-kepemiluan",
+    39: "/admin-dikecualikan",
+    40: "/admin-kanal",
+    1: "/admin-serta-merta",
+    8: "/admin-setiap-saat",
   };
 
   const updateData = async (e) => {
@@ -88,7 +78,8 @@ function PutIsiInformasi() {
       });
 
       setTimeout(() => {
-        history.push(`/admin/${param.id}`);
+        const path = pathMappings[jenisKeteranganId];
+        history.push(path);
         window.location.reload();
       }, 1500);
     } catch (error) {
@@ -149,7 +140,7 @@ function PutIsiInformasi() {
 
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
-                    href={"/admin-berkala-kepemiluan"}
+                    href={pathMappings[jenisKeteranganId]}
                     style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
