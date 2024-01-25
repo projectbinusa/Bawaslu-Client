@@ -118,6 +118,12 @@ function Sidebar() {
                   Carousel
                 </a>
               </li>
+              <li>
+                <a style={{ textDecoration: "none" }} href="/admin-library">
+                <i class="fas fa-book metismenu-icon"></i>{" "}
+                  ELibrary
+                </a>
+              </li>
               <li className="app-sidebar__heading">Informasi</li>
               {/* <li>
                 <a style={{ textDecoration: "none" }} href="/jenis-informasi">

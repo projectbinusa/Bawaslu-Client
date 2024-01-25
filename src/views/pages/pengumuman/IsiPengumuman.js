@@ -16,7 +16,8 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { format } from "date-fns";
 import idLocale from "date-fns/locale/id";
-import AOS from 'aos';
+import AOS from "aos";
+import { Helmet } from "react-helmet";
 
 function IsiPengumuman() {
   const [createdDate, setCreatedDate] = useState("");
@@ -64,55 +65,79 @@ function IsiPengumuman() {
   useEffect(() => {
     //mengambil data, memperbarui DOM secara langsung,
     getAll(0);
-    AOS.init()
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
+    // Memuat skrip AddToAny setelah komponen di-render
+    const script = document.createElement("script");
+    script.src = "https://static.addtoany.com/menu/page.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Membersihkan skrip saat komponen dibongkar
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
     <div>
+      <Helmet>
+        {/* Metatag Open Graph */}
+        <meta property="og:title" content={judulPengumuman} />
+        <meta property="og:description" content={isiPengumuman} />
+        <meta property="og:media" content={image} />
+        <meta
+          property="og:url"
+          content={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
+        />
+      </Helmet>
       <Navbar />
 
       {/* <!-- blog area start --> */}
       <div class="blog-area pd-top-120 pd-bottom-120">
         <div class="container">
           <div class="row">
-            <div
-              data-aos="fade-right" class="col-lg-8">
+            <div data-aos="fade-right" class="col-lg-8">
               <div class="blog-details-page-content">
                 <div class="single-blog-inner">
-                <div class="row">
-                <div class="row">
-  <div class="col-sm-7"></div>
-  <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
-    <div class="blog-share">
-      <ul class="list-inline">
-        <li class="list-inline-item">
-        <FacebookShareButton
-                                      url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
-                                      quote={judulPengumuman}>
-                                      <FacebookIcon size={38} round={true} />
-                                    </FacebookShareButton>
-        </li>
-        <li class="list-inline-item">
-          <TwitterShareButton  url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
-                                      quote={judulPengumuman}>
-            <TwitterIcon size={38} round={true} />
-          </TwitterShareButton>
-        </li>
-        <li class="list-inline-item">
-          <PinterestShareButton  url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
-                                      quote={judulPengumuman}  media={image}>
-
-            <PinterestIcon size={38} round={true} />
-          </PinterestShareButton>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-</div>
-{/* // */}
+                  <div class="row">
+                    <div class="row">
+                      <div class="col-sm-7"></div>
+                      <div class="col-sm-5 mt-3 mt-sm-0 text-sm-end align-self-center">
+                        <div class="blog-share">
+                          <ul class="list-inline">
+                            <li class="list-inline-item">
+                              <FacebookShareButton
+                                url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
+                                title={judulPengumuman}>
+                                <FacebookIcon size={38} round={true} />
+                              </FacebookShareButton>
+                            </li>
+                            <li class="list-inline-item">
+                              <TwitterShareButton
+                                url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
+                                title={judulPengumuman}>
+                                <TwitterIcon size={38} round={true} />
+                              </TwitterShareButton>
+                            </li>
+                            <li class="list-inline-item">
+                              <PinterestShareButton
+                                url={`https://bawaslu.excellentsistem.com/pengumuman/isi-pengumuman/${id}`}
+                                title={judulPengumuman}
+                                media={image}>
+                                <PinterestIcon size={38} round={true} />
+                              </PinterestShareButton>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* // */}
                   <div class="thumb">
-                    <img className="pengumuman" src={image}  />
+                    <img className="pengumuman" src={image} />
                   </div>
                   <div class="details">
                     <ul class="blog-meta">
@@ -138,7 +163,6 @@ function IsiPengumuman() {
                     {pengumuman2.map((isi) => {
                       return (
                         <div class="col-md-6">
-
                           <div class="media single-choose-inner">
                             <div class="media-left">
                               <div class="icon">
@@ -148,8 +172,7 @@ function IsiPengumuman() {
                             <div class="media-body">
                               <p>
                                 <a
-                                  href={`/pengumuman/isi-pengumuman/${isi.id}`}
-                                >
+                                  href={`/pengumuman/isi-pengumuman/${isi.id}`}>
                                   {isi.judulPengumuman}
                                 </a>
                               </p>
@@ -162,11 +185,9 @@ function IsiPengumuman() {
                 </div>
               </div>
             </div>
-            <div
-              data-aos="fade-left" class="col-lg-4 col-12">
+            <div data-aos="fade-left" class="col-lg-4 col-12">
               <div class="td-sidebar">
                 <Bawaslu />
-
               </div>
             </div>
           </div>

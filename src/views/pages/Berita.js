@@ -207,12 +207,12 @@ function Berita() {
 
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <meta property="og:title" content={socialMeta.title} />
         <meta property="og:description" content={socialMeta.description} />
         <meta property="og:image" content={socialMeta.imageUrl} />
         <meta property="og:url" content={socialMeta.url} />
-      </Helmet> */}
+      </Helmet>
       <Navbar />
       <div>
         <div
@@ -468,41 +468,6 @@ function Berita() {
                           <h2 className="title">Tidak Ada Data Berita Terbaru</h2>
                         )}
                       </h4>
-                      <ul>
-                        {listTerbaru.map((beritaTerbaru) => {
-                          return (
-                            <li>
-                              <div class="media">
-                                <div class="media-left">
-                                  <img
-                                    src={logoBawaslu}
-                                    style={{ width: "90px" }}
-
-                                  />
-                                </div>
-                                <div class="media-body align-self-center">
-                                  <h6 class="title">
-                                    <a
-                                      href={`/page-isi-berita/${beritaTerbaru.author}/${beritaTerbaru.id}`}>
-                                      {beritaTerbaru.judulBerita}
-                                    </a>
-                                  </h6>
-                                  <div class="post-info">
-                                    <i class="far fa-calendar-alt"></i>
-                                    <span>
-                                      {format(
-                                        new Date(beritaTerbaru.createdDate),
-                                        "dd MMMM yyyy",
-                                        { locale: idLocale }
-                                      )}
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          );
-                        })}
-                      </ul>
                     </div>
                     <div
                       class="widget widget_catagory "

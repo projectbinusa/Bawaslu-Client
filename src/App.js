@@ -100,6 +100,9 @@ import AddDiKecualikan from "./views/pages/admin/Add/AddDiKecualikan";
 import PageCarousel from "./views/pages/admin/caraousel/PageCarousel";
 import EditCarousel from "./views/pages/admin/caraousel/EditCarousel";
 import AddCarousel from "./views/pages/admin/caraousel/AddCarousel";
+import AdminLibrary from "./views/pages/admin/eLibrary/AdminLibrary";
+import AddLibrary from "./views/pages/admin/eLibrary/AddLibrary";
+import PutLibrary from "./views/pages/admin/eLibrary/PutLibrary";
 
 // END ADMIN MENU REGULASI
 
@@ -172,7 +175,11 @@ function App() {
             component={AddBerkalaKelembagaan}
             exact
           />
-          <PrivateRoute path="/tambah-informasi-kanal" component={AddKanal} exact />
+          <PrivateRoute
+            path="/tambah-informasi-kanal"
+            component={AddKanal}
+            exact
+          />
           <PrivateRoute
             path="/ubah-isi-informasi/:id"
             component={PutIsiInformasi}
@@ -229,12 +236,44 @@ function App() {
           />
 
           {/* admin */}
-          <PrivateRoute path="/admin-page-carousel" component={PageCarousel} exact/>
-          <PrivateRoute path="/edit-page-carousel/:id" component={EditCarousel} exact/>
-          <PrivateRoute path="/add-page-carousel" component={AddCarousel} exact/>
+          {/* eLibrary */}
+          <PrivateRoute path="/admin-library" component={AdminLibrary} exact />
+          <PrivateRoute
+            path="/add-library-admin"
+            component={AddLibrary}
+            exact
+          />
+          <PrivateRoute
+            path="/edit-library-admin/:id"
+            component={PutLibrary}
+            exact
+          />
+          <PrivateRoute
+            path="/admin-page-carousel"
+            component={PageCarousel}
+            exact
+          />
+          <PrivateRoute
+            path="/edit-page-carousel/:id"
+            component={EditCarousel}
+            exact
+          />
+          <PrivateRoute
+            path="/add-page-carousel"
+            component={AddCarousel}
+            exact
+          />
           {/* admin informasi */}
-          <PrivateRoute path="/admin-serta-merta" component={AdminSertaMerta} exact />
-          <PrivateRoute path="/admin-setiap-saat" component={AdminSetiapSaat} exact />
+          <PrivateRoute
+            path="/admin-serta-merta"
+            component={AdminSertaMerta}
+            exact
+          />
+          <PrivateRoute
+            path="/admin-setiap-saat"
+            component={AdminSetiapSaat}
+            exact
+          />
           <PrivateRoute
             path="/admin-berkala-kepemiluan"
             component={AdminBerkalaKepemiluan}
@@ -278,7 +317,11 @@ function App() {
             component={AddDiKecualikan}
             exact
           />
-          <PrivateRoute path="/tambah-informasi-kanal" component={AddKanal} exact />
+          <PrivateRoute
+            path="/tambah-informasi-kanal"
+            component={AddKanal}
+            exact
+          />
           <PrivateRoute
             path="/ubah-isi-informasi/:id"
             component={PutIsiInformasi}
@@ -362,7 +405,11 @@ function App() {
             exact
           />
           {/* daftar regulasi */}
-          <PrivateRoute path="/admin-regulasi/:id" component={MenuRegulasi} exact />
+          <PrivateRoute
+            path="/admin-regulasi/:id"
+            component={MenuRegulasi}
+            exact
+          />
           <PrivateRoute
             path="/edit-data/:menuRegulasi/:id"
             component={MenuEditRegulasi}
@@ -395,7 +442,11 @@ function App() {
             component={DetailPermohonanKeberatan}
             exact
           />
-          <PrivateRoute path="/tambah-category-berita" component={AddCategory} exact />
+          <PrivateRoute
+            path="/tambah-category-berita"
+            component={AddCategory}
+            exact
+          />
           <PrivateRoute
             path="/category-berita/:category/:id"
             component={CategoryBerita}
@@ -414,7 +465,11 @@ function App() {
             component={Indexx}
             exact
           />
-          <PrivateRoute path="/jenis-informasi" component={JenisInformasi} exact />
+          <PrivateRoute
+            path="/jenis-informasi"
+            component={JenisInformasi}
+            exact
+          />
           <PrivateRoute
             path="/tambah-jenis-informasi"
             component={AddJenisInfo}
