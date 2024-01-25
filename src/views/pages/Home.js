@@ -436,10 +436,10 @@ function Home() {
             </div>
 
             <div
-              data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
               className="row justify-content-center">
-              <div className="col-lg-3 col-md-6">
+              <div
+              data-aos="fade-up" className="col-lg-3 col-md-6">
                 <div id="barito" className="single-service-inner text-center">
                   <div id="" className="details">
                     <img
@@ -462,7 +462,8 @@ function Home() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6">
+              <div
+              data-aos="fade-up" className="col-lg-3 col-md-6">
                 <div id="barito" className="single-service-inner text-center">
                   <div className="details">
                     <img
@@ -484,7 +485,8 @@ function Home() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6">
+              <div
+              data-aos="fade-up" className="col-lg-3 col-md-6">
                 <div id="barito" className="single-service-inner text-center">
                   <div className="details">
                     <img
@@ -506,7 +508,8 @@ function Home() {
                   </a>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6">
+              <div
+              data-aos="fade-up" className="col-lg-3 col-md-6">
                 <div id="barito" className="single-service-inner text-center">
                   <div className="details">
                     <img
