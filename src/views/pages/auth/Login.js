@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../../css/login.css";
 import { API_DUMMY } from "../../../utils/base_URL";
 import { useHistory } from "react-router-dom";
-import Ikon from "../../../aset/ikon-web.png"
+import Ikon from "../../../aset/ikon-web.png";
 import Swal from "sweetalert2";
 import axios from "axios";
 
@@ -49,17 +49,18 @@ function Login() {
   };
 
   return (
-    <div  className="containeriimg d-flex justify-content-center align-items-center min-vh-100">
-      <div style={{background:" rgb(241, 246, 249)",
-                 border: "1px solid blue", boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px"}}
+    <div className="containeriimg d-flex justify-content-center align-items-center min-vh-100">
+      <div
+        style={{
+          background: " rgb(241, 246, 249)",
+          border: "1px solid blue",
+          boxShadow: "rgba(47, 60, 95, 0.24) 0px 6px 10px",
+        }}
         id="responsive-login"
-        className="row border rounded-5 p-3 bg-white  box-area padding-login"
-      >
+        className="row border rounded-5 p-3 bg-white  box-area padding-login">
         <div
-        id="gambar"
-          className=" col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login"
-
-        >
+          id="gambar"
+          className=" col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box img-login">
           <div className="featured-image mb-3 img-login">
             <img
               src="https://static.vecteezy.com/system/resources/previews/010/998/284/non_2x/3d-password-input-illustration-design-free-png.png"
@@ -67,19 +68,14 @@ function Login() {
               style={{ width: "250px" }}
             />
           </div>
-
-
         </div>
         <div className="col-md-6 right-box">
           <form onSubmit={handleLogin} className="row align-items-center">
-            <div className="header-text mb-4 text-center " style={{marginTop: "20px"}}>
+            <div
+              className="header-text mb-4 text-center "
+              style={{ marginTop: "20px" }}>
               <h2>
-
-                <img
-                  style={{ width: "40px" }}
-                  src={Ikon}
-                /> {" "}
-                Login
+                <img style={{ width: "40px" }} src={Ikon} /> Login
               </h2>
               <p>Selamat Datang Kembali</p>
             </div>
@@ -121,8 +117,7 @@ function Login() {
                 />
                 <label
                   htmlFor="showPassword"
-                  className="form-check-label text-secondary"
-                >
+                  className="form-check-label text-secondary">
                   <small>Tampilkan Password</small>
                 </label>
               </div>
@@ -130,16 +125,15 @@ function Login() {
             <div className="input-group mb-3">
               <button
                 type="submit"
-                className="btn btn-lg btn-primary w-100 fs-6"
-              >
+                className="btn btn-lg btn-primary w-100 fs-6">
                 Login
               </button>
             </div>
-            <div className="row">
+            {/* <div className="row">
               <small>
                 Belum Memiliki Akun ? Silahkan <a href="/register">Register</a>
               </small>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>

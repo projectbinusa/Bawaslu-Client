@@ -140,7 +140,7 @@ function PutIsiInformasi() {
 
                 <button type="button" className="btn-danger mt-3 mr-3">
                   <a
-                    href={"/admin-berkala-kepemiluan"}
+                    href={pathMappings[jenisKeteranganId]}
                     style={{ color: "white", textDecoration: "none" }}>
                     Batal
                   </a>
