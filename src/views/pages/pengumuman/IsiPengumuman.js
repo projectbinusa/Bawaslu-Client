@@ -84,7 +84,6 @@ function IsiPengumuman() {
   return (
     <div>
       <Helmet>
-        {/* Metatag Open Graph */}
         <meta property="og:title" content={judulPengumuman} />
         <meta property="og:description" content={isiPengumuman} />
         <meta property="og:media" content={image} />

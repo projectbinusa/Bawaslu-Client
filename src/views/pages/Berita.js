@@ -172,39 +172,6 @@ function Berita() {
     url: "",
   });
 
-  // useEffect(() => {
-  //   const dataBerita = () => {
-  //     list.map((berita1) => {
-  //       return(
-  //       const url = `https://bawaslu.excellentsistem.com/page-isi-berita/${berita1.author}/${berita1.id}`;
-  //       setSocialMeta({
-  //         title: berita1.judulBerita,
-  //         description: berita1.isiBerita,
-  //         imageUrl: berita1.image,
-  //         url: url,
-  //       });
-  //       )
-  //     });
-  //   };
-  //   dataBerita();
-  // }, [list]);
-
-  //    useEffect(() => {
-  //   const dataBerita = () => {
-  //       list.map((berita1) => {
-  //         const url = `https://bawaslu.excellentsistem.com/page-isi-berita/${berita1.author}/${berita1.id}`;
-  //         setSocialMeta({
-  //           title: berita1.judulBerita,
-  //           description: berita1.isiBerita,
-  //           imageUrl: berita1.image,
-  //           url: url,
-  //         });
-  //         return null;
-  //       });
-  //   };
-  //   dataBerita();
-  // }, [list]);
-
   return (
     <>
       <Helmet>

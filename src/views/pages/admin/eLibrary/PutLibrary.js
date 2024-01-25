@@ -35,7 +35,6 @@ function PutLibrary() {
       });
   }, [param.id]);
 
-  //edit pengumuman
   const update = async (e) => {
     e.preventDefault();
 
