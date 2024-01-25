@@ -145,9 +145,9 @@ function AdminSop() {
           <Sidebar />
           <div id="container" className="container mt-3 app-main__outer"  data-aos="fade-lef">
           <div clasName="row g-3 align-items-center">
-            <div class="col-auto" style={{paddingLeft:"17px"}}>
+            <div class="col-auto" style={{paddingLeft:"10px"}}>
               <select
-                className="form-select form-select-xl d-lg-none d-md-flex" style={{width:"360px"}}
+                className="form-select form-select-xl d-lg-none d-md-none d-flex"  style={{width:"360px"}}
                 onChange={handleChange}
               >
                <option disabled>Pilih Jenis Informasi</option>
