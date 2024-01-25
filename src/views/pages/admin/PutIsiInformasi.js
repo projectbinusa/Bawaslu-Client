@@ -47,7 +47,7 @@ function PutIsiInformasi() {
   const pathMappings = {
     22: "/admin-berkala-kelembagaan",
     15: "/admin-berkala-kepemiluan",
-    39: "/admin-kecualikan",
+    39: "/admin-dikecualikan",
     40: "/admin-kanal",
     1: "/admin-serta-merta",
     8: "/admin-setiap-saat",
