@@ -43,7 +43,7 @@ function PutIsiInformasi() {
       console.error("Terjadi Kesalahan", error);
     }
   };
-
+// agar bisa kemabli menuju path yang benar
   const pathMappings = {
     22: "/admin-berkala-kelembagaan",
     15: "/admin-berkala-kepemiluan",
